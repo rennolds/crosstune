@@ -1,17 +1,8 @@
 <script>
-    let count = $state(0);
-  </script>
-  
-  <div class="min-h-screen flex items-center justify-center flex-col gap-8 bg-gray-900 text-white">
-    <button 
-      onclick={() => count++}
-      class="text-4xl font-bold hover:text-blue-400 transition-colors duration-300"
-    >
-      CROSSFADE, CLICK HERE
-    </button>
-    
-    <div class="text-6xl font-mono">
-      {count}
-    </div>
-</div>
+    import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
 </script>
+  
+<main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-8">Crosstune</h1>
+    <CrosswordGrid />
+</main>

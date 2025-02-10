@@ -1,0 +1,31 @@
+{
+    "2024-02-09": {
+      "size": {
+        "width": 10,
+        "height": 10
+      },
+      "words": [
+        {
+          "word": "YESTERDAY",
+          "startX": 0,
+          "startY": 0,
+          "direction": "across",
+          "audioClip": "yesterday.mp3"
+        },
+        {
+          "word": "YELLOW",
+          "startX": 0,
+          "startY": 0,
+          "direction": "down",
+          "audioClip": "yellow.mp3"
+        },
+        {
+          "word": "DAZED",
+          "startX": 6,
+          "startY": 0,
+          "direction": "down",
+          "audioClip": "dazed.mp3"
+        }
+      ]
+    }
+  }
