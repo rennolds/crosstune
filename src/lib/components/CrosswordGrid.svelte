@@ -569,8 +569,6 @@ function handleKeydown(event, x, y) {
     {/if}
   </div>
 
-  <!-- Clue Lists -->
-
   <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
   <div class="flex flex-col gap-6 w-full md:w-64">
     <!-- Across Clues -->
