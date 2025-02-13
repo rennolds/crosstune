@@ -268,21 +268,27 @@ function handleKeydown(event, x, y) {
             }
             break;
             case 'Backspace':
-              if (!input.value) {
-                  event.preventDefault();
-                  if (currentDirection === 'across') {
-                      // Keep moving back until we find a non-space cell or hit the edge
-                      let newX = x - 1;
-                      while (newX >= 0 && spaceCells.has(`${newX},${y}`)) {
-                          newX--;
-                      }
+              // Clear current cell if it has a value
+              if (grid[y][x]) {
+                  grid[y][x] = '';
+              }
+              // Move to previous cell
+              if (currentDirection === 'across') {
+                  // Keep moving back until we find a non-space cell or hit the edge
+                  let newX = x - 1;
+                  while (newX >= 0 && spaceCells.has(`${newX},${y}`)) {
+                      newX--;
+                  }
+                  if (newX >= 0) {
                       moveFocus(newX, y);
-                  } else {
-                      // Keep moving up until we find a non-space cell or hit the edge
-                      let newY = y - 1;
-                      while (newY >= 0 && spaceCells.has(`${x},${newY}`)) {
-                          newY--;
-                      }
+                  }
+              } else {
+                  // Keep moving up until we find a non-space cell or hit the edge
+                  let newY = y - 1;
+                  while (newY >= 0 && spaceCells.has(`${x},${newY}`)) {
+                      newY--;
+                  }
+                  if (newY >= 0) {
                       moveFocus(x, newY);
                   }
               }
@@ -319,14 +325,42 @@ function handleKeydown(event, x, y) {
 
   // Add new function to handle virtual keyboard input
   function handleVirtualKeyPress(key) {
-      // Create a synthetic event that matches the structure expected by handleKeydown
-      const syntheticEvent = {
+    // For backspace, we need to handle it specially since it's an action rather than a character input
+    if (key === 'Backspace') {
+        // Clear current cell if it has a value
+        if (grid[focusedY][focusedX]) {
+            grid[focusedY][focusedX] = '';
+        }
+        
+        // Move to previous cell
+        if (currentDirection === 'across') {
+            let newX = focusedX - 1;
+            while (newX >= 0 && spaceCells.has(`${newX},${focusedY}`)) {
+                newX--;
+            }
+            if (newX >= 0) {
+                moveFocus(newX, focusedY);
+            }
+        } else {
+            let newY = focusedY - 1;
+            while (newY >= 0 && spaceCells.has(`${focusedX},${newY}`)) {
+                newY--;
+            }
+            if (newY >= 0) {
+                moveFocus(focusedX, newY);
+            }
+        }
+        return;
+    }
+
+    // Create a synthetic event for other keys
+    const syntheticEvent = {
         key,
         preventDefault: () => {},
         target: document.querySelector(`input[data-x="${focusedX}"][data-y="${focusedY}"]`)
-      };
+    };
 
-      handleKeydown(syntheticEvent, focusedX, focusedY);
+    handleKeydown(syntheticEvent, focusedX, focusedY);
   }
 
   function submitGuess() {
