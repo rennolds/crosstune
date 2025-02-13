@@ -267,15 +267,25 @@ function handleKeydown(event, x, y) {
                 moveFocus(x, y + 1);
             }
             break;
-        case 'Backspace':
-            if (!input.value) {
-                event.preventDefault();
-                if (currentDirection === 'across') {
-                    moveFocus(x - 1, y);
-                } else {
-                    moveFocus(x, y - 1);
-                }
-            }
+            case 'Backspace':
+              if (!input.value) {
+                  event.preventDefault();
+                  if (currentDirection === 'across') {
+                      // Keep moving back until we find a non-space cell or hit the edge
+                      let newX = x - 1;
+                      while (newX >= 0 && spaceCells.has(`${newX},${y}`)) {
+                          newX--;
+                      }
+                      moveFocus(newX, y);
+                  } else {
+                      // Keep moving up until we find a non-space cell or hit the edge
+                      let newY = y - 1;
+                      while (newY >= 0 && spaceCells.has(`${x},${newY}`)) {
+                          newY--;
+                      }
+                      moveFocus(x, newY);
+                  }
+              }
             break;
         default:
             // Changed this part to handle both upper and lowercase letters
