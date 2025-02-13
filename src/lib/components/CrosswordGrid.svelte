@@ -493,26 +493,26 @@ function handleKeydown(event, x, y) {
   }
 </script>
 
-<div class="flex flex-col md:flex-row items-start gap-8 p-4">
-  <!-- Crossword Grid -->
-  <div class="flex flex-col items-center">
+<div class="w-full max-w-lg mx-auto">
+  <!-- This wrapper ensures the grid container has a fixed width -->
+  <div class="aspect-square relative">
+    <!-- The grid container is forced to be a square -->
     <div
-      class="grid bg-black mb-6"
+      class="absolute inset-0 grid bg-black"
       style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
     >
       {#each grid as row, y}
         {#each row as cell, x}
-        <div
-          class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center relative
-                {cell === null
-            ? 'bg-black'
-            : isCellHighlighted(x, y) === 'focused'
-              ? 'bg-orange-300'  // Distinct orange for the active cell
-              : isCellHighlighted(x, y) === 'active'
-                ? 'bg-blue-100'  // Light blue for the active word
-                : 'bg-white'} 
-                transition-colors duration-200"
-            >
+          <div
+            class="aspect-square flex items-center justify-center relative transition-colors duration-200
+              {cell === null
+                  ? 'bg-black'
+                  : isCellHighlighted(x, y) === 'focused'
+                    ? 'bg-orange-300'
+                    : isCellHighlighted(x, y) === 'active'
+                      ? 'bg-blue-100'
+                      : 'bg-white'}"
+          >
             {#if cell !== null}
               {#if wordNumbers.has(`${x},${y}`)}
                 <span class="absolute text-xs top-0 left-0.5">
@@ -549,6 +549,7 @@ function handleKeydown(event, x, y) {
         {/each}
       {/each}
     </div>
+
 
     <button
       onclick={submitGuess}
