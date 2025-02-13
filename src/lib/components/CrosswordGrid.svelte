@@ -128,9 +128,6 @@
       return isStart;
     });
 
-    console.log('isStartOfAcross:', isStartOfAcross);
-    console.log('isStartOfDown:', isStartOfDown);
-
     // Set direction if it's the start of a word
     if (isStartOfAcross) {
       console.log('Setting direction to across');
@@ -144,6 +141,37 @@
 
     focusedX = x;
     focusedY = y;
+  }
+
+  function findNextWordStart(currentX, currentY) {
+    // Get all word starting positions sorted by position
+    let startPositions = [...words].sort((a, b) => {
+      if (a.startY === b.startY) {
+        return a.startX - b.startX;
+      }
+      return a.startY - b.startY;
+    });
+
+    // Find the next word start position
+    let nextWord = startPositions.find(word => {
+      // If we're on the same row, find the next word to the right
+      if (word.startY === currentY) {
+        return word.startX > currentX;
+      }
+      // Otherwise, find the first word in the next row
+      return word.startY > currentY;
+    });
+
+    // If no next word found, wrap around to the first word
+    if (!nextWord) {
+      nextWord = startPositions[0];
+    }
+
+    return {
+      x: nextWord.startX,
+      y: nextWord.startY,
+      direction: nextWord.direction
+    };
   }
   // Modify moveFocus to be more reliable
   function moveFocus(newX, newY) {
@@ -185,6 +213,17 @@
     const input = event.target;
 
     switch (event.key) {
+      case 'Tab':
+        event.preventDefault();
+        const nextWord = findNextWordStart(x, y);
+        focusedX = nextWord.x;
+        focusedY = nextWord.y;
+        currentDirection = nextWord.direction;
+        const nextInput = document.querySelector(
+          `input[data-x="${nextWord.x}"][data-y="${nextWord.y}"]`
+        );
+        nextInput?.focus();
+        break;
       case 'ArrowRight':
         event.preventDefault();
         currentDirection = 'across';
@@ -207,7 +246,6 @@
         break;
       case ' ':
       case 'Space':
-      case 'Tab':
         event.preventDefault();
         if (currentDirection === 'across') {
           moveFocus(x + 1, y);
