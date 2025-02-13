@@ -203,79 +203,82 @@
   // Modify handleKeydown to move in the current direction
 // ... previous code ...
 
-  function handleKeydown(event, x, y) {
+function handleKeydown(event, x, y) {
     console.log('Key pressed:', event.key);  // Debug log
     
     if (spaceCells.has(`${x},${y}`)) {
-      event.preventDefault();
-      return;
+        event.preventDefault();
+        return;
     }
 
     const input = event.target;
 
     switch (event.key) {
-      case 'Tab':
-        event.preventDefault();
-        const nextWord = findNextWordStart(x, y);
-        focusedX = nextWord.x;
-        focusedY = nextWord.y;
-        currentDirection = nextWord.direction;
-        const nextInput = document.querySelector(
-          `input[data-x="${nextWord.x}"][data-y="${nextWord.y}"]`
-        );
-        nextInput?.focus();
-        break;
-      case 'ArrowRight':
-        event.preventDefault();
-        currentDirection = 'across';
-        moveFocus(x + 1, y);
-        break;
-      case 'ArrowLeft':
-        event.preventDefault();
-        currentDirection = 'across';
-        moveFocus(x - 1, y);
-        break;
-      case 'ArrowUp':
-        event.preventDefault();
-        currentDirection = 'down';
-        moveFocus(x, y - 1);
-        break;
-      case 'ArrowDown':
-        event.preventDefault();
-        currentDirection = 'down';
-        moveFocus(x, y + 1);
-        break;
-      case ' ':
-      case 'Space':
-        event.preventDefault();
-        if (currentDirection === 'across') {
-          moveFocus(x + 1, y);
-        } else {
-          moveFocus(x, y + 1);
-        }
-        break;
-      case 'Backspace':
-        if (!input.value) {
-          event.preventDefault();
-          if (currentDirection === 'across') {
+        case 'Tab':
+            event.preventDefault();
+            const nextWord = findNextWordStart(x, y);
+            focusedX = nextWord.x;
+            focusedY = nextWord.y;
+            currentDirection = nextWord.direction;
+            const nextInput = document.querySelector(
+                `input[data-x="${nextWord.x}"][data-y="${nextWord.y}"]`
+            );
+            nextInput?.focus();
+            break;
+        case 'ArrowRight':
+            event.preventDefault();
+            currentDirection = 'across';
+            moveFocus(x + 1, y);
+            break;
+        case 'ArrowLeft':
+            event.preventDefault();
+            currentDirection = 'across';
             moveFocus(x - 1, y);
-          } else {
+            break;
+        case 'ArrowUp':
+            event.preventDefault();
+            currentDirection = 'down';
             moveFocus(x, y - 1);
-          }
-        }
-        break;
-      default:
-        if (event.key.length === 1 && event.key.match(/[a-zA-Z]/)) {
-          requestAnimationFrame(() => {
+            break;
+        case 'ArrowDown':
+            event.preventDefault();
+            currentDirection = 'down';
+            moveFocus(x, y + 1);
+            break;
+        case ' ':
+        case 'Space':
+            event.preventDefault();
             if (currentDirection === 'across') {
-              moveFocus(x + 1, y);
+                moveFocus(x + 1, y);
             } else {
-              moveFocus(x, y + 1);
+                moveFocus(x, y + 1);
             }
-          });
-        }
+            break;
+        case 'Backspace':
+            if (!input.value) {
+                event.preventDefault();
+                if (currentDirection === 'across') {
+                    moveFocus(x - 1, y);
+                } else {
+                    moveFocus(x, y - 1);
+                }
+            }
+            break;
+        default:
+            // Changed this part to handle both upper and lowercase letters
+            if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
+                // Set the value explicitly to uppercase
+                input.value = event.key.toUpperCase();
+                requestAnimationFrame(() => {
+                    if (currentDirection === 'across') {
+                        moveFocus(x + 1, y);
+                    } else {
+                        moveFocus(x, y + 1);
+                    }
+                });
+            }
     }
-  }
+}
 
   function checkWord(word) {
     const letters = [];
@@ -451,7 +454,7 @@
                 bind:value={grid[y][x]}
                 onkeydown={(e) => handleKeydown(e, x, y)}
                 onclick={() => handleCellClick(x, y)}
-              />
+            />
               {/if}
             {/if}
           </div>
@@ -478,6 +481,8 @@
   </div>
 
   <!-- Clue Lists -->
+
+  <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
   <div class="flex flex-col gap-6 w-full md:w-64">
     <!-- Across Clues -->
     <div>
@@ -519,8 +524,6 @@
     </div>
   </div>
 </div>
-
-<MobileKeyboard onKeyPress={handleVirtualKeyPress} />
 
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile */
