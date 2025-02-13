@@ -493,84 +493,69 @@ function handleKeydown(event, x, y) {
   }
 </script>
 
-<div class="w-full max-w-lg mx-auto">
-  <!-- This wrapper ensures the grid container has a fixed width -->
-  <div class="aspect-square relative">
-    <!-- The grid container is forced to be a square -->
-    <div
-      class="absolute inset-0 grid bg-black"
-      style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
-    >
-      {#each grid as row, y}
-        {#each row as cell, x}
-          <div
-            class="aspect-square flex items-center justify-center relative transition-colors duration-200
-              {cell === null
-                  ? 'bg-black'
-                  : isCellHighlighted(x, y) === 'focused'
-                    ? 'bg-orange-300'
-                    : isCellHighlighted(x, y) === 'active'
-                      ? 'bg-blue-100'
-                      : 'bg-white'}"
-          >
-            {#if cell !== null}
-              {#if wordNumbers.has(`${x},${y}`)}
-                <span class="absolute text-xs top-0 left-0.5">
-                  {wordNumbers.get(`${x},${y}`)}
-                </span>
-              {/if}
-
-              {#if spaceCells.has(`${x},${y}`)}
-                <div
-                  class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400"
-                >
-                  ␣
-                </div>
-              {:else}
-              <input
-                type="text"
-                maxlength="1"
-                data-x={x}
-                data-y={y}
-                class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent"
-                class:cursor-text={!isMobileDevice}
-                bind:value={grid[y][x]}
-                onkeydown={(e) => handleKeydown(e, x, y)}
-                onclick={() => handleCellClick(x, y)}
-                {...(isMobileDevice ? {
-                  readonly: true,
-                  inputmode: "none",
-                  tabindex: "-1"
-                } : {})}
-              />
-              {/if}
-            {/if}
-          </div>
-        {/each}
-      {/each}
-    </div>
-
-
-    <button
-      onclick={submitGuess}
-      class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mb-4"
-    >
-      Submit
-    </button>
-
-    {#if message}
+<div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto">
+  <!-- Crossword grid container -->
+  <div class="flex-1">
+    <!-- Grid container -->
+    <div class="aspect-square relative">
       <div
-        class="text-lg font-semibold {isCorrect
-          ? 'text-green-600'
-          : 'text-red-600'}"
+        class="absolute inset-0 grid bg-black"
+        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
       >
-        {message}
+        {#each grid as row, y}
+          {#each row as cell, x}
+            <div
+              class="aspect-square flex items-center justify-center relative transition-colors duration-200
+                {cell === null
+                    ? 'bg-black'
+                    : isCellHighlighted(x, y) === 'focused'
+                      ? 'bg-orange-300'
+                      : isCellHighlighted(x, y) === 'active'
+                        ? 'bg-blue-100'
+                        : 'bg-white'}"
+            >
+              {#if cell !== null}
+                {#if wordNumbers.has(`${x},${y}`)}
+                  <span class="absolute text-xs top-0 left-0.5">
+                    {wordNumbers.get(`${x},${y}`)}
+                  </span>
+                {/if}
+                {#if spaceCells.has(`${x},${y}`)}
+                  <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                    ␣
+                  </div>
+                {:else}
+                  <input
+                    type="text"
+                    maxlength="1"
+                    data-x={x}
+                    data-y={y}
+                    class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent"
+                    class:cursor-text={!isMobileDevice}
+                    bind:value={grid[y][x]}
+                    onkeydown={(e) => handleKeydown(e, x, y)}
+                    onclick={() => handleCellClick(x, y)}
+                    {...(isMobileDevice ? {
+                      readonly: true,
+                      inputmode: "none",
+                      tabindex: "-1"
+                    } : {})}
+                  />
+                {/if}
+              {/if}
+            </div>
+          {/each}
+        {/each}
       </div>
-    {/if}
+
+    </div>
+    <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
   </div>
 
-  <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
-  <div class="flex flex-col gap-6 w-full md:w-64">
+  
+
+  <!-- Clue list container -->
+  <div class="w-full md:w-64">
     <!-- Across Clues -->
     <div>
       <h2 class="text-xl font-bold mb-2">Across</h2>
@@ -592,7 +577,7 @@ function handleKeydown(event, x, y) {
     </div>
 
     <!-- Down Clues -->
-    <div>
+    <div class="mt-4">
       <h2 class="text-xl font-bold mb-2">Down</h2>
       <div class="space-y-2">
         {#each downClues as clue}
@@ -609,8 +594,21 @@ function handleKeydown(event, x, y) {
         {/each}
       </div>
     </div>
+
+    <button
+      onclick={submitGuess}
+      class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mb-4"
+    >
+      Submit
+    </button>
+    {#if message}
+      <div class="text-lg font-semibold {isCorrect ? 'text-green-600' : 'text-red-600'}">
+        {message}
+      </div>
+    {/if}
   </div>
 </div>
+
 
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile */
