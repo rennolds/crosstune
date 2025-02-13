@@ -1,5 +1,6 @@
 <script>
   import crosswords from "$lib/data/crosswords.json";
+  import MobileKeyboard from './MobileKeyboard.svelte';
 
   // Get today's puzzle
   const puzzle = crosswords["2024-02-09"];
@@ -290,6 +291,18 @@
     return letters.join("").toUpperCase() === word.word;
   }
 
+  // Add new function to handle virtual keyboard input
+  function handleVirtualKeyPress(key) {
+      // Create a synthetic event that matches the structure expected by handleKeydown
+      const syntheticEvent = {
+        key,
+        preventDefault: () => {},
+        target: document.querySelector(`input[data-x="${focusedX}"][data-y="${focusedY}"]`)
+      };
+
+      handleKeydown(syntheticEvent, focusedX, focusedY);
+  }
+
   function submitGuess() {
     // Check if all non-space cells are filled
     const hasEmptyCells = grid.some((row, y) =>
@@ -506,3 +519,12 @@
     </div>
   </div>
 </div>
+
+<MobileKeyboard onKeyPress={handleVirtualKeyPress} />
+
+<style>
+  /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile */
+  :global(body) {
+    padding-bottom: 220px;
+  }
+</style>
