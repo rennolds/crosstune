@@ -2,6 +2,19 @@
   import crosswords from "$lib/data/crosswords.json";
   import MobileKeyboard from './MobileKeyboard.svelte';
 
+  let isMobileDevice = $state(false);
+
+  $effect(() => {
+    isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
+    
+    // Listen for changes in screen size
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    const handler = (e) => isMobileDevice = e.matches;
+    mediaQuery.addEventListener('change', handler);
+    
+    return () => mediaQuery.removeEventListener('change', handler);
+  });
+
   // Get today's puzzle
   const puzzle = crosswords["2024-02-09"];
   const { size, words } = puzzle;
@@ -451,10 +464,16 @@ function handleKeydown(event, x, y) {
                 data-x={x}
                 data-y={y}
                 class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent"
+                class:cursor-text={!isMobileDevice}
                 bind:value={grid[y][x]}
                 onkeydown={(e) => handleKeydown(e, x, y)}
                 onclick={() => handleCellClick(x, y)}
-            />
+                {...(isMobileDevice ? {
+                  readonly: true,
+                  inputmode: "none",
+                  tabindex: "-1"
+                } : {})}
+              />
               {/if}
             {/if}
           </div>
@@ -527,7 +546,13 @@ function handleKeydown(event, x, y) {
 
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile */
-  :global(body) {
-    padding-bottom: 220px;
+  @media (max-width: 768px) {
+    :global(body) {
+      padding-bottom: 220px;
+    }
+  }
+  
+  .cursor-text {
+    cursor: text;
   }
 </style>
