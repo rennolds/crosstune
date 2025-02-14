@@ -1,34 +1,36 @@
 <script>
-    // Timer state
-    let seconds = $state(0);
-    let isTimerRunning = $state(true);
-  
-    // Format seconds into MM:SS
+    import { 
+      getIsCorrect,
+      getSeconds,
+      getTimerRunning,
+      incrementSeconds,
+      setTimerRunning 
+    } from '$lib/stores/game.svelte.js';
+    
     function formatTime(totalSeconds) {
       const minutes = Math.floor(totalSeconds / 60);
       const seconds = totalSeconds % 60;
       return `${minutes}:${seconds.toString().padStart(2, '0')}`;
     }
-  
+    
     $effect(() => {
       if (typeof document !== 'undefined') {
         const handleVisibilityChange = () => {
           if (document.hidden) {
-            isTimerRunning = false;
+            setTimerRunning(false);
           } else {
-            isTimerRunning = true;
+            setTimerRunning(true);
           }
         };
-
+  
         document.addEventListener('visibilitychange', handleVisibilityChange);
-
+  
         const interval = setInterval(() => {
-          if (isTimerRunning && !document.hidden) {
-            seconds++;
+          if (getTimerRunning() && !document.hidden && !getIsCorrect()) {
+            incrementSeconds();
           }
         }, 1000);
-  
-        // Cleanup function
+    
         return () => {
           clearInterval(interval);
           document.removeEventListener('visibilitychange', handleVisibilityChange);
@@ -36,7 +38,6 @@
       }
     });
 </script>
-  
   <nav class="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-14">
@@ -52,7 +53,7 @@
           </button>
           
           <div class="ml-4 font-mono text-lg">
-            {formatTime(seconds)}
+            {formatTime(getSeconds())}
           </div>
         </div>
   

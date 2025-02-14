@@ -2,6 +2,13 @@
   import crosswords from "$lib/data/crosswords.json";
   import MobileKeyboard from './MobileKeyboard.svelte';
   import MobileClue from './MobileClue.svelte';
+  import ResultOverlay from './ResultOverlay.svelte';
+
+  import { 
+    getIsCorrect,
+    setIsCorrect,
+    getSeconds
+  } from '$lib/stores/game.svelte.js';
 
   let isMobileDevice = $state(false);
 
@@ -27,7 +34,6 @@
       .map(() => Array(size.width).fill(null))
   );
   let message = $state("");
-  let isCorrect = $state(false);
   let highlightedWord = $state(null);
 
   // Track currently focused cell
@@ -602,30 +608,34 @@ function handleKeydown(event, x, y) {
     }
   }
 
+  let showOverlay = $state(false);
+  let finalTime = $state(0);
+
+  function handleCloseOverlay() {
+    showOverlay = false;
+  }
+
   $effect(() => {
-    // Only run check if the grid is initialized
     if (!grid) return;
     
-    // Check if all cells are filled
     const hasEmptyCells = grid.some((row, y) => 
       row.some((cell, x) => cell === "" && !spaceCells.has(`${x},${y}`))
     );
     
     if (!hasEmptyCells) {
-      // All cells are filled, check the solution
       const allCorrect = words.every(checkWord);
       
       if (allCorrect) {
-        message = "Congratulations! All words are correct! 🎉";
-        isCorrect = true;
+        setIsCorrect(true);
+        finalTime = getSeconds();
+        showOverlay = true;
       } else {
-        message = "Keep trying! Some words aren't quite right.";
-        isCorrect = false;
+        setIsCorrect(false);
+        showOverlay = true;
       }
     } else {
-      // Clear the message while puzzle is incomplete
-      message = "";
-      isCorrect = false;
+      setIsCorrect(false);
+      showOverlay = false;
     }
   });
 </script>
@@ -744,13 +754,21 @@ function handleKeydown(event, x, y) {
     
 
     {#if message}
-      <div class="text-lg font-semibold {isCorrect ? 'text-green-600' : 'text-red-600'}">
+      <div class="text-lg font-semibold {getIsCorrect() ? 'text-green-600' : 'text-red-600'}">
         {message}
       </div>
     {/if}
   </div>
   {/if}
 </div>
+
+{#if showOverlay}
+  <ResultOverlay 
+    time={finalTime}
+    isCorrect={getIsCorrect()}
+    onClose={handleCloseOverlay}
+  />
+{/if}
 
 
 <style>
