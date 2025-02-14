@@ -580,22 +580,22 @@ function handleKeydown(event, x, y) {
                     ␣
                   </div>
                 {:else}
-                  <input
-                    type="text"
-                    maxlength="1"
-                    data-x={x}
-                    data-y={y}
-                    class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent"
-                    class:cursor-text={!isMobileDevice}
-                    bind:value={grid[y][x]}
-                    onkeydown={(e) => handleKeydown(e, x, y)}
-                    onclick={() => handleCellClick(x, y)}
-                    {...(isMobileDevice ? {
-                      readonly: true,
-                      inputmode: "none",
-                      tabindex: "-1"
-                    } : {})}
-                  />
+                <input
+                  type="text"
+                  maxlength="1"
+                  data-x={x}
+                  data-y={y}
+                  class="w-full h-full text-center uppercase font-bold text-base md:text-lg focus:outline-none bg-transparent"
+                  class:cursor-text={!isMobileDevice}
+                  bind:value={grid[y][x]}
+                  onkeydown={(e) => handleKeydown(e, x, y)}
+                  onclick={() => handleCellClick(x, y)}
+                  {...(isMobileDevice ? {
+                    readonly: true,
+                    inputmode: "none",
+                    tabindex: "-1"
+                  } : {})}
+                />
                 {/if}
               {/if}
             </div>
