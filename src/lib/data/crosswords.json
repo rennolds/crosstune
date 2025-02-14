@@ -1,74 +1,67 @@
 {
   "2024-02-09": {
     "size": {
-      "width": 15,
-      "height": 15
+      "width": 14,
+      "height": 14
     },
     "words": [
       {
         "word": "WITHOUT ME",
-        "startX": 1,
-        "startY": 1,
+        "startX": 0,
+        "startY": 0,
         "direction": "across",
         "audioUrl": "https://p.scdn.co/mp3-preview/35fc7456c892c11867fe1513b92dc44e9664eaba?cid=98f79e400795491cbc5f69b713465708",
         "color": "#FF9B9B"
       },
       {
         "word": "TOXIC",
-        "startX": 3,
-        "startY": 1,
+        "startX": 2,
+        "startY": 0,
         "direction": "down",
         "audioUrl": "https://p.scdn.co/mp3-preview/6de2791f84c1d637a0e24734b6df3997cc742da4?cid=98f79e400795491cbc5f69b713465708",
         "color": "#9BFFA6"
       },
       {
         "word": "CLOSER",
-        "startX": 3,
-        "startY": 5,
+        "startX": 2,
+        "startY": 4,
         "direction": "across",
         "audioUrl": "https://p.scdn.co/mp3-preview/cfd565c4d3c621771e6d25d99749b9fc200e396c?cid=98f79e400795491cbc5f69b713465708",
         "color": "#9BB1FF"
       },
       {
         "word": "TASTE",
-        "startX": 7,
-        "startY": 1,
+        "startX": 6,
+        "startY": 0,
         "direction": "down",
         "audioUrl": "https://p.scdn.co/mp3-preview/b71b2040e08650ae44fe989d81382f572009ab7c",
         "color": "#FFE89B"
       },
       {
-        "word": "SMACK THAT",
-        "startX": 6,
-        "startY": 5,
-        "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/9cab8a030feb773e41610953fbc66add579c44ec?cid=98f79e400795491cbc5f69b713465708",
-        "color": "#D89BFF"
-      },
-      {
         "word": "LOVE SONG",
-        "startX": 4,
-        "startY": 5,
+        "startX": 3,
+        "startY": 4,
         "direction": "down",
         "audioUrl": "https://p.scdn.co/mp3-preview/3089e39410c2e15ecb7a35a9afcff2de9bb9414a?cid=98f79e400795491cbc5f69b713465708",
         "color": "#9BFFF4"
       },
       {
         "word": "SATURN",
-        "startX": 7,
-        "startY": 3,
+        "startX": 6,
+        "startY": 2,
         "direction": "across",
         "audioUrl": "https://p.scdn.co/mp3-preview/74f603e906ab7a5409cf2edc6dda326ebe7c1d49?cid=98f79e400795491cbc5f69b713465708",
         "color": "#FFC0CB"
       },
       {
-        "word": "HELP",
-        "startX": 6,
-        "startY": 12,
-        "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/d541a8b737fb12bb6bbfe3dc35d37468066a6e25",
+        "word": "SORRY",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "https://p.scdn.co/mp3-preview/eca5a32b13f68f700b06e06ffdc8110e61e232ce",
         "color": "#FFA500"
       }
+
     ]
   }
 }
