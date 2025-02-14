@@ -336,17 +336,20 @@ function handleKeydown(event, x, y) {
             break;
         default:
             // Changed this part to handle both upper and lowercase letters
-            if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
-                // Set the value explicitly to uppercase
-                input.value = event.key.toUpperCase();
-                requestAnimationFrame(() => {
-                    if (currentDirection === 'across') {
-                        moveFocus(x + 1, y);
-                    } else {
-                        moveFocus(x, y + 1);
-                    }
-                });
-            }
+          if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
+            // Update both input value and grid state
+            const letter = event.key.toUpperCase();
+            grid[y][x] = letter; // Add this line to update grid state
+            input.value = letter;
+            
+            requestAnimationFrame(() => {
+                if (currentDirection === 'across') {
+                    moveFocus(x + 1, y);
+                } else {
+                    moveFocus(x, y + 1);
+                }
+            });
+          }
     }
 }
 
@@ -402,29 +405,6 @@ function handleKeydown(event, x, y) {
     };
 
     handleKeydown(syntheticEvent, focusedX, focusedY);
-  }
-
-  function submitGuess() {
-    // Check if all non-space cells are filled
-    const hasEmptyCells = grid.some((row, y) =>
-      row.some((cell, x) => cell === "" && !spaceCells.has(`${x},${y}`))
-    );
-
-    if (hasEmptyCells) {
-      message = "Please fill in all cells before submitting";
-      isCorrect = false;
-      return;
-    }
-
-    const allCorrect = words.every(checkWord);
-
-    if (allCorrect) {
-      message = "Congratulations! All words are correct!";
-      isCorrect = true;
-    } else {
-      message = "Some words are incorrect. Try again!";
-      isCorrect = false;
-    }
   }
 
   async function playClue(clue) {
@@ -491,6 +471,33 @@ function handleKeydown(event, x, y) {
       highlightedWord = null;
     }
   }
+
+  $effect(() => {
+    // Only run check if the grid is initialized
+    if (!grid) return;
+    
+    // Check if all cells are filled
+    const hasEmptyCells = grid.some((row, y) => 
+      row.some((cell, x) => cell === "" && !spaceCells.has(`${x},${y}`))
+    );
+    
+    if (!hasEmptyCells) {
+      // All cells are filled, check the solution
+      const allCorrect = words.every(checkWord);
+      
+      if (allCorrect) {
+        message = "Congratulations! All words are correct! 🎉";
+        isCorrect = true;
+      } else {
+        message = "Keep trying! Some words aren't quite right.";
+        isCorrect = false;
+      }
+    } else {
+      // Clear the message while puzzle is incomplete
+      message = "";
+      isCorrect = false;
+    }
+  });
 </script>
 
 <div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto">
@@ -595,12 +602,6 @@ function handleKeydown(event, x, y) {
       </div>
     </div>
 
-    <button
-      onclick={submitGuess}
-      class="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mb-4"
-    >
-      Submit
-    </button>
     {#if message}
       <div class="text-lg font-semibold {isCorrect ? 'text-green-600' : 'text-red-600'}">
         {message}
