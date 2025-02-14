@@ -1,6 +1,7 @@
 <script>
   import crosswords from "$lib/data/crosswords.json";
   import MobileKeyboard from './MobileKeyboard.svelte';
+  import MobileClue from './MobileClue.svelte';
 
   let isMobileDevice = $state(false);
 
@@ -44,6 +45,7 @@
   let acrossClues = $state([]);
   let downClues = $state([]);
 
+  let activeClue = $state(null);
   // Map to track which cells should be spaces
   let spaceCells = $state(new Map());
 
@@ -254,8 +256,54 @@
     }
   }
 
-  // Modify handleKeydown to move in the current direction
-// ... previous code ...
+  // Function to find the clue for the current position
+  function findActiveClue() {
+    // If we don't have a current direction, default to across
+    if (!currentDirection) currentDirection = 'across';
+    
+    // Find the word at current position
+    const word = words.find(word => {
+      if (word.direction !== currentDirection) return false;
+      
+      if (word.direction === 'across') {
+        return focusedY === word.startY && 
+               focusedX >= word.startX && 
+               focusedX < word.startX + word.word.length;
+      } else {
+        return focusedX === word.startX && 
+               focusedY >= word.startY && 
+               focusedY < word.startY + word.word.length;
+      }
+    });
+
+    if (!word) return null;
+
+    // Find the clue number for this word
+    const number = wordNumbers.get(`${word.startX},${word.startY}`);
+    
+    return {
+      ...word,
+      number
+    };
+  }
+
+  // Update active clue whenever focus or direction changes
+  $effect(() => {
+    activeClue = findActiveClue();
+  });
+
+  // Initialize with first clue
+  $effect(() => {
+    if (!activeClue) {
+      // Get first across clue
+      const firstClue = acrossClues[0];
+      if (firstClue) {
+        focusedX = firstClue.startX;
+        focusedY = firstClue.startY;
+        currentDirection = 'across';
+      }
+    }
+  });
 
 function handleKeydown(event, x, y) {
     console.log('Key pressed:', event.key);  // Debug log
@@ -561,6 +609,9 @@ function handleKeydown(event, x, y) {
 
   
 
+  {#if isMobileDevice}
+    <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} />
+  {:else}
   <!-- Clue list container -->
   <div class="w-full md:w-64">
     <!-- Across Clues -->
@@ -601,6 +652,7 @@ function handleKeydown(event, x, y) {
         {/each}
       </div>
     </div>
+    
 
     {#if message}
       <div class="text-lg font-semibold {isCorrect ? 'text-green-600' : 'text-red-600'}">
@@ -608,6 +660,7 @@ function handleKeydown(event, x, y) {
       </div>
     {/if}
   </div>
+  {/if}
 </div>
 
 
