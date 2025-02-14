@@ -502,7 +502,7 @@ function handleKeydown(event, x, y) {
           currentAudio = null;
           highlightedWord = null;
         }
-      }, 1000);
+      }, 1500);
 
       // Still keep the ended event listener for cases where the audio might end before 2 seconds
       audio.addEventListener("ended", () => {
