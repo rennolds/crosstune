@@ -3,7 +3,7 @@
 </script>
   
 {#if clue}
-  <div class="fixed bottom-[175px] left-0 right-0 h-11 bg-white border-t border-gray-200 shadow-lg mb-4">
+  <div class="fixed bottom-[131px] left-0 right-0 h-11 bg-white border-t border-gray-200 shadow-lg mb-4">
     <div class="flex items-center gap-1 h-full px-2">
       <span class="font-medium text-sm w-4">{clue.number}.</span>
       <span class="text-xs flex-1">{clue.direction.charAt(0).toUpperCase() + clue.direction.slice(1)} • {clue.length} letters</span>
