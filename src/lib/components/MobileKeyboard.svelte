@@ -1,7 +1,7 @@
 <script>
     // Handle key presses
     let { onKeyPress } = $props();
-    let showSymbols = false;
+    let showSymbols = $state(false);
 
     // Letter mode rows
     const letterRow1 = ['Q','W','E','R','T','Y','U','I','O','P'];
