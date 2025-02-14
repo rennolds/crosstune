@@ -14,7 +14,7 @@
     const symbolRow3 = ['!','?','/','(',')',';',':'];
 </script>
 
-<div class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 bg-gray-100 shadow-lg">
+<div class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 bg-gray-100 shadow-lg pb-2.5">
   <!-- Outer container with horizontal padding -->
   <div class="px-2 pb-2 space-y-1">
     <!-- Row 1 -->
