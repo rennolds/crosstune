@@ -10,17 +10,32 @@
       return `${minutes}:${seconds.toString().padStart(2, '0')}`;
     }
   
-    // Start timer
     $effect(() => {
-      const interval = setInterval(() => {
-        if (isTimerRunning) {
-          seconds++;
-        }
-      }, 1000);
+      if (typeof document !== 'undefined') {
+        const handleVisibilityChange = () => {
+          if (document.hidden) {
+            isTimerRunning = false;
+          } else {
+            isTimerRunning = true;
+          }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        const interval = setInterval(() => {
+          if (isTimerRunning && !document.hidden) {
+            seconds++;
+          }
+        }, 1000);
   
-      return () => clearInterval(interval);
+        // Cleanup function
+        return () => {
+          clearInterval(interval);
+          document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+      }
     });
-  </script>
+</script>
   
   <nav class="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
