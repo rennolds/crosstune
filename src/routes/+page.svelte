@@ -1,5 +1,6 @@
 <script>
     import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
+    import Navbar from '$lib/components/Navbar.svelte';
     import { browser } from "$app/environment";
 
     // if (browser) {
@@ -23,6 +24,6 @@
 </script>
   
 <main class="md:container md:mx-auto md:px-4 md:py-8">
-    <h1 class="text-4xl font-bold text-center mb-8 hidden md:block">Crosstune</h1>
+    <Navbar />
     <CrosswordGrid />
 </main>
