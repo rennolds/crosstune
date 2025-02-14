@@ -126,10 +126,40 @@
     }
   }
 
-  // Replace the existing isCellHighlighted function with this
+  function getWordColorAtCell(x, y) {
+    const word = words.find(word => {
+      if (word.direction === 'across') {
+        return y === word.startY && 
+               x >= word.startX && 
+               x < word.startX + word.word.length;
+      } else {
+        return x === word.startX && 
+               y >= word.startY && 
+               y < word.startY + word.word.length;
+      }
+    });
+    return word?.color;
+  }
+
+  // Function to get the active word's color
+  function getActiveWordColor() {
+    const activeWord = findActiveWord();
+    return activeWord?.color;
+  }
+
+  function addAlpha(hexColor, alpha) {
+    const r = parseInt(hexColor.slice(1, 3), 16);
+    const g = parseInt(hexColor.slice(3, 5), 16);
+    const b = parseInt(hexColor.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  // Modified isCellHighlighted function to include color information
   function isCellHighlighted(x, y) {
-    if (x === focusedX && y === focusedY) return 'focused';
-    return isCellInActiveWord(x, y) ? 'active' : false;
+    if (x === focusedX && y === focusedY) {
+      return { type: 'focused', color: getActiveWordColor() };
+    }
+    return isCellInActiveWord(x, y) ? { type: 'active', color: getActiveWordColor() } : false;
   }
 
   // Helper to check if a cell should be an input cell
@@ -305,6 +335,41 @@
     }
   });
 
+
+  function findNextWord(currentWord) {
+  // Combine all words and sort them by position
+    const allWords = [...words].sort((a, b) => {
+      if (a.startY === b.startY) {
+        return a.startX - b.startX;
+      }
+      return a.startY - b.startY;
+  });
+
+  // Find the index of the current word
+    const currentIndex = allWords.findIndex(word => 
+      word.startX === currentWord.startX && 
+      word.startY === currentWord.startY && 
+      word.direction === currentWord.direction
+    );
+
+  // Get the next word, or wrap around to the first word
+    const nextWord = allWords[(currentIndex + 1) % allWords.length];
+  
+    return nextWord;
+}
+
+// Add this function to check if we're at the end of a word
+function isEndOfWord(x, y) {
+  const activeWord = findActiveWord();
+  if (!activeWord) return false;
+
+  if (activeWord.direction === 'across') {
+    return x === activeWord.startX + activeWord.word.length - 1 && y === activeWord.startY;
+  } else {
+    return x === activeWord.startX && y === activeWord.startY + activeWord.word.length - 1;
+  }
+}
+
 function handleKeydown(event, x, y) {
     console.log('Key pressed:', event.key);  // Debug log
     
@@ -382,24 +447,41 @@ function handleKeydown(event, x, y) {
                   }
               }
             break;
-        default:
-            // Changed this part to handle both upper and lowercase letters
-          if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
-            // Update both input value and grid state
-            const letter = event.key.toUpperCase();
-            grid[y][x] = letter; // Add this line to update grid state
-            input.value = letter;
-            
-            requestAnimationFrame(() => {
-                if (currentDirection === 'across') {
-                    moveFocus(x + 1, y);
-                } else {
-                    moveFocus(x, y + 1);
-                }
-            });
-          }
+          default:
+        if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
+          const letter = event.key.toUpperCase();
+          grid[y][x] = letter;
+          input.value = letter;
+
+          requestAnimationFrame(() => {
+            // Check if we're at the end of the current word
+            if (isEndOfWord(x, y)) {
+              // Find the current word and the next word
+              const currentWord = findActiveWord();
+              const nextWord = findNextWord(currentWord);
+
+              // Move focus to the start of the next word
+              focusedX = nextWord.startX;
+              focusedY = nextWord.startY;
+              currentDirection = nextWord.direction;
+
+              // Focus the input at the new position
+              const nextInput = document.querySelector(
+                `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
+              );
+              nextInput?.focus();
+            } else {
+              // Regular movement within the word
+              if (currentDirection === 'across') {
+                moveFocus(x + 1, y);
+              } else {
+                moveFocus(x, y + 1);
+              }
+            }
+          });
+        }
     }
-}
+  }
 
   function checkWord(word) {
     const letters = [];
@@ -559,16 +641,19 @@ function handleKeydown(event, x, y) {
       >
         {#each grid as row, y}
           {#each row as cell, x}
-            <div
-              class="aspect-square flex items-center justify-center relative transition-colors duration-200
-                {cell === null
-                    ? 'bg-black'
-                    : isCellHighlighted(x, y) === 'focused'
-                      ? 'bg-orange-300'
-                      : isCellHighlighted(x, y) === 'active'
-                        ? 'bg-blue-100'
-                        : 'bg-white'}"
-            >
+              <div
+                class="aspect-square flex items-center justify-center relative transition-colors duration-200"
+                style="
+                  {cell === null 
+                    ? 'background-color: black;' 
+                    : isCellHighlighted(x, y)?.type === 'focused'
+                      ? `background-color: ${isCellHighlighted(x, y).color};`
+                      : isCellHighlighted(x, y)?.type === 'active'
+                        ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, 0.70)};`
+                        : 'background-color: white;'
+                  }
+                "
+              >
               {#if cell !== null}
                 {#if wordNumbers.has(`${x},${y}`)}
                   <span class="absolute text-xs top-0 left-0.5">

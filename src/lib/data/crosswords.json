@@ -1,52 +1,58 @@
 {
-    "2024-02-09": {
-      "size": {
-        "width": 16,
-        "height": 16
+  "2024-02-09": {
+    "size": {
+      "width": 16,
+      "height": 16
+    },
+    "words": [
+      {
+        "word": "BASKET CASE",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "audioUrl": "https://p.scdn.co/mp3-preview/f055a866d726bac8593f15953d772c631505df7e",
+        "color": "#FF9B9B"
       },
-      "words": [
-        {
-          "word": "BASKET CASE",
-          "startX": 4,
-          "startY": 2,
-          "direction": "across",
-          "audioUrl": "https://p.scdn.co/mp3-preview/f055a866d726bac8593f15953d772c631505df7e"
-        },
-        {
-          "word": "PERFECT",
-          "startX": 2,
-          "startY": 2,
-          "direction": "down",
-          "audioUrl": "https://p.scdn.co/mp3-preview/4e30857a3c7da3f8891483643e310bb233afadd2?cid=98f79e400795491cbc5f69b713465708"
-        },
-        {
-          "word": "MATERIAL GIRL",
-          "startX": 5,
-          "startY": 1,
-          "direction": "down",
-          "audioUrl": "https://p.scdn.co/mp3-preview/e603c1b78ec2fb02062ff0d1f48475f33c45fe8a"
-        },
-        {
-          "word": "BLEEDING LOVE",
-          "startX": 0,
-          "startY": 6,
-          "direction": "across",
-          "audioUrl": "https://p.scdn.co/mp3-preview/3b688a959a77d42be82bdfdf388e670c09acba84?cid=98f79e400795491cbc5f69b713465708"
-        },
-        {
-          "word": "YELLOW",
-          "startX": 9,
-          "startY": 4,
-          "direction": "down",
-          "audioUrl": "https://p.scdn.co/mp3-preview/c0d9119dc69cae75baf6463e21e43f433fdf5ff4?cid=98f79e400795491cbc5f69b713465708"
-        },
-        {
-          "word": "IN DA CLUB",
-          "startX": 5,
-          "startY": 11,
-          "direction": "across",
-          "audioUrl": "https://p.scdn.co/mp3-preview/c2905c98bb694c479e6f0b5c0376b2242971d041"
-        }
-      ]
-    }
+      {
+        "word": "PERFECT",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "audioUrl": "https://p.scdn.co/mp3-preview/4e30857a3c7da3f8891483643e310bb233afadd2?cid=98f79e400795491cbc5f69b713465708",
+        "color": "#9BFFA6"
+      },
+      {
+        "word": "MATERIAL GIRL",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "https://p.scdn.co/mp3-preview/e603c1b78ec2fb02062ff0d1f48475f33c45fe8a",
+        "color": "#9BB1FF"
+      },
+      {
+        "word": "BLEEDING LOVE",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "audioUrl": "https://p.scdn.co/mp3-preview/3b688a959a77d42be82bdfdf388e670c09acba84?cid=98f79e400795491cbc5f69b713465708",
+        "color": "#FFE89B"
+      },
+      {
+        "word": "YELLOW",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "https://p.scdn.co/mp3-preview/c0d9119dc69cae75baf6463e21e43f433fdf5ff4?cid=98f79e400795491cbc5f69b713465708",
+        "color": "#D89BFF"
+      },
+      {
+        "word": "IN DA CLUB",
+        "startX": 5,
+        "startY": 11,
+        "direction": "across",
+        "audioUrl": "https://p.scdn.co/mp3-preview/c2905c98bb694c479e6f0b5c0376b2242971d041",
+        "color": "#9BFFF4"
+      }
+    ]
   }
+}
