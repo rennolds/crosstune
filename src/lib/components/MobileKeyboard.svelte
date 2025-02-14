@@ -70,7 +70,7 @@
       </button>
     </div>
 
-    <!-- Row 4: Space button -->
+    <!-- Row 4: Space button
     <div class="flex gap-1">
       <button
         class="flex-1 h-10 bg-white rounded shadow text-sm font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
@@ -78,6 +78,6 @@
       >
         Space
       </button>
-    </div>
+    </div> -->
   </div>
 </div>
