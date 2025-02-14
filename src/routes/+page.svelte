@@ -22,11 +22,7 @@
 
 </script>
   
-<main class="container mx-auto px-4 py-8">
-    <!-- <button onclick={handleWidgetClick()}>click me!</button> -->
-    <!-- <iframe class="hidden" id="soundcloud" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false">
-    </iframe> -->
-    <h1 class="text-4xl font-bold text-center mb-8">Crosstune</h1>
+<main class="md:container md:mx-auto md:px-4 md:py-8">
+    <h1 class="text-4xl font-bold text-center mb-8 hidden md:block">Crosstune</h1>
     <CrosswordGrid />
 </main>
