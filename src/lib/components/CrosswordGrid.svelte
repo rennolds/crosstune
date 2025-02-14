@@ -585,11 +585,15 @@ function handleKeydown(event, x, y) {
                   maxlength="1"
                   data-x={x}
                   data-y={y}
-                  class="w-full h-full text-center uppercase font-bold text-base md:text-lg focus:outline-none bg-transparent"
+                  class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
                   class:cursor-text={!isMobileDevice}
                   bind:value={grid[y][x]}
                   onkeydown={(e) => handleKeydown(e, x, y)}
                   onclick={() => handleCellClick(x, y)}
+                  autocomplete="off"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
                   {...(isMobileDevice ? {
                     readonly: true,
                     inputmode: "none",
@@ -674,5 +678,26 @@ function handleKeydown(event, x, y) {
   
   .cursor-text {
     cursor: text;
+  }
+
+  :global(*) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Allow text selection only for inputs if needed */
+  :global(input) {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  /* Additional zoom prevention */
+  @supports (-webkit-touch-callout: none) {
+    :global(body) {
+      touch-action: pan-x pan-y;
+    }
   }
 </style>
