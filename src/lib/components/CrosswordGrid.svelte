@@ -704,7 +704,7 @@ function handleKeydown(event, x, y) {
                   </span>
                 {/if}
                 {#if spaceCells.has(`${x},${y}`)}
-                  <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                  <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400 border-[0.5px] border-black">
                     ␣
                   </div>
                 {:else}
@@ -713,7 +713,7 @@ function handleKeydown(event, x, y) {
                   maxlength="1"
                   data-x={x}
                   data-y={y}
-                  class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
+                  class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none border-[0.5px] border-black"
                   class:cursor-text={!isMobileDevice}
                   bind:value={grid[y][x]}
                   onkeydown={(e) => handleKeydown(e, x, y)}
