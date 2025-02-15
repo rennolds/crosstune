@@ -11,34 +11,10 @@
 	</body>
 </html>
 <script>
-    // Flag to prevent double-firing
-    let touchHandled = false;
-
     document.addEventListener('touchstart', (event) => {
-        touchHandled = false;
         const clickableParent = event.target.closest('[onclick], button, a');
         if (clickableParent) {
-            touchHandled = true;
             event.preventDefault();
         }
     }, { passive: false });
-
-    document.addEventListener('touchend', (event) => {
-        if (touchHandled) {
-            const clickableParent = event.target.closest('[onclick], button, a');
-            if (clickableParent) {
-                event.preventDefault();
-                clickableParent.click();
-            }
-            touchHandled = false;
-        }
-    }, { passive: false });
-
-    // Prevent click events from firing immediately after touch
-    document.addEventListener('click', (event) => {
-        if (touchHandled) {
-            event.stopImmediatePropagation();
-            touchHandled = false;
-        }
-    }, true);
 </script>
