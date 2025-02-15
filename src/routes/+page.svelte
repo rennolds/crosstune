@@ -23,7 +23,7 @@
 
 </script>
   
-<main class="md:container md:mx-auto md:px-4 md:py-8">
+<main class="">
     <Navbar />
     <CrosswordGrid />
 </main>
