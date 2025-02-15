@@ -680,7 +680,7 @@ function handleKeydown(event, x, y) {
       > </div>
       <div
       class="absolute inset-0 grid p-2"
-      style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
+      style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
       >
         {#each grid as row, y}
           {#each row as cell, x}
@@ -704,7 +704,7 @@ function handleKeydown(event, x, y) {
                   </span>
                 {/if}
                 {#if spaceCells.has(`${x},${y}`)}
-                  <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400 border-[0.5px] border-black">
+                  <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400 border-[.25px] border-black">
                     ␣
                   </div>
                 {:else}
@@ -713,7 +713,7 @@ function handleKeydown(event, x, y) {
                   maxlength="1"
                   data-x={x}
                   data-y={y}
-                  class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none border-[0.5px] border-black"
+                  class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none border-[.25px] border-black"
                   class:cursor-text={!isMobileDevice}
                   bind:value={grid[y][x]}
                   onkeydown={(e) => handleKeydown(e, x, y)}
