@@ -586,13 +586,11 @@ function handleKeydown(event, x, y) {
 
       // Set timeout to stop after 2 seconds
       setTimeout(() => {
-        if (currentAudio === audio) {
-          console.log("Stopping audio after 1 seconds");
-          audio.pause();
-          isPlaying = false;
-          currentAudio = null;
-          highlightedWord = null;
-        }
+        console.log("Stopping audio after 1 seconds");
+        audio.pause();
+        isPlaying = false;
+        currentAudio = null;
+        highlightedWord = null; 
       }, 1000);
 
       // Still keep the ended event listener for cases where the audio might end before 2 seconds
