@@ -26,7 +26,6 @@
   // Get today's puzzle
   const puzzle = crosswords["2024-02-09"];
   const { size, words } = puzzle;
-  console.log(puzzle.backgroundImage);
 
   // Create grid and message state
   let grid = $state(
@@ -677,7 +676,7 @@ function handleKeydown(event, x, y) {
       "
       > </div>
       <div
-      class="absolute inset-0 grid"
+      class="absolute inset-0 grid p-2"
       style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
       >
         {#each grid as row, y}
