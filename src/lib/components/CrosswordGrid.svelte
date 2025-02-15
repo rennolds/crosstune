@@ -26,6 +26,7 @@
   // Get today's puzzle
   const puzzle = crosswords["2024-02-09"];
   const { size, words } = puzzle;
+  console.log(puzzle.backgroundImage);
 
   // Create grid and message state
   let grid = $state(
@@ -638,6 +639,21 @@ function handleKeydown(event, x, y) {
       showOverlay = false;
     }
   });
+
+
+  let backgroundImageError = $state(false);
+
+  function handleBackgroundImageError() {
+    backgroundImageError = true;
+  }
+
+  $effect(() => {
+    if (puzzle.backgroundImage) {
+      const img = new Image();
+      img.onerror = handleBackgroundImageError;
+      img.src = puzzle.backgroundImage;
+    }
+  });
 </script>
 
 <div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto p-2 mb-1">
@@ -645,17 +661,32 @@ function handleKeydown(event, x, y) {
   <div class="flex-1">
     <!-- Grid container -->
     <div class="w-full relative" style="padding-bottom: 100%;">
+      <div 
+      class="absolute inset-0 bg-black"
+      style="
+        {puzzle.backgroundImage && !backgroundImageError 
+          ? `
+            background-image: url('${puzzle.backgroundImage}');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.15); /* Reduced from 0.8 to 0.15 */
+            background-blend-mode: multiply; /* Changed from overlay to multiply for better visibility */
+          ` 
+          : ''
+        }
+      "
+      > </div>
       <div
-        class="absolute inset-0 grid bg-black"
-        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
+      class="absolute inset-0 grid"
+      style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 1px;"
       >
         {#each grid as row, y}
           {#each row as cell, x}
               <div
                 class="aspect-square flex items-center justify-center relative transition-colors duration-200"
                 style="
-                  {cell === null 
-                    ? 'background-color: black;' 
+                {cell === null 
+                    ? 'background-color: transparent;' 
                     : isCellHighlighted(x, y)?.type === 'focused'
                       ? `background-color: ${isCellHighlighted(x, y).color};`
                       : isCellHighlighted(x, y)?.type === 'active'

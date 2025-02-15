@@ -1,14 +1,15 @@
 {
   "2024-02-09": {
     "size": {
-      "width": 14,
-      "height": 14
+      "width": 12,
+      "height": 12
     },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
     "words": [
       {
         "word": "WITHOUT ME",
         "startX": 0,
-        "startY": 0,
+        "startY": 2,
         "direction": "across",
         "audioUrl": "https://p.scdn.co/mp3-preview/35fc7456c892c11867fe1513b92dc44e9664eaba?cid=98f79e400795491cbc5f69b713465708",
         "color": "#FF9B9B"
@@ -16,7 +17,7 @@
       {
         "word": "TOXIC",
         "startX": 2,
-        "startY": 0,
+        "startY": 2,
         "direction": "down",
         "audioUrl": "https://p.scdn.co/mp3-preview/6de2791f84c1d637a0e24734b6df3997cc742da4?cid=98f79e400795491cbc5f69b713465708",
         "color": "#9BFFA6"
@@ -24,7 +25,7 @@
       {
         "word": "CLOSER",
         "startX": 2,
-        "startY": 4,
+        "startY": 6,
         "direction": "across",
         "audioUrl": "https://p.scdn.co/mp3-preview/cfd565c4d3c621771e6d25d99749b9fc200e396c?cid=98f79e400795491cbc5f69b713465708",
         "color": "#9BB1FF"
@@ -32,23 +33,15 @@
       {
         "word": "TASTE",
         "startX": 6,
-        "startY": 0,
+        "startY": 2,
         "direction": "down",
         "audioUrl": "https://p.scdn.co/mp3-preview/b71b2040e08650ae44fe989d81382f572009ab7c",
         "color": "#FFE89B"
       },
       {
-        "word": "LOVE SONG",
-        "startX": 3,
-        "startY": 4,
-        "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/3089e39410c2e15ecb7a35a9afcff2de9bb9414a?cid=98f79e400795491cbc5f69b713465708",
-        "color": "#9BFFF4"
-      },
-      {
         "word": "SATURN",
         "startX": 6,
-        "startY": 2,
+        "startY": 4,
         "direction": "across",
         "audioUrl": "https://p.scdn.co/mp3-preview/74f603e906ab7a5409cf2edc6dda326ebe7c1d49?cid=98f79e400795491cbc5f69b713465708",
         "color": "#FFC0CB"
@@ -56,7 +49,7 @@
       {
         "word": "SORRY",
         "startX": 5,
-        "startY": 4,
+        "startY": 6,
         "direction": "down",
         "audioUrl": "https://p.scdn.co/mp3-preview/eca5a32b13f68f700b06e06ffdc8110e61e232ce",
         "color": "#FFA500"
