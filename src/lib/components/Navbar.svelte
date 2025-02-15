@@ -38,6 +38,9 @@
       }
     });
 </script>
+  <div class="h-[50px] w-full bg-gray-200 md:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-center">
+    <span class="text-gray-500">Ad Space (320x50)</span>
+  </div>
   <nav class="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-14">
@@ -91,9 +94,14 @@
     </div>
   </nav>
   
-  <style>
-    /* Add padding to make content appear below fixed navbar */
+<style>
+  :global(body) {
+    padding-top: 3.5rem;
+  }
+
+  @media (max-width: 768px) {
     :global(body) {
-      padding-top: 3.5rem;
+      padding-top: calc(3.5rem + 50px);
     }
-  </style>
+  }
+</style>
