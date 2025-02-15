@@ -546,8 +546,6 @@ function handleKeydown(event, x, y) {
 
   async function playClue(clue) {
     try {
-      // console.log("Starting playback for URL:", clue.audioUrl);
-
       // Stop any currently playing audio
       if (currentAudio) {
         console.log("Stopping previous audio");
@@ -558,22 +556,18 @@ function handleKeydown(event, x, y) {
 
       // Create and play new audio
       const audio = new Audio(clue.audioUrl);
-      console.log("Created audio object for:", clue.audioUrl);
       currentAudio = audio;
 
       // Wait for audio to load
       await new Promise((resolve, reject) => {
         audio.addEventListener("loadedmetadata", () => {
-          console.log("Audio metadata loaded:", clue.audioUrl);
           resolve();
         });
         audio.addEventListener("error", (e) => {
-          console.log("Audio loading error:", clue.audioUrl);
           reject(e);
         });
       });
 
-      console.log("Starting playback...");
       if (!isPlaying) {
         await audio.play();
         console.log("Playback started");
@@ -584,16 +578,14 @@ function handleKeydown(event, x, y) {
         return
       }
 
-      // Set timeout to stop after 2 seconds
       setTimeout(() => {
         console.log("Stopping audio after 1 seconds");
         audio.pause();
         isPlaying = false;
         currentAudio = null;
-      }, 1000);
+      }, 1350);
 
       console.log("Audio stopped");
-      // Still keep the ended event listener for cases where the audio might end before 2 seconds
       audio.addEventListener("ended", () => {
         console.log("Audio playback ended");
         isPlaying = false;

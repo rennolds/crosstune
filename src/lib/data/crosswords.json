@@ -4,60 +4,78 @@
       "width": 12,
       "height": 10
     },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273fd8d7a8d96871e791cb1f626",
+    "backgroundImage": "https://i.scdn.co/image/ab67616d00001e0296fa88fb1789be437d5cb4b6",
     "words": [
       {
-        "word": "WITHOUT ME",
+        "word": "HOT TO GO",
         "startX": 0,
-        "startY": 0,
+        "startY": 5,
         "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/35fc7456c892c11867fe1513b92dc44e9664eaba?cid=98f79e400795491cbc5f69b713465708",
+        "audioUrl": "https://p.scdn.co/mp3-preview/75ffd47fee75208bb0bd42858de25e23b0b13091",
         "color": "#FF9B9B",
         "textClue": "Song Title"
       },
       {
-        "word": "TOXIC",
-        "startX": 2,
-        "startY": 0,
+        "word": "BRAT",
+        "startX": 11,
+        "startY": 5,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/6de2791f84c1d637a0e24734b6df3997cc742da4?cid=98f79e400795491cbc5f69b713465708",
-        "color": "#9BFFA6",
-        "textClue": "Song Title"
+        "audioUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d",
+        "color": "#1ED760",
+        "textClue": "Album Title"
       },
       {
-        "word": "CLOSER",
-        "startX": 2,
-        "startY": 4,
+        "word": "GRANDE",
+        "startX": 6,
+        "startY": 0,
         "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/cfd565c4d3c621771e6d25d99749b9fc200e396c?cid=98f79e400795491cbc5f69b713465708",
-        "color": "#9BB1FF",
-        "textClue": "Song Title"
+        "audioUrl": "https://p.scdn.co/mp3-preview/264488eb8408a2045871033fe14e9695e9f4fd3f",
+        "color": "#0041C2",
+        "textClue": "Artist Last Name"
       },
       {
-        "word": "TASTE",
+        "word": "GREEN DAY",
         "startX": 6,
         "startY": 0,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/b71b2040e08650ae44fe989d81382f572009ab7c",
-        "color": "#FFE89B",
-        "textClue": "Song Title"
+        "audioUrl": "https://p.scdn.co/mp3-preview/5488d08f012ea906930adb7c714d95a5a8552326",
+        "color": "#FFF200",
+        "textClue": "Artist Name"
       },
       {
-        "word": "SATURN",
-        "startX": 6,
-        "startY": 2,
-        "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/74f603e906ab7a5409cf2edc6dda326ebe7c1d49?cid=98f79e400795491cbc5f69b713465708",
-        "color": "#FFC0CB",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "SORRY",
-        "startX": 5,
-        "startY": 4,
+        "word": "PAYPHONE",
+        "startX": 1,
+        "startY": 0,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/eca5a32b13f68f700b06e06ffdc8110e61e232ce",
+        "audioUrl": "https://p.scdn.co/mp3-preview/24c2c8cc0e6b3d3fc5b3fe8ca4c08164ec9ef24d",
+        "color": "#FFCEFF",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "NICKI",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "",
+        "color": "#00FFFF",
+        "textClue": "Artist First Name"
+      },
+      {
+        "word": "AFRICA",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "audioUrl": "https://p.scdn.co/mp3-preview/86d951a680c33cca769822e0ef854c1b20301b32?cid=98f79e400795491cbc5f69b713465708",
         "color": "#FFA500",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "PYT",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "audioUrl": "https://p.scdn.co/mp3-preview/d692f3799ca86b3689946fa39dda52dbd9c574ae",
+        "color": "#BA55D3",
         "textClue": "Song Title"
       }
     ]
