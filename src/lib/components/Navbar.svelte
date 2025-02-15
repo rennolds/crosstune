@@ -43,7 +43,7 @@
   </div>
   <nav class="bg-white border-b border-gray-200 fixed md:top-0 left-0 right-0 z-50 top-[50px]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-14">
+      <div class="flex justify-between h-12">
         <!-- Left side -->
         <div class="flex items-center">
           <button 

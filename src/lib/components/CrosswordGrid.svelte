@@ -690,9 +690,9 @@ function handleKeydown(event, x, y) {
                 {cell === null 
                     ? 'background-color: transparent;' 
                     : isCellHighlighted(x, y)?.type === 'focused'
-                      ? `background-color: ${isCellHighlighted(x, y).color};`
+                      ? `background-color: ${isCellHighlighted(x, y).color};;`
                       : isCellHighlighted(x, y)?.type === 'active'
-                        ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, 0.70)};`
+                        ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, .75)};`
                         : 'background-color: white;'
                   }
                 "
