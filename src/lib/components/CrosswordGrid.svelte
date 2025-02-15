@@ -27,6 +27,7 @@
   const puzzle = crosswords["2024-02-09"];
   const { size, words } = puzzle;
 
+
   // Create grid and message state
   let grid = $state(
     Array(size.height)
@@ -80,6 +81,8 @@
       number,
       word: word.word,
       audioUrl: word.audioUrl,
+      textClue: word.textClue,
+      color: word.color,
       startX: word.startX,
       startY: word.startY,
       direction: word.direction,
@@ -590,7 +593,7 @@ function handleKeydown(event, x, y) {
           currentAudio = null;
           highlightedWord = null;
         }
-      }, 1600);
+      }, 1000);
 
       // Still keep the ended event listener for cases where the audio might end before 2 seconds
       audio.addEventListener("ended", () => {
@@ -741,54 +744,72 @@ function handleKeydown(event, x, y) {
   {#if isMobileDevice}
     <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} />
   {:else}
-  <!-- Clue list container -->
-  <div class="w-full md:w-64">
-    <!-- Across Clues -->
-    <div>
-      <h2 class="text-xl font-bold mb-2">Across</h2>
-      <div class="space-y-2">
-        {#each acrossClues as clue}
-          <div class="flex items-center gap-2">
-            <span class="font-medium w-6">{clue.number}.</span>
-            <span class="text-sm">{clue.length} letters</span>
-            <button
-              onclick={() => playClue(clue)}
-              class="ml-auto px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={isPlaying}
+    <!-- Clue list container -->
+    <div class="w-full md:w-64">
+      <!-- Across Clues -->
+      <div>
+        <h2 class="text-xl font-bold mb-2">Across</h2>
+        <div class="space-y-2">
+          {#each acrossClues as clue}
+            <div 
+              class="flex items-center gap-2 px-2 py-1 rounded"
+              style="background-color: {clue.color};"
             >
-              {isPlaying ? "Playing..." : "Play"}
-            </button>
-          </div>
-        {/each}
+              <span class="font-medium text-sm">{clue.number}A</span>
+              <span class="text-black font-bold ml-2.5">•</span>
+              <span class="text-sm flex-1">{clue.textClue}</span>
+              <button
+                onclick={() => playClue(clue)}
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800 disabled:opacity-50"
+                disabled={isPlaying}
+              >
+                {#if isPlaying && highlightedWord === clue}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                  </svg>
+                {:else}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                  </svg>
+                {/if}
+              </button>
+            </div>
+          {/each}
+        </div>
+      </div>
+
+      <!-- Down Clues -->
+      <div class="mt-4">
+        <h2 class="text-xl font-bold mb-2">Down</h2>
+        <div class="space-y-2">
+          {#each downClues as clue}
+            <div 
+              class="flex items-center gap-2 px-2 py-1 rounded"
+              style="background-color: {clue.color};"
+            >
+              <span class="font-medium text-sm">{clue.number}D</span>
+              <span class="text-black font-bold">•</span>
+              <span class="text-sm flex-1">{clue.textClue}</span>
+              <button
+                onclick={() => playClue(clue)}
+                class="w-8 h-8 flex items-center justify-center rounded-full bg-black text-white hover:bg-gray-800 disabled:opacity-50"
+                disabled={isPlaying}
+              >
+                {#if isPlaying && highlightedWord === clue}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                  </svg>
+                {:else}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                  </svg>
+                {/if}
+              </button>
+            </div>
+          {/each}
+        </div>
       </div>
     </div>
-
-    <!-- Down Clues -->
-    <div class="mt-4">
-      <h2 class="text-xl font-bold mb-2">Down</h2>
-      <div class="space-y-2">
-        {#each downClues as clue}
-          <div class="flex items-center gap-2">
-            <span class="font-medium w-6">{clue.number}.</span>
-            <span class="text-sm">{clue.length} letters</span>
-            <button
-              onclick={() => playClue(clue)}
-              class="ml-auto px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
-            >
-              Play
-            </button>
-          </div>
-        {/each}
-      </div>
-    </div>
-    
-
-    {#if message}
-      <div class="text-lg font-semibold {getIsCorrect() ? 'text-green-600' : 'text-red-600'}">
-        {message}
-      </div>
-    {/if}
-  </div>
   {/if}
 </div>
 
