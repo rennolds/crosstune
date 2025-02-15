@@ -669,8 +669,8 @@ function handleKeydown(event, x, y) {
             background-image: url('${puzzle.backgroundImage}');
             background-size: cover;
             background-position: center;
-            background-color: rgba(0, 0, 0, 0.15); /* Reduced from 0.8 to 0.15 */
-            background-blend-mode: multiply; /* Changed from overlay to multiply for better visibility */
+            background-color: rgba(0, 0, 0, 0.1);
+            background-blend-mode: multiply;
           ` 
           : ''
         }
