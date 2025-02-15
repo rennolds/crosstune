@@ -3,7 +3,7 @@
 </script>
   
 {#if clue}
-  <div class="fixed bottom-[165px] left-0 right-0 h-14 bg-white border-t border-gray-200 shadow-lg mb-4">
+  <div class="fixed bottom-[165px] left-0 right-0 h-13 bg-white border-t border-gray-200 shadow-lg mb-4">
     <div 
       class="flex items-center gap-3 h-full px-4"
       style="background-color: {clue.color};"
