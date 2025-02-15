@@ -11,24 +11,34 @@
 	</body>
 </html>
 <script>
-    document.addEventListener('pointerdown', (event) => {
+    // Flag to prevent double-firing
+    let touchHandled = false;
+
+    document.addEventListener('touchstart', (event) => {
+        touchHandled = false;
         const clickableParent = event.target.closest('[onclick], button, a');
         if (clickableParent) {
+            touchHandled = true;
             event.preventDefault();
-            event.stopPropagation(); // Stop event from bubbling
-            clickableParent.dispatchEvent(new MouseEvent('click', {
-                view: window,
-                bubbles: true,
-                cancelable: true
-            }));
         }
     }, { passive: false });
 
-    // Prevent double-firing of events
+    document.addEventListener('touchend', (event) => {
+        if (touchHandled) {
+            const clickableParent = event.target.closest('[onclick], button, a');
+            if (clickableParent) {
+                event.preventDefault();
+                clickableParent.click();
+            }
+            touchHandled = false;
+        }
+    }, { passive: false });
+
+    // Prevent click events from firing immediately after touch
     document.addEventListener('click', (event) => {
-        const isTouch = event.pointerType === 'touch';
-        if (isTouch) {
+        if (touchHandled) {
             event.stopImmediatePropagation();
+            touchHandled = false;
         }
     }, true);
 </script>
