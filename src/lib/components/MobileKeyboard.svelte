@@ -62,7 +62,10 @@
 
     <button
       class="w-12 h-12 bg-white rounded shadow text-xl font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
-      onclick={() => onKeyPress('Backspace')}
+      onclick={() => {
+        console.log('Keyboard Button Clicked:', key);
+        onKeyPress(key);
+      }}
     >
       ⌫
     </button>

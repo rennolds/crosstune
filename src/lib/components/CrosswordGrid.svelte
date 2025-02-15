@@ -386,6 +386,7 @@ function handleKeydown(event, x, y) {
     }
 
     const input = event.target;
+    console.log('Input element:', input);
 
     switch (event.key) {
         case 'Tab':
@@ -508,7 +509,7 @@ function handleKeydown(event, x, y) {
   function handleVirtualKeyPress(key) {
     // For backspace, we need to handle it specially since it's an action rather than a character input
     if (key === 'Backspace') {
-        // Clear current cell if it has a value
+        console.log('Backspace triggered');
         if (grid[focusedY][focusedX]) {
             grid[focusedY][focusedX] = '';
         }
@@ -540,7 +541,7 @@ function handleKeydown(event, x, y) {
         preventDefault: () => {},
         target: document.querySelector(`input[data-x="${focusedX}"][data-y="${focusedY}"]`)
     };
-
+    console.log('Synthetic Event Target:', syntheticEvent.target);
     handleKeydown(syntheticEvent, focusedX, focusedY);
   }
 
