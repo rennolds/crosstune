@@ -13,6 +13,7 @@
       <span class="text-base flex-1">{clue.textClue}</span>
       <button
         onclick={() => onPlay(clue)}
+        style="width: 40px; height: 40px; padding: 0; border: none; background: none;"
         disabled={isPlaying}
       >
         {#if isPlaying}
