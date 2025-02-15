@@ -662,7 +662,7 @@ function handleKeydown(event, x, y) {
   <!-- Crossword grid container -->
   <div class="flex-1">
     <!-- Grid container -->
-    <div class="w-full relative" style="padding-bottom: 100%;">
+    <div class="w-full relative" style="padding-bottom: {(size.height / size.width * 100)}%">
       <div 
       class="absolute inset-0 bg-black"
       style="
