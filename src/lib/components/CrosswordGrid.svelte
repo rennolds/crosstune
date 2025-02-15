@@ -207,7 +207,6 @@
 
   // Modify handleCellClick to detect if cell is start of a word
   function handleCellClick(x, y) {
-    console.log('Clicked cell:', x, y);
 
     // Check if clicked cell is start of any words
     const isStartOfAcross = words.some(word => {
@@ -224,14 +223,10 @@
 
     // Set direction if it's the start of a word
     if (isStartOfAcross) {
-      console.log('Setting direction to across');
       currentDirection = 'across';
     } else if (isStartOfDown) {
-      console.log('Setting direction to down');
       currentDirection = 'down';
     }
-
-    console.log('Current direction:', currentDirection);
 
     focusedX = x;
     focusedY = y;
@@ -378,7 +373,6 @@ function isEndOfWord(x, y) {
 }
 
 function handleKeydown(event, x, y) {
-    console.log('Key pressed:', event.key);  // Debug log
     
     if (spaceCells.has(`${x},${y}`)) {
         event.preventDefault();
@@ -386,7 +380,6 @@ function handleKeydown(event, x, y) {
     }
 
     const input = event.target;
-    console.log('Input element:', input);
 
     switch (event.key) {
         case 'Tab':
@@ -509,7 +502,6 @@ function handleKeydown(event, x, y) {
   function handleVirtualKeyPress(key) {
     // For backspace, we need to handle it specially since it's an action rather than a character input
     if (key === 'Backspace') {
-        console.log('Backspace triggered');
         if (grid[focusedY][focusedX]) {
             grid[focusedY][focusedX] = '';
         }
@@ -541,7 +533,6 @@ function handleKeydown(event, x, y) {
         preventDefault: () => {},
         target: document.querySelector(`input[data-x="${focusedX}"][data-y="${focusedY}"]`)
     };
-    console.log('Synthetic Event Target:', syntheticEvent.target);
     handleKeydown(syntheticEvent, focusedX, focusedY);
   }
 
@@ -549,7 +540,6 @@ function handleKeydown(event, x, y) {
     try {
       // Stop any currently playing audio
       if (currentAudio) {
-        console.log("Stopping previous audio");
         currentAudio.pause();
         currentAudio = null;
       }
@@ -571,24 +561,19 @@ function handleKeydown(event, x, y) {
 
       if (!isPlaying) {
         await audio.play();
-        console.log("Playback started");
         isPlaying = true;
       }
       else {
-        console.log("Caught duplicate audio")
         return
       }
 
       setTimeout(() => {
-        console.log("Stopping audio after 1 seconds");
         audio.pause();
         isPlaying = false;
         currentAudio = null;
-      }, 1350);
+      }, 1100);
 
-      console.log("Audio stopped");
       audio.addEventListener("ended", () => {
-        console.log("Audio playback ended");
         isPlaying = false;
         currentAudio = null;
       });
