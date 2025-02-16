@@ -10,6 +10,8 @@
     getSeconds
   } from '$lib/stores/game.svelte.js';
 
+  import { saveGridState, getStoredGridState } from '$lib/utils/storage';
+
   let isMobileDevice = $state(false);
 
   $effect(() => {
@@ -24,16 +26,52 @@
   });
 
   // Get today's puzzle
-  const puzzle = crosswords["2024-02-09"];
+
+  // Function to get current East Coast date in YYYY-MM-DD format
+  function getEastCoastDate() {
+    const date = new Date();
+    // Convert to Eastern Time (GMT-5)
+    const eastCoastDate = new Date(date.toLocaleString('en-US', {
+      timeZone: 'America/New_York'
+    }));
+    
+    return eastCoastDate.toISOString().split('T')[0];
+  }
+
+  // Get today's puzzle or fall back to the first available puzzle
+  function getTodaysPuzzle() {
+    const todayDate = getEastCoastDate();
+    console.log(todayDate);
+    const puzzleDates = Object.keys(crosswords);
+    
+    // Try to get today's puzzle
+    if (crosswords[todayDate]) {
+      return crosswords[todayDate];
+    }
+    
+    // Fall back to first available puzzle
+    const firstAvailableDate = puzzleDates.sort()[0];
+    return crosswords[firstAvailableDate];
+  }
+
+  // Get puzzle using new function instead of hardcoding date
+  const puzzle = getTodaysPuzzle();
   const { size, words } = puzzle;
 
 
-  // Create grid and message state
   let grid = $state(
-    Array(size.height)
-      .fill(null)
-      .map(() => Array(size.width).fill(null))
-  );
+        getStoredGridState() || 
+        Array(size.height)
+            .fill(null)
+            .map(() => Array(size.width).fill(null))
+    );
+
+  // Add an effect to save grid state whenever it changes
+  $effect(() => {
+        if (typeof window !== 'undefined' && grid) {
+            saveGridState(grid);
+        }
+  });
 
   // Track currently focused cell
   let focusedX = $state(0);
@@ -188,7 +226,6 @@
     });
   }
 
-  // Initialize grid cells
   for (let y = 0; y < size.height; y++) {
     for (let x = 0; x < size.width; x++) {
       if (isInputCell(x, y)) {
