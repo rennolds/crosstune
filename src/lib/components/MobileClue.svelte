@@ -1,7 +1,6 @@
 <script>
     let { clue, onPlay, isPlaying } = $props();
 
-    // Import necessary functions from crosswords data
     import crosswords from "$lib/data/crosswords.json";
     const puzzle = crosswords["2024-02-09"];
     const { words } = puzzle;
@@ -9,11 +8,8 @@
     function findAdjacentClue(currentClue, direction) {
         if (!currentClue) return null;
 
-        // Get all words in the same direction
-        const sameDirectionWords = words.filter(word => word.direction === currentClue.direction);
-        
-        // Sort them by start position
-        const sortedWords = sameDirectionWords.sort((a, b) => {
+        // Sort all words by number (based on position)
+        const sortedWords = [...words].sort((a, b) => {
             if (a.startY === b.startY) {
                 return a.startX - b.startX;
             }
@@ -23,7 +19,8 @@
         // Find current index
         const currentIndex = sortedWords.findIndex(word => 
             word.startX === currentClue.startX && 
-            word.startY === currentClue.startY
+            word.startY === currentClue.startY &&
+            word.direction === currentClue.direction
         );
 
         if (direction === 'next') {
@@ -35,11 +32,9 @@
         }
     }
 
-    // Dispatch custom event for parent to handle navigation
     function handleNavigation(direction) {
         const nextClue = findAdjacentClue(clue, direction);
         if (nextClue) {
-            // Create and dispatch a custom event
             const event = new CustomEvent('navigationrequest', {
                 detail: {
                     startX: nextClue.startX,
