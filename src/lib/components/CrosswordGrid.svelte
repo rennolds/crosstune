@@ -205,6 +205,22 @@
   // Add state for direction
   let currentDirection = $state("across");
 
+  $effect(() => {
+    if (typeof document !== 'undefined') {
+      const handleNavigation = (event) => {
+        const { startX, startY, direction } = event.detail;
+        focusedX = startX;
+        focusedY = startY;
+        currentDirection = direction;
+      };
+
+      document.addEventListener('navigationrequest', handleNavigation);
+      return () => {
+        document.removeEventListener('navigationrequest', handleNavigation);
+      };
+    }
+  });
+
   function handleCellClick(x, y) {
     // If clicking the currently focused cell, toggle direction
     if (x === focusedX && y === focusedY) {

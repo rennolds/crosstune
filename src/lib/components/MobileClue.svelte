@@ -1,5 +1,55 @@
 <script>
     let { clue, onPlay, isPlaying } = $props();
+
+    // Import necessary functions from crosswords data
+    import crosswords from "$lib/data/crosswords.json";
+    const puzzle = crosswords["2024-02-09"];
+    const { words } = puzzle;
+
+    function findAdjacentClue(currentClue, direction) {
+        if (!currentClue) return null;
+
+        // Get all words in the same direction
+        const sameDirectionWords = words.filter(word => word.direction === currentClue.direction);
+        
+        // Sort them by start position
+        const sortedWords = sameDirectionWords.sort((a, b) => {
+            if (a.startY === b.startY) {
+                return a.startX - b.startX;
+            }
+            return a.startY - b.startY;
+        });
+
+        // Find current index
+        const currentIndex = sortedWords.findIndex(word => 
+            word.startX === currentClue.startX && 
+            word.startY === currentClue.startY
+        );
+
+        if (direction === 'next') {
+            const nextIndex = (currentIndex + 1) % sortedWords.length;
+            return sortedWords[nextIndex];
+        } else {
+            const prevIndex = (currentIndex - 1 + sortedWords.length) % sortedWords.length;
+            return sortedWords[prevIndex];
+        }
+    }
+
+    // Dispatch custom event for parent to handle navigation
+    function handleNavigation(direction) {
+        const nextClue = findAdjacentClue(clue, direction);
+        if (nextClue) {
+            // Create and dispatch a custom event
+            const event = new CustomEvent('navigationrequest', {
+                detail: {
+                    startX: nextClue.startX,
+                    startY: nextClue.startY,
+                    direction: nextClue.direction
+                }
+            });
+            document.dispatchEvent(event);
+        }
+    }
 </script>
   
 {#if clue}
@@ -8,9 +58,23 @@
       class="flex items-center gap-3 h-full px-4"
       style="background-color: {clue.color};"
     >
+      <!-- Left Arrow -->
+      <button
+        class="p-2"
+        onclick={() => handleNavigation('prev')}
+        aria-label="Previous clue"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Clue Content -->
       <span class="font-medium text-base">{clue.number}{clue.direction.charAt(0).toUpperCase()}</span>
       <span class="text-black font-bold ml-4">•</span>
       <span class="text-base flex-1">{clue.textClue}</span>
+      
+      <!-- Play Button -->
       <button
         onclick={() => onPlay(clue)}
         style="width: 40px; height: 40px; padding: 0; border: none; background: none;"
@@ -21,6 +85,17 @@
         {:else}
             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"/></g></svg>
         {/if}
+      </button>
+
+      <!-- Right Arrow -->
+      <button
+        class="p-2"
+        onclick={() => handleNavigation('next')}
+        aria-label="Next clue"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
   </div>
