@@ -205,29 +205,48 @@
   // Add state for direction
   let currentDirection = $state("across");
 
-  // Modify handleCellClick to detect if cell is start of a word
   function handleCellClick(x, y) {
+    // If clicking the currently focused cell, toggle direction
+    if (x === focusedX && y === focusedY) {
+      currentDirection = currentDirection === 'across' ? 'down' : 'across';
+      return;
+    }
 
-    // Check if clicked cell is start of any words
-    const isStartOfAcross = words.some(word => {
-      const isStart = word.direction === 'across' && word.startX === x && word.startY === y;
-      if (isStart) console.log('Found start of across word:', word);
-      return isStart;
-    });
-    
-    const isStartOfDown = words.some(word => {
-      const isStart = word.direction === 'down' && word.startX === x && word.startY === y;
-      if (isStart) console.log('Found start of down word:', word); 
-      return isStart;
-    });
+    // Find any words that contain this cell
+    let acrossWord = words.find(word => 
+      word.direction === 'across' &&
+      y === word.startY &&
+      x >= word.startX &&
+      x < word.startX + word.word.length
+    );
 
-    // Set direction if it's the start of a word
-    if (isStartOfAcross) {
+    let downWord = words.find(word => 
+      word.direction === 'down' &&
+      x === word.startX &&
+      y >= word.startY &&
+      y < word.startY + word.word.length
+    );
+
+    // If cell is part of both across and down words
+    if (acrossWord && downWord) {
+      // If we're already highlighting a word in one direction,
+      // switch to the other direction
+      if (currentDirection === 'across' && downWord) {
+        currentDirection = 'down';
+      } else if (currentDirection === 'down' && acrossWord) {
+        currentDirection = 'across';
+      }
+    } 
+    // If cell is only part of across word
+    else if (acrossWord) {
       currentDirection = 'across';
-    } else if (isStartOfDown) {
+    }
+    // If cell is only part of down word
+    else if (downWord) {
       currentDirection = 'down';
     }
 
+    // Update focus
     focusedX = x;
     focusedY = y;
   }
@@ -262,15 +281,15 @@
       direction: nextWord.direction
     };
   }
-  // Modify moveFocus to be more reliable
-  function moveFocus(newX, newY) {
+    // Modify moveFocus to be more reliable
+    function moveFocus(newX, newY) {
     // First check bounds
     if (newX < 0 || newY < 0 || newX >= size.width || newY >= size.height) {
       return;
     }
 
-    // If we hit a space cell, skip to next cell in current direction
-    if (grid[newY][newX] !== null && spaceCells.has(`${newX},${newY}`)) {
+    // If we hit a space cell or a cell that already has input, skip to next cell in current direction
+    if (grid[newY][newX] !== null && (spaceCells.has(`${newX},${newY}`) || grid[newY][newX] !== '')) {
       if (currentDirection === 'across') {
         moveFocus(newX + 1, newY);
       } else {
