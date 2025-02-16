@@ -227,32 +227,25 @@
       y < word.startY + word.word.length
     );
 
-    // If cell is part of both across and down words
     if (acrossWord && downWord) {
-      // If we're already highlighting a word in one direction,
-      // switch to the other direction
       if (currentDirection === 'across' && downWord) {
         currentDirection = 'down';
       } else if (currentDirection === 'down' && acrossWord) {
         currentDirection = 'across';
       }
     } 
-    // If cell is only part of across word
     else if (acrossWord) {
       currentDirection = 'across';
     }
-    // If cell is only part of down word
     else if (downWord) {
       currentDirection = 'down';
     }
 
-    // Update focus
     focusedX = x;
     focusedY = y;
   }
 
   function findNextWordStart(currentX, currentY) {
-    // Get all word starting positions sorted by position
     let startPositions = [...words].sort((a, b) => {
       if (a.startY === b.startY) {
         return a.startX - b.startX;
@@ -260,17 +253,13 @@
       return a.startY - b.startY;
     });
 
-    // Find the next word start position
     let nextWord = startPositions.find(word => {
-      // If we're on the same row, find the next word to the right
       if (word.startY === currentY) {
         return word.startX > currentX;
       }
-      // Otherwise, find the first word in the next row
       return word.startY > currentY;
     });
 
-    // If no next word found, wrap around to the first word
     if (!nextWord) {
       nextWord = startPositions[0];
     }
@@ -281,14 +270,11 @@
       direction: nextWord.direction
     };
   }
-    // Modify moveFocus to be more reliable
     function moveFocus(newX, newY) {
-    // First check bounds
     if (newX < 0 || newY < 0 || newX >= size.width || newY >= size.height) {
       return;
     }
 
-    // If we hit a space cell or a cell that already has input, skip to next cell in current direction
     if (grid[newY][newX] !== null && (spaceCells.has(`${newX},${newY}`) || grid[newY][newX] !== '')) {
       if (currentDirection === 'across') {
         moveFocus(newX + 1, newY);
@@ -329,7 +315,6 @@
 
     if (!word) return null;
 
-    // Find the clue number for this word
     const number = wordNumbers.get(`${word.startX},${word.startY}`);
     
     return {
@@ -338,7 +323,6 @@
     };
   }
 
-  // Update active clue whenever focus or direction changes
   $effect(() => {
     activeClue = findActiveClue();
   });
@@ -557,6 +541,11 @@ function handleKeydown(event, x, y) {
 
   async function playClue(clue) {
     try {
+      // First, highlight the word by setting direction and focus
+      currentDirection = clue.direction;
+      focusedX = clue.startX;
+      focusedY = clue.startY;
+
       // Stop any currently playing audio
       if (currentAudio) {
         currentAudio.pause();
@@ -583,14 +572,14 @@ function handleKeydown(event, x, y) {
         isPlaying = true;
       }
       else {
-        return
+        return;
       }
 
       setTimeout(() => {
         audio.pause();
         isPlaying = false;
         currentAudio = null;
-      }, 2000);
+      }, 1100);
 
       audio.addEventListener("ended", () => {
         isPlaying = false;
