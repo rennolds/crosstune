@@ -450,11 +450,68 @@ function isEndOfWord(x, y) {
   }
 }
 
+function findNextUnfilledWord(currentX, currentY, currentDirection) {
+  // First look through all words to evaluate their fill state
+  const wordStates = words.map(word => {
+    const letters = [];
+    if (word.direction === "across") {
+      for (let x = word.startX; x < word.startX + word.word.length; x++) {
+        letters.push(grid[word.startY][x]);
+      }
+    } else {
+      for (let y = word.startY; y < word.startY + word.word.length; y++) {
+        letters.push(grid[y][word.startX]);
+      }
+    }
+    return {
+      ...word,
+      isFilled: letters.every(letter => letter !== '' && letter !== null)
+    };
+  });
+
+  // Find current word index
+  const currentWordIndex = wordStates.findIndex(word => {
+    const isInWordRange = word.direction === currentDirection &&
+      (word.direction === "across" 
+        ? (currentY === word.startY && 
+           currentX >= word.startX && 
+           currentX < word.startX + word.word.length)
+        : (currentX === word.startX && 
+           currentY >= word.startY && 
+           currentY < word.startY + word.word.length));
+    return isInWordRange;
+  });
+
+  // Look for next unfilled word, starting after current word
+  for (let i = 1; i <= wordStates.length; i++) {
+    const index = (currentWordIndex + i) % wordStates.length;
+    if (!wordStates[index].isFilled) {
+      return wordStates[index];
+    }
+  }
+
+  // If no unfilled word found, return null
+  return null;
+}
+
+function isWordComplete(word) {
+  const letters = [];
+  if (word.direction === "across") {
+    for (let x = word.startX; x < word.startX + word.word.length; x++) {
+      letters.push(grid[word.startY][x]);
+    }
+  } else {
+    for (let y = word.startY; y < word.startY + word.word.length; y++) {
+      letters.push(grid[y][word.startX]);
+    }
+  }
+  return letters.every(letter => letter !== '' && letter !== null);
+}
+
 function handleKeydown(event, x, y) {
-    
     if (spaceCells.has(`${x},${y}`)) {
-        event.preventDefault();
-        return;
+      event.preventDefault();
+      return;
     }
 
     const input = event.target;
@@ -466,82 +523,86 @@ function handleKeydown(event, x, y) {
       saveGridState(grid);
     }
 
+    let nextWord = findNextUnfilledWord(x, y, currentDirection);
+
     switch (event.key) {
-        case 'Tab':
-            event.preventDefault();
-            const nextWord = findNextWordStart(x, y);
-            focusedX = nextWord.x;
-            focusedY = nextWord.y;
-            currentDirection = nextWord.direction;
-            const nextInput = document.querySelector(
-                `input[data-x="${nextWord.x}"][data-y="${nextWord.y}"]`
-            );
-            nextInput?.focus();
-            break;
-        case 'ArrowRight':
-            event.preventDefault();
-            currentDirection = 'across';
-            moveFocus(x + 1, y);
-            break;
-        case 'ArrowLeft':
-            event.preventDefault();
-            currentDirection = 'across';
-            moveFocus(x - 1, y);
-            break;
-        case 'ArrowUp':
-            event.preventDefault();
-            currentDirection = 'down';
-            moveFocus(x, y - 1);
-            break;
-        case 'ArrowDown':
-            event.preventDefault();
-            currentDirection = 'down';
-            moveFocus(x, y + 1);
-            break;
-        case ' ':
-        case 'Space':
-            event.preventDefault();
-            if (currentDirection === 'across') {
-                moveFocus(x + 1, y);
-            } else {
-                moveFocus(x, y + 1);
-            }
-            break;
-            case 'Backspace':
-              event.preventDefault();
-              // If current cell has content, clear it and stay there
-              if (grid[y][x]) {
-                  grid[y][x] = '';
-              } 
-              // Otherwise move back and clear that cell
-              else {
-                  if (currentDirection === 'across') {
-                      let newX = x - 1;
-                      while (newX >= 0) {
-                          // Find the first non-space input cell going backwards
-                          if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`)) {
-                              grid[y][newX] = '';
-                              moveFocus(newX, y);
-                              break;
-                          }
-                          newX--;
-                      }
-                  } else {
-                      let newY = y - 1;
-                      while (newY >= 0) {
-                          // Find the first non-space input cell going up
-                          if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`)) {
-                              grid[newY][x] = '';
-                              moveFocus(x, newY);
-                              break;
-                          }
-                          newY--;
-                      }
-                  }
+      case 'Enter':
+      case 'Tab':
+        event.preventDefault();
+        if (nextWord) {
+          focusedX = nextWord.startX;
+          focusedY = nextWord.startY;
+          currentDirection = nextWord.direction;
+          const nextInput = document.querySelector(
+            `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
+          );
+          nextInput?.focus();
+        }
+        break;
+      case 'ArrowRight':
+        event.preventDefault();
+        currentDirection = 'across';
+        moveFocus(x + 1, y);
+        break;
+      case 'ArrowLeft':
+        event.preventDefault();
+        currentDirection = 'across';
+        moveFocus(x - 1, y);
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        currentDirection = 'down';
+        moveFocus(x, y - 1);
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        currentDirection = 'down';
+        moveFocus(x, y + 1);
+        break;
+      case ' ':
+      case 'Space':
+        event.preventDefault();
+        if (currentDirection === 'across') {
+          moveFocus(x + 1, y);
+        } else {
+          moveFocus(x, y + 1);
+        }
+        break;
+      case 'Backspace':
+        event.preventDefault();
+        // If current cell has content, clear it and stay there
+        if (grid[y][x]) {
+          grid[y][x] = '';
+        } 
+        // Otherwise move back and clear that cell
+        else {
+          if (currentDirection === 'across') {
+            let newX = x - 1;
+            while (newX >= 0) {
+              // Find the first non-space input cell going backwards
+              if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`)) {
+                grid[y][newX] = '';
+                moveFocus(newX, y);
+                break;
               }
-              saveGridState(grid);
-              break;
-          default:
+              newX--;
+            }
+          } else {
+            let newY = y - 1;
+            while (newY >= 0) {
+              // Find the first non-space input cell going up
+              if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`)) {
+                grid[newY][x] = '';
+                moveFocus(x, newY);
+                break;
+              }
+              newY--;
+            }
+          }
+        }
+        saveGridState(grid);
+        break;
+      default:
         if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
           const letter = event.key.toUpperCase();
           updateGridCell(x, y, letter);
@@ -552,13 +613,28 @@ function handleKeydown(event, x, y) {
           input.value = letter;
 
           requestAnimationFrame(() => {
-            // Check if we're at the end of the current word
-            if (isEndOfWord(x, y)) {
-              // Find the current word and the next word
-              const currentWord = findActiveWord();
-              const nextWord = findNextWord(currentWord);
+            // Get the current word
+            const currentWord = findActiveWord();
 
-              // Move focus to the start of the next word
+            // Helper function to check if word is complete
+            function isWordComplete(word) {
+              const letters = [];
+              if (word.direction === "across") {
+                for (let x = word.startX; x < word.startX + word.word.length; x++) {
+                  letters.push(grid[word.startY][x]);
+                }
+              } else {
+                for (let y = word.startY; y < word.startY + word.word.length; y++) {
+                  letters.push(grid[y][word.startX]);
+                }
+              }
+              return letters.every(letter => letter !== '' && letter !== null);
+            }
+            
+            // Check if the current word is now complete
+            if (currentWord && isWordComplete(currentWord)) {
+              // Find and move to the next word
+              const nextWord = findNextWord(currentWord);
               focusedX = nextWord.startX;
               focusedY = nextWord.startY;
               currentDirection = nextWord.direction;
