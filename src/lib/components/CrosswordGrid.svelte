@@ -10,8 +10,6 @@
     getSeconds
   } from '$lib/stores/game.svelte.js';
 
-  import { saveGridState, getStoredGridState } from '$lib/utils/storage';
-
   let isMobileDevice = $state(false);
 
   $effect(() => {
@@ -41,7 +39,6 @@
   // Get today's puzzle or fall back to the first available puzzle
   function getTodaysPuzzle() {
     const todayDate = getEastCoastDate();
-    console.log(todayDate);
     const puzzleDates = Object.keys(crosswords);
     
     // Try to get today's puzzle
@@ -59,19 +56,12 @@
   const { size, words } = puzzle;
 
 
+  // Create grid and message state
   let grid = $state(
-        getStoredGridState() || 
-        Array(size.height)
-            .fill(null)
-            .map(() => Array(size.width).fill(null))
-    );
-
-  // Add an effect to save grid state whenever it changes
-  $effect(() => {
-        if (typeof window !== 'undefined' && grid) {
-            saveGridState(grid);
-        }
-  });
+    Array(size.height)
+      .fill(null)
+      .map(() => Array(size.width).fill(null))
+  );
 
   // Track currently focused cell
   let focusedX = $state(0);
@@ -226,6 +216,7 @@
     });
   }
 
+  // Initialize grid cells
   for (let y = 0; y < size.height; y++) {
     for (let x = 0; x < size.width; x++) {
       if (isInputCell(x, y)) {

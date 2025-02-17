@@ -35,21 +35,6 @@ const STORAGE_KEYS = {
     return localStorage.getItem(STORAGE_KEYS.SPLASH_SHOWN) !== 'true';
   }
   
-  export function saveGridState(grid) {
-    const currentDate = getEastCoastDate();
-    localStorage.setItem(STORAGE_KEYS.GRID_STATE, JSON.stringify(grid));
-    localStorage.setItem(STORAGE_KEYS.LAST_PUZZLE_DATE, currentDate);
-  }
-  
-  export function getStoredGridState() {
-    if (!isStoredDataValid()) {
-      clearStoredData();
-      return null;
-    }
-    const stored = localStorage.getItem(STORAGE_KEYS.GRID_STATE);
-    return stored ? JSON.parse(stored) : null;
-  }
-  
   export function clearStoredData() {
     localStorage.removeItem(STORAGE_KEYS.SPLASH_SHOWN);
     localStorage.removeItem(STORAGE_KEYS.GRID_STATE);
