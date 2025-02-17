@@ -7,8 +7,16 @@
   import { 
     getIsCorrect,
     setIsCorrect,
-    getSeconds
+    getSeconds,
+    setSeconds
   } from '$lib/stores/game.svelte.js';
+
+  import { 
+    loadGridState, 
+    saveGridState,
+    loadTimerState,
+    saveTimerState 
+  } from '$lib/utils/storage';
 
   let isMobileDevice = $state(false);
 
@@ -62,6 +70,29 @@
       .fill(null)
       .map(() => Array(size.width).fill(null))
   );
+
+  // Load saved state on mount
+  $effect(() => {
+    const savedGrid = loadGridState();
+    if (savedGrid) {
+      grid = savedGrid;
+    }
+
+    const savedTimer = loadTimerState();
+    if (savedTimer) {
+      setSeconds(savedTimer);
+    }
+  });
+
+  // Save grid state whenever it changes
+  $effect(() => {
+    saveGridState(grid);
+  });
+
+  // Save timer state whenever it changes
+  $effect(() => {
+    saveTimerState(getSeconds());
+  });
 
   // Track currently focused cell
   let focusedX = $state(0);
@@ -427,6 +458,13 @@ function handleKeydown(event, x, y) {
     }
 
     const input = event.target;
+    const key = event.key || event; // Handle both Event objects and direct key strings
+
+    // Create a function to update grid state that works for both input methods
+    function updateGridCell(x, y, value) {
+      grid[y][x] = value;
+      saveGridState(grid);
+    }
 
     switch (event.key) {
         case 'Tab':
@@ -470,34 +508,46 @@ function handleKeydown(event, x, y) {
             }
             break;
             case 'Backspace':
-              // Clear current cell if it has a value
+              event.preventDefault();
+              // If current cell has content, clear it and stay there
               if (grid[y][x]) {
                   grid[y][x] = '';
+              } 
+              // Otherwise move back and clear that cell
+              else {
+                  if (currentDirection === 'across') {
+                      let newX = x - 1;
+                      while (newX >= 0) {
+                          // Find the first non-space input cell going backwards
+                          if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`)) {
+                              grid[y][newX] = '';
+                              moveFocus(newX, y);
+                              break;
+                          }
+                          newX--;
+                      }
+                  } else {
+                      let newY = y - 1;
+                      while (newY >= 0) {
+                          // Find the first non-space input cell going up
+                          if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`)) {
+                              grid[newY][x] = '';
+                              moveFocus(x, newY);
+                              break;
+                          }
+                          newY--;
+                      }
+                  }
               }
-              // Move to previous cell
-              if (currentDirection === 'across') {
-                  // Keep moving back until we find a non-space cell or hit the edge
-                  let newX = x - 1;
-                  while (newX >= 0 && spaceCells.has(`${newX},${y}`)) {
-                      newX--;
-                  }
-                  if (newX >= 0) {
-                      moveFocus(newX, y);
-                  }
-              } else {
-                  // Keep moving up until we find a non-space cell or hit the edge
-                  let newY = y - 1;
-                  while (newY >= 0 && spaceCells.has(`${x},${newY}`)) {
-                      newY--;
-                  }
-                  if (newY >= 0) {
-                      moveFocus(x, newY);
-                  }
-              }
-            break;
+              saveGridState(grid);
+              break;
           default:
         if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
           const letter = event.key.toUpperCase();
+          updateGridCell(x, y, letter);
+          if (input?.value !== undefined) {
+            input.value = letter;
+          }
           grid[y][x] = letter;
           input.value = letter;
 
@@ -549,28 +599,37 @@ function handleKeydown(event, x, y) {
   function handleVirtualKeyPress(key) {
     // For backspace, we need to handle it specially since it's an action rather than a character input
     if (key === 'Backspace') {
+        // If current cell has content, clear it
         if (grid[focusedY][focusedX]) {
             grid[focusedY][focusedX] = '';
+        } 
+        // Otherwise move back and clear that cell
+        else {
+            if (currentDirection === 'across') {
+                let newX = focusedX - 1;
+                while (newX >= 0) {
+                    // Find the first non-space input cell going backwards
+                    if (grid[focusedY][newX] !== null && !spaceCells.has(`${newX},${focusedY}`)) {
+                        grid[focusedY][newX] = '';
+                        moveFocus(newX, focusedY);
+                        break;
+                    }
+                    newX--;
+                }
+            } else {
+                let newY = focusedY - 1;
+                while (newY >= 0) {
+                    // Find the first non-space input cell going up
+                    if (grid[newY][focusedX] !== null && !spaceCells.has(`${focusedX},${newY}`)) {
+                        grid[newY][focusedX] = '';
+                        moveFocus(focusedX, newY);
+                        break;
+                    }
+                    newY--;
+                }
+            }
         }
-        
-        // Move to previous cell
-        if (currentDirection === 'across') {
-            let newX = focusedX - 1;
-            while (newX >= 0 && spaceCells.has(`${newX},${focusedY}`)) {
-                newX--;
-            }
-            if (newX >= 0) {
-                moveFocus(newX, focusedY);
-            }
-        } else {
-            let newY = focusedY - 1;
-            while (newY >= 0 && spaceCells.has(`${focusedX},${newY}`)) {
-                newY--;
-            }
-            if (newY >= 0) {
-                moveFocus(focusedX, newY);
-            }
-        }
+        saveGridState(grid);
         return;
     }
 

@@ -1,11 +1,11 @@
-// src/lib/utils/storage.js
 const STORAGE_KEYS = {
     SPLASH_SHOWN: 'crosstune_splash_shown',
     GRID_STATE: 'crosstune_grid_state',
+    TIMER_STATE: 'crosstune_timer_state',
     LAST_PUZZLE_DATE: 'crosstune_last_puzzle_date'
   };
   
-  // Helper to get East Coast date in YYYY-MM-DD format
+  // Helper to get East Coast date in YYYY-MM-DD format 
   function getEastCoastDate() {
     const date = new Date();
     return new Date(date.toLocaleString('en-US', {
@@ -18,6 +18,43 @@ const STORAGE_KEYS = {
     const lastPuzzleDate = localStorage.getItem(STORAGE_KEYS.LAST_PUZZLE_DATE);
     const currentDate = getEastCoastDate();
     return lastPuzzleDate === currentDate;
+  }
+  
+  export function saveGridState(grid) {
+    if (typeof window === 'undefined') return;
+    
+    const currentDate = getEastCoastDate();
+    localStorage.setItem(STORAGE_KEYS.GRID_STATE, JSON.stringify(grid));
+    localStorage.setItem(STORAGE_KEYS.LAST_PUZZLE_DATE, currentDate);
+  }
+  
+  export function loadGridState() {
+    if (typeof window === 'undefined') return null;
+    
+    if (!isStoredDataValid()) {
+      clearStoredData();
+      return null;
+    }
+  
+    const gridState = localStorage.getItem(STORAGE_KEYS.GRID_STATE);
+    return gridState ? JSON.parse(gridState) : null;
+  }
+  
+  export function saveTimerState(seconds) {
+    if (typeof window === 'undefined') return;
+    
+    localStorage.setItem(STORAGE_KEYS.TIMER_STATE, seconds.toString());
+  }
+  
+  export function loadTimerState() {
+    if (typeof window === 'undefined') return 0;
+    
+    if (!isStoredDataValid()) {
+      return 0;
+    }
+  
+    const timerState = localStorage.getItem(STORAGE_KEYS.TIMER_STATE);
+    return timerState ? parseInt(timerState, 10) : 0;
   }
   
   // Storage functions
