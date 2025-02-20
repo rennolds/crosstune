@@ -913,7 +913,7 @@ function handleKeydown(event, x, y) {
   
 
   {#if isMobileDevice}
-    <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} />
+    <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} playingClue={playingClue}/>
   {:else}
     <!-- Clue list container -->
     <div class="w-full md:w-64">
