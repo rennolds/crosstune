@@ -819,11 +819,11 @@ function handleKeydown(event, x, y) {
   });
 </script>
 
-<div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-0">
+<div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-0 h-[calc(100vh-48px-50px-165px)] md:h-auto">
   <!-- Crossword grid container -->
-  <div class="flex-1">
+  <div class="flex-1 h-full">
     <!-- Grid container -->
-    <div class="w-full relative" style="padding-bottom: {(size.height / size.width * 100)}%">
+    <div class="w-full relative +++h-full+++"  style="aspect-ratio: {size.width}/{size.height};">
       <div 
       class="absolute inset-0 bg-black"
       style="
