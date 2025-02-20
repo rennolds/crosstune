@@ -766,7 +766,7 @@ function handleKeydown(event, x, y) {
         isPlaying = false;
         playingClue = null;
         currentAudio = null;
-      }, 10000);
+      }, 7000);
 
       audio.addEventListener("ended", () => {
         isPlaying = false;
@@ -780,6 +780,15 @@ function handleKeydown(event, x, y) {
       playingClue = null;
       currentAudio = null;
     }
+  }
+
+  function stopAudio() {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio = null;
+    }
+    isPlaying = false;
+    playingClue = null;
   }
 
   let showOverlay = $state(false);
@@ -913,7 +922,7 @@ function handleKeydown(event, x, y) {
   
 
   {#if isMobileDevice}
-    <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} playingClue={playingClue}/>
+    <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} playingClue={playingClue} onStopAudio={stopAudio}/>
   {:else}
     <!-- Clue list container -->
     <div class="w-full md:w-64">

@@ -1,5 +1,5 @@
 <script>
-  let { clue, onPlay, isPlaying, playingClue } = $props();
+  let { clue, onPlay, isPlaying, playingClue, onStopAudio } = $props();
 
   import crosswords from "$lib/data/crosswords.json";
   const puzzle = crosswords["2024-02-09"];
@@ -33,17 +33,21 @@
   }
 
   function handleNavigation(direction) {
-      const nextClue = findAdjacentClue(clue, direction);
-      if (nextClue) {
-          const event = new CustomEvent('navigationrequest', {
-              detail: {
-                  startX: nextClue.startX,
-                  startY: nextClue.startY,
-                  direction: nextClue.direction
-              }
-          });
-          document.dispatchEvent(event);
-      }
+    if (isPlaying) {
+        onStopAudio();
+    }
+    
+    const nextClue = findAdjacentClue(clue, direction);
+    if (nextClue) {
+        const event = new CustomEvent('navigationrequest', {
+            detail: {
+                startX: nextClue.startX,
+                startY: nextClue.startY,
+                direction: nextClue.direction
+            }
+        });
+        document.dispatchEvent(event);
+    }
   }
 </script>
 
