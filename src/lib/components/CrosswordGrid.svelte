@@ -982,6 +982,10 @@ function handleKeydown(event, x, y) {
       width: 100%;
       height: 100%;
     }
+
+    :global(.slide-menu-open) .crossword-grid {
+      pointer-events: none;
+    }
   }
   
   .cursor-text {
