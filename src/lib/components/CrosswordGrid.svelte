@@ -283,9 +283,14 @@
   function handleCellClick(x, y) {
     // If clicking the currently focused cell, toggle direction
     if (x === focusedX && y === focusedY) {
+      if (isPlaying) {
+        stopAudio();
+      }
       currentDirection = currentDirection === 'across' ? 'down' : 'across';
       return;
     }
+
+    const isInCurrentWord = isCellInActiveWord(x, y);
 
     // Find any words that contain this cell
     let acrossWord = words.find(word => 
@@ -318,6 +323,10 @@
 
     focusedX = x;
     focusedY = y;
+
+    if (!isInCurrentWord && isPlaying) {
+      stopAudio();
+    }
   }
 
   function findNextWordStart(currentX, currentY) {
@@ -530,6 +539,9 @@ function handleKeydown(event, x, y) {
       case 'Tab':
         event.preventDefault();
         if (nextWord) {
+          if (isPlaying) {
+            stopAudio();
+          }
           focusedX = nextWord.startX;
           focusedY = nextWord.startY;
           currentDirection = nextWord.direction;
@@ -635,6 +647,9 @@ function handleKeydown(event, x, y) {
             if (currentWord && isWordComplete(currentWord)) {
               // Find and move to the next word
               const nextWord = findNextWord(currentWord);
+              if (isPlaying) {
+                stopAudio();
+              }
               focusedX = nextWord.startX;
               focusedY = nextWord.startY;
               currentDirection = nextWord.direction;
