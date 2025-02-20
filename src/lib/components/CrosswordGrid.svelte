@@ -758,7 +758,7 @@ function handleKeydown(event, x, y) {
         audio.pause();
         isPlaying = false;
         currentAudio = null;
-      }, 1100);
+      }, 10000);
 
       audio.addEventListener("ended", () => {
         isPlaying = false;
