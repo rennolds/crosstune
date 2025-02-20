@@ -718,6 +718,8 @@ function handleKeydown(event, x, y) {
     handleKeydown(syntheticEvent, focusedX, focusedY);
   }
 
+  let playingClue = $state(null);
+  
   async function playClue(clue) {
     try {
       // First, highlight the word by setting direction and focus
@@ -725,12 +727,21 @@ function handleKeydown(event, x, y) {
       focusedX = clue.startX;
       focusedY = clue.startY;
 
+      // If this clue is already playing, pause it
+      if (playingClue === clue && isPlaying && currentAudio) {
+        currentAudio.pause();
+        isPlaying = false;
+        playingClue = null;
+        return;
+      }
+
       // Stop any currently playing audio
       if (currentAudio) {
         currentAudio.pause();
         currentAudio = null;
       }
       isPlaying = false;
+      playingClue = null;
 
       // Create and play new audio
       const audio = new Audio(clue.audioUrl);
@@ -746,28 +757,27 @@ function handleKeydown(event, x, y) {
         });
       });
 
-      if (!isPlaying) {
-        await audio.play();
-        isPlaying = true;
-      }
-      else {
-        return;
-      }
+      await audio.play();
+      isPlaying = true;
+      playingClue = clue;
 
       setTimeout(() => {
         audio.pause();
         isPlaying = false;
+        playingClue = null;
         currentAudio = null;
       }, 10000);
 
       audio.addEventListener("ended", () => {
         isPlaying = false;
+        playingClue = null;
         currentAudio = null;
       });
     } catch (error) {
       console.error("Error playing audio:", error);
       console.error("Audio element error:", currentAudio?.error);
       isPlaying = false;
+      playingClue = null;
       currentAudio = null;
     }
   }
@@ -921,9 +931,9 @@ function handleKeydown(event, x, y) {
               <span class="text-sm flex-1">{clue.textClue}</span>
               <button
                 onclick={() => playClue(clue)}
-                disabled={isPlaying}
+                disabled={isPlaying && playingClue !== clue}
               >
-                {#if isPlaying}
+                {#if isPlaying && playingClue === clue}
                   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"/></g></svg>  
                 {:else}
                   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"/></g></svg>
@@ -948,13 +958,13 @@ function handleKeydown(event, x, y) {
               <span class="text-sm flex-1">{clue.textClue}</span>
               <button
                 onclick={() => playClue(clue)}
-                disabled={isPlaying}
+                disabled={isPlaying && playingClue !== clue}
               >
-              {#if isPlaying}
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"/></g></svg>  
-              {:else}
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"/></g></svg>
-              {/if}
+                {#if isPlaying && playingClue === clue}
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"/></g></svg>  
+                {:else}
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"/></g></svg>
+                {/if}
               </button>
             </div>
           {/each}
