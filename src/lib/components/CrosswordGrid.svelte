@@ -281,12 +281,30 @@
   });
 
   function handleCellClick(x, y) {
-    // If clicking the currently focused cell, toggle direction
+    // If clicking the currently focused cell, only toggle direction if it's an intersection
     if (x === focusedX && y === focusedY) {
-      if (isPlaying) {
-        stopAudio();
+      // Find words containing this cell
+      let acrossWord = words.find(word => 
+        word.direction === 'across' &&
+        y === word.startY &&
+        x >= word.startX &&
+        x < word.startX + word.word.length
+      );
+
+      let downWord = words.find(word => 
+        word.direction === 'down' &&
+        x === word.startX &&
+        y >= word.startY &&
+        y < word.startY + word.word.length
+      );
+
+      // Only toggle direction if this is an intersection point
+      if (acrossWord && downWord) {
+        if (isPlaying) {
+          stopAudio();
+        }
+        currentDirection = currentDirection === 'across' ? 'down' : 'across';
       }
-      currentDirection = currentDirection === 'across' ? 'down' : 'across';
       return;
     }
 
@@ -874,60 +892,62 @@ function handleKeydown(event, x, y) {
       "
       > </div>
       <div
+      <div
       class="absolute inset-0 grid p-2"
       style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
-      >
-        {#each grid as row, y}
-          {#each row as cell, x}
-              <div
-                class="aspect-square flex items-center justify-center relative transition-colors duration-200"
-                style="
-                {cell === null 
-                    ? 'background-color: transparent;' 
-                    : isCellHighlighted(x, y)?.type === 'focused'
-                      ? `background-color: ${isCellHighlighted(x, y).color};;`
-                      : isCellHighlighted(x, y)?.type === 'active'
-                        ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, .75)};`
-                        : 'background-color: white;'
-                  }
-                "
-              >
-              {#if cell !== null}
-                {#if wordNumbers.has(`${x},${y}`)}
-                  <span class="absolute text-xs top-0 left-0.5">
-                    {wordNumbers.get(`${x},${y}`)}
-                  </span>
-                {/if}
-                {#if spaceCells.has(`${x},${y}`)}
-                  <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400 border-[.25px] border-black">
-                    ␣
-                  </div>
-                {:else}
-                <input
-                  type="text"
-                  maxlength="1"
-                  data-x={x}
-                  data-y={y}
-                  class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none border-[.25px] border-black"
-                  class:cursor-text={!isMobileDevice}
-                  bind:value={grid[y][x]}
-                  onkeydown={(e) => handleKeydown(e, x, y)}
-                  onclick={() => handleCellClick(x, y)}
-                  autocomplete="off"
-                  autocorrect="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                  {...(isMobileDevice ? {
-                    readonly: true,
-                    inputmode: "none",
-                    tabindex: "-1"
-                  } : {})}
-                />
-                {/if}
-              {/if}
-            </div>
-          {/each}
+    >
+      {#each grid as row, y}
+        {#each row as cell, x}
+          <div
+            class="aspect-square flex items-center justify-center relative transition-colors duration-200"
+            style="
+              {cell === null 
+                ? 'background-color: transparent;' 
+                : isCellHighlighted(x, y)?.type === 'focused'
+                  ? `background-color: ${isCellHighlighted(x, y).color};
+                     border: 0.5px solid black;`
+                  : isCellHighlighted(x, y)?.type === 'active'
+                    ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, .75)};
+                       border: 0.5px solid black;`
+                    : 'background-color: white; border: 0.5px solid black;'
+              }"
+          >
+          {#if cell !== null}
+            {#if wordNumbers.has(`${x},${y}`)}
+              <span class="absolute text-xs top-0 left-0.5">
+                {wordNumbers.get(`${x},${y}`)}
+              </span>
+            {/if}
+            {#if spaceCells.has(`${x},${y}`)}
+              <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
+                ␣
+              </div>
+            {:else}
+            <input
+              type="text"
+              maxlength="1"
+              data-x={x}
+              data-y={y} 
+              class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
+              class:cursor-text={!isMobileDevice}
+              bind:value={grid[y][x]}
+              onkeydown={(e) => handleKeydown(e, x, y)}
+              onclick={() => handleCellClick(x, y)}
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              {...(isMobileDevice ? {
+                readonly: true,
+                inputmode: "none",
+                tabindex: "-1"
+              } : {})}
+            />
+            {/if}
+          {/if}
+          </div>
         {/each}
+      {/each}
       </div>
 
     </div>
