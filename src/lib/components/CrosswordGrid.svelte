@@ -103,59 +103,78 @@
   let isPlaying = $state(false);
 
   // Generate word numbers and organize clues
-  let wordNumbers = $state(new Map());
-  let currentNumber = 1;
+let wordNumbers = $state(new Map());
+let currentNumber = 1;
 
-  let acrossClues = $state([]);
-  let downClues = $state([]);
+let acrossClues = $state([]);
+let downClues = $state([]);
 
-  let activeClue = $state(null);
-  // Map to track which cells should be spaces
-  let spaceCells = $state(new Map());
+let activeClue = $state(null);
+// Map to track which cells should be spaces
+let spaceCells = $state(new Map());
 
-  words.forEach((word) => {
-    const key = `${word.startX},${word.startY}`;
-    let number;
-    if (!wordNumbers.has(key)) {
-      number = currentNumber++;
-      wordNumbers.set(key, number);
-    } else {
-      number = wordNumbers.get(key);
-    }
-
-    // Mark spaces in the word
-    [...word.word].forEach((char, index) => {
-      if (char === " ") {
-        const x =
-          word.direction === "across" ? word.startX + index : word.startX;
-        const y =
-          word.direction === "across" ? word.startY : word.startY + index;
-        spaceCells.set(`${x},${y}`, true);
-      }
-    });
-
-    const clue = {
-      number,
-      word: word.word,
-      audioUrl: word.audioUrl,
-      textClue: word.textClue,
-      color: word.color,
-      startX: word.startX,
-      startY: word.startY,
-      direction: word.direction,
-      length: word.word.length,
-    };
-
-    if (word.direction === "across") {
-      acrossClues.push(clue);
-    } else {
-      downClues.push(clue);
+// First mark spaces in all words
+words.forEach((word) => {
+  [...word.word].forEach((char, index) => {
+    if (char === " ") {
+      const x = word.direction === "across" ? word.startX + index : word.startX;
+      const y = word.direction === "across" ? word.startY : word.startY + index;
+      spaceCells.set(`${x},${y}`, true);
     }
   });
+});
 
-  // Sort clues by number
-  acrossClues.sort((a, b) => a.number - b.number);
-  downClues.sort((a, b) => a.number - b.number);
+// Find all starting positions and sort them
+const startPositions = words.map(word => ({
+  x: word.startX,
+  y: word.startY
+}));
+
+// Remove duplicates and sort by position (top-to-bottom, left-to-right)
+const uniquePositions = Array.from(new Set(startPositions.map(pos => `${pos.x},${pos.y}`)))
+  .map(pos => {
+    const [x, y] = pos.split(',').map(Number);
+    return { x, y };
+  })
+  .sort((a, b) => {
+    if (a.y === b.y) {
+      return a.x - b.x;
+    }
+    return a.y - b.y;
+  });
+
+// Assign numbers to positions
+uniquePositions.forEach(pos => {
+  wordNumbers.set(`${pos.x},${pos.y}`, currentNumber++);
+});
+
+// Now process the words with the new numbering
+words.forEach((word) => {
+  const key = `${word.startX},${word.startY}`;
+  const number = wordNumbers.get(key);
+
+  const clue = {
+    number,
+    word: word.word,
+    audioUrl: word.audioUrl,
+    textClue: word.textClue,
+    color: word.color,
+    startX: word.startX,
+    startY: word.startY,
+    direction: word.direction,
+    length: word.word.length,
+  };
+
+  if (word.direction === "across") {
+    acrossClues.push(clue);
+  } else {
+    downClues.push(clue);
+  }
+});
+
+// Sort clues by number
+acrossClues.sort((a, b) => a.number - b.number);
+downClues.sort((a, b) => a.number - b.number);
 
   function findActiveWord() {
     return words.find(word => {
@@ -429,15 +448,14 @@
     activeClue = findActiveClue();
   });
 
-  // Initialize with first clue
   $effect(() => {
     if (!activeClue) {
-      // Get first across clue
-      const firstClue = acrossClues[0];
+      // Find clue #1 (will be in either across or down clues)
+      const firstClue = [...acrossClues, ...downClues].find(clue => clue.number === 1);
       if (firstClue) {
         focusedX = firstClue.startX;
         focusedY = firstClue.startY;
-        currentDirection = 'across';
+        currentDirection = firstClue.direction;
       }
     }
   });
