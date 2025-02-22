@@ -71,7 +71,7 @@
 
         <!-- Clue Info -->
         <div class="flex items-center gap-2 ml-2">
-          <span class="text-xl font-bold">{clue.number}{clue.direction.charAt(0).toUpperCase()}</span>
+          <span class="text-lg font-semibold">{clue.number}{clue.direction.charAt(0).toUpperCase()}</span>
           <div class="h-5 w-[1.5px] bg-black"></div>
           <span class="text-lg">{clue.textClue}</span>
         </div>
