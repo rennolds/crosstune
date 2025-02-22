@@ -63,7 +63,7 @@
           onclick={() => handleNavigation('prev')}
           aria-label="Previous clue"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z"/>
             <rect x="12" y="7.24" width="2" height="9.52"/>
           </svg>
@@ -96,7 +96,7 @@
           onclick={() => handleNavigation('next')}
           aria-label="Next clue"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 24 24" fill="currentColor">
             <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z"/>
             <rect x="10" y="7.24" width="2" height="9.52"/>
           </svg>
