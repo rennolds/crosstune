@@ -11,7 +11,8 @@
         "startX": 0,
         "startY": 5,
         "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/75ffd47fee75208bb0bd42858de25e23b0b13091",
+        "audioUrl": "1582588575",
+        "startAt": "00:24",
         "color": "#FF9B9B",
         "textClue": "Song Title"
       },
@@ -20,7 +21,8 @@
         "startX": 11,
         "startY": 5,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/907d06abc995f4c427feb5f9e94dccb731903a0d",
+        "audioUrl": "1817690628",
+        "startAt": "00:36",
         "color": "#1ED760",
         "textClue": "Album Title"
       },
@@ -29,7 +31,8 @@
         "startX": 6,
         "startY": 0,
         "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/264488eb8408a2045871033fe14e9695e9f4fd3f",
+        "audioUrl": "1768722903",
+        "startAt": "02:20",
         "color": "#0041C2",
         "textClue": "Artist Last Name"
       },
@@ -38,7 +41,8 @@
         "startX": 6,
         "startY": 0,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/5488d08f012ea906930adb7c714d95a5a8552326",
+        "audioUrl": "256240558",
+        "startAt": "01:32",
         "color": "#FFF200",
         "textClue": "Artist Name"
       },
@@ -47,7 +51,8 @@
         "startX": 1,
         "startY": 0,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/24c2c8cc0e6b3d3fc5b3fe8ca4c08164ec9ef24d",
+        "audioUrl": "256187803",
+        "startAt": "00:30",
         "color": "#FFCEFF",
         "textClue": "Song Title"
       },
@@ -56,7 +61,8 @@
         "startX": 9,
         "startY": 0,
         "direction": "down",
-        "audioUrl": "https://p.scdn.co/mp3-preview/bb98751c6dfdb95fa6dabbf800503ea424b0abcd",
+        "audioUrl": "285001139",
+        "startAt": "00:12",
         "color": "#00FFFF",
         "textClue": "Artist First Name"
       },
@@ -65,7 +71,8 @@
         "startX": 6,
         "startY": 7,
         "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/86d951a680c33cca769822e0ef854c1b20301b32?cid=98f79e400795491cbc5f69b713465708",
+        "audioUrl": "253091084",
+        "startAt": "00:00",
         "color": "#FFA500",
         "textClue": "Song Title"
       },
@@ -74,7 +81,8 @@
         "startX": 1,
         "startY": 3,
         "direction": "across",
-        "audioUrl": "https://p.scdn.co/mp3-preview/d692f3799ca86b3689946fa39dda52dbd9c574ae",
+        "audioUrl": "278509072",
+        "startAt": "00:00",
         "color": "#BA55D3",
         "textClue": "Song Title"
       }

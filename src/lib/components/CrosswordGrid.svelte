@@ -3,6 +3,7 @@
   import MobileKeyboard from './MobileKeyboard.svelte';
   import MobileClue from './MobileClue.svelte';
   import ResultOverlay from './ResultOverlay.svelte';
+  import SoundCloudManager from "./SoundCloudManager.svelte";
 
   import { 
     getIsCorrect,
@@ -19,6 +20,8 @@
   } from '$lib/utils/storage';
 
   let isMobileDevice = $state(false);
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioCtx = new AudioContext();
 
   $effect(() => {
     isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
@@ -102,16 +105,16 @@
   let currentAudio = $state(null);
   let isPlaying = $state(false);
 
-  // Generate word numbers and organize clues
-let wordNumbers = $state(new Map());
-let currentNumber = 1;
+    // Generate word numbers and organize clues
+  let wordNumbers = $state(new Map());
+  let currentNumber = 1;
 
-let acrossClues = $state([]);
-let downClues = $state([]);
+  let acrossClues = $state([]);
+  let downClues = $state([]);
 
-let activeClue = $state(null);
-// Map to track which cells should be spaces
-let spaceCells = $state(new Map());
+  let activeClue = $state(null);
+  // Map to track which cells should be spaces
+  let spaceCells = $state(new Map());
 
 // First mark spaces in all words
 words.forEach((word) => {
@@ -148,6 +151,13 @@ uniquePositions.forEach(pos => {
   wordNumbers.set(`${pos.x},${pos.y}`, currentNumber++);
 });
 
+  function convertTimestampToMs(timestamp) {
+    console.log('in here', timestamp);
+    const [minutes, seconds] = timestamp.split(':').map(Number);
+    console.log('output', (minutes * 60 + seconds) * 1000);
+    return (minutes * 60 + seconds) * 1000;
+  }
+
 // Now process the words with the new numbering
 words.forEach((word) => {
   const key = `${word.startX},${word.startY}`;
@@ -157,6 +167,7 @@ words.forEach((word) => {
     number,
     word: word.word,
     audioUrl: word.audioUrl,
+    startAt: word.startAt,
     textClue: word.textClue,
     color: word.color,
     startX: word.startX,
@@ -770,6 +781,10 @@ function handleKeydown(event, x, y) {
   }
 
   let playingClue = $state(null);
+
+  async function playSC(clue) {
+    console.log(clue);
+  }
   
   async function playClue(clue) {
     try {
@@ -777,6 +792,17 @@ function handleKeydown(event, x, y) {
       currentDirection = clue.direction;
       focusedX = clue.startX;
       focusedY = clue.startY;
+
+      const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
+    
+      // Find the iframe for this specific word
+      const iframe = document.getElementById(widgetId);
+      
+      if (!iframe) {
+        console.error(`No SoundCloud widget found for coordinates ${widgetId}`);
+        return;
+      }
+      console.log('got widget');
 
       // If this clue is already playing, pause it
       if (playingClue === clue && isPlaying && currentAudio) {
@@ -793,37 +819,22 @@ function handleKeydown(event, x, y) {
       }
       isPlaying = false;
       playingClue = null;
+      const audio = SC.Widget(iframe);
 
-      // Create and play new audio
-      const audio = new Audio(clue.audioUrl);
       currentAudio = audio;
-
-      // Wait for audio to load
-      await new Promise((resolve, reject) => {
-        audio.addEventListener("loadedmetadata", () => {
-          resolve();
-        });
-        audio.addEventListener("error", (e) => {
-          reject(e);
-        });
-      });
-
+      audio.seekTo(convertTimestampToMs(clue.startAt));
       await audio.play();
       isPlaying = true;
       playingClue = clue;
 
       setTimeout(() => {
-        audio.pause();
-        isPlaying = false;
-        playingClue = null;
-        currentAudio = null;
+        if (audio == currentAudio) {
+          audio.pause();
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+        }
       }, 7000);
-
-      audio.addEventListener("ended", () => {
-        isPlaying = false;
-        playingClue = null;
-        currentAudio = null;
-      });
     } catch (error) {
       console.error("Error playing audio:", error);
       console.error("Audio element error:", currentAudio?.error);
@@ -887,7 +898,14 @@ function handleKeydown(event, x, y) {
       img.src = puzzle.backgroundImage;
     }
   });
+
+
 </script>
+
+
+<SoundCloudManager 
+  words={words}
+/>
 
 <div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-0 h-[calc(100vh-48px-50px-165px)] md:h-auto">
   <!-- Crossword grid container -->
