@@ -816,26 +816,18 @@ function handleKeydown(event, x, y) {
 
       currentAudio = audio;
 
-
-      // Wait for audio to load
-      // await new Promise((resolve, reject) => {
-      //   audio.addEventListener("loadedmetadata", () => {
-      //     resolve();
-      //   });
-      //   audio.addEventListener("error", (e) => {
-      //     reject(e);
-      //   });
-      // });
       audio.seekTo(0);
       await audio.play();
       isPlaying = true;
       playingClue = clue;
 
       setTimeout(() => {
-        audio.pause();
-        isPlaying = false;
-        playingClue = null;
-        currentAudio = null;
+        if (audio == currentAudio) {
+          audio.pause();
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+        }
       }, 7000);
     } catch (error) {
       console.error("Error playing audio:", error);
