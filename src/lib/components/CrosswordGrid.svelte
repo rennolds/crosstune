@@ -151,6 +151,13 @@ uniquePositions.forEach(pos => {
   wordNumbers.set(`${pos.x},${pos.y}`, currentNumber++);
 });
 
+  function convertTimestampToMs(timestamp) {
+    console.log('in here', timestamp);
+    const [minutes, seconds] = timestamp.split(':').map(Number);
+    console.log('output', (minutes * 60 + seconds) * 1000);
+    return (minutes * 60 + seconds) * 1000;
+  }
+
 // Now process the words with the new numbering
 words.forEach((word) => {
   const key = `${word.startX},${word.startY}`;
@@ -160,6 +167,7 @@ words.forEach((word) => {
     number,
     word: word.word,
     audioUrl: word.audioUrl,
+    startAt: word.startAt,
     textClue: word.textClue,
     color: word.color,
     startX: word.startX,
@@ -814,8 +822,7 @@ function handleKeydown(event, x, y) {
       const audio = SC.Widget(iframe);
 
       currentAudio = audio;
-
-      audio.seekTo(0);
+      audio.seekTo(convertTimestampToMs(clue.startAt));
       await audio.play();
       isPlaying = true;
       playingClue = clue;

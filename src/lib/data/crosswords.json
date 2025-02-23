@@ -12,6 +12,7 @@
         "startY": 5,
         "direction": "across",
         "audioUrl": "1582588575",
+        "startAt": "00:24",
         "color": "#FF9B9B",
         "textClue": "Song Title"
       },
@@ -21,6 +22,7 @@
         "startY": 5,
         "direction": "down",
         "audioUrl": "1817690628",
+        "startAt": "00:36",
         "color": "#1ED760",
         "textClue": "Album Title"
       },
@@ -30,6 +32,7 @@
         "startY": 0,
         "direction": "across",
         "audioUrl": "1768722903",
+        "startAt": "02:20",
         "color": "#0041C2",
         "textClue": "Artist Last Name"
       },
@@ -39,6 +42,7 @@
         "startY": 0,
         "direction": "down",
         "audioUrl": "256240558",
+        "startAt": "01:32",
         "color": "#FFF200",
         "textClue": "Artist Name"
       },
@@ -48,6 +52,7 @@
         "startY": 0,
         "direction": "down",
         "audioUrl": "256187803",
+        "startAt": "00:30",
         "color": "#FFCEFF",
         "textClue": "Song Title"
       },
@@ -57,6 +62,7 @@
         "startY": 0,
         "direction": "down",
         "audioUrl": "285001139",
+        "startAt": "00:12",
         "color": "#00FFFF",
         "textClue": "Artist First Name"
       },
@@ -66,6 +72,7 @@
         "startY": 7,
         "direction": "across",
         "audioUrl": "253091084",
+        "startAt": "00:00",
         "color": "#FFA500",
         "textClue": "Song Title"
       },
@@ -75,6 +82,7 @@
         "startY": 3,
         "direction": "across",
         "audioUrl": "278509072",
+        "startAt": "00:00",
         "color": "#BA55D3",
         "textClue": "Song Title"
       }
