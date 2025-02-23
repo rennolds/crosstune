@@ -20,9 +20,8 @@
   } from '$lib/utils/storage';
 
   let isMobileDevice = $state(false);
-
-  var iframeElement = document.querySelector('iframe');
-  console.log(iframeElement);
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioCtx = new AudioContext();
 
   $effect(() => {
     isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
