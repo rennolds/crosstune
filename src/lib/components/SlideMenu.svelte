@@ -55,12 +55,12 @@
     <nav class="space-y-4">
       {#each [
         { href: '/', text: 'Today\'s Puzzle' },
-        { href: '/archives', text: 'Archives' },
+        { href: '/archives', text: 'Archives', icon: 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4' },
         { href: '/privacy', text: 'Privacy' },
       ] as item}
         <a 
           href={item.href} 
-          class="block py-2 hover:bg-gray-100 rounded px-3 transition-colors"
+          class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
           onclick={(e) => {
             e.stopPropagation();
             if (isMobileDevice) {
@@ -68,6 +68,11 @@
             }
           }}
         >
+          {#if item.icon}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+            </svg>
+          {/if}
           {item.text}
         </a>
       {/each}

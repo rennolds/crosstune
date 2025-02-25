@@ -32,3 +32,10 @@ export function incrementSeconds() {
 export function setTimerRunning(value) {
   isTimerRunning = value;
 }
+
+// Reset function for archive puzzles
+export function resetTimer() {
+  seconds = 0;
+  isCorrect = false;
+  isTimerRunning = true;
+}

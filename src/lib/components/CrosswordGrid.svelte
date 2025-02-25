@@ -9,7 +9,8 @@
     getIsCorrect,
     setIsCorrect,
     getSeconds,
-    setSeconds
+    setSeconds,
+    resetTimer
   } from '$lib/stores/game.svelte.js';
 
   import { 
@@ -18,6 +19,9 @@
     loadTimerState,
     saveTimerState 
   } from '$lib/utils/storage';
+
+  // New props for archive mode
+  let { puzzle: customPuzzle = null, isArchiveMode = false, selectedDate = null } = $props();
 
   let isMobileDevice = $state(false);
   const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -33,8 +37,6 @@
     
     return () => mediaQuery.removeEventListener('change', handler);
   });
-
-  // Get today's puzzle
 
   // Function to get current East Coast date in YYYY-MM-DD format
   function getEastCoastDate() {
@@ -62,8 +64,8 @@
     return crosswords[firstAvailableDate];
   }
 
-  // Get puzzle using new function instead of hardcoding date
-  const puzzle = getTodaysPuzzle();
+  // Get puzzle - prioritize customPuzzle if provided (for archive mode)
+  const puzzle = customPuzzle || getTodaysPuzzle();
   const { size, words } = puzzle;
 
 
@@ -74,27 +76,36 @@
       .map(() => Array(size.width).fill(null))
   );
 
-  // Load saved state on mount
+  // Only load saved state on mount if not in archive mode
   $effect(() => {
-    const savedGrid = loadGridState();
-    if (savedGrid) {
-      grid = savedGrid;
-    }
+    if (isArchiveMode) {
+      // For archive mode, reset the timer
+      resetTimer();
+    } else {
+      const savedGrid = loadGridState();
+      if (savedGrid) {
+        grid = savedGrid;
+      }
 
-    const savedTimer = loadTimerState();
-    if (savedTimer) {
-      setSeconds(savedTimer);
+      const savedTimer = loadTimerState();
+      if (savedTimer) {
+        setSeconds(savedTimer);
+      }
     }
   });
 
-  // Save grid state whenever it changes
+  // Only save grid state when it changes if NOT in archive mode
   $effect(() => {
-    saveGridState(grid);
+    if (!isArchiveMode) {
+      saveGridState(grid);
+    }
   });
 
-  // Save timer state whenever it changes
+  // Only save timer state when it changes if NOT in archive mode
   $effect(() => {
-    saveTimerState(getSeconds());
+    if (!isArchiveMode) {
+      saveTimerState(getSeconds());
+    }
   });
 
   // Track currently focused cell
@@ -576,7 +587,10 @@ function handleKeydown(event, x, y) {
     // Create a function to update grid state that works for both input methods
     function updateGridCell(x, y, value) {
       grid[y][x] = value;
-      saveGridState(grid);
+      // Only save grid state if not in archive mode
+      if (!isArchiveMode) {
+        saveGridState(grid);
+      }
     }
 
     let nextWord = findNextUnfilledWord(x, y, currentDirection);
