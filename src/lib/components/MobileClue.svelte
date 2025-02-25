@@ -1,9 +1,5 @@
 <script>
-  let { clue, onPlay, isPlaying, playingClue, onStopAudio } = $props();
-
-  import crosswords from "$lib/data/crosswords.json";
-  const puzzle = crosswords["2024-02-09"];
-  const { words } = puzzle;
+  let { clue, onPlay, isPlaying, playingClue, onStopAudio, words } = $props();
 
   function findAdjacentClue(currentClue, direction) {
     if (!currentClue) return null;
