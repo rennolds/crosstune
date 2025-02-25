@@ -92,24 +92,12 @@
   
           <!-- Right side -->
           <div class="flex items-center space-x-4">
-            <a 
-                href="/archives" 
-                class="p-2 rounded-md hover:bg-gray-100 font-medium flex items-center"
+            <button 
+                class="p-2 rounded-md hover:bg-gray-100 font-medium"
+                aria-label="Help"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-                </svg>
-                Archives
-            </a>
-            
-            <div class="relative">
-                <button 
-                    class="p-2 rounded-md hover:bg-gray-100 font-medium"
-                    aria-label="Help"
-                >
-                    Help!
-                </button>
-            </div>
+                Help!
+            </button>
 
             <button 
                 class="p-2 rounded-md hover:bg-gray-100"
@@ -120,7 +108,7 @@
                 </svg>
             </button>
 
-              {#if getUser()}
+            {#if getUser()}
               <button 
                 onclick={handleSignOut}
                 class="p-2 rounded-md hover:bg-gray-100"
