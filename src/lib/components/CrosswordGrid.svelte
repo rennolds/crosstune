@@ -921,7 +921,7 @@ function handleKeydown(event, x, y) {
   words={words}
 />
 
-<div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-0 h-[calc(100vh-48px-50px-165px)] md:h-auto">
+<div class="flex flex-col md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-50 h-[calc(100vh-48px-50px-165px)] md:h-auto">
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
     <!-- Grid container -->
