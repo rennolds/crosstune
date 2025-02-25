@@ -70,12 +70,8 @@
 <style>
     /* Adjust for mobile devices with the ad space at top */
     @media (max-width: 768px) {
-        .fixed {
-            top: 98px !important; /* 48px navbar + 50px ad space */
-        }
-        
-        .pt-10 {
-            padding-top: 3.5rem !important;
+        .container {
+            padding-top: 50px;
         }
     }
 </style>
