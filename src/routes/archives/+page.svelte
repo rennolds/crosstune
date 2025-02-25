@@ -1,3 +1,4 @@
+
 <script>
     import Navbar from '$lib/components/Navbar.svelte';
     import ArchiveList from '$lib/components/ArchiveList.svelte';
@@ -27,38 +28,25 @@
         selectedDate = null;
         puzzle = null;
     }
+
+    // Function to format date in a compact way (MM/DD/YY)
+    function formatCompactDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            month: 'numeric',
+            day: 'numeric',
+            year: '2-digit'
+        });
+    }
 </script>
   
 <main>
     {#if selectedDate}
-        <!-- Show Navbar only when playing an archived puzzle -->
-        <Navbar />
+        <!-- Pass the formatted date to Navbar component -->
+        <Navbar archiveDate={formatCompactDate(selectedDate)} isArchiveMode={true} onBackToArchives={backToArchives} />
         
-        <!-- Date display - Integrated into top section, smaller with back button -->
-        <div class="fixed z-40 top-[48px] md:top-12 left-0 right-0 bg-white border-b border-gray-200 px-4 py-2 flex items-center gap-2">
-            <button 
-                onclick={backToArchives}
-                class="p-1 rounded-md hover:bg-gray-100"
-                aria-label="Back to archives"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-            </button>
-            <h1 class="text-sm font-medium truncate">
-                {new Date(selectedDate).toLocaleDateString('en-US', {
-                    weekday: 'short',
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                })}
-            </h1>
-        </div>
-        
-        <!-- Add extra top padding to account for the date bar -->
-        <div class="pt-10 md:pt-8">
-            <CrosswordGrid puzzle={puzzle} isArchiveMode={true} selectedDate={selectedDate} />
-        </div>
+        <!-- No need for separate date bar now -->
+        <CrosswordGrid puzzle={puzzle} isArchiveMode={true} selectedDate={selectedDate} />
     {:else}
         <!-- Archives list view (no Navbar) -->
         <div class="container mx-auto px-4 py-4 max-w-5xl">

@@ -12,6 +12,13 @@
   
   import SlideMenu from './SlideMenu.svelte';
   
+  // Add new props for archive mode
+  let { 
+    archiveDate = null, 
+    isArchiveMode = false,
+    onBackToArchives = null
+  } = $props();
+  
   let isMenuOpen = $state(false);
 
   async function handleSignOut() {
@@ -26,7 +33,7 @@
   
   // Toggle body class for mobile scroll lock
   $effect(() => {
-    if (typeof document !== 'undefined') {
+    if (typeof window !== 'undefined') {
       if (isMenuOpen) {
         document.body.classList.add('menu-open');
       } else {
@@ -88,6 +95,21 @@
               <div class="ml-4 font-mono text-lg">
                   {formatTime(getSeconds())}
               </div>
+              
+              <!-- Archive date display (when in archive mode) -->
+              {#if isArchiveMode && archiveDate}
+                <div class="ml-4 font-medium text-sm md:text-base flex items-center">
+                  <span class="ml-1">{archiveDate}</span>
+                  <!-- {#if onBackToArchives}
+                    <button 
+                      onclick={onBackToArchives}
+                      class="ml-2 text-blue-600 hover:text-blue-800 text-xs md:text-sm"
+                    >
+                      (All Archives)
+                    </button>
+                  {/if} -->
+                </div>
+              {/if}
           </div>
   
           <!-- Right side -->
