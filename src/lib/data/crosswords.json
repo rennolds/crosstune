@@ -4,7 +4,7 @@
       "width": 12,
       "height": 10
     },
-    "backgroundImage": "https://hub.yamaha.com/wp-content/uploads/2021/09/How-vinyl-made-Fig.-2.jpg",
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
     "words": [
       {
         "word": "EMINEM",
@@ -13,7 +13,7 @@
         "direction": "across",
         "audioUrl": "255769918",
         "startAt": "00:24",
-        "color": "#FF9B9B",
+        "color": "#FFCEFD",
         "textClue": "Featured Artist"
       },
       {
@@ -23,7 +23,7 @@
         "direction": "down",
         "audioUrl": "251343373",
         "startAt": "00:24",
-        "color": "#1ED760",
+        "color": "#568EFF",
         "textClue": "Song Title"
       },
       {
@@ -33,7 +33,7 @@
         "direction": "down",
         "audioUrl": "121170928",
         "startAt": "00:24",
-        "color": "#0041C2",
+        "color": "#28D66A",
         "textClue": "Song Title"
       },
       {
@@ -43,7 +43,7 @@
         "direction": "down",
         "audioUrl": "256256955",
         "startAt": "00:24",
-        "color": "#FFF200",
+        "color": "#FFB34B",
         "textClue": "Song Title"
       },
       {
@@ -53,7 +53,7 @@
         "direction": "across",
         "audioUrl": "1930382576",
         "startAt": "00:24",
-        "color": "#00FFFF",
+        "color": "#FE9C9C",
         "textClue": "Song Title"
       },
       {
@@ -63,7 +63,7 @@
         "direction": "down",
         "audioUrl": "254399326",
         "startAt": "00:24",
-        "color": "#FFCEFF",
+        "color": "#FCEB00",
         "textClue": "Song Title"
       },
       {
@@ -73,7 +73,7 @@
         "direction": "across",
         "audioUrl": "258025315",
         "startAt": "00:24",
-        "color": "#FFA500",
+        "color": "#FF5B5E",
         "textClue": "Artist Name"
       },
       {
@@ -83,7 +83,7 @@
         "direction": "down",
         "audioUrl": "1082723470",
         "startAt": "00:24",
-        "color": "#BA55D3",
+        "color": "#00FFFF",
         "textClue": "Song Title"
       }
     ]
