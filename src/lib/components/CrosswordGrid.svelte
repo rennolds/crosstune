@@ -575,7 +575,112 @@ function isWordComplete(word) {
   return letters.every(letter => letter !== '' && letter !== null);
 }
 
+let revealedCells = $state(new Set());
+  
+// Function to reveal the currently focused cell
+function revealSquare() {
+  if (!isCorrect) {
+    const x = focusedX;
+    const y = focusedY;
+    const cellKey = `${x},${y}`;
+    
+    // Get the correct letter from the current word
+    const activeWord = findActiveWord();
+    if (activeWord) {
+      const letterIndex = activeWord.direction === 'across' 
+        ? x - activeWord.startX 
+        : y - activeWord.startY;
+      
+      // Only proceed if we have a valid letter index
+      if (letterIndex >= 0 && letterIndex < activeWord.word.length) {
+        const correctLetter = activeWord.word[letterIndex];
+        
+        // Update the grid with the correct letter
+        grid[y][x] = correctLetter;
+        
+        // Mark this cell as revealed (prevent editing)
+        revealedCells.add(cellKey);
+        
+        // Save grid state if not in archive mode
+        if (!isArchiveMode) {
+          saveGridState(grid);
+        }
+      }
+    }
+  }
+}
+
+// Function to reveal the entire current word
+function revealWord() {
+  if (!isCorrect) {
+    const activeWord = findActiveWord();
+    if (activeWord) {
+      for (let i = 0; i < activeWord.word.length; i++) {
+        const x = activeWord.direction === 'across' ? activeWord.startX + i : activeWord.startX;
+        const y = activeWord.direction === 'down' ? activeWord.startY + i : activeWord.startY;
+        
+        // Skip spaces
+        if (activeWord.word[i] === ' ') continue;
+        
+        // Update grid with correct letter
+        grid[y][x] = activeWord.word[i];
+        
+        // Mark as revealed
+        revealedCells.add(`${x},${y}`);
+      }
+      
+      // Save grid state if not in archive mode
+      if (!isArchiveMode) {
+        saveGridState(grid);
+      }
+    }
+  }
+}
+
+// Function to reveal the entire puzzle
+function revealPuzzle() {
+  if (!isCorrect) {
+    // Loop through all words and fill in the correct letters
+    for (const word of words) {
+      for (let i = 0; i < word.word.length; i++) {
+        const x = word.direction === 'across' ? word.startX + i : word.startX;
+        const y = word.direction === 'down' ? word.startY + i : word.startY;
+        
+        // Skip spaces
+        if (word.word[i] === ' ') continue;
+        
+        // Update grid with correct letter
+        grid[y][x] = word.word[i];
+        
+        // Mark as revealed
+        revealedCells.add(`${x},${y}`);
+      }
+    }
+    
+    // Save grid state if not in archive mode
+    if (!isArchiveMode) {
+      saveGridState(grid);
+    }
+    
+    // Show the win screen since the puzzle is complete
+    setIsCorrect(true);
+    finalTime = getSeconds();
+    showOverlay = true;
+  }
+}
+
 function handleKeydown(event, x, y) {
+
+    if (revealedCells.has(`${x},${y}`)) {
+        // Only allow navigation keys for revealed cells
+        if (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Tab'].includes(event.key)) {
+          // Handle navigation as normal
+        } else {
+          // Prevent modification of revealed cells
+          event.preventDefault();
+          return;
+        }
+    }
     if (spaceCells.has(`${x},${y}`)) {
       event.preventDefault();
       return;
@@ -749,6 +854,17 @@ function handleKeydown(event, x, y) {
 
   // Add new function to handle virtual keyboard input
   function handleVirtualKeyPress(key) {
+
+    // Check if current cell is revealed
+    if (revealedCells.has(`${focusedX},${focusedY}`)) {
+      // Only allow navigation keys
+      if (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Tab'].includes(key)) {
+        // Handle navigation as normal
+      } else {
+        // Prevent modification of revealed cells
+        return;
+      }
+    }
     // For backspace, we need to handle it specially since it's an action rather than a character input
     if (key === 'Backspace') {
         // If current cell has content, clear it
@@ -980,6 +1096,7 @@ function handleKeydown(event, x, y) {
               data-y={y} 
               class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
               class:cursor-text={!isMobileDevice}
+              class:revealed={revealedCells.has(`${x},${y}`)}
               bind:value={grid[y][x]}
               onkeydown={(e) => handleKeydown(e, x, y)}
               onclick={() => handleCellClick(x, y)}
@@ -1114,5 +1231,10 @@ function handleKeydown(event, x, y) {
     :global(body) {
       touch-action: pan-x pan-y;
     }
+  }
+
+  .revealed {
+    color: #2563eb !important; /* Blue color for revealed letters */
+    font-weight: bold !important;
   }
 </style>

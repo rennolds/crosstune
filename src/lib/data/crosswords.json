@@ -8,7 +8,7 @@
     "words": [
       {
         "word": "EMINEM",
-        "startX": 0,
+        "startX": 1,
         "startY": 1,
         "direction": "across",
         "audioUrl": "255769918",
@@ -18,7 +18,7 @@
       },
       {
         "word": "IMAGINE",
-        "startX": 5,
+        "startX": 6,
         "startY": 0,
         "direction": "down",
         "audioUrl": "251343373",
@@ -28,7 +28,7 @@
       },
       {
         "word": "ROYALS",
-        "startX": 7,
+        "startX": 8,
         "startY": 0,
         "direction": "down",
         "audioUrl": "121170928",
@@ -38,7 +38,7 @@
       },
       {
         "word": "STAN",
-        "startX": 2,
+        "startX": 3,
         "startY": 3,
         "direction": "down",
         "audioUrl": "256256955",
@@ -48,7 +48,7 @@
       },
       {
         "word": "THRILLER",
-        "startX": 2,
+        "startX": 3,
         "startY": 4,
         "direction": "across",
         "audioUrl": "1930382576",
@@ -58,7 +58,7 @@
       },
       {
         "word": "DREAMS",
-        "startX": 9,
+        "startX": 10,
         "startY": 3,
         "direction": "down",
         "audioUrl": "254399326",
@@ -68,7 +68,7 @@
       },
       {
         "word": "SIA",
-        "startX": 0,
+        "startX": 1,
         "startY": 5,
         "direction": "across",
         "audioUrl": "258025315",
@@ -78,7 +78,7 @@
       },
       {
         "word": "STAY",
-        "startX": 0,
+        "startX": 1,
         "startY": 5,
         "direction": "down",
         "audioUrl": "1082723470",

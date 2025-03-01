@@ -11,15 +11,20 @@
   import { supabase } from '$lib/supabase';
   
   import SlideMenu from './SlideMenu.svelte';
+  import RevealMenu from './RevealMenu.svelte';
   
-  // Add new props for archive mode
+  // Add new props for archive mode and reveal functions
   let { 
     archiveDate = null, 
     isArchiveMode = false,
-    onBackToArchives = null
+    onBackToArchives = null,
+    onRevealSquare = null,
+    onRevealWord = null,
+    onRevealPuzzle = null
   } = $props();
   
   let isMenuOpen = $state(false);
+  let isRevealMenuOpen = $state(false);
 
   async function handleSignOut() {
     await supabase.auth.signOut();
@@ -29,6 +34,31 @@
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  }
+  
+  function toggleRevealMenu() {
+    isRevealMenuOpen = !isRevealMenuOpen;
+  }
+  
+  function handleRevealSquare() {
+    if (onRevealSquare) {
+      onRevealSquare();
+      isRevealMenuOpen = false;
+    }
+  }
+  
+  function handleRevealWord() {
+    if (onRevealWord) {
+      onRevealWord();
+      isRevealMenuOpen = false;
+    }
+  }
+  
+  function handleRevealPuzzle() {
+    if (onRevealPuzzle) {
+      onRevealPuzzle();
+      isRevealMenuOpen = false;
+    }
   }
   
   // Toggle body class for mobile scroll lock
@@ -96,26 +126,29 @@
               {#if isArchiveMode && archiveDate}
                 <div class="ml-4 font-medium text-sm md:text-base flex items-center">
                   <span class="ml-1">{archiveDate}</span>
-                  <!-- {#if onBackToArchives}
-                    <button 
-                      onclick={onBackToArchives}
-                      class="ml-2 text-blue-600 hover:text-blue-800 text-xs md:text-sm"
-                    >
-                      (All Archives)
-                    </button>
-                  {/if} -->
                 </div>
               {/if}
           </div>
   
           <!-- Right side -->
           <div class="flex items-center space-x-4">
-            <button 
-                class="p-2 rounded-md hover:bg-gray-100 font-medium"
-                aria-label="Help"
-            >
-                Help!
-            </button>
+            <div class="relative">
+              <button 
+                  class="p-2 rounded-md hover:bg-gray-100 font-medium reveal-button"
+                  aria-label="Reveal"
+                  onclick={toggleRevealMenu}
+              >
+                  Reveal
+              </button>
+              
+              <RevealMenu 
+                isOpen={isRevealMenuOpen}
+                onClose={() => isRevealMenuOpen = false}
+                onRevealSquare={handleRevealSquare}
+                onRevealWord={handleRevealWord}
+                onRevealPuzzle={handleRevealPuzzle}
+              />
+            </div>
 
             <button 
                 class="p-2 rounded-md hover:bg-gray-100"
@@ -133,13 +166,6 @@
               >
                 Sign Out
               </button>
-            {:else}
-              <!-- <a 
-                href="/auth" 
-                class="p-2 rounded-md hover:bg-gray-100"
-              >
-                Login
-              </a> -->
             {/if}
           </div>
       </div>
@@ -147,8 +173,8 @@
 </nav>
 
 <SlideMenu 
-isOpen={isMenuOpen}
-onClose={() => isMenuOpen = false}
+  isOpen={isMenuOpen}
+  onClose={() => isMenuOpen = false}
 />
 
 <style>
