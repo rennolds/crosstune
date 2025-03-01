@@ -614,7 +614,7 @@ function revealSquare() {
         grid[y][x] = correctLetter;
         
         // Mark this cell as revealed (prevent editing)
-        revealedCells.add(cellKey);
+        revealedCells = new Set([...revealedCells, cellKey]);
         console.log("Revealed cells:", [...revealedCells]);
         
         // Save grid state if not in archive mode
@@ -643,8 +643,7 @@ function revealWord() {
         grid[y][x] = activeWord.word[i];
         
         // Mark as revealed
-        revealedCells.add(`${x},${y}`);
-        console.log("Revealed cells:", [...revealedCells]);
+        revealedCells = new Set([...revealedCells, `${x},${y}`]);
       }
       
       // Save grid state if not in archive mode
@@ -672,8 +671,7 @@ function revealPuzzle() {
         grid[y][x] = word.word[i];
         
         // Mark as revealed
-        revealedCells.add(`${x},${y}`);
-        console.log("Revealed cells:", [...revealedCells]);
+        revealedCells = new Set([...revealedCells, `${x},${y}`]);
       }
     }
     
