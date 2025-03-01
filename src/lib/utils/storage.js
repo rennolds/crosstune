@@ -76,4 +76,26 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.SPLASH_SHOWN);
   localStorage.removeItem(STORAGE_KEYS.GRID_STATE);
   localStorage.removeItem(STORAGE_KEYS.LAST_PUZZLE_DATE);
+  localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
+}
+
+export function saveRevealedCells(revealedCells) {
+  if (typeof window === 'undefined') return;
+
+  localStorage.setItem(STORAGE_KEYS.REVEALED_CELLS, JSON.stringify([...revealedCells]))
+} 
+
+export function loadRevealedCells() {
+  if (typeof window === 'undefined') return new Set();
+  
+  if (!isStoredDataValid()) {
+    clearStoredData();
+    return new Set();
+  }
+
+  const revealedCells = localStorage.getItem(STORAGE_KEYS.REVEALED_CELLS);
+  if (!revealedCells) return new Set();
+  
+  // Convert the parsed array back to a Set
+  return new Set(JSON.parse(revealedCells));
 }

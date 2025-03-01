@@ -17,7 +17,9 @@
     loadGridState, 
     saveGridState,
     loadTimerState,
-    saveTimerState 
+    saveTimerState,
+    saveRevealedCells,
+    loadRevealedCells
   } from '$lib/utils/storage';
 
   // New props for archive mode 
@@ -69,6 +71,7 @@
   const { size, words } = puzzle;
 
 
+  let revealedCells = $state(new Set());
   // Create grid and message state
   let grid = $state(
     Array(size.height)
@@ -83,8 +86,10 @@
       resetTimer();
     } else {
       const savedGrid = loadGridState();
+      const savedRevealedCells = loadRevealedCells();
       if (savedGrid) {
         grid = savedGrid;
+        revealedCells = savedRevealedCells;
       }
 
       const savedTimer = loadTimerState();
@@ -97,6 +102,7 @@
   // Only save grid state when it changes if NOT in archive mode
   $effect(() => {
     if (!isArchiveMode) {
+      saveRevealedCells(revealedCells);
       saveGridState(grid);
     }
   });
@@ -585,8 +591,6 @@ $effect(() => {
     });
   }
 });
-
-let revealedCells = $state(new Set());
   
 // Function to reveal the currently focused cell
 function revealSquare() {
@@ -615,6 +619,7 @@ function revealSquare() {
         
         // Save grid state if not in archive mode
         if (!isArchiveMode) {
+          saveRevealedCells(revealedCells);
           saveGridState(grid);
         }
       }
@@ -644,6 +649,7 @@ function revealWord() {
       
       // Save grid state if not in archive mode
       if (!isArchiveMode) {
+        saveRevealedCells(revealedCells);
         saveGridState(grid);
       }
     }
@@ -673,6 +679,7 @@ function revealPuzzle() {
     
     // Save grid state if not in archive mode
     if (!isArchiveMode) {
+      saveRevealedCells(revealedCells);
       saveGridState(grid);
     }
     
@@ -711,6 +718,7 @@ function handleKeydown(event, x, y) {
       grid[y][x] = value;
       // Only save grid state if not in archive mode
       if (!isArchiveMode) {
+        saveRevealedCells(revealedCells);
         saveGridState(grid);
       }
     }
@@ -804,6 +812,7 @@ function handleKeydown(event, x, y) {
             }
           }
           if (!isArchiveMode) {
+            saveRevealedCells(revealedCells);
             saveGridState(grid);
           }
         break;
@@ -925,6 +934,7 @@ function handleKeydown(event, x, y) {
             }
         }
         saveGridState(grid);
+        saveRevealedCells(revealedCells);
         return;
     }
 
