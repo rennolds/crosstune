@@ -20,8 +20,8 @@
     saveTimerState 
   } from '$lib/utils/storage';
 
-  // New props for archive mode
-  let { puzzle: customPuzzle = null, isArchiveMode = false, selectedDate = null } = $props();
+  // New props for archive mode 
+  let { puzzle: customPuzzle = null, isArchiveMode = false, selectedDate = null, onSetRevealFunctions = null } = $props();
 
   let isMobileDevice = $state(false);
   const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -575,11 +575,22 @@ function isWordComplete(word) {
   return letters.every(letter => letter !== '' && letter !== null);
 }
 
+// Notify parent component about the reveal functions
+$effect(() => {
+  if (onSetRevealFunctions) {
+    onSetRevealFunctions({
+      revealSquare,
+      revealWord,
+      revealPuzzle
+    });
+  }
+});
+
 let revealedCells = $state(new Set());
   
 // Function to reveal the currently focused cell
 function revealSquare() {
-  if (!isCorrect) {
+  if (!getIsCorrect()) {
     const x = focusedX;
     const y = focusedY;
     const cellKey = `${x},${y}`;
@@ -612,7 +623,7 @@ function revealSquare() {
 
 // Function to reveal the entire current word
 function revealWord() {
-  if (!isCorrect) {
+  if (!getIsCorrect()) {
     const activeWord = findActiveWord();
     if (activeWord) {
       for (let i = 0; i < activeWord.word.length; i++) {
@@ -639,7 +650,7 @@ function revealWord() {
 
 // Function to reveal the entire puzzle
 function revealPuzzle() {
-  if (!isCorrect) {
+  if (!getIsCorrect()) {
     // Loop through all words and fill in the correct letters
     for (const word of words) {
       for (let i = 0; i < word.word.length; i++) {

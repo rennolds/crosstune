@@ -6,6 +6,10 @@
     import { shouldShowSplash, saveSplashShown } from '$lib/utils/storage';
     
     let showSplash = $state(true);
+    // References to hold the reveal functions
+    let revealSquare = $state(null);
+    let revealWord = $state(null);
+    let revealPuzzle = $state(null);
 
     // Initialize showSplash based on stored state
     $effect(() => {
@@ -18,13 +22,26 @@
         showSplash = false;
         saveSplashShown();
     }
+    
+    // Function to receive the reveal functions from CrosswordGrid
+    function handleRevealFunctions(functions) {
+        revealSquare = functions.revealSquare;
+        revealWord = functions.revealWord;
+        revealPuzzle = functions.revealPuzzle;
+    }
 </script>
 
 {#if showSplash}
     <SplashScreen onPlay={handlePlay} />
 {:else}
     <main>
-        <Navbar />
-        <CrosswordGrid />
+        <Navbar 
+            onRevealSquare={revealSquare} 
+            onRevealWord={revealWord} 
+            onRevealPuzzle={revealPuzzle} 
+        />
+        <CrosswordGrid 
+            onSetRevealFunctions={handleRevealFunctions}
+        />
     </main>
 {/if}
