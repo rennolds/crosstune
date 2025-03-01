@@ -134,12 +134,12 @@
                 Sign Out
               </button>
             {:else}
-              <a 
+              <!-- <a 
                 href="/auth" 
                 class="p-2 rounded-md hover:bg-gray-100"
               >
                 Login
-              </a>
+              </a> -->
             {/if}
           </div>
       </div>

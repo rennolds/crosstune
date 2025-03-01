@@ -848,7 +848,7 @@ function handleKeydown(event, x, y) {
           playingClue = null;
           currentAudio = null;
         }
-      }, 7000);
+      }, 6000);
     } catch (error) {
       console.error("Error playing audio:", error);
       console.error("Audio element error:", currentAudio?.error);

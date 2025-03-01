@@ -1,444 +1,88 @@
 {
-  "2025-02-21": {
+  "2025-02-28": {
     "size": {
       "width": 12,
       "height": 10
     },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "backgroundImage": "https://hub.yamaha.com/wp-content/uploads/2021/09/How-vinyl-made-Fig.-2.jpg",
     "words": [
       {
-        "word": "HOT TO GO",
+        "word": "EMINEM",
         "startX": 0,
-        "startY": 5,
+        "startY": 1,
         "direction": "across",
-        "audioUrl": "1582588575",
+        "audioUrl": "255769918",
         "startAt": "00:24",
         "color": "#FF9B9B",
+        "textClue": "Featured Artist"
+      },
+      {
+        "word": "IMAGINE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "251343373",
+        "startAt": "00:24",
+        "color": "#1ED760",
         "textClue": "Song Title"
       },
       {
-        "word": "BRAT",
-        "startX": 11,
-        "startY": 5,
-        "direction": "down",
-        "audioUrl": "1817690628",
-        "startAt": "00:36",
-        "color": "#1ED760",
-        "textClue": "Album Title"
-      },
-      {
-        "word": "GRANDE",
-        "startX": 6,
+        "word": "ROYALS",
+        "startX": 7,
         "startY": 0,
-        "direction": "across",
-        "audioUrl": "1768722903",
-        "startAt": "02:20",
+        "direction": "down",
+        "audioUrl": "121170928",
+        "startAt": "00:24",
         "color": "#0041C2",
-        "textClue": "Artist Last Name"
+        "textClue": "Song Title"
       },
       {
-        "word": "GREEN DAY",
-        "startX": 6,
-        "startY": 0,
+        "word": "STAN",
+        "startX": 2,
+        "startY": 3,
         "direction": "down",
-        "audioUrl": "256240558",
-        "startAt": "01:32",
+        "audioUrl": "256256955",
+        "startAt": "00:24",
         "color": "#FFF200",
-        "textClue": "Artist Name"
+        "textClue": "Song Title"
       },
       {
-        "word": "PAYPHONE",
-        "startX": 1,
-        "startY": 0,
+        "word": "THRILLER",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "audioUrl": "1930382576",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "DREAMS",
+        "startX": 9,
+        "startY": 3,
         "direction": "down",
-        "audioUrl": "256187803",
-        "startAt": "00:30",
+        "audioUrl": "254399326",
+        "startAt": "00:24",
         "color": "#FFCEFF",
         "textClue": "Song Title"
       },
       {
-        "word": "NICKI",
-        "startX": 9,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "285001139",
-        "startAt": "00:12",
-        "color": "#00FFFF",
-        "textClue": "Artist First Name"
-      },
-      {
-        "word": "AFRICA",
-        "startX": 6,
-        "startY": 7,
-        "direction": "across",
-        "audioUrl": "253091084",
-        "startAt": "00:00",
-        "color": "#FFA500",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "PYT",
-        "startX": 1,
-        "startY": 3,
-        "direction": "across",
-        "audioUrl": "278509072",
-        "startAt": "00:00",
-        "color": "#BA55D3",
-        "textClue": "Song Title"
-      }
-    ]
-  },
-  "2025-05-22": {
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-    "words": [
-      {
-        "word": "HOT TO GO",
+        "word": "SIA",
         "startX": 0,
         "startY": 5,
         "direction": "across",
-        "audioUrl": "1582588575",
+        "audioUrl": "258025315",
         "startAt": "00:24",
-        "color": "#FF9B9B",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "BRAT",
-        "startX": 11,
-        "startY": 5,
-        "direction": "down",
-        "audioUrl": "1817690628",
-        "startAt": "00:36",
-        "color": "#1ED760",
-        "textClue": "Album Title"
-      },
-      {
-        "word": "GRANDE",
-        "startX": 6,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "1768722903",
-        "startAt": "02:20",
-        "color": "#0041C2",
-        "textClue": "Artist Last Name"
-      },
-      {
-        "word": "GREEN DAY",
-        "startX": 6,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256240558",
-        "startAt": "01:32",
-        "color": "#FFF200",
+        "color": "#FFA500",
         "textClue": "Artist Name"
       },
       {
-        "word": "PAYPHONE",
-        "startX": 1,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256187803",
-        "startAt": "00:30",
-        "color": "#FFCEFF",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "NICKI",
-        "startX": 9,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "285001139",
-        "startAt": "00:12",
-        "color": "#00FFFF",
-        "textClue": "Artist First Name"
-      },
-      {
-        "word": "AFRICA",
-        "startX": 6,
-        "startY": 7,
-        "direction": "across",
-        "audioUrl": "253091084",
-        "startAt": "00:00",
-        "color": "#FFA500",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "PYT",
-        "startX": 1,
-        "startY": 3,
-        "direction": "across",
-        "audioUrl": "278509072",
-        "startAt": "00:00",
-        "color": "#BA55D3",
-        "textClue": "Song Title"
-      }
-    ]
-  },
-  "2025-05-23": {
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-    "words": [
-      {
-        "word": "HOT TO GO",
+        "word": "STAY",
         "startX": 0,
         "startY": 5,
-        "direction": "across",
-        "audioUrl": "1582588575",
+        "direction": "down",
+        "audioUrl": "1082723470",
         "startAt": "00:24",
-        "color": "#FF9B9B",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "BRAT",
-        "startX": 11,
-        "startY": 5,
-        "direction": "down",
-        "audioUrl": "1817690628",
-        "startAt": "00:36",
-        "color": "#1ED760",
-        "textClue": "Album Title"
-      },
-      {
-        "word": "GRANDE",
-        "startX": 6,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "1768722903",
-        "startAt": "02:20",
-        "color": "#0041C2",
-        "textClue": "Artist Last Name"
-      },
-      {
-        "word": "GREEN DAY",
-        "startX": 6,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256240558",
-        "startAt": "01:32",
-        "color": "#FFF200",
-        "textClue": "Artist Name"
-      },
-      {
-        "word": "PAYPHONE",
-        "startX": 1,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256187803",
-        "startAt": "00:30",
-        "color": "#FFCEFF",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "NICKI",
-        "startX": 9,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "285001139",
-        "startAt": "00:12",
-        "color": "#00FFFF",
-        "textClue": "Artist First Name"
-      },
-      {
-        "word": "AFRICA",
-        "startX": 6,
-        "startY": 7,
-        "direction": "across",
-        "audioUrl": "253091084",
-        "startAt": "00:00",
-        "color": "#FFA500",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "PYT",
-        "startX": 1,
-        "startY": 3,
-        "direction": "across",
-        "audioUrl": "278509072",
-        "startAt": "00:00",
-        "color": "#BA55D3",
-        "textClue": "Song Title"
-      }
-    ]
-  },
-  "2025-05-24": {
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-    "words": [
-      {
-        "word": "HOT TO GO",
-        "startX": 0,
-        "startY": 5,
-        "direction": "across",
-        "audioUrl": "1582588575",
-        "startAt": "00:24",
-        "color": "#FF9B9B",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "BRAT",
-        "startX": 11,
-        "startY": 5,
-        "direction": "down",
-        "audioUrl": "1817690628",
-        "startAt": "00:36",
-        "color": "#1ED760",
-        "textClue": "Album Title"
-      },
-      {
-        "word": "GRANDE",
-        "startX": 6,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "1768722903",
-        "startAt": "02:20",
-        "color": "#0041C2",
-        "textClue": "Artist Last Name"
-      },
-      {
-        "word": "GREEN DAY",
-        "startX": 6,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256240558",
-        "startAt": "01:32",
-        "color": "#FFF200",
-        "textClue": "Artist Name"
-      },
-      {
-        "word": "PAYPHONE",
-        "startX": 1,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256187803",
-        "startAt": "00:30",
-        "color": "#FFCEFF",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "NICKI",
-        "startX": 9,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "285001139",
-        "startAt": "00:12",
-        "color": "#00FFFF",
-        "textClue": "Artist First Name"
-      },
-      {
-        "word": "AFRICA",
-        "startX": 6,
-        "startY": 7,
-        "direction": "across",
-        "audioUrl": "253091084",
-        "startAt": "00:00",
-        "color": "#FFA500",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "PYT",
-        "startX": 1,
-        "startY": 3,
-        "direction": "across",
-        "audioUrl": "278509072",
-        "startAt": "00:00",
-        "color": "#BA55D3",
-        "textClue": "Song Title"
-      }
-    ]
-  },
-  "2025-02-25": {
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-    "words": [
-      {
-        "word": "HOT TO GO",
-        "startX": 0,
-        "startY": 5,
-        "direction": "across",
-        "audioUrl": "1582588575",
-        "startAt": "00:24",
-        "color": "#FF9B9B",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "BRAT",
-        "startX": 11,
-        "startY": 5,
-        "direction": "down",
-        "audioUrl": "1817690628",
-        "startAt": "00:36",
-        "color": "#1ED760",
-        "textClue": "Album Title"
-      },
-      {
-        "word": "GRANDE",
-        "startX": 6,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "1768722903",
-        "startAt": "02:20",
-        "color": "#0041C2",
-        "textClue": "Artist Last Name"
-      },
-      {
-        "word": "GREEN DAY",
-        "startX": 6,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256240558",
-        "startAt": "01:32",
-        "color": "#FFF200",
-        "textClue": "Artist Name"
-      },
-      {
-        "word": "PAYPHONE",
-        "startX": 1,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "256187803",
-        "startAt": "00:30",
-        "color": "#FFCEFF",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "NICKI",
-        "startX": 9,
-        "startY": 0,
-        "direction": "down",
-        "audioUrl": "285001139",
-        "startAt": "00:12",
-        "color": "#00FFFF",
-        "textClue": "Artist First Name"
-      },
-      {
-        "word": "AFRICA",
-        "startX": 6,
-        "startY": 7,
-        "direction": "across",
-        "audioUrl": "253091084",
-        "startAt": "00:00",
-        "color": "#FFA500",
-        "textClue": "Song Title"
-      },
-      {
-        "word": "PYT",
-        "startX": 1,
-        "startY": 3,
-        "direction": "across",
-        "audioUrl": "278509072",
-        "startAt": "00:00",
         "color": "#BA55D3",
         "textClue": "Song Title"
       }
