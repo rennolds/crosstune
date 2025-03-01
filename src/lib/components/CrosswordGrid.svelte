@@ -611,6 +611,7 @@ function revealSquare() {
         
         // Mark this cell as revealed (prevent editing)
         revealedCells.add(cellKey);
+        console.log("Revealed cells:", [...revealedCells]);
         
         // Save grid state if not in archive mode
         if (!isArchiveMode) {
@@ -638,6 +639,7 @@ function revealWord() {
         
         // Mark as revealed
         revealedCells.add(`${x},${y}`);
+        console.log("Revealed cells:", [...revealedCells]);
       }
       
       // Save grid state if not in archive mode
@@ -665,6 +667,7 @@ function revealPuzzle() {
         
         // Mark as revealed
         revealedCells.add(`${x},${y}`);
+        console.log("Revealed cells:", [...revealedCells]);
       }
     }
     
@@ -684,10 +687,13 @@ function handleKeydown(event, x, y) {
 
     if (revealedCells.has(`${x},${y}`)) {
         // Only allow navigation keys for revealed cells
+        console.log('It has the item!')
         if (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Tab'].includes(event.key)) {
           // Handle navigation as normal
+          console.log('continue as normal')
         } else {
           // Prevent modification of revealed cells
+          console.log('abandon ship')
           event.preventDefault();
           return;
         }
@@ -757,39 +763,49 @@ function handleKeydown(event, x, y) {
           moveFocus(x, y + 1);
         }
         break;
-      case 'Backspace':
-        event.preventDefault();
-        // If current cell has content, clear it and stay there
-        if (grid[y][x]) {
-          grid[y][x] = '';
-        } 
-        // Otherwise move back and clear that cell
-        else {
-          if (currentDirection === 'across') {
-            let newX = x - 1;
-            while (newX >= 0) {
-              // Find the first non-space input cell going backwards
-              if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`)) {
-                grid[y][newX] = '';
-                moveFocus(newX, y);
-                break;
+        case 'Backspace':
+          event.preventDefault();
+          // If current cell has content, clear it and stay there
+          if (grid[y][x]) {
+            grid[y][x] = '';
+          } 
+          // Otherwise move back and clear that cell
+          else {
+            if (currentDirection === 'across') {
+              let newX = x - 1;
+              while (newX >= 0) {
+                // Find the first non-space, non-revealed input cell going backwards
+                if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`) && !revealedCells.has(`${newX},${y}`)) {
+                  grid[y][newX] = '';
+                  moveFocus(newX, y);
+                  break;
+                } else if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`) && revealedCells.has(`${newX},${y}`)) {
+                  // Skip revealed cells but keep moving backwards
+                  newX--;
+                  continue;
+                }
+                newX--;
               }
-              newX--;
-            }
-          } else {
-            let newY = y - 1;
-            while (newY >= 0) {
-              // Find the first non-space input cell going up
-              if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`)) {
-                grid[newY][x] = '';
-                moveFocus(x, newY);
-                break;
+            } else {
+              let newY = y - 1;
+              while (newY >= 0) {
+                // Find the first non-space, non-revealed input cell going up
+                if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`) && !revealedCells.has(`${x},${newY}`)) {
+                  grid[newY][x] = '';
+                  moveFocus(x, newY);
+                  break;
+                } else if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`) && revealedCells.has(`${x},${newY}`)) {
+                  // Skip revealed cells but keep moving upwards
+                  newY--;
+                  continue;
+                }
+                newY--;
               }
-              newY--;
             }
           }
-        }
-        saveGridState(grid);
+          if (!isArchiveMode) {
+            saveGridState(grid);
+          }
         break;
       default:
         if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
@@ -1108,6 +1124,7 @@ function handleKeydown(event, x, y) {
               class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
               class:cursor-text={!isMobileDevice}
               class:revealed={revealedCells.has(`${x},${y}`)}
+              style={revealedCells.has(`${x},${y}`) ? "color: #FF3333 !important; font-weight: bold !important;" : ""}
               bind:value={grid[y][x]}
               onkeydown={(e) => handleKeydown(e, x, y)}
               onclick={() => handleCellClick(x, y)}
@@ -1244,8 +1261,14 @@ function handleKeydown(event, x, y) {
     }
   }
 
+  input.revealed {
+    color: #FF3333 !important; /* Bright red color */
+    font-weight: bold !important;
+  }
+  
+  /* For added emphasis, you could also add */
   .revealed {
-    color: #2563eb !important; /* Blue color for revealed letters */
+    color: #FF3333 !important; 
     font-weight: bold !important;
   }
 </style>
