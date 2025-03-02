@@ -10,6 +10,7 @@
   import { getUser } from '$lib/stores/auth.svelte.js';
   import { supabase } from '$lib/supabase';
   
+  // Import the fixed SlideMenu component
   import SlideMenu from './SlideMenu.svelte';
   import RevealMenu from './RevealMenu.svelte';
   
@@ -103,10 +104,12 @@
       <div class="flex justify-between h-12">
           <!-- Left side -->
           <div class="flex items-center">
+              <!-- Menu button with improved clickability -->
               <button 
                 class="p-2 rounded-md hover:bg-gray-100 w-10 h-10 flex items-center justify-center" 
                 aria-label="Menu"
                 onclick={() => isMenuOpen = !isMenuOpen}
+                style="position: relative; z-index: 60;"
               >
                 {#if isMenuOpen}
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
