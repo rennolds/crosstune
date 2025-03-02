@@ -79,23 +79,25 @@
 
 <div class="grid md:grid-cols-1 gap-6">
     <div class="bg-white shadow rounded-lg overflow-hidden">
-        <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex items-center justify-between">
+        <div class="bg-gray-100 px-1 py-1.5 border-b border-gray-200 flex items-center justify-between">
             <button onclick={goToPreviousMonth} class="p-2 hover:bg-gray-200 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z"/>
+                    <rect x="12" y="7.24" width="2" height="9.52"/>
                 </svg>
             </button>
-            <h2 class="text-lg font-semibold">
+            <h2 class="text-xl font-semibold">
                 {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </h2>
             <button onclick={goToNextMonth} class="p-2 hover:bg-gray-200 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z"/>
+                    <rect x="10" y="7.24" width="2" height="9.52"/>
                 </svg>
             </button>
         </div>
         
-        <div class="grid grid-cols-7 text-center font-medium text-gray-500 bg-gray-50 p-2">
+        <div class="grid grid-cols-7 text-center font-medium text-black-300 p-2">
             {#each ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as day}
                 <div>{day}</div>
             {/each}
@@ -122,17 +124,17 @@
             {/each}
         </div>
         
-        <div class="p-4 flex justify-between items-center border-t border-gray-200">
-            <span class="text-lg font-medium">
-                {selectedDate ? formatDate(selectedDate) : 'Select a date'}
-            </span>
-            <button 
-                onclick={() => handlePlayPuzzle(generateCalendarDays().find(d => d?.date === selectedDate))}
-                class="bg-black text-white px-4 py-2 rounded"
-                disabled={!selectedDate}
-            >
-                Play
-            </button>
-        </div>
+    </div>
+    <div class="p-4 flex justify-between items-center">
+        <span class="text-lg font-medium">
+            {selectedDate ? formatDate(selectedDate) : ''}
+        </span>
+        <button 
+            onclick={() => handlePlayPuzzle(generateCalendarDays().find(d => d?.date === selectedDate))}
+            class="bg-black text-white text-3xl px-9 py-2 rounded"
+            disabled={!selectedDate}
+        >
+            Start
+        </button>
     </div>
 </div>
