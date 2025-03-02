@@ -77,7 +77,7 @@
     }
 </script>
 
-<div class="grid md:grid-cols-1 gap-6">
+<div class="container max-w-xl mx-auto md:mt-6">
     <div class="bg-white shadow rounded-lg overflow-hidden">
         <div class="bg-gray-100 px-1 py-1.5 border-b border-gray-200 flex items-center justify-between">
             <button onclick={goToPreviousMonth} class="p-2 hover:bg-gray-200 rounded-full">
@@ -103,7 +103,7 @@
             {/each}
         </div>
         
-        <div class="grid grid-cols-7 gap-4 text-center">
+        <div class="grid grid-cols-7 gap-4 text-center p-2">
             {#each generateCalendarDays() as dayObj}
                 {#if dayObj === null}
                     <div></div>
@@ -138,3 +138,14 @@
         </button>
     </div>
 </div>
+
+<style>
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+        .container {
+            height: 100%;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+</style>

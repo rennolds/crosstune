@@ -1,9 +1,7 @@
-
 <script>
     import Navbar from '$lib/components/Navbar.svelte';
     import ArchiveList from '$lib/components/ArchiveList.svelte';
     import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
-    import { goto } from '$app/navigation';
     import crosswords from "$lib/data/crosswords.json";
     
     $effect(() => {
@@ -16,6 +14,11 @@
 
     let selectedDate = $state(null);
     let puzzle = $state(null);
+    
+    // References to hold the reveal functions
+    let revealSquare = $state(null);
+    let revealWord = $state(null);
+    let revealPuzzle = $state(null);
     
     function loadArchivePuzzle(date) {
         if (crosswords[date]) {
@@ -38,18 +41,34 @@
             year: '2-digit'
         });
     }
+    
+    // Function to receive the reveal functions from CrosswordGrid
+    function handleRevealFunctions(functions) {
+        revealSquare = functions.revealSquare;
+        revealWord = functions.revealWord;
+        revealPuzzle = functions.revealPuzzle;
+    }
 </script>
   
 <main>
     {#if selectedDate}
-        <!-- Pass the formatted date to Navbar component -->
-        <Navbar archiveDate={formatCompactDate(selectedDate)} isArchiveMode={true} onBackToArchives={backToArchives} />
-        
-        <!-- No need for separate date bar now -->
-        <CrosswordGrid puzzle={puzzle} isArchiveMode={true} selectedDate={selectedDate} />
+        <Navbar 
+            archiveDate={formatCompactDate(selectedDate)} 
+            isArchiveMode={true} 
+            onBackToArchives={backToArchives}
+            onRevealSquare={revealSquare} 
+            onRevealWord={revealWord} 
+            onRevealPuzzle={revealPuzzle}
+        />
+        <CrosswordGrid 
+            puzzle={puzzle} 
+            isArchiveMode={true} 
+            selectedDate={selectedDate} 
+            onSetRevealFunctions={handleRevealFunctions}
+        />
     {:else}
-        <!-- Archives list view (no Navbar) -->
-        <div class="mx-auto px-4 py-4 w-full max-w-5xl">
+        <Navbar />
+        <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
             <div class="flex items-center justify-between mb-6">
                 <h1 class="text-2xl font-bold">Crossword Archives</h1>
             </div>
@@ -60,3 +79,13 @@
         </div>
     {/if}
 </main>
+
+<style>
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+        .archives-container {
+            padding-top: 0;
+            margin-top: 0;
+        }
+    }
+</style>
