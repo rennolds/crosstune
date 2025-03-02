@@ -87,5 +87,94 @@
         "textClue": "Song Title"
       }
     ]
+  },
+  "2025-02-27": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "HOT TO GO",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "audioUrl": "1582588575",
+        "startAt": "00:24",
+        "color": "#FF9B9B",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "BRAT",
+        "startX": 11,
+        "startY": 5,
+        "direction": "down",
+        "audioUrl": "1817690628",
+        "startAt": "00:36",
+        "color": "#1ED760",
+        "textClue": "Album Title"
+      },
+      {
+        "word": "GRANDE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "1768722903",
+        "startAt": "02:20",
+        "color": "#0041C2",
+        "textClue": "Artist Last Name"
+      },
+      {
+        "word": "GREEN DAY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "256240558",
+        "startAt": "01:32",
+        "color": "#FFF200",
+        "textClue": "Artist Name"
+      },
+      {
+        "word": "PAYPHONE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "256187803",
+        "startAt": "00:30",
+        "color": "#FFCEFF",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "NICKI",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "285001139",
+        "startAt": "00:12",
+        "color": "#00FFFF",
+        "textClue": "Artist First Name"
+      },
+      {
+        "word": "AFRICA",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "audioUrl": "253091084",
+        "startAt": "00:00",
+        "color": "#FFA500",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "PYT",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "audioUrl": "278509072",
+        "startAt": "00:00",
+        "color": "#BA55D3",
+        "textClue": "Song Title"
+      }
+    ]
   }
 }

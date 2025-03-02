@@ -49,15 +49,9 @@
         <CrosswordGrid puzzle={puzzle} isArchiveMode={true} selectedDate={selectedDate} />
     {:else}
         <!-- Archives list view (no Navbar) -->
-        <div class="container mx-auto px-4 py-4 max-w-5xl">
+        <div class="mx-auto px-4 py-4 w-full max-w-5xl">
             <div class="flex items-center justify-between mb-6">
                 <h1 class="text-2xl font-bold">Crossword Archives</h1>
-                <!-- <button 
-                    onclick={() => goto('/')}
-                    class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800"
-                >
-                    Play Today's Puzzle
-                </button> -->
             </div>
             <ArchiveList 
                 crosswords={crosswords} 
@@ -66,12 +60,3 @@
         </div>
     {/if}
 </main>
-
-<style>
-    /* Adjust for mobile devices with the ad space at top */
-    @media (max-width: 768px) {
-        .container {
-            /* padding-top: 50px; */
-        }
-    }
-</style>
