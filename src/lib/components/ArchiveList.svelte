@@ -103,14 +103,14 @@
             {/each}
         </div>
         
-        <div class="grid grid-cols-7 text-center">
+        <div class="grid grid-cols-7 gap-4 text-center">
             {#each generateCalendarDays() as dayObj}
                 {#if dayObj === null}
                     <div></div>
                 {:else}
                     <button 
                         onclick={() => handleDateSelect(dayObj)}
-                        class="p-2 aspect-square flex items-center justify-center"
+                        class="p-1.5 aspect-square flex items-center justify-center rounded-xs"
                         class:bg-black={selectedDate === dayObj.date}
                         class:text-white={selectedDate === dayObj.date}
                         class:bg-gray-200={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable}
