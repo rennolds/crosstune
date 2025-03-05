@@ -7,7 +7,7 @@
     let isInitialized = $state(false);
     
     const NORMAL_SPEED = 0.25; // Normal playback speed
-    const SLOWDOWN_FACTOR = 0.975; // Factor to gradually reduce speed (95% each frame)
+    const SLOWDOWN_FACTOR = 0.965; // Factor to gradually reduce speed (95% each frame)
     const MIN_SPEED = 0.001; // Speed at which we consider the record "stopped"
     
     // Track the vinyl's rotation
