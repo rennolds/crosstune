@@ -2,68 +2,75 @@
     let { isPlaying = false } = $props();
     let rotation = $state(0);
     let animationFrame;
-    let speed = $state(0.25); // Current rotation speed in degrees per millisecond
-    let lastPlaying = $state(false); // Track previous playing state for deceleration
+    let speed = $state(0); // Start with speed at 0
+    let lastTime = $state(performance.now());
+    let isInitialized = $state(false);
+    
+    const NORMAL_SPEED = 0.25; // Normal playback speed
+    const SLOWDOWN_FACTOR = 0.975; // Factor to gradually reduce speed (95% each frame)
+    const MIN_SPEED = 0.001; // Speed at which we consider the record "stopped"
     
     // Track the vinyl's rotation
     $effect(() => {
-      if (isPlaying) {
-        lastPlaying = true;
-        speed = 0.25; // Normal playback speed
-        
-        let lastTime = performance.now();
-        const rotateVinyl = (time) => {
-          const delta = time - lastTime;
-          rotation = (rotation + (delta * speed)) % 360;
-          lastTime = time;
-          animationFrame = requestAnimationFrame(rotateVinyl);
-        };
-        
-        animationFrame = requestAnimationFrame(rotateVinyl);
-        
-        // Cleanup when not playing
-        return () => {
-          if (animationFrame) {
-            cancelAnimationFrame(animationFrame);
-          }
-        };
-      } 
-      else if (lastPlaying) {
-        // Start deceleration when transitioning from playing to stopped
-        lastPlaying = false;
-        
-        let startTime = performance.now();
-        let startSpeed = speed;
-        const decelerationDuration = 1000; // 1 second deceleration
-        
-        let lastTime = startTime;
-        const decelerateVinyl = (time) => {
-          const delta = time - lastTime;
-          const elapsedTime = time - startTime;
-          
-          if (elapsedTime < decelerationDuration) {
-            // Linear deceleration from startSpeed to 0 over 1 second
-            speed = startSpeed * (1 - elapsedTime / decelerationDuration);
+        // Start or continue animation
+        const animate = (time) => {
+            const delta = time - lastTime;
+            
+            // Update rotation based on current speed
             rotation = (rotation + (delta * speed)) % 360;
             lastTime = time;
-            animationFrame = requestAnimationFrame(decelerateVinyl);
-          } else {
-            // Ensure we stop at exactly 0 speed
-            speed = 0;
-            if (animationFrame) {
-              cancelAnimationFrame(animationFrame);
+            
+            // If not playing anymore, gradually slow down
+            if (!isPlaying) {
+                speed = speed * SLOWDOWN_FACTOR;
+                
+                // Stop the animation once we're below the minimum speed
+                if (speed < MIN_SPEED) {
+                    speed = 0;
+                    return;
+                }
             }
-          }
+            
+            animationFrame = requestAnimationFrame(animate);
         };
         
-        animationFrame = requestAnimationFrame(decelerateVinyl);
+        // Set initialization flag after first render
+        if (!isInitialized) {
+            isInitialized = true;
+            
+            // If we start with isPlaying=false, don't do any animation
+            if (!isPlaying) {
+                speed = 0;
+                return;
+            }
+        }
         
+        // If playback started or changed
+        if (isPlaying) {
+            // Set to normal speed immediately when playing
+            speed = NORMAL_SPEED;
+            
+            // If no animation is running, start one
+            if (!animationFrame) {
+                lastTime = performance.now();
+                animationFrame = requestAnimationFrame(animate);
+            }
+        } else if (speed === 0) {
+            // If we're completely stopped, don't start animation
+            return;
+        } else if (!animationFrame) {
+            // If we need to slow down and no animation is running, start one
+            lastTime = performance.now();
+            animationFrame = requestAnimationFrame(animate);
+        }
+        
+        // Cleanup when component is destroyed
         return () => {
-          if (animationFrame) {
-            cancelAnimationFrame(animationFrame);
-          }
+            if (animationFrame) {
+                cancelAnimationFrame(animationFrame);
+                animationFrame = null;
+            }
         };
-      }
     });
 </script>
   
