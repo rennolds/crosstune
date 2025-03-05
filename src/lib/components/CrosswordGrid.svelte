@@ -4,6 +4,7 @@
   import MobileClue from './MobileClue.svelte';
   import ResultOverlay from './ResultOverlay.svelte';
   import SoundCloudManager from "./SoundCloudManager.svelte";
+  import VinylRecord from './VinylRecord.svelte';
 
   import { 
     getIsCorrect,
@@ -1076,8 +1077,13 @@ function handleKeydown(event, x, y) {
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
     <!-- Grid container -->
-    <div class="w-full relative +++h-full+++"  style="aspect-ratio: {size.width}/{size.height};">
-      <div 
+    <div class="w-full relative"  style="aspect-ratio: {size.width}/{size.height};">
+      <VinylRecord {isPlaying} />
+      
+      <!-- Remove the background image and instead use a transparent background -->
+      <div class="absolute inset-0 bg-transparent">
+      </div>
+      <!-- <div 
       class="absolute inset-0 bg-black"
       style="
         {puzzle.backgroundImage && !backgroundImageError 
@@ -1091,7 +1097,7 @@ function handleKeydown(event, x, y) {
           : ''
         }
       "
-      > </div>
+      > </div> -->
       <div
       <div
       class="absolute inset-0 grid p-2"
@@ -1106,10 +1112,10 @@ function handleKeydown(event, x, y) {
                 ? 'background-color: transparent;' 
                 : isCellHighlighted(x, y)?.type === 'focused'
                   ? `background-color: ${isCellHighlighted(x, y).color};
-                     border: 0.5px solid black;`
+                    border: 0.5px solid black;`
                   : isCellHighlighted(x, y)?.type === 'active'
                     ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, .75)};
-                       border: 0.5px solid black;`
+                      border: 0.5px solid black;`
                     : 'background-color: white; border: 0.5px solid black;'
               }"
           >
