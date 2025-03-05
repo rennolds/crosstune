@@ -89,7 +89,7 @@
     left: 50%;
     width: 80%; /* Adjust the size as needed */
     max-width: 500px;
-    z-index: -1;
+    z-index: 1;
     transition: none; /* Remove transition to prevent snap */
 }
 </style>

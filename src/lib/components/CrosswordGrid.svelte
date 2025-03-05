@@ -1073,7 +1073,7 @@ function handleKeydown(event, x, y) {
   words={words}
 />
 
-<div class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto">
+<div class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100">
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
     <!-- Grid container -->
@@ -1081,7 +1081,10 @@ function handleKeydown(event, x, y) {
       <VinylRecord {isPlaying} />
       
       <!-- Remove the background image and instead use a transparent background -->
-      <div class="absolute inset-0 bg-transparent">
+      <div 
+        class="absolute inset-0 grid p-2"
+        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px; background-color: #F3F4F6;"
+      >
       </div>
       <!-- <div 
       class="absolute inset-0 bg-black"
@@ -1100,13 +1103,13 @@ function handleKeydown(event, x, y) {
       > </div> -->
       <div
       <div
-      class="absolute inset-0 grid p-2"
-      style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
-    >
+        class="absolute inset-0 grid p-2"
+        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
+      >
       {#each grid as row, y}
         {#each row as cell, x}
           <div
-            class="aspect-square flex items-center justify-center relative transition-colors duration-200"
+            class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
             style="
               {cell === null 
                 ? 'background-color: transparent;' 
@@ -1116,7 +1119,7 @@ function handleKeydown(event, x, y) {
                   : isCellHighlighted(x, y)?.type === 'active'
                     ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, .75)};
                       border: 0.5px solid black;`
-                    : 'background-color: white; border: 0.5px solid black;'
+                    : 'background-color: #FFF; border: 0.5px solid black;'
               }"
           >
           {#if cell !== null}

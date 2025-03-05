@@ -34,7 +34,7 @@
 {#if showSplash}
     <SplashScreen onPlay={handlePlay} />
 {:else}
-    <main>
+    <main class="bg-[#F3F4F6]">
         <Navbar 
             onRevealSquare={revealSquare} 
             onRevealWord={revealWord} 
