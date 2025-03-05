@@ -11,7 +11,7 @@
         const rotateVinyl = (time) => {
           const delta = time - lastTime;
           // Rotate at 15 degrees per second (adjust for speed)
-          rotation = (rotation + (delta * 0.015)) % 360;
+          rotation = (rotation + (delta * 0.09)) % 360;
           lastTime = time;
           animationFrame = requestAnimationFrame(rotateVinyl);
         };
