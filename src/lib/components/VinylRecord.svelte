@@ -28,7 +28,7 @@
 </script>
   
 <div class="vinyl-container" style="transform: translate(-50%, -50%) rotate({rotation}deg)">
-  <img src="/vinyl.svg" alt="Vinyl Record" /> 
+  <img src="/vinyl.png" alt="Vinyl Record" /> 
 </div>
   
 <style>
