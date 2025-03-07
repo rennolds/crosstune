@@ -1201,11 +1201,11 @@
                 ? 'background-color: transparent;'
                 : isCellHighlighted(x, y)?.type === 'focused'
                   ? `background-color: #FFFF00;
-                    border: 0.5px solid black;`
+                    outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
                   : isCellHighlighted(x, y)?.type === 'active'
                     ? `background-color: ${isCellHighlighted(x, y).color};
-                      border: 0.5px solid black;`
-                    : 'background-color: #FFF; border: 0.5px solid black;'}"
+                      outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
+                    : 'background-color: #FFF; outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;'}"
             >
               {#if cell !== null}
                 {#if wordNumbers.has(`${x},${y}`)}
