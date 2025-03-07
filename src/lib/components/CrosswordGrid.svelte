@@ -1029,11 +1029,7 @@
 
   let playingClue = $state(null);
 
-  async function playSC(clue) {
-      console.log(clue);
-    }
-
-    async function playClue(clue) {
+  async function playClue(clue) {
     try {
       // First, highlight the word by setting direction and focus
       currentDirection = clue.direction;
@@ -1071,11 +1067,16 @@
       const audio = SC.Widget(iframe);
       currentAudio = audio;
       
+      // Create a unique identifier for this play session
+      const playSessionId = Date.now();
+      audio._playSessionId = playSessionId;
+      
       audio.seekTo(convertTimestampToMs(clue.startAt));
       await audio.play();
 
       setTimeout(() => {
-        if (audio === currentAudio) {
+        // Only pause if this is still the current audio AND from the same play session
+        if (audio === currentAudio && audio._playSessionId === playSessionId) {
           audio.pause();
           isPlaying = false;
           playingClue = null;
