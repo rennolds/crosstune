@@ -6,7 +6,7 @@
     let lastTime = $state(performance.now());
     let isInitialized = $state(false);
     
-    const NORMAL_SPEED = 0.25; // Normal playback speed
+    const NORMAL_SPEED = 0.20; // Normal playback speed
     const SLOWDOWN_FACTOR = 0.965; // Factor to gradually reduce speed (95% each frame)
     const SPEEDUP_FACTOR = 1.12; // Factor to gradually increase speed (108% each frame)
     const MIN_SPEED = 0.001; // Speed at which we consider the record "stopped"

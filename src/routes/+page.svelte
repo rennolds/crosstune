@@ -34,7 +34,7 @@
 {#if showSplash}
     <SplashScreen onPlay={handlePlay} />
 {:else}
-    <main class="bg-[#F3F4F6]">
+    <main class="min-h-screen bg-[#F3F4F6]">
         <Navbar 
             onRevealSquare={revealSquare} 
             onRevealWord={revealWord} 
