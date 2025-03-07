@@ -1156,7 +1156,7 @@
 <SoundCloudManager {words} />
 
 <div
-  class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100"
+  class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-4xl  mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100"
 >
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
@@ -1169,7 +1169,7 @@
 
       <!-- Remove the background image and instead use a transparent background -->
       <div
-        class="absolute inset-0 grid p-2"
+        class="absolute inset-0 grid p-3"
         style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px; background-color: #F3F4F6;"
       ></div>
       <!-- <div 
@@ -1201,7 +1201,7 @@
                 ? 'background-color: transparent;'
                 : isCellHighlighted(x, y)?.type === 'focused'
                   ? `background-color: ${isCellHighlighted(x, y).color};
-                    border: 0.5px solid black;`
+                    border: 1.2px solid black;`
                   : isCellHighlighted(x, y)?.type === 'active'
                     ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, 0.75)};
                       border: 0.5px solid black;`
@@ -1221,30 +1221,30 @@
                   </div>
                 {:else}
                   <input
-                    type="text"
-                    maxlength="1"
-                    data-x={x}
-                    data-y={y}
-                    class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
-                    class:cursor-text={!isMobileDevice}
-                    class:revealed={revealedCells.has(`${x},${y}`)}
-                    style={revealedCells.has(`${x},${y}`)
-                      ? "color: #FF3333 !important; font-weight: bold !important;"
-                      : ""}
-                    bind:value={grid[y][x]}
-                    onkeydown={(e) => handleKeydown(e, x, y)}
-                    onclick={() => handleCellClick(x, y)}
-                    autocomplete="off"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    spellcheck="false"
-                    {...isMobileDevice
-                      ? {
-                          readonly: true,
-                          inputmode: "none",
-                          tabindex: "-1",
-                        }
-                      : {}}
+                      type="text"
+                      maxlength="1"
+                      data-x={x}
+                      data-y={y}
+                      class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none"
+                      class:cursor-text={!isMobileDevice}
+                      class:revealed={revealedCells.has(`${x},${y}`)}
+                      style={revealedCells.has(`${x},${y}`)
+                        ? "color: #FF3333 !important; font-weight: bold !important;"
+                        : ""}
+                      bind:value={grid[y][x]}
+                      onkeydown={(e) => handleKeydown(e, x, y)}
+                      onclick={() => handleCellClick(x, y)}
+                      autocomplete="off"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      spellcheck="false"
+                      {...isMobileDevice
+                        ? {
+                            readonly: true,
+                            inputmode: "none",
+                            tabindex: "-1",
+                          }
+                        : {}}
                   />
                 {/if}
               {/if}
