@@ -1169,7 +1169,7 @@
 
       <!-- Remove the background image and instead use a transparent background -->
       <div
-        class="absolute inset-0 grid p-3"
+        class="absolute inset-0 grid"
         style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px; background-color: #F3F4F6;"
       ></div>
       <!-- <div 
