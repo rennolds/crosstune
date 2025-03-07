@@ -8,10 +8,12 @@
 
   // Modify the click handler to prevent event propagation issues
   function handleClickOutside(event) {
-    if (!isMobileDevice) {
+    // Only process clicks outside the menu AND outside the menu button
+    if (!isMobileDevice && isOpen) {
+      // Check for the menu-button class or data attribute to identify the button
       const menu = document.querySelector('.slide-menu');
-      // Check if click is outside menu but don't check for menu button
-      if (isOpen && menu && !menu.contains(event.target)) {
+      const menuButton = document.querySelector('[aria-label="Menu"]');
+      if (menu && !menu.contains(event.target) && menuButton && !menuButton.contains(event.target)) {
         onClose();
       }
     }
@@ -19,8 +21,9 @@
 
   $effect(() => {
     if (typeof document !== 'undefined') {
-      document.addEventListener('click', handleClickOutside);
-      return () => document.removeEventListener('click', handleClickOutside);
+      // Use mousedown instead of click for better mobile experience
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
     }
   });
 </script>
