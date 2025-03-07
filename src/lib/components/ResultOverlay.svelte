@@ -95,7 +95,7 @@
         class="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
         aria-label="Close"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
@@ -117,16 +117,30 @@
       </div>
       
       <p class="text-sm text-white">
-        Missed yesterday? Visit the <a href="/archives" class="text-blue-500 hover:underline">archive</a>
+        Missed yesterday? Visit the <a href="/archives" class="text-blue-500 hover:underline">archive</a>.
       </p>
       
       <div class="flex flex-col gap-3 w-full text-white">
         <button class="w-3/4 mx-auto bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-          PLAY SPOTLE
+          <a 
+              href="https://spotle.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3 transition-colors text-center"
+            >
+              PLAY SPOTLE
+          </a>
         </button>
         
         <button class="w-3/4 mx-auto bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-          PLAY HARMONIES
+          <a 
+              href="https://harmonies.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3 transition-colors text-center"
+          >
+              PLAY HARMONIES
+          </a>
         </button>
       </div>
     </div>
