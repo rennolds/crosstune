@@ -1156,7 +1156,7 @@
 <SoundCloudManager {words} />
 
 <div
-  class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-4xl  mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100"
+  class="flex flex-col top-50 md:flex-row w-full md:max-w-4xl  mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100"
 >
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
