@@ -1201,7 +1201,7 @@
                 ? 'background-color: transparent;'
                 : isCellHighlighted(x, y)?.type === 'focused'
                   ? `background-color: ${isCellHighlighted(x, y).color};
-                    border: 1.2px solid black;`
+                    border: 0.5px solid black;`
                   : isCellHighlighted(x, y)?.type === 'active'
                     ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, 0.75)};
                       border: 0.5px solid black;`
