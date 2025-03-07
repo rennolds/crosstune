@@ -1,67 +1,74 @@
 <script>
   import crosswords from "$lib/data/crosswords.json";
-  import MobileKeyboard from './MobileKeyboard.svelte';
-  import MobileClue from './MobileClue.svelte';
-  import ResultOverlay from './ResultOverlay.svelte';
+  import MobileKeyboard from "./MobileKeyboard.svelte";
+  import MobileClue from "./MobileClue.svelte";
+  import ResultOverlay from "./ResultOverlay.svelte";
   import SoundCloudManager from "./SoundCloudManager.svelte";
-  import VinylRecord from './VinylRecord.svelte';
+  import VinylRecord from "./VinylRecord.svelte";
 
-  import { 
+  import {
     getIsCorrect,
     setIsCorrect,
     getSeconds,
     setSeconds,
-    resetTimer
-  } from '$lib/stores/game.svelte.js';
+    resetTimer,
+  } from "$lib/stores/game.svelte.js";
 
-  import { 
-    loadGridState, 
+  import {
+    loadGridState,
     saveGridState,
     loadTimerState,
     saveTimerState,
     saveRevealedCells,
-    loadRevealedCells
-  } from '$lib/utils/storage';
+    loadRevealedCells,
+  } from "$lib/utils/storage";
 
-  // New props for archive mode 
-  let { puzzle: customPuzzle = null, isArchiveMode = false, selectedDate = null, onSetRevealFunctions = null } = $props();
+  // New props for archive mode
+  let {
+    puzzle: customPuzzle = null,
+    isArchiveMode = false,
+    selectedDate = null,
+    onSetRevealFunctions = null,
+  } = $props();
 
   let isMobileDevice = $state(false);
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioCtx = new AudioContext();
 
   $effect(() => {
-    isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
-    
+    isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
+
     // Listen for changes in screen size
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    const handler = (e) => isMobileDevice = e.matches;
-    mediaQuery.addEventListener('change', handler);
-    
-    return () => mediaQuery.removeEventListener('change', handler);
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handler = (e) => (isMobileDevice = e.matches);
+    mediaQuery.addEventListener("change", handler);
+
+    return () => mediaQuery.removeEventListener("change", handler);
   });
 
   // Function to get current East Coast date in YYYY-MM-DD format
   function getEastCoastDate() {
     const date = new Date();
     // Convert to Eastern Time (GMT-5)
-    const eastCoastDate = new Date(date.toLocaleString('en-US', {
-      timeZone: 'America/New_York'
-    }));
-    
-    return eastCoastDate.toISOString().split('T')[0];
+    const eastCoastDate = new Date(
+      date.toLocaleString("en-US", {
+        timeZone: "America/New_York",
+      })
+    );
+
+    return eastCoastDate.toISOString().split("T")[0];
   }
 
   // Get today's puzzle or fall back to the first available puzzle
   function getTodaysPuzzle() {
     const todayDate = getEastCoastDate();
     const puzzleDates = Object.keys(crosswords);
-    
+
     // Try to get today's puzzle
     if (crosswords[todayDate]) {
       return crosswords[todayDate];
     }
-    
+
     // Fall back to first available puzzle
     const firstAvailableDate = puzzleDates.sort()[0];
     return crosswords[firstAvailableDate];
@@ -70,7 +77,6 @@
   // Get puzzle - prioritize customPuzzle if provided (for archive mode)
   const puzzle = customPuzzle || getTodaysPuzzle();
   const { size, words } = puzzle;
-
 
   let revealedCells = $state(new Set());
   // Create grid and message state
@@ -123,7 +129,7 @@
   let currentAudio = $state(null);
   let isPlaying = $state(false);
 
-    // Generate word numbers and organize clues
+  // Generate word numbers and organize clues
   let wordNumbers = $state(new Map());
   let currentNumber = 1;
 
@@ -134,89 +140,93 @@
   // Map to track which cells should be spaces
   let spaceCells = $state(new Map());
 
-// First mark spaces in all words
-words.forEach((word) => {
-  [...word.word].forEach((char, index) => {
-    if (char === " ") {
-      const x = word.direction === "across" ? word.startX + index : word.startX;
-      const y = word.direction === "across" ? word.startY : word.startY + index;
-      spaceCells.set(`${x},${y}`, true);
-    }
-  });
-});
-
-// Find all starting positions and sort them
-const startPositions = words.map(word => ({
-  x: word.startX,
-  y: word.startY
-}));
-
-// Remove duplicates and sort by position (top-to-bottom, left-to-right)
-const uniquePositions = Array.from(new Set(startPositions.map(pos => `${pos.x},${pos.y}`)))
-  .map(pos => {
-    const [x, y] = pos.split(',').map(Number);
-    return { x, y };
-  })
-  .sort((a, b) => {
-    if (a.y === b.y) {
-      return a.x - b.x;
-    }
-    return a.y - b.y;
+  // First mark spaces in all words
+  words.forEach((word) => {
+    [...word.word].forEach((char, index) => {
+      if (char === " ") {
+        const x =
+          word.direction === "across" ? word.startX + index : word.startX;
+        const y =
+          word.direction === "across" ? word.startY : word.startY + index;
+        spaceCells.set(`${x},${y}`, true);
+      }
+    });
   });
 
-// Assign numbers to positions
-uniquePositions.forEach(pos => {
-  wordNumbers.set(`${pos.x},${pos.y}`, currentNumber++);
-});
+  // Find all starting positions and sort them
+  const startPositions = words.map((word) => ({
+    x: word.startX,
+    y: word.startY,
+  }));
+
+  // Remove duplicates and sort by position (top-to-bottom, left-to-right)
+  const uniquePositions = Array.from(
+    new Set(startPositions.map((pos) => `${pos.x},${pos.y}`))
+  )
+    .map((pos) => {
+      const [x, y] = pos.split(",").map(Number);
+      return { x, y };
+    })
+    .sort((a, b) => {
+      if (a.y === b.y) {
+        return a.x - b.x;
+      }
+      return a.y - b.y;
+    });
+
+  // Assign numbers to positions
+  uniquePositions.forEach((pos) => {
+    wordNumbers.set(`${pos.x},${pos.y}`, currentNumber++);
+  });
 
   function convertTimestampToMs(timestamp) {
-    console.log('in here', timestamp);
-    const [minutes, seconds] = timestamp.split(':').map(Number);
-    console.log('output', (minutes * 60 + seconds) * 1000);
+    console.log("in here", timestamp);
+    const [minutes, seconds] = timestamp.split(":").map(Number);
+    console.log("output", (minutes * 60 + seconds) * 1000);
     return (minutes * 60 + seconds) * 1000;
   }
 
-// Now process the words with the new numbering
-words.forEach((word) => {
-  const key = `${word.startX},${word.startY}`;
-  const number = wordNumbers.get(key);
+  // Now process the words with the new numbering
+  words.forEach((word) => {
+    const key = `${word.startX},${word.startY}`;
+    const number = wordNumbers.get(key);
 
-  const clue = {
-    number,
-    word: word.word,
-    audioUrl: word.audioUrl,
-    startAt: word.startAt,
-    textClue: word.textClue,
-    color: word.color,
-    startX: word.startX,
-    startY: word.startY,
-    direction: word.direction,
-    length: word.word.length,
-  };
+    const clue = {
+      number,
+      word: word.word,
+      audioUrl: word.audioUrl,
+      startAt: word.startAt,
+      textClue: word.textClue,
+      color: word.color,
+      startX: word.startX,
+      startY: word.startY,
+      direction: word.direction,
+      length: word.word.length,
+    };
 
-  if (word.direction === "across") {
-    acrossClues.push(clue);
-  } else {
-    downClues.push(clue);
-  }
-});
+    if (word.direction === "across") {
+      acrossClues.push(clue);
+    } else {
+      downClues.push(clue);
+    }
+  });
 
-// Sort clues by number
-acrossClues.sort((a, b) => a.number - b.number);
-downClues.sort((a, b) => a.number - b.number);
+  // Sort clues by number
+  acrossClues.sort((a, b) => a.number - b.number);
+  downClues.sort((a, b) => a.number - b.number);
 
   function findActiveWord() {
-    return words.find(word => {
+    return words.find((word) => {
       const isCorrectWord = word.direction === currentDirection;
-      const isInWordRange = 
-        word.direction === "across" 
-          ? (focusedY === word.startY && 
-             focusedX >= word.startX && 
-             focusedX < word.startX + word.word.length)
-          : (focusedX === word.startX && 
-             focusedY >= word.startY && 
-             focusedY < word.startY + word.word.length);
-      
+      const isInWordRange =
+        word.direction === "across"
+          ? focusedY === word.startY &&
+            focusedX >= word.startX &&
+            focusedX < word.startX + word.word.length
+          : focusedX === word.startX &&
+            focusedY >= word.startY &&
+            focusedY < word.startY + word.word.length;
+
       return isCorrectWord && isInWordRange;
     });
   }
@@ -241,15 +251,19 @@ downClues.sort((a, b) => a.number - b.number);
   }
 
   function getWordColorAtCell(x, y) {
-    const word = words.find(word => {
-      if (word.direction === 'across') {
-        return y === word.startY && 
-               x >= word.startX && 
-               x < word.startX + word.word.length;
+    const word = words.find((word) => {
+      if (word.direction === "across") {
+        return (
+          y === word.startY &&
+          x >= word.startX &&
+          x < word.startX + word.word.length
+        );
       } else {
-        return x === word.startX && 
-               y >= word.startY && 
-               y < word.startY + word.word.length;
+        return (
+          x === word.startX &&
+          y >= word.startY &&
+          y < word.startY + word.word.length
+        );
       }
     });
     return word?.color;
@@ -271,9 +285,11 @@ downClues.sort((a, b) => a.number - b.number);
   // Modified isCellHighlighted function to include color information
   function isCellHighlighted(x, y) {
     if (x === focusedX && y === focusedY) {
-      return { type: 'focused', color: getActiveWordColor() };
+      return { type: "focused", color: getActiveWordColor() };
     }
-    return isCellInActiveWord(x, y) ? { type: 'active', color: getActiveWordColor() } : false;
+    return isCellInActiveWord(x, y)
+      ? { type: "active", color: getActiveWordColor() }
+      : false;
   }
 
   // Helper to check if a cell should be an input cell
@@ -313,7 +329,7 @@ downClues.sort((a, b) => a.number - b.number);
   let currentDirection = $state("across");
 
   $effect(() => {
-    if (typeof document !== 'undefined') {
+    if (typeof document !== "undefined") {
       const handleNavigation = (event) => {
         const { startX, startY, direction } = event.detail;
         focusedX = startX;
@@ -321,9 +337,9 @@ downClues.sort((a, b) => a.number - b.number);
         currentDirection = direction;
       };
 
-      document.addEventListener('navigationrequest', handleNavigation);
+      document.addEventListener("navigationrequest", handleNavigation);
       return () => {
-        document.removeEventListener('navigationrequest', handleNavigation);
+        document.removeEventListener("navigationrequest", handleNavigation);
       };
     }
   });
@@ -332,18 +348,20 @@ downClues.sort((a, b) => a.number - b.number);
     // If clicking the currently focused cell, only toggle direction if it's an intersection
     if (x === focusedX && y === focusedY) {
       // Find words containing this cell
-      let acrossWord = words.find(word => 
-        word.direction === 'across' &&
-        y === word.startY &&
-        x >= word.startX &&
-        x < word.startX + word.word.length
+      let acrossWord = words.find(
+        (word) =>
+          word.direction === "across" &&
+          y === word.startY &&
+          x >= word.startX &&
+          x < word.startX + word.word.length
       );
 
-      let downWord = words.find(word => 
-        word.direction === 'down' &&
-        x === word.startX &&
-        y >= word.startY &&
-        y < word.startY + word.word.length
+      let downWord = words.find(
+        (word) =>
+          word.direction === "down" &&
+          x === word.startX &&
+          y >= word.startY &&
+          y < word.startY + word.word.length
       );
 
       // Only toggle direction if this is an intersection point
@@ -351,7 +369,7 @@ downClues.sort((a, b) => a.number - b.number);
         if (isPlaying) {
           stopAudio();
         }
-        currentDirection = currentDirection === 'across' ? 'down' : 'across';
+        currentDirection = currentDirection === "across" ? "down" : "across";
       }
       return;
     }
@@ -359,32 +377,32 @@ downClues.sort((a, b) => a.number - b.number);
     const isInCurrentWord = isCellInActiveWord(x, y);
 
     // Find any words that contain this cell
-    let acrossWord = words.find(word => 
-      word.direction === 'across' &&
-      y === word.startY &&
-      x >= word.startX &&
-      x < word.startX + word.word.length
+    let acrossWord = words.find(
+      (word) =>
+        word.direction === "across" &&
+        y === word.startY &&
+        x >= word.startX &&
+        x < word.startX + word.word.length
     );
 
-    let downWord = words.find(word => 
-      word.direction === 'down' &&
-      x === word.startX &&
-      y >= word.startY &&
-      y < word.startY + word.word.length
+    let downWord = words.find(
+      (word) =>
+        word.direction === "down" &&
+        x === word.startX &&
+        y >= word.startY &&
+        y < word.startY + word.word.length
     );
 
     if (acrossWord && downWord) {
-      if (currentDirection === 'across' && downWord) {
-        currentDirection = 'down';
-      } else if (currentDirection === 'down' && acrossWord) {
-        currentDirection = 'across';
+      if (currentDirection === "across" && downWord) {
+        currentDirection = "down";
+      } else if (currentDirection === "down" && acrossWord) {
+        currentDirection = "across";
       }
-    } 
-    else if (acrossWord) {
-      currentDirection = 'across';
-    }
-    else if (downWord) {
-      currentDirection = 'down';
+    } else if (acrossWord) {
+      currentDirection = "across";
+    } else if (downWord) {
+      currentDirection = "down";
     }
 
     focusedX = x;
@@ -403,7 +421,7 @@ downClues.sort((a, b) => a.number - b.number);
       return a.startY - b.startY;
     });
 
-    let nextWord = startPositions.find(word => {
+    let nextWord = startPositions.find((word) => {
       if (word.startY === currentY) {
         return word.startX > currentX;
       }
@@ -417,16 +435,19 @@ downClues.sort((a, b) => a.number - b.number);
     return {
       x: nextWord.startX,
       y: nextWord.startY,
-      direction: nextWord.direction
+      direction: nextWord.direction,
     };
   }
-    function moveFocus(newX, newY) {
+  function moveFocus(newX, newY) {
     if (newX < 0 || newY < 0 || newX >= size.width || newY >= size.height) {
       return;
     }
 
-    if (grid[newY][newX] !== null && (spaceCells.has(`${newX},${newY}`) || grid[newY][newX] !== '')) {
-      if (currentDirection === 'across') {
+    if (
+      grid[newY][newX] !== null &&
+      (spaceCells.has(`${newX},${newY}`) || grid[newY][newX] !== "")
+    ) {
+      if (currentDirection === "across") {
         moveFocus(newX + 1, newY);
       } else {
         moveFocus(newX, newY + 1);
@@ -438,7 +459,9 @@ downClues.sort((a, b) => a.number - b.number);
     if (grid[newY][newX] !== null && !spaceCells.has(`${newX},${newY}`)) {
       focusedX = newX;
       focusedY = newY;
-      const input = document.querySelector(`input[data-x="${newX}"][data-y="${newY}"]`);
+      const input = document.querySelector(
+        `input[data-x="${newX}"][data-y="${newY}"]`
+      );
       input?.focus();
     }
   }
@@ -446,30 +469,34 @@ downClues.sort((a, b) => a.number - b.number);
   // Function to find the clue for the current position
   function findActiveClue() {
     // If we don't have a current direction, default to across
-    if (!currentDirection) currentDirection = 'across';
-    
+    if (!currentDirection) currentDirection = "across";
+
     // Find the word at current position
-    const word = words.find(word => {
+    const word = words.find((word) => {
       if (word.direction !== currentDirection) return false;
-      
-      if (word.direction === 'across') {
-        return focusedY === word.startY && 
-               focusedX >= word.startX && 
-               focusedX < word.startX + word.word.length;
+
+      if (word.direction === "across") {
+        return (
+          focusedY === word.startY &&
+          focusedX >= word.startX &&
+          focusedX < word.startX + word.word.length
+        );
       } else {
-        return focusedX === word.startX && 
-               focusedY >= word.startY && 
-               focusedY < word.startY + word.word.length;
+        return (
+          focusedX === word.startX &&
+          focusedY >= word.startY &&
+          focusedY < word.startY + word.word.length
+        );
       }
     });
 
     if (!word) return null;
 
     const number = wordNumbers.get(`${word.startX},${word.startY}`);
-    
+
     return {
       ...word,
-      number
+      number,
     };
   }
 
@@ -480,7 +507,9 @@ downClues.sort((a, b) => a.number - b.number);
   $effect(() => {
     if (!activeClue) {
       // Find clue #1 (will be in either across or down clues)
-      const firstClue = [...acrossClues, ...downClues].find(clue => clue.number === 1);
+      const firstClue = [...acrossClues, ...downClues].find(
+        (clue) => clue.number === 1
+      );
       if (firstClue) {
         focusedX = firstClue.startX;
         focusedY = firstClue.startY;
@@ -489,44 +518,93 @@ downClues.sort((a, b) => a.number - b.number);
     }
   });
 
-
   function findNextWord(currentWord) {
-  // Combine all words and sort them by position
+    // Combine all words and sort them by position
     const allWords = [...words].sort((a, b) => {
       if (a.startY === b.startY) {
         return a.startX - b.startX;
       }
       return a.startY - b.startY;
-  });
+    });
 
-  // Find the index of the current word
-    const currentIndex = allWords.findIndex(word => 
-      word.startX === currentWord.startX && 
-      word.startY === currentWord.startY && 
-      word.direction === currentWord.direction
+    // Find the index of the current word
+    const currentIndex = allWords.findIndex(
+      (word) =>
+        word.startX === currentWord.startX &&
+        word.startY === currentWord.startY &&
+        word.direction === currentWord.direction
     );
 
-  // Get the next word, or wrap around to the first word
+    // Get the next word, or wrap around to the first word
     const nextWord = allWords[(currentIndex + 1) % allWords.length];
-  
+
     return nextWord;
-}
-
-// Add this function to check if we're at the end of a word
-function isEndOfWord(x, y) {
-  const activeWord = findActiveWord();
-  if (!activeWord) return false;
-
-  if (activeWord.direction === 'across') {
-    return x === activeWord.startX + activeWord.word.length - 1 && y === activeWord.startY;
-  } else {
-    return x === activeWord.startX && y === activeWord.startY + activeWord.word.length - 1;
   }
-}
 
-function findNextUnfilledWord(currentX, currentY, currentDirection) {
-  // First look through all words to evaluate their fill state
-  const wordStates = words.map(word => {
+  // Add this function to check if we're at the end of a word
+  function isEndOfWord(x, y) {
+    const activeWord = findActiveWord();
+    if (!activeWord) return false;
+
+    if (activeWord.direction === "across") {
+      return (
+        x === activeWord.startX + activeWord.word.length - 1 &&
+        y === activeWord.startY
+      );
+    } else {
+      return (
+        x === activeWord.startX &&
+        y === activeWord.startY + activeWord.word.length - 1
+      );
+    }
+  }
+
+  function findNextUnfilledWord(currentX, currentY, currentDirection) {
+    // First look through all words to evaluate their fill state
+    const wordStates = words.map((word) => {
+      const letters = [];
+      if (word.direction === "across") {
+        for (let x = word.startX; x < word.startX + word.word.length; x++) {
+          letters.push(grid[word.startY][x]);
+        }
+      } else {
+        for (let y = word.startY; y < word.startY + word.word.length; y++) {
+          letters.push(grid[y][word.startX]);
+        }
+      }
+      return {
+        ...word,
+        isFilled: letters.every((letter) => letter !== "" && letter !== null),
+      };
+    });
+
+    // Find current word index
+    const currentWordIndex = wordStates.findIndex((word) => {
+      const isInWordRange =
+        word.direction === currentDirection &&
+        (word.direction === "across"
+          ? currentY === word.startY &&
+            currentX >= word.startX &&
+            currentX < word.startX + word.word.length
+          : currentX === word.startX &&
+            currentY >= word.startY &&
+            currentY < word.startY + word.word.length);
+      return isInWordRange;
+    });
+
+    // Look for next unfilled word, starting after current word
+    for (let i = 1; i <= wordStates.length; i++) {
+      const index = (currentWordIndex + i) % wordStates.length;
+      if (!wordStates[index].isFilled) {
+        return wordStates[index];
+      }
+    }
+
+    // If no unfilled word found, return null
+    return null;
+  }
+
+  function isWordComplete(word) {
     const letters = [];
     if (word.direction === "across") {
       for (let x = word.startX; x < word.startX + word.word.length; x++) {
@@ -537,87 +615,81 @@ function findNextUnfilledWord(currentX, currentY, currentDirection) {
         letters.push(grid[y][word.startX]);
       }
     }
-    return {
-      ...word,
-      isFilled: letters.every(letter => letter !== '' && letter !== null)
-    };
+    return letters.every((letter) => letter !== "" && letter !== null);
+  }
+
+  // Notify parent component about the reveal functions
+  $effect(() => {
+    if (onSetRevealFunctions) {
+      onSetRevealFunctions({
+        revealSquare,
+        revealWord,
+        revealPuzzle,
+      });
+    }
   });
 
-  // Find current word index
-  const currentWordIndex = wordStates.findIndex(word => {
-    const isInWordRange = word.direction === currentDirection &&
-      (word.direction === "across" 
-        ? (currentY === word.startY && 
-           currentX >= word.startX && 
-           currentX < word.startX + word.word.length)
-        : (currentX === word.startX && 
-           currentY >= word.startY && 
-           currentY < word.startY + word.word.length));
-    return isInWordRange;
-  });
+  // Function to reveal the currently focused cell
+  function revealSquare() {
+    if (!getIsCorrect()) {
+      const x = focusedX;
+      const y = focusedY;
+      const cellKey = `${x},${y}`;
 
-  // Look for next unfilled word, starting after current word
-  for (let i = 1; i <= wordStates.length; i++) {
-    const index = (currentWordIndex + i) % wordStates.length;
-    if (!wordStates[index].isFilled) {
-      return wordStates[index];
+      // Get the correct letter from the current word
+      const activeWord = findActiveWord();
+      if (activeWord) {
+        const letterIndex =
+          activeWord.direction === "across"
+            ? x - activeWord.startX
+            : y - activeWord.startY;
+
+        // Only proceed if we have a valid letter index
+        if (letterIndex >= 0 && letterIndex < activeWord.word.length) {
+          const correctLetter = activeWord.word[letterIndex];
+
+          // Update the grid with the correct letter
+          grid[y][x] = correctLetter;
+
+          // Mark this cell as revealed (prevent editing)
+          revealedCells = new Set([...revealedCells, cellKey]);
+          console.log("Revealed cells:", [...revealedCells]);
+
+          // Save grid state if not in archive mode
+          if (!isArchiveMode) {
+            saveRevealedCells(revealedCells);
+            saveGridState(grid);
+          }
+        }
+      }
     }
   }
 
-  // If no unfilled word found, return null
-  return null;
-}
+  // Function to reveal the entire current word
+  function revealWord() {
+    if (!getIsCorrect()) {
+      const activeWord = findActiveWord();
+      if (activeWord) {
+        for (let i = 0; i < activeWord.word.length; i++) {
+          const x =
+            activeWord.direction === "across"
+              ? activeWord.startX + i
+              : activeWord.startX;
+          const y =
+            activeWord.direction === "down"
+              ? activeWord.startY + i
+              : activeWord.startY;
 
-function isWordComplete(word) {
-  const letters = [];
-  if (word.direction === "across") {
-    for (let x = word.startX; x < word.startX + word.word.length; x++) {
-      letters.push(grid[word.startY][x]);
-    }
-  } else {
-    for (let y = word.startY; y < word.startY + word.word.length; y++) {
-      letters.push(grid[y][word.startX]);
-    }
-  }
-  return letters.every(letter => letter !== '' && letter !== null);
-}
+          // Skip spaces
+          if (activeWord.word[i] === " ") continue;
 
-// Notify parent component about the reveal functions
-$effect(() => {
-  if (onSetRevealFunctions) {
-    onSetRevealFunctions({
-      revealSquare,
-      revealWord,
-      revealPuzzle
-    });
-  }
-});
-  
-// Function to reveal the currently focused cell
-function revealSquare() {
-  if (!getIsCorrect()) {
-    const x = focusedX;
-    const y = focusedY;
-    const cellKey = `${x},${y}`;
-    
-    // Get the correct letter from the current word
-    const activeWord = findActiveWord();
-    if (activeWord) {
-      const letterIndex = activeWord.direction === 'across' 
-        ? x - activeWord.startX 
-        : y - activeWord.startY;
-      
-      // Only proceed if we have a valid letter index
-      if (letterIndex >= 0 && letterIndex < activeWord.word.length) {
-        const correctLetter = activeWord.word[letterIndex];
-        
-        // Update the grid with the correct letter
-        grid[y][x] = correctLetter;
-        
-        // Mark this cell as revealed (prevent editing)
-        revealedCells = new Set([...revealedCells, cellKey]);
-        console.log("Revealed cells:", [...revealedCells]);
-        
+          // Update grid with correct letter
+          grid[y][x] = activeWord.word[i];
+
+          // Mark as revealed
+          revealedCells = new Set([...revealedCells, `${x},${y}`]);
+        }
+
         // Save grid state if not in archive mode
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
@@ -626,83 +698,57 @@ function revealSquare() {
       }
     }
   }
-}
 
-// Function to reveal the entire current word
-function revealWord() {
-  if (!getIsCorrect()) {
-    const activeWord = findActiveWord();
-    if (activeWord) {
-      for (let i = 0; i < activeWord.word.length; i++) {
-        const x = activeWord.direction === 'across' ? activeWord.startX + i : activeWord.startX;
-        const y = activeWord.direction === 'down' ? activeWord.startY + i : activeWord.startY;
-        
-        // Skip spaces
-        if (activeWord.word[i] === ' ') continue;
-        
-        // Update grid with correct letter
-        grid[y][x] = activeWord.word[i];
-        
-        // Mark as revealed
-        revealedCells = new Set([...revealedCells, `${x},${y}`]);
+  // Function to reveal the entire puzzle
+  function revealPuzzle() {
+    if (!getIsCorrect()) {
+      // Loop through all words and fill in the correct letters
+      for (const word of words) {
+        for (let i = 0; i < word.word.length; i++) {
+          const x = word.direction === "across" ? word.startX + i : word.startX;
+          const y = word.direction === "down" ? word.startY + i : word.startY;
+
+          // Skip spaces
+          if (word.word[i] === " ") continue;
+
+          // Update grid with correct letter
+          grid[y][x] = word.word[i];
+
+          // Mark as revealed
+          revealedCells = new Set([...revealedCells, `${x},${y}`]);
+        }
       }
-      
+
       // Save grid state if not in archive mode
       if (!isArchiveMode) {
         saveRevealedCells(revealedCells);
         saveGridState(grid);
       }
+
+      // Show the win screen since the puzzle is complete
+      setIsCorrect(true);
+      finalTime = getSeconds();
+      showOverlay = true;
     }
   }
-}
 
-// Function to reveal the entire puzzle
-function revealPuzzle() {
-  if (!getIsCorrect()) {
-    // Loop through all words and fill in the correct letters
-    for (const word of words) {
-      for (let i = 0; i < word.word.length; i++) {
-        const x = word.direction === 'across' ? word.startX + i : word.startX;
-        const y = word.direction === 'down' ? word.startY + i : word.startY;
-        
-        // Skip spaces
-        if (word.word[i] === ' ') continue;
-        
-        // Update grid with correct letter
-        grid[y][x] = word.word[i];
-        
-        // Mark as revealed
-        revealedCells = new Set([...revealedCells, `${x},${y}`]);
-      }
-    }
-    
-    // Save grid state if not in archive mode
-    if (!isArchiveMode) {
-      saveRevealedCells(revealedCells);
-      saveGridState(grid);
-    }
-    
-    // Show the win screen since the puzzle is complete
-    setIsCorrect(true);
-    finalTime = getSeconds();
-    showOverlay = true;
-  }
-}
-
-function handleKeydown(event, x, y) {
-
+  function handleKeydown(event, x, y) {
     if (revealedCells.has(`${x},${y}`)) {
-        // Only allow navigation keys for revealed cells
-        console.log('It has the item!')
-        if (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Tab'].includes(event.key)) {
-          // Handle navigation as normal
-          console.log('continue as normal')
-        } else {
-          // Prevent modification of revealed cells
-          console.log('abandon ship')
-          event.preventDefault();
-          return;
-        }
+      // Only allow navigation keys for revealed cells
+      console.log("It has the item!");
+      if (
+        ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Tab"].includes(
+          event.key
+        )
+      ) {
+        // Handle navigation as normal
+        console.log("continue as normal");
+      } else {
+        // Prevent modification of revealed cells
+        console.log("abandon ship");
+        event.preventDefault();
+        return;
+      }
     }
     if (spaceCells.has(`${x},${y}`)) {
       event.preventDefault();
@@ -725,8 +771,8 @@ function handleKeydown(event, x, y) {
     let nextWord = findNextUnfilledWord(x, y, currentDirection);
 
     switch (event.key) {
-      case 'Enter':
-      case 'Tab':
+      case "Enter":
+      case "Tab":
         event.preventDefault();
         if (nextWord) {
           if (isPlaying) {
@@ -741,79 +787,95 @@ function handleKeydown(event, x, y) {
           nextInput?.focus();
         }
         break;
-      case 'ArrowRight':
+      case "ArrowRight":
         event.preventDefault();
-        currentDirection = 'across';
+        currentDirection = "across";
         moveFocus(x + 1, y);
         break;
-      case 'ArrowLeft':
+      case "ArrowLeft":
         event.preventDefault();
-        currentDirection = 'across';
+        currentDirection = "across";
         moveFocus(x - 1, y);
         break;
-      case 'ArrowUp':
+      case "ArrowUp":
         event.preventDefault();
-        currentDirection = 'down';
+        currentDirection = "down";
         moveFocus(x, y - 1);
         break;
-      case 'ArrowDown':
+      case "ArrowDown":
         event.preventDefault();
-        currentDirection = 'down';
+        currentDirection = "down";
         moveFocus(x, y + 1);
         break;
-      case ' ':
-      case 'Space':
+      case " ":
+      case "Space":
         event.preventDefault();
-        if (currentDirection === 'across') {
+        if (currentDirection === "across") {
           moveFocus(x + 1, y);
         } else {
           moveFocus(x, y + 1);
         }
         break;
-        case 'Backspace':
-          event.preventDefault();
-          // If current cell has content, clear it and stay there
-          if (grid[y][x]) {
-            grid[y][x] = '';
-          } 
-          // Otherwise move back and clear that cell
-          else {
-            if (currentDirection === 'across') {
-              let newX = x - 1;
-              while (newX >= 0) {
-                // Find the first non-space, non-revealed input cell going backwards
-                if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`) && !revealedCells.has(`${newX},${y}`)) {
-                  grid[y][newX] = '';
-                  moveFocus(newX, y);
-                  break;
-                } else if (grid[y][newX] !== null && !spaceCells.has(`${newX},${y}`) && revealedCells.has(`${newX},${y}`)) {
-                  // Skip revealed cells but keep moving backwards
-                  newX--;
-                  continue;
-                }
+      case "Backspace":
+        event.preventDefault();
+        // If current cell has content, clear it and stay there
+        if (grid[y][x]) {
+          grid[y][x] = "";
+        }
+        // Otherwise move back and clear that cell
+        else {
+          if (currentDirection === "across") {
+            let newX = x - 1;
+            while (newX >= 0) {
+              // Find the first non-space, non-revealed input cell going backwards
+              if (
+                grid[y][newX] !== null &&
+                !spaceCells.has(`${newX},${y}`) &&
+                !revealedCells.has(`${newX},${y}`)
+              ) {
+                grid[y][newX] = "";
+                moveFocus(newX, y);
+                break;
+              } else if (
+                grid[y][newX] !== null &&
+                !spaceCells.has(`${newX},${y}`) &&
+                revealedCells.has(`${newX},${y}`)
+              ) {
+                // Skip revealed cells but keep moving backwards
                 newX--;
+                continue;
               }
-            } else {
-              let newY = y - 1;
-              while (newY >= 0) {
-                // Find the first non-space, non-revealed input cell going up
-                if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`) && !revealedCells.has(`${x},${newY}`)) {
-                  grid[newY][x] = '';
-                  moveFocus(x, newY);
-                  break;
-                } else if (grid[newY][x] !== null && !spaceCells.has(`${x},${newY}`) && revealedCells.has(`${x},${newY}`)) {
-                  // Skip revealed cells but keep moving upwards
-                  newY--;
-                  continue;
-                }
+              newX--;
+            }
+          } else {
+            let newY = y - 1;
+            while (newY >= 0) {
+              // Find the first non-space, non-revealed input cell going up
+              if (
+                grid[newY][x] !== null &&
+                !spaceCells.has(`${x},${newY}`) &&
+                !revealedCells.has(`${x},${newY}`)
+              ) {
+                grid[newY][x] = "";
+                moveFocus(x, newY);
+                break;
+              } else if (
+                grid[newY][x] !== null &&
+                !spaceCells.has(`${x},${newY}`) &&
+                revealedCells.has(`${x},${newY}`)
+              ) {
+                // Skip revealed cells but keep moving upwards
                 newY--;
+                continue;
               }
+              newY--;
             }
           }
-          if (!isArchiveMode) {
-            saveRevealedCells(revealedCells);
-            saveGridState(grid);
-          }
+        }
+        if (!isArchiveMode) {
+          saveRevealedCells(revealedCells);
+          saveGridState(grid);
+        }
         break;
       default:
         if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
@@ -833,17 +895,27 @@ function handleKeydown(event, x, y) {
             function isWordComplete(word) {
               const letters = [];
               if (word.direction === "across") {
-                for (let x = word.startX; x < word.startX + word.word.length; x++) {
+                for (
+                  let x = word.startX;
+                  x < word.startX + word.word.length;
+                  x++
+                ) {
                   letters.push(grid[word.startY][x]);
                 }
               } else {
-                for (let y = word.startY; y < word.startY + word.word.length; y++) {
+                for (
+                  let y = word.startY;
+                  y < word.startY + word.word.length;
+                  y++
+                ) {
                   letters.push(grid[y][word.startX]);
                 }
               }
-              return letters.every(letter => letter !== '' && letter !== null);
+              return letters.every(
+                (letter) => letter !== "" && letter !== null
+              );
             }
-            
+
             // Check if the current word is now complete
             if (currentWord && isWordComplete(currentWord)) {
               // Find and move to the next word
@@ -862,7 +934,7 @@ function handleKeydown(event, x, y) {
               nextInput?.focus();
             } else {
               // Regular movement within the word
-              if (currentDirection === 'across') {
+              if (currentDirection === "across") {
                 moveFocus(x + 1, y);
               } else {
                 moveFocus(x, y + 1);
@@ -889,11 +961,12 @@ function handleKeydown(event, x, y) {
 
   // Add new function to handle virtual keyboard input
   function handleVirtualKeyPress(key) {
-
     // Check if current cell is revealed
     if (revealedCells.has(`${focusedX},${focusedY}`)) {
       // Only allow navigation keys
-      if (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Tab'].includes(key)) {
+      if (
+        ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Tab"].includes(key)
+      ) {
         // Handle navigation as normal
       } else {
         // Prevent modification of revealed cells
@@ -901,47 +974,55 @@ function handleKeydown(event, x, y) {
       }
     }
     // For backspace, we need to handle it specially since it's an action rather than a character input
-    if (key === 'Backspace') {
-        // If current cell has content, clear it
-        if (grid[focusedY][focusedX]) {
-            grid[focusedY][focusedX] = '';
-        } 
-        // Otherwise move back and clear that cell
-        else {
-            if (currentDirection === 'across') {
-                let newX = focusedX - 1;
-                while (newX >= 0) {
-                    // Find the first non-space input cell going backwards
-                    if (grid[focusedY][newX] !== null && !spaceCells.has(`${newX},${focusedY}`)) {
-                        grid[focusedY][newX] = '';
-                        moveFocus(newX, focusedY);
-                        break;
-                    }
-                    newX--;
-                }
-            } else {
-                let newY = focusedY - 1;
-                while (newY >= 0) {
-                    // Find the first non-space input cell going up
-                    if (grid[newY][focusedX] !== null && !spaceCells.has(`${focusedX},${newY}`)) {
-                        grid[newY][focusedX] = '';
-                        moveFocus(focusedX, newY);
-                        break;
-                    }
-                    newY--;
-                }
+    if (key === "Backspace") {
+      // If current cell has content, clear it
+      if (grid[focusedY][focusedX]) {
+        grid[focusedY][focusedX] = "";
+      }
+      // Otherwise move back and clear that cell
+      else {
+        if (currentDirection === "across") {
+          let newX = focusedX - 1;
+          while (newX >= 0) {
+            // Find the first non-space input cell going backwards
+            if (
+              grid[focusedY][newX] !== null &&
+              !spaceCells.has(`${newX},${focusedY}`)
+            ) {
+              grid[focusedY][newX] = "";
+              moveFocus(newX, focusedY);
+              break;
             }
+            newX--;
+          }
+        } else {
+          let newY = focusedY - 1;
+          while (newY >= 0) {
+            // Find the first non-space input cell going up
+            if (
+              grid[newY][focusedX] !== null &&
+              !spaceCells.has(`${focusedX},${newY}`)
+            ) {
+              grid[newY][focusedX] = "";
+              moveFocus(focusedX, newY);
+              break;
+            }
+            newY--;
+          }
         }
-        saveGridState(grid);
-        saveRevealedCells(revealedCells);
-        return;
+      }
+      saveGridState(grid);
+      saveRevealedCells(revealedCells);
+      return;
     }
 
     // Create a synthetic event for other keys
     const syntheticEvent = {
-        key,
-        preventDefault: () => {},
-        target: document.querySelector(`input[data-x="${focusedX}"][data-y="${focusedY}"]`)
+      key,
+      preventDefault: () => {},
+      target: document.querySelector(
+        `input[data-x="${focusedX}"][data-y="${focusedY}"]`
+      ),
     };
     handleKeydown(syntheticEvent, focusedX, focusedY);
   }
@@ -951,7 +1032,7 @@ function handleKeydown(event, x, y) {
   async function playSC(clue) {
     console.log(clue);
   }
-  
+
   async function playClue(clue) {
     try {
       // First, highlight the word by setting direction and focus
@@ -960,15 +1041,15 @@ function handleKeydown(event, x, y) {
       focusedY = clue.startY;
 
       const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
-    
+
       // Find the iframe for this specific word
       const iframe = document.getElementById(widgetId);
-      
+
       if (!iframe) {
         console.error(`No SoundCloud widget found for coordinates ${widgetId}`);
         return;
       }
-      console.log('got widget');
+      console.log("got widget");
 
       // If this clue is already playing, pause it
       if (playingClue === clue && isPlaying && currentAudio) {
@@ -1032,14 +1113,14 @@ function handleKeydown(event, x, y) {
 
   $effect(() => {
     if (!grid) return;
-    
-    const hasEmptyCells = grid.some((row, y) => 
+
+    const hasEmptyCells = grid.some((row, y) =>
       row.some((cell, x) => cell === "" && !spaceCells.has(`${x},${y}`))
     );
-    
+
     if (!hasEmptyCells) {
       const allCorrect = words.every(checkWord);
-      
+
       if (allCorrect) {
         setIsCorrect(true);
         finalTime = getSeconds();
@@ -1057,7 +1138,6 @@ function handleKeydown(event, x, y) {
     }
   });
 
-
   let backgroundImageError = $state(false);
 
   function handleBackgroundImageError() {
@@ -1071,28 +1151,27 @@ function handleKeydown(event, x, y) {
       img.src = puzzle.backgroundImage;
     }
   });
-
-
 </script>
 
+<SoundCloudManager {words} />
 
-<SoundCloudManager 
-  words={words}
-/>
-
-<div class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100">
+<div
+  class="flex flex-col top-50 md:flex-row gap-4 w-full md:max-w-5xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100"
+>
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
     <!-- Grid container -->
-    <div class="w-full relative"  style="aspect-ratio: {size.width}/{size.height};">
+    <div
+      class="w-full relative"
+      style="aspect-ratio: {size.width}/{size.height};"
+    >
       <VinylRecord {isPlaying} />
-      
+
       <!-- Remove the background image and instead use a transparent background -->
-      <div 
+      <div
         class="absolute inset-0 grid p-2"
         style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px; background-color: #F3F4F6;"
-      >
-      </div>
+      ></div>
       <!-- <div 
       class="absolute inset-0 bg-black"
       style="
@@ -1109,74 +1188,83 @@ function handleKeydown(event, x, y) {
       "
       > </div> -->
       <div
-      <div
+        <div
         class="absolute inset-0 grid p-2"
         style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
       >
-      {#each grid as row, y}
-        {#each row as cell, x}
-          <div
-            class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
-            style="
-              {cell === null 
-                ? 'background-color: transparent;' 
+        {#each grid as row, y}
+          {#each row as cell, x}
+            <div
+              class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
+              style="
+              {cell === null
+                ? 'background-color: transparent;'
                 : isCellHighlighted(x, y)?.type === 'focused'
                   ? `background-color: ${isCellHighlighted(x, y).color};
                     border: 0.5px solid black;`
                   : isCellHighlighted(x, y)?.type === 'active'
-                    ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, .75)};
+                    ? `background-color: ${addAlpha(isCellHighlighted(x, y).color, 0.75)};
                       border: 0.5px solid black;`
-                    : 'background-color: #FFF; border: 0.5px solid black;'
-              }"
-          >
-          {#if cell !== null}
-            {#if wordNumbers.has(`${x},${y}`)}
-              <span class="absolute text-xs top-0 left-0.5">
-                {wordNumbers.get(`${x},${y}`)}
-              </span>
-            {/if}
-            {#if spaceCells.has(`${x},${y}`)}
-              <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
-                ␣
-              </div>
-            {:else}
-            <input
-              type="text"
-              maxlength="1"
-              data-x={x}
-              data-y={y} 
-              class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
-              class:cursor-text={!isMobileDevice}
-              class:revealed={revealedCells.has(`${x},${y}`)}
-              style={revealedCells.has(`${x},${y}`) ? "color: #FF3333 !important; font-weight: bold !important;" : ""}
-              bind:value={grid[y][x]}
-              onkeydown={(e) => handleKeydown(e, x, y)}
-              onclick={() => handleCellClick(x, y)}
-              autocomplete="off"
-              autocorrect="off"
-              autocapitalize="off"
-              spellcheck="false"
-              {...(isMobileDevice ? {
-                readonly: true,
-                inputmode: "none",
-                tabindex: "-1"
-              } : {})}
-            />
-            {/if}
-          {/if}
-          </div>
+                    : 'background-color: #FFF; border: 0.5px solid black;'}"
+            >
+              {#if cell !== null}
+                {#if wordNumbers.has(`${x},${y}`)}
+                  <span class="absolute text-xs top-0 left-0.5">
+                    {wordNumbers.get(`${x},${y}`)}
+                  </span>
+                {/if}
+                {#if spaceCells.has(`${x},${y}`)}
+                  <div
+                    class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400"
+                  >
+                    ␣
+                  </div>
+                {:else}
+                  <input
+                    type="text"
+                    maxlength="1"
+                    data-x={x}
+                    data-y={y}
+                    class="w-full h-full text-center uppercase font-bold text-lg focus:outline-none bg-transparent touch-none"
+                    class:cursor-text={!isMobileDevice}
+                    class:revealed={revealedCells.has(`${x},${y}`)}
+                    style={revealedCells.has(`${x},${y}`)
+                      ? "color: #FF3333 !important; font-weight: bold !important;"
+                      : ""}
+                    bind:value={grid[y][x]}
+                    onkeydown={(e) => handleKeydown(e, x, y)}
+                    onclick={() => handleCellClick(x, y)}
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    {...isMobileDevice
+                      ? {
+                          readonly: true,
+                          inputmode: "none",
+                          tabindex: "-1",
+                        }
+                      : {}}
+                  />
+                {/if}
+              {/if}
+            </div>
+          {/each}
         {/each}
-      {/each}
       </div>
-
     </div>
     <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
   </div>
 
-  
-
   {#if isMobileDevice}
-    <MobileClue clue={activeClue} onPlay={playClue} {isPlaying} playingClue={playingClue} onStopAudio={stopAudio} words={words}/>
+    <MobileClue
+      clue={activeClue}
+      onPlay={playClue}
+      {isPlaying}
+      {playingClue}
+      onStopAudio={stopAudio}
+      {words}
+    />
   {:else}
     <!-- Clue list container -->
     <div class="w-full md:w-64">
@@ -1185,7 +1273,7 @@ function handleKeydown(event, x, y) {
         <h2 class="text-xl font-bold mb-2">Across</h2>
         <div class="space-y-2">
           {#each acrossClues as clue}
-            <div 
+            <div
               class="flex items-center gap-2 px-2 py-1 rounded"
               style="background-color: {clue.color};"
             >
@@ -1197,9 +1285,33 @@ function handleKeydown(event, x, y) {
                 disabled={isPlaying && playingClue !== clue}
               >
                 {#if isPlaying && playingClue === clue}
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"/></g></svg>  
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 20 20"
+                    height="40px"
+                    viewBox="0 0 20 20"
+                    width="40px"
+                    fill="#000000"
+                    ><g><rect fill="none" height="20" width="20" /></g><g
+                      ><path
+                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                      /></g
+                    ></svg
+                  >
                 {:else}
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"/></g></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 20 20"
+                    height="40px"
+                    viewBox="0 0 20 20"
+                    width="40px"
+                    fill="#000000"
+                    ><g><rect fill="none" height="20" width="20" /></g><g
+                      ><path
+                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                      /></g
+                    ></svg
+                  >
                 {/if}
               </button>
             </div>
@@ -1212,7 +1324,7 @@ function handleKeydown(event, x, y) {
         <h2 class="text-xl font-bold mb-2">Down</h2>
         <div class="space-y-2">
           {#each downClues as clue}
-            <div 
+            <div
               class="flex items-center gap-2 px-2 py-1 rounded"
               style="background-color: {clue.color};"
             >
@@ -1224,9 +1336,33 @@ function handleKeydown(event, x, y) {
                 disabled={isPlaying && playingClue !== clue}
               >
                 {#if isPlaying && playingClue === clue}
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"/></g></svg>  
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 20 20"
+                    height="40px"
+                    viewBox="0 0 20 20"
+                    width="40px"
+                    fill="#000000"
+                    ><g><rect fill="none" height="20" width="20" /></g><g
+                      ><path
+                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                      /></g
+                    ></svg
+                  >
                 {:else}
-                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="40px" viewBox="0 0 20 20" width="40px" fill="#000000"><g><rect fill="none" height="20" width="20"/></g><g><path d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"/></g></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    enable-background="new 0 0 20 20"
+                    height="40px"
+                    viewBox="0 0 20 20"
+                    width="40px"
+                    fill="#000000"
+                    ><g><rect fill="none" height="20" width="20" /></g><g
+                      ><path
+                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                      /></g
+                    ></svg
+                  >
                 {/if}
               </button>
             </div>
@@ -1238,13 +1374,12 @@ function handleKeydown(event, x, y) {
 </div>
 
 {#if showOverlay}
-  <ResultOverlay 
+  <ResultOverlay
     time={finalTime}
     isCorrect={getIsCorrect()}
     onClose={handleCloseOverlay}
   />
 {/if}
-
 
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile */
@@ -1261,7 +1396,7 @@ function handleKeydown(event, x, y) {
       pointer-events: none;
     }
   }
-  
+
   .cursor-text {
     cursor: text;
   }
@@ -1286,13 +1421,13 @@ function handleKeydown(event, x, y) {
   }
 
   input.revealed {
-    color: #FF3333 !important; /* Bright red color */
+    color: #ff3333 !important; /* Bright red color */
     font-weight: bold !important;
   }
-  
+
   /* For added emphasis, you could also add */
   .revealed {
-    color: #FF3333 !important; 
+    color: #ff3333 !important;
     font-weight: bold !important;
   }
 </style>
