@@ -1021,9 +1021,13 @@ function handleKeydown(event, x, y) {
 
   let showOverlay = $state(false);
   let finalTime = $state(0);
+  let hasShownIncorrectMessage = $state(false);
 
   function handleCloseOverlay() {
     showOverlay = false;
+    if (!getIsCorrect()) {
+      hasShownIncorrectMessage = true;
+    }
   }
 
   $effect(() => {
@@ -1040,9 +1044,12 @@ function handleKeydown(event, x, y) {
         setIsCorrect(true);
         finalTime = getSeconds();
         showOverlay = true;
-      } else {
+      } else if (!hasShownIncorrectMessage) {
         setIsCorrect(false);
         showOverlay = true;
+      } else {
+        setIsCorrect(false);
+        showOverlay = false;
       }
     } else {
       setIsCorrect(false);
