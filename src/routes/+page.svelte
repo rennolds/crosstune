@@ -1,4 +1,3 @@
-<!-- src/routes/+page.svelte -->
 <script>
     import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
     import Navbar from '$lib/components/Navbar.svelte';
@@ -34,7 +33,7 @@
 {#if showSplash}
     <SplashScreen onPlay={handlePlay} />
 {:else}
-    <main class="min-h-screen bg-[#F3F4F6]">
+    <main class="min-h-screen">
         <Navbar 
             onRevealSquare={revealSquare} 
             onRevealWord={revealWord} 

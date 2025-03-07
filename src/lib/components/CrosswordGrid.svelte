@@ -1189,7 +1189,7 @@
 <SoundCloudManager {words} />
 
 <div
-  class="flex flex-col top-50 md:flex-row w-full md:max-w-4xl  mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto bg-gray-100"
+  class="flex flex-col top-50 md:flex-row w-full md:max-w-4xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto"
 >
   <!-- Crossword grid container -->
   <div class="flex-1 h-full">
@@ -1203,7 +1203,7 @@
       <!-- Remove the background image and instead use a transparent background -->
       <div
         class="absolute inset-0 grid"
-        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px; background-color: #F3F4F6;"
+        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
       ></div>
       <!-- <div 
       class="absolute inset-0 bg-black"
