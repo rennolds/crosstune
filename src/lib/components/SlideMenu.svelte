@@ -77,6 +77,33 @@
           </a>
         {/each}
       </nav>
+      
+      <!-- Our Games Section -->
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Our games</h2>
+        
+        <div class="space-y-3">
+          <!-- Spotle Card -->
+          <a href="/spotle" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
+            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
+              <img src="/api/placeholder/240/120" alt="Spotle" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-2">
+              <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
+            </div>
+          </a>
+          
+          <!-- Harmonies Card -->
+          <a href="/harmonies" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
+            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
+              <img src="/api/placeholder/240/120" alt="Harmonies" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-2">
+              <h3 class="font-semibold text-sm">Harmonies: Music Connections</h3>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
