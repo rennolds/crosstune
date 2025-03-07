@@ -12,6 +12,7 @@
     getSeconds,
     setSeconds,
     resetTimer,
+    isWidgetReady,
   } from "$lib/stores/game.svelte.js";
 
   import {
@@ -34,6 +35,11 @@
   let isMobileDevice = $state(false);
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioCtx = new AudioContext();
+
+  
+  function checkIfWidgetReady(wordId) {
+    return isWidgetReady(wordId);
+  }
 
   $effect(() => {
     isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
@@ -1030,6 +1036,7 @@
   let playingClue = $state(null);
 
   async function playClue(clue) {
+
     try {
       // First, highlight the word by setting direction and focus
       currentDirection = clue.direction;

@@ -39,3 +39,13 @@ export function resetTimer() {
   isCorrect = false;
   isTimerRunning = true;
 }
+
+export const readyWidgets = $state(new Set());
+
+export function isWidgetReady(widgetId) {
+  return readyWidgets.has(widgetId);
+}
+
+export function markWidgetAsReady(widgetId) {
+  readyWidgets.add(widgetId);
+}

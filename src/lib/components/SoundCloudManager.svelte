@@ -1,41 +1,31 @@
 <script>
     import { onMount } from 'svelte';
-    
+
+    import { markWidgetAsReady } from '$lib/stores/game.svelte.js';
+
     let { words } = $props();
-    
-    // Create a store to track loaded widgets
-    let loadedWidgets = $state(new Set());
-    
-    // Export a function to check if a widget is ready
-    export function isWidgetReady(wordId) {
-        return loadedWidgets.has(wordId);
-    }
-    
+
     onMount(() => {
-        // Initialize the SC Widget API after component mounts
         window.onSCWidgetApiReady = function() {
-            console.log("SoundCloud Widget API is ready");
+        console.log("SoundCloud Widget API is ready");
+        
+        words.forEach(word => {
+            const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
+            const iframe = document.getElementById(widgetId);
             
-            // Initialize each widget
-            words.forEach(word => {
-                const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
-                const iframe = document.getElementById(widgetId);
-                
-                if (iframe) {
-                    const widget = SC.Widget(iframe);
-                    
-                    // Listen for READY event
-                    widget.bind(SC.Widget.Events.READY, () => {
-                        console.log(`Widget ${widgetId} is ready`);
-                        loadedWidgets.add(widgetId);
-                    });
-                }
+            if (iframe) {
+            const widget = SC.Widget(iframe);
+            
+            widget.bind(SC.Widget.Events.READY, () => {
+                console.log(`Widget ${widgetId} is ready`);
+                markWidgetAsReady(widgetId);
             });
+            }
+        });
         };
         
-        // Check if SC is already defined (which means the API is loaded)
         if (window.SC && window.SC.Widget) {
-            window.onSCWidgetApiReady();
+        window.onSCWidgetApiReady();
         }
     });
 </script>
