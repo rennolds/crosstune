@@ -1,6 +1,14 @@
 <script>
   let { clue, onPlay, isPlaying, playingClue, onStopAudio, words } = $props();
 
+  // Add a derived state to accurately track if the current clue is playing
+  let isCurrentClueActive = $derived(
+    isPlaying && playingClue && clue && 
+    playingClue.startX === clue.startX && 
+    playingClue.startY === clue.startY && 
+    playingClue.direction === clue.direction
+  );
+
   function findAdjacentClue(currentClue, direction) {
     if (!currentClue) return null;
 
@@ -75,14 +83,13 @@
 
       <!-- Right Section -->
       <div class="flex items-center">
-        <!-- Play/Pause Button -->
+        <!-- Play/Pause Button - Now using isCurrentClueActive -->
         <button
           onclick={() => onPlay(clue)}
           class="w-[70px] h-[30px] mr-2.5 bg-black text-white rounded-md text-lg font-medium"
-          disabled={isPlaying && playingClue !== clue}
         >
           <span class="block text-center">
-            {isPlaying && playingClue === clue ? 'Pause' : 'Play'}
+            {isCurrentClueActive ? 'Pause' : 'Play'}
           </span>
         </button>
 

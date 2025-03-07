@@ -1030,10 +1030,10 @@
   let playingClue = $state(null);
 
   async function playSC(clue) {
-    console.log(clue);
-  }
+      console.log(clue);
+    }
 
-  async function playClue(clue) {
+    async function playClue(clue) {
     try {
       // First, highlight the word by setting direction and focus
       currentDirection = clue.direction;
@@ -1062,20 +1062,20 @@
       // Stop any currently playing audio
       if (currentAudio) {
         currentAudio.pause();
-        currentAudio = null;
       }
-      isPlaying = false;
-      playingClue = null;
-      const audio = SC.Widget(iframe);
-
-      currentAudio = audio;
-      audio.seekTo(convertTimestampToMs(clue.startAt));
-      await audio.play();
+      
+      // Important: Set these states immediately before starting the new audio
       isPlaying = true;
       playingClue = clue;
+      
+      const audio = SC.Widget(iframe);
+      currentAudio = audio;
+      
+      audio.seekTo(convertTimestampToMs(clue.startAt));
+      await audio.play();
 
       setTimeout(() => {
-        if (audio == currentAudio) {
+        if (audio === currentAudio) {
           audio.pause();
           isPlaying = false;
           playingClue = null;
