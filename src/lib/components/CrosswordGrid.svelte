@@ -36,10 +36,35 @@
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioCtx = new AudioContext();
 
-  
-  function checkIfWidgetReady(wordId) {
-    return isWidgetReady(wordId);
-  }
+  let widgetReadyStatus = $state({});
+
+  // Update widget status continuously to check for readiness changes
+  $effect(() => {
+    // Set up an interval to check widget status every 500ms
+    const checkInterval = setInterval(() => {
+      let changesDetected = false;
+      
+      // Check all clues
+      [...acrossClues, ...downClues].forEach(clue => {
+        const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
+        const isReady = isWidgetReady(widgetId);
+        
+        // Only update if there's a change to avoid unnecessary rerenders
+        if (widgetReadyStatus[widgetId] !== isReady) {
+          widgetReadyStatus[widgetId] = isReady;
+          changesDetected = true;
+        }
+      });
+      
+      // If we detect that all widgets are ready, we can clear the interval
+      if (changesDetected && Object.values(widgetReadyStatus).every(status => status === true)) {
+        clearInterval(checkInterval);
+      }
+    }, 150);
+    
+    // Clean up interval on component destroy
+    return () => clearInterval(checkInterval);
+  });
 
   $effect(() => {
     isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
@@ -1289,39 +1314,58 @@
               <span class="text-black font-bold ml-2.5">•</span>
               <span class="text-sm flex-1">{clue.textClue}</span>
               <button
-                onclick={() => playClue(clue)}
-                disabled={isPlaying && playingClue !== clue}
-              >
-                {#if isPlaying && playingClue === clue}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
-                      /></g
-                    ></svg
-                  >
-                {:else}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                      /></g
-                    ></svg
-                  >
-                {/if}
-              </button>
+              onclick={() => playClue(clue)}
+              disabled={isPlaying && playingClue !== clue || !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
+            >
+              {#if isPlaying && playingClue === clue}
+                <!-- Pause icon - Currently playing -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 20 20"
+                  height="40px"
+                  viewBox="0 0 20 20"
+                  width="40px"
+                  fill="#000000"
+                  ><g><rect fill="none" height="20" width="20" /></g><g
+                    ><path
+                      d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                    /></g
+                  ></svg
+                >
+              {:else if !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
+                <!-- Loading spinner - Widget not ready -->
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="40px" 
+                  height="40px" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="2" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  class="animate-spin"
+                >
+                  <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+                  <path d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577" />
+                </svg>
+              {:else}
+                <!-- Play icon - Ready to play -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 20 20"
+                  height="40px"
+                  viewBox="0 0 20 20"
+                  width="40px"
+                  fill="#000000"
+                  ><g><rect fill="none" height="20" width="20" /></g><g
+                    ><path
+                      d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                    /></g
+                  ></svg
+                >
+              {/if}
+            </button>
             </div>
           {/each}
         </div>
@@ -1340,38 +1384,57 @@
               <span class="text-black font-bold">•</span>
               <span class="text-sm flex-1">{clue.textClue}</span>
               <button
-                onclick={() => playClue(clue)}
-                disabled={isPlaying && playingClue !== clue}
+                  onclick={() => playClue(clue)}
+                  disabled={isPlaying && playingClue !== clue || !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
               >
-                {#if isPlaying && playingClue === clue}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
-                      /></g
-                    ></svg
-                  >
-                {:else}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                      /></g
-                    ></svg
-                  >
-                {/if}
+                  {#if isPlaying && playingClue === clue}
+                    <!-- Pause icon - Currently playing -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      enable-background="new 0 0 20 20"
+                      height="40px"
+                      viewBox="0 0 20 20"
+                      width="40px"
+                      fill="#000000"
+                      ><g><rect fill="none" height="20" width="20" /></g><g
+                        ><path
+                          d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                        /></g
+                      ></svg
+                    >
+                  {:else if !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
+                    <!-- Loading spinner - Widget not ready -->
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="40px" 
+                      height="40px" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      stroke-width="2" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" 
+                      class="animate-spin"
+                    >
+                      <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+                      <path d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577" />
+                    </svg>
+                  {:else}
+                    <!-- Play icon - Ready to play -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      enable-background="new 0 0 20 20"
+                      height="40px"
+                      viewBox="0 0 20 20"
+                      width="40px"
+                      fill="#000000"
+                      ><g><rect fill="none" height="20" width="20" /></g><g
+                        ><path
+                          d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                        /></g
+                      ></svg
+                    >
+                  {/if}
               </button>
             </div>
           {/each}

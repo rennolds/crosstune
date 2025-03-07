@@ -1,6 +1,8 @@
 <script>
   let { clue, onPlay, isPlaying, playingClue, onStopAudio, words } = $props();
 
+  import { isWidgetReady } from "$lib/stores/game.svelte.js";
+
   // Add a derived state to accurately track if the current clue is playing
   let isCurrentClueActive = $derived(
     isPlaying && playingClue && clue && 
@@ -8,6 +10,31 @@
     playingClue.startY === clue.startY && 
     playingClue.direction === clue.direction
   );
+
+  let currentWidgetReady = $state(false);
+
+  $effect(() => {
+    if (!clue) {
+      currentWidgetReady = false;
+      return;
+    }
+    
+    // Initialize with current state
+    const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
+    currentWidgetReady = isWidgetReady(widgetId);
+    
+    // Set up an interval to keep checking until ready
+    const checkInterval = setInterval(() => {
+      const isReady = isWidgetReady(widgetId);
+      if (isReady) {
+        currentWidgetReady = true;
+        clearInterval(checkInterval);
+      }
+    }, 200);
+    
+    // Clean up interval when component is destroyed or clue changes
+    return () => clearInterval(checkInterval);
+  });
 
   function findAdjacentClue(currentClue, direction) {
     if (!currentClue) return null;
@@ -83,13 +110,34 @@
 
       <!-- Right Section -->
       <div class="flex items-center">
-        <!-- Play/Pause Button - Now using isCurrentClueActive -->
+        <!-- Play/Pause Button - Now with reactive loading state -->
         <button
           onclick={() => onPlay(clue)}
           class="w-[70px] h-[30px] mr-2.5 bg-black text-white rounded-md text-lg font-medium"
+          disabled={!currentWidgetReady && !isCurrentClueActive}
         >
           <span class="block text-center">
-            {isCurrentClueActive ? 'Pause' : 'Play'}
+            {#if isCurrentClueActive}
+              Pause
+            {:else if !currentWidgetReady}
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                class="animate-spin inline-block"
+              >
+                <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+                <path d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577" />
+              </svg>
+            {:else}
+              Play
+            {/if}
           </span>
         </button>
 
