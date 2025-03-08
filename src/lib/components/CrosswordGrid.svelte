@@ -1195,10 +1195,10 @@
 <SoundCloudManager {words} />
 
 <div
-  class="flex flex-col top-50 md:flex-row w-full md:max-w-4xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto"
+  class="flex flex-col top-50 md:flex-row w-full md:max-w-4xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto md:mt-8"
 >
   <!-- Crossword grid container -->
-  <div class="flex-1 h-full">
+  <div class="flex-1 h-full md:mr-6">
     <!-- Grid container -->
     <div
       class="w-full relative"
@@ -1211,23 +1211,8 @@
         class="absolute inset-0 grid"
         style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
       ></div>
-      <!-- <div 
-      class="absolute inset-0 bg-black"
-      style="
-        {puzzle.backgroundImage && !backgroundImageError 
-          ? `
-            background-image: url('${puzzle.backgroundImage}');
-            background-size: cover;
-            background-position: center;
-            background-color: rgba(0, 0, 0, 0.1);
-            background-blend-mode: multiply;
-          ` 
-          : ''
-        }
-      "
-      > </div> -->
+      
       <div
-        <div
         class="absolute inset-0 grid p-2"
         style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
       >
@@ -1306,11 +1291,11 @@
     />
   {:else}
     <!-- Clue list container -->
-    <div class="w-full md:w-64">
+    <div class="w-full md:w-64 md:mt-0 mt-4">
       <!-- Across Clues -->
       <div>
-        <h2 class="text-xl font-bold mb-2">Across</h2>
-        <div class="space-y-2">
+        <h2 class="text-xl font-bold mb-3">Across</h2>
+        <div class="space-y-3">
           {#each acrossClues as clue}
             <div
               class="flex items-center gap-2 px-2 py-1 rounded bg-white border border-gray-200 shadow-md"
@@ -1381,9 +1366,9 @@
       </div>
 
       <!-- Down Clues -->
-      <div class="mt-4">
-        <h2 class="text-xl font-bold mb-2">Down</h2>
-        <div class="space-y-2">
+      <div class="mt-6">
+        <h2 class="text-xl font-bold mb-3">Down</h2>
+        <div class="space-y-3">
           {#each downClues as clue}
               <div
               class="flex items-center gap-2 px-2 py-1 rounded bg-white border border-gray-200 shadow-md"
