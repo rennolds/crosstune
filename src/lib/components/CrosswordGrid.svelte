@@ -1388,7 +1388,7 @@
               <span class="text-md flex-1 ml-2">{clue.textClue}</span>
               <button
                   onclick={() => playClue(clue)}
-                  disabled={isPlaying && playingClue !== clue || !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
+                  disabled={!widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
               >
                   {#if isPlaying && playingClue === clue}
                     <!-- Pause icon - Currently playing -->
