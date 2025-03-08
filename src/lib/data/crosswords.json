@@ -191,7 +191,7 @@
         "direction": "across",
         "audioUrl": "1582588575",
         "startAt": "00:24",
-        "color": "#FF9B9B",
+        "color": "#FE9C9C",
         "textClue": "Song Title"
       },
       {
@@ -201,7 +201,7 @@
         "direction": "down",
         "audioUrl": "1817690628",
         "startAt": "00:36",
-        "color": "#1ED760",
+        "color": "#28D66A",
         "textClue": "Album Title"
       },
       {
@@ -211,7 +211,7 @@
         "direction": "across",
         "audioUrl": "1768722903",
         "startAt": "02:20",
-        "color": "#0041C2",
+        "color": "#FFCEFD",
         "textClue": "Artist Last Name"
       },
       {
@@ -221,7 +221,7 @@
         "direction": "down",
         "audioUrl": "256240558",
         "startAt": "01:32",
-        "color": "#FFF200",
+        "color": "#FF5B5E",
         "textClue": "Artist Name"
       },
       {
@@ -231,7 +231,7 @@
         "direction": "down",
         "audioUrl": "256187803",
         "startAt": "00:30",
-        "color": "#FFCEFF",
+        "color": "#FCEB00",
         "textClue": "Song Title"
       },
       {
@@ -241,7 +241,7 @@
         "direction": "down",
         "audioUrl": "285001139",
         "startAt": "00:12",
-        "color": "#00FFFF",
+        "color": "#568EFF",
         "textClue": "Artist First Name"
       },
       {
@@ -251,7 +251,7 @@
         "direction": "across",
         "audioUrl": "253091084",
         "startAt": "00:00",
-        "color": "#FFA500",
+        "color": "#FFB34B",
         "textClue": "Song Title"
       },
       {
@@ -261,7 +261,7 @@
         "direction": "across",
         "audioUrl": "278509072",
         "startAt": "00:00",
-        "color": "#BA55D3",
+        "color": "#00FFFF",
         "textClue": "Song Title"
       }
     ]

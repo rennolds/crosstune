@@ -1061,7 +1061,6 @@
   let playingClue = $state(null);
 
   async function playClue(clue) {
-
     try {
       // First, highlight the word by setting direction and focus
       currentDirection = clue.direction;
@@ -1106,6 +1105,13 @@
       audio.seekTo(convertTimestampToMs(clue.startAt));
       await audio.play();
 
+      // Detect Safari browser
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      
+      // Set timeout duration based on browser - 7 seconds for Safari, 6 seconds for others
+      const timeoutDuration = isSafari ? 7000 : 6000;
+      console.log(`Using ${timeoutDuration}ms timeout for audio (${isSafari ? 'Safari' : 'non-Safari'})`);
+
       setTimeout(() => {
         // Only pause if this is still the current audio AND from the same play session
         if (audio === currentAudio && audio._playSessionId === playSessionId) {
@@ -1114,7 +1120,7 @@
           playingClue = null;
           currentAudio = null;
         }
-      }, 6000);
+      }, timeoutDuration);
     } catch (error) {
       console.error("Error playing audio:", error);
       console.error("Audio element error:", currentAudio?.error);
@@ -1307,12 +1313,15 @@
         <div class="space-y-2">
           {#each acrossClues as clue}
             <div
-              class="flex items-center gap-2 px-2 py-1 rounded"
-              style="background-color: {clue.color};"
+              class="flex items-center gap-2 px-2 py-1 rounded bg-white border border-gray-200 shadow-md"
             >
-              <span class="font-medium text-sm">{clue.number}A</span>
-              <span class="text-black font-bold ml-2.5">•</span>
-              <span class="text-sm flex-1">{clue.textClue}</span>
+              <div 
+                class="flex items-center justify-center w-8 h-8 rounded text-black"
+                style="background-color: {clue.color};"
+              >
+                <span class="font-semibold text-lg">{clue.number}A</span>
+              </div>
+              <span class="text-md flex-1 ml-2">{clue.textClue}</span>
               <button
               onclick={() => playClue(clue)}
               disabled={isPlaying && playingClue !== clue || !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
@@ -1376,13 +1385,16 @@
         <h2 class="text-xl font-bold mb-2">Down</h2>
         <div class="space-y-2">
           {#each downClues as clue}
-            <div
-              class="flex items-center gap-2 px-2 py-1 rounded"
-              style="background-color: {clue.color};"
+              <div
+              class="flex items-center gap-2 px-2 py-1 rounded bg-white border border-gray-200 shadow-md"
             >
-              <span class="font-medium text-sm">{clue.number}D</span>
-              <span class="text-black font-bold">•</span>
-              <span class="text-sm flex-1">{clue.textClue}</span>
+              <div 
+                class="flex items-center justify-center w-8 h-8 rounded text-black"
+                style="background-color: {clue.color};"
+              >
+                <span class="font-semibold text-lg">{clue.number}A</span>
+              </div>
+              <span class="text-md flex-1 ml-2">{clue.textClue}</span>
               <button
                   onclick={() => playClue(clue)}
                   disabled={isPlaying && playingClue !== clue || !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
