@@ -3,10 +3,11 @@ const STORAGE_KEYS = {
     GRID_STATE: 'crosstune_grid_state',
     TIMER_STATE: 'crosstune_timer_state',
     LAST_PUZZLE_DATE: 'crosstune_last_puzzle_date',
-    REVEALED_CELLS: 'crosstune_revealed_cells'
+    REVEALED_CELLS: 'crosstune_revealed_cells',
+    SOLVED_PUZZLES: 'crosstune_solved_puzzles'
 };
 // Helper to get East Coast date in YYYY-MM-DD format 
-function getEastCoastDate() {
+export function getEastCoastDate() {
   const date = new Date();
   return new Date(date.toLocaleString('en-US', {
     timeZone: 'America/New_York'
@@ -98,4 +99,34 @@ export function loadRevealedCells() {
   
   // Convert the parsed array back to a Set
   return new Set(JSON.parse(revealedCells));
+}
+
+export function markPuzzleAsSolved(date) {
+  if (typeof window === 'undefined') return;
+  
+  const solvedPuzzles = getSolvedPuzzles();
+  if (!solvedPuzzles.includes(date)) {
+    solvedPuzzles.push(date);
+    localStorage.setItem(STORAGE_KEYS.SOLVED_PUZZLES, JSON.stringify(solvedPuzzles));
+  }
+}
+
+/**
+ * Gets all solved puzzles
+ * @returns {string[]} Array of dates in YYYY-MM-DD format
+ */
+export function getSolvedPuzzles() {
+  if (typeof window === 'undefined') return [];
+  
+  const storedPuzzles = localStorage.getItem(STORAGE_KEYS.SOLVED_PUZZLES);
+  return storedPuzzles ? JSON.parse(storedPuzzles) : [];
+}
+
+/**
+ * Checks if a specific puzzle is solved
+ * @param {string} date - The puzzle date in YYYY-MM-DD format
+ * @returns {boolean} True if the puzzle is solved
+ */
+export function isPuzzleSolved(date) {
+  return getSolvedPuzzles().includes(date);
 }

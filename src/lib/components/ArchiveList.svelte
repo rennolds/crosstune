@@ -1,9 +1,12 @@
 <script>
+    import { getSolvedPuzzles } from '$lib/utils/storage.js';
+
     let { crosswords, onSelectDate } = $props();
-    
-    // State for current month and selected date
+
     let currentDate = $state(new Date());
     let selectedDate = $state(null);
+    let solvedPuzzles = $state(getSolvedPuzzles());
+    console.log(solvedPuzzles);
 
     // Get days in a month
     function getDaysInMonth(year, month) {

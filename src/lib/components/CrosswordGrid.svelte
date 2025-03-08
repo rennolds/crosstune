@@ -16,12 +16,14 @@
   } from "$lib/stores/game.svelte.js";
 
   import {
+    getEastCoastDate,
     loadGridState,
     saveGridState,
     loadTimerState,
     saveTimerState,
     saveRevealedCells,
     loadRevealedCells,
+    markPuzzleAsSolved,
   } from "$lib/utils/storage";
 
   // New props for archive mode
@@ -77,18 +79,6 @@
     return () => mediaQuery.removeEventListener("change", handler);
   });
 
-  // Function to get current East Coast date in YYYY-MM-DD format
-  function getEastCoastDate() {
-    const date = new Date();
-    // Convert to Eastern Time (GMT-5)
-    const eastCoastDate = new Date(
-      date.toLocaleString("en-US", {
-        timeZone: "America/New_York",
-      })
-    );
-
-    return eastCoastDate.toISOString().split("T")[0];
-  }
 
   // Get today's puzzle or fall back to the first available puzzle
   function getTodaysPuzzle() {
@@ -1170,6 +1160,11 @@
         setIsCorrect(true);
         finalTime = getSeconds();
         showOverlay = true;
+        if (isArchiveMode) {
+          markPuzzleAsSolved(selectedDate)
+        } else {
+          markPuzzleAsSolved(getEastCoastDate());
+        }
       } else if (!hasShownIncorrectMessage) {
         setIsCorrect(false);
         showOverlay = true;
