@@ -112,17 +112,24 @@
                     <div></div>
                 {:else}
                     <button 
-                        onclick={() => handleDateSelect(dayObj)}
-                        class="p-1.5 aspect-square flex items-center justify-center rounded-xs"
-                        class:bg-black={selectedDate === dayObj.date}
-                        class:text-white={selectedDate === dayObj.date}
-                        class:bg-gray-200={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable}
-                        class:text-black={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable}
-                        class:text-gray-300={!dayObj.isPuzzleAvailable}
-                        disabled={!dayObj.isPuzzleAvailable}
-                    >
-                        {dayObj.day}
-                    </button>
+                    onclick={() => handleDateSelect(dayObj)}
+                    class="p-1.5 aspect-square flex items-center justify-center rounded-xs transition-colors duration-200"
+                    class:bg-black={selectedDate === dayObj.date}
+                    class:text-white={selectedDate === dayObj.date || (selectedDate !== dayObj.date && solvedPuzzles.includes(dayObj.date))}
+                    class:bg-green-500={selectedDate !== dayObj.date && solvedPuzzles.includes(dayObj.date)}
+                    class:hover:bg-green-600={selectedDate !== dayObj.date && solvedPuzzles.includes(dayObj.date)}
+                    class:bg-gray-200={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable && !solvedPuzzles.includes(dayObj.date)}
+                    class:hover:bg-gray-300={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable && !solvedPuzzles.includes(dayObj.date)}
+                    class:hover:bg-black={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable && !solvedPuzzles.includes(dayObj.date)}
+                    class:hover:text-white={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable && !solvedPuzzles.includes(dayObj.date)}
+                    class:text-black={selectedDate !== dayObj.date && dayObj.isPuzzleAvailable && !solvedPuzzles.includes(dayObj.date)}
+                    class:text-gray-300={!dayObj.isPuzzleAvailable}
+                    class:cursor-pointer={dayObj.isPuzzleAvailable}
+                    class:cursor-not-allowed={!dayObj.isPuzzleAvailable}
+                    disabled={!dayObj.isPuzzleAvailable}
+                >
+                    {dayObj.day}
+                </button>
                 {/if}
             {/each}
         </div>
