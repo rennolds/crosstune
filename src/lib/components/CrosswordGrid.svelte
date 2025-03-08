@@ -1062,6 +1062,7 @@
 
   async function playClue(clue) {
     try {
+      console.log('made it into this function');
       // First, highlight the word by setting direction and focus
       currentDirection = clue.direction;
       focusedX = clue.startX;
@@ -1078,20 +1079,25 @@
       }
       console.log("got widget");
 
-      // If this clue is already playing, pause it
+      // If this clue is already playing, pause it and exit
       if (playingClue === clue && isPlaying && currentAudio) {
         currentAudio.pause();
         isPlaying = false;
         playingClue = null;
+        currentAudio = null;
         return;
       }
 
-      // Stop any currently playing audio
+      // Always stop any currently playing audio before starting a new one
       if (currentAudio) {
         currentAudio.pause();
+        // Reset these immediately so UI updates right away
+        isPlaying = false;
+        playingClue = null;
+        currentAudio = null;
       }
       
-      // Important: Set these states immediately before starting the new audio
+      // Set these states for the new audio
       isPlaying = true;
       playingClue = clue;
       
@@ -1308,9 +1314,9 @@
               </div>
               <span class="text-md flex-1 ml-2">{clue.textClue}</span>
               <button
-              onclick={() => playClue(clue)}
-              disabled={isPlaying && playingClue !== clue || !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
-            >
+                onclick={() => playClue(clue)}
+                disabled={!widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
+              >
               {#if isPlaying && playingClue === clue}
                 <!-- Pause icon - Currently playing -->
                 <svg
