@@ -899,14 +899,15 @@
         }
         break;
       default:
-        if (event.key.length === 1 && event.key.match(/[a-zA-Z]/i)) {
-          const letter = event.key.toUpperCase();
-          updateGridCell(x, y, letter);
+        // Accept letters, numbers, and special characters that fit in one grid cell
+        if (event.key.length === 1) {
+          const char = event.key.toUpperCase();
+          updateGridCell(x, y, char);
           if (input?.value !== undefined) {
-            input.value = letter;
+            input.value = char;
           }
-          grid[y][x] = letter;
-          input.value = letter;
+          grid[y][x] = char;
+          input.value = char;
 
           requestAnimationFrame(() => {
             // Get the current word
