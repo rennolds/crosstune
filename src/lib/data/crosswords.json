@@ -290,7 +290,7 @@
         "direction": "down",
         "audioUrl": "254407931",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
         "textClue": "Artist / Band"
       },
       {
@@ -300,7 +300,7 @@
         "direction": "across",
         "audioUrl": "597146499",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFCEFD",
         "textClue": "Song Title"
       },
       {
@@ -310,7 +310,7 @@
         "direction": "across",
         "audioUrl": "265069081",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FF5B5E",
         "textClue": "Song Title"
       },
       {
@@ -330,7 +330,7 @@
         "direction": "down",
         "audioUrl": "252454515",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "Album"
       },
       {
@@ -340,7 +340,7 @@
         "direction": "across",
         "audioUrl": "231862397",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "Artist / Band"
       },
       {
@@ -350,11 +350,12 @@
         "direction": "down",
         "audioUrl": "256024558",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "Song Title"
       }
     ]
   },
+<<<<<<< HEAD
   "2025-03-10": {
     "size": {
       "width": 12,
@@ -444,6 +445,8 @@
       }
     ]
   },
+=======
+>>>>>>> e4af0653c52674cebd5b3c47e1e2394cfafc85f4
   "2025-03-12": {
     "size": {
       "width": 12,
@@ -534,6 +537,95 @@
     ]
   },
   "2025-03-13": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      }
+    ]
+  },
+  "2025-03-14": {
     "size": {
       "width": 12,
       "height": 10
