@@ -1,5 +1,3 @@
-// Update MobileKeyboard.svelte to add a period and ensure symbols work
-
 <script>
   let { onKeyPress } = $props();
   let showSymbols = $state(false);
