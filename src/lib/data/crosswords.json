@@ -364,90 +364,100 @@
     "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
     "words": [
       {
-        "word": "X",
-        "startX": 0,
+        "word": "BOWIE",
+        "startX": 1,
         "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+        "direction": "down",
+        "audioUrl": "256115139",
         "startAt": "00:24",
         "color": "#FE9C9C",
-        "textClue": "X"
+        "textClue": "Artist Last Name"
       },
       {
-          "word": "X",
-        "startX": 0,
+          "word": "CASH",
+        "startX": 3,
         "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+        "direction": "down",
+        "audioUrl": "326293297",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
+        "color": "#28D66A",
+        "textClue": "Artist Last Name"
       },
       {
-         "word": "X",
-        "startX": 0,
+         "word": "CHAPMAN",
+        "startX": 3,
         "startY": 0,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "232328622",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
+        "color": "#FFCEFD",
+        "textClue": "Artist Last Name"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "FRANKLIN",
+        "startX": 2,
+        "startY": 5,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "255802771",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
+        "color": "#FF5B5E",
+        "textClue": "Artist Last Name"
       },
       {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+         "word": "LENNON",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "audioUrl": "251342371",
         "startAt": "00:24",
         "color": "#FE9C9C",
-        "textClue": "X"
+        "textClue": "Artist Last Name"
       },
       {
-          "word": "X",
+          "word": "RICHIE",
         "startX": 0,
-        "startY": 0,
+        "startY": 3,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "256150936",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
+        "color": "#568EFF",
+        "textClue": "Artist Last Name"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "EILISH",
+        "startX": 6,
+        "startY": 8,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "1822833672",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
+        "color": "#FFB34B",
+        "textClue": "Artist Last Name"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "DYLAN",
+        "startX": 1,
+        "startY": 7,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "256269197",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
+        "color": "#00FFFF",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "HENDRIX",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "audioUrl": "529722843",
+        "startAt": "00:24",
+        "color": "#E675FF",
+        "textClue": "Artist Last Name"
       }
     ]
   },
 =======
 >>>>>>> e4af0653c52674cebd5b3c47e1e2394cfafc85f4
-  "2025-03-12": {
+  "2025-03-10": {
     "size": {
       "width": 12,
       "height": 10
@@ -471,7 +481,27 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
         "textClue": "X"
       },
       {
@@ -491,17 +521,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "X"
       },
       {
@@ -511,7 +531,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "X"
       },
       {
@@ -521,22 +541,12 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "X"
       }
     ]
   },
-  "2025-03-13": {
+  "2025-03-10": {
     "size": {
       "width": 12,
       "height": 10
@@ -560,7 +570,27 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
         "textClue": "X"
       },
       {
@@ -580,17 +610,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "X"
       },
       {
@@ -600,7 +620,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "X"
       },
       {
@@ -610,22 +630,12 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "X"
       }
     ]
   },
-  "2025-03-14": {
+  "2025-03-10": {
     "size": {
       "width": 12,
       "height": 10
@@ -649,7 +659,27 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
         "textClue": "X"
       },
       {
@@ -669,17 +699,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "X"
       },
       {
@@ -689,7 +709,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "X"
       },
       {
@@ -699,17 +719,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "X"
       }
     ]
