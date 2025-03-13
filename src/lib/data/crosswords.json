@@ -465,84 +465,84 @@
     "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
     "words": [
       {
-        "word": "X",
+        "word": "LINGER",
         "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+        "startY": 2,
+        "direction": "down",
+        "audioUrl": "253185090",
         "startAt": "00:24",
         "color": "#FE9C9C",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
+          "word": "SLIPKNOT",
+        "startX": 8,
         "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+        "direction": "down",
+        "audioUrl": "203876288",
         "startAt": "00:24",
         "color": "#28D66A",
-        "textClue": "X"
+        "textClue": "Artist / Band"
       },
       {
-         "word": "X",
-        "startX": 0,
+         "word": "OUTKAST",
+        "startX": 3,
         "startY": 0,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "253850736",
         "startAt": "00:24",
         "color": "#FFCEFD",
-        "textClue": "X"
+        "textClue": "Artist / Band"
       },
       {
-          "word": "X",
+          "word": "RUMOURS",
         "startX": 0,
-        "startY": 0,
+        "startY": 7,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "254399461",
         "startAt": "00:24",
         "color": "#FF5B5E",
-        "textClue": "X"
+        "textClue": "Album"
       },
       {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+         "word": "CLOSER",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "284250119",
         "startAt": "00:24",
         "color": "#FE9C9C",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "HEADLINES",
+        "startX": 2,
+        "startY": 5,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "257461518",
         "startAt": "00:24",
         "color": "#568EFF",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "SUCKER",
+        "startX": 1,
+        "startY": 9,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "582706371",
         "startAt": "00:24",
         "color": "#FFB34B",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "SENORITA",
+        "startX": 3,
+        "startY": 2,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "640013394",
         "startAt": "00:24",
         "color": "#00FFFF",
-        "textClue": "X"
+        "textClue": "Song Title"
       }
     ]
   },
@@ -554,84 +554,114 @@
     "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
     "words": [
       {
-        "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+        "word": "1979",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "255892543",
         "startAt": "00:24",
         "color": "#FE9C9C",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "19",
+        "startX": 1,
+        "startY": 1,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "254407916",
         "startAt": "00:24",
         "color": "#28D66A",
-        "textClue": "X"
+        "textClue": "Album"
       },
       {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
+         "word": "18002738255",
+        "startX": 1,
+        "startY": 1,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "318368285",
         "startAt": "00:24",
         "color": "#FFCEFD",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "SUM 41",
+        "startX": 5,
+        "startY": 4,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "256148157",
         "startAt": "00:24",
         "color": "#FF5B5E",
-        "textClue": "X"
+        "textClue": "Artist / Band Name"
       },
       {
-         "word": "X",
+         "word": "1999",
         "startX": 0,
-        "startY": 0,
+        "startY": 1,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "509725347",
         "startAt": "00:24",
         "color": "#FE9C9C",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+          "word": "21",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "53600067",
         "startAt": "00:24",
         "color": "#568EFF",
-        "textClue": "X"
+        "textClue": "Album"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
+          "word": "3AM",
+        "startX": 3,
+        "startY": 6,
         "direction": "across",
-        "audioUrl": "000",
+        "audioUrl": "1972994887",
         "startAt": "00:24",
         "color": "#FFB34B",
-        "textClue": "X"
+        "textClue": "Song Title"
       },
       {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
+          "word": "8 MILE",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "256257112",
         "startAt": "00:24",
         "color": "#00FFFF",
-        "textClue": "X"
+        "textClue": "Song Title"
+      },
+       {
+          "word": "500 MILES",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "255879397",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      },
+       {
+          "word": "THE 1975",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "audioUrl": "1361262079",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Artist / Band"
+      },
+       {
+          "word": "1985",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "252588647",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
       }
     ]
   },
