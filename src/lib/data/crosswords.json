@@ -1,5 +1,5 @@
 {
-  "2025-02-28": {
+  "2025-03-10": {
     "size": {
       "width": 12,
       "height": 10
@@ -88,7 +88,7 @@
       }
     ]
   },
-  "2025-02-27": {
+  "2025-03-11": {
     "size": {
       "width": 12,
       "height": 10
@@ -177,7 +177,7 @@
       }
     ]
   },
-  "2025-02-21": {
+  "2025-03-12": {
     "size": {
       "width": 12,
       "height": 10
@@ -266,7 +266,7 @@
       }
     ]
   },
-  "2025-03-11": {
+  "2025-03-14": {
     "size": {
       "width": 12,
       "height": 10
@@ -355,7 +355,531 @@
       }
     ]
   },
-<<<<<<< HEAD
+  "2025-03-15": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "BOWIE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "256115139",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "CASH",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "326293297",
+        "startAt": "00:24",
+        "color": "#28D66A",
+        "textClue": "Artist Last Name"
+      },
+      {
+         "word": "CHAPMAN",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "232328622",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "FRANKLIN",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "audioUrl": "255802771",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
+        "textClue": "Artist Last Name"
+      },
+      {
+         "word": "LENNON",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "audioUrl": "251342371",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "RICHIE",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "audioUrl": "256150936",
+        "startAt": "00:24",
+        "color": "#568EFF",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "EILISH",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "audioUrl": "1822833672",
+        "startAt": "00:24",
+        "color": "#FFB34B",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "DYLAN",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "audioUrl": "256269197",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Artist Last Name"
+      },
+      {
+          "word": "HENDRIX",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "audioUrl": "529722843",
+        "startAt": "00:24",
+        "color": "#E675FF",
+        "textClue": "Artist Last Name"
+      }
+    ]
+  },
+  "2025-03-16": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "LINGER",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "audioUrl": "253185090",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "SLIPKNOT",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "203876288",
+        "startAt": "00:24",
+        "color": "#28D66A",
+        "textClue": "Artist / Band"
+      },
+      {
+         "word": "OUTKAST",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "253850736",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "Artist / Band"
+      },
+      {
+          "word": "RUMOURS",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "audioUrl": "254399461",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
+        "textClue": "Album"
+      },
+      {
+         "word": "CLOSER",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "284250119",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "HEADLINES",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "audioUrl": "257461518",
+        "startAt": "00:24",
+        "color": "#568EFF",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "SUCKER",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "audioUrl": "582706371",
+        "startAt": "00:24",
+        "color": "#FFB34B",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "SENORITA",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "audioUrl": "640013394",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      }
+    ]
+  },
+  "2025-03-17": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "1979",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "255892543",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "19",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "254407916",
+        "startAt": "00:24",
+        "color": "#28D66A",
+        "textClue": "Album"
+      },
+      {
+         "word": "18002738255",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "audioUrl": "318368285",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "SUM 41",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "256148157",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
+        "textClue": "Artist / Band Name"
+      },
+      {
+         "word": "1999",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "audioUrl": "509725347",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "21",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "53600067",
+        "startAt": "00:24",
+        "color": "#568EFF",
+        "textClue": "Album"
+      },
+      {
+          "word": "3AM",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "audioUrl": "1972994887",
+        "startAt": "00:24",
+        "color": "#FFB34B",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "8 MILE",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "256257112",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      },
+       {
+          "word": "500 MILES",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "255879397",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      },
+       {
+          "word": "THE 1975",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "audioUrl": "1361262079",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Artist / Band"
+      },
+       {
+          "word": "1985",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "252588647",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      }
+    ]
+  },
+  "2025-03-22": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "FLOWERS",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "audioUrl": "1422809359",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "WONDERWALL",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "283975388",
+        "startAt": "00:24",
+        "color": "#28D66A",
+        "textClue": "Song Title"
+      },
+      {
+         "word": "THRIFT SHOP",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "audioUrl": "555682944",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "SZA",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "audioUrl": "1396885495",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
+        "textClue": "Artist / Band Name"
+      },
+      {
+         "word": "TATE MCRAE",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "audioUrl": "2014861735",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "Artist / Band Name"
+      },
+      {
+          "word": "LEONA",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "audioUrl": "256620844",
+        "startAt": "00:24",
+        "color": "#568EFF",
+        "textClue": "Artist First Name"
+      },
+      {
+        "word": "S&M",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "audioUrl": "255769477",
+        "startAt": "00:24",
+        "color": "#FFB34B",
+        "textClue": "Song Title"
+      },
+      {
+          "word": "ET",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "audioUrl": "256250223",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "Song Title"
+      },
+      {
+        "word": "SEAN",
+      "startX": 4,
+      "startY": 0,
+      "direction": "down",
+      "audioUrl": "255792085",
+      "startAt": "00:24",
+      "color": "#E675FF",
+      "textClue": "Artist Last Name"
+      },
+      {
+        "word": "OASIS",
+      "startX": 7,
+      "startY": 0,
+      "direction": "across",
+      "audioUrl": "283975590",
+      "startAt": "00:24",
+      "color": "#FFE89D",
+      "textClue": "Artist / Band Name"
+      },
+      {
+        "word": "CLOSER",
+      "startX": 1,
+      "startY": 9,
+      "direction": "across",
+      "audioUrl": "274720380",
+      "startAt": "00:24",
+      "color": "#A2FE57",
+      "textClue": "Song Title"
+      },
+      {
+        "word": "Apple",
+        "startX": 6,
+        "startY": 3,
+        "direction": "across",
+        "audioUrl": "1839750924",
+        "startAt": "00:24",
+        "color": "#996DFF",
+        "textClue": "Song Title"
+      }
+    ]
+  },
+"2025-03-10": {
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
+    "words": [
+      {
+        "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FE9C9C",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#568EFF",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFB34B",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#00FFFF",
+        "textClue": "X"
+      }
+    ]
+  },
   "2025-03-10": {
     "size": {
       "width": 12,
@@ -380,7 +904,27 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
         "textClue": "X"
       },
       {
@@ -400,17 +944,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "X"
       },
       {
@@ -420,7 +954,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "X"
       },
       {
@@ -430,24 +964,12 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "X"
       }
     ]
   },
-=======
->>>>>>> e4af0653c52674cebd5b3c47e1e2394cfafc85f4
-  "2025-03-12": {
+  "2025-03-10": {
     "size": {
       "width": 12,
       "height": 10
@@ -471,7 +993,27 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
         "textClue": "X"
       },
       {
@@ -491,17 +1033,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "X"
       },
       {
@@ -511,7 +1043,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "X"
       },
       {
@@ -521,22 +1053,12 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "X"
       }
     ]
   },
-  "2025-03-13": {
+  "2025-03-10": {
     "size": {
       "width": 12,
       "height": 10
@@ -560,7 +1082,27 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#28D66A",
+        "textClue": "X"
+      },
+      {
+         "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FFCEFD",
+        "textClue": "X"
+      },
+      {
+          "word": "X",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "audioUrl": "000",
+        "startAt": "00:24",
+        "color": "#FF5B5E",
         "textClue": "X"
       },
       {
@@ -580,17 +1122,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#568EFF",
         "textClue": "X"
       },
       {
@@ -600,7 +1132,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#FFB34B",
         "textClue": "X"
       },
       {
@@ -610,106 +1142,7 @@
         "direction": "across",
         "audioUrl": "000",
         "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      }
-    ]
-  },
-  "2025-03-14": {
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "backgroundImage": "https://i.scdn.co/image/ab67616d0000b273e787cffec20aa2a396a61647",
-    "words": [
-      {
-        "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-         "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
-        "textClue": "X"
-      },
-      {
-          "word": "X",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "audioUrl": "000",
-        "startAt": "00:24",
-        "color": "#FE9C9C",
+        "color": "#00FFFF",
         "textClue": "X"
       }
     ]
