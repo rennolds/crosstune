@@ -80,7 +80,7 @@
     }
 </script>
 
-<div class="container max-w-xl mx-auto md:mt-6">
+<div class="container max-w-md mx-auto md:mt-6">
     <div class="bg-white shadow rounded-lg overflow-hidden">
         <div class="bg-gray-100 px-1 py-1.5 border-b border-gray-200 flex items-center justify-between">
             <button onclick={goToPreviousMonth} class="p-2 hover:bg-gray-200 rounded-full">
