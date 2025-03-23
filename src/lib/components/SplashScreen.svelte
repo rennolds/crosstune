@@ -8,7 +8,7 @@
 </script>
 
 <div class="fixed inset-0 bg-white flex flex-col items-center px-4">
-    <div class="pt-12 mt-7.5 md:pt-0 md:flex-1 flex flex-col items-center md:justify-center gap-4">
+    <div class="pt-22 mt-7.5 md:pt-0 md:flex-1 flex flex-col items-center md:justify-center gap-4">
         <!-- Placeholder logo -->
         <svg width="334" height="141" viewBox="0 0 334 141" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="334" height="141" rx="10" fill="black"/>
