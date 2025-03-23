@@ -123,22 +123,22 @@
 
         <div class="menu-content mt-10">
           <div class="menu-navigation">
-            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={navigateToHome}>Home</div>
-            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={navigateToArchives}>Archives</div>
-            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={handleFollowUs}>Follow Us</div>
-            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={handlePrivacy}>Privacy</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-gray-400" on:click={navigateToHome}>Home</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-gray-400" on:click={navigateToArchives}>Archives</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-gray-400" on:click={handleFollowUs}>Follow Us</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-gray-400" on:click={handlePrivacy}>Privacy</div>
           </div>
           <div class="menu-section mt-8">
             <h3 class="text-black text-xl font-bold mb-4">Our Games</h3>
             
-            <div class="game-card mb-4 cursor-pointer hover:scale-105 transition-transform" on:click={handleSpotle}>
+            <div class="game-card mb-4 ml-2 cursor-pointer hover:scale-105 transition-transform" on:click={handleSpotle}>
               <div class="game-image w-60 h-24 rounded bg-cover bg-center overflow-hidden">
                 <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
               </div>
               <div class="game-title text-black text-base font-semibold mt-2">Spotle: Guess the Artist</div>
             </div>
             
-            <div class="game-card mb-4 cursor-pointer hover:scale-105 transition-transform" on:click={handleHarmonies}>
+            <div class="game-card mb-4 ml-2 cursor-pointer hover:scale-105 transition-transform" on:click={handleHarmonies}>
               <div class="game-image w-60 h-24 rounded bg-cover bg-center overflow-hidden">
                 <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
               </div>
