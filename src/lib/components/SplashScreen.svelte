@@ -59,26 +59,30 @@
     <div class="flex-1 md:hidden"></div>
 
     <!-- Other Games Section -->
-    <div class="w-full max-w-sm mb-12">
-            <!-- Spotle Card -->
-        <a href="/spotle" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
-            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
-            <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
-            </div>
-            <div class="p-2">
-            <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
-            </div>
-        </a>
+    <div class="w-full max-w-xl mb-12">
+        <h3 class="text-center font-medium text-lg mb-4">more flatwhite games</h3>
         
-        <!-- Harmonies Card -->
-        <a href="/harmonies" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
-            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
-            <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
-            </div>
-            <div class="p-2">
-            <h3 class="font-semibold text-sm">Harmonies: Music Connections</h3>
-            </div>
-        </a>
+        <div class="flex flex-wrap justify-center gap-6">
+            <!-- Spotle Card -->
+            <a href="/spotle" class="w-5/12 bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
+                    <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-2">
+                    <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
+                </div>
+            </a>
+            
+            <!-- Harmonies Card -->
+            <a href="/harmonies" class="w-5/12 bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
+                    <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-2">
+                    <h3 class="font-semibold text-sm">Harmonies: Music Connections</h3>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
   

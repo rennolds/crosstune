@@ -59,7 +59,6 @@
   class="fixed inset-0 transition-all z-40 pointer-events-none"
   class:md:pointer-events-auto={isOpen}
   >
-  <!-- Overlay for mobile only -->
   <div 
     class="absolute inset-0 bg-black bg-opacity-50 transition-opacity md:hidden"
     class:opacity-0={!isOpen}
@@ -68,15 +67,20 @@
   ></div>
 
   <div 
-    class="slide-menu fixed top-0 left-0 h-full bg-white transition-transform duration-300 ease-in-out transform overflow-auto
+    class="slide-menu fixed top-0 md:top-[48px] bg-white transition-transform duration-300 ease-in-out transform overflow-auto
             md:w-80 w-full md:shadow-lg
-            md:top-[48px] md:h-[calc(100vh-48px)]
-            md:pt-0 pt-[calc(48px+50px)]"
-    class:translate-x-0={isOpen}
-    class:-translate-x-full={!isOpen}
+            md:h-[calc(100vh-48px)] h-full
+            md:pt-0 pt-[calc(48px+50px)]
+            md:left-1/2 md:-translate-x-1/2 left-0"
+    class:translate-x-0={isOpen && isMobileDevice}
+    class:opacity-100={isOpen && !isMobileDevice}
+    class:opacity-0={!isOpen && !isMobileDevice}
+    class:-translate-x-full={!isOpen && isMobileDevice}
+    class:pointer-events-auto={isOpen}
+    class:pointer-events-none={!isOpen}
     style="z-index: 50;"
     >
-    <div class="p-6">
+    <div class="p-6 flex flex-col h-full">
       <h2 class="text-2xl font-bold mb-6">Menu</h2>
       
       <!-- Menu Items -->
@@ -120,7 +124,7 @@
       </nav>
       
       <!-- Our Games Section -->
-      <div class="mt-8">
+      <div class="mt-8 flex-grow">
         <h2 class="text-2xl font-bold mb-4">Our games</h2>
         
         <div class="space-y-3">
@@ -145,6 +149,12 @@
           </a>
         </div>
       </div>
+
+      <!-- Company info footer -->
+      <div class="mt-auto pt-6 text-center">
+        <p class="text-sm font-medium text-gray-700">made by flatwhite studios</p>
+        <p class="text-xs text-gray-500">inquiries: company@flatwhite-studios.com</p>
+      </div>
     </div>
   </div>
 </div>
@@ -163,5 +173,14 @@
     z-index: 51;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Desktop animation for center slide menu */
+  @media (min-width: 769px) {
+    .slide-menu {
+      transform: translate(-50%, 0) !important;
+      transition: opacity 0.3s ease-in-out !important;
+      top: 48px;
+    }
   }
 </style>
