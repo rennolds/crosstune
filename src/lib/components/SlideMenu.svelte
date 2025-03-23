@@ -1,11 +1,17 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
+  import { fly } from 'svelte/transition';
+  import { browser } from "$app/environment";
+  
   let { isOpen, onClose } = $props();
   let isMobileDevice = $state(false);
-
+  
+  const dispatch = createEventDispatcher();
+  
   $effect(() => {
     isMobileDevice = window.matchMedia('(max-width: 768px)').matches;
   });
-
+  
   // Modify the click handler to prevent event propagation issues
   function handleClickOutside(event) {
     // Only process clicks outside the menu AND outside the menu button
@@ -18,7 +24,7 @@
       }
     }
   }
-
+  
   $effect(() => {
     if (typeof document !== 'undefined') {
       // Use mousedown instead of click for better mobile experience
@@ -27,7 +33,12 @@
     }
   });
   
-  // Function to handle Home navigation
+  // Close the slide menu
+  function handleClose() {
+    onClose();
+  }
+  
+  // Navigate to different sections
   function navigateToHome() {
     window.location.href = '/';
     if (isMobileDevice) {
@@ -53,125 +64,123 @@
       onClose();
     }
   }
+
+  function handleFollowUs() {
+    if (browser) {
+      window.open("https://twitter.com/soptle_io", "_blank");
+    }
+  }
+  
+  function handlePrivacy() {
+    if (browser) {
+      window.open("./privacy", "_blank");
+    }
+  }
+  
+  function handleHarmonies() {
+    if (browser) {
+      window.open("https://harmonies.io", "_blank");
+    }
+  }
+  
+  function handleSpotle() {
+    if (browser) {
+      window.open("https://spotle.io", "_blank");
+    }
+  }
 </script>
 
 <div 
   class="fixed inset-0 transition-all z-40"
   class:pointer-events-none={!isOpen}
   class:pointer-events-auto={isOpen}
-  >
-
+>
   <div 
-    class="absolute inset-0 bg-black bg-opacity-50 transition-opacity md:hidden"
+    class="absolute inset-0 bg-opacity-70 transition-opacity"
     class:opacity-0={!isOpen}
     class:invisible={!isOpen}
     class:pointer-events-none={!isOpen}
     class:pointer-events-auto={isOpen}
-    onclick={onClose}
+    on:click={handleClose}
   ></div>
 
-
-  <div 
-    class="slide-menu fixed top-0 md:top-[48px] bg-white transition-transform duration-300 ease-in-out transform overflow-auto
-            md:w-80 w-full md:shadow-lg
-            md:h-[calc(100vh-48px)] h-full
-            md:pt-0 pt-[calc(48px+50px)]
+  {#if isOpen}
+    <div 
+      class="slide-menu fixed top-0 md:mt-6 mt-14 md:pt-0 pt-[calc(10px)] bg-white overflow-auto
+            md:w-100 w-full shadow-lg
+            md:h-[calc(100vh-10px)] h-full
             md:left-1/2 md:-translate-x-1/2 left-0"
-    class:translate-x-0={isOpen && isMobileDevice}
-    class:opacity-100={isOpen && !isMobileDevice}
-    class:opacity-0={!isOpen && !isMobileDevice}
-    class:-translate-x-full={!isOpen && isMobileDevice}
-    class:pointer-events-auto={isOpen}
-    class:pointer-events-none={!isOpen}
-    style="z-index: 50;"
+      in:fly={{ x: isMobileDevice ? -300 : 0, y: !isMobileDevice ? -10 : 0, duration: 300, opacity: isMobileDevice ? 1 : 0 }}
+      out:fly={{ x: isMobileDevice ? -300 : 0, y: !isMobileDevice ? -10 : 0, duration: 300, opacity: isMobileDevice ? 1 : 0 }}
+      style="z-index: 50;"
     >
-    <div class="p-6 flex flex-col h-full">
-      <h2 class="text-2xl font-bold mb-6">Menu</h2>
-
-      <!-- Menu Items -->
-      <nav class="space-y-1">
-        <!-- Home navigation button -->
-        <button 
-          class="flex w-full items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
-          onclick={navigateToHome}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1v-7m-6 0L12 5" />
+      <div class="p-5 flex flex-col h-full relative">
+        <div class="menu-close absolute top-4 right-4 cursor-pointer" on:click={handleClose}>
+          <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.2099 1.7625L17.3417 0L9.93491 6.9875L2.52816 0L0.659912 1.7625L8.06666 8.75L0.659912 15.7375L2.52816 17.5L9.93491 10.5125L17.3417 17.5L19.2099 15.7375L11.8032 8.75L19.2099 1.7625Z" fill="white"/>
           </svg>
-          Home
-        </button>
+        </div>
 
-        <!-- Archives navigation button -->
-        <button 
-          class="flex w-full items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
-          onclick={navigateToArchives}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-          </svg>
-          Archives
-        </button>
-
-        <a 
-          href="/privacy" 
-          class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
-          onclick={(e) => {
-            if (isMobileDevice) {
-              onClose();
-            }
-          }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-          Privacy
-        </a>
-      </nav>
-
-      <!-- Our Games Section -->
-      <div class="mt-8 flex-grow">
-        <h2 class="text-2xl font-bold mb-4">Our games</h2>
-
-        <div class="space-y-3">
-          <!-- Spotle Card -->
-          <a href="https://spotle.io" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
-            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
-              <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
+        <div class="menu-content mt-10">
+          <div class="menu-navigation">
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={navigateToHome}>Home</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={navigateToArchives}>Archives</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={handleFollowUs}>Follow Us</div>
+            <div class="menu-item cursor-pointer text-black text-lg py-1 hover:text-purple-400" on:click={handlePrivacy}>Privacy</div>
+          </div>
+          <div class="menu-section mt-8">
+            <h3 class="text-black text-xl font-bold mb-4">Our Games</h3>
+            
+            <div class="game-card mb-4 cursor-pointer hover:scale-105 transition-transform" on:click={handleSpotle}>
+              <div class="game-image w-60 h-24 rounded bg-cover bg-center overflow-hidden">
+                <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
+              </div>
+              <div class="game-title text-black text-base font-semibold mt-2">Spotle: Guess the Artist</div>
             </div>
-            <div class="p-2">
-              <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
+            
+            <div class="game-card mb-4 cursor-pointer hover:scale-105 transition-transform" on:click={handleHarmonies}>
+              <div class="game-image w-60 h-24 rounded bg-cover bg-center overflow-hidden">
+                <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
+              </div>
+              <div class="game-title text-black text-base font-semibold mt-2">Harmonies: Music Connections</div>
             </div>
-          </a>
-
-          <!-- Harmonies Card -->
-          <a href="https://harmonies.io" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
-            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
-              <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
-            </div>
-            <div class="p-2">
-              <h3 class="font-semibold text-sm">Harmonies: Music Connections</h3>
-            </div>
-          </a>
+          </div>
+        </div>
+        
+        <div class="menu-footer mt-auto pt-6 pb-5">
+          <div class="footer-text text-black text-sm">made by flatwhite studios</div>
+          <div class="footer-email text-gray-500 text-xs mt-1">inquiries: company@flatwhite-studios.com</div>
         </div>
       </div>
-
-      <!-- Company info footer -->
-      <div class="mt-auto pt-6 text-center">
-        <p class="text-sm font-medium text-gray-700">made by flatwhite studios</p>
-        <p class="text-xs text-gray-500">inquiries: company@flatwhite-studios.com</p>
-      </div>
     </div>
-  </div>
+  {/if}
 </div>
 
 <style>
   .slide-menu {
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-y; /* Enable vertical scrolling */
+    touch-action: pan-y;
+  }
+
+  /* Pulse animation for the NEW badge */
+  .new-badge {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   /* Make all interactive elements explicitly clickable */
-  .slide-menu a,
+  .slide-menu div[on\:click],
   .slide-menu button {
     position: relative;
     z-index: 51;
@@ -182,9 +191,17 @@
   /* Desktop animation for center slide menu */
   @media (min-width: 769px) {
     .slide-menu {
-      transform: translate(-50%, 0) !important;
-      transition: opacity 0.3s ease-in-out !important;
-      top: 48px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .slide-menu {
+      padding-bottom: 50px;
+    }
+
+    .menu-footer {
+      margin-bottom: 25px;
     }
   }
 </style>
