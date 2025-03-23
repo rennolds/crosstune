@@ -1,9 +1,19 @@
 @import 'tailwindcss';
 
-:root {
-  --app-background: #F3F4F6;
-}
-
 html, body {
   background-color: var(--app-background);
+}
+
+:root {
+  --app-background: #F3F4F6;
+  --text-primary: #000000;
+  --grid-background: #FFFFFF;
+  /* other light theme variables */
+}
+
+.dark {
+  --app-background: #1F2937;
+  --text-primary: #FFFFFF;
+  --grid-background: #374151;
+  /* other dark theme variables */
 }
