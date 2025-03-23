@@ -52,6 +52,7 @@
   
 <main>
     {#if selectedDate}
+        <!-- In archive puzzle mode, show the timer -->
         <Navbar 
             archiveDate={formatCompactDate(selectedDate)} 
             isArchiveMode={true} 
@@ -67,7 +68,8 @@
             onSetRevealFunctions={handleRevealFunctions}
         />
     {:else}
-        <Navbar />
+        <!-- In archive list mode, hide the timer -->
+        <Navbar hideTimer={true} />
         <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
             <div class="flex items-center justify-between mb-6">
                 <h1 class="text-2xl font-bold">Crossword Archives</h1>

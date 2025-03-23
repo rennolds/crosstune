@@ -21,7 +21,8 @@
     onBackToArchives = null,
     onRevealSquare = null,
     onRevealWord = null,
-    onRevealPuzzle = null
+    onRevealPuzzle = null,
+    hideTimer = false // Add new prop to hide the timer
   } = $props();
   
   let isMenuOpen = $state(false);
@@ -39,6 +40,12 @@
   
   function toggleRevealMenu() {
     isRevealMenuOpen = !isRevealMenuOpen;
+  }
+
+  function handleBackToArchives() {
+    if (onBackToArchives) {
+      onBackToArchives();
+    }
   }
   
   function handleRevealSquare() {
@@ -121,9 +128,13 @@
                   </svg>
                 {/if}
               </button>      
-              <div class="ml-4 font-mono text-lg">
-                  {formatTime(getSeconds())}
-              </div>
+              
+              <!-- Only show timer if not in archive list view -->
+              {#if !hideTimer}
+                <div class="ml-4 font-mono text-lg">
+                    {formatTime(getSeconds())}
+                </div>
+              {/if}
               
               <!-- Archive date display (when in archive mode) -->
               {#if isArchiveMode && archiveDate}
@@ -135,23 +146,36 @@
   
           <!-- Right side -->
           <div class="flex items-center space-x-4">
-            <div class="relative">
+            <!-- Back to Archives button (when in archive mode) -->
+            {#if isArchiveMode && onBackToArchives}
               <button 
-                  class="p-2 rounded-md hover:bg-gray-100 font-medium reveal-button"
-                  aria-label="Reveal"
-                  onclick={toggleRevealMenu}
+                onclick={handleBackToArchives}
+                class="p-2 rounded-md hover:bg-gray-100 font-medium"
               >
-                  Reveal
+                Back to Archives
               </button>
-              
-              <RevealMenu 
-                isOpen={isRevealMenuOpen}
-                onClose={() => isRevealMenuOpen = false}
-                onRevealSquare={handleRevealSquare}
-                onRevealWord={handleRevealWord}
-                onRevealPuzzle={handleRevealPuzzle}
-              />
-            </div>
+            {/if}
+            
+            <!-- Only show reveal dropdown if not in archive list view -->
+            {#if !hideTimer}
+              <div class="relative">
+                <button 
+                    class="p-2 rounded-md hover:bg-gray-100 font-medium reveal-button"
+                    aria-label="Reveal"
+                    onclick={toggleRevealMenu}
+                >
+                    Reveal
+                </button>
+                
+                <RevealMenu 
+                  isOpen={isRevealMenuOpen}
+                  onClose={() => isRevealMenuOpen = false}
+                  onRevealSquare={handleRevealSquare}
+                  onRevealWord={handleRevealWord}
+                  onRevealPuzzle={handleRevealPuzzle}
+                />
+              </div>
+            {/if}
 
             {#if getUser()}
               <button 
