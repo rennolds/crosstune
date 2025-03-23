@@ -73,8 +73,12 @@
             onSetRevealFunctions={handleRevealFunctions}
         />
     {:else}
-        <!-- In archive list mode, hide the timer -->
-        <Navbar hideTimer={true} />
+        <!-- In archive list mode, hide the timer but still show we're in archive mode -->
+        <Navbar 
+            hideTimer={true} 
+            isArchiveMode={true}
+            onNavigateToToday={navigateToToday}
+        />
         <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
             <div class="flex items-center justify-between mb-6">
                 <h1 class="text-2xl font-bold">Crosstune Archives</h1>
