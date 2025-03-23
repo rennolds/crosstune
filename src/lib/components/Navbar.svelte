@@ -14,7 +14,7 @@
   import SlideMenu from './SlideMenu.svelte';
   import RevealMenu from './RevealMenu.svelte';
   
-  // Add new props for archive mode and reveal functions
+  // ADD new props for archive mode and reveal functions
   let { 
     archiveDate = null, 
     isArchiveMode = false,
@@ -22,8 +22,6 @@
     onRevealWord = null,
     onRevealPuzzle = null,
     hideTimer = false, // Add new prop to hide the timer
-    onNavigateToArchives = () => window.location.href = '/archives',
-    onNavigateToToday = () => window.location.href = '/'
   } = $props();
   
   let isMenuOpen = $state(false);
@@ -141,35 +139,6 @@
   
           <!-- Right side -->
           <div class="flex items-center space-x-4">
-            <!-- Archive navigation buttons - positioned in the middle -->
-            {#if isArchiveMode}
-              <div class="flex space-x-2 mr-2">
-                <!-- Back to Archives button - Only show when viewing a specific puzzle -->
-                {#if !hideTimer}
-                  <button 
-                    class="px-2 py-1 text-xs md:text-sm flex items-center rounded hover:bg-gray-100" 
-                    onclick={onNavigateToArchives}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                    Archives
-                  </button>
-                {/if}
-                
-                <!-- Back to Today's Crosstune button - Always show in archive mode -->
-                <button 
-                  class="px-2 py-1 text-xs md:text-sm flex items-center rounded hover:bg-gray-100" 
-                  onclick={onNavigateToToday}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
-                  Today
-                </button>
-              </div>
-            {/if}
-
             <!-- Only show reveal dropdown if not in archive list view -->
             {#if !hideTimer}
               <div class="relative">

@@ -16,6 +16,8 @@ export function getEastCoastDate() {
 
 // Check if stored data is from today's puzzle
 function isStoredDataValid() {
+  if (typeof window === 'undefined') return;
+
   const lastPuzzleDate = localStorage.getItem(STORAGE_KEYS.LAST_PUZZLE_DATE);
   const currentDate = getEastCoastDate();
   return lastPuzzleDate === currentDate;
@@ -74,6 +76,8 @@ export function shouldShowSplash() {
 }
 
 export function clearStoredData() {
+  if (typeof window === 'undefined') return;
+
   localStorage.removeItem(STORAGE_KEYS.SPLASH_SHOWN);
   localStorage.removeItem(STORAGE_KEYS.GRID_STATE);
   localStorage.removeItem(STORAGE_KEYS.LAST_PUZZLE_DATE);

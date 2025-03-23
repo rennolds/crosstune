@@ -20,10 +20,28 @@
     let revealWord = $state(null);
     let revealPuzzle = $state(null);
     
+    // Check if there's a date in the URL on load
+    $effect(() => {
+        if (typeof window !== 'undefined') {
+            const params = new URLSearchParams(window.location.search);
+            const dateParam = params.get('date');
+            if (dateParam && crosswords[dateParam]) {
+                loadArchivePuzzle(dateParam);
+            }
+        }
+    });
+    
     function loadArchivePuzzle(date) {
         if (crosswords[date]) {
             selectedDate = date;
             puzzle = crosswords[date];
+            
+            // Update URL with the selected date
+            if (typeof window !== 'undefined') {
+                const url = new URL(window.location);
+                url.searchParams.set('date', date);
+                window.history.pushState({}, '', url);
+            }
         }
     }
     
@@ -47,9 +65,19 @@
     // Navigation functions
     function navigateToArchives() {
         selectedDate = null;
+        // Update URL to remove date parameter
+        if (typeof window !== 'undefined') {
+            const url = new URL(window.location);
+            url.searchParams.delete('date');
+            window.history.pushState({}, '', url);
+        }
     }
     
     function navigateToToday() {
+        window.location.href = '/';
+    }
+    
+    function navigateToHome() {
         window.location.href = '/';
     }
 </script>
@@ -65,6 +93,7 @@
             onRevealPuzzle={revealPuzzle}
             onNavigateToArchives={navigateToArchives}
             onNavigateToToday={navigateToToday}
+            onNavigateToHome={navigateToHome}
         />
         <CrosswordGrid 
             puzzle={puzzle} 
@@ -78,6 +107,7 @@
             hideTimer={true} 
             isArchiveMode={true}
             onNavigateToToday={navigateToToday}
+            onNavigateToHome={navigateToHome}
         />
         <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
             <div class="flex items-center justify-between mb-6">

@@ -27,22 +27,30 @@
     }
   });
   
-  // Add this function to handle the Archives link specifically
-  function handleArchivesClick(e) {
+  // Function to handle Home navigation
+  function navigateToHome() {
+    window.location.href = '/';
+    if (isMobileDevice) {
+      onClose();
+    }
+  }
+  
+  // Function to handle Archives navigation
+  function navigateToArchives() {
     // Get the current path
     const currentPath = window.location.pathname;
     
     // If we're on the /archives route but viewing a specific puzzle
-    if (currentPath === '/archives' && window.location.search === '') {
-      // Only close the menu if we're on mobile
-      if (isMobileDevice) {
-        onClose();
-      }
-    } else {
-      // If we're on a specific puzzle within archives or any other page
-      // Navigate to archives page
+    if (currentPath.startsWith('/archives') && window.location.search !== '') {
+      // Strip the search parameters to go back to archives list
       window.location.href = '/archives';
-      e.preventDefault();
+    } else if (currentPath !== '/archives') {
+      // If we're on any other page (not archives at all)
+      window.location.href = '/archives';
+    }
+    
+    if (isMobileDevice) {
+      onClose();
     }
   }
 </script>
@@ -72,18 +80,28 @@
       <h2 class="text-2xl font-bold mb-6">Menu</h2>
       
       <!-- Menu Items -->
-      <nav class="space-y-4">
-        <!-- Archives link now uses the special handler -->
-        <a 
-          href="/archives" 
-          class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
-          onclick={handleArchivesClick}
+      <nav class="space-y-1">
+        <!-- Home navigation button -->
+        <button 
+          class="flex w-full items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
+          onclick={navigateToHome}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h2a1 1 0 001-1v-7m-6 0L12 5" />
+          </svg>
+          Home
+        </button>
+        
+        <!-- Archives navigation button -->
+        <button 
+          class="flex w-full items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
+          onclick={navigateToArchives}
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
           </svg>
           Archives
-        </a>
+        </button>
         
         <a 
           href="/privacy" 
@@ -94,6 +112,9 @@
             }
           }}
         >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
           Privacy
         </a>
       </nav>

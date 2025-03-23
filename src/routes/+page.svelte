@@ -2,20 +2,17 @@
     import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
     import Navbar from '$lib/components/Navbar.svelte';
     import SplashScreen from '$lib/components/SplashScreen.svelte';
-    import { saveSplashShown } from '$lib/utils/storage';
     
-    let showSplash = $state(true);
+    // Check if we should show splash on load (always show on main route)
+    
     // References to hold the reveal functions
     let revealSquare = $state(null);
     let revealWord = $state(null);
     let revealPuzzle = $state(null);
-
-    // Always show splash screen when landing on the main route
-    // No need for the effect to check localStorage anymore
+    let showSplash = $state(true);
 
     function handlePlay() {
         showSplash = false;
-        saveSplashShown(); // Still save that they've seen it, even though we'll show it again on reload
     }
     
     // Function to receive the reveal functions from CrosswordGrid
@@ -23,6 +20,10 @@
         revealSquare = functions.revealSquare;
         revealWord = functions.revealWord;
         revealPuzzle = functions.revealPuzzle;
+    }
+    
+    function navigateToHome() {
+        window.location.reload();
     }
 </script>
 
@@ -33,7 +34,8 @@
         <Navbar 
             onRevealSquare={revealSquare} 
             onRevealWord={revealWord} 
-            onRevealPuzzle={revealPuzzle} 
+            onRevealPuzzle={revealPuzzle}
+            onNavigateToHome={navigateToHome}
         />
         <CrosswordGrid 
             onSetRevealFunctions={handleRevealFunctions}
