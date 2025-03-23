@@ -43,6 +43,15 @@
         revealWord = functions.revealWord;
         revealPuzzle = functions.revealPuzzle;
     }
+    
+    // Navigation functions
+    function navigateToArchives() {
+        selectedDate = null;
+    }
+    
+    function navigateToToday() {
+        window.location.href = '/';
+    }
 </script>
   
 <main>
@@ -54,6 +63,8 @@
             onRevealSquare={revealSquare} 
             onRevealWord={revealWord} 
             onRevealPuzzle={revealPuzzle}
+            onNavigateToArchives={navigateToArchives}
+            onNavigateToToday={navigateToToday}
         />
         <CrosswordGrid 
             puzzle={puzzle} 

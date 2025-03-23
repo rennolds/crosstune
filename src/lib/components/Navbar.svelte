@@ -21,7 +21,9 @@
     onRevealSquare = null,
     onRevealWord = null,
     onRevealPuzzle = null,
-    hideTimer = false // Add new prop to hide the timer
+    hideTimer = false, // Add new prop to hide the timer
+    onNavigateToArchives = () => window.location.href = '/archives',
+    onNavigateToToday = () => window.location.href = '/'
   } = $props();
   
   let isMenuOpen = $state(false);
@@ -139,6 +141,33 @@
   
           <!-- Right side -->
           <div class="flex items-center space-x-4">
+            <!-- Archive navigation buttons - positioned in the middle -->
+            {#if isArchiveMode && !hideTimer}
+              <div class="flex space-x-2 mr-2">
+                <!-- Back to Archives button -->
+                <button 
+                  class="px-2 py-1 text-xs md:text-sm flex items-center rounded hover:bg-gray-100" 
+                  onclick={onNavigateToArchives}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  Archives
+                </button>
+                
+                <!-- Back to Today's Crosstune button -->
+                <button 
+                  class="px-2 py-1 text-xs md:text-sm flex items-center rounded hover:bg-gray-100" 
+                  onclick={onNavigateToToday}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  Today
+                </button>
+              </div>
+            {/if}
+
             <!-- Only show reveal dropdown if not in archive list view -->
             {#if !hideTimer}
               <div class="relative">
