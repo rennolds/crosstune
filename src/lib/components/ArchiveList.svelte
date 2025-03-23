@@ -6,7 +6,35 @@
     let currentDate = $state(new Date());
     let selectedDate = $state(null);
     let solvedPuzzles = $state(getSolvedPuzzles());
-    console.log(solvedPuzzles);
+    
+    // Parse crossword dates to find earliest and latest available dates
+    const crosswordDates = Object.keys(crosswords).filter(date => {
+        // Filter out any dummy/placeholder entries (like the X entries)
+        return crosswords[date]?.words?.some(word => 
+            word.word !== 'X' && word.audioUrl !== '000');
+    }).sort();
+    
+    const earliestCrosswordDate = crosswordDates.length > 0 ? 
+        new Date(crosswordDates[0]) : new Date();
+    
+    // Use today as the latest date
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    // Initialize to current month, but ensure it's not before earliestCrosswordDate or after today
+    $effect(() => {
+        // If current date is set before earliest crossword date, reset to earliest
+        if (currentDate < earliestCrosswordDate) {
+            currentDate = new Date(earliestCrosswordDate);
+        }
+        
+        // If current date is set after today, reset to today's month
+        const currentMonthYear = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+        const todayMonthYear = new Date(today.getFullYear(), today.getMonth(), 1);
+        if (currentMonthYear > todayMonthYear) {
+            currentDate = new Date(todayMonthYear);
+        }
+    });
 
     // Get days in a month
     function getDaysInMonth(year, month) {
@@ -35,24 +63,42 @@
         // Add days of the month
         for (let day = 1; day <= daysInMonth; day++) {
             const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+            const dateObj = new Date(dateString);
+            
+            // Check if this date is in the future
+            const isFutureDate = dateObj > today;
+            
             days.push({
                 day,
                 date: dateString,
-                isPuzzleAvailable: !!crosswords[dateString]
+                isPuzzleAvailable: !!crosswords[dateString] && !isFutureDate,
+                isFutureDate
             });
         }
         
         return days;
     }
 
-    // Navigate to previous month
+    // Navigate to previous month, but not before earliest crossword date
     function goToPreviousMonth() {
-        currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+        const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+        const earliestMonth = new Date(earliestCrosswordDate.getFullYear(), earliestCrosswordDate.getMonth(), 1);
+        
+        if (newDate >= earliestMonth) {
+            currentDate = newDate;
+        } else {
+            currentDate = earliestMonth;
+        }
     }
 
-    // Navigate to next month
+    // Navigate to next month, but not after current month
     function goToNextMonth() {
-        currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+        const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+        const todayMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+        
+        if (newDate <= todayMonth) {
+            currentDate = newDate;
+        }
     }
 
     // Format date for display
@@ -78,12 +124,33 @@
             onSelectDate(selectedDate);
         }
     }
+    
+    // Check if previous month button should be disabled
+    function isPreviousMonthDisabled() {
+        const previousMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+        const earliestMonth = new Date(earliestCrosswordDate.getFullYear(), earliestCrosswordDate.getMonth(), 1);
+        return previousMonth < earliestMonth;
+    }
+    
+    // Check if next month button should be disabled
+    function isNextMonthDisabled() {
+        const nextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+        const todayMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+        return nextMonth > todayMonth;
+    }
 </script>
 
 <div class="container max-w-md mx-auto md:mt-6">
     <div class="bg-white shadow rounded-lg overflow-hidden">
         <div class="bg-gray-100 px-1 py-1.5 border-b border-gray-200 flex items-center justify-between">
-            <button onclick={goToPreviousMonth} class="p-2 hover:bg-gray-200 rounded-full">
+            <button 
+                onclick={goToPreviousMonth} 
+                class="p-2 rounded-full transition-colors duration-200"
+                class:hover:bg-gray-200={!isPreviousMonthDisabled()}
+                class:opacity-50={isPreviousMonthDisabled()}
+                class:cursor-not-allowed={isPreviousMonthDisabled()}
+                disabled={isPreviousMonthDisabled()}
+            >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z"/>
                     <rect x="12" y="7.24" width="2" height="9.52"/>
@@ -92,7 +159,14 @@
             <h2 class="text-xl font-semibold">
                 {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </h2>
-            <button onclick={goToNextMonth} class="p-2 hover:bg-gray-200 rounded-full">
+            <button 
+                onclick={goToNextMonth} 
+                class="p-2 rounded-full transition-colors duration-200"
+                class:hover:bg-gray-200={!isNextMonthDisabled()}
+                class:opacity-50={isNextMonthDisabled()}
+                class:cursor-not-allowed={isNextMonthDisabled()}
+                disabled={isNextMonthDisabled()}
+            >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z"/>
                     <rect x="10" y="7.24" width="2" height="9.52"/>
@@ -126,6 +200,7 @@
                     class:text-gray-300={!dayObj.isPuzzleAvailable}
                     class:cursor-pointer={dayObj.isPuzzleAvailable}
                     class:cursor-not-allowed={!dayObj.isPuzzleAvailable}
+                    class:opacity-50={dayObj.isFutureDate}
                     disabled={!dayObj.isPuzzleAvailable}
                 >
                     {dayObj.day}
