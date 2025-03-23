@@ -54,43 +54,43 @@
     }
   }
 </script>
-  
+
 <div 
   class="fixed inset-0 transition-all z-40 pointer-events-none"
   class:md:pointer-events-auto={isOpen}
   >
-  <!-- Overlay backdrop with blur effect for desktop -->
+
   <div 
-    class="absolute inset-0 bg-black transition-opacity md:bg-opacity-25 md:backdrop-blur-sm"
+    class="absolute inset-0 bg-black bg-opacity-50 transition-opacity md:hidden"
     class:opacity-0={!isOpen}
     class:invisible={!isOpen}
-    class:pointer-events-none={!isOpen}
-    class:pointer-events-auto={isOpen}
+
+
     onclick={onClose}
   ></div>
 
-  <!-- Mobile: Slide from left, Desktop: Appear in center -->
+
   <div 
-    class="slide-menu fixed bg-white transition-all duration-300 ease-in-out overflow-auto
-            md:w-96 w-full md:max-w-xl
-            md:shadow-xl shadow-lg 
-            md:rounded-lg
-            md:h-auto md:max-h-[90vh] h-full
+    class="slide-menu fixed top-0 md:top-[48px] bg-white transition-transform duration-300 ease-in-out transform overflow-auto
+            md:w-80 w-full md:shadow-lg
+            md:h-[calc(100vh-48px)] h-full
+
+
             md:pt-0 pt-[calc(48px+50px)]
-            md:top-1/2 md:left-1/2 top-0 left-0"
+            md:left-1/2 md:-translate-x-1/2 left-0"
     class:translate-x-0={isOpen && isMobileDevice}
-    class:md:opacity-100={isOpen && !isMobileDevice}
-    class:md:scale-100={isOpen && !isMobileDevice}
+    class:opacity-100={isOpen && !isMobileDevice}
+
     class:opacity-0={!isOpen && !isMobileDevice}
-    class:scale-95={!isOpen && !isMobileDevice}
+
     class:-translate-x-full={!isOpen && isMobileDevice}
     class:pointer-events-auto={isOpen}
     class:pointer-events-none={!isOpen}
-    style="z-index: 50; {!isMobileDevice ? 'transform: translate(-50%, -50%)' : ''}"
+    style="z-index: 50;"
     >
     <div class="p-6 flex flex-col h-full">
       <h2 class="text-2xl font-bold mb-6">Menu</h2>
-      
+
       <!-- Menu Items -->
       <nav class="space-y-1">
         <!-- Home navigation button -->
@@ -103,7 +103,7 @@
           </svg>
           Home
         </button>
-        
+
         <!-- Archives navigation button -->
         <button 
           class="flex w-full items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
@@ -114,7 +114,7 @@
           </svg>
           Archives
         </button>
-        
+
         <a 
           href="/privacy" 
           class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
@@ -130,14 +130,14 @@
           Privacy
         </a>
       </nav>
-      
+
       <!-- Our Games Section -->
       <div class="mt-8 flex-grow">
         <h2 class="text-2xl font-bold mb-4">Our games</h2>
-        
+
         <div class="space-y-3">
           <!-- Spotle Card -->
-          <a href="/spotle" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
+          <a href="https://spotle.io" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
             <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
               <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
             </div>
@@ -145,9 +145,9 @@
               <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
             </div>
           </a>
-          
+
           <!-- Harmonies Card -->
-          <a href="/harmonies" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
+          <a href="https://harmonies.io" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
             <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
               <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
             </div>
@@ -186,8 +186,9 @@
   /* Desktop animation for center slide menu */
   @media (min-width: 769px) {
     .slide-menu {
-      transform: translate(-50%, -50%) !important;
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out !important;
+      transform: translate(-50%, 0) !important;
+      transition: opacity 0.3s ease-in-out !important;
+      top: 48px;
     }
   }
 </style>
