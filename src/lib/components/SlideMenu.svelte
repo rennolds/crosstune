@@ -56,16 +56,17 @@
 </script>
 
 <div 
-  class="fixed inset-0 transition-all z-40 pointer-events-none"
-  class:md:pointer-events-auto={isOpen}
+  class="fixed inset-0 transition-all z-40"
+  class:pointer-events-none={!isOpen}
+  class:pointer-events-auto={isOpen}
   >
 
   <div 
     class="absolute inset-0 bg-black bg-opacity-50 transition-opacity md:hidden"
     class:opacity-0={!isOpen}
     class:invisible={!isOpen}
-
-
+    class:pointer-events-none={!isOpen}
+    class:pointer-events-auto={isOpen}
     onclick={onClose}
   ></div>
 
@@ -74,15 +75,11 @@
     class="slide-menu fixed top-0 md:top-[48px] bg-white transition-transform duration-300 ease-in-out transform overflow-auto
             md:w-80 w-full md:shadow-lg
             md:h-[calc(100vh-48px)] h-full
-
-
             md:pt-0 pt-[calc(48px+50px)]
             md:left-1/2 md:-translate-x-1/2 left-0"
     class:translate-x-0={isOpen && isMobileDevice}
     class:opacity-100={isOpen && !isMobileDevice}
-
     class:opacity-0={!isOpen && !isMobileDevice}
-
     class:-translate-x-full={!isOpen && isMobileDevice}
     class:pointer-events-auto={isOpen}
     class:pointer-events-none={!isOpen}
@@ -171,7 +168,6 @@
   .slide-menu {
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y; /* Enable vertical scrolling */
-    pointer-events: auto !important; /* Ensure clicks work */
   }
 
   /* Make all interactive elements explicitly clickable */
