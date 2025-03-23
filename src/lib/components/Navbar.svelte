@@ -101,7 +101,7 @@
   });
 </script>
 
-<nav class="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50 md:top-0">
+<nav class="bg-white dark:bg-black border-b border-gray-200 fixed top-0 left-0 right-0 z-50 md:top-0">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-12">
           <!-- Left side -->

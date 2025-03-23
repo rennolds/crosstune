@@ -11,7 +11,7 @@
   const symbolRow3 = ['.','!','?','/','(',')',';',':'];  // Added period here too
 </script>
 
-<div class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 bg-gray-100 shadow-lg pb-2">
+<div class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 bg-gray-100 shadow-lg pb-2 dark:text-black">
   <!-- Increased bottom padding -->
   <div class="px-1 pb-2 space-y-2"> <!-- Reduced horizontal padding, increased vertical gap -->
     <!-- Row 1 -->

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 html, body {
   background-color: var(--app-background);
@@ -10,8 +11,8 @@ html, body {
   --app-background: #F3F4F6;
   --text-primary: #000000;
   --grid-background: #FFFFFF;
-  --clue-background: #FFFFFF;
-  --clue-border: #E5E7EB;
+  /* --clue-background: #FFFFFF;
+  --clue-border: #E5E7EB; */
   /* other light theme variables */
 }
 
@@ -19,7 +20,7 @@ html, body {
   --app-background: #1F2937;
   --text-primary: #FFFFFF;
   --grid-background: #374151;
-  --clue-background: #374151;
-  --clue-border: #4B5563;
+  /* --clue-background: #374151;
+  --clue-border: #4B5563; */
   /* other dark theme variables */
 }
