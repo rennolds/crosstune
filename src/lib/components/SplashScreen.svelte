@@ -60,29 +60,25 @@
 
     <!-- Other Games Section -->
     <div class="w-full max-w-sm mb-12">
-        <h3 class="text-black text-center mb-4 text-lg">
-        Play our other games!
-        </h3>
-        
-        <div class="flex flex-col gap-3">
-        <a 
-            href="https://spotle.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full py-3 bg-black/10 text-black rounded-lg hover:bg-black/20 transition-colors text-center"
-        >
-            SPOTLE
+            <!-- Spotle Card -->
+        <a href="/spotle" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
+            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
+            <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-2">
+            <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
+            </div>
         </a>
         
-        <a 
-            href="https://harmonies.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full py-3 bg-black/10 text-black rounded-lg hover:bg-black/20 transition-colors text-center"
-        >
-            HARMONIES
+        <!-- Harmonies Card -->
+        <a href="/harmonies" class="block bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow max-w-[90%]">
+            <div class="aspect-video bg-gray-200 w-full" style="max-height: 120px;">
+            <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-2">
+            <h3 class="font-semibold text-sm">Harmonies: Music Connections</h3>
+            </div>
         </a>
-        </div>
     </div>
 </div>
   

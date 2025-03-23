@@ -27,16 +27,18 @@
     }
 </script>
 
+<Navbar 
+    onRevealSquare={revealSquare} 
+    onRevealWord={revealWord} 
+    onRevealPuzzle={revealPuzzle}
+    hideTimer={showSplash}
+/>
 {#if showSplash}
+    
     <SplashScreen onPlay={handlePlay} />
+
 {:else}
     <main class="min-h-screen">
-        <Navbar 
-            onRevealSquare={revealSquare} 
-            onRevealWord={revealWord} 
-            onRevealPuzzle={revealPuzzle}
-            onNavigateToHome={navigateToHome}
-        />
         <CrosswordGrid 
             onSetRevealFunctions={handleRevealFunctions}
         />
