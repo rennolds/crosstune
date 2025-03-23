@@ -18,7 +18,6 @@
   let { 
     archiveDate = null, 
     isArchiveMode = false,
-    onBackToArchives = null,
     onRevealSquare = null,
     onRevealWord = null,
     onRevealPuzzle = null,
@@ -40,12 +39,6 @@
   
   function toggleRevealMenu() {
     isRevealMenuOpen = !isRevealMenuOpen;
-  }
-
-  function handleBackToArchives() {
-    if (onBackToArchives) {
-      onBackToArchives();
-    }
   }
   
   function handleRevealSquare() {
@@ -146,16 +139,6 @@
   
           <!-- Right side -->
           <div class="flex items-center space-x-4">
-            <!-- Back to Archives button (when in archive mode) -->
-            {#if isArchiveMode && onBackToArchives}
-              <button 
-                onclick={handleBackToArchives}
-                class="p-2 rounded-md hover:bg-gray-100 font-medium"
-              >
-                Back to Archives
-              </button>
-            {/if}
-            
             <!-- Only show reveal dropdown if not in archive list view -->
             {#if !hideTimer}
               <div class="relative">

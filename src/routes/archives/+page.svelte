@@ -27,11 +27,6 @@
         }
     }
     
-    function backToArchives() {
-        selectedDate = null;
-        puzzle = null;
-    }
-
     // Function to format date in a compact way (MM/DD/YY)
     function formatCompactDate(dateString) {
         const date = new Date(dateString);
@@ -56,7 +51,6 @@
         <Navbar 
             archiveDate={formatCompactDate(selectedDate)} 
             isArchiveMode={true} 
-            onBackToArchives={backToArchives}
             onRevealSquare={revealSquare} 
             onRevealWord={revealWord} 
             onRevealPuzzle={revealPuzzle}

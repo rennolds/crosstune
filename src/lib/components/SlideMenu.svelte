@@ -26,6 +26,25 @@
       return () => document.removeEventListener('mousedown', handleClickOutside);
     }
   });
+  
+  // Add this function to handle the Archives link specifically
+  function handleArchivesClick(e) {
+    // Get the current path
+    const currentPath = window.location.pathname;
+    
+    // If we're on the /archives route but viewing a specific puzzle
+    if (currentPath === '/archives' && window.location.search === '') {
+      // Only close the menu if we're on mobile
+      if (isMobileDevice) {
+        onClose();
+      }
+    } else {
+      // If we're on a specific puzzle within archives or any other page
+      // Navigate to archives page
+      window.location.href = '/archives';
+      e.preventDefault();
+    }
+  }
 </script>
   
 <div 
@@ -54,27 +73,29 @@
       
       <!-- Menu Items -->
       <nav class="space-y-4">
-        {#each [
-          { href: '/archives', text: 'Archives', icon: 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4' },
-          { href: '/privacy', text: 'Privacy' },
-        ] as item}
-          <a 
-            href={item.href} 
-            class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
-            onclick={(e) => {
-              if (isMobileDevice) {
-                onClose();
-              }
-            }}
-          >
-            {#if item.icon}
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
-              </svg>
-            {/if}
-            {item.text}
-          </a>
-        {/each}
+        <!-- Archives link now uses the special handler -->
+        <a 
+          href="/archives" 
+          class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
+          onclick={handleArchivesClick}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+          </svg>
+          Archives
+        </a>
+        
+        <a 
+          href="/privacy" 
+          class="flex items-center py-2 hover:bg-gray-100 rounded px-3 transition-colors"
+          onclick={(e) => {
+            if (isMobileDevice) {
+              onClose();
+            }
+          }}
+        >
+          Privacy
+        </a>
       </nav>
       
       <!-- Our Games Section -->
