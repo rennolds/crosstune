@@ -77,6 +77,7 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.SPLASH_SHOWN);
   localStorage.removeItem(STORAGE_KEYS.GRID_STATE);
   localStorage.removeItem(STORAGE_KEYS.LAST_PUZZLE_DATE);
+  localStorage.removeItem(STORAGE_KEYS.TIMER_STATE);
   localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
 }
 
