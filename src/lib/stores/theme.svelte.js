@@ -3,10 +3,23 @@ let isDarkMode = $state(false);
 
 // Initialize the theme from localStorage
 if (typeof window !== 'undefined') {
+  // Check system preference first if no stored preference
   const storedTheme = localStorage.getItem('crosstune_dark_mode');
-  if (storedTheme) {
+  
+  if (storedTheme !== null) {
     isDarkMode = storedTheme === 'true';
-    applyTheme(isDarkMode);
+  } else {
+    // Use system preference as default if available
+    isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  
+  // Apply the theme immediately
+  if (typeof document !== 'undefined') {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }
 }
 
@@ -38,5 +51,8 @@ function applyTheme(dark) {
     } else {
       document.documentElement.classList.remove('dark');
     }
+    
+    // Log for debugging
+    console.log('Dark mode:', dark);
   }
 }
