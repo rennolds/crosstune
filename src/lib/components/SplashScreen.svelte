@@ -7,7 +7,7 @@
     });
 </script>
 
-<div class="fixed inset-0 bg-white flex flex-col items-center px-4">
+<div class="fixed inset-0 bg-white dark:bg-[#222] flex flex-col items-center px-4">
     <div class="pt-22 mt-7.5 md:pt-0 md:flex-1 flex flex-col items-center md:justify-center gap-4">
         <!-- Placeholder logo -->
         <svg width="334" height="141" viewBox="0 0 334 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,14 +42,14 @@
             
         
         <!-- Tagline -->
-        <h2 class="text-black text-xl text-center font-light">
+        <h2 class="text-black dark:text-white text-xl text-center font-light">
             a music crossword!
         </h2>
         
         <!-- Play Button -->
         <button 
             onclick={onPlay}
-            class="rounded-xs mt-8 px-12 py-3 bg-black text-white text-xl font-bold hover:bg-gray-900 transition-colors"
+            class="rounded-xs mt-8 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             >
             Start
         </button>
@@ -69,7 +69,7 @@
                     <img src="/spotle.png" alt="Spotle" class="w-full h-full object-cover" />
                 </div>
                 <div class="p-2">
-                    <h3 class="font-semibold text-sm">Spotle: Guess the Artist</h3>
+                    <h3 class="dark:text-black font-semibold text-sm">Spotle: Guess the Artist</h3>
                 </div>
             </a>
             
@@ -79,7 +79,7 @@
                     <img src="/harmonies.png" alt="Harmonies" class="w-full h-full object-cover" />
                 </div>
                 <div class="p-2">
-                    <h3 class="font-semibold text-sm">Harmonies: Music Connections</h3>
+                    <h3 class="dark:text-black font-semibold text-sm">Harmonies: Music Connections</h3>
                 </div>
             </a>
         </div>
