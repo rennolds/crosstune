@@ -1,4 +1,6 @@
 <script>
+  import { getIsDarkMode } from '$lib/stores/theme.svelte.js';
+  
   let { onKeyPress } = $props();
   let showSymbols = $state(false);
 
@@ -11,14 +13,14 @@
   const symbolRow3 = ['.','!','?','/','(',')',';',':'];  // Added period here too
 </script>
 
-<div class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 dark:bg-gray-800 bg-gray-100 shadow-lg pb-2 dark:text-black">
+<div class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 { getIsDarkMode() ? 'bg-gray-900' : 'bg-gray-100' } shadow-lg pb-2">
   <!-- Increased bottom padding -->
   <div class="px-1 pb-1 pt-1 space-y-2"> <!-- Reduced horizontal padding, increased vertical gap -->
     <!-- Row 1 -->
     <div class="flex gap-1">
       {#each (showSymbols ? symbolRow1 : letterRow1) as key}
         <button
-          class="flex-1 h-12 bg-white dark:bg-gray-200 rounded shadow text-base font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
+          class="flex-1 h-12 bg-white dark:bg-gray-200 text-black rounded shadow text-base font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
           onclick={() => onKeyPress(key)}
         >
           {key}
@@ -30,7 +32,7 @@
     <div class="flex gap-1">
       {#each (showSymbols ? symbolRow2 : letterRow2) as key}
         <button
-          class="flex-1 h-12 bg-white dark:bg-gray-200 rounded shadow text-base font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
+          class="flex-1 h-12 bg-white dark:bg-gray-200 text-black rounded shadow text-base font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
           onclick={() => onKeyPress(key)}
         >
           {key}
@@ -42,7 +44,7 @@
     <div class="flex gap-1">
       <!-- Made toggle and backspace buttons narrower -->
       <button
-        class="w-12 h-12 bg-white dark:bg-gray-200 rounded shadow text-xs font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
+        class="w-12 h-12 bg-white dark:bg-gray-200 text-black rounded shadow text-xs font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
         onclick={() => showSymbols = !showSymbols}
       >
         {showSymbols ? 'ABC' : '123'}
@@ -52,7 +54,7 @@
       <div class="flex-1 flex gap-1">
         {#each (showSymbols ? symbolRow3 : letterRow3) as key}
           <button
-            class="flex-1 h-12 bg-white dark:bg-gray-200 rounded shadow text-base font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
+            class="flex-1 h-12 bg-white dark:bg-gray-200 text-black rounded shadow text-base font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
             onclick={() => onKeyPress(key)}
           >
             {key}
@@ -61,7 +63,7 @@
       </div>
 
       <button
-        class="w-12 h-12 bg-white dark:bg-gray-200 rounded shadow text-xl font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
+        class="w-12 h-12 bg-white dark:bg-gray-200 text-black rounded shadow text-xl font-semibold flex items-center justify-center hover:bg-gray-200 active:bg-gray-300"
         onclick={() => onKeyPress('Backspace')}
       >
         ⌫
