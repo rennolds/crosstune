@@ -81,7 +81,7 @@
 </script>
 
 {#if clue}
-  <div class="fixed bottom-[165px] left-0 right-0 h-13 bg-white border-t border-gray-200 shadow-lg mb-4 dark:text-black">
+  <div class="fixed bottom-[165px] left-0 right-0 h-13 bg-white shadow-lg mb-4 dark:text-black">
     <div 
       class="flex items-center justify-between h-full"
       style="background-color: {clue.color};"

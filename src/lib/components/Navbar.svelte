@@ -101,14 +101,14 @@
   });
 </script>
 
-<nav class="bg-white dark:bg-black border-b border-gray-200 fixed top-0 left-0 right-0 z-50 md:top-0">
+<nav class="bg-white dark:bg-black dark:border-black-800 border-gray-200 fixed top-0 left-0 right-0 z-50 md:top-0">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-12">
           <!-- Left side -->
           <div class="flex items-center">
               <!-- Menu button with improved clickability -->
               <button 
-                class="p-2 rounded-md hover:bg-gray-100 w-10 h-10 flex items-center justify-center" 
+                class="p-2 rounded-md hover:bg-gray-100 w-10 h-10 dark:hover:bg-gray-800 flex items-center justify-center" 
                 aria-label="Menu"
                 onclick={() => isMenuOpen = !isMenuOpen}
                 style="position: relative; z-index: 60;"
@@ -145,7 +145,7 @@
             {#if !hideTimer}
               <div class="relative">
                 <button 
-                    class="p-2 rounded-md hover:bg-gray-100 font-medium reveal-button"
+                    class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium reveal-button"
                     aria-label="Reveal"
                     onclick={toggleRevealMenu}
                 >
@@ -163,7 +163,7 @@
             {/if}
 
             <button 
-            class="p-2 rounded-md hover:bg-gray-100"
+            class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
             aria-label="Toggle dark mode"
             onclick={() => toggleDarkMode()}
             >

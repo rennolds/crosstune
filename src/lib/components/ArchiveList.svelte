@@ -142,11 +142,12 @@
 
 <div class="container max-w-md mx-auto md:mt-6">
     <div class="bg-white shadow rounded-lg overflow-hidden">
-        <div class="bg-gray-100 px-1 py-1.5 border-b border-gray-200 flex items-center justify-between">
+        <div class="bg-gray-100 dark:bg-black px-1 py-1.5 border-b border-gray-200 flex items-center justify-between">
             <button 
                 onclick={goToPreviousMonth} 
                 class="p-2 rounded-full transition-colors duration-200"
                 class:hover:bg-gray-200={!isPreviousMonthDisabled()}
+                class:hover:bg-gray-800={!isPreviousMonthDisabled()}
                 class:opacity-50={isPreviousMonthDisabled()}
                 class:cursor-not-allowed={isPreviousMonthDisabled()}
                 disabled={isPreviousMonthDisabled()}
@@ -163,6 +164,7 @@
                 onclick={goToNextMonth} 
                 class="p-2 rounded-full transition-colors duration-200"
                 class:hover:bg-gray-200={!isNextMonthDisabled()}
+                class:dark:hover:bg-gray-800={!isNextMonthDisabled()}
                 class:opacity-50={isNextMonthDisabled()}
                 class:cursor-not-allowed={isNextMonthDisabled()}
                 disabled={isNextMonthDisabled()}
@@ -174,7 +176,7 @@
             </button>
         </div>
         
-        <div class="grid grid-cols-7 text-center font-medium text-black-300 p-2">
+        <div class="dark:text-black grid grid-cols-7 text-center font-medium text-black-300 p-2">
             {#each ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as day}
                 <div>{day}</div>
             {/each}
@@ -216,7 +218,7 @@
         </span>
         <button 
             onclick={() => handlePlayPuzzle(generateCalendarDays().find(d => d?.date === selectedDate))}
-            class="bg-black text-white text-3xl px-9 py-2 rounded"
+            class="bg-black dark:bg-white dark:text-black text-white text-3xl px-9 py-2 rounded"
             disabled={!selectedDate}
         >
             Start
