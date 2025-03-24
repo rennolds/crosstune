@@ -142,7 +142,7 @@
 
 <div class="container max-w-md mx-auto md:mt-6">
     <div class="bg-white dark:bg-white shadow rounded-lg overflow-hidden">
-        <div class="bg-gray-100 dark:bg-black px-1 py-1.5 border-b flex items-center justify-between">
+        <div class="bg-gray-100 dark:bg-black dark:text-white px-1 py-1.5 border-b flex items-center justify-between">
             <button 
                 onclick={goToPreviousMonth} 
                 class="p-2 rounded-full transition-colors duration-200"
