@@ -111,7 +111,7 @@
         />
         <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
             <div class="flex items-center justify-center mb-6">
-                <h1 class="text-2xl font-bold">Crosstune Archives</h1>
+                <h1 class="text-2xl font-bold dark:text-gray-200">Crosstune Archives</h1>
             </div>
             <ArchiveList 
                 crosswords={crosswords} 

@@ -7,7 +7,7 @@
     });
 </script>
 
-<div class="fixed inset-0 bg-white dark:bg-[#222] flex flex-col items-center px-4">
+<div class="fixed inset-0 bg-gray-200 dark:bg-[#222] flex flex-col items-center px-4">
     <div class="pt-22 mt-7.5 md:pt-0 md:flex-1 flex flex-col items-center md:justify-center gap-4">
         <!-- Placeholder logo -->
         <svg width="334" height="141" viewBox="0 0 334 141" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +60,7 @@
 
     <!-- Other Games Section -->
     <div class="w-full max-w-xl mb-12">
-        <h3 class="text-center font-medium text-lg mb-4">more flatwhite games</h3>
+        <h3 class="text-center font-medium text-lg mb-4 dark:text-white">more flatwhite games</h3>
         
         <div class="flex flex-wrap justify-center gap-6">
             <!-- Spotle Card -->

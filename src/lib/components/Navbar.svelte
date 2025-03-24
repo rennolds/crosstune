@@ -10,7 +10,6 @@
   import { getIsDarkMode, toggleDarkMode } from '$lib/stores/theme.svelte.js';
 
   import { getUser } from '$lib/stores/auth.svelte.js';
-  import { supabase } from '$lib/supabase';
   
   // Import the fixed SlideMenu component
   import SlideMenu from './SlideMenu.svelte';
@@ -28,10 +27,6 @@
   
   let isMenuOpen = $state(false);
   let isRevealMenuOpen = $state(false);
-
-  async function handleSignOut() {
-    await supabase.auth.signOut();
-  }
   
   function formatTime(totalSeconds) {
     const minutes = Math.floor(totalSeconds / 60);

@@ -26,7 +26,7 @@
           <h3 class="text-lg font-medium text-center mb-2">{title}</h3>
         {/if}
         
-        <p class="text-center mb-6">{message}</p>
+        <p class="text-center dark:text-black mb-6">{message}</p>
         
         <div class="flex justify-center space-x-6">
           <button 
