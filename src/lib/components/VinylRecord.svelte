@@ -8,8 +8,8 @@
     let screenWidth = $state(window.innerWidth);
     
     const NORMAL_SPEED = 0.20; // Normal playback speed
-    const SLOWDOWN_FACTOR = 0.965; // Factor to gradually reduce speed (95% each frame)
-    const SPEEDUP_FACTOR = 1.12; // Factor to gradually increase speed (108% each frame)
+    const SLOWDOWN_FACTOR = 0.965; // Factor to gradually reduce speed (96.5% each frame)
+    const SPEEDUP_FACTOR = 1.12; // Factor to gradually increase speed (112% each frame)
     const MIN_SPEED = 0.001; // Speed at which we consider the record "stopped"
     
     // Track screen size changes
@@ -92,15 +92,17 @@
 
     // Compute vinyl size based on screen width
     let vinylSize = $derived(() => {
-        // Make vinyl smaller on smaller screens
+        // Make vinyl appropriately sized based on screen width
         if (screenWidth < 375) {
             return 55; // Very small screens
         } else if (screenWidth < 480) {
             return 65; // Small screens
         } else if (screenWidth < 768) {
             return 70; // Medium screens
+        } else if (screenWidth < 1024) {
+            return 80; // Desktop
         } else {
-            return 80; // Large screens
+            return 85; // Large desktop
         }
     });
 </script>
@@ -139,6 +141,20 @@
 @media (max-width: 480px) {
     .vinyl-container {
         top: 42%; /* Move up slightly on smaller screens */
+    }
+}
+
+/* Desktop specific adjustments */
+@media (min-width: 768px) {
+    .vinyl-container {
+        max-width: 800px; /* Larger max size on desktop */
+    }
+}
+
+/* Large desktop specific adjustments */
+@media (min-width: 1280px) {
+    .vinyl-container {
+        max-width: 900px; /* Even larger max size on large desktops */
     }
 }
 </style>

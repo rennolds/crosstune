@@ -1503,6 +1503,10 @@
       top: 50px;
     }
 
+    .dark.flex.flex-col {
+      padding-bottom: 65px; /* Adjust this value based on the height of your mobile clue */
+    }
+
     :global(.slide-menu-open) {
       pointer-events: none;
     }
