@@ -38,7 +38,7 @@
     <SplashScreen onPlay={handlePlay} />
 
 {:else}
-    <main class="min-h-screen">
+    <main class="dark min-h-screen">
         <CrosswordGrid 
             onSetRevealFunctions={handleRevealFunctions}
         />
