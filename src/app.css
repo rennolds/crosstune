@@ -3,13 +3,13 @@
 
 html, body {
   background-color: var(--app-background);
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 :root {
   --app-background: #F3F4F6;
-  --text-primary: #000000;
+  /* --text-primary: #000000; */
   /* --clue-background: #FFFFFF;
   --clue-border: #E5E7EB; */
   /* other light theme variables */
@@ -17,7 +17,7 @@ html, body {
 
 .dark {
   --app-background: #202020;
-  --text-primary: #FFFFFF;
+  /* --text-primary: #FFFFFF; */
   /* --clue-background: #374151;
   --clue-border: #4B5563; */
   /* other dark theme variables */
