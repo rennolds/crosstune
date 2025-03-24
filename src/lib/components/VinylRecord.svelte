@@ -5,11 +5,24 @@
     let speed = $state(0); // Start with speed at 0
     let lastTime = $state(performance.now());
     let isInitialized = $state(false);
+    let screenWidth = $state(window.innerWidth);
     
     const NORMAL_SPEED = 0.20; // Normal playback speed
     const SLOWDOWN_FACTOR = 0.965; // Factor to gradually reduce speed (95% each frame)
     const SPEEDUP_FACTOR = 1.12; // Factor to gradually increase speed (108% each frame)
-    const MIN_SPEED = 0.001; // Speed at which we cxonsider the record "stopped"
+    const MIN_SPEED = 0.001; // Speed at which we consider the record "stopped"
+    
+    // Track screen size changes
+    $effect(() => {
+        if (typeof window !== 'undefined') {
+            const handleResize = () => {
+                screenWidth = window.innerWidth;
+            };
+            
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
+    });
     
     // Track the vinyl's rotation
     $effect(() => {
@@ -76,10 +89,27 @@
             }
         };
     });
+
+    // Compute vinyl size based on screen width
+    let vinylSize = $derived(() => {
+        // Make vinyl smaller on smaller screens
+        if (screenWidth < 375) {
+            return 55; // Very small screens
+        } else if (screenWidth < 480) {
+            return 65; // Small screens
+        } else if (screenWidth < 768) {
+            return 70; // Medium screens
+        } else {
+            return 80; // Large screens
+        }
+    });
 </script>
   
-<div class="vinyl-container" style="transform: translate(-50%, -50%) rotate({rotation}deg)">
-  <img src="/vinyl.png" alt="Vinyl Record" /> 
+<div 
+    class="vinyl-container" 
+    style="transform: translate(-50%, -50%) rotate({rotation}deg); width: {vinylSize}%;"
+>
+    <img src="/vinyl.png" alt="Vinyl Record" /> 
 </div>
   
 <style>
@@ -87,9 +117,28 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80%; /* Adjust the size as needed */
     max-width: 500px;
     z-index: 1;
     transition: none; /* Remove transition to prevent snap */
+    pointer-events: none; /* Ensure vinyl doesn't interfere with grid interaction */
+}
+
+/* Ensure vinyl image is responsive */
+.vinyl-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 767px) {
+    .vinyl-container {
+        opacity: 0.8; /* Make vinyl slightly transparent on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .vinyl-container {
+        top: 42%; /* Move up slightly on smaller screens */
+    }
 }
 </style>
