@@ -1,7 +1,7 @@
 <script>
     import Navbar from '$lib/components/Navbar.svelte';
     import ArchiveList from '$lib/components/ArchiveList.svelte';
-    import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
+    import CrosswordGrid from '$lib/components/CrosswordGrid2.svelte';
     import crosswords from "$lib/data/crosswords.json";
     
     $effect(() => {
@@ -95,7 +95,7 @@
             onNavigateToToday={navigateToToday}
             onNavigateToHome={navigateToHome}
         />
-        <CrosswordGrid 
+        <CrosswordGrid2 
             puzzle={puzzle} 
             isArchiveMode={true} 
             selectedDate={selectedDate} 

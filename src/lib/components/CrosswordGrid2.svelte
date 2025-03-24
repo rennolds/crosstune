@@ -15,6 +15,8 @@
     isWidgetReady,
   } from "$lib/stores/game.svelte.js";
 
+  import { getIsDarkMode } from '$lib/stores/theme.svelte.js';
+
   import {
     getEastCoastDate,
     loadGridState,
@@ -35,6 +37,7 @@
   } = $props();
 
   let isMobileDevice = $state(false);
+  let isDark = $derived(getIsDarkMode());
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioCtx = new AudioContext();
 
@@ -107,41 +110,75 @@
       .map(() => Array(size.width).fill(null))
   );
 
-  // Only load saved state on mount if not in archive mode
   $effect(() => {
     if (isArchiveMode) {
-      // For archive mode, reset the timer
+      // For archive mode, always reset the timer
       resetTimer();
     } else {
-      const savedGrid = loadGridState();
-      const savedRevealedCells = loadRevealedCells();
-      if (savedGrid) {
-        grid = savedGrid;
-        revealedCells = savedRevealedCells;
-      }
-
-      const savedTimer = loadTimerState();
-      if (savedTimer) {
-        setSeconds(savedTimer);
+      // For daily mode, check if it's a new day
+      const currentDate = getEastCoastDate();
+      const lastPuzzleDateFromStorage = localStorage.getItem('crosstune_last_puzzle_date');
+      
+      // If it's a new day or no previous date exists, reset the timer
+      if (lastPuzzleDateFromStorage !== currentDate) {
+        resetTimer();
+        saveTimerState(0);
+        localStorage.setItem('crosstune_last_puzzle_date', currentDate);
+        
+        // Reset grid and revealed cells for a new day
+        grid = Array(size.height)
+          .fill(null)
+          .map(() => Array(size.width).fill(null));
+        
+        // Initialize input cells
+        for (let y = 0; y < size.height; y++) {
+          for (let x = 0; x < size.width; x++) {
+            if (isInputCell(x, y)) {
+              // If it's a space cell, pre-fill it with a space
+              if (spaceCells.has(`${x},${y}`)) {
+                grid[y][x] = " ";
+              } else {
+                grid[y][x] = "";
+              }
+            }
+          }
+        }
+        
+        // Reset revealed cells
+        revealedCells = new Set();
+        
+        // Save empty grid state
+        saveGridState(grid);
+        saveRevealedCells(revealedCells);
+      } else {
+        // Load saved state for the same day
+        const savedTimer = loadTimerState();
+        if (savedTimer !== null) {
+          setSeconds(savedTimer);
+        }
+        
+        const savedGrid = loadGridState();
+        const savedRevealedCells = loadRevealedCells();
+        
+        if (savedGrid) {
+          grid = savedGrid;
+          revealedCells = new Set(savedRevealedCells);
+        }
       }
     }
   });
 
-  // Only save grid state when it changes if NOT in archive mode
-  $effect(() => {
-    if (!isArchiveMode) {
-      saveRevealedCells(revealedCells);
-      saveGridState(grid);
-    }
-  });
-
-  // Only save timer state when it changes if NOT in archive mode
   $effect(() => {
     if (!isArchiveMode) {
       saveTimerState(getSeconds());
     }
   });
 
+  $effect(() => {
+    if (isArchiveMode && selectedDate) {
+      resetTimer();
+    }
+  });
   // Track currently focused cell
   let focusedX = $state(0);
   let focusedY = $state(0);
@@ -1197,7 +1234,8 @@
 <SoundCloudManager {words} />
 
 <div
-  class="flex flex-col top-50 md:flex-row w-full md:max-w-4xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto md:mt-8"
+  class="dark flex flex-col top-50 md:flex-row w-full md:max-w-4xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto md:mt-8"
+  style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
 >
   <!-- Crossword grid container -->
   <div class="flex-1 h-full md:mr-6">
@@ -1291,24 +1329,26 @@
       onStopAudio={stopAudio}
       {words}
     />
-  {:else}
+  {/if}
+  {#if !isMobileDevice}
     <!-- Clue list container -->
     <div class="w-full md:w-64 md:mt-0 mt-4">
       <!-- Across Clues -->
       <div>
-        <h2 class="text-xl font-bold mb-3">Across</h2>
+        <h2 class="text-xl font-bold mb-3" style="color: {isDark ? 'white' : 'black'}">Across</h2>
         <div class="space-y-3">
           {#each acrossClues as clue}
             <div
-              class="flex items-center gap-2 px-2 py-1 rounded bg-white border border-gray-200 shadow-md"
+              class="flex items-center gap-2 px-2 py-1 rounded shadow-md"
+              style="background-color: {isDark ? clue.color : '#fff'}"
             >
               <div 
-                class="flex items-center justify-center w-8 h-8 rounded text-black"
+                class="flex items-center justify-center w-8 h-8 rounded"
                 style="background-color: {clue.color};"
               >
                 <span class="font-semibold text-lg">{clue.number}A</span>
               </div>
-              <span class="text-md flex-1 ml-2">{clue.textClue}</span>
+              <span class="text-md flex-1 ml-2 dark:text-black">{clue.textClue}</span>
               <button
                 onclick={() => playClue(clue)}
                 disabled={!widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
@@ -1369,11 +1409,12 @@
 
       <!-- Down Clues -->
       <div class="mt-6">
-        <h2 class="text-xl font-bold mb-3">Down</h2>
+        <h3 class="text-xl font-bold mb-3 dark:text-white" style="color: {isDark ? 'white' : 'black'}">Down</h3>
         <div class="space-y-3">
           {#each downClues as clue}
               <div
-              class="flex items-center gap-2 px-2 py-1 rounded bg-white border border-gray-200 shadow-md"
+              class="flex items-center gap-2 px-2 py-1 rounded border-gray-200 shadow-md"
+              style="background-color: {isDark ? clue.color : '#fff'}"
             >
               <div 
                 class="flex items-center justify-center w-8 h-8 rounded text-black"
@@ -1381,7 +1422,7 @@
               >
                 <span class="font-semibold text-lg">{clue.number}A</span>
               </div>
-              <span class="text-md flex-1 ml-2">{clue.textClue}</span>
+              <span class="text-md flex-1 ml-2 dark:text-black">{clue.textClue}</span>
               <button
                   onclick={() => playClue(clue)}
                   disabled={!widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}

@@ -1,5 +1,5 @@
 <script>
-    import CrosswordGrid from '$lib/components/CrosswordGrid.svelte';
+    import CrosswordGrid2 from '$lib/components/CrosswordGrid2.svelte';
     import Navbar from '$lib/components/Navbar.svelte';
     import SplashScreen from '$lib/components/SplashScreen.svelte';
     
@@ -39,7 +39,7 @@
 
 {:else}
     <main class="dark min-h-screen">
-        <CrosswordGrid 
+        <CrosswordGrid2 
             onSetRevealFunctions={handleRevealFunctions}
         />
     </main>
