@@ -7,7 +7,7 @@
     $effect(() => {
         if (typeof document !== 'undefined') {
             document.title = selectedDate ? 
-                `Archive: ${new Date(selectedDate).toLocaleDateString()} - Crosstune` : 
+                `Archive: ${formatCompactDate(selectedDate)} - Crosstune` : 
                 'Archives - Crosstune';
         }
     });
@@ -45,13 +45,18 @@
         }
     }
     
-    // Function to format date in a compact way (MM/DD/YY)
+    // Function to format date in a compact way (MM/DD/YY) using Eastern Time
     function formatCompactDate(dateString) {
-        const date = new Date(dateString);
+        // Create a date object with the date components in Eastern Time
+        // We use noon ET to avoid any potential DST issues
+        const date = new Date(`${dateString}T12:00:00-04:00`);
+        
+        // Format the date for display in Eastern Time
         return date.toLocaleDateString('en-US', {
             month: 'numeric',
             day: 'numeric',
-            year: '2-digit'
+            year: '2-digit',
+            timeZone: 'America/New_York' // Ensure Eastern Time
         });
     }
     
