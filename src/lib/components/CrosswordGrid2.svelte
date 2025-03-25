@@ -1198,8 +1198,8 @@
         setIsCorrect(true);
         finalTime = getSeconds();
         showOverlay = true;
-        if (isArchiveMode) {
-          markPuzzleAsSolved(selectedDate)
+        if (isArchiveMode && selectedDate) {
+          markPuzzleAsSolved(selectedDate);
         } else {
           markPuzzleAsSolved(getEastCoastDate());
         }
@@ -1215,6 +1215,7 @@
       showOverlay = false;
     }
   });
+
 
   let backgroundImageError = $state(false);
 

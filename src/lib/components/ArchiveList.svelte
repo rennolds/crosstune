@@ -101,16 +101,17 @@
         }
     }
 
-    // Format date for display
     function formatDate(dateString) {
         if (!dateString) return '';
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric'
-        });
-    }
+            // Create a date object with the correct timezone handling
+            const date = new Date(`${dateString}T12:00:00-04:00`);
+            return date.toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric',
+                timeZone: 'America/New_York'
+            });
+        }   
 
     function handleDateSelect(dayObj) {
         if (dayObj && dayObj.isPuzzleAvailable) {

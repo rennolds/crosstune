@@ -47,16 +47,13 @@
     
     // Function to format date in a compact way (MM/DD/YY) using Eastern Time
     function formatCompactDate(dateString) {
-        // Create a date object with the date components in Eastern Time
-        // We use noon ET to avoid any potential DST issues
+        if (!dateString) return '';
         const date = new Date(`${dateString}T12:00:00-04:00`);
-        
-        // Format the date for display in Eastern Time
         return date.toLocaleDateString('en-US', {
             month: 'numeric',
             day: 'numeric',
             year: '2-digit',
-            timeZone: 'America/New_York' // Ensure Eastern Time
+            timeZone: 'America/New_York'
         });
     }
     

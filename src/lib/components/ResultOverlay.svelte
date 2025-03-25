@@ -27,11 +27,10 @@
   }
   
   function updateCountdown() {
+    // Get current date in EST
     const now = new Date();
-    const estOffset = -5; // EST offset from UTC (ignoring daylight savings for simplicity)
-    
-    // Convert current time to EST
-    const estTime = new Date(now.getTime() + (now.getTimezoneOffset() + estOffset * 60) * 60000);
+    const estTimeString = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+    const estTime = new Date(estTimeString);
     
     // Set target to next midnight EST
     const tomorrow = new Date(estTime);
