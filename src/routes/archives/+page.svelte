@@ -1,7 +1,7 @@
 <script>
     import Navbar from '$lib/components/Navbar.svelte';
     import ArchiveList from '$lib/components/ArchiveList.svelte';
-    import CrosswordGrid from '$lib/components/CrosswordGrid2.svelte';
+    import CrosswordGrid2 from '$lib/components/CrosswordGrid2.svelte';
     import crosswords from "$lib/data/crosswords.json";
     
     $effect(() => {
