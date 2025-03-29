@@ -1254,7 +1254,7 @@
 
 <SoundCloudManager {words} />
 
-<div class="w-full md:max-w-4xl mx-auto">
+<div class="w-full md:max-w-4xl mx-auto mt-2.5">
   <!-- Date/title container aligned with crossword -->
   <div
     class="hidden md:block text-left mb-4"
@@ -1372,30 +1372,41 @@
         <!-- Across Clues -->
         <div>
           <h2
-            class="text-xl font-bold mb-3"
+            class="text-xl font-bold mb-2"
             style="color: {isDark ? 'white' : 'black'}"
           >
             Across
           </h2>
-          <div class="space-y-3">
+          <div class="space-y-1">
             {#each acrossClues as clue}
               <div
-                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200"
+                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
                 style="background-color: {activeClue &&
                 activeClue.startX === clue.startX &&
                 activeClue.startY === clue.startY &&
                 activeClue.direction === clue.direction
                   ? 'white'
                   : 'transparent'}"
+                onclick={() => {
+                  if (isPlaying) stopAudio();
+                  const event = new CustomEvent("navigationrequest", {
+                    detail: {
+                      startX: clue.startX,
+                      startY: clue.startY,
+                      direction: "across",
+                    },
+                  });
+                  document.dispatchEvent(event);
+                }}
               >
                 <div
-                  class="flex items-center justify-center w-8 h-8 rounded"
+                  class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
                   style="background-color: {clue.color};"
                 >
                   <span class="font-semibold text-lg">{clue.number}A</span>
                 </div>
                 <span
-                  class="text-md flex-1 ml-2"
+                  class="text-md flex-1 ml-2 truncate"
                   style="color: {activeClue &&
                   activeClue.startX === clue.startX &&
                   activeClue.startY === clue.startY &&
@@ -1413,32 +1424,43 @@
         </div>
 
         <!-- Down Clues -->
-        <div class="mt-6">
+        <div class="mt-4">
           <h3
-            class="text-xl font-bold mb-3 dark:text-white"
+            class="text-xl font-bold mb-2"
             style="color: {isDark ? 'white' : 'black'}"
           >
             Down
           </h3>
-          <div class="space-y-3">
+          <div class="space-y-1">
             {#each downClues as clue}
               <div
-                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200"
+                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
                 style="background-color: {activeClue &&
                 activeClue.startX === clue.startX &&
                 activeClue.startY === clue.startY &&
                 activeClue.direction === clue.direction
                   ? 'white'
                   : 'transparent'}"
+                onclick={() => {
+                  if (isPlaying) stopAudio();
+                  const event = new CustomEvent("navigationrequest", {
+                    detail: {
+                      startX: clue.startX,
+                      startY: clue.startY,
+                      direction: "down",
+                    },
+                  });
+                  document.dispatchEvent(event);
+                }}
               >
                 <div
-                  class="flex items-center justify-center w-8 h-8 rounded"
+                  class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
                   style="background-color: {clue.color};"
                 >
                   <span class="font-semibold text-lg">{clue.number}D</span>
                 </div>
                 <span
-                  class="text-md flex-1 ml-2"
+                  class="text-md flex-1 ml-2 truncate"
                   style="color: {activeClue &&
                   activeClue.startX === clue.startX &&
                   activeClue.startY === clue.startY &&
@@ -1458,151 +1480,149 @@
     {/if}
   </div>
   {#if !isMobileDevice && activeClue}
-  <div class="hidden md:block w-full mx-auto mt-4">
-    <div
-      class="flex items-center justify-between h-13 rounded-md shadow-lg bg-white"
-    >
-      <!-- Left Section with clue info -->
-      <div class="flex items-center flex-1 pl-4">
-        <div
-          class="flex items-center justify-center rounded px-3 py-1"
-          style="background-color: {activeClue.color};"
-        >
-          <span class="text-lg font-semibold">
-            {activeClue.number}{activeClue.direction.charAt(0).toUpperCase()}
-          </span>
+    <div class="hidden md:block w-full mx-auto mt-4">
+      <div
+        class="flex items-center justify-between h-13 rounded-md shadow-lg bg-white"
+      >
+        <!-- Left Section with clue info -->
+        <div class="flex items-center flex-1 pl-4">
+          <div
+            class="flex items-center justify-center rounded px-3 py-1"
+            style="background-color: {activeClue.color};"
+          >
+            <span class="text-lg font-semibold">
+              {activeClue.number}{activeClue.direction.charAt(0).toUpperCase()}
+            </span>
+          </div>
+          <span class="text-lg text-black ml-3">{activeClue.textClue}</span>
         </div>
-        <span class="text-lg text-black ml-3">{activeClue.textClue}</span>
-      </div>
 
-      <!-- Right Section with controls -->
-      <div class="flex items-center gap-4 pr-4">
-        <!-- Skip Previous Button -->
-        <button
-          class="p-2"
-          onclick={() => {
-            if (isPlaying) stopAudio();
-            const prevClue = findNextWord(activeClue);
-            const event = new CustomEvent("navigationrequest", {
-              detail: {
-                startX: prevClue.startX,
-                startY: prevClue.startY,
-                direction: prevClue.direction,
-              },
-            });
-            document.dispatchEvent(event);
-          }}
-          aria-label="Previous clue"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
-            viewBox="0 0 24 24"
-            fill="currentColor"
+        <!-- Right Section with controls -->
+        <div class="flex items-center gap-4 pr-4">
+          <!-- Skip Previous Button -->
+          <button
+            class="p-2"
+            onclick={() => {
+              if (isPlaying) stopAudio();
+              const prevClue = findNextWord(activeClue);
+              const event = new CustomEvent("navigationrequest", {
+                detail: {
+                  startX: prevClue.startX,
+                  startY: prevClue.startY,
+                  direction: prevClue.direction,
+                },
+              });
+              document.dispatchEvent(event);
+            }}
+            aria-label="Previous clue"
           >
-            <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z" />
-            <rect x="12" y="7.24" width="2" height="9.52" />
-          </svg>
-        </button>
-
-        <!-- Play/Pause Button -->
-        <button
-          onclick={() => playClue(activeClue)}
-          class="flex items-center justify-center"
-          disabled={!widgetReadyStatus[
-            `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
-          ]}
-        >
-          {#if isPlaying && playingClue === activeClue}
-            <!-- Pause icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              enable-background="new 0 0 20 20"
-              height="40px"
-              viewBox="0 0 20 20"
-              width="40px"
-              fill="black"
-            >
-              <g><rect fill="none" height="20" width="20" /></g>
-              <g>
-                <path
-                  d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
-                />
-              </g>
-            </svg>
-          {:else if !widgetReadyStatus[`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`]}
-            <!-- Loading spinner -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40px"
-              height="40px"
+              class="h-10 w-10"
               viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="animate-spin"
+              fill="currentColor"
             >
-              <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
-              <path
-                d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
-              />
+              <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z" />
+              <rect x="12" y="7.24" width="2" height="9.52" />
             </svg>
-          {:else}
-            <!-- Play icon -->
+          </button>
+
+          <!-- Play/Pause Button -->
+          <button
+            onclick={() => playClue(activeClue)}
+            class="flex items-center justify-center"
+            disabled={!widgetReadyStatus[
+              `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
+            ]}
+          >
+            {#if isPlaying && playingClue === activeClue}
+              <!-- Pause icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 20 20"
+                height="40px"
+                viewBox="0 0 20 20"
+                width="40px"
+                fill="black"
+              >
+                <g><rect fill="none" height="20" width="20" /></g>
+                <g>
+                  <path
+                    d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                  />
+                </g>
+              </svg>
+            {:else if !widgetReadyStatus[`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`]}
+              <!-- Loading spinner -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40px"
+                height="40px"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="animate-spin"
+              >
+                <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+                <path
+                  d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
+                />
+              </svg>
+            {:else}
+              <!-- Play icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 20 20"
+                height="40px"
+                viewBox="0 0 20 20"
+                width="40px"
+                fill="black"
+              >
+                <g><rect fill="none" height="20" width="20" /></g>
+                <g>
+                  <path
+                    d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                  />
+                </g>
+              </svg>
+            {/if}
+          </button>
+
+          <!-- Skip Next Button -->
+          <button
+            class="p-2"
+            onclick={() => {
+              if (isPlaying) stopAudio();
+              const nextClue = findNextWord(activeClue);
+              const event = new CustomEvent("navigationrequest", {
+                detail: {
+                  startX: nextClue.startX,
+                  startY: nextClue.startY,
+                  direction: nextClue.direction,
+                },
+              });
+              document.dispatchEvent(event);
+            }}
+            aria-label="Next clue"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              enable-background="new 0 0 20 20"
-              height="40px"
-              viewBox="0 0 20 20"
-              width="40px"
-              fill="black"
+              class="h-10 w-10"
+              viewBox="0 0 24 24"
+              fill="currentColor"
             >
-              <g><rect fill="none" height="20" width="20" /></g>
-              <g>
-                <path
-                  d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                />
-              </g>
+              <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z" />
+              <rect x="10" y="7.24" width="2" height="9.52" />
             </svg>
-          {/if}
-        </button>
-
-        <!-- Skip Next Button -->
-        <button
-          class="p-2"
-          onclick={() => {
-            if (isPlaying) stopAudio();
-            const nextClue = findNextWord(activeClue);
-            const event = new CustomEvent("navigationrequest", {
-              detail: {
-                startX: nextClue.startX,
-                startY: nextClue.startY,
-                direction: nextClue.direction,
-              },
-            });
-            document.dispatchEvent(event);
-          }}
-          aria-label="Next clue"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z" />
-            <rect x="10" y="7.24" width="2" height="9.52" />
-          </svg>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-{/if}
+  {/if}
 </div>
-
-
 
 {#if showOverlay}
   <ResultOverlay
