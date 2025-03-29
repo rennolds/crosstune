@@ -1237,282 +1237,339 @@
       img.src = puzzle.backgroundImage;
     }
   });
+
+  // Add this function to format the date
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: isArchiveMode ? "numeric" : undefined,
+    });
+  }
+
+  // Get the current date to display
+  const displayDate = selectedDate || getEastCoastDate();
 </script>
 
 <SoundCloudManager {words} />
 
-<div
-  class="dark flex flex-col top-50 md:flex-row w-full md:max-w-4xl mx-auto pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto md:mt-8"
-  style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
->
-  <!-- Crossword grid container -->
-  <div class="flex-1 h-full md:mr-6">
-    <!-- Grid container -->
-    <div
-      class="w-full relative"
-      style="aspect-ratio: {size.width}/{size.height};"
-    >
-      <VinylRecord {isPlaying} />
-
-      <!-- Remove the background image and instead use a transparent background -->
-      <div
-        class="absolute inset-0 grid"
-        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
-      ></div>
-
-      <div
-        class="absolute inset-0 grid p-2"
-        style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
-      >
-        {#each grid as row, y}
-          {#each row as cell, x}
-            <div
-              class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
-              style="
-              {cell === null
-                ? 'background-color: transparent;'
-                : isCellHighlighted(x, y)?.type === 'focused'
-                  ? `background-color: #FFFF00;
-                    outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
-                  : isCellHighlighted(x, y)?.type === 'active'
-                    ? `background-color: ${isCellHighlighted(x, y).color};
-                      outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
-                    : 'background-color: #FFF; outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;'}"
-            >
-              {#if cell !== null}
-                {#if wordNumbers.has(`${x},${y}`)}
-                  <span class="absolute text-xs top-0 left-0.5">
-                    {wordNumbers.get(`${x},${y}`)}
-                  </span>
-                {/if}
-                {#if spaceCells.has(`${x},${y}`)}
-                  <div
-                    class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400"
-                  >
-                    ␣
-                  </div>
-                {:else}
-                  <input
-                    type="text"
-                    maxlength="1"
-                    data-x={x}
-                    data-y={y}
-                    class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none"
-                    class:cursor-text={!isMobileDevice}
-                    class:revealed={revealedCells.has(`${x},${y}`)}
-                    style={revealedCells.has(`${x},${y}`)
-                      ? "color: #FF3333 !important; font-weight: bold !important;"
-                      : ""}
-                    bind:value={grid[y][x]}
-                    onkeydown={(e) => handleKeydown(e, x, y)}
-                    onclick={() => handleCellClick(x, y)}
-                    autocomplete="off"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    spellcheck="false"
-                    {...isMobileDevice
-                      ? {
-                          readonly: true,
-                          inputmode: "none",
-                          tabindex: "-1",
-                        }
-                      : {}}
-                  />
-                {/if}
-              {/if}
-            </div>
-          {/each}
-        {/each}
-      </div>
-    </div>
-    <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
+<div class="w-full md:max-w-4xl mx-auto">
+  <!-- Date/title container aligned with crossword -->
+  <div
+    class="hidden md:block text-left mb-4"
+    style="color: {isDark ? 'white' : 'black'}"
+  >
+    <h1 class="text-xl">
+      <span class="font-bold">{formatDate(displayDate)}</span>
+      {#if puzzle.title}
+        <span> - </span>
+        <span class="italic">{puzzle.title}</span>
+      {/if}
+    </h1>
   </div>
 
-  {#if isMobileDevice}
-    <MobileClue
-      clue={activeClue}
-      onPlay={playClue}
-      {isPlaying}
-      {playingClue}
-      onStopAudio={stopAudio}
-      {words}
-    />
-  {/if}
-  {#if !isMobileDevice}
-    <!-- Clue list container -->
-    <div class="w-full md:w-64 md:mt-0 mt-4">
-      <!-- Across Clues -->
-      <div>
-        <h2
-          class="text-xl font-bold mb-3"
-          style="color: {isDark ? 'white' : 'black'}"
+  <div
+    class="dark flex flex-col top-50 md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto"
+    style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
+  >
+    <!-- Crossword grid container -->
+    <div class="flex-1 h-full md:mr-6">
+      <!-- Grid container -->
+      <div
+        class="w-full relative"
+        style="aspect-ratio: {size.width}/{size.height};"
+      >
+        <VinylRecord {isPlaying} />
+
+        <!-- Remove the background image and instead use a transparent background -->
+        <div
+          class="absolute inset-0 grid"
+          style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
+        ></div>
+
+        <div
+          class="absolute inset-0 grid p-2"
+          style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
         >
-          Across
-        </h2>
-        <div class="space-y-3">
-          {#each acrossClues as clue}
-            <div
-              class="flex items-center gap-2 px-2 py-1 rounded shadow-md"
-              style="background-color: {isDark ? clue.color : '#fff'}"
-            >
+          {#each grid as row, y}
+            {#each row as cell, x}
               <div
-                class="flex items-center justify-center w-8 h-8 rounded"
-                style="background-color: {clue.color};"
+                class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
+                style="
+                {cell === null
+                  ? 'background-color: transparent;'
+                  : isCellHighlighted(x, y)?.type === 'focused'
+                    ? `background-color: #FFFF00;
+                      outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
+                    : isCellHighlighted(x, y)?.type === 'active'
+                      ? `background-color: ${isCellHighlighted(x, y).color};
+                        outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
+                      : 'background-color: #FFF; outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;'}"
               >
-                <span class="font-semibold text-lg">{clue.number}A</span>
-              </div>
-              <span class="text-md flex-1 ml-2 dark:text-black"
-                >{clue.textClue}</span
-              >
-              <button
-                onclick={() => playClue(clue)}
-                disabled={!widgetReadyStatus[
-                  `${clue.startX}:${clue.startY}:${clue.direction}`
-                ]}
-              >
-                {#if isPlaying && playingClue === clue}
-                  <!-- Pause icon - Currently playing -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
-                      /></g
-                    ></svg
-                  >
-                {:else if !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
-                  <!-- Loading spinner - Widget not ready -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40px"
-                    height="40px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="animate-spin"
-                  >
-                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
-                    <path
-                      d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
+                {#if cell !== null}
+                  {#if wordNumbers.has(`${x},${y}`)}
+                    <span class="absolute text-xs top-0 left-0.5">
+                      {wordNumbers.get(`${x},${y}`)}
+                    </span>
+                  {/if}
+                  {#if spaceCells.has(`${x},${y}`)}
+                    <div
+                      class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400"
+                    >
+                      ␣
+                    </div>
+                  {:else}
+                    <input
+                      type="text"
+                      maxlength="1"
+                      data-x={x}
+                      data-y={y}
+                      class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none"
+                      class:cursor-text={!isMobileDevice}
+                      class:revealed={revealedCells.has(`${x},${y}`)}
+                      style={revealedCells.has(`${x},${y}`)
+                        ? "color: #FF3333 !important; font-weight: bold !important;"
+                        : ""}
+                      bind:value={grid[y][x]}
+                      onkeydown={(e) => handleKeydown(e, x, y)}
+                      onclick={() => handleCellClick(x, y)}
+                      autocomplete="off"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      spellcheck="false"
+                      {...isMobileDevice
+                        ? {
+                            readonly: true,
+                            inputmode: "none",
+                            tabindex: "-1",
+                          }
+                        : {}}
                     />
-                  </svg>
-                {:else}
-                  <!-- Play icon - Ready to play -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                      /></g
-                    ></svg
-                  >
+                  {/if}
                 {/if}
-              </button>
-            </div>
+              </div>
+            {/each}
           {/each}
         </div>
+      </div>
+      <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
+    </div>
+
+    {#if isMobileDevice}
+      <MobileClue
+        clue={activeClue}
+        onPlay={playClue}
+        {isPlaying}
+        {playingClue}
+        onStopAudio={stopAudio}
+        {words}
+      />
+    {/if}
+    {#if !isMobileDevice}
+      <!-- Clue list container -->
+      <div class="w-full md:w-64 md:mt-0 mt-4">
+        <!-- Across Clues -->
+        <div>
+          <h2
+            class="text-xl font-bold mb-3"
+            style="color: {isDark ? 'white' : 'black'}"
+          >
+            Across
+          </h2>
+          <div class="space-y-3">
+            {#each acrossClues as clue}
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex items-center justify-center w-8 h-8 rounded"
+                  style="background-color: {clue.color};"
+                >
+                  <span class="font-semibold text-lg">{clue.number}A</span>
+                </div>
+                <span
+                  class="text-md flex-1 ml-2"
+                  style="color: {isDark ? 'white' : 'black'}"
+                  >{clue.textClue}</span
+                >
+              </div>
+            {/each}
+          </div>
+        </div>
+
+        <!-- Down Clues -->
+        <div class="mt-6">
+          <h3
+            class="text-xl font-bold mb-3 dark:text-white"
+            style="color: {isDark ? 'white' : 'black'}"
+          >
+            Down
+          </h3>
+          <div class="space-y-3">
+            {#each downClues as clue}
+              <div class="flex items-center gap-2">
+                <div
+                  class="flex items-center justify-center w-8 h-8 rounded"
+                  style="background-color: {clue.color};"
+                >
+                  <span class="font-semibold text-lg">{clue.number}D</span>
+                </div>
+                <span
+                  class="text-md flex-1 ml-2"
+                  style="color: {isDark ? 'white' : 'black'}"
+                  >{clue.textClue}</span
+                >
+              </div>
+            {/each}
+          </div>
+        </div>
+      </div>
+    {/if}
+  </div>
+</div>
+
+{#if !isMobileDevice && activeClue}
+  <div class="hidden md:block w-[calc(100%-256px-48px)] mx-auto mt-4">
+    <div
+      class="flex items-center justify-between h-13 rounded-md shadow-lg bg-white"
+    >
+      <!-- Left Section with clue info -->
+      <div class="flex items-center flex-1 pl-4">
+        <div
+          class="flex items-center justify-center rounded px-3 py-1"
+          style="background-color: {activeClue.color};"
+        >
+          <span class="text-lg font-semibold">
+            {activeClue.number}{activeClue.direction.charAt(0).toUpperCase()}
+          </span>
+        </div>
+        <span class="text-lg text-black ml-3">{activeClue.textClue}</span>
       </div>
 
-      <!-- Down Clues -->
-      <div class="mt-6">
-        <h3
-          class="text-xl font-bold mb-3 dark:text-white"
-          style="color: {isDark ? 'white' : 'black'}"
+      <!-- Right Section with controls -->
+      <div class="flex items-center gap-4 pr-4">
+        <!-- Skip Previous Button -->
+        <button
+          class="p-2"
+          onclick={() => {
+            if (isPlaying) stopAudio();
+            const prevClue = findNextWord(activeClue);
+            const event = new CustomEvent("navigationrequest", {
+              detail: {
+                startX: prevClue.startX,
+                startY: prevClue.startY,
+                direction: prevClue.direction,
+              },
+            });
+            document.dispatchEvent(event);
+          }}
+          aria-label="Previous clue"
         >
-          Down
-        </h3>
-        <div class="space-y-3">
-          {#each downClues as clue}
-            <div
-              class="flex items-center gap-2 px-2 py-1 rounded border-gray-200 shadow-md"
-              style="background-color: {isDark ? clue.color : '#fff'}"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z" />
+            <rect x="12" y="7.24" width="2" height="9.52" />
+          </svg>
+        </button>
+
+        <!-- Play/Pause Button -->
+        <button
+          onclick={() => playClue(activeClue)}
+          class="flex items-center justify-center"
+          disabled={!widgetReadyStatus[
+            `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
+          ]}
+        >
+          {#if isPlaying && playingClue === activeClue}
+            <!-- Pause icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 20 20"
+              height="40px"
+              viewBox="0 0 20 20"
+              width="40px"
+              fill="black"
             >
-              <div
-                class="flex items-center justify-center w-8 h-8 rounded text-black"
-                style="background-color: {clue.color};"
-              >
-                <span class="font-semibold text-lg">{clue.number}D</span>
-              </div>
-              <span class="text-md flex-1 ml-2 dark:text-black"
-                >{clue.textClue}</span
-              >
-              <button
-                onclick={() => playClue(clue)}
-                disabled={!widgetReadyStatus[
-                  `${clue.startX}:${clue.startY}:${clue.direction}`
-                ]}
-              >
-                {#if isPlaying && playingClue === clue}
-                  <!-- Pause icon - Currently playing -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
-                      /></g
-                    ></svg
-                  >
-                {:else if !widgetReadyStatus[`${clue.startX}:${clue.startY}:${clue.direction}`]}
-                  <!-- Loading spinner - Widget not ready -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40px"
-                    height="40px"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="animate-spin"
-                  >
-                    <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
-                    <path
-                      d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
-                    />
-                  </svg>
-                {:else}
-                  <!-- Play icon - Ready to play -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    enable-background="new 0 0 20 20"
-                    height="40px"
-                    viewBox="0 0 20 20"
-                    width="40px"
-                    fill="#000000"
-                    ><g><rect fill="none" height="20" width="20" /></g><g
-                      ><path
-                        d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                      /></g
-                    ></svg
-                  >
-                {/if}
-              </button>
-            </div>
-          {/each}
-        </div>
+              <g><rect fill="none" height="20" width="20" /></g>
+              <g>
+                <path
+                  d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                />
+              </g>
+            </svg>
+          {:else if !widgetReadyStatus[`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`]}
+            <!-- Loading spinner -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40px"
+              height="40px"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="animate-spin"
+            >
+              <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+              <path
+                d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
+              />
+            </svg>
+          {:else}
+            <!-- Play icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 20 20"
+              height="40px"
+              viewBox="0 0 20 20"
+              width="40px"
+              fill="black"
+            >
+              <g><rect fill="none" height="20" width="20" /></g>
+              <g>
+                <path
+                  d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                />
+              </g>
+            </svg>
+          {/if}
+        </button>
+
+        <!-- Skip Next Button -->
+        <button
+          class="p-2"
+          onclick={() => {
+            if (isPlaying) stopAudio();
+            const nextClue = findNextWord(activeClue);
+            const event = new CustomEvent("navigationrequest", {
+              detail: {
+                startX: nextClue.startX,
+                startY: nextClue.startY,
+                direction: nextClue.direction,
+              },
+            });
+            document.dispatchEvent(event);
+          }}
+          aria-label="Next clue"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z" />
+            <rect x="10" y="7.24" width="2" height="9.52" />
+          </svg>
+        </button>
       </div>
     </div>
-  {/if}
-</div>
+  </div>
+{/if}
 
 {#if showOverlay}
   <ResultOverlay
