@@ -1379,7 +1379,15 @@
           </h2>
           <div class="space-y-3">
             {#each acrossClues as clue}
-              <div class="flex items-center gap-2">
+              <div
+                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200"
+                style="background-color: {activeClue &&
+                activeClue.startX === clue.startX &&
+                activeClue.startY === clue.startY &&
+                activeClue.direction === clue.direction
+                  ? 'white'
+                  : 'transparent'}"
+              >
                 <div
                   class="flex items-center justify-center w-8 h-8 rounded"
                   style="background-color: {clue.color};"
@@ -1388,9 +1396,17 @@
                 </div>
                 <span
                   class="text-md flex-1 ml-2"
-                  style="color: {isDark ? 'white' : 'black'}"
-                  >{clue.textClue}</span
+                  style="color: {activeClue &&
+                  activeClue.startX === clue.startX &&
+                  activeClue.startY === clue.startY &&
+                  activeClue.direction === clue.direction
+                    ? 'black'
+                    : isDark
+                      ? 'white'
+                      : 'black'}"
                 >
+                  {clue.textClue}
+                </span>
               </div>
             {/each}
           </div>
@@ -1406,7 +1422,15 @@
           </h3>
           <div class="space-y-3">
             {#each downClues as clue}
-              <div class="flex items-center gap-2">
+              <div
+                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200"
+                style="background-color: {activeClue &&
+                activeClue.startX === clue.startX &&
+                activeClue.startY === clue.startY &&
+                activeClue.direction === clue.direction
+                  ? 'white'
+                  : 'transparent'}"
+              >
                 <div
                   class="flex items-center justify-center w-8 h-8 rounded"
                   style="background-color: {clue.color};"
@@ -1415,9 +1439,17 @@
                 </div>
                 <span
                   class="text-md flex-1 ml-2"
-                  style="color: {isDark ? 'white' : 'black'}"
-                  >{clue.textClue}</span
+                  style="color: {activeClue &&
+                  activeClue.startX === clue.startX &&
+                  activeClue.startY === clue.startY &&
+                  activeClue.direction === clue.direction
+                    ? 'black'
+                    : isDark
+                      ? 'white'
+                      : 'black'}"
                 >
+                  {clue.textClue}
+                </span>
               </div>
             {/each}
           </div>
@@ -1425,10 +1457,8 @@
       </div>
     {/if}
   </div>
-</div>
-
-{#if !isMobileDevice && activeClue}
-  <div class="hidden md:block w-[calc(100%-256px-48px)] mx-auto mt-4">
+  {#if !isMobileDevice && activeClue}
+  <div class="hidden md:block w-full mx-auto mt-4">
     <div
       class="flex items-center justify-between h-13 rounded-md shadow-lg bg-white"
     >
@@ -1570,6 +1600,9 @@
     </div>
   </div>
 {/if}
+</div>
+
+
 
 {#if showOverlay}
   <ResultOverlay
