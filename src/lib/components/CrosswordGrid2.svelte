@@ -1274,7 +1274,7 @@
     style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
   >
     <!-- Crossword grid container -->
-    <div class="flex-1 h-full md:mr-6">
+    <div class="flex-1 h-full md:mr-3">
       <!-- Grid container -->
       <div
         class="w-full relative"
@@ -1490,11 +1490,11 @@
             class="flex items-center justify-center rounded px-3 py-1"
             style="background-color: {activeClue.color};"
           >
-            <span class="text-lg font-semibold">
+            <span class="text-xl font-semibold">
               {activeClue.number}{activeClue.direction.charAt(0).toUpperCase()}
             </span>
           </div>
-          <span class="text-lg text-black ml-3">{activeClue.textClue}</span>
+          <span class="text-xl text-black ml-3">{activeClue.textClue}</span>
         </div>
 
         <!-- Right Section with controls -->
@@ -1518,7 +1518,7 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
+              class="h-12 w-12"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -1540,9 +1540,9 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 enable-background="new 0 0 20 20"
-                height="40px"
+                height="48px"
                 viewBox="0 0 20 20"
-                width="40px"
+                width="48px"
                 fill="black"
               >
                 <g><rect fill="none" height="20" width="20" /></g>
@@ -1556,8 +1556,8 @@
               <!-- Loading spinner -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40px"
-                height="40px"
+                width="48px"
+                height="48px"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="black"
@@ -1576,9 +1576,9 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 enable-background="new 0 0 20 20"
-                height="40px"
+                height="48px"
                 viewBox="0 0 20 20"
-                width="40px"
+                width="48px"
                 fill="black"
               >
                 <g><rect fill="none" height="20" width="20" /></g>
@@ -1610,7 +1610,7 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
+              class="h-12 w-12"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
