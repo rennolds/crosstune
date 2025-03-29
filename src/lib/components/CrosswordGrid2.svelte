@@ -1385,7 +1385,9 @@
                 activeClue.startX === clue.startX &&
                 activeClue.startY === clue.startY &&
                 activeClue.direction === clue.direction
-                  ? 'white'
+                  ? isDark
+                    ? '#f3f3f3'
+                    : 'white'
                   : 'transparent'}"
                 onclick={() => {
                   if (isPlaying) stopAudio();
@@ -1439,7 +1441,9 @@
                 activeClue.startX === clue.startX &&
                 activeClue.startY === clue.startY &&
                 activeClue.direction === clue.direction
-                  ? 'white'
+                  ? isDark
+                    ? '#f3f3f3'
+                    : 'white'
                   : 'transparent'}"
                 onclick={() => {
                   if (isPlaying) stopAudio();
@@ -1482,7 +1486,10 @@
   {#if !isMobileDevice && activeClue}
     <div class="hidden md:block w-full mx-auto mt-4">
       <div
-        class="flex items-center justify-between h-13 rounded-md shadow-lg bg-white"
+        class="flex items-center justify-between h-13 rounded-md shadow-lg"
+        style="background-color: {isDark
+          ? '#f3f3f3' || 'white'
+          : 'white'}"
       >
         <!-- Left Section with clue info -->
         <div class="flex items-center flex-1 pl-4">
