@@ -10,9 +10,7 @@
 <div
   class="fixed inset-0 bg-gray-200 dark:bg-[#222] flex flex-col items-center px-4"
 >
-  <div
-    class="pt-22 mt-7.5 md:pt-0 md:flex-1 flex flex-col items-center md:justify-center gap-4"
-  >
+  <div class="pt-22 mt-7.5 md:mt-20 flex flex-col items-center gap-4">
     <!-- Placeholder logo -->
     <svg
       width="334"
