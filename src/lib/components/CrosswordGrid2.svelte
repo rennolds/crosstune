@@ -1329,7 +1329,7 @@
                       class:cursor-text={!isMobileDevice}
                       class:revealed={revealedCells.has(`${x},${y}`)}
                       style={revealedCells.has(`${x},${y}`)
-                        ? "color: #FF3333 !important; font-weight: bold !important;"
+                        ? "color: #f3f3f3 !important; font-weight: bold !important;"
                         : ""}
                       bind:value={grid[y][x]}
                       onkeydown={(e) => handleKeydown(e, x, y)}
