@@ -121,7 +121,7 @@
         in:fly={{ x: -400, duration: 300 }}
         out:fly={{ x: -400, duration: 300 }}
       >
-        <div
+        <!-- <div
           class="menu-close absolute top-10 right-4 cursor-pointer"
           on:click={handleClose}
         >
@@ -137,7 +137,7 @@
               fill="white"
             />
           </svg>
-        </div>
+        </div> -->
 
         <div class="menu-content mt-10">
           <div class="menu-navigation">

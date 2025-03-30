@@ -1309,7 +1309,10 @@
               >
                 {#if cell !== null}
                   {#if wordNumbers.has(`${x},${y}`)}
-                    <span class="absolute text-xs top-0 left-0.5">
+                    <span
+                      class="absolute text-[12px] top-0.5 left-1 font-bold z-20 select-none"
+                      style="color: {isDark ? 'black' : 'black'};"
+                    >
                       {wordNumbers.get(`${x},${y}`)}
                     </span>
                   {/if}
@@ -1487,9 +1490,7 @@
     <div class="hidden md:block w-full mx-auto mt-4">
       <div
         class="flex items-center justify-between h-13 rounded-md shadow-lg"
-        style="background-color: {isDark
-          ? '#f3f3f3' || 'white'
-          : 'white'}"
+        style="background-color: {isDark ? '#f3f3f3' || 'white' : 'white'}"
       >
         <!-- Left Section with clue info -->
         <div class="flex items-center flex-1 pl-4">
