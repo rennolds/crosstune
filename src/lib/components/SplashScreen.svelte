@@ -1,10 +1,42 @@
 <script>
+  import { getEastCoastDate } from "$lib/utils/storage";
+  import crosswords from "$lib/data/crosswords.json";
+
   let { onPlay } = $props();
   let isMobileDevice = $state(false);
+
+  // Get today's puzzle or fall back to the first available puzzle
+  function getTodaysPuzzle() {
+    const todayDate = getEastCoastDate();
+    const puzzleDates = Object.keys(crosswords);
+
+    // Try to get today's puzzle
+    if (crosswords[todayDate]) {
+      return crosswords[todayDate];
+    }
+
+    // Fall back to first available puzzle
+    const firstAvailableDate = puzzleDates.sort()[0];
+    return crosswords[firstAvailableDate];
+  }
+
+  const puzzle = getTodaysPuzzle();
+  const todayDate = getEastCoastDate();
 
   $effect(() => {
     isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
   });
+
+  // Format the date
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+  }
 </script>
 
 <div
@@ -106,10 +138,22 @@
       a music crossword!
     </h2>
 
+    <!-- Date and Title -->
+    <div class="mt-4 text-center">
+      <div class="text-black dark:text-white text-lg font-medium">
+        {formatDate(todayDate)}
+      </div>
+      {#if puzzle.title}
+        <div class="text-black dark:text-white text-base mt-0.5 font-light">
+          {puzzle.title}
+        </div>
+      {/if}
+    </div>
+
     <!-- Play Button -->
     <button
       onclick={onPlay}
-      class="rounded-xs mt-8 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
+      class="rounded-xs mt-12 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
     >
       Start
     </button>

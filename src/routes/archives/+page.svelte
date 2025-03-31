@@ -139,7 +139,7 @@
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     .archives-container {
-      padding-top: 0;
+      padding-top: 2.5rem; /* Add 1rem (16px) padding to the top */
       margin-top: 0;
     }
   }
