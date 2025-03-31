@@ -1149,7 +1149,7 @@
       );
 
       // Set timeout duration based on browser - 7 seconds for Safari, 6 seconds for others
-      const timeoutDuration = isSafari ? 31000 : 30000;
+      const timeoutDuration = isSafari ? 7500 : 6500;
       console.log(
         `Using ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
       );
@@ -1332,7 +1332,7 @@
                       class:cursor-text={!isMobileDevice}
                       class:revealed={revealedCells.has(`${x},${y}`)}
                       style={revealedCells.has(`${x},${y}`)
-                        ? "color: #f3f3f3 !important; font-weight: bold !important;"
+                        ? "color: red !important; font-weight: bold !important;"
                         : ""}
                       bind:value={grid[y][x]}
                       onkeydown={(e) => handleKeydown(e, x, y)}
