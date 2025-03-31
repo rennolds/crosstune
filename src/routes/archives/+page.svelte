@@ -9,6 +9,24 @@
       document.title = selectedDate
         ? `Archive: ${formatCompactDate(selectedDate)} - Crosstune`
         : "Archives - Crosstune";
+
+      let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (!metaThemeColor) {
+        metaThemeColor = document.createElement("meta");
+        metaThemeColor.name = "theme-color";
+        document.head.appendChild(metaThemeColor);
+      }
+
+      const isDarkMode = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      metaThemeColor.content = isDarkMode ? "#202020" : "#ffffff";
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          metaThemeColor.content = e.matches ? "#202020" : "#ffffff";
+        });
     }
   });
 
