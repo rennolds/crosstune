@@ -1149,7 +1149,7 @@
       );
 
       // Set timeout duration based on browser - 7 seconds for Safari, 6 seconds for others
-      const timeoutDuration = isSafari ? 7000 : 6000;
+      const timeoutDuration = isSafari ? 31000 : 30000;
       console.log(
         `Using ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
       );
