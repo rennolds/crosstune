@@ -1310,7 +1310,7 @@
                 {#if cell !== null}
                   {#if wordNumbers.has(`${x},${y}`)}
                     <span
-                      class="absolute text-[12px] top-0.5 left-1 font-bold z-20 select-none"
+                      class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none"
                       style="color: {isDark ? 'black' : 'black'};"
                     >
                       {wordNumbers.get(`${x},${y}`)}
