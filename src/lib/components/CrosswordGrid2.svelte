@@ -1348,9 +1348,9 @@
                         : {}}
                     />
                     {#if revealedCells.has(`${x},${y}`)}
-                      <div class="absolute top-0 right-0 w-5 h-0">
+                      <div class="absolute top-0 right-0 w-3 h-0 md:w-5">
                         <div
-                          class="w-0 h-0 border-t-[10px] border-t-red-500 border-l-[6px] border-l-red-500 border-b-[6px] border-b-transparent border-r-[10px] border-r-transparent transform rotate-90 translate-x-[4px] -translate-y-[0px]"
+                          class="w-0 h-0 border-t-[6px] md:border-t-[10px] border-t-red-500 border-l-[4px] md:border-l-[6px] border-l-red-500 border-b-[4px] md:border-b-[6px] border-b-transparent border-r-[6px] md:border-r-[10px] border-r-transparent transform rotate-90 translate-x-[2px] md:translate-x-[4px] -translate-y-[0px]"
                         ></div>
                       </div>
                     {/if}
@@ -1691,11 +1691,15 @@
   /* Remove the old revealed styles since we're using the triangle flag now */
   input.revealed {
     color: inherit !important;
-    font-weight: normal !important;
+    font-weight: bold !important;
+    font-size: 21px !important;
+    font-family: inherit !important;
   }
 
   .revealed {
     color: inherit !important;
-    font-weight: normal !important;
+    font-weight: bold !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
   }
 </style>
