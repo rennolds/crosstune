@@ -4,7 +4,8 @@ const STORAGE_KEYS = {
     TIMER_STATE: 'crosstune_timer_state',
     LAST_PUZZLE_DATE: 'crosstune_last_puzzle_date',
     REVEALED_CELLS: 'crosstune_revealed_cells',
-    SOLVED_PUZZLES: 'crosstune_solved_puzzles'
+    SOLVED_PUZZLES: 'crosstune_solved_puzzles',
+    PUZZLE_VERSION: 'crosstune_puzzle_version'
 };
 // Helper to get East Coast date in YYYY-MM-DD format 
 export function getEastCoastDate() {
@@ -23,12 +24,13 @@ function isStoredDataValid() {
   return lastPuzzleDate === currentDate;
 }
 
-export function saveGridState(grid) {
+export function saveGridState(grid, puzzleVersion) {
   if (typeof window === 'undefined') return;
   
   const currentDate = getEastCoastDate();
   localStorage.setItem(STORAGE_KEYS.GRID_STATE, JSON.stringify(grid));
   localStorage.setItem(STORAGE_KEYS.LAST_PUZZLE_DATE, currentDate);
+  localStorage.setItem(STORAGE_KEYS.PUZZLE_VERSION, puzzleVersion);
 }
 
 export function loadGridState() {
@@ -83,6 +85,7 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.LAST_PUZZLE_DATE);
   localStorage.removeItem(STORAGE_KEYS.TIMER_STATE);
   localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
+  localStorage.removeItem(STORAGE_KEYS.PUZZLE_VERSION);
 }
 
 export function saveRevealedCells(revealedCells) {
@@ -134,4 +137,12 @@ export function getSolvedPuzzles() {
  */
 export function isPuzzleSolved(date) {
   return getSolvedPuzzles().includes(date);
+}
+
+// Add new function to check puzzle version
+export function isPuzzleVersionValid(currentVersion) {
+  if (typeof window === 'undefined') return true;
+  
+  const storedVersion = localStorage.getItem(STORAGE_KEYS.PUZZLE_VERSION);
+  return storedVersion === currentVersion;
 }

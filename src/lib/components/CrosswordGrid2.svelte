@@ -26,6 +26,7 @@
     saveRevealedCells,
     loadRevealedCells,
     markPuzzleAsSolved,
+    isPuzzleVersionValid,
   } from "$lib/utils/storage";
 
   // New props for archive mode
@@ -117,14 +118,17 @@
       // For archive mode, always reset the timer
       resetTimer();
     } else {
-      // For daily mode, check if it's a new day
+      // For daily mode, check if it's a new day or if the puzzle version has changed
       const currentDate = getEastCoastDate();
       const lastPuzzleDateFromStorage = localStorage.getItem(
         "crosstune_last_puzzle_date"
       );
 
-      // If it's a new day or no previous date exists, reset the timer
-      if (lastPuzzleDateFromStorage !== currentDate) {
+      // If it's a new day or no previous date exists, or if the puzzle version has changed
+      if (
+        lastPuzzleDateFromStorage !== currentDate ||
+        !isPuzzleVersionValid(puzzle.version)
+      ) {
         resetTimer();
         saveTimerState(0);
         localStorage.setItem("crosstune_last_puzzle_date", currentDate);
@@ -151,8 +155,8 @@
         // Reset revealed cells
         revealedCells = new Set();
 
-        // Save empty grid state
-        saveGridState(grid);
+        // Save empty grid state with current version
+        saveGridState(grid, puzzle.version);
         saveRevealedCells(revealedCells);
       } else {
         // Load saved state for the same day
