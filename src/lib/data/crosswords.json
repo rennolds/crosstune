@@ -1,4 +1,114 @@
 {
+  "2025-03-31": {
+    "title": "All things Aussie",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "RIPTIDE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "74958037",
+        "startAt": "0:20"
+      },
+      {
+        "word": "SIA",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "258025366",
+        "startAt": "0:20"
+      },
+      {
+        "word": "IMPALA",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "This artist shares their name with a medium-sized African mammal",
+        "audioUrl": "256241332",
+        "startAt": "0:20"
+      },
+      {
+        "word": "DOWNUNDER",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "253631171",
+        "startAt": "0:20"
+      },
+      {
+        "word": "KYLIE",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First name of this pop icon",
+        "audioUrl": "256059800",
+        "startAt": "0:20"
+      },
+      {
+        "word": "STAY",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "1082723470",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ACDC",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Name of this Australian band",
+        "audioUrl": "256075003",
+        "startAt": "0:20"
+      },
+      {
+        "word": "AMNESIA",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Medical condition that this song gets its name from ",
+        "audioUrl": "256195315",
+        "startAt": "0:20"
+      },
+      {
+        "word": "HELL",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Destination in this song",
+        "audioUrl": "256074947",
+        "startAt": "0:20"
+      },
+      {
+        "word": "TROY",
+        "startX": 10,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist First Name",
+        "audioUrl": "1564144813",
+        "startAt": "0:20"
+      }
+    ]
+  },
   "2025-03-25": {
     "title": "The Eagles",
     "size": {
