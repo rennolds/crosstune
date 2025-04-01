@@ -1328,12 +1328,10 @@
                       maxlength="1"
                       data-x={x}
                       data-y={y}
-                      class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none"
+                      class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none relative"
                       class:cursor-text={!isMobileDevice}
                       class:revealed={revealedCells.has(`${x},${y}`)}
-                      style={revealedCells.has(`${x},${y}`)
-                        ? "color: red !important; font-weight: bold !important;"
-                        : ""}
+                      style=""
                       bind:value={grid[y][x]}
                       onkeydown={(e) => handleKeydown(e, x, y)}
                       onclick={() => handleCellClick(x, y)}
@@ -1349,6 +1347,13 @@
                           }
                         : {}}
                     />
+                    {#if revealedCells.has(`${x},${y}`)}
+                      <div class="absolute top-0 right-0 w-5 h-0">
+                        <div
+                          class="w-0 h-0 border-t-[10px] border-t-red-500 border-l-[6px] border-l-red-500 border-b-[6px] border-b-transparent border-r-[10px] border-r-transparent transform rotate-90 translate-x-[4px] -translate-y-[0px]"
+                        ></div>
+                      </div>
+                    {/if}
                   {/if}
                 {/if}
               </div>
@@ -1683,14 +1688,14 @@
     }
   }
 
+  /* Remove the old revealed styles since we're using the triangle flag now */
   input.revealed {
-    color: #ff3333 !important; /* Bright red color */
-    font-weight: bold !important;
+    color: inherit !important;
+    font-weight: normal !important;
   }
 
-  /* For added emphasis, you could also add */
   .revealed {
-    color: #ff3333 !important;
-    font-weight: bold !important;
+    color: inherit !important;
+    font-weight: normal !important;
   }
 </style>
