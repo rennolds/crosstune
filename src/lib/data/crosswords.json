@@ -103,7 +103,7 @@
         "startY": 4,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Song Title",
+        "textClue": "Artist First Name",
         "audioUrl": "1564144813",
         "startAt": "0:20"
       }
