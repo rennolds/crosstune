@@ -180,7 +180,7 @@
               >
                 <img
                   src="/spotle.png"
-                  alt="Spotle"
+                  alt="Spotle Game"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -200,7 +200,7 @@
               >
                 <img
                   src="/harmonies.png"
-                  alt="Harmonies"
+                  alt="Harmonies Game"
                   class="w-full h-full object-cover"
                 />
               </div>
