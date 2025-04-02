@@ -876,10 +876,8 @@
       case " ":
       case "Space":
         event.preventDefault();
-        if (currentDirection === "across") {
-          moveFocus(x + 1, y);
-        } else {
-          moveFocus(x, y + 1);
+        if (activeClue) {
+          playClue(activeClue);
         }
         break;
       case "Backspace":

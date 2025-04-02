@@ -27,6 +27,7 @@
 
   let isMenuOpen = $state(false);
   let isRevealMenuOpen = $state(false);
+  let isHelpOverlayOpen = $state(false);
 
   function formatTime(totalSeconds) {
     const minutes = Math.floor(totalSeconds / 60);
@@ -59,10 +60,14 @@
     }
   }
 
+  function toggleHelpOverlay() {
+    isHelpOverlayOpen = !isHelpOverlayOpen;
+  }
+
   // Toggle body class for mobile scroll lock
   $effect(() => {
     if (typeof window !== "undefined") {
-      if (isMenuOpen) {
+      if (isMenuOpen || isHelpOverlayOpen) {
         document.body.classList.add("menu-open");
       } else {
         document.body.classList.remove("menu-open");
@@ -223,6 +228,27 @@
           {/if}
         </button>
 
+        <button
+          class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+          aria-label="Help"
+          onclick={toggleHelpOverlay}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </button>
+
         {#if getUser()}
           <button
             onclick={handleSignOut}
@@ -235,6 +261,89 @@
     </div>
   </div>
 </nav>
+
+<!-- Help Overlay -->
+{#if isHelpOverlayOpen}
+  <div class="fixed inset-0 z-50 flex items-center justify-center">
+    <div
+      class="bg-white dark:bg-[#202020] rounded-lg p-6 max-w-2xl w-full mx-4 relative shadow-lg border"
+    >
+      <button
+        class="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400"
+        onclick={toggleHelpOverlay}
+        aria-label="Close help"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+        How to Play
+      </h2>
+
+      <div class="space-y-4 text-gray-700 dark:text-gray-300">
+        <li>
+          Like any other crossword, but each word is related to music. Press
+          <span class="inline-flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+              />
+            </svg>
+            or SPACE to listen to the audio clue.
+          </span>
+        </li>
+        <li>
+          Use the audio clues along with the text clue to figure out the word!
+        </li>
+        <li>The puzzle will be checked when completed.</li>
+
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">
+            Controls
+          </h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>TAB and ENTER navigate to the next word</li>
+            <li>SPACE will play the track associated with the current word</li>
+            <li>Arrow keys navigate to the next or previous cell</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-900 dark:text-white"></h3>
+          <ul class="list-disc pl-5 space-y-2"></ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">
+            Hints
+          </h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Use the Reveal button for help if you're stuck</li>
+          </ul>
+        </div>
+        <p>Play a new crosstune every day!</p>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <SlideMenu isOpen={isMenuOpen} onClose={() => (isMenuOpen = false)} />
 
