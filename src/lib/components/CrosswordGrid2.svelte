@@ -1259,7 +1259,7 @@
 
 <SoundCloudManager {words} />
 
-<div class="w-full md:max-w-4xl mx-auto mt-2.5">
+<div class="w-full md:max-w-4xl mx-auto mt-0">
   <!-- Date/title container aligned with crossword -->
   <div
     class="hidden md:block text-left mb-4"
@@ -1275,7 +1275,7 @@
   </div>
 
   <div
-    class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5"
+    class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
     style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
   >
     <!-- Crossword grid container -->
