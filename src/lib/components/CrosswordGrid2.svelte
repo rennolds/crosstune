@@ -1259,7 +1259,7 @@
 
 <SoundCloudManager {words} />
 
-<div class="w-full md:max-w-4xl mx-auto mt-0">
+<div class="w-full md:max-w-4xl mx-auto mt-2.5">
   <!-- Date/title container aligned with crossword -->
   <div
     class="hidden md:block text-left mb-4"

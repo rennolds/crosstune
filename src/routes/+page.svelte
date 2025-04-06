@@ -41,7 +41,7 @@
   <SplashScreen onPlay={handlePlay} />
 {:else}
   <main class="dark min-h-screen flex flex-col">
-    <div class="w-full h-[50px]">
+    <div class="w-full h-[50px] md:h-0">
       <Ramp PUB_ID={PUBLISHER_ID} {WEBSITE_ID} />
     </div>
     <div class="flex-1 pt-0 md:pt-0">

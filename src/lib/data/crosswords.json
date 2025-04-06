@@ -1,6 +1,6 @@
 {
   "2025-04-06": {
-    "version": "1.0.5",
+    "version": "1.0.6",
     "title": "Super Seventies",
     "size": {
       "width": 12,
@@ -11,7 +11,7 @@
       {
         "word": "JOEL",
         "startX": 2,
-        "startY": 1,
+        "startY": 0,
         "direction": "across",
         "color": "#FE9C9C",
         "textClue": "Artist Name",
@@ -21,7 +21,7 @@
       {
         "word": "RUN",
         "startX": 9,
-        "startY": 3,
+        "startY": 2,
         "direction": "across",
         "color": "#28D66A",
         "textClue": "Birthed for what reason?",
@@ -31,7 +31,7 @@
       {
         "word": "SEPTEMBER",
         "startX": 1,
-        "startY": 4,
+        "startY": 3,
         "direction": "across",
         "color": "#FFCEFD",
         "textClue": "Song Title",
@@ -41,7 +41,7 @@
       {
         "word": "YUSUF",
         "startX": 6,
-        "startY": 7,
+        "startY": 6,
         "direction": "across",
         "color": "#FF5B5E",
         "textClue": "The artist formally known as Cat Stevens",
@@ -51,7 +51,7 @@
       {
         "word": "SEGER",
         "startX": 0,
-        "startY": 8,
+        "startY": 7,
         "direction": "across",
         "color": "#568EFF",
         "textClue": "Artist Name",
@@ -61,7 +61,7 @@
       {
         "word": "ABBA",
         "startX": 6,
-        "startY": 9,
+        "startY": 8,
         "direction": "across",
         "color": "#FFB34B",
         "textClue": "Artist Name",
@@ -71,7 +71,7 @@
       {
         "word": "JOLENE",
         "startX": 2,
-        "startY": 1,
+        "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "Song Title",
@@ -81,7 +81,7 @@
       {
         "word": "TMHCR",
         "startX": 4,
-        "startY": 4,
+        "startY": 3,
         "direction": "down",
         "color": "#FE9C9C",
         "textClue": "Acronym of this song",
@@ -91,7 +91,7 @@
       {
         "word": "BARRACUDA",
         "startX": 9,
-        "startY": 1,
+        "startY": 0,
         "direction": "down",
         "color": "#28D66A",
         "textClue": "Song Title shares name with this fish",
@@ -101,7 +101,7 @@
       {
         "word": "FUNKY",
         "startX": 11,
-        "startY": 1,
+        "startY": 0,
         "direction": "down",
         "color": "#FFCEFD",
         "textClue": "What kind of music?",
