@@ -140,7 +140,6 @@
       width: 85%;
       height: 85%;
       opacity: 0.8;
-      top: 42%;
     }
   }
 

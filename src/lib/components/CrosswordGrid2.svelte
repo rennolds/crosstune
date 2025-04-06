@@ -1653,26 +1653,43 @@
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile */
   @media (max-width: 768px) {
-    :global(body) {
+    /* Remove fixed body positioning that might interfere */
+    /* :global(body) {
       overflow: hidden;
       position: fixed;
       width: 100%;
       height: 100%;
-      top: 50px;
-    }
+      /* top: 50px; /* Removed */
 
+    /* Main component wrapper on mobile */
     .dark.flex.flex-col {
-      height: calc(
-        100vh - 50px - 65px - 200px
-      ); /* Adjust based on ad space and keyboard height */
+      height: 100%; /* Fill parent provided by +page.svelte's flex-1 div */
       display: flex;
       flex-direction: column;
+      padding-top: 1rem; /* Add padding top for mobile */
+    }
+
+    /* The flex container holding the grid */
+    .flex-1.w-full {
+      flex: 1 1 auto; /* Grow and shrink to fill available vertical space */
+      min-height: 0; /* Allow shrinking within flex column */
+      display: flex; /* Center the grid inside */
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; /* Prevent the grid overflowing this container */
+    }
+
+    /* Add constraints for the grid's aspect-ratio wrapper */
+    .w-full.relative[style*="aspect-ratio"] {
+      max-width: 100%;
+      max-height: 100%;
+      /* The inline aspect-ratio style combined with max constraints will size it */
     }
 
     :global(.slide-menu-open) {
       pointer-events: none;
     }
-  }
+  } /* End of media query */
 
   .cursor-text {
     cursor: text;
