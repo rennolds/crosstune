@@ -1666,7 +1666,6 @@
       height: 100%; /* Fill parent provided by +page.svelte's flex-1 div */
       display: flex;
       flex-direction: column;
-      padding-top: 1rem; /* Add padding top for mobile */
     }
 
     /* The flex container holding the grid */

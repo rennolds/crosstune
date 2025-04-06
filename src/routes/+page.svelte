@@ -44,7 +44,7 @@
     <div class="w-full">
       <Ramp PUB_ID={PUBLISHER_ID} {WEBSITE_ID} />
     </div>
-    <div class="flex-1">
+    <div class="flex-1 pt-4">
       <CrosswordGrid2 onSetRevealFunctions={handleRevealFunctions} />
     </div>
   </main>
