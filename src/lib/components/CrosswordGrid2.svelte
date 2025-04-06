@@ -1242,11 +1242,14 @@
 
   // Add this function to format the date
   function formatDate(dateString) {
-    const date = new Date(dateString);
+    if (!dateString) return "";
+    const date = new Date(`${dateString}T12:00:00-04:00`);
     return date.toLocaleDateString("en-US", {
+      weekday: "long",
       month: "long",
       day: "numeric",
       year: isArchiveMode ? "numeric" : undefined,
+      timeZone: "America/New_York",
     });
   }
 
@@ -1272,11 +1275,11 @@
   </div>
 
   <div
-    class="dark flex flex-col top-50 md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5 h-[calc(100vh-48px-50px-165px)] md:h-auto"
+    class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-1.5"
     style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
   >
     <!-- Crossword grid container -->
-    <div class="flex-1 h-full md:mr-3">
+    <div class="flex-1 w-full">
       <!-- Grid container -->
       <div
         class="w-full relative"
@@ -1363,7 +1366,6 @@
           {/each}
         </div>
       </div>
-      <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
     </div>
 
     {#if isMobileDevice}
@@ -1375,6 +1377,7 @@
         onStopAudio={stopAudio}
         {words}
       />
+      <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
     {/if}
     {#if !isMobileDevice}
       <!-- Clue list container -->
@@ -1659,7 +1662,11 @@
     }
 
     .dark.flex.flex-col {
-      padding-bottom: 65px; /* Adjust this value based on the height of your mobile clue */
+      height: calc(
+        100vh - 50px - 65px - 200px
+      ); /* Adjust based on ad space and keyboard height */
+      display: flex;
+      flex-direction: column;
     }
 
     :global(.slide-menu-open) {

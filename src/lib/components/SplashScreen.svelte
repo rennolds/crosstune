@@ -22,6 +22,7 @@
 
   const puzzle = getTodaysPuzzle();
   const todayDate = getEastCoastDate();
+  console.log(todayDate);
 
   $effect(() => {
     isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
@@ -29,14 +30,18 @@
 
   // Format the date
   function formatDate(dateString) {
-    const date = new Date(dateString);
+    if (!dateString) return "";
+    const date = new Date(`${dateString}T12:00:00-04:00`);
     return date.toLocaleDateString("en-US", {
       weekday: "long",
       month: "long",
       day: "numeric",
       year: "numeric",
+      timeZone: "America/New_York",
     });
   }
+
+  console.log(formatDate(todayDate));
 </script>
 
 <div
