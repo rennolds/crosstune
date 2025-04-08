@@ -1,7 +1,7 @@
 {
 "2025-04-08": {
-   "version": "1.0.6",
-    "title": "Dihydrogen Monoxide",
+   "version": "1.1.0",
+    "title": "",
     "size": {
       "width": 12,
       "height": 10
@@ -56,7 +56,7 @@
         "color": "#568EFF",
         "textClue": "_____ U.S.A",
         "audioUrl": "251831721",
-        "startAt": "0:30"
+        "startAt": "0:45"
       },
       {
         "word": "OCEANEYES",
@@ -66,17 +66,7 @@
         "color": "#FFB34B",
         "textClue": "Song Title",
         "audioUrl": "233719633",
-        "startAt": "0:30"
-      },
-      {
-        "word": "RAIN",
-        "startX": 5,
-        "startY": 6,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "Part of this Song Title",
-        "audioUrl": "254407931",
-        "startAt": "0:30"
+        "startAt": "0:45"
       },
       {
         "word": "TEARDROPS",
@@ -86,7 +76,7 @@
         "color": "#FE9C9C",
         "textClue": "Part of this Song Title",
         "audioUrl": "252454728",
-        "startAt": "0:30"
+        "startAt": "0:50"
       },
       {
         "word": "LAMAR",
