@@ -1,4 +1,105 @@
 {
+"2025-04-08": {
+   "version": "1.0.6",
+    "title": "Dihydrogen Monoxide",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "FLOATON",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "253507018",
+        "startAt": "0:30"
+      },
+      {
+        "word": "MEN",
+        "startX": 2,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "It's raining _____",
+        "audioUrl": "253510230",
+        "startAt": "0:30"
+      },
+      {
+        "word": "SNOWPATROL",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist Name",
+        "audioUrl": "256206578",
+        "startAt": "0:30"
+      },
+      {
+        "word": "ICESPICE",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "1321727128",
+        "startAt": "0:30"
+      },
+      {
+        "word": "SURFIN",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "_____ U.S.A",
+        "audioUrl": "251831721",
+        "startAt": "0:30"
+      },
+      {
+        "word": "OCEANEYES",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "233719633",
+        "startAt": "0:30"
+      },
+      {
+        "word": "RAIN",
+        "startX": 5,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Part of this Song Title",
+        "audioUrl": "254407931",
+        "startAt": "0:30"
+      },
+      {
+        "word": "TEARDROPS",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Part of this Song Title",
+        "audioUrl": "252454728",
+        "startAt": "0:30"
+      },
+      {
+        "word": "LAMAR",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist Last Name",
+        "audioUrl": "252603088",
+        "startAt": "0:30"
+      }
+    ]
+  },
   "2025-04-06": {
     "version": "1.0.6",
     "title": "Super Seventies",
