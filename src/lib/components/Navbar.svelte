@@ -228,7 +228,7 @@
           {/if}
         </button>
 
-        <button
+        <!-- <button
           class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
           aria-label="Help"
           onclick={toggleHelpOverlay}
@@ -247,7 +247,7 @@
               d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-        </button>
+        </button> -->
 
         {#if getUser()}
           <button
