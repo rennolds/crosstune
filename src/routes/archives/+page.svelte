@@ -115,12 +115,14 @@
       onNavigateToToday={navigateToToday}
       onNavigateToHome={navigateToHome}
     />
-    <CrosswordGrid2
-      {puzzle}
-      isArchiveMode={true}
-      {selectedDate}
-      onSetRevealFunctions={handleRevealFunctions}
-    />
+    <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
+      <CrosswordGrid2
+        {puzzle}
+        isArchiveMode={true}
+        {selectedDate}
+        onSetRevealFunctions={handleRevealFunctions}
+      />
+    </div>
   {:else}
     <!-- In archive list mode, hide the timer but still show we're in archive mode -->
     <Navbar
@@ -139,7 +141,7 @@
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     .archives-container {
-      padding-top: 2.5rem; /* Add 1rem (16px) padding to the top */
+      padding-top: 3.5rem; /* Increase padding to ensure proper spacing below navbar */
       margin-top: 0;
     }
   }
