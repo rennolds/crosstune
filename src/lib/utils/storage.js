@@ -1,3 +1,5 @@
+import moment from 'moment-timezone';
+
 const STORAGE_KEYS = {
     SPLASH_SHOWN: 'crosstune_splash_shown',
     GRID_STATE: 'crosstune_grid_state',
@@ -9,10 +11,7 @@ const STORAGE_KEYS = {
 };
 // Helper to get East Coast date in YYYY-MM-DD format 
 export function getEastCoastDate() {
-  const date = new Date();
-  return new Date(date.toLocaleString('en-US', {
-    timeZone: 'America/New_York'
-  })).toISOString().split('T')[0];
+  return moment().tz('America/New_York').format('YYYY-MM-DD');
 }
 
 // Check if stored data is from today's puzzle
