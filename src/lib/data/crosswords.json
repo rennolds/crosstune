@@ -1,7 +1,7 @@
 {
-"2025-04-02": {
-   "version": "1.0.1",
-    "title": "",
+  "2025-04-01": {
+    "version": "1.0.0",
+    "title": "Swifties",
     "size": {
       "width": 12,
       "height": 10
@@ -9,88 +9,98 @@
     "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
     "words": [
       {
-        "word": "FLOATON",
+        "word": "FEARLESS",
         "startX": 1,
         "startY": 0,
         "direction": "across",
         "color": "#FE9C9C",
         "textClue": "Song Title",
-        "audioUrl": "253507018",
+        "audioUrl": "1025739682",
         "startAt": "0:30"
       },
       {
-        "word": "MEN",
-        "startX": 2,
+        "word": "RED",
+        "startX": 5,
         "startY": 2,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "It's raining _____",
-        "audioUrl": "253510230",
+        "textClue": "Album Title",
+        "audioUrl": "252454199",
         "startAt": "0:30"
       },
       {
-        "word": "SNOWPATROL",
-        "startX": 2,
-        "startY": 4,
+        "word": "CARDIGAN",
+        "startX": 4,
+        "startY": 6,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "Artist Name",
-        "audioUrl": "256206578",
+        "textClue": "Song Title",
+        "audioUrl": "863079868",
         "startAt": "0:30"
       },
       {
-        "word": "ICESPICE",
+        "word": "STYLE",
         "startX": 0,
         "startY": 8,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "Artist Name",
-        "audioUrl": "1321727128",
+        "textClue": "Song Title",
+        "audioUrl": "327237475",
         "startAt": "0:30"
       },
       {
-        "word": "SURFIN",
-        "startX": 0,
-        "startY": 4,
-        "direction": "down",
+        "word": "TTPD",
+        "startX": 8,
+        "startY": 8,
+        "direction": "across",
         "color": "#568EFF",
-        "textClue": "_____ U.S.A",
-        "audioUrl": "251831721",
-        "startAt": "0:45"
+        "textClue": "Anagram Of This Song Title",
+        "audioUrl": "1803423438",
+        "startAt": "0:30"
       },
       {
-        "word": "OCEANEYES",
-        "startX": 3,
+        "word": "FORTNIGHT",
+        "startX": 1,
         "startY": 0,
         "direction": "down",
         "color": "#FFB34B",
         "textClue": "Song Title",
-        "audioUrl": "233719633",
-        "startAt": "0:45"
+        "audioUrl": "1803422997",
+        "startAt": "0:30"
       },
       {
-        "word": "TEARDROPS",
+        "word": "AUGUST",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "863079139",
+        "startAt": "0:30"
+      },
+      {
+        "word": "EVERMORE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Album Title",
+        "audioUrl": "945469426",
+        "startAt": "0:30"
+      },
+      {
+        "word": "MIDNIGHTS",
         "startX": 9,
         "startY": 1,
         "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "Part of this Song Title",
-        "audioUrl": "252454728",
-        "startAt": "0:50"
-      },
-      {
-        "word": "LAMAR",
-        "startX": 11,
-        "startY": 4,
-        "direction": "down",
         "color": "#28D66A",
-        "textClue": "Artist Last Name",
-        "audioUrl": "252603088",
+        "textClue": "Album Title",
+        "audioUrl": "1367286193",
         "startAt": "0:30"
       }
     ]
   },
-  "2025-04-01": {
+  "2025-04-02": {
     "version": "1.0.0",
     "title": "Super Seventies",
     "size": {
@@ -102,7 +112,7 @@
       {
         "word": "JOEL",
         "startX": 2,
-        "startY": 0,
+        "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
         "textClue": "Artist Name",
@@ -112,7 +122,7 @@
       {
         "word": "RUN",
         "startX": 9,
-        "startY": 2,
+        "startY": 3,
         "direction": "across",
         "color": "#28D66A",
         "textClue": "Birthed for what reason?",
@@ -122,7 +132,7 @@
       {
         "word": "SEPTEMBER",
         "startX": 1,
-        "startY": 3,
+        "startY": 4,
         "direction": "across",
         "color": "#FFCEFD",
         "textClue": "Song Title",
@@ -132,7 +142,7 @@
       {
         "word": "YUSUF",
         "startX": 6,
-        "startY": 6,
+        "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
         "textClue": "The artist formally known as Cat Stevens",
@@ -142,7 +152,7 @@
       {
         "word": "SEGER",
         "startX": 0,
-        "startY": 7,
+        "startY": 8,
         "direction": "across",
         "color": "#568EFF",
         "textClue": "Artist Name",
@@ -152,7 +162,7 @@
       {
         "word": "ABBA",
         "startX": 6,
-        "startY": 8,
+        "startY": 9,
         "direction": "across",
         "color": "#FFB34B",
         "textClue": "Artist Name",
@@ -162,7 +172,7 @@
       {
         "word": "JOLENE",
         "startX": 2,
-        "startY": 0,
+        "startY": 1,
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "Song Title",
@@ -172,7 +182,7 @@
       {
         "word": "TMHCR",
         "startX": 4,
-        "startY": 3,
+        "startY": 4,
         "direction": "down",
         "color": "#FE9C9C",
         "textClue": "Acronym of this song",
@@ -182,7 +192,7 @@
       {
         "word": "BARRACUDA",
         "startX": 9,
-        "startY": 0,
+        "startY": 1,
         "direction": "down",
         "color": "#28D66A",
         "textClue": "Song Title shares name with this fish",
@@ -192,12 +202,608 @@
       {
         "word": "FUNKY",
         "startX": 11,
-        "startY": 0,
+        "startY": 1,
         "direction": "down",
         "color": "#FFCEFD",
         "textClue": "What kind of music?",
         "audioUrl": "253507498",
         "startAt": "0:30"
+      }
+    ]
+  },
+  "2025-04-03": {
+    "version": "1.0.0",
+    "title": "All Things Aussie",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "RIPTIDE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "74958037",
+        "startAt": "0:20"
+      },
+      {
+        "word": "SIA",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "258025366",
+        "startAt": "0:20"
+      },
+      {
+        "word": "IMPALA",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "This artist shares their name with a medium-sized African mammal",
+        "audioUrl": "256241332",
+        "startAt": "0:20"
+      },
+      {
+        "word": "DOWNUNDER",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "253631171",
+        "startAt": "0:20"
+      },
+      {
+        "word": "KYLIE",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First name of this pop icon",
+        "audioUrl": "256059800",
+        "startAt": "0:20"
+      },
+      {
+        "word": "STAY",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "1082723470",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ACDC",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Name of this Australian band",
+        "audioUrl": "256075003",
+        "startAt": "0:20"
+      },
+      {
+        "word": "AMNESIA",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Medical condition that this song gets its name from ",
+        "audioUrl": "256195315",
+        "startAt": "0:20"
+      },
+      {
+        "word": "HELL",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Destination in this song",
+        "audioUrl": "256074947",
+        "startAt": "0:20"
+      },
+      {
+        "word": "TROY",
+        "startX": 10,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song Title",
+        "audioUrl": "1564144813",
+        "startAt": "0:20"
+      }
+    ]
+  },
+  "2025-04-04": {
+    "version": "1.0.0",
+    "title": "vas happenin'",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "POP",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This bands music genre",
+        "audioUrl": "256071623",
+        "startAt": "0:40"
+      },
+      {
+        "word": "FIREPROOF",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song Title",
+        "audioUrl": "257052821",
+        "startAt": "0:40"
+      },
+      {
+        "word": "NIGHTCHANGES",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "257052856",
+        "startAt": "0:40"
+      },
+      {
+        "word": "HORAN",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Last name of this artist",
+        "audioUrl": "320938217",
+        "startAt": "0:40"
+      },
+      {
+        "word": "ZAYN",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First name of this artist",
+        "audioUrl": "253794446",
+        "startAt": "0:40"
+      },
+      {
+        "word": "GIRL",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Steal my _____",
+        "audioUrl": "257052793",
+        "startAt": "0:40"
+      },
+      {
+        "word": "PERFECT",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "257052799",
+        "startAt": "0:40"
+      },
+      {
+        "word": "HARRY",
+        "startX": 7,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First name of this artist",
+        "audioUrl": "726433606",
+        "startAt": "0:40"
+      },
+      {
+        "word": "FOOLSGOLD",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song Title",
+        "audioUrl": "257052821",
+        "startAt": "0:40"
+      }
+    ]
+  },
+  "2025-04-05": {
+    "version": "1.0.0",
+    "title": "Girl Power",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "WETLEG",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist Name",
+        "audioUrl": "1130669008",
+        "startAt": "0:30"
+      },
+      {
+        "word": "SPICEGIRLS",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "253595647",
+        "startAt": "0:30"
+      },
+      {
+        "word": "RUNTHEWORLD",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song Title",
+        "audioUrl": "13964439",
+        "startAt": "0:30"
+      },
+      {
+        "word": "BLACKMAGIC",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "",
+        "startAt": "0:30"
+      },
+      {
+        "word": "NOSCRUBS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "256767925",
+        "startAt": "0:30"
+      },
+      {
+        "word": "TLC",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist Name",
+        "audioUrl": "254119637",
+        "startAt": "0:30"
+      },
+      {
+        "word": "TWICE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist Name",
+        "audioUrl": "1969756915",
+        "startAt": "0:30"
+      },
+      {
+        "word": "GUTS",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Album this song appears on ",
+        "audioUrl": "1589588819",
+        "startAt": "0:30"
+      }
+    ]
+  },
+  "2025-04-06": {
+      "version": "1.0.0",
+      "title": "Dihydrogen Monoxide",
+      "size": {
+        "width": 12,
+        "height": 10
+      },
+      "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+      "words": [
+        {
+          "word": "FLOATON",
+          "startX": 1,
+          "startY": 0,
+          "direction": "across",
+          "color": "#FE9C9C",
+          "textClue": "Song Title",
+          "audioUrl": "253507018",
+          "startAt": "0:30"
+        },
+        {
+          "word": "MEN",
+          "startX": 2,
+          "startY": 2,
+          "direction": "across",
+          "color": "#28D66A",
+          "textClue": "It's raining _____",
+          "audioUrl": "253510230",
+          "startAt": "0:30"
+        },
+        {
+          "word": "SNOWPATROL",
+          "startX": 2,
+          "startY": 4,
+          "direction": "across",
+          "color": "#FFCEFD",
+          "textClue": "Artist Name",
+          "audioUrl": "256206578",
+          "startAt": "0:30"
+        },
+        {
+          "word": "ICESPICE",
+          "startX": 0,
+          "startY": 8,
+          "direction": "across",
+          "color": "#FF5B5E",
+          "textClue": "Artist Name",
+          "audioUrl": "1321727128",
+          "startAt": "0:30"
+        },
+        {
+          "word": "SURFIN",
+          "startX": 0,
+          "startY": 4,
+          "direction": "down",
+          "color": "#568EFF",
+          "textClue": "_____ U.S.A",
+          "audioUrl": "251831721",
+          "startAt": "0:30"
+        },
+        {
+          "word": "OCEANEYES",
+          "startX": 3,
+          "startY": 0,
+          "direction": "down",
+          "color": "#FFB34B",
+          "textClue": "Song Title",
+          "audioUrl": "233719633",
+          "startAt": "0:30"
+        },
+        {
+          "word": "RAIN",
+          "startX": 5,
+          "startY": 6,
+          "direction": "down",
+          "color": "#00FFFF",
+          "textClue": "Part of this Song Title",
+          "audioUrl": "254407931",
+          "startAt": "0:30"
+        },
+        {
+          "word": "TEARDROPS",
+          "startX": 9,
+          "startY": 1,
+          "direction": "down",
+          "color": "#FE9C9C",
+          "textClue": "Part of this Song Title",
+          "audioUrl": "252454728",
+          "startAt": "0:30"
+        },
+        {
+          "word": "LAMAR",
+          "startX": 11,
+          "startY": 4,
+          "direction": "down",
+          "color": "#28D66A",
+          "textClue": "Artist Last Name",
+          "audioUrl": "252603088",
+          "startAt": "0:30"
+        }
+      ]
+  },
+  "2025-04-07": {
+    "version": "1.0.0",
+    "title": "Warm Sunny Day",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "DOLLY",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist Name",
+        "audioUrl": "499321992",
+        "startAt": "0:30"
+      },
+      {
+        "word": "SUNFLOWER",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "516180894",
+        "startAt": "0:30"
+      },
+      {
+        "word": "POSTMALONE",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist Name",
+        "audioUrl": "189525707",
+        "startAt": "0:30"
+      },
+      {
+        "word": "HAPPY",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song Title",
+        "audioUrl": "253047448",
+        "startAt": "0:30"
+      },
+      {
+        "word": "NONSENSE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "1301637733",
+        "startAt": "0:30"
+      },
+      {
+        "word": "LANY",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "506276196",
+        "startAt": "0:30"
+      },
+      {
+        "word": "WARM",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song Title",
+        "audioUrl": "2065241240",
+        "startAt": "0:30"
+      },
+      {
+        "word": "SOCLOSE",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Feel ____ ____",
+        "audioUrl": "255884736",
+        "startAt": "0:30"
+      }
+    ]
+  },
+  "2025-04-08": {
+    "version": "1.0.0",
+    "title": "Disney on Ice",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "PHIL",
+        "startX": 7,
+        "startY": 0,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Composer of this Disney musical ",
+        "audioUrl": "259075258",
+        "startAt": "0:30"
+      },
+      {
+        "word": "HAKUNAMATATA",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "A famous Swahili phrase",
+        "audioUrl": "hakunamatata",
+        "startAt": "0:30"
+      },
+      {
+        "word": "ELSA",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "This Broadway star plays what animated Disney character",
+        "audioUrl": "256119310",
+        "startAt": "01:20"
+      },
+      {
+        "word": "SIMBA",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Diseny character who sings this song",
+        "audioUrl": "255052117",
+        "startAt": "0:30"
+      },
+      {
+        "word": "POCAHONTAS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Title of this Disney princes musical ",
+        "audioUrl": "253616414",
+        "startAt": "0:30"
+      },
+      {
+        "word": "HERCULES",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Hero in this Disney musical",
+        "audioUrl": "112950952",
+        "startAt": "0:30"
+      },
+      {
+        "word": "ALADDIN",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Street Rat in this Disney musical",
+        "audioUrl": "619953378",
+        "startAt": "0:30"
+      },
+      {
+        "word": "TANGLED",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Title of this Disney princes musical ",
+        "audioUrl": "253167413",
+        "startAt": "0:30"
+      },
+      {
+        "word": "LETITGO",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Title of this global Disney hit",
+        "audioUrl": "267246892",
+        "startAt": "02:53"
       }
     ]
   }
