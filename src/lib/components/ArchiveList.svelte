@@ -1,11 +1,14 @@
 <script>
   import { getSolvedPuzzles } from "$lib/utils/storage.js";
+  import moment from "moment-timezone";
+  import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
 
   let { crosswords, onSelectDate } = $props();
 
   let currentDate = $state(new Date());
   let selectedDate = $state(null);
   let solvedPuzzles = $state(getSolvedPuzzles());
+  let isDark = $derived(getIsDarkMode());
 
   // Parse crossword dates to find earliest and latest available dates
   const crosswordDates = Object.keys(crosswords)
@@ -20,9 +23,8 @@
   const earliestCrosswordDate =
     crosswordDates.length > 0 ? new Date(crosswordDates[0]) : new Date();
 
-  // Use today as the latest date
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  // Use today as the latest date in EST
+  const today = moment().tz("America/New_York").startOf("day").toDate();
 
   // Initialize to current month, but ensure it's not before earliestCrosswordDate or after today
   $effect(() => {
@@ -70,15 +72,20 @@
     // Add days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       const dateString = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-      const dateObj = new Date(dateString);
+      const dateObj = moment
+        .tz(dateString, "America/New_York")
+        .startOf("day")
+        .toDate();
 
-      // Check if this date is in the future
+      // Check if this date is in the future or is today
       const isFutureDate = dateObj > today;
+      const isToday = moment(dateObj).isSame(today, "day");
 
       days.push({
         day,
         date: dateString,
-        isPuzzleAvailable: !!crosswords[dateString] && !isFutureDate,
+        isPuzzleAvailable:
+          !!crosswords[dateString] && !isFutureDate && !isToday,
         isFutureDate,
       });
     }
@@ -270,7 +277,11 @@
     </div>
   </div>
   <div class="p-4 flex justify-between items-center">
-    <span class="text-lg font-medium">
+    <span
+      class="text-lg font-medium"
+      class:text-black={!isDark}
+      class:text-[#f3f3f3]={isDark}
+    >
       {selectedDate ? formatDate(selectedDate) : ""}
     </span>
     <button
@@ -278,7 +289,11 @@
         handlePlayPuzzle(
           generateCalendarDays().find((d) => d?.date === selectedDate)
         )}
-      class="bg-black dark:bg-white dark:text-black text-white text-3xl px-9 py-2 rounded"
+      class="text-3xl px-9 py-2 rounded"
+      class:bg-black={!isDark}
+      class:text-white={!isDark}
+      class:bg-white={isDark}
+      class:text-black={isDark}
       disabled={!selectedDate}
     >
       Start

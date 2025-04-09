@@ -102,20 +102,22 @@
   }
 </script>
 
-<main>
+<Navbar
+  archiveDate={selectedDate ? formatCompactDate(selectedDate) : null}
+  isArchiveMode={true}
+  onRevealSquare={revealSquare}
+  onRevealWord={revealWord}
+  onRevealPuzzle={revealPuzzle}
+  onNavigateToArchives={navigateToArchives}
+  onNavigateToToday={navigateToToday}
+  onNavigateToHome={navigateToHome}
+  hideTimer={!selectedDate}
+/>
+
+<main class="dark min-h-screen flex flex-col">
   {#if selectedDate}
-    <!-- In archive puzzle mode, show the timer -->
-    <Navbar
-      archiveDate={formatCompactDate(selectedDate)}
-      isArchiveMode={true}
-      onRevealSquare={revealSquare}
-      onRevealWord={revealWord}
-      onRevealPuzzle={revealPuzzle}
-      onNavigateToArchives={navigateToArchives}
-      onNavigateToToday={navigateToToday}
-      onNavigateToHome={navigateToHome}
-    />
-    <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
+    <!-- In archive puzzle mode -->
+    <div class="flex-1 pt-12.5 md:pt-0">
       <CrosswordGrid2
         {puzzle}
         isArchiveMode={true}
@@ -124,13 +126,7 @@
       />
     </div>
   {:else}
-    <!-- In archive list mode, hide the timer but still show we're in archive mode -->
-    <Navbar
-      hideTimer={true}
-      isArchiveMode={true}
-      onNavigateToToday={navigateToToday}
-      onNavigateToHome={navigateToHome}
-    />
+    <!-- In archive list mode -->
     <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">
       <ArchiveList {crosswords} onSelectDate={loadArchivePuzzle} />
     </div>
