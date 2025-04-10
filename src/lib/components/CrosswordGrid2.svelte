@@ -1740,6 +1740,7 @@
     time={finalTime}
     isCorrect={getIsCorrect()}
     onClose={handleCloseOverlay}
+    {isArchiveMode}
   />
 {/if}
 
