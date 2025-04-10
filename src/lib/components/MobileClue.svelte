@@ -14,6 +14,33 @@
   );
 
   let currentWidgetReady = $state(false);
+  let fontSize = $state("text-lg");
+  let lineHeight = $state("leading-normal");
+
+  // Watch for changes in clue text and set size based on length
+  $effect(() => {
+    if (clue && clue.textClue) {
+      const len = clue.textClue.length;
+
+      if (len > 55) {
+        // Threshold for very long clues
+        fontSize = "text-sm";
+        lineHeight = "leading-tight";
+      } else if (len > 35) {
+        // Threshold for medium clues
+        fontSize = "text-base";
+        lineHeight = "leading-snug";
+      } else {
+        // Default for shorter clues
+        fontSize = "text-lg";
+        lineHeight = "leading-normal";
+      }
+    } else {
+      // Reset to default if no clue
+      fontSize = "text-lg";
+      lineHeight = "leading-normal";
+    }
+  });
 
   $effect(() => {
     if (!clue) {
@@ -89,14 +116,14 @@
     class="fixed bottom-[165px] left-0 right-0 h-13 bg-white shadow-lg mb-4 dark:text-black z-30"
   >
     <div
-      class="flex items-center justify-between h-full"
+      class="flex items-center justify-between h-full px-2"
       style="background-color: {clue.color};"
     >
-      <!-- Left Section -->
-      <div class="flex items-center">
-        <!-- Skip Previous Button - larger and touching left edge -->
+      <!-- Left Section: Takes up available space, allows shrinking -->
+      <div class="flex items-center flex-grow min-w-0 mr-2">
+        <!-- Skip Previous Button: Fixed size -->
         <button
-          class="p-2 -ml-2"
+          class="p-2 -ml-2 flex-shrink-0"
           onclick={() => handleNavigation("prev")}
           aria-label="Previous clue"
         >
@@ -111,22 +138,24 @@
           </svg>
         </button>
 
-        <!-- Clue Info -->
-        <div class="flex items-center gap-2 ml-2">
-          <!-- <span class="text-lg font-semibold"
-            >{clue.number}{clue.direction.charAt(0).toUpperCase()}</span
-          > -->
-          <!-- <div class="h-5 w-[1.5px] bg-black"></div> -->
-          <span class="text-lg">{clue.textClue}</span>
+        <!-- Clue Info Container: Takes available space, allows shrinking -->
+        <div
+          class="flex items-center gap-2 ml-2 flex-grow min-w-0 overflow-hidden"
+        >
+          <span
+            class="{fontSize} {lineHeight} transition-all duration-200 block"
+          >
+            {clue.textClue}
+          </span>
         </div>
       </div>
 
-      <!-- Right Section -->
-      <div class="flex items-center">
-        <!-- Play/Pause Button - Now with reactive loading state -->
+      <!-- Right Section: Fixed size -->
+      <div class="flex items-center flex-shrink-0">
+        <!-- Play/Pause Button: Fixed size -->
         <button
           onclick={() => onPlay(clue)}
-          class="w-[70px] h-[30px] mr-2.5 bg-black text-white rounded-md text-lg font-medium"
+          class="w-[70px] h-[30px] mr-2.5 bg-black text-white rounded-md text-lg font-medium flex-shrink-0"
           disabled={!currentWidgetReady && !isCurrentClueActive}
         >
           <span class="block text-center">
@@ -156,9 +185,9 @@
           </span>
         </button>
 
-        <!-- Skip Next Button - larger and touching right edge -->
+        <!-- Skip Next Button: Fixed size -->
         <button
-          class="p-2 -mr-2"
+          class="p-2 -mr-2 flex-shrink-0"
           onclick={() => handleNavigation("next")}
           aria-label="Next clue"
         >
