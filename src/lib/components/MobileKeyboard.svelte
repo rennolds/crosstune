@@ -16,11 +16,11 @@
 </script>
 
 <div
-  class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 shadow-lg pb-2 z-20"
-  class:bg-white={!isDark}
-  class:bg-gray-950={isDark}
+  class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 pb-1 z-20"
+  class:bg-[#F3F4F6]={!isDark}
+  class:bg-[#202020]={isDark}
 >
-  <div class="px-1 pb-1 pt-1 space-y-2">
+  <div class="px-1 pb-1 space-y-2">
     <!-- Row 1 -->
     <div class="flex gap-1">
       {#each showSymbols ? symbolRow1 : letterRow1 as key}

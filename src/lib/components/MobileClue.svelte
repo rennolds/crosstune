@@ -113,7 +113,7 @@
 
 {#if clue}
   <div
-    class="fixed bottom-[165px] left-0 right-0 h-13 bg-white shadow-lg mb-4 dark:text-black z-30"
+    class="fixed bottom-[165px] left-0 right-0 h-13 bg-white shadow-sm mb-4 dark:text-black z-30"
   >
     <div
       class="flex items-center justify-between h-full px-2"
