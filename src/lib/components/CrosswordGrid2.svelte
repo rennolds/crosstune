@@ -13,6 +13,10 @@
     setSeconds,
     resetTimer,
     isWidgetReady,
+    markWidgetAsUnavailable,
+    isWidgetUnavailable,
+    setUnavailableWidgets,
+    getUnavailableWidgets,
   } from "$lib/stores/game.svelte.js";
 
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
@@ -25,6 +29,8 @@
     saveTimerState,
     saveRevealedCells,
     loadRevealedCells,
+    saveUnavailableWidgets,
+    loadUnavailableWidgets,
     markPuzzleAsSolved,
     isPuzzleVersionValid,
   } from "$lib/utils/storage";
@@ -43,6 +49,10 @@
   const audioCtx = new AudioContext();
 
   let widgetReadyStatus = $state({});
+
+  // State for unavailable widgets notification
+  let showUnavailableMessage = $state(false);
+  let hasShownUnavailableMessage = $state(false);
 
   // Update widget status continuously to check for readiness changes
   $effect(() => {
@@ -155,9 +165,13 @@
         // Reset revealed cells
         revealedCells = new Set();
 
+        // Reset unavailable widgets
+        setUnavailableWidgets(new Set());
+
         // Save empty grid state with current version
         saveGridState(grid, puzzle.version);
         saveRevealedCells(revealedCells);
+        saveUnavailableWidgets(getUnavailableWidgets());
       } else {
         // Load saved state for the same day
         const savedTimer = loadTimerState();
@@ -171,6 +185,7 @@
         if (savedGrid) {
           grid = savedGrid;
           revealedCells = new Set(savedRevealedCells);
+          setUnavailableWidgets(loadUnavailableWidgets());
         }
       }
     }
@@ -1104,6 +1119,13 @@
 
       const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
 
+      // Prevent playing if the widget is unavailable
+      if (isWidgetUnavailable(widgetId)) {
+        console.warn(`Attempted to play unavailable widget: ${widgetId}`);
+        // Optionally provide user feedback here
+        return;
+      }
+
       // Find the iframe for this specific word
       const iframe = document.getElementById(widgetId);
 
@@ -1255,6 +1277,60 @@
 
   // Get the current date to display
   const displayDate = selectedDate || getEastCoastDate();
+
+  // Effect to handle unavailable widgets
+  $effect(() => {
+    const unavailable = getUnavailableWidgets();
+    if (unavailable.size > 0) {
+      let changed = false;
+      let newlyRevealedCells = new Set(revealedCells);
+
+      unavailable.forEach((widgetId) => {
+        const [startX, startY, direction] = widgetId.split(":");
+        const wordToReveal = words.find(
+          (w) =>
+            w.startX == startX &&
+            w.startY == startY &&
+            w.direction === direction
+        );
+
+        if (wordToReveal) {
+          for (let i = 0; i < wordToReveal.word.length; i++) {
+            const x =
+              direction === "across"
+                ? wordToReveal.startX + i
+                : parseInt(startX);
+            const y =
+              direction === "down" ? wordToReveal.startY + i : parseInt(startY);
+            const cellKey = `${x},${y}`;
+
+            // Skip spaces and already revealed cells
+            if (wordToReveal.word[i] === " " || revealedCells.has(cellKey))
+              continue;
+
+            // Update grid with correct letter
+            grid[y][x] = wordToReveal.word[i];
+            newlyRevealedCells.add(cellKey);
+            changed = true;
+          }
+        }
+      });
+
+      if (changed) {
+        revealedCells = newlyRevealedCells;
+        if (!isArchiveMode) {
+          saveRevealedCells(revealedCells);
+          saveGridState(grid); // Save grid as it was modified
+          saveUnavailableWidgets(unavailable); // Persist unavailable widgets
+        }
+        // Show message only once per session if there are unavailable widgets
+        if (!hasShownUnavailableMessage) {
+          showUnavailableMessage = true;
+          hasShownUnavailableMessage = true;
+        }
+      }
+    }
+  });
 </script>
 
 <SoundCloudManager {words} />
@@ -1551,7 +1627,10 @@
             class="flex items-center justify-center"
             disabled={!widgetReadyStatus[
               `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
-            ]}
+            ] ||
+              isWidgetUnavailable(
+                `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
+              )}
           >
             {#if isPlaying && playingClue === activeClue}
               <!-- Pause icon -->
@@ -1571,7 +1650,7 @@
                 </g>
               </svg>
             {:else if !widgetReadyStatus[`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`]}
-              <!-- Loading spinner -->
+              <!-- Loading spinner (also shown if unavailable but not ready yet) -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="48px"
@@ -1587,6 +1666,20 @@
                 <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
                 <path
                   d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
+                />
+              </svg>
+            {:else if isWidgetUnavailable(`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`)}
+              <!-- Unavailable Icon (e.g., a muted speaker or cross) -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="48px"
+                viewBox="0 0 24 24"
+                width="48px"
+                fill="#cccccc"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
                 />
               </svg>
             {:else}
@@ -1648,6 +1741,21 @@
     isCorrect={getIsCorrect()}
     onClose={handleCloseOverlay}
   />
+{/if}
+
+{#if showUnavailableMessage}
+  <div
+    class="fixed bottom-4 right-4 bg-yellow-200 text-yellow-800 p-4 rounded shadow-lg z-50"
+  >
+    <p>
+      Some songs in this puzzle are not available in your region. We've revealed
+      these words for you!
+    </p>
+    <button
+      onclick={() => (showUnavailableMessage = false)}
+      class="mt-2 text-sm underline">Dismiss</button
+    >
+  </div>
 {/if}
 
 <style>

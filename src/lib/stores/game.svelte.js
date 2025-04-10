@@ -41,6 +41,7 @@ export function resetTimer() {
 }
 
 export const readyWidgets = $state(new Set());
+let unavailableWidgets = $state(new Set()); // Internal state for unavailable widgets
 
 export function isWidgetReady(widgetId) {
   return readyWidgets.has(widgetId);
@@ -48,4 +49,25 @@ export function isWidgetReady(widgetId) {
 
 export function markWidgetAsReady(widgetId) {
   readyWidgets.add(widgetId);
+}
+
+// Functions for unavailable widgets
+export function isWidgetUnavailable(widgetId) {
+  return unavailableWidgets.has(widgetId);
+}
+
+export function markWidgetAsUnavailable(widgetId) {
+  if (!unavailableWidgets.has(widgetId)) {
+    // Reassign to trigger reactivity for internal $state
+    unavailableWidgets = new Set([...unavailableWidgets, widgetId]);
+  }
+}
+
+export function setUnavailableWidgets(widgetSet) {
+  // Reassign to trigger reactivity for internal $state
+  unavailableWidgets = widgetSet;
+}
+
+export function getUnavailableWidgets() {
+  return unavailableWidgets;
 }

@@ -7,7 +7,8 @@ const STORAGE_KEYS = {
     LAST_PUZZLE_DATE: 'crosstune_last_puzzle_date',
     REVEALED_CELLS: 'crosstune_revealed_cells',
     SOLVED_PUZZLES: 'crosstune_solved_puzzles',
-    PUZZLE_VERSION: 'crosstune_puzzle_version'
+    PUZZLE_VERSION: 'crosstune_puzzle_version',
+    UNAVAILABLE_WIDGETS: 'crosstune_unavailable_widgets'
 };
 // Helper to get East Coast date in YYYY-MM-DD format 
 export function getEastCoastDate() {
@@ -85,6 +86,7 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.TIMER_STATE);
   localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
   localStorage.removeItem(STORAGE_KEYS.PUZZLE_VERSION);
+  localStorage.removeItem(STORAGE_KEYS.UNAVAILABLE_WIDGETS);
 }
 
 export function saveRevealedCells(revealedCells) {
@@ -144,4 +146,26 @@ export function isPuzzleVersionValid(currentVersion) {
   
   const storedVersion = localStorage.getItem(STORAGE_KEYS.PUZZLE_VERSION);
   return storedVersion === currentVersion;
+}
+
+// Add functions for unavailable widgets
+export function saveUnavailableWidgets(unavailableWidgets) {
+  if (typeof window === 'undefined') return;
+
+  localStorage.setItem(STORAGE_KEYS.UNAVAILABLE_WIDGETS, JSON.stringify([...unavailableWidgets]));
+}
+
+export function loadUnavailableWidgets() {
+  if (typeof window === 'undefined') return new Set();
+  
+  if (!isStoredDataValid()) {
+    clearStoredData();
+    return new Set();
+  }
+
+  const unavailableWidgets = localStorage.getItem(STORAGE_KEYS.UNAVAILABLE_WIDGETS);
+  if (!unavailableWidgets) return new Set();
+  
+  // Convert the parsed array back to a Set
+  return new Set(JSON.parse(unavailableWidgets));
 }
