@@ -1,5 +1,14 @@
 <script>
-  let { clue, onPlay, isPlaying, playingClue, onStopAudio, words } = $props();
+  let {
+    clue,
+    onPlay,
+    isPlaying,
+    playingClue,
+    onStopAudio,
+    words,
+    widgetReadyStatus,
+    unavailableWordIds,
+  } = $props();
 
   import { isWidgetReady } from "$lib/stores/game.svelte.js";
 
@@ -14,6 +23,7 @@
   );
 
   let currentWidgetReady = $state(false);
+  let isWordUnavailable = $state(false);
   let fontSize = $state("text-lg");
   let lineHeight = $state("leading-normal");
 
@@ -45,24 +55,32 @@
   $effect(() => {
     if (!clue) {
       currentWidgetReady = false;
+      isWordUnavailable = false;
       return;
     }
 
-    // Initialize with current state
     const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
     currentWidgetReady = isWidgetReady(widgetId);
+    isWordUnavailable = unavailableWordIds.has(widgetId);
 
-    // Set up an interval to keep checking until ready
-    const checkInterval = setInterval(() => {
-      const isReady = isWidgetReady(widgetId);
-      if (isReady) {
-        currentWidgetReady = true;
-        clearInterval(checkInterval);
-      }
-    }, 200);
+    // Set up an interval to keep checking until ready (if not already unavailable)
+    let checkInterval = null;
+    if (!currentWidgetReady && !isWordUnavailable) {
+      checkInterval = setInterval(() => {
+        const isReady = isWidgetReady(widgetId);
+        if (isReady) {
+          currentWidgetReady = true;
+          clearInterval(checkInterval);
+        }
+      }, 200);
+    }
 
     // Clean up interval when component is destroyed or clue changes
-    return () => clearInterval(checkInterval);
+    return () => {
+      if (checkInterval) {
+        clearInterval(checkInterval);
+      }
+    };
   });
 
   function findAdjacentClue(currentClue, direction) {
@@ -156,7 +174,7 @@
         <button
           onclick={() => onPlay(clue)}
           class="w-[70px] h-[30px] mr-2.5 bg-black text-white rounded-md text-lg font-medium flex-shrink-0"
-          disabled={!currentWidgetReady && !isCurrentClueActive}
+          disabled={!currentWidgetReady || isWordUnavailable}
         >
           <span class="block text-center">
             {#if isCurrentClueActive}
