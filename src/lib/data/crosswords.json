@@ -1008,5 +1008,106 @@
         "startAt": "0:20"
       }
     ]
+  },
+  "2025-04-10": {
+    "title": "The Letter \"A\"",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "ABC",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "253540427",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ALRIGHT",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "252603573",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ADELE",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "254407939",
+        "startAt": "0:20"
+      },
+      {
+        "word": "AJR",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "746262037",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ALLSTAR",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "253185930",
+        "startAt": "0:20"
+      },
+      {
+        "word": "HAVANA",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "335915610",
+        "startAt": "0:20"
+      },
+      {
+        "word": "AVRIL",
+        "startX": 3,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "256272271",
+        "startAt": "0:20"
+      },
+      {
+        "word": "AMERICAN",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of this song",
+        "audioUrl": "1893660072",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ALL",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word of this song",
+        "audioUrl": "113662676",
+        "startAt": "0:20"
+      }
+    ]
   }
 }
