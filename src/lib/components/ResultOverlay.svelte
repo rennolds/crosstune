@@ -104,7 +104,7 @@
       
       <button 
         onclick={shareResults}
-        class="w-3/4 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+        class="w-3/4 bg-[#202020] hover:bg-[#101010] text-white font-bold py-3 px-6 rounded-lg transition-colors"
       >
         SHARE RESULT
       </button>
@@ -120,7 +120,7 @@
       </p>
       
       <div class="flex flex-col gap-3 w-full text-white">
-        <button class="w-3/4 mx-auto bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+        <button class="w-3/4 mx-auto bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
           <a 
               href="https://spotle.io"
               target="_blank"
@@ -131,7 +131,7 @@
           </a>
         </button>
         
-        <button class="w-3/4 mx-auto bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+        <button class="w-3/4 mx-auto bg-[#BA81C2] hover:bg-[#9966a3] text-white font-bold py-3 px-6 rounded-lg transition-colors">
           <a 
               href="https://harmonies.io"
               target="_blank"
