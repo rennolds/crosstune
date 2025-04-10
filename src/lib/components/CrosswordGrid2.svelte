@@ -739,7 +739,7 @@
           // Save grid state if not in archive mode
           if (!isArchiveMode) {
             saveRevealedCells(revealedCells);
-            saveGridState(grid);
+            saveGridState(grid, puzzle.version);
           }
         }
       }
@@ -774,7 +774,7 @@
         // Save grid state if not in archive mode
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
-          saveGridState(grid);
+          saveGridState(grid, puzzle.version);
         }
       }
     }
@@ -803,7 +803,7 @@
       // Save grid state if not in archive mode
       if (!isArchiveMode) {
         saveRevealedCells(revealedCells);
-        saveGridState(grid);
+        saveGridState(grid, puzzle.version);
       }
 
       // Show the win screen since the puzzle is complete
@@ -845,7 +845,7 @@
       // Only save grid state if not in archive mode
       if (!isArchiveMode) {
         saveRevealedCells(revealedCells);
-        saveGridState(grid);
+        saveGridState(grid, puzzle.version);
       }
     }
 
@@ -953,7 +953,7 @@
         }
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
-          saveGridState(grid);
+          saveGridState(grid, puzzle.version);
         }
         break;
       default:
@@ -1091,7 +1091,7 @@
           }
         }
       }
-      saveGridState(grid);
+      saveGridState(grid, puzzle.version);
       saveRevealedCells(revealedCells);
       return;
     }
@@ -1320,8 +1320,8 @@
         revealedCells = newlyRevealedCells;
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
-          saveGridState(grid); // Save grid as it was modified
-          saveUnavailableWidgets(unavailable); // Persist unavailable widgets
+          saveGridState(grid, puzzle.version);
+          saveUnavailableWidgets(unavailable);
         }
         // Show message only once per session if there are unavailable widgets
         if (!hasShownUnavailableMessage) {
