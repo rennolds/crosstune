@@ -13,7 +13,6 @@
     setSeconds,
     resetTimer,
     isWidgetReady,
-    unavailableWordIds,
   } from "$lib/stores/game.svelte.js";
 
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
@@ -28,8 +27,6 @@
     loadRevealedCells,
     markPuzzleAsSolved,
     isPuzzleVersionValid,
-    loadUnavailableWordIds,
-    saveUnavailableWordIds,
   } from "$lib/utils/storage";
 
   // New props for archive mode
@@ -44,16 +41,6 @@
   let isDark = $derived(getIsDarkMode());
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioCtx = new AudioContext();
-
-  let showUnavailableMessage = $state(false);
-
-  // Initialize unavailableWordIds from localStorage
-  let initialUnavailableIds = loadUnavailableWordIds();
-  // We need to update the store value directly if it's different from initial load
-  // (This is a bit awkward with Svelte 5 runes, might need refinement if store API changes)
-  if (initialUnavailableIds.size > 0 && unavailableWordIds.size === 0) {
-    initialUnavailableIds.forEach((id) => unavailableWordIds.add(id));
-  }
 
   let widgetReadyStatus = $state({});
 
@@ -778,67 +765,6 @@
     }
   }
 
-  // Function to reveal a specific word based on its object
-  function revealSpecificWord(wordToReveal) {
-    if (!getIsCorrect() && wordToReveal) {
-      console.log(`Auto-revealing unavailable word: ${wordToReveal.word}`);
-      for (let i = 0; i < wordToReveal.word.length; i++) {
-        const x =
-          wordToReveal.direction === "across"
-            ? wordToReveal.startX + i
-            : wordToReveal.startX;
-        const y =
-          wordToReveal.direction === "down"
-            ? wordToReveal.startY + i
-            : wordToReveal.startY;
-
-        // Skip spaces
-        if (wordToReveal.word[i] === " ") continue;
-
-        // Update grid with correct letter
-        grid[y][x] = wordToReveal.word[i];
-
-        // Mark as revealed
-        revealedCells = new Set([...revealedCells, `${x},${y}`]);
-      }
-
-      // Save grid state if not in archive mode
-      if (!isArchiveMode) {
-        saveRevealedCells(revealedCells);
-        saveGridState(grid);
-      }
-    }
-  }
-
-  // Watch for unavailable words and reveal them
-  let previouslyRevealedUnavailable = new Set();
-  $effect(() => {
-    let revealedAny = false;
-    unavailableWordIds.forEach((widgetId) => {
-      if (!previouslyRevealedUnavailable.has(widgetId)) {
-        const [startX, startY, direction] = widgetId.split(":");
-        const wordToReveal = words.find(
-          (w) =>
-            w.startX == startX &&
-            w.startY == startY &&
-            w.direction === direction
-        );
-        if (wordToReveal) {
-          revealSpecificWord(wordToReveal);
-          previouslyRevealedUnavailable.add(widgetId);
-          revealedAny = true;
-        }
-      }
-    });
-
-    if (revealedAny) {
-      showUnavailableMessage = true;
-    }
-
-    // Save the updated set to localStorage whenever it changes
-    saveUnavailableWordIds(unavailableWordIds);
-  });
-
   // Function to reveal the entire puzzle
   function revealPuzzle() {
     if (!getIsCorrect()) {
@@ -1333,19 +1259,6 @@
 
 <SoundCloudManager {words} />
 
-{#if showUnavailableMessage}
-  <div
-    class="bg-yellow-200 text-yellow-800 p-2 text-center text-sm mb-2 rounded"
-  >
-    Some songs in this puzzle are not available in your country. We've revealed
-    these words for you!
-    <button
-      onclick={() => (showUnavailableMessage = false)}
-      class="ml-2 text-yellow-900 font-bold">X</button
-    >
-  </div>
-{/if}
-
 <div class="w-full md:max-w-4xl mx-auto mt-2.5">
   <!-- Date/title container aligned with crossword -->
   <div
@@ -1463,8 +1376,6 @@
         {playingClue}
         onStopAudio={stopAudio}
         {words}
-        {widgetReadyStatus}
-        {unavailableWordIds}
       />
       <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
     {/if}
@@ -1640,10 +1551,7 @@
             class="flex items-center justify-center"
             disabled={!widgetReadyStatus[
               `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
-            ] ||
-              unavailableWordIds.has(
-                `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
-              )}
+            ]}
           >
             {#if isPlaying && playingClue === activeClue}
               <!-- Pause icon -->

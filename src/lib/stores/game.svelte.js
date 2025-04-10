@@ -49,12 +49,3 @@ export function isWidgetReady(widgetId) {
 export function markWidgetAsReady(widgetId) {
   readyWidgets.add(widgetId);
 }
-
-// State for unavailable words due to errors
-export const unavailableWordIds = $state(new Set());
-
-// Function to mark a word's audio as unavailable
-export function markWordAsUnavailable(widgetId) {
-  unavailableWordIds.add(widgetId);
-  console.log(`Marked word ${widgetId} as unavailable.`);
-}

@@ -7,8 +7,7 @@ const STORAGE_KEYS = {
     LAST_PUZZLE_DATE: 'crosstune_last_puzzle_date',
     REVEALED_CELLS: 'crosstune_revealed_cells',
     SOLVED_PUZZLES: 'crosstune_solved_puzzles',
-    PUZZLE_VERSION: 'crosstune_puzzle_version',
-    UNAVAILABLE_WORD_IDS: 'crosstune_unavailable_word_ids'
+    PUZZLE_VERSION: 'crosstune_puzzle_version'
 };
 // Helper to get East Coast date in YYYY-MM-DD format 
 export function getEastCoastDate() {
@@ -86,7 +85,6 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.TIMER_STATE);
   localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
   localStorage.removeItem(STORAGE_KEYS.PUZZLE_VERSION);
-  localStorage.removeItem(STORAGE_KEYS.UNAVAILABLE_WORD_IDS);
 }
 
 export function saveRevealedCells(revealedCells) {
@@ -146,22 +144,4 @@ export function isPuzzleVersionValid(currentVersion) {
   
   const storedVersion = localStorage.getItem(STORAGE_KEYS.PUZZLE_VERSION);
   return storedVersion === currentVersion;
-}
-
-// Add functions for unavailable word IDs
-export function saveUnavailableWordIds(unavailableIds) {
-  if (typeof window === 'undefined') return;
-  localStorage.setItem(STORAGE_KEYS.UNAVAILABLE_WORD_IDS, JSON.stringify([...unavailableIds]));
-}
-
-export function loadUnavailableWordIds() {
-  if (typeof window === 'undefined') return new Set();
-
-  if (!isStoredDataValid()) {
-    // Don't clear here, let the main component logic decide if reset is needed
-    return new Set(); // Return empty set if data is invalid/old
-  }
-
-  const unavailableIds = localStorage.getItem(STORAGE_KEYS.UNAVAILABLE_WORD_IDS);
-  return unavailableIds ? new Set(JSON.parse(unavailableIds)) : new Set();
 }
