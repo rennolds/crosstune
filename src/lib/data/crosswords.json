@@ -1384,5 +1384,97 @@
         "startAt": "0:20"
       }
     ]
+  },
+  
+  "2025-04-17": {
+    "title": "Musical Animal Kingdom",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "HOTRS",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Acronym of this band's famous song",
+        "audioUrl": "254806616",
+        "startAt": "0:18"
+      },
+      {
+        "word": "IMPALA",
+        "startX": 6,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The \"animal\" part of this artist's name",
+        "audioUrl": "256241332",
+        "startAt": "0:20"
+      },
+      {
+        "word": "FLEETFOXES",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "256157177",
+        "startAt": "0:40"
+      },
+      {
+        "word": "ARCTIC",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "____ Monkeys ",
+        "audioUrl": "166007443",
+        "startAt": "0:20"
+      },
+      {
+        "word": "GORILLAZ",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "512243433",
+        "startAt": "0:20"
+      },
+      {
+        "word": "HELP!",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name (insects are in fact animals)",
+        "audioUrl": "1940522583",
+        "startAt": "0:20"
+      },
+      {
+        "word": "FLOAT",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Verb in this band's hit song",
+        "audioUrl": "253507018",
+        "startAt": "0:20"
+      },
+      {
+        "word": "EAGLES",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "231849488",
+        "startAt": "0:20"
+      }
+    ]
   }
 }
