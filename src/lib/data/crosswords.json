@@ -1201,7 +1201,6 @@
       }
     ]
   },
-  
   "2025-04-15": {
     "title": "It's 2011 and you turned the radio on",
     "version": "1.0.0",
@@ -1293,7 +1292,6 @@
       }
     ]
   },
-  
   "2025-04-16": {
     "title": "vroom vroom",
     "version": "1.0.0",
@@ -1385,7 +1383,6 @@
       }
     ]
   },
-  
   "2025-04-17": {
     "title": "Musical Animal Kingdom",
     "version": "1.0.0",
@@ -1473,6 +1470,107 @@
         "color": "#FE9C9C",
         "textClue": "Artist name",
         "audioUrl": "231849488",
+        "startAt": "0:20"
+      }
+    ]
+  },
+  "2025-04-18": {
+    "title": "idk glhf",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "CLOSER",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "274720380",
+        "startAt": "0:20"
+      },
+      {
+        "word": "ICON",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "355372469",
+        "startAt": "0:25"
+      },
+      {
+        "word": "TATEMCRAE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "1676618877",
+        "startAt": "0:20"
+      },
+      {
+        "word": "APPLE",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1839750924",
+        "startAt": "0:20"
+      },
+      {
+        "word": "FLOWERS",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1422809359",
+        "startAt": "0:20"
+      },
+      {
+        "word": "THRIFTSHOP",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "555682944",
+        "startAt": "0:43"
+      },
+      {
+        "word": "SPORTSCAR",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "2014861735",
+        "startAt": "0:20"
+      },
+      {
+        "word": "WONDERWALL",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "283975388",
+        "startAt": "0:20"
+      },
+      {
+        "word": "SEAN",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "98301888",
         "startAt": "0:20"
       }
     ]
