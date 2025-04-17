@@ -49,14 +49,14 @@
     }
 </script>
 
-{#if isMobileDevice}
-  <div
-    class="h-[50px] w-full bg-white dark:bg-[#202020] fixed top-0 left-0 right-0 z-[100] flex items-center justify-center"
-  >
-    <!-- Ramp ad unit container -->
-    <div data-pw-mobi="standard_iab_head1" id="standard_iab_head1"></div>
-  </div>
-{/if}
+
+<div
+  id="ad-container" class="h-[50px] w-full bg-white dark:bg-[#202020] fixed top-0 left-0 right-0 z-1000 flex items-center justify-center"
+>
+  <!-- Ramp ad unit container -->
+  <div data-pw-mobi="standard_iab_head1" id="standard_iab_head1"></div>
+</div>
+
 
 <style>
   /* Adjust global padding to account for the ad banner on mobile */
@@ -68,10 +68,16 @@
 
   /* Ensure the ad container itself doesn't add extra spacing */
   #standard_iab_head1 {
-    display: flex; /* Use flex to help center content if needed */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%; /* Fill the parent container */
+    width: 350px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+    /* Hide ads on desktop */
+  @media (min-width: 768px) {
+    #ad-container {
+      display: none;
+    }
   }
 </style>
