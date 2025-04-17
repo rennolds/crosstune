@@ -1,6 +1,7 @@
 <script>
   import { page } from "$app/stores";
   import { browser } from "$app/environment";
+  import { onMount } from "svelte";
 
   // Props passed from +layout.svelte
   let { PUB_ID, WEBSITE_ID } = $props();
@@ -9,87 +10,48 @@
   let rampComponentLoaded = $state(false);
   let lastPathname = $state(undefined);
 
-  $effect(() => {
-    // Determine if mobile device initially and on resize
-    if (browser) {
-      isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
-      const mediaQuery = window.matchMedia("(max-width: 768px)");
-      const handler = (e) => {
-        isMobileDevice = e.matches;
-      };
-      mediaQuery.addEventListener("change", handler);
-
-      // Cleanup listener on component destroy
-      return () => mediaQuery.removeEventListener("change", handler);
-    }
-  });
-
-  $effect(() => {
-    // Ramp loading logic - only runs on mobile and when props are available
-    if (
-      browser &&
-      PUB_ID &&
-      WEBSITE_ID &&
-      !rampComponentLoaded
-    ) {
-      console.log("Loading Ramp ad...");
-      window.ramp = window.ramp || {};
-      window.ramp.que = window.ramp.que || [];
-      window.ramp.passiveMode = true;
-
-      const configScript = document.createElement("script");
-      configScript.src = `https://cdn.intergient.com/${PUB_ID}/${WEBSITE_ID}/ramp.js`;
-      document.body.appendChild(configScript);
-
-      configScript.onload = () => {
-        rampComponentLoaded = true;
-        window.ramp.que.push(() => {
-          window.ramp.addTag("standard_iab_head1");
-          window.ramp.displayUnits(); // Display ads immediately after loading and adding the tag
-          lastPathname = $page.url.pathname; // Initialize lastPathname after first load
+  if (browser) {  
+        let rampComponentLoaded = false;
+        let lastPathname;
+        onMount(() => {
+          if (!PUB_ID || !WEBSITE_ID) {
+            console.log('Missing Publisher Id and Website Id');
+            return;
+          }
+          window.ramp = window.ramp || {};
+          window.ramp.que = window.ramp.que || [];
+          window.ramp.passiveMode = true;
+          // Load the Ramp configuration script
+          const configScript = document.createElement("script");
+          configScript.src = `https://cdn.intergient.com/${PUB_ID}/${WEBSITE_ID}/ramp.js`;
+          document.body.appendChild(configScript); // Insert before closing</body> tag
+          configScript.onload = () => {
+            rampComponentLoaded = true;
+            window.ramp.que.push(() => {
+                window.ramp.spaNewPage();
+                window.ramp.addTag("standard_iab_head1");
+            });
+          };
         });
-      };
-
-      // Optional: Add cleanup for the script tag if the component unmounts before loading finishes
-      return () => {
-        const existingScript = document.querySelector(
-          `script[src="${configScript.src}"]`
-        );
-        if (existingScript) {
-          document.body.removeChild(existingScript);
+    
+        $effect(() => { if (
+            rampComponentLoaded &&
+            window.ramp &&
+            window.ramp.spaNewPage &&
+            $page.url.pathname !== lastPathname
+        ) {
+          lastPathname = $page.url.pathname;
+          window.ramp.que.push(() => {
+            window.ramp.spaNewPage($page.url.pathname);
+          });
         }
-        // Potentially clear Ramp queue or state if necessary
-      };
-    } else if (!isMobileDevice && rampComponentLoaded) {
-      // Optional: Cleanup if switching from mobile to desktop after ad loaded
-      console.log("Device is no longer mobile, potentially unload Ramp.");
-      // Add any necessary Ramp cleanup logic here if needed
-      rampComponentLoaded = false; // Reset state
-    }
-  });
-
-  // Effect for handling SPA navigation updates for Ramp
-  $effect(() => {
-    if (
-      rampComponentLoaded &&
-      window.ramp &&
-      window.ramp.spaNewPage &&
-      $page.url.pathname !== lastPathname
-    ) {
-      lastPathname = $page.url.pathname;
-      console.log("Ramp SPA Navigation: ", lastPathname);
-      window.ramp.que.push(() => {
-        // It's often better to refresh units or call spaNewPage based on ad provider docs
-        window.ramp.refreshUnits();
-        // window.ramp.spaNewPage(lastPathname); // Use if spaNewPage is the correct method
       });
     }
-  });
 </script>
 
 {#if isMobileDevice}
   <div
-    class="h-[50px] w-full bg-gray-200 fixed top-0 left-0 right-0 z-[100] flex items-center justify-center"
+    class="h-[50px] w-full bg-white dark:bg-[#202020] fixed top-0 left-0 right-0 z-[100] flex items-center justify-center"
   >
     <!-- Ramp ad unit container -->
     <div data-pw-mobi="standard_iab_head1" id="standard_iab_head1"></div>
