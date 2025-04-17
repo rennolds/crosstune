@@ -73,7 +73,6 @@
   $effect(() => {
     if (
       rampComponentLoaded &&
-      isMobileDevice && // Ensure we only run this on mobile
       window.ramp &&
       window.ramp.spaNewPage &&
       $page.url.pathname !== lastPathname
