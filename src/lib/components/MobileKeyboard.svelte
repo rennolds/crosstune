@@ -20,12 +20,15 @@
   class:bg-[#F3F4F6]={!isDark}
   class:bg-[#202020]={isDark}
 >
-  <div class="px-1 pb-1 space-y-2">
+  <div class="px-1 pb-1 space-y-1">
     <!-- Row 1 -->
-    <div class="flex gap-1">
+    <div class="flex gap-0.5">
       {#each showSymbols ? symbolRow1 : letterRow1 as key}
         <button
-          class="flex-1 h-12 rounded shadow text-base font-semibold flex items-center justify-center"
+          class="flex-1 rounded shadow text-base font-semibold flex items-center justify-center"
+          class:h-8={window.innerWidth < 375}
+          class:h-10={window.innerWidth >= 375 && window.innerWidth < 414}
+          class:h-12={window.innerWidth >= 414}
           class:bg-white={!isDark}
           class:bg-gray-700={isDark}
           class:text-black={!isDark}
@@ -42,10 +45,13 @@
     </div>
 
     <!-- Row 2 -->
-    <div class="flex gap-1">
+    <div class="flex gap-0.5">
       {#each showSymbols ? symbolRow2 : letterRow2 as key}
         <button
-          class="flex-1 h-12 rounded shadow text-base font-semibold flex items-center justify-center"
+          class="flex-1 rounded shadow text-base font-semibold flex items-center justify-center"
+          class:h-8={window.innerWidth < 375}
+          class:h-10={window.innerWidth >= 375 && window.innerWidth < 414}
+          class:h-12={window.innerWidth >= 414}
           class:bg-white={!isDark}
           class:bg-gray-700={isDark}
           class:text-black={!isDark}
@@ -62,9 +68,12 @@
     </div>
 
     <!-- Row 3 -->
-    <div class="flex gap-1">
+    <div class="flex gap-0.5">
       <button
-        class="w-12 h-12 rounded shadow text-xs font-semibold flex items-center justify-center"
+        class="w-12 rounded shadow text-xs font-semibold flex items-center justify-center"
+        class:h-8={window.innerWidth < 375}
+        class:h-10={window.innerWidth >= 375 && window.innerWidth < 414}
+        class:h-12={window.innerWidth >= 414}
         class:bg-white={!isDark}
         class:bg-gray-700={isDark}
         class:text-black={!isDark}
@@ -78,10 +87,13 @@
         {showSymbols ? "ABC" : "123"}
       </button>
 
-      <div class="flex-1 flex gap-1">
+      <div class="flex-1 flex gap-0.5">
         {#each showSymbols ? symbolRow3 : letterRow3 as key}
           <button
-            class="flex-1 h-12 rounded shadow text-base font-semibold flex items-center justify-center"
+            class="flex-1 rounded shadow text-base font-semibold flex items-center justify-center"
+            class:h-8={window.innerWidth < 375}
+            class:h-10={window.innerWidth >= 375 && window.innerWidth < 414}
+            class:h-12={window.innerWidth >= 414}
             class:bg-white={!isDark}
             class:bg-gray-700={isDark}
             class:text-black={!isDark}
@@ -98,7 +110,10 @@
       </div>
 
       <button
-        class="w-12 h-12 rounded shadow text-xl font-semibold flex items-center justify-center"
+        class="w-12 rounded shadow text-xl font-semibold flex items-center justify-center"
+        class:h-8={window.innerWidth < 375}
+        class:h-10={window.innerWidth >= 375 && window.innerWidth < 414}
+        class:h-12={window.innerWidth >= 414}
         class:bg-white={!isDark}
         class:bg-gray-700={isDark}
         class:text-black={!isDark}
