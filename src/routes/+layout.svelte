@@ -10,5 +10,5 @@
   let { children } = $props();
 </script>
 
-<AdBanner {PUBLISHER_ID} {WEBSITE_ID} />
+<AdBanner PUB_ID={PUBLISHER_ID} WEBSITE_ID={WEBSITE_ID} />
 {@render children()}
