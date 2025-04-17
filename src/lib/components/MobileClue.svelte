@@ -114,12 +114,10 @@
 {#if clue}
   <div
     class="fixed left-0 right-0 bg-white shadow-sm dark:text-black z-30"
-    class:bottom-[110px]={window.innerWidth < 375}
-    class:bottom-[120px]={window.innerWidth >= 375 && window.innerWidth < 414}
-    class:bottom-[150px]={window.innerWidth >= 414}
     class:h-10={window.innerWidth < 375}
     class:h-11={window.innerWidth >= 375 && window.innerWidth < 414}
     class:h-13={window.innerWidth >= 414}
+    style="bottom: calc(100px + var(--keyboard-height, 0px));"
   >
     <div
       class="flex items-center justify-between h-full px-2"

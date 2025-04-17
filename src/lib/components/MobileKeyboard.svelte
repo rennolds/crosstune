@@ -1,8 +1,10 @@
 <script>
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
+  import { onMount } from "svelte";
 
   let { onKeyPress } = $props();
   let showSymbols = $state(false);
+  let keyboardRef = $state(null);
 
   let isDark = $derived(getIsDarkMode());
 
@@ -13,12 +15,23 @@
   const symbolRow1 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   const symbolRow2 = ["@", "#", "$", "%", "&", "*", "-", "+", "="];
   const symbolRow3 = [".", "!", "?", "/", "(", ")", ";", ":"];
+
+  onMount(() => {
+    if (keyboardRef) {
+      const height = keyboardRef.offsetHeight;
+      document.documentElement.style.setProperty(
+        "--keyboard-height",
+        `${height}px`
+      );
+    }
+  });
 </script>
 
 <div
   class="virtual-keyboard md:hidden fixed bottom-0 left-0 right-0 pb-1 z-20"
   class:bg-[#F3F4F6]={!isDark}
   class:bg-[#202020]={isDark}
+  bind:this={keyboardRef}
 >
   <div class="px-1 pb-1 space-y-1">
     <!-- Row 1 -->
