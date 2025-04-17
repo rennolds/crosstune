@@ -1,10 +1,9 @@
 <script>
   import crosswords from "$lib/data/crosswords.json";
-  import MobileKeyboard from "./MobileKeyboard.svelte";
-  import MobileClue from "./MobileClue.svelte";
   import ResultOverlay from "./ResultOverlay.svelte";
   import SoundCloudManager from "./SoundCloudManager.svelte";
   import VinylRecord from "./VinylRecord.svelte";
+  import MobileControls from "./MobileControls.svelte";
 
   import {
     getIsCorrect,
@@ -609,7 +608,7 @@
     });
 
     // Find the index of the current word
-    const currentIndex = allWords.findIndex(
+    const currentWordIndex = allWords.findIndex(
       (word) =>
         word.startX === currentWord.startX &&
         word.startY === currentWord.startY &&
@@ -617,7 +616,7 @@
     );
 
     // Get the next word, or wrap around to the first word
-    const nextWord = allWords[(currentIndex + 1) % allWords.length];
+    const nextWord = allWords[(currentWordIndex + 1) % allWords.length];
 
     return nextWord;
   }
@@ -1445,15 +1444,17 @@
     </div>
 
     {#if isMobileDevice}
-      <MobileClue
-        clue={activeClue}
-        onPlay={playClue}
-        {isPlaying}
-        {playingClue}
-        onStopAudio={stopAudio}
-        {words}
-      />
-      <MobileKeyboard onKeyPress={handleVirtualKeyPress} />
+      {#if activeClue}
+        <MobileControls
+          clue={activeClue}
+          onPlay={playClue}
+          {isPlaying}
+          {playingClue}
+          onStopAudio={stopAudio}
+          {words}
+          onKeyPress={handleVirtualKeyPress}
+        />
+      {/if}
     {/if}
     {#if !isMobileDevice}
       <!-- Clue list container -->
