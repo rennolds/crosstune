@@ -213,7 +213,7 @@
           </div>
         </div>
 
-        <div class="menu-footer mt-auto pt-6 pb-[100px]">
+        <div class="menu-footer mt-auto pt-6 pb-[110px]">
           <div class="footer-text text-black dark:text-white text-sm">
             made by flatwhite studios
           </div>
