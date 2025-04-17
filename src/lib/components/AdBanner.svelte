@@ -28,7 +28,6 @@
     // Ramp loading logic - only runs on mobile and when props are available
     if (
       browser &&
-      isMobileDevice &&
       PUB_ID &&
       WEBSITE_ID &&
       !rampComponentLoaded
