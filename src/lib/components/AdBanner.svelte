@@ -51,7 +51,7 @@
 
 
 <div
-  id="ad-container" class="h-[50px] w-full bg-white dark:bg-[#202020] fixed top-0 left-0 right-0 z-1000 flex items-center justify-center"
+  id="ad-container" class="h-[50px] w-full bg-white dark:bg-black fixed top-0 left-0 right-0 z-1000 flex items-center justify-center"
 >
   <!-- Ramp ad unit container -->
   <div data-pw-mobi="standard_iab_head1" id="standard_iab_head1"></div>
