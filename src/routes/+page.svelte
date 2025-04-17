@@ -40,11 +40,9 @@
 {#if showSplash}
   <SplashScreen onPlay={handlePlay} />
 {:else}
-  <main class="dark min-h-screen flex flex-col">
-    <div class="w-full h-[50px] md:h-0">
-      <Ramp PUB_ID={PUBLISHER_ID} {WEBSITE_ID} />
-    </div>
-    <div class="flex-1 pt-0 md:pt-0">
+  <Ramp PUB_ID={PUBLISHER_ID} {WEBSITE_ID} />
+  <main class="dark min-h-screen flex flex-col pt-12">
+    <div class="flex-1">
       <CrosswordGrid2 onSetRevealFunctions={handleRevealFunctions} />
     </div>
   </main>

@@ -11,41 +11,66 @@
 
   $effect(() => {
     if (typeof window !== "undefined") {
-      isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
-
       const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+      // Set initial state
+      isMobileDevice = mediaQuery.matches;
+
+      // Update state on change
       const handler = (e) => {
         isMobileDevice = e.matches;
       };
 
       mediaQuery.addEventListener("change", handler);
+
+      // Cleanup listener on component unmount
       return () => mediaQuery.removeEventListener("change", handler);
     }
   });
 
-  onMount(() => {
-    if (!PUB_ID || !WEBSITE_ID) {
-      console.log("Missing Publisher Id and Website Id");
-      return;
+  // Effect to manage body class based on isMobileDevice
+  $effect(() => {
+    if (typeof document !== "undefined") {
+      if (isMobileDevice) {
+        document.body.classList.add("mobile-ad-padding");
+      } else {
+        document.body.classList.remove("mobile-ad-padding");
+      }
+      // Cleanup function to remove the class if the component unmounts
+      return () => {
+        document.body.classList.remove("mobile-ad-padding");
+      };
     }
-    window.ramp = window.ramp || {};
-    window.ramp.que = window.ramp.que || [];
-    window.ramp.passiveMode = true;
-    // Load the Ramp configuration script
-    const configScript = document.createElement("script");
-    configScript.src = `https://cdn.intergient.com/${PUB_ID}/${WEBSITE_ID}/ramp.js`;
-    document.body.appendChild(configScript);
-    configScript.onload = () => {
-      rampComponentLoaded = true;
-      window.ramp.que.push(() => {
-        window.ramp.spaNewPage();
-        window.ramp.addTag("standard_iab_head1");
-      });
-    };
   });
 
+  onMount(() => {
+    // Only load Ramp script if on mobile and IDs are present
+    if (isMobileDevice && PUB_ID && WEBSITE_ID) {
+      window.ramp = window.ramp || {};
+      window.ramp.que = window.ramp.que || [];
+      window.ramp.passiveMode = true;
+
+      const configScript = document.createElement("script");
+      configScript.src = `https://cdn.intergient.com/${PUB_ID}/${WEBSITE_ID}/ramp.js`;
+      configScript.async = true; // Load async to avoid blocking
+      document.body.appendChild(configScript);
+
+      configScript.onload = () => {
+        rampComponentLoaded = true;
+        window.ramp.que.push(() => {
+          window.ramp.spaNewPage();
+          window.ramp.addTag("standard_iab_head1");
+        });
+      };
+    } else if (!PUB_ID || !WEBSITE_ID) {
+      console.log("Missing Publisher Id and/or Website Id for Ramp ad.");
+    }
+  });
+
+  // Effect for handling SPA navigation updates for Ramp
   $effect: if (
     rampComponentLoaded &&
+    isMobileDevice && // Only trigger SPA updates if mobile and loaded
     window.ramp &&
     window.ramp.spaNewPage &&
     $page.url.pathname !== lastPathname
@@ -61,16 +86,14 @@
   <div
     data-pw-mobi="standard_iab_head1"
     id="standard_iab_head1"
-    class="h-[50px] w-full fixed top-0 left-0 right-0 z-[100]"
+    class="h-[50px] w-full fixed top-0 left-0 right-0 z-[100] bg-white dark:bg-gray-900"
   ></div>
 {/if}
 
 <style>
   /* Adjust global padding to account for the ad banner on mobile */
-  :global(body) {
-    @media (max-width: 768px) {
-      padding-top: 50px !important;
-    }
+  :global(body.mobile-ad-padding) {
+    padding-top: 50px !important;
   }
 
   /* #standard_iab_head1 {
