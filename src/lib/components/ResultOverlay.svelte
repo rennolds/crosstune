@@ -178,7 +178,7 @@
 
     <!-- Content -->
     <div
-      class="relative z-10 flex flex-col items-center text-center max-w-md w-full mx-4 space-y-6 p-8 overflow-y-auto max-h-[calc(100vh-8rem)] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-700"
+      class="relative z-10 flex flex-col items-center text-center max-w-2xl w-full mx-4 space-y-6 p-8 overflow-y-auto max-h-[calc(100vh-8rem)] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-700"
     >
       <!-- Exit button -->
       <button
@@ -287,11 +287,11 @@
         <h3 class="text-lg font-semibold mb-3 text-white">Song Credits</h3>
 
         <!-- Song Credits List -->
-        <div class="space-y-3">
+        <div class="space-y-3 w-full">
           {#each words as word}
             <div
               onclick={() => openTrackInSoundCloud(word.audioUrl)}
-              class="bg-white rounded-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors"
+              class="bg-white rounded-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors w-full"
             >
               <div class="flex items-center gap-4">
                 <button
@@ -302,8 +302,17 @@
                   class="text-gray-600 hover:text-gray-800 transition-colors"
                   aria-label="Play preview"
                 >
-                  <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433284 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" fill="#FF3F00"/>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17317C0.00433284 8.00043 -0.193701 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8079C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+                      fill="#FF3F00"
+                    />
                   </svg>
                 </button>
                 <div class="flex flex-col">
