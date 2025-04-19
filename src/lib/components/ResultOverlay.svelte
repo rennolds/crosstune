@@ -287,11 +287,11 @@
         <h3 class="text-lg font-semibold mb-3 text-white">Song Credits</h3>
 
         <!-- Song Credits List -->
-        <div class="space-y-3">
+        <div class="space-y-3 w-full">
           {#each words as word}
             <div
               onclick={() => openTrackInSoundCloud(word.audioUrl)}
-              class="bg-white rounded-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors"
+              class="bg-white rounded-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors w-full"
             >
               <div class="flex items-center gap-4">
                 <button
