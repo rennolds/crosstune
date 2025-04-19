@@ -1380,12 +1380,10 @@
                 {cell === null
                   ? 'background-color: transparent;'
                   : isCellHighlighted(x, y)?.type === 'focused'
-                    ? `background-color: #FFFF00;
-                      outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
+                    ? `background-color: #FFFF00; border: 0.6px solid black;`
                     : isCellHighlighted(x, y)?.type === 'active'
-                      ? `background-color: ${isCellHighlighted(x, y).color};
-                        outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;`
-                      : 'background-color: #FFF; outline: 1.2px solid black; margin-left: 1px; margin-top: 1px;'}"
+                      ? `background-color: ${isCellHighlighted(x, y).color}; border: 0.6px solid black;`
+                      : 'background-color: #FFF; border: 0.6px solid black;'}"
               >
                 {#if cell !== null}
                   {#if wordNumbers.has(`${x},${y}`)}
@@ -1783,7 +1781,7 @@
       flex: 1 1 auto; /* Grow and shrink to fill available vertical space */
       min-height: 0; /* Allow shrinking within flex column */
       display: flex; /* Center the grid inside */
-      align-items: center;
+      align-items: flex-start; /* Align grid to top instead of center */
       justify-content: center;
       overflow: hidden; /* Prevent the grid overflowing this container */
     }
@@ -1793,6 +1791,15 @@
       max-width: 100%;
       max-height: 100%;
       /* The inline aspect-ratio style combined with max constraints will size it */
+    }
+
+    /* Specific adjustments for very small screens */
+    @media (max-width: 400px) {
+      .w-full.relative[style*="aspect-ratio"] {
+        /* Reduce size slightly on smallest screens */
+        max-width: 92%; /* Further reduced from 95% */
+        max-height: 92%; /* Further reduced from 95% */
+      }
     }
 
     :global(.slide-menu-open) {
