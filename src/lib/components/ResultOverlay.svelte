@@ -15,41 +15,45 @@
   function getTrackInfoFromWidget(word) {
     const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
     const iframe = document.getElementById(widgetId);
-    if (iframe) {
+
+    if (!iframe) {
+      console.warn("Widget iframe not found:", widgetId);
+      trackMetadata[word.audioUrl] = {
+        title: "Unknown Track",
+        artist: "Unknown Artist",
+      };
+      return;
+    }
+
+    // Wait for the widget to be ready
+    setTimeout(() => {
       try {
         const widget = SC.Widget(iframe);
-        widget.getCurrentSound((sound) => {
-          if (sound) {
-            console.log("Loaded sound:", sound);
-            trackMetadata[word.audioUrl] = {
-              title: sound.title,
-              artist: sound.user.username,
-            };
-          } else {
-            console.warn("No sound data received for:", word.audioUrl);
-            // Set a default value if no sound data is received
-            trackMetadata[word.audioUrl] = {
-              title: "Unknown Track",
-              artist: "Unknown Artist",
-            };
-          }
+        widget.bind(SC.Widget.Events.READY, () => {
+          widget.getCurrentSound((sound) => {
+            if (sound) {
+              console.log("Loaded sound:", sound);
+              trackMetadata[word.audioUrl] = {
+                title: sound.title,
+                artist: sound.user.username,
+              };
+            } else {
+              console.warn("No sound data received for:", word.audioUrl);
+              trackMetadata[word.audioUrl] = {
+                title: "Unknown Track",
+                artist: "Unknown Artist",
+              };
+            }
+          });
         });
       } catch (error) {
         console.error("Error getting track info:", error);
-        // Set a default value on error
         trackMetadata[word.audioUrl] = {
           title: "Unknown Track",
           artist: "Unknown Artist",
         };
       }
-    } else {
-      console.warn("Widget iframe not found:", widgetId);
-      // Set a default value if widget not found
-      trackMetadata[word.audioUrl] = {
-        title: "Unknown Track",
-        artist: "Unknown Artist",
-      };
-    }
+    }, 1000); // Wait 1 second for widget to initialize
   }
 
   // Get track info for all words when component mounts
