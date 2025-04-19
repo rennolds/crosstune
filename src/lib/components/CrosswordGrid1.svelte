@@ -1740,6 +1740,7 @@
     isCorrect={getIsCorrect()}
     onClose={handleCloseOverlay}
     {isArchiveMode}
+    words={puzzle.words}
   />
 {/if}
 
