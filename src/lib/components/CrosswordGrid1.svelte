@@ -1360,7 +1360,7 @@
         class="w-full relative"
         style="aspect-ratio: {size.width}/{size.height};"
       >
-        <VinylRecord {isPlaying} />
+        <VinylRecord theme={puzzle.theme || "black"} {isPlaying} />
 
         <!-- Remove the background image and instead use a transparent background -->
         <div

@@ -2,6 +2,7 @@
   "2025-04-09": {
     "version": "1.0.0",
     "title": "Swifties",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -103,6 +104,7 @@
   "2025-04-01": {
     "version": "1.0.0",
     "title": "Swifties",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -204,6 +206,7 @@
   "2025-04-02": {
     "version": "1.0.0",
     "title": "Super Seventies",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -315,6 +318,7 @@
   "2025-04-03": {
     "version": "1.0.0",
     "title": "All Things Aussie",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -426,6 +430,7 @@
   "2025-04-04": {
     "version": "1.0.0",
     "title": "vas happenin'",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -527,6 +532,7 @@
   "2025-04-05": {
     "version": "1.0.0",
     "title": "Girl Power",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -618,6 +624,7 @@
   "2025-04-06": {
       "version": "1.0.0",
       "title": "Dihydrogen Monoxide",
+      "theme": "green",
       "size": {
         "width": 12,
         "height": 10
@@ -719,6 +726,7 @@
   "2025-04-07": {
     "version": "1.0.0",
     "title": "Warm Sunny Day",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -810,6 +818,7 @@
   "2025-04-08": {
     "version": "1.0.0",
     "title": "Disney on Ice",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -911,6 +920,7 @@
   "2025-04-09": {
     "version": "1.0.0",
     "title": "You Live Here?",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -1012,6 +1022,7 @@
   "2025-04-10": {
     "title": "The Letter \"A\"",
     "version": "1.0.0",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -1113,6 +1124,7 @@
   "2025-04-10": {
     "title": "\"Hammered\"",
     "version": "1.0.0",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -1204,6 +1216,7 @@
   "2025-04-15": {
     "title": "It's 2011 and you turned the radio on",
     "version": "1.0.0",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -1295,6 +1308,7 @@
   "2025-04-16": {
     "title": "vroom vroom",
     "version": "1.0.0",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -1322,7 +1336,7 @@
         "startAt": "0:20"
       },
       {
-        "word": "BLACK",
+        "word": "green",
         "startX": 6,
         "startY": 7,
         "direction": "across",
@@ -1386,6 +1400,7 @@
   "2025-04-17": {
     "title": "Musical Animal Kingdom",
     "version": "1.0.0",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10
@@ -1477,6 +1492,7 @@
   "2025-04-18": {
     "title": "idk glhf",
     "version": "1.0.0",
+    "theme": "green",
     "size": {
       "width": 12,
       "height": 10

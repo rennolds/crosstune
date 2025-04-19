@@ -1,5 +1,5 @@
 <script>
-  let { isPlaying = false } = $props();
+  let { isPlaying = false, theme = "black" } = $props();
   let rotation = $state(0);
   let animationFrame;
   let speed = $state(0); // Start with speed at 0
@@ -111,7 +111,7 @@
   class="vinyl-container"
   style="transform: translate(-50%, -50%) rotate({rotation}deg);"
 >
-  <img src="/green_vinyl.png" alt="Vinyl Record" />
+  <img src="{theme}_vinyl.png" alt="Vinyl Record" />
 </div>
 
 <style>
