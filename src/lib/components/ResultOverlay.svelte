@@ -16,21 +16,46 @@
     const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
     const iframe = document.getElementById(widgetId);
     if (iframe) {
-      const widget = SC.Widget(iframe);
-      widget.getCurrentSound((sound) => {
-        if (sound) {
-          trackMetadata[word.audioUrl] = {
-            title: sound.title,
-            artist: sound.user.username,
-          };
-        }
-      });
+      try {
+        const widget = SC.Widget(iframe);
+        widget.getCurrentSound((sound) => {
+          if (sound) {
+            console.log("Loaded sound:", sound);
+            trackMetadata[word.audioUrl] = {
+              title: sound.title,
+              artist: sound.user.username,
+            };
+          } else {
+            console.warn("No sound data received for:", word.audioUrl);
+            // Set a default value if no sound data is received
+            trackMetadata[word.audioUrl] = {
+              title: "Unknown Track",
+              artist: "Unknown Artist",
+            };
+          }
+        });
+      } catch (error) {
+        console.error("Error getting track info:", error);
+        // Set a default value on error
+        trackMetadata[word.audioUrl] = {
+          title: "Unknown Track",
+          artist: "Unknown Artist",
+        };
+      }
+    } else {
+      console.warn("Widget iframe not found:", widgetId);
+      // Set a default value if widget not found
+      trackMetadata[word.audioUrl] = {
+        title: "Unknown Track",
+        artist: "Unknown Artist",
+      };
     }
   }
 
   // Get track info for all words when component mounts
   $effect(() => {
     if (words.length > 0) {
+      console.log("Loading track info for words:", words);
       words.forEach((word) => {
         getTrackInfoFromWidget(word);
       });
@@ -317,7 +342,7 @@
                 </button>
                 <div class="flex flex-col">
                   <p class="text-gray-800 font-medium">{word.text}</p>
-                  {#if trackMetadata[word.audioUrl]}
+                  {#if trackMetadata[word.audioUrl]?.title && trackMetadata[word.audioUrl]?.artist}
                     <div class="flex flex-col">
                       <p class="text-gray-800 font-semibold text-sm">
                         {trackMetadata[word.audioUrl].title}
@@ -327,7 +352,7 @@
                       </p>
                     </div>
                   {:else}
-                    <p class="text-gray-600 text-sm">{word.textClue}</p>
+                    <p class="text-gray-600 text-sm">Loading track info...</p>
                   {/if}
                 </div>
               </div>
