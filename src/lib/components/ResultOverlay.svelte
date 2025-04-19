@@ -178,7 +178,7 @@
 
     <!-- Content -->
     <div
-      class="relative z-10 flex flex-col items-center text-center max-w-2xl w-full mx-4 space-y-6 p-8 overflow-y-auto max-h-[calc(100vh-8rem)] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-700"
+      class="relative z-10 flex flex-col items-center text-center max-w-md w-full mx-4 space-y-6 p-8 overflow-y-auto max-h-[calc(100vh-8rem)] scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-700"
     >
       <!-- Exit button -->
       <button
@@ -287,11 +287,11 @@
         <h3 class="text-lg font-semibold mb-3 text-white">Song Credits</h3>
 
         <!-- Song Credits List -->
-        <div class="space-y-3 w-full">
+        <div class="space-y-3">
           {#each words as word}
             <div
               onclick={() => openTrackInSoundCloud(word.audioUrl)}
-              class="bg-white rounded-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors w-full"
+              class="bg-white rounded-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition-colors"
             >
               <div class="flex items-center gap-4">
                 <button
