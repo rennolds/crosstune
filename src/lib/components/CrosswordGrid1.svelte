@@ -1334,7 +1334,7 @@
 
 <SoundCloudManager {words} />
 
-<div class="w-full md:max-w-3xl mx-auto mt-2">
+<div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
   <!-- Date/title container aligned with crossword -->
   <div
     class="hidden md:block text-left mb-4"
@@ -1798,8 +1798,8 @@
     @media (max-width: 400px) {
       .w-full.relative[style*="aspect-ratio"] {
         /* Reduce size slightly on smallest screens */
-        max-width: 92%; /* Further reduced from 95% */
-        max-height: 92%; /* Further reduced from 95% */
+        max-width: 88%; /* Further reduced from 92% */
+        max-height: 88%; /* Further reduced from 92% */
       }
     }
 
