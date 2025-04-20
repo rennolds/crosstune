@@ -125,7 +125,13 @@
     windowWidth < 375 ? "h-9" : windowWidth < 414 ? "h-11" : "h-13"
   );
   let keyHeightClass = $derived(
-    windowWidth < 375 ? "h-7" : windowWidth < 414 ? "h-10" : "h-14"
+    windowWidth < 375
+      ? "h-7" // Smallest (e.g., iPhone SE)
+      : windowWidth < 389
+        ? "h-10" // Small-Medium (adjusted breakpoint)
+        : windowWidth < 414
+          ? "h-12" // Medium-Large (e.g., iPhone 14/15)
+          : "h-14" // Largest (e.g., Plus/Max models)
   );
 </script>
 
