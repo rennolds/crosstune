@@ -122,7 +122,13 @@
   });
 
   let clueHeightClass = $derived(
-    windowWidth < 375 ? "h-9" : windowWidth < 414 ? "h-11" : "h-13"
+    windowWidth < 375
+      ? "h-9"
+      : windowWidth < 389
+        ? "h-11" // Keep h-11 for 375-388
+        : windowWidth < 414
+          ? "h-12" // Increase height for 389-413
+          : "h-13" // Keep h-13 for >= 414
   );
   let keyHeightClass = $derived(
     windowWidth < 375
