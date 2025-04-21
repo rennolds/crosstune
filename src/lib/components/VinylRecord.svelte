@@ -122,8 +122,8 @@
   /* Smallest phones (< 375px) */
   @media (max-width: 374px) {
     .vinyl-container {
-      width: 85%;
-      height: 85%;
+      width: 82%; /* Reduced from 83% */
+      height: 82%; /* Reduced from 83% */
       opacity: 0.8;
     }
   }

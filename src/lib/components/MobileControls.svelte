@@ -123,21 +123,21 @@
 
   let clueHeightClass = $derived(
     windowWidth < 375
-      ? "h-9"
+      ? "h-8"
       : windowWidth < 389
-        ? "h-11" // Keep h-11 for 375-388
+        ? "h-10"
         : windowWidth < 414
-          ? "h-12" // Increase height for 389-413
-          : "h-13" // Keep h-13 for >= 414
+          ? "h-12"
+          : "h-13"
   );
   let keyHeightClass = $derived(
     windowWidth < 375
-      ? "h-7" // Smallest (e.g., iPhone SE)
+      ? "h-7"
       : windowWidth < 389
-        ? "h-10" // Small-Medium (adjusted breakpoint)
+        ? "h-9"
         : windowWidth < 414
-          ? "h-12" // Medium-Large (e.g., iPhone 14/15)
-          : "h-14" // Largest (e.g., Plus/Max models)
+          ? "h-12"
+          : "h-14"
   );
 </script>
 
