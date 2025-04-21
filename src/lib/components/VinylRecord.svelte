@@ -89,22 +89,6 @@
       }
     };
   });
-
-  // Compute vinyl size based on screen width
-  let vinylSize = $derived(() => {
-    // Make vinyl appropriately sized based on screen width
-    if (screenWidth < 375) {
-      return 85; // Very small screens
-    } else if (screenWidth < 480) {
-      return 90; // Small screens
-    } else if (screenWidth < 768) {
-      return 95; // Medium screens
-    } else if (screenWidth < 1024) {
-      return 130; // Desktop (was 100)
-    } else {
-      return 140; // Large desktop (was 110)
-    }
-  });
 </script>
 
 <div
@@ -135,7 +119,8 @@
   }
 
   /* Mobile adjustments */
-  @media (max-width: 767px) {
+  /* Smallest phones (< 375px) */
+  @media (max-width: 374px) {
     .vinyl-container {
       width: 85%;
       height: 85%;
@@ -143,11 +128,30 @@
     }
   }
 
-  /* Desktop */
+  /* Small-Medium phones (375px - 388px) */
+  @media (min-width: 375px) and (max-width: 388px) {
+    .vinyl-container {
+      width: 88%;
+      height: 88%;
+      opacity: 0.8;
+    }
+  }
+
+  /* Medium-Large phones (389px - 767px, includes iPhone 14) */
+  @media (min-width: 389px) and (max-width: 767px) {
+    .vinyl-container {
+      width: 90%;
+      height: 90%;
+      opacity: 0.8;
+    }
+  }
+
+  /* Desktop (>= 768px) */
   @media (min-width: 768px) {
     .vinyl-container {
       width: 95%;
       height: 95%;
+      opacity: 1; /* Restore full opacity on desktop */
     }
   }
 </style>
