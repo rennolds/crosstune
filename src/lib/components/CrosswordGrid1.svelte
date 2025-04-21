@@ -1789,8 +1789,8 @@
 
     /* Add constraints for the grid's aspect-ratio wrapper */
     .w-full.relative[style*="aspect-ratio"] {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 98%;
+      max-height: 98%;
       /* The inline aspect-ratio style combined with max constraints will size it */
     }
 
@@ -1798,23 +1798,23 @@
     @media (max-width: 400px) {
       .w-full.relative[style*="aspect-ratio"] {
         /* Default smallest size (e.g., iPhone SE < 375px) */
-        max-width: 88%;
-        max-height: 88%;
+        max-width: 86%;
+        max-height: 86%;
       }
 
       /* Slightly larger for 375px to 388px */
       @media (min-width: 375px) {
         .w-full.relative[style*="aspect-ratio"] {
-          max-width: 90%;
-          max-height: 90%;
+          max-width: 88%;
+          max-height: 88%;
         }
       }
 
       /* Larger again for 389px to 400px (e.g., iPhone 14/15) */
       @media (min-width: 389px) {
         .w-full.relative[style*="aspect-ratio"] {
-          max-width: 92%;
-          max-height: 92%;
+          max-width: 93%; /* Changed from 90% (original 92% + 1%) */
+          max-height: 93%; /* Changed from 90% (original 92% + 1%) */
         }
       }
     }
