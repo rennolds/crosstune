@@ -1798,8 +1798,8 @@
     @media (max-width: 400px) {
       .w-full.relative[style*="aspect-ratio"] {
         /* Default smallest size (e.g., iPhone SE < 375px) */
-        max-width: 85%; /* Reduced from 84% */
-        max-height: 85%; /* Reduced from 84% */
+        max-width: 82%; /* Reduced from 84% */
+        max-height: 82%; /* Reduced from 84% */
       }
 
       /* Slightly larger for 375px to 388px */
