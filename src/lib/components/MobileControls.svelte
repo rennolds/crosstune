@@ -38,16 +38,16 @@
       const len = clue.textClue.length;
       if (len > 70) {
         fontSize = "text-xs";
-        lineHeight = "leading-tight";
+        lineHeight = "leading-none";
       } else if (len > 55) {
         fontSize = "text-sm";
-        lineHeight = "leading-tight";
+        lineHeight = "leading-none";
       } else if (len > 40) {
         fontSize = "text-base";
-        lineHeight = "leading-snug";
+        lineHeight = "leading-tight";
       } else if (len > 30) {
         fontSize = "text-lg";
-        lineHeight = "leading-normal";
+        lineHeight = "leading-snug";
       } else {
         fontSize = "text-xl";
         lineHeight = "leading-normal";
