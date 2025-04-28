@@ -1153,8 +1153,6 @@
 
   async function playClue(clue) {
     try {
-      console.log("made it into this function");
-      // First, highlight the word by setting direction and focus
       currentDirection = clue.direction;
       focusedX = clue.startX;
       focusedY = clue.startY;

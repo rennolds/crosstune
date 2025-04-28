@@ -24,6 +24,18 @@
   const todayDate = getEastCoastDate();
   console.log(todayDate);
 
+  // Handle play button click
+  function handlePlay() {
+    // --- GA Event ---
+    if (typeof gtag === "function") {
+      gtag("event", "start_main_game", {
+        event_category: "gameplay",
+      });
+    }
+    // --- End GA Event ---
+    onPlay();
+  }
+
   $effect(() => {
     isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
   });
@@ -157,7 +169,7 @@
 
     <!-- Play Button -->
     <button
-      onclick={onPlay}
+      onclick={handlePlay}
       class="rounded-xs mt-12 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
     >
       Start
