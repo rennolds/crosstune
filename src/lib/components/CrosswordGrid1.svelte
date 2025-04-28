@@ -859,17 +859,14 @@
   function handleKeydown(event, x, y) {
     if (revealedCells.has(`${x},${y}`)) {
       // Only allow navigation keys for revealed cells
-      console.log("It has the item!");
       if (
         ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Tab"].includes(
           event.key
         )
       ) {
         // Handle navigation as normal
-        console.log("continue as normal");
       } else {
         // Prevent modification of revealed cells
-        console.log("abandon ship");
         event.preventDefault();
         return;
       }
@@ -1285,6 +1282,7 @@
         setIsCorrect(true);
         finalTime = getSeconds();
         showOverlay = true;
+        hasShownIncorrectMessage = false; // Reset flag on correct completion
 
         // --- GA Event ---
         if (typeof gtag === "function") {
@@ -1319,12 +1317,21 @@
           markPuzzleAsSolved(getEastCoastDate());
         }
       } else {
+        // Filled but incorrect
         setIsCorrect(false);
-        showOverlay = false;
+        // Show overlay only if the incorrect message hasn't been dismissed for this state
+        if (!hasShownIncorrectMessage) {
+          showOverlay = true;
+        } else {
+          // Keep overlay hidden if it was already dismissed for this incorrect state
+          showOverlay = false;
+        }
       }
     } else {
+      // Not fully filled
       setIsCorrect(false);
       showOverlay = false;
+      hasShownIncorrectMessage = false; // Reset flag if puzzle becomes incomplete
     }
   });
 

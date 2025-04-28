@@ -160,9 +160,9 @@
         style="background-color: {clue.color};"
       >
         <!-- Left Section - Clue Text -->
-        <div class="flex items-center flex-grow min-w-0 mr-4">
+        <div class="flex items-center flex-grow min-w-0">
           <div
-            class="flex items-center gap-2 flex-grow min-w-0 overflow-hidden pl-4"
+            class="flex items-center gap-2 flex-grow min-w-0 overflow-hidden pl-2 pr-2"
           >
             <span
               class="{fontSize} {lineHeight} transition-all duration-200 block"
