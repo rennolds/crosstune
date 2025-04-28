@@ -1546,7 +1546,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "English translation of this Korean song",
+        "textClue": "English translation of this K-Pop song title",
         "audioUrl": "1937452967",
         "startAt": "0:41"
       },
@@ -1586,9 +1586,100 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "A snippet famously sampled by what hit EDM track",
+        "textClue": "What hit EDM track sampled this snippet",
         "audioUrl": "703064593",
         "startAt": "0:11"
+      }
+    ]
+  },
+  "2025-04-27": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "BRUNO",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist Name",
+        "audioUrl": "256044840",
+        "startAt": "0:00"
+      },
+      {
+        "word": "MRSROBINSON",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song Title",
+        "audioUrl": "252859304",
+        "startAt": "0:21"
+      },
+      {
+        "word": "DILEMMA",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "255960748",
+        "startAt": "0:11"
+      },
+      {
+        "word": "FUTURE",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "307949010",
+        "startAt": "0:05"
+      },
+      {
+        "word": "ATARI",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Gaming console referenced in this track",
+        "audioUrl": "328201666",
+        "startAt": "0:07"
+      },
+      {
+        "word": "BORED",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "If Ariana Grande is ____, hide your boyfriend",
+        "audioUrl": "571670148",
+        "startAt": "0:20"
+      },
+      {
+        "word": "SQUABBLEUP",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "1964742195",
+        "startAt": "0:16"
+      },
+      {
+        "word": "MCR",
+        "startX": 8,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Band name, as an acroynm",
+        "audioUrl": "256032689",
+        "startAt": "0:39"
       }
     ]
   }
