@@ -1607,7 +1607,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Artist Name",
+        "textClue": "Artist first name",
         "audioUrl": "256044840",
         "startAt": "0:00"
       },
