@@ -276,6 +276,7 @@
       word: word.word,
       audioUrl: word.audioUrl,
       startAt: word.startAt,
+      audioDuration: word.audioDuration,
       textClue: word.textClue,
       color: word.color,
       startX: word.startX,
@@ -1212,11 +1213,25 @@
         navigator.userAgent
       );
 
-      // Set timeout duration based on browser - 7 seconds for Safari, 6 seconds for others
-      const timeoutDuration = isSafari ? 7500 : 6500;
-      console.log(
-        `Using ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
-      );
+      // Determine timeout duration
+      let timeoutDuration;
+      if (
+        clue.audioDuration &&
+        typeof clue.audioDuration === "number" &&
+        clue.audioDuration > 0
+      ) {
+        // Use duration from JSON (assuming it's in seconds), add 1 second for Safari
+        timeoutDuration = clue.audioDuration * 1000 + (isSafari ? 1000 : 0);
+        console.log(
+          `Using custom duration ${clue.audioDuration}s + ${isSafari ? 1 : 0}s (Safari) = ${timeoutDuration}ms`
+        );
+      } else {
+        // Default duration logic
+        timeoutDuration = isSafari ? 7500 : 6500;
+        console.log(
+          `Using default ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
+        );
+      }
 
       setTimeout(() => {
         // Only pause if this is still the current audio AND from the same play session
@@ -1226,7 +1241,7 @@
           playingClue = null;
           currentAudio = null;
         }
-      }, timeoutDuration);
+      }, timeoutDuration); // Use the calculated duration
     } catch (error) {
       console.error("Error playing audio:", error);
       console.error("Audio element error:", currentAudio?.error);
