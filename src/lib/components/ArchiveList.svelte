@@ -148,6 +148,14 @@
   // Handle playing the selected puzzle
   function handlePlayPuzzle() {
     if (selectedDate) {
+      // --- GA Event ---
+      if (typeof gtag === "function") {
+        gtag("event", "play_archive_game", {
+          event_category: "archive",
+          event_label: selectedDate,
+        });
+      }
+      // --- End GA Event ---
       onSelectDate(selectedDate);
     }
   }

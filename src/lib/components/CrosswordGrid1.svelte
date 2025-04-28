@@ -712,6 +712,15 @@
   // Function to reveal the currently focused cell
   function revealSquare() {
     if (!getIsCorrect()) {
+      // --- GA Event ---
+      if (typeof gtag === "function") {
+        gtag("event", "reveal_square", {
+          event_category: "gameplay",
+          event_label: `${focusedX},${focusedY}`,
+        });
+      }
+      // --- End GA Event ---
+
       const x = focusedX;
       const y = focusedY;
       const cellKey = `${x},${y}`;
@@ -750,6 +759,15 @@
     if (!getIsCorrect()) {
       const activeWord = findActiveWord();
       if (activeWord) {
+        // --- GA Event ---
+        if (typeof gtag === "function") {
+          gtag("event", "reveal_word", {
+            event_category: "gameplay",
+            event_label: `${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`,
+          });
+        }
+        // --- End GA Event ---
+
         for (let i = 0; i < activeWord.word.length; i++) {
           const x =
             activeWord.direction === "across"
@@ -782,6 +800,14 @@
   // Function to reveal the entire puzzle
   function revealPuzzle() {
     if (!getIsCorrect()) {
+      // --- GA Event ---
+      if (typeof gtag === "function") {
+        gtag("event", "reveal_puzzle", {
+          event_category: "gameplay",
+        });
+      }
+      // --- End GA Event ---
+
       // Loop through all words and fill in the correct letters
       for (const word of words) {
         for (let i = 0; i < word.word.length; i++) {
@@ -809,6 +835,23 @@
       setIsCorrect(true);
       finalTime = getSeconds();
       showOverlay = true;
+
+      // This part remains unchanged for daily puzzles
+      markPuzzleAsSolved(getEastCoastDate());
+    } else if (!hasShownIncorrectMessage) {
+      // Puzzle is filled but incorrect
+      setIsCorrect(false);
+      showOverlay = true;
+
+      // --- GA Event (Only for non-archive) ---
+      if (typeof gtag === "function" && !isArchiveMode) {
+        gtag("event", "completed_incorrect", {
+          event_category: "gameplay",
+        });
+      }
+      // --- End GA Event ---
+    } else {
+      setIsCorrect(false);
     }
   }
 
@@ -1229,14 +1272,39 @@
         setIsCorrect(true);
         finalTime = getSeconds();
         showOverlay = true;
+
+        // --- GA Event ---
+        if (typeof gtag === "function") {
+          if (isArchiveMode) {
+            // Archive game completion
+            gtag("event", "completed_archive_game", {
+              event_category: "archive",
+              event_label: selectedDate, // Assuming selectedDate is available here
+              value: finalTime,
+            });
+          } else {
+            // Daily game completion - Only fire if not in archive mode
+            if (revealedCells.size === 0) {
+              gtag("event", "completed_correct_no_reveals", {
+                event_category: "gameplay",
+                value: finalTime,
+              });
+            } else {
+              gtag("event", "completed_correct_with_reveals", {
+                event_category: "gameplay",
+                value: finalTime,
+                revealed_cell_count: revealedCells.size,
+              });
+            }
+          }
+        }
+        // --- End GA Event ---
+
         if (isArchiveMode && selectedDate) {
           markPuzzleAsSolved(selectedDate);
         } else {
           markPuzzleAsSolved(getEastCoastDate());
         }
-      } else if (!hasShownIncorrectMessage) {
-        setIsCorrect(false);
-        showOverlay = true;
       } else {
         setIsCorrect(false);
         showOverlay = false;
