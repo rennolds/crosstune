@@ -1946,5 +1946,96 @@
         "startAt": "0:25"
       }
     ]
-  }
+  },
+  "2025-04-23": {
+    "title": "Song Debuts for CrossTune's Debut!",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "TIMMCGRAW",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Title of Taylor's debut song",
+        "audioUrl": "1698337647",
+        "startAt": "1:58"
+      },
+      {
+        "word": "LEDZEPPELIN",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band Name",
+        "audioUrl": "256217785",
+        "startAt": "0:00"
+      },
+      {
+        "word": "1D",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Acronym this band is known by",
+        "audioUrl": "256071623",
+        "startAt": "0:00"
+      },
+      {      
+        "word": "WEST",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name",
+        "audioUrl": "255766458",
+        "startAt": "0:00"
+      },
+      {
+        "word": "LILNASX",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "539018871",
+        "startAt": "0:13"
+      },
+      {
+        "word": "SPEARS",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": "254294909",
+        "startAt": "0:08"
+      },
+      {
+        "word": "CREEP",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title of this bands debut song",
+        "audioUrl": "265069081",
+        "startAt": "0:19"
+      },
+      {
+        "word": "ROYALS",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title of this kiwi artist's debut",
+        "audioUrl": "262770503",
+        "startAt": "0:00"
+      }
+    ]
+  
 }
