@@ -1798,8 +1798,8 @@
     @media (max-width: 400px) {
       .w-full.relative[style*="aspect-ratio"] {
         /* Default smallest size (e.g., iPhone SE < 375px) */
-        max-width: 82%; /* Reduced from 84% */
-        max-height: 82%; /* Reduced from 84% */
+        max-width: 82%;
+        max-height: 82%;
       }
 
       /* Slightly larger for 375px to 388px */
@@ -1813,8 +1813,8 @@
       /* Larger again for 389px to 400px (e.g., iPhone 14/15) */
       @media (min-width: 389px) {
         .w-full.relative[style*="aspect-ratio"] {
-          max-width: 93%; /* Changed from 90% (original 92% + 1%) */
-          max-height: 93%; /* Changed from 90% (original 92% + 1%) */
+          max-width: 95%; /* Increased from 93% */
+          max-height: 95%; /* Increased from 93% */
         }
       }
     }

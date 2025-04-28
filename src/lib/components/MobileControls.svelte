@@ -36,14 +36,20 @@
   $effect(() => {
     if (clue && clue.textClue) {
       const len = clue.textClue.length;
-      if (len > 55) {
+      if (len > 70) {
+        fontSize = "text-xs";
+        lineHeight = "leading-tight";
+      } else if (len > 55) {
         fontSize = "text-sm";
         lineHeight = "leading-tight";
-      } else if (len > 35) {
+      } else if (len > 40) {
         fontSize = "text-base";
         lineHeight = "leading-snug";
-      } else {
+      } else if (len > 30) {
         fontSize = "text-lg";
+        lineHeight = "leading-normal";
+      } else {
+        fontSize = "text-xl";
         lineHeight = "leading-normal";
       }
     } else {
@@ -127,8 +133,8 @@
       : windowWidth < 389
         ? "h-10"
         : windowWidth < 414
-          ? "h-12"
-          : "h-13"
+          ? "h-14"
+          : "h-16"
   );
   let keyHeightClass = $derived(
     windowWidth < 375
@@ -136,8 +142,8 @@
       : windowWidth < 389
         ? "h-9"
         : windowWidth < 414
-          ? "h-12"
-          : "h-14"
+          ? "h-14"
+          : "h-16"
   );
 </script>
 
