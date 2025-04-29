@@ -2037,5 +2037,106 @@
         "startAt": "0:00"
       }
     ]
+  },
+  "2025-04-22": {
+    "title": "Canadian eh",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
+    "words": [
+      {
+        "word": "HOCKEY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This is the TV theme for what sport?",
+        "audioUrl": "29837743",
+        "startAt": "0:00"
+      },
+      {
+        "word": "SORRY",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title and often said by Canadians",
+        "audioUrl": "263728011",
+        "startAt": "0:05"
+      },
+      {
+        "word": "NICKELBACK",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "audioUrl": "1914908339",
+        "startAt": "0:00"
+      },
+      {
+        "word": "CARLY",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": "37600755",
+        "startAt": "0:02"
+      },
+      {
+        "word": "SHAWN",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "304376276",
+        "startAt": "0:13"
+      },
+      {
+        "word": "OCANADA",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title of this national anthem",
+        "audioUrl": "962728201",
+        "startAt": "0:08"
+      },
+      {
+        "word": "HALLELUJAH",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "1276460413",
+        "startAt": "0:16"
+      },
+      {
+        "word": "DRAKE",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "2033868592",
+        "startAt": "0:30"
+      },
+      {
+        "word": "WEEKND",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name (sans \"the\")",
+        "audioUrl": "253876746",
+        "startAt": "0:20"
+      }
+    ]
   }
 }
