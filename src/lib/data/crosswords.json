@@ -187,5 +187,102 @@
         "audioDuration": 3
       }
     ]
+  },
+  "2025-05-01": {
+    "title": "Surfing the radio in 2011",
+    "version": "1.0.0",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SM",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title, no punctuation",
+        "audioUrl": "255769477",
+        "startAt": "0:11",
+        "audioDuration": 6
+      },
+      {
+        "word": "COLDPLAY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "255770469",
+        "startAt": "0:55"
+      },
+      {
+        "word": "FIREWORK",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256250253",
+        "startAt": "0:00",
+        "audioDuration": 4
+      },
+      {
+        "word": "MAROON",
+        "startX": 4,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Color in this artist's name",
+        "audioUrl": "19505822",
+        "startAt": "0:00",
+        "audioDuration": 4
+      },
+      {
+        "word": "WEEK",
+        "startX": 7,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "It's been a really really messed up ____",
+        "audioUrl": "254132243",
+        "startAt": "0:05",
+        "audioDuration": 9
+      },
+      {
+        "word": "DECEMBER",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title word in this 2011 T-Swift hit",
+        "audioUrl": "1558082704",
+        "startAt": "0:54",
+        "audioDuration": 9
+      },
+      {
+        "word": "SUPERBASS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "255821207",
+        "startAt": "0:41",
+        "audioDuration": 6
+      },
+      {
+        "word": "GRENADE",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "271221115",
+        "startAt": "0:03"
+      }
+    ] 
   }
 }
