@@ -181,7 +181,8 @@
         "color": "#FE9C9C",
         "textClue": "Artist Name",
         "audioUrl": "324330553",
-        "startAt": "1:37"
+        "startAt": "1:37",
+        "audioDuration": 3
       }
     ]
   }
