@@ -1150,17 +1150,15 @@
   let playingClue = $state(null);
 
   async function playClue(clue) {
+    const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
     try {
       currentDirection = clue.direction;
       focusedX = clue.startX;
       focusedY = clue.startY;
 
-      const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
-
       // Prevent playing if the widget is unavailable
       if (isWidgetUnavailable(widgetId)) {
         console.warn(`Attempted to play unavailable widget: ${widgetId}`);
-        // Optionally provide user feedback here
         return;
       }
 
@@ -1205,10 +1203,72 @@
       audio.seekTo(convertTimestampToMs(clue.startAt));
       await audio.play();
 
+      // === Check if playback actually started ===
+      // Sometimes geoblocked tracks fail silently without errors/events
+      // Check if the widget is immediately paused after attempting play
+      audio.isPaused((paused) => {
+        if (paused) {
+          console.warn(
+            `Widget ${widgetId} reported paused immediately after play(). Marking as unavailable.`
+          );
+          markWidgetAsUnavailable(widgetId);
+
+          // Reset playback state
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null; // Ensure we don't hold reference to failed audio
+          // No need to call pause() here as it's already paused
+        } else {
+          // Playback seems to have started, proceed with timeout logic
+          // console.log(`Widget ${widgetId} playback initiated successfully.`); // Removed success log
+
+          // Detect Safari browser
+          const isSafari = /^((?!chrome|android).)*safari/i.test(
+            navigator.userAgent
+          );
+
+          // Determine timeout duration
+          let timeoutDuration;
+          if (
+            clue.audioDuration &&
+            typeof clue.audioDuration === "number" &&
+            clue.audioDuration > 0
+          ) {
+            // Use duration from JSON (assuming it's in seconds), add 1 second for Safari
+            timeoutDuration = clue.audioDuration * 1000 + (isSafari ? 1000 : 0);
+            console.log(
+              `Using custom duration ${clue.audioDuration}s + ${isSafari ? 1 : 0}s (Safari) = ${timeoutDuration}ms`
+            );
+          } else {
+            // Default duration logic
+            timeoutDuration = isSafari ? 7500 : 6500;
+            console.log(
+              `Using default ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
+            );
+          }
+
+          setTimeout(() => {
+            // Only pause if this is still the current audio AND from the same play session
+            if (
+              audio === currentAudio &&
+              audio._playSessionId === playSessionId
+            ) {
+              audio.pause();
+              isPlaying = false;
+              playingClue = null;
+              currentAudio = null;
+            }
+          }, timeoutDuration); // Use the calculated duration
+        }
+      });
+      // === End playback check ===
+
+      /* // Remove commented out block below
+      // Original timeout logic moved inside the 'else' block of isPaused check
       // Detect Safari browser
       const isSafari = /^((?!chrome|android).)*safari/i.test(
-        navigator.userAgent
-      );
+            navigator.userAgent
+          );
 
       // Determine timeout duration
       let timeoutDuration;
@@ -1239,11 +1299,23 @@
           currentAudio = null;
         }
       }, timeoutDuration); // Use the calculated duration
+      */
     } catch (error) {
-      console.error("Error playing audio:", error);
-      console.error("Audio element error:", currentAudio?.error);
+      console.error(`Error playing widget ${widgetId}:`, error);
+      // Mark this widget as unavailable if a playback error occurs
+      markWidgetAsUnavailable(widgetId);
+
+      // Reset playback state immediately on error
       isPlaying = false;
       playingClue = null;
+      if (currentAudio && typeof currentAudio.pause === "function") {
+        // Attempt to pause just in case, though it might have already failed
+        try {
+          currentAudio.pause();
+        } catch (pauseError) {
+          /* ignore */
+        }
+      }
       currentAudio = null;
     }
   }
@@ -1837,8 +1909,8 @@
     class="fixed bottom-4 right-4 bg-yellow-200 text-yellow-800 p-4 rounded shadow-lg z-50"
   >
     <p>
-      Some songs in this puzzle are not available in your region. We've revealed
-      these words for you!
+      This SoundCloud track isn't available in your region. We've revealed the
+      word for you! It's not cheating, I promise.
     </p>
     <button
       onclick={() => (showUnavailableMessage = false)}
