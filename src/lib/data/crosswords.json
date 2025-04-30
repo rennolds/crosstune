@@ -1,5 +1,5 @@
 {
-  "2025-04-29": {
+  "2025-04-30": {
   "version": "1.0.0",
   "title": "Warm Sunny Day",
   "theme": "green",
@@ -95,7 +95,7 @@
     }
   ]
 },
-  "2025-04-30": {
+  "2025-04-29": {
     "title": "",
     "version": "1.0.0",
     "size": {
@@ -111,7 +111,8 @@
         "color": "#FE9C9C",
         "textClue": "Song Title",
         "audioUrl": "256526897",
-        "startAt": "0:20"
+        "startAt": "0:20",
+        "audioDuration": 3
       },
       {
         "word": "MAMA",
@@ -121,7 +122,8 @@
         "color": "#28D66A",
         "textClue": "Who this song is addressed to",
         "audioUrl": "790026607",
-        "startAt": "0:29"
+        "startAt": "0:29",
+        "audioDuration": 8
       },
       {
         "word": "DEJA",
@@ -131,7 +133,7 @@
         "color": "#FFCEFD",
         "textClue": "First word of song title",
         "audioUrl": "1020528670",
-        "startAt": "0:05"
+        "startAt": "0:20"
       },
       {
         "word": "TWENTYTHREE",
@@ -141,7 +143,7 @@
         "color": "#FF5B5E",
         "textClue": "The age referenced in this song",
         "audioUrl": "256119422",
-        "startAt": "0:11"
+        "startAt": "0:12"
       },
       {
         "word": "TATE",
