@@ -1,4 +1,6 @@
 <script>
+  import moment from "moment-timezone";
+
   let {
     time,
     isCorrect,
@@ -141,11 +143,27 @@
     timeUntilMidnight = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   }
 
+  // Function to get puzzle number based on date
+  function getPuzzleNumber() {
+    // April 29th, 2024 was the first puzzle (in Eastern Time)
+    const firstPuzzleDate = moment.tz("2025-04-29", "America/New_York");
+    const today = moment.tz("America/New_York");
+
+    // Calculate difference in days
+    const diffDays = today.diff(firstPuzzleDate, "days");
+
+    return diffDays + 1; // Add 1 since April 29th was #1
+  }
+
   // Copy results to clipboard
   function shareResults() {
+    const puzzleNumber = getPuzzleNumber();
+    const today = moment.tz("America/New_York");
+    const formattedDate = today.format("MMMM Do");
+
     const shareText = isArchiveMode
-      ? `I solved the Crosstune puzzle in ${formatTime(time)} 🎧. crosstune.io`
-      : `I solved today's Crosstune in ${formatTime(time)} 🎧. crosstune.io`;
+      ? `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved the puzzle in ${formatTime(time)} ✅.\n\ncrosstune.io`
+      : `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved today's in ${formatTime(time)} ✅.\n\ncrosstune.io`;
 
     if (isMobile && navigator.share) {
       navigator
