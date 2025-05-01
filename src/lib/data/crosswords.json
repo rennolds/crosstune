@@ -188,7 +188,7 @@
       }
     ]
   },
-  "2025-05-02": {
+  "2025-05-01": {
     "title": "Surfing the radio in 2011",
     "version": "1.0.1",
     "theme": "green",
@@ -285,7 +285,7 @@
       }
     ] 
   },
-  "2025-05-01": {
+  "2025-05-02": {
     "title": "Artist Debuts",
     "version": "1.0.0",
     "theme": "green",
@@ -312,7 +312,8 @@
         "color": "#28D66A",
         "textClue": "Artist name",
         "audioUrl": "256217785",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "audioDuration": 8
       },
       {
         "word": "1D",
