@@ -284,5 +284,101 @@
         "startAt": "0:03"
       }
     ] 
+  },
+  "2025-05-02": {
+    "title": "Artist Debuts",
+    "version": "1.0.0",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "TIMMCGRAW",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Taylor's debut song, named after a country music star",
+        "audioUrl": "1698337647",
+        "startAt": "1:58"
+      },
+      {
+        "word": "LEDZEPPELIN",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "256217785",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "1D",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Shorthand for this artist's name",
+        "audioUrl": "256071623",
+        "startAt": "0:00",
+        "audioDuration": 2
+      },
+      {      
+        "word": "WIRE",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Kanye spits through the ____",
+        "audioUrl": "255766458",
+        "startAt": "0:09",
+        "audioDuration": 8
+      },
+      {
+        "word": "LILNASX",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "539018871",
+        "startAt": "0:00",
+        "audioDuration": 3.5
+      },
+      {
+        "word": "SPEARS",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": "254294909",
+        "startAt": "0:02",
+        "audioDuration": 2.5
+      },
+      {
+        "word": "CREEP",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title of this artist's debut song",
+        "audioUrl": "265069081",
+        "startAt": "0:19"
+      },
+      {
+        "word": "ROYALS",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title of this kiwi artist's debut",
+        "audioUrl": "262770503",
+        "startAt": "0:00"
+        }
+    ]
   }
 }
