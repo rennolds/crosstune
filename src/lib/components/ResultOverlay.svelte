@@ -7,7 +7,9 @@
     onClose,
     hideKeyboard,
     isArchiveMode = false,
-    words = [], // Accept words prop, remove placeholder songs
+    isThemedMode = false, // Added prop
+    themeTitle = null, // Added prop
+    words = [],
   } = $props();
 
   // Add state for track metadata
@@ -96,81 +98,65 @@
     );
   }
 
-  // Convert time (in seconds) to MM:SS format
   function formatTime(totalSeconds) {
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   }
 
-  // For countdown to midnight EST
   let timeUntilMidnight = $state("");
   let countdown;
 
-  // Update countdown timer every second
   function startCountdown() {
-    // Initial update
-    updateCountdown();
-
-    // Set interval for updates
-    countdown = setInterval(updateCountdown, 1000);
-
-    // Cleanup on component destroy
+    if (!isThemedMode) {
+      updateCountdown();
+      countdown = setInterval(updateCountdown, 1000);
+    }
     return () => {
       if (countdown) clearInterval(countdown);
     };
   }
 
   function updateCountdown() {
-    // Get current date in EST
     const now = new Date();
-    const estTimeString = new Date().toLocaleString("en-US", {
+    const estTimeString = now.toLocaleString("en-US", {
       timeZone: "America/New_York",
     });
     const estTime = new Date(estTimeString);
-
-    // Set target to next midnight EST
     const tomorrow = new Date(estTime);
     tomorrow.setDate(tomorrow.getDate() + 1);
     tomorrow.setHours(0, 0, 0, 0);
-
-    // Calculate difference in hours, minutes and seconds
     const diff = tomorrow - estTime;
     const hours = Math.floor(diff / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
     timeUntilMidnight = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   }
 
-  // Function to get puzzle number based on date
   function getPuzzleNumber() {
-    // April 29th, 2024 was the first puzzle (in Eastern Time)
     const firstPuzzleDate = moment.tz("2025-04-29", "America/New_York");
     const today = moment.tz("America/New_York");
-
-    // Calculate difference in days
     const diffDays = today.diff(firstPuzzleDate, "days");
-
-    return diffDays + 1; // Add 1 since April 29th was #1
+    return diffDays + 1;
   }
 
-  // Copy results to clipboard
   function shareResults() {
     const puzzleNumber = getPuzzleNumber();
     const today = moment.tz("America/New_York");
     const formattedDate = today.format("MMMM Do");
 
-    const shareText = isArchiveMode
-      ? `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved the puzzle in ${formatTime(time)} ✅.\n\ncrosstune.io`
-      : `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved today's in ${formatTime(time)} ✅.\n\ncrosstune.io`;
+    let shareText;
+    if (isArchiveMode) {
+      shareText = `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved the puzzle in ${formatTime(time)} ✅.\n\ncrosstune.io`;
+    } else if (isThemedMode && themeTitle) {
+      shareText = `Crosstune: ${themeTitle}\n\nI solved this puzzle in ${formatTime(time)} ✅.\n\ncrosstune.io`;
+    } else {
+      shareText = `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved today's puzzle in ${formatTime(time)} ✅.\n\ncrosstune.io`;
+    }
 
     if (isMobile && navigator.share) {
       navigator
-        .share({
-          title: "Crosstune Results",
-          text: shareText,
-        })
+        .share({ title: "Crosstune Results", text: shareText })
         .catch((err) => {
           copyToClipboard(shareText);
         });
@@ -193,22 +179,16 @@
       });
   }
 
-  // Hide the keyboard when overlay is shown
   $effect(() => {
     if (hideKeyboard) hideKeyboard();
     const cleanup = startCountdown();
     return cleanup;
   });
 
-  // Prevent body scroll when overlay is active
   $effect(() => {
-    if (isCorrect) {
-      document.body.style.overflow = "hidden";
-    }
-
-    // Cleanup function to restore scrolling when component unmounts or isCorrect becomes false
+    if (isCorrect) document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = ""; // Reset to default
+      document.body.style.overflow = "";
     };
   });
 </script>
@@ -253,6 +233,8 @@
       <p class="text-xl text-white">
         {#if isArchiveMode}
           You solved the puzzle in {formatTime(time)}!
+        {:else if isThemedMode}
+          You completed the "{themeTitle}" puzzle in {formatTime(time)}!
         {:else}
           You solved today's puzzle in {formatTime(time)}!
         {/if}
@@ -265,17 +247,18 @@
         SHARE RESULT
       </button>
 
-      <div class="text-center">
-        <p class="font-medium">Next puzzle in</p>
-        <p class="text-xl font-bold">{timeUntilMidnight}</p>
-      </div>
-
-      <p class="text-sm text-white">
-        Missed yesterday? Visit the <a
-          href="/archives"
-          class="text-blue-500 hover:underline">archive</a
-        >.
-      </p>
+      {#if !isThemedMode}
+        <div class="text-center">
+          <p class="font-medium">Next puzzle in</p>
+          <p class="text-xl font-bold">{timeUntilMidnight}</p>
+        </div>
+        <p class="text-sm text-white">
+          Missed yesterday? Visit the <a
+            href="/archives"
+            class="text-blue-500 hover:underline">archive</a
+          >.
+        </p>
+      {/if}
 
       <div class="flex flex-col gap-3 w-full text-white">
         <button

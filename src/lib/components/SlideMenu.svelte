@@ -71,6 +71,14 @@
     }
   }
 
+  // Function to handle Themed Puzzles navigation
+  function navigateToThemed() {
+    window.location.href = "/themed";
+    if (isMobileDevice) {
+      onClose();
+    }
+  }
+
   function handleFollowUs() {
     if (browser) {
       window.open("https://twitter.com/soptle_io", "_blank");
@@ -152,6 +160,12 @@
               on:click={navigateToArchives}
             >
               Archives
+            </div>
+            <div
+              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
+              on:click={navigateToThemed}
+            >
+              Themed Puzzles
             </div>
             <div
               class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"

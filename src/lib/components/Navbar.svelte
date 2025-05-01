@@ -19,9 +19,15 @@
   let {
     archiveDate = null,
     isArchiveMode = false,
+    themeTitle = null,
+    isThemedMode = false,
     onRevealSquare = null,
     onRevealWord = null,
     onRevealPuzzle = null,
+    onNavigateToThemesList = null,
+    onNavigateToArchives = null,
+    onNavigateToToday = null,
+    onNavigateToHome = null,
     hideTimer = false, // Add new prop to hide the timer
   } = $props();
 
@@ -327,11 +333,6 @@
         </div>
 
         <div>
-          <h3 class="font-semibold mb-2 text-gray-900 dark:text-white"></h3>
-          <ul class="list-disc pl-5 space-y-2"></ul>
-        </div>
-
-        <div>
           <h3 class="font-semibold mb-2 text-gray-900 dark:text-white">
             Hints
           </h3>
@@ -345,7 +346,13 @@
   </div>
 {/if}
 
-<SlideMenu isOpen={isMenuOpen} onClose={() => (isMenuOpen = false)} />
+<SlideMenu
+  isOpen={isMenuOpen}
+  onClose={() => (isMenuOpen = false)}
+  {onNavigateToHome}
+  {onNavigateToArchives}
+  {onNavigateToThemesList}
+/>
 
 <style>
   :global(body) {

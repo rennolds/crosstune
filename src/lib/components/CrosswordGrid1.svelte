@@ -38,6 +38,7 @@
   let {
     puzzle: customPuzzle = null,
     isArchiveMode = false,
+    isThemedMode = false,
     selectedDate = null,
     onSetRevealFunctions = null,
   } = $props();
@@ -123,8 +124,8 @@
   );
 
   $effect(() => {
-    if (isArchiveMode) {
-      // For archive mode, always reset the timer
+    if (isArchiveMode || isThemedMode) {
+      // For archive or themed mode, always reset the timer
       resetTimer();
     } else {
       // For daily mode, check if it's a new day or if the puzzle version has changed
@@ -191,7 +192,7 @@
   });
 
   $effect(() => {
-    if (!isArchiveMode) {
+    if (!isArchiveMode && !isThemedMode) {
       saveTimerState(getSeconds());
     }
   });
@@ -715,10 +716,36 @@
     if (!getIsCorrect()) {
       // --- GA Event ---
       if (typeof gtag === "function") {
-        gtag("event", "reveal_square", {
-          event_category: "gameplay",
-          event_label: `${focusedX},${focusedY}`,
+        // Distinguish GA events based on mode
+        const eventName = isArchiveMode
+          ? "reveal_square_archive"
+          : isThemedMode
+            ? "reveal_square_themed"
+            : "reveal_square";
+        const eventCategory = isArchiveMode
+          ? "archive"
+          : isThemedMode
+            ? "themed"
+            : "gameplay";
+        const eventLabel = isArchiveMode
+          ? `${selectedDate}-${focusedX},${focusedY}`
+          : isThemedMode
+            ? `${puzzle.title}-${focusedX},${focusedY}`
+            : `${focusedX},${focusedY}`;
+
+        gtag("event", eventName, {
+          event_category: eventCategory,
+          event_label: eventLabel,
         });
+      } else {
+        // --- GA Event ---
+        if (typeof gtag === "function") {
+          gtag("event", "reveal_square", {
+            event_category: "gameplay",
+            event_label: `${focusedX},${focusedY}`,
+          });
+        }
+        // --- End GA Event ---
       }
       // --- End GA Event ---
 
@@ -745,8 +772,8 @@
           revealedCells = new Set([...revealedCells, cellKey]);
           console.log("Revealed cells:", [...revealedCells]);
 
-          // Save grid state if not in archive mode
-          if (!isArchiveMode) {
+          // Save grid state if not in archive or themed mode
+          if (!isArchiveMode && !isThemedMode) {
             saveRevealedCells(revealedCells);
             saveGridState(grid, puzzle.version);
           }
@@ -762,10 +789,36 @@
       if (activeWord) {
         // --- GA Event ---
         if (typeof gtag === "function") {
-          gtag("event", "reveal_word", {
-            event_category: "gameplay",
-            event_label: `${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`,
+          // Distinguish GA events based on mode
+          const eventName = isArchiveMode
+            ? "reveal_word_archive"
+            : isThemedMode
+              ? "reveal_word_themed"
+              : "reveal_word";
+          const eventCategory = isArchiveMode
+            ? "archive"
+            : isThemedMode
+              ? "themed"
+              : "gameplay";
+          const eventLabel = isArchiveMode
+            ? `${selectedDate}-${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`
+            : isThemedMode
+              ? `${puzzle.title}-${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`
+              : `${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`;
+
+          gtag("event", eventName, {
+            event_category: eventCategory,
+            event_label: eventLabel,
           });
+        } else {
+          // --- GA Event ---
+          if (typeof gtag === "function") {
+            gtag("event", "reveal_word", {
+              event_category: "gameplay",
+              event_label: `${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`,
+            });
+          }
+          // --- End GA Event ---
         }
         // --- End GA Event ---
 
@@ -789,8 +842,8 @@
           revealedCells = new Set([...revealedCells, `${x},${y}`]);
         }
 
-        // Save grid state if not in archive mode
-        if (!isArchiveMode) {
+        // Save grid state if not in archive or themed mode
+        if (!isArchiveMode && !isThemedMode) {
           saveRevealedCells(revealedCells);
           saveGridState(grid, puzzle.version);
         }
@@ -803,9 +856,35 @@
     if (!getIsCorrect()) {
       // --- GA Event ---
       if (typeof gtag === "function") {
-        gtag("event", "reveal_puzzle", {
-          event_category: "gameplay",
+        // Distinguish GA events based on mode
+        const eventName = isArchiveMode
+          ? "reveal_puzzle_archive"
+          : isThemedMode
+            ? "reveal_puzzle_themed"
+            : "reveal_puzzle";
+        const eventCategory = isArchiveMode
+          ? "archive"
+          : isThemedMode
+            ? "themed"
+            : "gameplay";
+        const eventLabel = isArchiveMode
+          ? selectedDate
+          : isThemedMode
+            ? puzzle.title
+            : undefined; // No specific label for daily
+
+        gtag("event", eventName, {
+          event_category: eventCategory,
+          ...(eventLabel && { event_label: eventLabel }), // Conditionally add label
         });
+      } else {
+        // --- GA Event ---
+        if (typeof gtag === "function") {
+          gtag("event", "reveal_puzzle", {
+            event_category: "gameplay",
+          });
+        }
+        // --- End GA Event ---
       }
       // --- End GA Event ---
 
@@ -826,8 +905,8 @@
         }
       }
 
-      // Save grid state if not in archive mode
-      if (!isArchiveMode) {
+      // Save grid state if not in archive or themed mode
+      if (!isArchiveMode && !isThemedMode) {
         saveRevealedCells(revealedCells);
         saveGridState(grid, puzzle.version);
       }
@@ -838,7 +917,12 @@
       showOverlay = true;
 
       // This part remains unchanged for daily puzzles
-      markPuzzleAsSolved(getEastCoastDate());
+      if (!isArchiveMode && !isThemedMode) {
+        markPuzzleAsSolved(getEastCoastDate());
+      } else if (isThemedMode) {
+        // Themed puzzles don't have a concept of 'solved' in the same way daily/archives do
+        // (No calendar tracking needed)
+      }
     } else if (!hasShownIncorrectMessage) {
       // Puzzle is filled but incorrect
       setIsCorrect(false);
@@ -846,9 +930,17 @@
 
       // --- GA Event (Only for non-archive) ---
       if (typeof gtag === "function" && !isArchiveMode) {
-        gtag("event", "completed_incorrect", {
-          event_category: "gameplay",
-        });
+        // Further refine for themed vs daily incorrect completion
+        if (isThemedMode) {
+          gtag("event", "completed_incorrect_themed", {
+            event_category: "themed",
+            event_label: puzzle.title,
+          });
+        } else {
+          gtag("event", "completed_incorrect", {
+            event_category: "gameplay",
+          });
+        }
       }
       // --- End GA Event ---
     } else {
@@ -882,8 +974,8 @@
     // Create a function to update grid state that works for both input methods
     function updateGridCell(x, y, value) {
       grid[y][x] = value;
-      // Only save grid state if not in archive mode
-      if (!isArchiveMode) {
+      // Only save grid state if not in archive or themed mode
+      if (!isArchiveMode && !isThemedMode) {
         saveRevealedCells(revealedCells);
         saveGridState(grid, puzzle.version);
       }
@@ -991,7 +1083,7 @@
             }
           }
         }
-        if (!isArchiveMode) {
+        if (!isArchiveMode && !isThemedMode) {
           saveRevealedCells(revealedCells);
           saveGridState(grid, puzzle.version);
         }
@@ -1059,6 +1151,12 @@
               } else {
                 moveFocus(x, y + 1);
               }
+            }
+
+            // Only save grid state if not in archive or themed mode
+            if (!isArchiveMode && !isThemedMode) {
+              saveRevealedCells(revealedCells);
+              saveGridState(grid, puzzle.version);
             }
           });
         }
@@ -1131,8 +1229,10 @@
           }
         }
       }
-      saveGridState(grid, puzzle.version);
-      saveRevealedCells(revealedCells);
+      if (!isArchiveMode && !isThemedMode) {
+        saveRevealedCells(revealedCells);
+        saveGridState(grid, puzzle.version);
+      }
       return;
     }
 
@@ -1365,6 +1465,13 @@
               event_label: selectedDate, // Assuming selectedDate is available here
               value: finalTime,
             });
+          } else if (isThemedMode) {
+            // Themed game completion
+            gtag("event", "completed_themed_game", {
+              event_category: "themed",
+              event_label: puzzle.title,
+              value: finalTime,
+            });
           } else {
             // Daily game completion - Only fire if not in archive mode
             if (revealedCells.size === 0) {
@@ -1385,8 +1492,26 @@
 
         if (isArchiveMode && selectedDate) {
           markPuzzleAsSolved(selectedDate);
-        } else {
+        } else if (!isThemedMode) {
+          // Only mark daily as solved here
           markPuzzleAsSolved(getEastCoastDate());
+        } else if (isThemedMode && puzzle?.title) {
+          // For themed puzzles, save the title to a separate list
+          try {
+            const completedThemesStr = localStorage.getItem(
+              "crosstune_themed_completed"
+            );
+            let completedThemes = new Set(
+              completedThemesStr ? JSON.parse(completedThemesStr) : []
+            );
+            completedThemes.add(puzzle.title);
+            localStorage.setItem(
+              "crosstune_themed_completed",
+              JSON.stringify([...completedThemes])
+            );
+          } catch (e) {
+            console.error("Error saving completed themed puzzle:", e);
+          }
         }
       } else {
         // Filled but incorrect
@@ -1477,7 +1602,7 @@
 
       if (changed) {
         revealedCells = newlyRevealedCells;
-        if (!isArchiveMode) {
+        if (!isArchiveMode && !isThemedMode) {
           saveRevealedCells(revealedCells);
           saveGridState(grid, puzzle.version);
           saveUnavailableWidgets(unavailable);
@@ -1501,10 +1626,16 @@
     style="color: {isDark ? 'white' : 'black'}"
   >
     <h1 class="text-xl">
-      <span class="font-bold">{formatDate(displayDate)}</span>
-      {#if puzzle.title}
-        <span> - </span>
-        <span class="italic">{puzzle.title}</span>
+      {#if !isThemedMode}
+        <span class="font-bold">{formatDate(displayDate)}</span>
+        {#if puzzle.title && !isArchiveMode}
+          <!-- Show subtitle only for daily -->
+          <span> - </span>
+          <span class="italic">{puzzle.title}</span>
+        {/if}
+      {:else}
+        <!-- Display only the theme title if in themed mode -->
+        <span class="italic font-bold">{puzzle.title}</span>
       {/if}
     </h1>
   </div>
@@ -1899,6 +2030,8 @@
     time={finalTime}
     isCorrect={getIsCorrect()}
     onClose={handleCloseOverlay}
+    {isThemedMode}
+    themeTitle={puzzle?.title}
     {isArchiveMode}
     words={puzzle.words}
   />
