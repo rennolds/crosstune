@@ -133,8 +133,8 @@
       : windowWidth < 389
         ? "h-10"
         : windowWidth < 414
-          ? "h-14"
-          : "h-16"
+          ? "h-12"
+          : "h-14"
   );
   let keyHeightClass = $derived(
     windowWidth < 375
@@ -142,8 +142,8 @@
       : windowWidth < 389
         ? "h-9"
         : windowWidth < 414
-          ? "h-14"
-          : "h-16"
+          ? "h-12"
+          : "h-14"
   );
 </script>
 

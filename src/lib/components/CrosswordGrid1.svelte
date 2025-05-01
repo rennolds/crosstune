@@ -1973,8 +1973,8 @@
       /* Larger again for 389px to 400px (e.g., iPhone 14/15) */
       @media (min-width: 389px) {
         .w-full.relative[style*="aspect-ratio"] {
-          max-width: 95%; /* Increased from 93% */
-          max-height: 95%; /* Increased from 93% */
+          max-width: 88%;
+          max-height: 88%;
         }
       }
     }
