@@ -326,14 +326,15 @@
         "audioDuration": 2
       },
       {      
-        "word": "WEST",
+        "word": "WIRE",
         "startX": 3,
-        "startY": 7,
+        "startY": 6,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "Artist last name",
+        "textClue": "Kanye spits through the ____",
         "audioUrl": "255766458",
-        "startAt": "0:05"
+        "startAt": "0:09",
+        "audioDuration": 8
       },
       {
         "word": "LILNASX",
