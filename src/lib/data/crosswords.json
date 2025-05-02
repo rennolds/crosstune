@@ -380,5 +380,127 @@
         "startAt": "0:00"
         }
     ]
+  },
+
+  "2025-05-03": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "purple",
+    "words": [
+      {
+        "word": "CHANGE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Adam Levine spent all of his ______",
+        "audioUrl": "256187803",
+        "startAt": "0:17"
+      },
+      {
+        "word": "AHA",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Name of the one-hit-wonder behind this track",
+        "audioUrl": "195410552",
+        "startAt": "0:01",
+        "audioDuration": 6
+
+      },
+      {
+        "word": "DREAMS",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "254399326",
+        "startAt": "0:17",
+        "audioDuration": 4.5
+      },
+      {
+        "word": "APARTMENT",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The English translation of this k-pop song title",
+        "audioUrl": "1937452967",
+        "startAt": "0:41",
+        "audioDuration": 9
+      },
+      {
+        "word": "ASITWAS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1242349246",
+        "startAt": "0:03",
+        "audioDuration": 6
+      },
+      {
+        "word": "CARDI",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": "425539524",
+        "startAt": "0:55",
+        "audioDuration": 4
+      },
+      {
+        "word": "DNA",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "317617213",
+        "startAt": "0:00",
+        "audioDuration": 2
+      },
+      {
+        "word": "LEVELS",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Name of the EDM hit that sampled this snippet",
+        "audioUrl": "703064593",
+        "startAt": "0:00",
+        "audioDuration": 10.25
+      },
+      {
+        "word": "MGMT",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "9022953",
+        "startAt": "0:08",
+        "audioDuration": 4
+      },
+      {
+        "word": "IDEA",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Bad ____",
+        "audioUrl": "1589588819",
+        "startAt": "0:01",
+        "audioDuration": 7
+      }
+    ]
   }
 }
