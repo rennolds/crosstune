@@ -1901,6 +1901,7 @@
     onClose={handleCloseOverlay}
     {isArchiveMode}
     words={puzzle.words}
+    {selectedDate}
   />
 {/if}
 
