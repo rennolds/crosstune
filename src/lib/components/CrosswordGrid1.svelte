@@ -1566,7 +1566,7 @@
                       maxlength="1"
                       data-x={x}
                       data-y={y}
-                      class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none relative"
+                      class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
                       class:cursor-text={!isMobileDevice}
                       class:revealed={revealedCells.has(`${x},${y}`)}
                       style=""
@@ -1973,9 +1973,22 @@
       /* Larger again for 389px to 400px (e.g., iPhone 14/15) */
       @media (min-width: 389px) {
         .w-full.relative[style*="aspect-ratio"] {
-          max-width: 88%;
-          max-height: 88%;
+          max-width: 90%;
+          max-height: 90%;
         }
+      }
+    }
+
+    /* Add responsive font sizes for mobile */
+    @media (max-width: 400px) {
+      input {
+        font-size: 0.875rem !important; /* 14px */
+      }
+    }
+
+    @media (min-width: 401px) and (max-width: 768px) {
+      input {
+        font-size: 1rem !important; /* 16px */
       }
     }
 
