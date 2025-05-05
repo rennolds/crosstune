@@ -73,7 +73,7 @@
 
   function handleFollowUs() {
     if (browser) {
-      window.open("https://twitter.com/soptle_io", "_blank");
+      window.open("https://twitter.com/spotle_io", "_blank");
     }
   }
 
