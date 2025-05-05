@@ -1,6 +1,4 @@
 <script>
-  import { onMount } from "svelte";
-
   import {
     markWidgetAsReady,
     markWidgetAsUnavailable,
@@ -8,35 +6,56 @@
 
   let { words } = $props();
 
-  onMount(() => {
-    window.onSCWidgetApiReady = function () {
-      console.log("SoundCloud Widget API is ready");
+  $effect(() => {
+    function initializeWidgets() {
+      console.log("Initializing SoundCloud Widgets for current words...");
 
       words.forEach((word) => {
         const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
-        const iframe = document.getElementById(widgetId);
+        requestAnimationFrame(() => {
+          const iframe = document.getElementById(widgetId);
 
-        if (iframe) {
-          const widget = SC.Widget(iframe);
+          if (iframe) {
+            try {
+              const widget = SC.Widget(iframe);
 
-          widget.bind(SC.Widget.Events.READY, () => {
-            console.log(`Widget ${widgetId} is ready`);
-            markWidgetAsReady(widgetId);
-          });
+              const onReady = () => {
+                console.log(`Widget ${widgetId} is ready`);
+                markWidgetAsReady(widgetId);
+                widget.unbind(SC.Widget.Events.READY, onReady);
+              };
 
-          // Add error handling
-          widget.bind(SC.Widget.Events.ERROR, (error) => {
-            console.warn(`Widget ${widgetId} failed to load:`, error);
-            // Mark this widget as unavailable if an error occurs
-            markWidgetAsUnavailable(widgetId);
-          });
-        }
+              const onError = (error) => {
+                console.warn(`Widget ${widgetId} failed to load:`, error);
+                markWidgetAsUnavailable(widgetId);
+                widget.unbind(SC.Widget.Events.ERROR, onError);
+              };
+
+              widget.bind(SC.Widget.Events.READY, onReady);
+              widget.bind(SC.Widget.Events.ERROR, onError);
+            } catch (e) {
+              console.error(`Error creating SC.Widget for ${widgetId}:`, e);
+              markWidgetAsUnavailable(widgetId);
+            }
+          } else {
+            // This might happen briefly during transitions, usually not an error
+            // console.warn(`Iframe ${widgetId} not found during initialization.`);
+          }
+        });
       });
-    };
+    }
 
     if (window.SC && window.SC.Widget) {
-      window.onSCWidgetApiReady();
+      initializeWidgets();
+    } else {
+      window.onSCWidgetApiReady = initializeWidgets;
     }
+
+    return () => {
+      if (window.onSCWidgetApiReady === initializeWidgets) {
+        window.onSCWidgetApiReady = undefined;
+      }
+    };
   });
 </script>
 
