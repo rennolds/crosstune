@@ -1697,7 +1697,7 @@
                       maxlength="1"
                       data-x={x}
                       data-y={y}
-                      class="w-full h-full text-center uppercase font-bold text-xl focus:outline-none bg-transparent touch-none relative"
+                      class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
                       class:cursor-text={!isMobileDevice}
                       class:revealed={revealedCells.has(`${x},${y}`)}
                       style=""
@@ -2034,6 +2034,7 @@
     themeTitle={puzzle?.title}
     {isArchiveMode}
     words={puzzle.words}
+    {selectedDate}
   />
 {/if}
 
@@ -2075,42 +2076,67 @@
       flex: 1 1 auto; /* Grow and shrink to fill available vertical space */
       min-height: 0; /* Allow shrinking within flex column */
       display: flex; /* Center the grid inside */
-      align-items: flex-start; /* Align grid to top instead of center */
+      align-items: center; /* Center vertically now */
       justify-content: center;
       overflow: hidden; /* Prevent the grid overflowing this container */
     }
 
-    /* Add constraints for the grid's aspect-ratio wrapper */
+    /* Grid aspect-ratio wrapper sizing */
     .w-full.relative[style*="aspect-ratio"] {
-      max-width: 98%;
-      max-height: 98%;
+      /* Default mobile sizing - prioritize width */
+      max-width: 95vw; /* Use viewport width unit */
+      max-height: 90vh; /* Use viewport height unit, allow generous height */
       /* The inline aspect-ratio style combined with max constraints will size it */
     }
 
-    /* Specific adjustments for very small screens */
-    @media (max-width: 400px) {
+    /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
+    @media (max-aspect-ratio: 9/16) {
       .w-full.relative[style*="aspect-ratio"] {
-        /* Default smallest size (e.g., iPhone SE < 375px) */
-        max-width: 82%;
-        max-height: 82%;
+        max-width: 96vw; /* Allow slightly more width */
+        /* Let aspect-ratio dictate height based on width */
+        max-height: none; /* Remove max-height constraint */
       }
-
-      /* Slightly larger for 375px to 388px */
-      @media (min-width: 375px) {
-        .w-full.relative[style*="aspect-ratio"] {
-          max-width: 85%;
-          max-height: 85%;
-        }
+      /* Adjust font size for tall, narrow screens if needed */
+      input {
+        font-size: clamp(
+          0.8rem,
+          3.5vw,
+          1rem
+        ) !important; /* Responsive font size based on width */
       }
-
-      /* Larger again for 389px to 400px (e.g., iPhone 14/15) */
-      @media (min-width: 389px) {
-        .w-full.relative[style*="aspect-ratio"] {
-          max-width: 88%;
-          max-height: 88%;
-        }
+      .absolute.text-\[12px\] {
+        /* Word numbers */
+        font-size: clamp(8px, 2.5vw, 11px) !important;
       }
     }
+
+    /* Adjustments for WIDER mobile screens (e.g., aspect ratio > 9:16) */
+    @media (min-aspect-ratio: 9/17) {
+      .w-full.relative[style*="aspect-ratio"] {
+        max-width: 94vw;
+        max-height: 85vh; /* Can be more constrained vertically */
+      }
+      input {
+        font-size: clamp(
+          0.875rem,
+          4vw,
+          1.1rem
+        ) !important; /* Slightly larger font potentially */
+      }
+      .absolute.text-\[12px\] {
+        /* Word numbers */
+        font-size: clamp(9px, 2.8vw, 12px) !important;
+      }
+    }
+
+    /* Remove old nested width-based rules */
+    /* @media (max-width: 400px) { ... } */
+    /* @media (min-width: 375px) { ... } */
+    /* @media (min-width: 389px) { ... } */
+
+    /* Remove old font size rules, handled by aspect ratio queries now */
+    /* @media (max-width: 400px) { ... } */
+    /* @media (min-width: 401px) and (max-width: 768px) { ... } */
 
     :global(.slide-menu-open) {
       pointer-events: none;

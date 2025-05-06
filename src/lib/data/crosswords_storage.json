@@ -545,7 +545,7 @@
             "startY": 0,
             "direction": "across",
             "color": "#FE9C9C",
-            "textClue": "Song Title",
+            "textClue": "Song title",
             "audioUrl": "253507018",
             "startAt": "0:30"
           },
@@ -555,7 +555,7 @@
             "startY": 2,
             "direction": "across",
             "color": "#28D66A",
-            "textClue": "It's raining _____",
+            "textClue": "What it's raining in this track",
             "audioUrl": "253510230",
             "startAt": "0:30"
           },
@@ -1820,7 +1820,7 @@
           "startY": 8,
           "direction": "across",
           "color": "#FF5B5E",
-          "textClue": "Adjective to describe Megan Thee Stallion",
+          "textClue": "An adjective Megan Thee Stallion uses to describe herself",
           "audioUrl": "771495430",
           "startAt": "0:16"
         },

@@ -284,5 +284,526 @@
         "startAt": "0:03"
       }
     ] 
+  },
+  "2025-05-02": {
+    "title": "Artist Debuts",
+    "version": "1.0.0",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "TIMMCGRAW",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Taylor's debut song, named after a country music star",
+        "audioUrl": "1698337647",
+        "startAt": "1:58"
+      },
+      {
+        "word": "LEDZEPPELIN",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "256217785",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "1D",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Shorthand for this artist's name",
+        "audioUrl": "256071623",
+        "startAt": "0:00",
+        "audioDuration": 2
+      },
+      {      
+        "word": "WIRE",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Kanye spits through the ____",
+        "audioUrl": "255766458",
+        "startAt": "0:09",
+        "audioDuration": 8
+      },
+      {
+        "word": "LILNASX",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "539018871",
+        "startAt": "0:00",
+        "audioDuration": 3.5
+      },
+      {
+        "word": "SPEARS",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": "254294909",
+        "startAt": "0:02",
+        "audioDuration": 2.5
+      },
+      {
+        "word": "CREEP",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title of this artist's debut song",
+        "audioUrl": "265069081",
+        "startAt": "0:19"
+      },
+      {
+        "word": "ROYALS",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title of this kiwi artist's debut",
+        "audioUrl": "262770503",
+        "startAt": "0:00"
+        }
+    ]
+  },
+
+  "2025-05-03": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "purple",
+    "words": [
+      {
+        "word": "CHANGE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Adam Levine spent all of his ______",
+        "audioUrl": "256187803",
+        "startAt": "0:17"
+      },
+      {
+        "word": "AHA",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Name of the one-hit-wonder behind this track",
+        "audioUrl": "195410552",
+        "startAt": "0:01",
+        "audioDuration": 6
+
+      },
+      {
+        "word": "DREAMS",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "254399326",
+        "startAt": "0:17",
+        "audioDuration": 4.5
+      },
+      {
+        "word": "APARTMENT",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The English translation of this k-pop song title",
+        "audioUrl": "1937452967",
+        "startAt": "0:41",
+        "audioDuration": 9
+      },
+      {
+        "word": "ASITWAS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1242349246",
+        "startAt": "0:03",
+        "audioDuration": 6
+      },
+      {
+        "word": "CARDI",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": "425539524",
+        "startAt": "0:55",
+        "audioDuration": 4
+      },
+      {
+        "word": "DNA",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "317617213",
+        "startAt": "0:00",
+        "audioDuration": 2
+      },
+      {
+        "word": "LEVELS",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Name of the EDM hit that sampled this snippet",
+        "audioUrl": "703064593",
+        "startAt": "0:00",
+        "audioDuration": 10.25
+      },
+      {
+        "word": "MGMT",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "9022953",
+        "startAt": "0:08",
+        "audioDuration": 4
+      },
+      {
+        "word": "IDEA",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Bad ____",
+        "audioUrl": "1589588819",
+        "startAt": "0:01",
+        "audioDuration": 7
+      }
+    ]
+  },
+  "2025-05-04": {
+    "title": "Iconic Piano Intros",
+    "version": "1.0.1",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "DETROIT",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "City referenced in this track",
+        "audioUrl": "253594762",
+        "startAt": "0:00"
+      },
+      {
+        "word": "LEANONME",
+        "startX": 4,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "253615270",
+        "startAt": "0:00",
+        "audioDuration": 12.5
+      },
+      {
+        "word": "ADELE",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "48491737",
+        "startAt": "0:02",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "DRE",
+        "startX": 9,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Who?",
+        "audioUrl": "252644276",
+        "startAt": "0:00",
+        "audioDuration": 11.5
+      },
+      {
+        "word": "THEFRAY",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "871517044",
+        "startAt": "0:00",
+        "audioDuration": 7.6
+      },
+      {
+        "word": "MILES",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title, last word",
+        "audioUrl": "255837979",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "COLDPLAY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "255770515",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "MCR",
+        "startX": 10,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name, as an acronym ",
+        "audioUrl": "213950831",
+        "startAt": "0:00",
+        "audioDuration": 12
+      },
+      {
+        "word": "LETITBE",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1678616073",
+        "startAt": "0:00",
+        "audioDuration": 12.5
+      }
+    ]
+  },
+  "2025-05-05": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "PYT",
+        "startX": 9,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "278509072",
+        "startAt": "0:22"
+      },
+      {
+        "word": "TORNADO",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Inclement weather featured in this track",
+        "audioUrl": "1939462034",
+        "startAt": "1:10",
+        "audioDuration": 8
+      },
+      {
+        "word": "ANTIHERO",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "1367286193",
+        "startAt": "0:00",
+        "audioDuration": 11
+      },
+      {
+        "word": "NASTY",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "An adjective Megan Thee Stallion uses to describe herself on this track",
+        "audioUrl": "771495430",
+        "startAt": "0:16",
+        "audioDuration": 7
+      },
+      {
+        "word": "GODSPLAN",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song Title",
+        "audioUrl": "386265671",
+        "startAt": "0:00"
+      },
+      {
+        "word": "ABBA",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist Name",
+        "audioUrl": "253187333",
+        "startAt": "0:10",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "ALIBIS",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "A legal term used in this song, plural",
+        "audioUrl": "273792918",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "PHASE",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "It was never a _____",
+        "audioUrl": "4720038",
+        "startAt": "0:01",
+        "audioDuration": 10.6
+      }
+    ]
+  },
+  "2025-05-06": {
+    "title": "",
+    "version": "1.0.1",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "FERRARI",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Car in this song title",
+        "audioUrl": "342393216",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "CHEVY",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Car driven in this track",
+        "audioUrl": "259092783",
+        "startAt": "0:00",
+        "audioDuration": 12
+      },
+      {
+        "word": "RASCALFLATTS",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "261467493",
+        "startAt": "0:00",
+        "audioDuration": 12.5
+      },
+      {
+        "word": "SIDETOSIDE",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The way this boy has Ariana walkin'",
+        "audioUrl": "264414421",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "CLASSIC",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "256300174",
+        "startAt": "0:20",
+        "audioDuration": 6
+      },
+      {
+        "word": "FLOAT",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Verb in this song title",
+        "audioUrl": "253507018",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "WIZKHALIFA",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "271220773",
+        "startAt": "0:24",
+        "audioDuration": 6
+      },
+      {
+        "word": "CRUISE",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "253006705",
+        "startAt": "0:00",
+        "audioDuration": 6
+      }
+    ]
   }
 }
