@@ -1959,7 +1959,7 @@
     /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
     @media (max-aspect-ratio: 9/16) {
       .w-full.relative[style*="aspect-ratio"] {
-        max-width: 96vw; /* Allow slightly more width */
+        max-width: 98vw; /* Allow more width to fill space */
         /* Let aspect-ratio dictate height based on width */
         max-height: none; /* Remove max-height constraint */
       }
