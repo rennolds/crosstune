@@ -53,6 +53,9 @@
   let showUnavailableMessage = $state(false);
   let hasShownUnavailableMessage = $state(false);
 
+  // State for fallback puzzle notification
+  let showFallbackNotification = $state(false);
+
   // Update widget status continuously to check for readiness changes
   $effect(() => {
     // Set up an interval to check widget status every 500ms
@@ -96,23 +99,52 @@
   });
 
   // Get today's puzzle or fall back to the first available puzzle
-  function getTodaysPuzzle() {
+  function getTodaysPuzzleInfo() {
     const todayDate = getEastCoastDate();
     const puzzleDates = Object.keys(crosswords);
 
     // Try to get today's puzzle
     if (crosswords[todayDate]) {
-      return crosswords[todayDate];
+      return {
+        puzzle: crosswords[todayDate],
+        dateKey: todayDate,
+        isFallback: false,
+      };
     }
 
     // Fall back to first available puzzle
     const firstAvailableDate = puzzleDates.sort()[0];
-    return crosswords[firstAvailableDate];
+    if (crosswords[firstAvailableDate]) {
+      return {
+        puzzle: crosswords[firstAvailableDate],
+        dateKey: firstAvailableDate,
+        isFallback: true,
+      };
+    }
+    // Should ideally not happen if crosswords.json is never empty
+    // Return a dummy puzzle or throw error
+    console.error("No puzzles available in crosswords.json");
+    return {
+      puzzle: { size: { width: 10, height: 10 }, words: [], version: "error" },
+      dateKey: todayDate, // or a default error key
+      isFallback: true, // Treat as fallback to indicate an issue
+    };
   }
 
   // Get puzzle - prioritize customPuzzle if provided (for archive mode)
-  const puzzle = customPuzzle || getTodaysPuzzle();
-  const { size, words } = puzzle;
+  const puzzleInfo = $state(
+    customPuzzle
+      ? {
+          puzzle: customPuzzle,
+          dateKey: selectedDate,
+          isFallback: false,
+          version: customPuzzle.version,
+        }
+      : getTodaysPuzzleInfo()
+  );
+
+  const puzzle = $derived(puzzleInfo.puzzle);
+  const { size, words } = $derived(puzzle); // size and words will react to puzzle changes
 
   let revealedCells = $state(new Set());
   // Create grid and message state
@@ -1424,18 +1456,21 @@
   // Add this function to format the date
   function formatDate(dateString) {
     if (!dateString) return "";
-    const date = new Date(`${dateString}T12:00:00-04:00`);
+    const date = new Date(`${dateString}T12:00:00-04:00`); // Assuming ET for puzzles
     return date.toLocaleDateString("en-US", {
       weekday: "long",
       month: "long",
       day: "numeric",
-      year: isArchiveMode ? "numeric" : undefined,
+      year:
+        isArchiveMode || puzzleInfo.dateKey !== getEastCoastDate()
+          ? "numeric"
+          : undefined, // Show year in archive or if displaying a fallback from a different year
       timeZone: "America/New_York",
     });
   }
 
   // Get the current date to display
-  const displayDate = selectedDate || getEastCoastDate();
+  const displayDate = $derived(selectedDate || puzzleInfo.dateKey);
 
   // Effect to handle unavailable widgets
   $effect(() => {
@@ -1488,6 +1523,40 @@
           hasShownUnavailableMessage = true;
         }
       }
+    }
+  });
+
+  // Effect to show fallback notification
+  $effect(() => {
+    if (!isArchiveMode && puzzleInfo.isFallback) {
+      const today = getEastCoastDate();
+      // Show notification if a fallback is being used because today's puzzle is missing
+      if (puzzleInfo.dateKey !== today) {
+        //This implies today's puzzle was not found, and a fallback (firstAvailableDate) is being used.
+        showFallbackNotification = true;
+      } else if (crosswords[today] && puzzleInfo.puzzle !== crosswords[today]) {
+        // This condition means today's date *is* in crosswords.json,
+        // but getTodaysPuzzleInfo somehow still decided it's a fallback
+        // with today's dateKey. This might happen if the "first available" *is* today
+        // but we still want to signal it was a "fallback path".
+        // More directly: if isFallback is true, it means today's was not initially found.
+        showFallbackNotification = true;
+      }
+      // A simpler condition might just be:
+      // if (puzzleInfo.isFallback) showFallbackNotification = true;
+      // Because isFallback is true *only if* crosswords[todayDate] was initially not found.
+    } else {
+      showFallbackNotification = false;
+    }
+  });
+
+  // Simpler logic for fallback notification based on review:
+  // isFallback is true if getTodaysPuzzleInfo couldn't find crosswords[todayDate]
+  $effect(() => {
+    if (!isArchiveMode && puzzleInfo.isFallback) {
+      showFallbackNotification = true;
+    } else {
+      showFallbackNotification = false;
     }
   });
 </script>
@@ -1915,8 +1984,35 @@
     </p>
     <button
       onclick={() => (showUnavailableMessage = false)}
-      class="mt-2 text-sm underline">Dismiss</button
+      class="mt-2 text-xs underline font-semibold">Dismiss</button
     >
+  </div>
+{/if}
+
+{#if showFallbackNotification}
+  <div
+    class="fixed bottom-16 right-4 md:bottom-4 md:left-4 md:right-auto bg-blue-100 text-blue-700 p-4 rounded shadow-lg z-50 max-w-sm"
+  >
+    <p class="text-sm">
+      Today's puzzle couldn't be found, so we've given you an old one. Refresh the page to get the latest puzzles and play todays!
+    </p>
+    <p class="text-sm mt-1">
+      Please refresh the page to get the latest puzzles.
+    </p>
+    <div class="mt-3 flex gap-3">
+      <button
+        onclick={() => window.location.reload()}
+        class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded"
+      >
+        Refresh Page
+      </button>
+      <button
+        onclick={() => (showFallbackNotification = false)}
+        class="text-xs text-blue-600 hover:text-blue-800 font-semibold underline"
+      >
+        Dismiss
+      </button>
+    </div>
   </div>
 {/if}
 
