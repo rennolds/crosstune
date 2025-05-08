@@ -1014,5 +1014,101 @@
         "startAt": "0:53"
       }
     ]
+  },
+  "2025-05-09": {
+    "title": "",
+    "version": "1.0.5",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BRUNO",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "256044840",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "MRSROBINSON",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title, includes a surname",
+        "audioUrl": "252859304",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "DILEMMA",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title, also a synoynm of quandary",
+        "audioUrl": "255960748",
+        "startAt": "0:15",
+        "audioDuration": 13
+      },
+      {
+        "word": "FUTURE",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "307949010",
+        "startAt": "0:05"
+      },
+      {
+        "word": "ATARI",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Gaming console referenced in this track",
+        "audioUrl": "328201666",
+        "startAt": "0:07",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "BORED",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "If Ariana Grande is ____, hide your boyfriend",
+        "audioUrl": "571670148",
+        "startAt": "0:20"
+      },
+      {
+        "word": "SQUABBLEUP",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "1964742195",
+        "startAt": "0:16",
+        "audioDuration": 8
+      },
+      {
+        "word": "SABRINA",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "audioUrl": "2033604668",
+        "startAt": "0:00",
+        "audioDuration": 4.65
+      }
+    ]
   }
 }
