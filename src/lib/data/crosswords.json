@@ -1389,7 +1389,7 @@
         "textClue": "Featured artist first name",
         "audioUrl": "144699281",
         "startAt": "0:03",
-        "audioDuration": 8
+        "audioDuration": 12
       },
       {
         "word": "HOTTOGO",
@@ -1428,7 +1428,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Missing element in artist name",
+        "textClue": "Missing element in this artist name",
         "audioUrl": "255771229",
         "startAt": "0:00"
       },
@@ -1490,7 +1490,8 @@
         "color": "#00FFFF",
         "textClue": "Part of this song title",
         "audioUrl": "992480563",
-        "startAt": "0:20"
+        "startAt": "0:20",
+        "audioDuration": 8
       },
       {
         "word": "STROKES",
@@ -1498,9 +1499,10 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Part of this artist name",
-        "audioUrl": "671124935",
-        "startAt": "0:21"
+        "textClue": "Artist name, drop \"the\"",
+        "audioUrl": "671125106",
+        "startAt": "0:01",
+        "audioDuration": 12
       }
     ]
   },
@@ -1748,7 +1750,7 @@
         "startY": 5,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Artist first name",
+        "textClue": "First word of this song title",
         "audioUrl": "347257536",
         "startAt": "0:19",
         "audioDuration": 8

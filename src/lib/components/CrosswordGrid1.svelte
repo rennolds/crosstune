@@ -513,7 +513,7 @@
           y < word.startY + word.word.length
       );
 
-      if (acrossWord && downWord) {
+      if (acrossWord && downWord && !isPlaying) {
         // Intersection: toggle direction
         currentDirection = currentDirection === "across" ? "down" : "across";
       }
