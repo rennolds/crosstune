@@ -146,6 +146,7 @@
   const puzzle = $derived(puzzleInfo.puzzle);
   const { size, words } = $derived(puzzle); // size and words will react to puzzle changes
 
+  let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
   // Create grid and message state
   let grid = $state(
@@ -448,6 +449,15 @@
         focusedX = startX;
         focusedY = startY;
         currentDirection = direction;
+        cellActivationPending = false; // ADDED
+
+        const targetInput = document.querySelector(
+          // ADDED Block
+          `input[data-x="${startX}"][data-y="${startY}"]`
+        );
+        if (targetInput && !isMobileDevice) {
+          targetInput.focus();
+        }
       };
 
       document.addEventListener("navigationrequest", handleNavigation);
@@ -458,8 +468,35 @@
   });
 
   function handleCellClick(x, y) {
-    // If clicking the currently focused cell, only toggle direction if it's an intersection
-    if (x === focusedX && y === focusedY) {
+    const targetInput = document.querySelector(
+      `input[data-x="${x}"][data-y="${y}"]`
+    );
+    const isClickOnLogicallyFocusedCell = x === focusedX && y === focusedY;
+
+    // Action 1: Handle pending activation (first click after playClue made cell logically focused)
+    if (cellActivationPending && isClickOnLogicallyFocusedCell) {
+      if (isPlaying) {
+        // If audio from that playClue is still going
+        stopAudio();
+      }
+      if (targetInput && !isMobileDevice) {
+        targetInput.focus();
+      }
+      cellActivationPending = false;
+      // Direction remains as set by playClue. No toggle.
+      return;
+    }
+
+    // Action 2: If not activating, but audio is playing for some other reason, stop it.
+    // And ensure cellActivationPending is false if we've moved past the activation scenario.
+    if (isPlaying) {
+      stopAudio();
+    }
+    // Any click that's not the special activation click should clear cellActivationPending if it was somehow true.
+    cellActivationPending = false;
+
+    // Action 3: Handle click on an already focused and active cell (potential toggle)
+    if (isClickOnLogicallyFocusedCell) {
       // Find words containing this cell
       let acrossWord = words.find(
         (word) =>
@@ -468,7 +505,6 @@
           x >= word.startX &&
           x < word.startX + word.word.length
       );
-
       let downWord = words.find(
         (word) =>
           word.direction === "down" &&
@@ -477,52 +513,65 @@
           y < word.startY + word.word.length
       );
 
-      // Only toggle direction if this is an intersection point
-      if (acrossWord && downWord) {
-        if (isPlaying) {
-          stopAudio();
-        }
+      if (acrossWord && downWord && !isPlaying) {
+        // Intersection: toggle direction
         currentDirection = currentDirection === "across" ? "down" : "across";
+      }
+      // If not an intersection, or no toggle, ensure DOM focus if needed (e.g. if lost for some reason)
+      if (
+        targetInput &&
+        !isMobileDevice &&
+        document.activeElement !== targetInput
+      ) {
+        targetInput.focus();
       }
       return;
     }
 
-    const isInCurrentWord = isCellInActiveWord(x, y);
+    // Action 4: Handle click on a NEW cell (not the logically focused one)
+    // This section implies !isClickOnLogicallyFocusedCell
 
-    // Find any words that contain this cell
-    let acrossWord = words.find(
-      (word) =>
-        word.direction === "across" &&
-        y === word.startY &&
-        x >= word.startX &&
-        x < word.startX + word.word.length
-    );
+    const directionBeforeThisClick = currentDirection; // Capture before changing focusedX/Y for new cell logic
 
-    let downWord = words.find(
-      (word) =>
-        word.direction === "down" &&
-        x === word.startX &&
-        y >= word.startY &&
-        y < word.startY + word.word.length
-    );
-
-    if (acrossWord && downWord) {
-      if (currentDirection === "across" && downWord) {
-        currentDirection = "down";
-      } else if (currentDirection === "down" && acrossWord) {
-        currentDirection = "across";
-      }
-    } else if (acrossWord) {
-      currentDirection = "across";
-    } else if (downWord) {
-      currentDirection = "down";
-    }
-
+    // Update logical focus to the new cell
     focusedX = x;
     focusedY = y;
 
-    if (!isInCurrentWord && isPlaying) {
-      stopAudio();
+    // Determine new currentDirection based on words at new (x,y) and directionBeforeThisClick
+    let acrossWordAtNewCell = words.find(
+      (w) =>
+        w.direction === "across" &&
+        y === w.startY &&
+        x >= w.startX &&
+        x < w.startX + w.word.length
+    );
+    let downWordAtNewCell = words.find(
+      (w) =>
+        w.direction === "down" &&
+        x === w.startX &&
+        y >= w.startY &&
+        y < w.startY + w.word.length
+    );
+
+    if (acrossWordAtNewCell && downWordAtNewCell) {
+      // New cell is an intersection
+      if (directionBeforeThisClick === "across" && downWordAtNewCell) {
+        currentDirection = "down";
+      } else if (directionBeforeThisClick === "down" && acrossWordAtNewCell) {
+        currentDirection = "across";
+      }
+      // If neither smart switch applies, currentDirection remains `directionBeforeThisClick`.
+      // This allows the new cell to be focused with the previous direction if it's valid there,
+      // and a subsequent click would then toggle it.
+    } else if (acrossWordAtNewCell) {
+      currentDirection = "across";
+    } else if (downWordAtNewCell) {
+      currentDirection = "down";
+    }
+    // If no word at the new cell, currentDirection remains `directionBeforeThisClick`.
+
+    if (targetInput && !isMobileDevice) {
+      targetInput.focus();
     }
   }
 
@@ -576,6 +625,7 @@
         `input[data-x="${newX}"][data-y="${newY}"]`
       );
       input?.focus();
+      cellActivationPending = false; // ADDED
     }
   }
 
@@ -1187,6 +1237,7 @@
       currentDirection = clue.direction;
       focusedX = clue.startX;
       focusedY = clue.startY;
+      cellActivationPending = true; // ADDED
 
       // Prevent playing if the widget is unavailable
       if (isWidgetUnavailable(widgetId)) {
@@ -1994,7 +2045,8 @@
     class="fixed bottom-16 right-4 md:bottom-4 md:left-4 md:right-auto bg-blue-100 text-blue-700 p-4 rounded shadow-lg z-50 max-w-sm"
   >
     <p class="text-sm">
-      Today's puzzle couldn't be found, so we've given you an old one. Refresh the page to get the latest puzzles and play todays!
+      Today's puzzle couldn't be found, so we've given you an old one. Refresh
+      the page to get the latest puzzles and play todays!
     </p>
     <p class="text-sm mt-1">
       Please refresh the page to get the latest puzzles.
