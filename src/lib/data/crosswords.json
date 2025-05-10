@@ -1110,5 +1110,103 @@
         "audioDuration": 4.65
       }
     ]
+  },
+  "2025-05-10": {
+    "title": "On Location",
+    "version": "1.0.6",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "VEGAS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Woke up here",
+        "audioUrl": "256250221",
+        "startAt": "0:47",
+        "audioDuration": 6
+      },
+      {
+        "word": "MIAMI",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Will Smith's big hit about this city",
+        "audioUrl": "253509520",
+        "startAt": "0:06",
+        "audioDuration": 11
+      },
+      {
+        "word": "BUDAPEST",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title (also the capital of Hungry)",
+        "audioUrl": "255796418",
+        "startAt": "0:10",
+        "audioDuration": 7
+      },
+      {
+        "word": "NYC",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "City mentioned in this track",
+        "audioUrl": "283122057",
+        "startAt": "0:28",
+        "audioDuration": 5
+      },
+      {
+        "word": "HOUSTON",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "___atlantavegas",
+        "audioUrl": "2036616900",
+        "startAt": "1:30",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "VIENNA",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Billy Joel says this city waits for you",
+        "audioUrl": "257053810",
+        "startAt": "0:16",
+        "audioDuration": 12
+      },
+      {
+        "word": "BEVERLY",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Part of this song title",
+        "audioUrl": "256245884",
+        "startAt": "0:13",
+        "audioDuration": 10
+      },
+      {
+        "word": "TOKYO",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "From the fast and furious 3 soundtrack",
+        "audioUrl": "392085942",
+        "startAt": "0:00",
+        "audioDuration": 10
+      }
+    ]
   }
 }
