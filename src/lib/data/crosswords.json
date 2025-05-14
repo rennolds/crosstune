@@ -1510,7 +1510,7 @@
   },
   "2025-05-14": {
     "title": "",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "size": {
       "width": 12,
       "height": 10
@@ -1595,9 +1595,9 @@
         "direction": "down",
         "color": "#FE9C9C",
         "textClue": "Artist name, drop \"the\"",
-        "audioUrl": "671125106",
-        "startAt": "0:01",
-        "audioDuration": 12
+        "audioUrl": "671124935",
+        "startAt": "0:18",
+        "audioDuration": 10
       }
     ]
   },
