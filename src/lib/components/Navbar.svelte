@@ -5,6 +5,7 @@
     getTimerRunning,
     incrementSeconds,
     setTimerRunning,
+    areAllWidgetsReady,
   } from "$lib/stores/game.svelte.js";
 
   import { getIsDarkMode, toggleDarkMode } from "$lib/stores/theme.svelte.js";
@@ -23,6 +24,7 @@
     onRevealWord = null,
     onRevealPuzzle = null,
     hideTimer = false, // Add new prop to hide the timer
+    words = [], // Add words prop to check widget readiness
   } = $props();
 
   let isMenuOpen = $state(false);
@@ -81,13 +83,19 @@
         if (document.hidden) {
           setTimerRunning(false);
         } else {
-          setTimerRunning(true);
+          // Only start timer if all widgets are ready
+          setTimerRunning(areAllWidgetsReady(words));
         }
       };
 
       document.addEventListener("visibilitychange", handleVisibilityChange);
 
       const interval = setInterval(() => {
+        // Check widget readiness on each interval
+        if (!getTimerRunning() && areAllWidgetsReady(words)) {
+          setTimerRunning(true);
+        }
+
         if (getTimerRunning() && !document.hidden && !getIsCorrect()) {
           incrementSeconds();
         }

@@ -40,6 +40,7 @@
     isArchiveMode = false,
     selectedDate = null,
     onSetRevealFunctions = null,
+    onWords = null, // Add onWords prop
   } = $props();
 
   let isMobileDevice = $state(false);
@@ -1608,6 +1609,13 @@
       showFallbackNotification = true;
     } else {
       showFallbackNotification = false;
+    }
+  });
+
+  // Pass words to parent component when they change
+  $effect(() => {
+    if (onWords && words) {
+      onWords(words);
     }
   });
 </script>
