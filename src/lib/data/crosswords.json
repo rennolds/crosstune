@@ -1603,7 +1603,7 @@
   },
   "2025-05-15": {
     "title": "",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "size": {
       "width": 12,
       "height": 10
@@ -1650,8 +1650,8 @@
         "startAt": "0:10"
       },
       {
-        "word": "POSTIONS",
-        "startX": 1,
+        "word": "POSITIONS",
+        "startX": 0,
         "startY": 8,
         "direction": "across",
         "color": "#568EFF",
