@@ -476,10 +476,6 @@
 
     // Action 1: Handle pending activation (first click after playClue made cell logically focused)
     if (cellActivationPending && isClickOnLogicallyFocusedCell) {
-      if (isPlaying) {
-        // If audio from that playClue is still going
-        stopAudio();
-      }
       if (targetInput && !isMobileDevice) {
         targetInput.focus();
       }
@@ -488,10 +484,20 @@
       return;
     }
 
-    // Action 2: If not activating, but audio is playing for some other reason, stop it.
-    // And ensure cellActivationPending is false if we've moved past the activation scenario.
-    if (isPlaying) {
-      stopAudio();
+    // Action 2: Only stop audio if clicking on a cell that's not part of the currently playing clue
+    if (isPlaying && playingClue) {
+      const isClickInPlayingClue =
+        playingClue.direction === "across"
+          ? y === playingClue.startY &&
+            x >= playingClue.startX &&
+            x < playingClue.startX + playingClue.word.length
+          : x === playingClue.startX &&
+            y >= playingClue.startY &&
+            y < playingClue.startY + playingClue.word.length;
+
+      if (!isClickInPlayingClue) {
+        stopAudio();
+      }
     }
     // Any click that's not the special activation click should clear cellActivationPending if it was somehow true.
     cellActivationPending = false;
