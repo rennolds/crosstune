@@ -9,10 +9,16 @@
     isArchiveMode = false,
     words = [], // Accept words prop, remove placeholder songs
     selectedDate,
+    totalLetterCount = null,
+    foundLetterCount = null,
+    revealedLetterCount = null,
   } = $props();
 
   // Add state for track metadata
   let trackMetadata = $state({});
+  console.log(totalLetterCount);
+  console.log(foundLetterCount);
+  console.log(revealedLetterCount);
 
   // Function to get track info from widget
   function getTrackInfoFromWidget(word) {
@@ -166,9 +172,16 @@
     const today = moment.tz("America/New_York");
     const formattedDate = today.format("MMMM Do");
 
+    let resultText;
+    if (revealedLetterCount === 0) {
+      resultText = `I solved the puzzle in ${formatTime(time)} flawlessly ✅.`;
+    } else {
+      resultText = `I solved the puzzle in ${formatTime(time)} and revealed ${revealedLetterCount} ${revealedLetterCount === 1 ? "letter" : "letters"}.`;
+    }
+
     const shareText = isArchiveMode
-      ? `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\nI solved the puzzle in ${formatTime(time)} ✅.\n\ncrosstune.io`
-      : `Crosstune #${puzzleNumber} - ${formattedDate}\n\nI solved today's in ${formatTime(time)} ✅.\n\ncrosstune.io`;
+      ? `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\n${resultText}\n\ncrosstune.io`
+      : `Crosstune #${puzzleNumber} - ${formattedDate}\n\n${resultText}\n\ncrosstune.io`;
 
     if (isMobile && navigator.share) {
       navigator
@@ -262,6 +275,16 @@
           You solved today's puzzle in {formatTime(time)}!
         {/if}
       </p>
+      {#if totalLetterCount !== null && foundLetterCount !== null && revealedLetterCount !== null}
+        <p class="text-lg text-white mt-2">
+          {#if revealedLetterCount != 0}
+            {foundLetterCount}/{totalLetterCount} letters found, {revealedLetterCount}
+            revealed
+          {:else}
+            A flawless solve!
+          {/if}
+        </p>
+      {/if}
 
       <button
         onclick={shareResults}

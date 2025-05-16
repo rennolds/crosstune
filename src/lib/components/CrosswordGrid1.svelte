@@ -1634,6 +1634,18 @@
       onWords(words);
     }
   });
+
+  let count = 0;
+
+  for (const word of words) {
+    for (let i = 0; i < word.word.length; i++) {
+      if (word.word[i] !== " ") count++;
+    }
+  }
+  // Add derived values for letter stats
+  let totalLetterCount = $derived(count);
+  let revealedLetterCount = $derived(revealedCells.size);
+  let foundLetterCount = $derived(totalLetterCount - revealedLetterCount);
 </script>
 
 <SoundCloudManager {words} />
@@ -2046,6 +2058,9 @@
     {isArchiveMode}
     words={puzzle.words}
     {selectedDate}
+    {totalLetterCount}
+    {foundLetterCount}
+    {revealedLetterCount}
   />
 {/if}
 

@@ -1788,5 +1788,96 @@
         "audioDuration": 9
       }
     ]
+  },
+  "2025-05-17": {
+    "title": "Music Monikers",
+    "version": "1.0.5",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "EAZYE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This artist is the lead man of NWA (unique spelling)",
+        "audioUrl": "231226434",
+        "startAt": "1:03"
+      },
+      {
+        "word": "ANGEL",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Shaggy refers to his girl as an _____",
+        "audioUrl": "64508438",
+        "startAt": "1:02"
+      },
+      {
+        "word": "JACKSON",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name (King of Pop)",
+        "audioUrl": "278508940",
+        "startAt": "0:01"
+      },
+      {
+        "word": "BRITNEY",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name (Princess of Pop)",
+        "audioUrl": "27020927",
+        "startAt": "0:27"
+      },
+      {
+        "word": "ROCK",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Queen promises he will do this",
+        "audioUrl": "252514440",
+        "startAt": "0:00"
+      },
+      {
+        "word": "BROWN",
+        "startX": 3,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name (Godfather of Soul)",
+        "audioUrl": "255779264",
+        "startAt": "0:00"
+      },
+      {
+        "word": "ELLA",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist first name (the First Lady of Song)",
+        "audioUrl": "38221541",
+        "startAt": "0:14"
+      },
+      {
+        "word": "KING",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "What rock music moniker does this artist have",
+        "audioUrl": "326749273",
+        "startAt": "0:15"
+      }
+    ]
   }
 }
