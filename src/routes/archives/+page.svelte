@@ -112,6 +112,7 @@
   onNavigateToToday={navigateToToday}
   onNavigateToHome={navigateToHome}
   hideTimer={!selectedDate}
+  words={puzzle?.words || []}
 />
 
 <main class="dark min-h-screen flex flex-col">

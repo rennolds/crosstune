@@ -16,6 +16,8 @@
     isWidgetUnavailable,
     setUnavailableWidgets,
     getUnavailableWidgets,
+    setTimerRunning,
+    areAllWidgetsReady,
   } from "$lib/stores/game.svelte.js";
 
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
@@ -158,8 +160,12 @@
 
   $effect(() => {
     if (isArchiveMode) {
-      // For archive mode, always reset the timer
+      // For archive mode, reset the timer and ensure it starts when widgets are ready
       resetTimer();
+      // Start the timer if all widgets are ready
+      if (areAllWidgetsReady(words)) {
+        setTimerRunning(true);
+      }
     } else {
       // For daily mode, check if it's a new day or if the puzzle version has changed
       const currentDate = getEastCoastDate();
