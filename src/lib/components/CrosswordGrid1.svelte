@@ -865,11 +865,13 @@
           // Skip spaces
           if (activeWord.word[i] === " ") continue;
 
-          // Update grid with correct letter
-          grid[y][x] = activeWord.word[i];
-
-          // Mark as revealed
-          revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          // Only reveal if the current letter is incorrect or empty
+          if (grid[y][x] !== activeWord.word[i]) {
+            // Update grid with correct letter
+            grid[y][x] = activeWord.word[i];
+            // Mark as revealed
+            revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          }
         }
 
         // Save grid state if not in archive mode
@@ -901,11 +903,13 @@
           // Skip spaces
           if (word.word[i] === " ") continue;
 
-          // Update grid with correct letter
-          grid[y][x] = word.word[i];
-
-          // Mark as revealed
-          revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          // Only reveal if the current letter is incorrect or empty
+          if (grid[y][x] !== word.word[i]) {
+            // Update grid with correct letter
+            grid[y][x] = word.word[i];
+            // Mark as revealed
+            revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          }
         }
       }
 
