@@ -16,6 +16,8 @@
     isWidgetUnavailable,
     setUnavailableWidgets,
     getUnavailableWidgets,
+    setTimerRunning,
+    areAllWidgetsReady,
   } from "$lib/stores/game.svelte.js";
 
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
@@ -41,6 +43,7 @@
     isThemedMode = false,
     selectedDate = null,
     onSetRevealFunctions = null,
+    onWords = null, // Add onWords prop
   } = $props();
 
   let isMobileDevice = $state(false);
@@ -53,6 +56,9 @@
   // State for unavailable widgets notification
   let showUnavailableMessage = $state(false);
   let hasShownUnavailableMessage = $state(false);
+
+  // State for fallback puzzle notification
+  let showFallbackNotification = $state(false);
 
   // Update widget status continuously to check for readiness changes
   $effect(() => {
@@ -97,24 +103,54 @@
   });
 
   // Get today's puzzle or fall back to the first available puzzle
-  function getTodaysPuzzle() {
+  function getTodaysPuzzleInfo() {
     const todayDate = getEastCoastDate();
     const puzzleDates = Object.keys(crosswords);
 
     // Try to get today's puzzle
     if (crosswords[todayDate]) {
-      return crosswords[todayDate];
+      return {
+        puzzle: crosswords[todayDate],
+        dateKey: todayDate,
+        isFallback: false,
+      };
     }
 
     // Fall back to first available puzzle
     const firstAvailableDate = puzzleDates.sort()[0];
-    return crosswords[firstAvailableDate];
+    if (crosswords[firstAvailableDate]) {
+      return {
+        puzzle: crosswords[firstAvailableDate],
+        dateKey: firstAvailableDate,
+        isFallback: true,
+      };
+    }
+    // Should ideally not happen if crosswords.json is never empty
+    // Return a dummy puzzle or throw error
+    console.error("No puzzles available in crosswords.json");
+    return {
+      puzzle: { size: { width: 10, height: 10 }, words: [], version: "error" },
+      dateKey: todayDate, // or a default error key
+      isFallback: true, // Treat as fallback to indicate an issue
+    };
   }
 
   // Get puzzle - prioritize customPuzzle if provided (for archive mode)
-  const puzzle = customPuzzle || getTodaysPuzzle();
-  const { size, words } = puzzle;
+  const puzzleInfo = $state(
+    customPuzzle
+      ? {
+          puzzle: customPuzzle,
+          dateKey: selectedDate,
+          isFallback: false,
+          version: customPuzzle.version,
+        }
+      : getTodaysPuzzleInfo()
+  );
 
+  const puzzle = $derived(puzzleInfo.puzzle);
+  const { size, words } = $derived(puzzle); // size and words will react to puzzle changes
+
+  let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
   // Create grid and message state
   let grid = $state(
@@ -127,6 +163,10 @@
     if (isArchiveMode || isThemedMode) {
       // For archive or themed mode, always reset the timer
       resetTimer();
+      // Start the timer if all widgets are ready
+      if (areAllWidgetsReady(words)) {
+        setTimerRunning(true);
+      }
     } else {
       // For daily mode, check if it's a new day or if the puzzle version has changed
       const currentDate = getEastCoastDate();
@@ -417,6 +457,15 @@
         focusedX = startX;
         focusedY = startY;
         currentDirection = direction;
+        cellActivationPending = false; // ADDED
+
+        const targetInput = document.querySelector(
+          // ADDED Block
+          `input[data-x="${startX}"][data-y="${startY}"]`
+        );
+        if (targetInput && !isMobileDevice) {
+          targetInput.focus();
+        }
       };
 
       document.addEventListener("navigationrequest", handleNavigation);
@@ -427,8 +476,41 @@
   });
 
   function handleCellClick(x, y) {
-    // If clicking the currently focused cell, only toggle direction if it's an intersection
-    if (x === focusedX && y === focusedY) {
+    const targetInput = document.querySelector(
+      `input[data-x="${x}"][data-y="${y}"]`
+    );
+    const isClickOnLogicallyFocusedCell = x === focusedX && y === focusedY;
+
+    // Action 1: Handle pending activation (first click after playClue made cell logically focused)
+    if (cellActivationPending && isClickOnLogicallyFocusedCell) {
+      if (targetInput && !isMobileDevice) {
+        targetInput.focus();
+      }
+      cellActivationPending = false;
+      // Direction remains as set by playClue. No toggle.
+      return;
+    }
+
+    // Action 2: Only stop audio if clicking on a cell that's not part of the currently playing clue
+    if (isPlaying && playingClue) {
+      const isClickInPlayingClue =
+        playingClue.direction === "across"
+          ? y === playingClue.startY &&
+            x >= playingClue.startX &&
+            x < playingClue.startX + playingClue.word.length
+          : x === playingClue.startX &&
+            y >= playingClue.startY &&
+            y < playingClue.startY + playingClue.word.length;
+
+      if (!isClickInPlayingClue) {
+        stopAudio();
+      }
+    }
+    // Any click that's not the special activation click should clear cellActivationPending if it was somehow true.
+    cellActivationPending = false;
+
+    // Action 3: Handle click on an already focused and active cell (potential toggle)
+    if (isClickOnLogicallyFocusedCell) {
       // Find words containing this cell
       let acrossWord = words.find(
         (word) =>
@@ -437,7 +519,6 @@
           x >= word.startX &&
           x < word.startX + word.word.length
       );
-
       let downWord = words.find(
         (word) =>
           word.direction === "down" &&
@@ -446,52 +527,65 @@
           y < word.startY + word.word.length
       );
 
-      // Only toggle direction if this is an intersection point
-      if (acrossWord && downWord) {
-        if (isPlaying) {
-          stopAudio();
-        }
+      if (acrossWord && downWord && !isPlaying) {
+        // Intersection: toggle direction
         currentDirection = currentDirection === "across" ? "down" : "across";
+      }
+      // If not an intersection, or no toggle, ensure DOM focus if needed (e.g. if lost for some reason)
+      if (
+        targetInput &&
+        !isMobileDevice &&
+        document.activeElement !== targetInput
+      ) {
+        targetInput.focus();
       }
       return;
     }
 
-    const isInCurrentWord = isCellInActiveWord(x, y);
+    // Action 4: Handle click on a NEW cell (not the logically focused one)
+    // This section implies !isClickOnLogicallyFocusedCell
 
-    // Find any words that contain this cell
-    let acrossWord = words.find(
-      (word) =>
-        word.direction === "across" &&
-        y === word.startY &&
-        x >= word.startX &&
-        x < word.startX + word.word.length
-    );
+    const directionBeforeThisClick = currentDirection; // Capture before changing focusedX/Y for new cell logic
 
-    let downWord = words.find(
-      (word) =>
-        word.direction === "down" &&
-        x === word.startX &&
-        y >= word.startY &&
-        y < word.startY + word.word.length
-    );
-
-    if (acrossWord && downWord) {
-      if (currentDirection === "across" && downWord) {
-        currentDirection = "down";
-      } else if (currentDirection === "down" && acrossWord) {
-        currentDirection = "across";
-      }
-    } else if (acrossWord) {
-      currentDirection = "across";
-    } else if (downWord) {
-      currentDirection = "down";
-    }
-
+    // Update logical focus to the new cell
     focusedX = x;
     focusedY = y;
 
-    if (!isInCurrentWord && isPlaying) {
-      stopAudio();
+    // Determine new currentDirection based on words at new (x,y) and directionBeforeThisClick
+    let acrossWordAtNewCell = words.find(
+      (w) =>
+        w.direction === "across" &&
+        y === w.startY &&
+        x >= w.startX &&
+        x < w.startX + w.word.length
+    );
+    let downWordAtNewCell = words.find(
+      (w) =>
+        w.direction === "down" &&
+        x === w.startX &&
+        y >= w.startY &&
+        y < w.startY + w.word.length
+    );
+
+    if (acrossWordAtNewCell && downWordAtNewCell) {
+      // New cell is an intersection
+      if (directionBeforeThisClick === "across" && downWordAtNewCell) {
+        currentDirection = "down";
+      } else if (directionBeforeThisClick === "down" && acrossWordAtNewCell) {
+        currentDirection = "across";
+      }
+      // If neither smart switch applies, currentDirection remains `directionBeforeThisClick`.
+      // This allows the new cell to be focused with the previous direction if it's valid there,
+      // and a subsequent click would then toggle it.
+    } else if (acrossWordAtNewCell) {
+      currentDirection = "across";
+    } else if (downWordAtNewCell) {
+      currentDirection = "down";
+    }
+    // If no word at the new cell, currentDirection remains `directionBeforeThisClick`.
+
+    if (targetInput && !isMobileDevice) {
+      targetInput.focus();
     }
   }
 
@@ -545,6 +639,7 @@
         `input[data-x="${newX}"][data-y="${newY}"]`
       );
       input?.focus();
+      cellActivationPending = false; // ADDED
     }
   }
 
@@ -835,11 +930,13 @@
           // Skip spaces
           if (activeWord.word[i] === " ") continue;
 
-          // Update grid with correct letter
-          grid[y][x] = activeWord.word[i];
-
-          // Mark as revealed
-          revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          // Only reveal if the current letter is incorrect or empty
+          if (grid[y][x] !== activeWord.word[i]) {
+            // Update grid with correct letter
+            grid[y][x] = activeWord.word[i];
+            // Mark as revealed
+            revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          }
         }
 
         // Save grid state if not in archive or themed mode
@@ -897,11 +994,13 @@
           // Skip spaces
           if (word.word[i] === " ") continue;
 
-          // Update grid with correct letter
-          grid[y][x] = word.word[i];
-
-          // Mark as revealed
-          revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          // Only reveal if the current letter is incorrect or empty
+          if (grid[y][x] !== word.word[i]) {
+            // Update grid with correct letter
+            grid[y][x] = word.word[i];
+            // Mark as revealed
+            revealedCells = new Set([...revealedCells, `${x},${y}`]);
+          }
         }
       }
 
@@ -1255,6 +1354,7 @@
       currentDirection = clue.direction;
       focusedX = clue.startX;
       focusedY = clue.startY;
+      cellActivationPending = true; // ADDED
 
       // Prevent playing if the widget is unavailable
       if (isWidgetUnavailable(widgetId)) {
@@ -1549,18 +1649,21 @@
   // Add this function to format the date
   function formatDate(dateString) {
     if (!dateString) return "";
-    const date = new Date(`${dateString}T12:00:00-04:00`);
+    const date = new Date(`${dateString}T12:00:00-04:00`); // Assuming ET for puzzles
     return date.toLocaleDateString("en-US", {
       weekday: "long",
       month: "long",
       day: "numeric",
-      year: isArchiveMode ? "numeric" : undefined,
+      year:
+        isArchiveMode || puzzleInfo.dateKey !== getEastCoastDate()
+          ? "numeric"
+          : undefined, // Show year in archive or if displaying a fallback from a different year
       timeZone: "America/New_York",
     });
   }
 
   // Get the current date to display
-  const displayDate = selectedDate || getEastCoastDate();
+  const displayDate = $derived(selectedDate || puzzleInfo.dateKey);
 
   // Effect to handle unavailable widgets
   $effect(() => {
@@ -1615,6 +1718,59 @@
       }
     }
   });
+
+  // Effect to show fallback notification
+  $effect(() => {
+    if (!isArchiveMode && puzzleInfo.isFallback) {
+      const today = getEastCoastDate();
+      // Show notification if a fallback is being used because today's puzzle is missing
+      if (puzzleInfo.dateKey !== today) {
+        //This implies today's puzzle was not found, and a fallback (firstAvailableDate) is being used.
+        showFallbackNotification = true;
+      } else if (crosswords[today] && puzzleInfo.puzzle !== crosswords[today]) {
+        // This condition means today's date *is* in crosswords.json,
+        // but getTodaysPuzzleInfo somehow still decided it's a fallback
+        // with today's dateKey. This might happen if the "first available" *is* today
+        // but we still want to signal it was a "fallback path".
+        // More directly: if isFallback is true, it means today's was not initially found.
+        showFallbackNotification = true;
+      }
+      // A simpler condition might just be:
+      // if (puzzleInfo.isFallback) showFallbackNotification = true;
+      // Because isFallback is true *only if* crosswords[todayDate] was initially not found.
+    } else {
+      showFallbackNotification = false;
+    }
+  });
+
+  // Simpler logic for fallback notification based on review:
+  // isFallback is true if getTodaysPuzzleInfo couldn't find crosswords[todayDate]
+  $effect(() => {
+    if (!isArchiveMode && puzzleInfo.isFallback) {
+      showFallbackNotification = true;
+    } else {
+      showFallbackNotification = false;
+    }
+  });
+
+  // Pass words to parent component when they change
+  $effect(() => {
+    if (onWords && words) {
+      onWords(words);
+    }
+  });
+
+  let count = 0;
+
+  for (const word of words) {
+    for (let i = 0; i < word.word.length; i++) {
+      if (word.word[i] !== " ") count++;
+    }
+  }
+  // Add derived values for letter stats
+  let totalLetterCount = $derived(count);
+  let revealedLetterCount = $derived(revealedCells.size);
+  let foundLetterCount = $derived(totalLetterCount - revealedLetterCount);
 </script>
 
 <SoundCloudManager {words} />
@@ -2035,6 +2191,9 @@
     {isArchiveMode}
     words={puzzle.words}
     {selectedDate}
+    {totalLetterCount}
+    {foundLetterCount}
+    {revealedLetterCount}
   />
 {/if}
 
@@ -2048,8 +2207,36 @@
     </p>
     <button
       onclick={() => (showUnavailableMessage = false)}
-      class="mt-2 text-sm underline">Dismiss</button
+      class="mt-2 text-xs underline font-semibold">Dismiss</button
     >
+  </div>
+{/if}
+
+{#if showFallbackNotification}
+  <div
+    class="fixed bottom-16 right-4 md:bottom-4 md:left-4 md:right-auto bg-blue-100 text-blue-700 p-4 rounded shadow-lg z-50 max-w-sm"
+  >
+    <p class="text-sm">
+      Today's puzzle couldn't be found, so we've given you an old one. Refresh
+      the page to get the latest puzzles and play todays!
+    </p>
+    <p class="text-sm mt-1">
+      Please refresh the page to get the latest puzzles.
+    </p>
+    <div class="mt-3 flex gap-3">
+      <button
+        onclick={() => window.location.reload()}
+        class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded"
+      >
+        Refresh Page
+      </button>
+      <button
+        onclick={() => (showFallbackNotification = false)}
+        class="text-xs text-blue-600 hover:text-blue-800 font-semibold underline"
+      >
+        Dismiss
+      </button>
+    </div>
   </div>
 {/if}
 

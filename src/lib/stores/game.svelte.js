@@ -1,7 +1,7 @@
 // src/lib/stores/game.svelte.js
 let isCorrect = $state(false);
 let seconds = $state(0);
-let isTimerRunning = $state(true);
+let isTimerRunning = $state(false);
 
 // Getter functions
 export function getIsCorrect() {
@@ -37,7 +37,7 @@ export function setTimerRunning(value) {
 export function resetTimer() {
   seconds = 0;
   isCorrect = false;
-  isTimerRunning = true;
+  isTimerRunning = false;
 }
 
 export const readyWidgets = $state(new Set());
@@ -70,4 +70,13 @@ export function setUnavailableWidgets(widgetSet) {
 
 export function getUnavailableWidgets() {
   return unavailableWidgets;
+}
+
+// Add function to check if all widgets are ready
+export function areAllWidgetsReady(words) {
+  if (!words || words.length === 0) return false;
+  return words.every(word => {
+    const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
+    return isWidgetReady(widgetId);
+  });
 }

@@ -10,6 +10,7 @@
   let revealWord = $state(null);
   let revealPuzzle = $state(null);
   let showSplash = $state(true);
+  let words = $state([]); // Add state for words
 
   function handlePlay() {
     showSplash = false;
@@ -22,6 +23,11 @@
     revealPuzzle = functions.revealPuzzle;
   }
 
+  // Function to receive words from CrosswordGrid
+  function handleWords(newWords) {
+    words = newWords;
+  }
+
   function navigateToHome() {
     window.location.reload();
   }
@@ -32,13 +38,17 @@
   onRevealWord={revealWord}
   onRevealPuzzle={revealPuzzle}
   hideTimer={showSplash}
+  {words}
 />
 {#if showSplash}
   <SplashScreen onPlay={handlePlay} />
 {:else}
   <main class="dark min-h-screen flex flex-col md:pt-0 pt-16">
     <div class="flex-1 pt-0 md:pt-0 lg:mr-35">
-      <CrosswordGrid1 onSetRevealFunctions={handleRevealFunctions} />
+      <CrosswordGrid1
+        onSetRevealFunctions={handleRevealFunctions}
+        onWords={handleWords}
+      />
     </div>
   </main>
 {/if}
