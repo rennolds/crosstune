@@ -1961,7 +1961,7 @@
             "startY": 6,
             "direction": "down",
             "color": "#00FFFF",
-            "textClue": "First word of this song title",
+            "textClue": "Last word of this song title",
             "audioUrl": "254407931",
             "startAt": "0:07",
             "audioDuration": 12
