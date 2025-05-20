@@ -2091,7 +2091,7 @@
     },
     "2025-05-20": {
       "title": "",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "theme": "purple",
       "size": {
         "width": 12,
@@ -2181,7 +2181,7 @@
           "startY": 1,
           "direction": "down",
           "color": "#FE9C9C",
-          "textClue": "Verb in this song title",
+          "textClue": "Noun in this song title",
           "audioUrl": "255052488",
           "startAt": "0:15",
           "audioDuration": 14
