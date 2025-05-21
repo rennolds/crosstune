@@ -2302,7 +2302,7 @@
           "startY": 0,
           "direction": "across",
           "color": "#FE9C9C",
-          "textClue": "First of this song title",
+          "textClue": "First word of this song title",
           "audioUrl": "17086720",
           "startAt": "0:17"
         },
@@ -2312,7 +2312,7 @@
           "startY": 2,
           "direction": "across",
           "color": "#28D66A",
-          "textClue": "Artist name",
+          "textClue": "Pop star behind this track",
           "audioUrl": "256110520",
           "startAt": "0:15",
           "audioDuration": 9
@@ -2345,7 +2345,7 @@
           "startY": 0,
           "direction": "down",
           "color": "#568EFF",
-          "textClue": "Bruno Mars favorite type of champagne",
+          "textClue": "Bruno Mars' favorite flavor of champagne",
           "audioUrl": "293231242",
           "startAt": "0:00",
           "audioDuration": 7.5
@@ -2356,7 +2356,7 @@
           "startY": 2,
           "direction": "down",
           "color": "#FFB34B",
-          "textClue": "Song title, also a Tarantino film",
+          "textClue": "Title shared by this song and a Tarantino film",
           "audioUrl": "1396880485",
           "startAt": "0:10",
           "audioDuration": 8
@@ -2476,7 +2476,7 @@
           "startY": 4,
           "direction": "down",
           "color": "#FE9C9C",
-          "textClue": "God blessed what broken thing in this song?",
+          "textClue": "God blessed the broken what in this song?",
           "audioUrl": "253576692",
           "startAt": "0:43",
           "audioDuration": 12
@@ -2487,7 +2487,7 @@
           "startY": 4,
           "direction": "down",
           "color": "#28D66A",
-          "textClue": "Artist last name",
+          "textClue": "Artist's last name",
           "audioUrl": "723511579",
           "startAt": "0:09",
           "audioDuration": 7
