@@ -2190,7 +2190,7 @@
     },
     "2025-05-21": {
       "title": "",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "theme": "black",
       "size": {
         "width": 12,
@@ -2214,7 +2214,7 @@
           "startY": 2,
           "direction": "across",
           "color": "#28D66A",
-          "textClue": "The name of the preditor in this song",
+          "textClue": "The name of the predator in this song",
           "audioUrl": "73115584",
           "startAt": "0:06",
           "audioDuration": 8
@@ -2225,7 +2225,7 @@
           "startY": 5,
           "direction": "across",
           "color": "#FFCEFD",
-          "textClue": "This song is the theme of 1986's Top Gun",
+          "textClue": "Hit song featured in 1986’s Top Gun",
           "audioUrl": "254034398",
           "startAt": "0:15",
           "audioDuration": 10
@@ -2280,7 +2280,7 @@
           "startY": 4,
           "direction": "down",
           "color": "#FE9C9C",
-          "textClue": "The Prince of what city",
+          "textClue": "The Prince of what neighborhood",
           "audioUrl": "655243370",
           "startAt": "0:06",
           "audioDuration": 8
