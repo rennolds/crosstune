@@ -2494,6 +2494,105 @@
         }
       ]
     },
+      "2025-03-07": {
+      "title": "",
+      "theme": "black",
+      "version": "1.0.0",
+      "size": {
+        "width": 12,
+        "height": 10
+    },
+    "words": [
+      {
+        "word": "HURON",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Lord ____",
+        "audioUrl": "273669198",
+        "startAt": "0:30",
+        "audioDuration": 12
+      },
+      {
+        "word": "BACH",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Composer last name",
+        "audioUrl": "432431433",
+        "startAt": "0:18",
+        "audioDuration": 8
+      },
+      {
+        "word": "EMINEM",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "1834292106",
+        "startAt": "0:28",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "BADGUY",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "597146499",
+        "startAt": "0:12",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "ONEKISS",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "425871105",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "ERASEME",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "256158663",
+        "startAt": "0:02",
+        "audioDuration": 7
+      },
+      {
+        "word": "ONEDANCE",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "258021633",
+        "startAt": "0:06",
+        "audioDuration": 7
+      },
+      {
+        "word": "KATY",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "256250242",
+        "startAt": "0:04",
+        "audioDuration": 7
+      }
+    ]
+  },
     "2025-05-26": {
       "title": "",
       "version": "1.0.0",
