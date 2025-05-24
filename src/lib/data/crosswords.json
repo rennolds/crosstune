@@ -2888,116 +2888,114 @@
       }
     ]
   },
-      "2025-03-10": {
-      "version": "1.0.0",
-      "title": "Super Seventies",
-      "theme": "green",
-      "size": {
-        "width": 12,
-        "height": 10
+  "2025-03-10": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JOEL",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "257053998",
+        "startAt": "0:20",
+        "audioDuration": 6.5
       },
-      "backgroundImage": "https://raw.githubusercontent.com/saasify-sh/react-blobby-blob/master/media/blob.jpg",
-      "words": [
-        {
-          "word": "JOEL",
-          "startX": 2,
-          "startY": 1,
-          "direction": "across",
-          "color": "#FE9C9C",
-          "textClue": "Artist Name",
-          "audioUrl": "257053998",
-          "startAt": "0:30"
-        },
-        {
-          "word": "RUN",
-          "startX": 9,
-          "startY": 3,
-          "direction": "across",
-          "color": "#28D66A",
-          "textClue": "Birthed for what reason?",
-          "audioUrl": "257037374",
-          "startAt": "0:30"
-        },
-        {
-          "word": "SEPTEMBER",
-          "startX": 1,
-          "startY": 4,
-          "direction": "across",
-          "color": "#FFCEFD",
-          "textClue": "Song Title",
-          "audioUrl": "256031283",
-          "startAt": "0:30"
-        },
-        {
-          "word": "YUSUF",
-          "startX": 6,
-          "startY": 7,
-          "direction": "across",
-          "color": "#FF5B5E",
-          "textClue": "The artist formally known as Cat Stevens",
-          "audioUrl": "336094125",
-          "startAt": "0:30"
-        },
-        {
-          "word": "SEGER",
-          "startX": 0,
-          "startY": 8,
-          "direction": "across",
-          "color": "#568EFF",
-          "textClue": "Artist Name",
-          "audioUrl": "151375397",
-          "startAt": "0:30"
-        },
-        {
-          "word": "ABBA",
-          "startX": 6,
-          "startY": 9,
-          "direction": "across",
-          "color": "#FFB34B",
-          "textClue": "Artist Name",
-          "audioUrl": "253187333",
-          "startAt": "0:30"
-        },
-        {
-          "word": "JOLENE",
-          "startX": 2,
-          "startY": 1,
-          "direction": "down",
-          "color": "#00FFFF",
-          "textClue": "Song Title",
-          "audioUrl": "328182539",
-          "startAt": "0:30"
-        },
-        {
-          "word": "TMHCR",
-          "startX": 4,
-          "startY": 4,
-          "direction": "down",
-          "color": "#FE9C9C",
-          "textClue": "Acronym of this song",
-          "audioUrl": "252839926",
-          "startAt": "0:30"
-        },
-        {
-          "word": "BARRACUDA",
-          "startX": 9,
-          "startY": 1,
-          "direction": "down",
-          "color": "#28D66A",
-          "textClue": "Song Title shares name with this fish",
-          "audioUrl": "254237139",
-          "startAt": "0:30"
-        },
-        {
-          "word": "FUNKY",
-          "startX": 11,
-          "startY": 1,
-          "direction": "down",
-          "color": "#FFCEFD",
-          "textClue": "What kind of music?",
-          "audioUrl": "253507498",
-          "startAt": "0:30"
-        }
-      ]
-    }
+      {
+        "word": "RUN",
+        "startX": 9,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "born for what reason?",
+        "audioUrl": "257037374",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "SEPTEMBER",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256031283",
+        "startAt": "0:15",
+        "audioDuration": 10
+      },
+      {
+        "word": "YUSUF",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The artist formerly known as Cat Stevens",
+        "audioUrl": "336094125",
+        "startAt": "0:14",
+        "audioDuration": 10
+      },
+      {
+        "word": "SEGER",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "151375397",
+        "startAt": "0:19",
+        "audioDuration": 7
+      },
+      {
+        "word": "JOLENE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "328182539",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "TMHCR",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Acronym of this song",
+        "audioUrl": "252839926",
+        "startAt": "0:20",
+        "audioDuration": 7
+      },
+      {
+        "word": "BARRACUDA",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This song title shares the name with a fish",
+        "audioUrl": "113343540",
+        "startAt": "0:39",
+        "audioDuration": 10
+      },
+      {
+        "word": "FUNKY",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "What kind of music now?",
+        "audioUrl": "253507498",
+        "startAt": "0:20",
+        "audioDuration": 10
+      }
+    ]
   }
+}
