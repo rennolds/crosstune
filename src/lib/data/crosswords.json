@@ -2705,7 +2705,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "I can't believe his parents named him that",
+        "textClue": "Artist name, also I can't believe his parents named him that",
         "audioUrl": "84303539",
         "startAt": "0:18",
         "audioDuration": 6.5
@@ -2716,7 +2716,7 @@
         "startY": 5,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Artist Name",
+        "textClue": "Artist name",
         "audioUrl": "61971021",
         "startAt": "1:06",
         "audioDuration": 6.5
@@ -2727,7 +2727,7 @@
         "startY": 6,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "Shorthand for this band (pls invite us to a backyard show)",
+        "textClue": "Shorthand for this band",
         "audioUrl": "26318705",
         "startAt": "0:29",
         "audioDuration": 6.5
@@ -2815,7 +2815,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Steve Lacy says his star sign in this song, what is it",
+        "textClue": "Steve Lacy mentions what star sign in this track",
         "audioUrl": "1305194842",
         "startAt": "0:23",
         "audioDuration": 8
@@ -2825,8 +2825,8 @@
         "startX": 0,
         "startY": 5,
         "direction": "across",
-        "color": "#FFCEFD title",
-        "textClue": "What popular song samples this track by Moldovan band O-zone",
+        "color": "#FFCEFD",
+        "textClue": "Name of the song, featuring Rihanna, that sampled this track",
         "audioUrl": "544900383",
         "startAt": "0:12",
         "audioDuration": 7
@@ -2837,7 +2837,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "Soulja Boy uses this thing when talking to his girl",
+        "textClue": "Noun in this song title",
         "audioUrl": "1475286229",
         "startAt": "1:54",
         "audioDuration": 9
@@ -2859,7 +2859,7 @@
         "startY": 3,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "The color of the album artwork ",
+        "textClue": "Color of this album artwork",
         "audioUrl": "1817690628",
         "startAt": "0:06",
         "audioDuration": 6.5
@@ -2870,7 +2870,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "This song is from what video game",
+        "textClue": "Video game this song is from",
         "audioUrl": "98816333",
         "startAt": "1:40",
         "audioDuration": 8
@@ -2881,7 +2881,7 @@
         "startY": 5,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "First word in this Artist's name",
+        "textClue": "First word in this artist name",
         "audioUrl": "262603156",
         "startAt": "0:20",
         "audioDuration": 8
