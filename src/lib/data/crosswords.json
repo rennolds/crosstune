@@ -3096,5 +3096,203 @@
         "audioDuration": 12
       }
     ]
+  },
+  "2025-05-30": {
+    "title": "Crying in the car at 2 A.M.",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "LEWIS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "526155132",
+        "startAt": "0:40",
+        "audioDuration": 12.5
+      },
+      {
+        "word": "DEATHCAB",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "_______ For Cutie",
+        "audioUrl": "256201357",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "SURPRISES",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Second word of song title",
+        "audioUrl": "265069091",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "MADEFOR",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Last two words of song title",
+        "audioUrl": "1564180549",
+        "startAt": "0:38",
+        "audioDuration": 15
+      },
+      {
+        "word": "SCARF",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Clothing item left at Maggie Gyllenhaal’s, allegedly",
+        "audioUrl": "1177191082",
+        "startAt": "1:14",
+        "audioDuration": 15.5
+      },
+      {
+        "word": "GIRLS",
+        "startX": 4,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Plural noun in this Juice WRLD song",
+        "audioUrl": "373180994",
+        "startAt": "1:25",
+        "audioDuration": 15
+      },
+      {
+        "word": "LANADELREY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "30668857",
+        "startAt": "1:04",
+        "audioDuration": 20
+      },
+      {
+        "word": "SCIENTIST",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Occupation in this song title",
+        "audioUrl": "255770516",
+        "startAt": "0:27",
+        "audioDuration": 13
+      }
+    ]
+  },
+  "2025-05-31": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "BTR",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist Acronym",
+        "audioUrl": "254218709",
+        "startAt": "0:00",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "HAND",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What is in her pocket?",
+        "audioUrl": "255794147",
+        "startAt": "0:09",
+        "audioDuration": 12
+      },
+      {
+        "word": "RUNDMC",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "718250050",
+        "startAt": "0:00",
+        "audioDuration": 9
+      },
+      {
+        "word": "AMORE",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "What is it when the moon hits your eye like a big pizza pie?",
+        "audioUrl": "326293449",
+        "startAt": "0:30",
+        "audioDuration": 4.5
+      },
+      {
+        "word": "PITBULL",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "190628327",
+        "startAt": "0:31",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "BOYFRIEND",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "737896414",
+        "startAt": "0:16",
+        "audioDuration": 8
+      },
+      {
+        "word": "RIHANNA",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "255769494",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "CARRIE",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "193429231",
+        "startAt": "0:21",
+        "audioDuration": 6.5
+      }
+    ]
   }
 }
