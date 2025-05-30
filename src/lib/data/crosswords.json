@@ -2494,104 +2494,7 @@
         }
       ]
     },
-    "2025-05-26": {
-      "title": "",
-      "version": "1.0.0",
-      "theme": "purple",
-      "size": {
-        "width": 12,
-        "height": 10
-      },
-      "words": [
-        {
-          "word": "MORGAN",
-          "startX": 6,
-          "startY": 2,
-          "direction": "across",
-          "color": "#FE9C9C",
-          "textClue": "First name of the featured artist in this song",
-          "audioUrl": "1817793996",
-          "startAt": "1:40"
-        },
-        {
-          "word": "GHOST",
-          "startX": 0,
-          "startY": 3,
-          "direction": "across",
-          "color": "#28D66A",
-          "textClue": "Song title",
-          "audioUrl": "1010966062",
-          "startAt": "0:00",
-          "audioDuration": 11
-        },
-        {
-          "word": "SWEETESCAPE",
-          "startX": 1,
-          "startY": 5,
-          "direction": "across",
-          "color": "#FFCEFD",
-          "textClue": "Song title, without \"the\"",
-          "audioUrl": "248324863",
-          "startAt": "0:21"
-        },
-        {
-          "word": "KIDCUDI",
-          "startX": 0,
-          "startY": 7,
-          "direction": "across",
-          "color": "#FF5B5E",
-          "textClue": "Artist name",
-          "audioUrl": "256158728",
-          "startAt": "0:22",
-          "audioDuration": 5
-        },
-        {
-          "word": "THESPINS",
-          "startX": 1,
-          "startY": 2,
-          "direction": "down",
-          "color": "#568EFF",
-          "textClue": "Song title",
-          "audioUrl": "809385400",
-          "startAt": "0:00",
-          "audioDuration": 6
-        },
-        {
-          "word": "IRIS",
-          "startX": 3,
-          "startY": 0,
-          "direction": "down",
-          "color": "#FFB34B",
-          "textClue": "Song title",
-          "audioUrl": "220647780",
-          "startAt": "0:20",
-          "audioDuration": 10.5
-        },
-        {
-          "word": "SURFACES",
-          "startX": 8,
-          "startY": 0,
-          "direction": "down",
-          "color": "#00FFFF",
-          "textClue": "Name of this indie pop duo",
-          "audioUrl": "554758320",
-          "startAt": "0:15",
-          "audioDuration": 18
-        },
-        {
-          "word": "DUALIPA",
-          "startX": 10,
-          "startY": 0,
-          "direction": "down",
-          "color": "#FE9C9C",
-          "textClue": "Artist name",
-          "audioUrl": "701402605",
-          "startAt": "0:08",
-          "audioDuration": 3.6
-        }
-      ]
-    },
-    "2025-03-07": {
+    "2025-05-24": {
       "title": "",
       "theme": "black",
       "version": "1.0.0",
@@ -2690,7 +2593,7 @@
       }
     ]
   },
-  "2025-03-08": {
+  "2025-05-25": {
     "title": "",
     "version": "1.0.0",
     "size": {
@@ -2789,7 +2692,313 @@
       }
     ]
   },
-  "2025-03-09": {
+    "2025-05-26": {
+      "title": "",
+      "version": "1.0.0",
+      "theme": "purple",
+      "size": {
+        "width": 12,
+        "height": 10
+      },
+      "words": [
+        {
+          "word": "MORGAN",
+          "startX": 6,
+          "startY": 2,
+          "direction": "across",
+          "color": "#FE9C9C",
+          "textClue": "First name of the featured artist in this song",
+          "audioUrl": "1817793996",
+          "startAt": "1:40"
+        },
+        {
+          "word": "GHOST",
+          "startX": 0,
+          "startY": 3,
+          "direction": "across",
+          "color": "#28D66A",
+          "textClue": "Song title",
+          "audioUrl": "1010966062",
+          "startAt": "0:00",
+          "audioDuration": 11
+        },
+        {
+          "word": "SWEETESCAPE",
+          "startX": 1,
+          "startY": 5,
+          "direction": "across",
+          "color": "#FFCEFD",
+          "textClue": "Song title, without \"the\"",
+          "audioUrl": "248324863",
+          "startAt": "0:21"
+        },
+        {
+          "word": "KIDCUDI",
+          "startX": 0,
+          "startY": 7,
+          "direction": "across",
+          "color": "#FF5B5E",
+          "textClue": "Artist name",
+          "audioUrl": "256158728",
+          "startAt": "0:22",
+          "audioDuration": 5
+        },
+        {
+          "word": "THESPINS",
+          "startX": 1,
+          "startY": 2,
+          "direction": "down",
+          "color": "#568EFF",
+          "textClue": "Song title",
+          "audioUrl": "809385400",
+          "startAt": "0:00",
+          "audioDuration": 6
+        },
+        {
+          "word": "IRIS",
+          "startX": 3,
+          "startY": 0,
+          "direction": "down",
+          "color": "#FFB34B",
+          "textClue": "Song title",
+          "audioUrl": "220647780",
+          "startAt": "0:20",
+          "audioDuration": 10.5
+        },
+        {
+          "word": "SURFACES",
+          "startX": 8,
+          "startY": 0,
+          "direction": "down",
+          "color": "#00FFFF",
+          "textClue": "Name of this indie pop duo",
+          "audioUrl": "554758320",
+          "startAt": "0:15",
+          "audioDuration": 18
+        },
+        {
+          "word": "DUALIPA",
+          "startX": 10,
+          "startY": 0,
+          "direction": "down",
+          "color": "#FE9C9C",
+          "textClue": "Artist name",
+          "audioUrl": "701402605",
+          "startAt": "0:08",
+          "audioDuration": 3.6
+        }
+      ]
+    },
+    "2025-05-27": {
+      "title": "",
+      "version": "1.0.0",
+      "size": {
+        "width": 12,
+        "height": 10
+      },
+      "theme": "green",
+      "words": [
+        {
+          "word": "JCOLE",
+          "startX": 0,
+          "startY": 0,
+          "direction": "across",
+          "color": "#FE9C9C",
+          "textClue": "Artist name",
+          "audioUrl": "563703438",
+          "startAt": "0:23",
+          "audioDuration": 8
+        },
+        {
+          "word": "ZENDAYA",
+          "startX": 0,
+          "startY": 2,
+          "direction": "across",
+          "color": "#28D66A",
+          "textClue": "Name of this artist, now primarily an actress",
+          "audioUrl": "253478539",
+          "startAt": "0:00",
+          "audioDuration": 15
+        },
+        {
+          "word": "SANDMAN",
+          "startX": 5,
+          "startY": 4,
+          "direction": "across",
+          "color": "#FFCEFD",
+          "textClue": "Second word of this song title",
+          "audioUrl": "788079790",
+          "startAt": "1:10",
+          "audioDuration": 8.5
+        },
+        {
+          "word": "DOLLAR",
+          "startX": 4,
+          "startY": 6,
+          "direction": "across",
+          "color": "#FF5B5E",
+          "textClue": "Something a woman would never get out of 50 Cent",
+          "audioUrl": "255894149",
+          "startAt": "0:00",
+          "audioDuration": 5.25
+        },
+        {
+          "word": "THISLOVE",
+          "startX": 0,
+          "startY": 8,
+          "direction": "across",
+          "color": "#568EFF",
+          "textClue": "Song title",
+          "audioUrl": "256187778",
+          "startAt": "0:00",
+          "audioDuration": 12
+        },
+        {
+          "word": "CHER",
+          "startX": 1,
+          "startY": 0,
+          "direction": "down",
+          "color": "#FFB34B",
+          "textClue": "Artist name",
+          "audioUrl": "1636601835",
+          "startAt": "0:55",
+          "audioDuration": 17
+        },
+        {
+          "word": "BADATLOVE",
+          "startX": 6,
+          "startY": 1,
+          "direction": "down",
+          "color": "#00FFFF",
+          "textClue": "Song title",
+          "audioUrl": "323294441",
+          "startAt": "0:20",
+          "audioDuration": 7
+        },
+        {
+          "word": "MURDER",
+          "startX": 9,
+          "startY": 4,
+          "direction": "down",
+          "color": "#FE9C9C",
+          "textClue": "The crime that took place in this song",
+          "audioUrl": "252795038",
+          "startAt": "0:40",
+          "audioDuration": 11
+        },
+        {
+          "word": "DRUNK",
+          "startX": 11,
+          "startY": 1,
+          "direction": "down",
+          "color": "#28D66A",
+          "textClue": "Second word of this song title",
+          "audioUrl": "1567640773",
+          "startAt": "0:32",
+          "audioDuration": 10
+        }
+      ]
+    },
+    "2025-05-28": {
+      "title": "Mr. Hoke's Class",
+      "version": "1.0.0",
+      "size": {
+        "width": 12,
+        "height": 10
+      },
+      "theme": "black",
+      "words": [
+        {
+          "word": "DMX",
+          "startX": 6,
+          "startY": 0,
+          "direction": "across",
+          "color": "#FE9C9C",
+          "textClue": "Artist name",
+          "audioUrl": "259150863",
+          "startAt": "1:09",
+          "audioDuration": 7
+        },
+        {
+          "word": "GEMINI",
+          "startX": 6,
+          "startY": 3,
+          "direction": "across",
+          "color": "#28D66A",
+          "textClue": "Steve Lacy mentions what star sign in this track",
+          "audioUrl": "1305194842",
+          "startAt": "0:23",
+          "audioDuration": 8
+        },
+        {
+          "word": "LIVEYOURLIFE",
+          "startX": 0,
+          "startY": 5,
+          "direction": "across",
+          "color": "#FFCEFD",
+          "textClue": "Name of the song, featuring Rihanna, that sampled this track",
+          "audioUrl": "544900383",
+          "startAt": "0:12",
+          "audioDuration": 7
+        },
+        {
+          "word": "PHONE",
+          "startX": 0,
+          "startY": 7,
+          "direction": "across",
+          "color": "#FF5B5E",
+          "textClue": "Noun in this song title",
+          "audioUrl": "1475286229",
+          "startAt": "1:54",
+          "audioDuration": 9
+        },
+        {
+          "word": "LOPEZ",
+          "startX": 0,
+          "startY": 5,
+          "direction": "down",
+          "color": "#568EFF",
+          "textClue": "This artist's last name (known for her movies)",
+          "audioUrl": "262762329",
+          "startAt": "0:19",
+          "audioDuration": 10
+        },
+        {
+          "word": "GREEN",
+          "startX": 3,
+          "startY": 3,
+          "direction": "down",
+          "color": "#FFB34B",
+          "textClue": "Color of this album artwork",
+          "audioUrl": "1817690628",
+          "startAt": "0:06",
+          "audioDuration": 6.5
+        },
+        {
+          "word": "MINECRAFT",
+          "startX": 7,
+          "startY": 0,
+          "direction": "down",
+          "color": "#00FFFF",
+          "textClue": "Video game this song is from",
+          "audioUrl": "98816333",
+          "startAt": "1:40",
+          "audioDuration": 8
+        },
+        {
+          "word": "FIFTH",
+          "startX": 10,
+          "startY": 5,
+          "direction": "down",
+          "color": "#FE9C9C",
+          "textClue": "First word in this artist name",
+          "audioUrl": "262603156",
+          "startAt": "0:20",
+          "audioDuration": 8
+        }
+      ]
+    },
+    "2025-05-29": {
     "title": "",
     "version": "1.0.0",
     "size": {
@@ -2799,312 +3008,92 @@
     "theme": "black",
     "words": [
       {
-        "word": "DMX",
-        "startX": 6,
-        "startY": 0,
+        "word": "CYRUS",
+        "startX": 4,
+        "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Artist name",
-        "audioUrl": "259150863",
-        "startAt": "1:09",
-        "audioDuration": 7
+        "textClue": "Artist last name",
+        "audioUrl": "256264710",
+        "startAt": "0:07",
+        "audioDuration": 6.5
       },
       {
-        "word": "GEMINI",
-        "startX": 6,
-        "startY": 3,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "Steve Lacy mentions what star sign in this track",
-        "audioUrl": "1305194842",
-        "startAt": "0:23",
-        "audioDuration": 8
-      },
-      {
-        "word": "LIVEYOURLIFE",
-        "startX": 0,
+        "word": "NOTLIKEUS",
+        "startX": 2,
         "startY": 5,
         "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "Name of the song, featuring Rihanna, that sampled this track",
-        "audioUrl": "544900383",
-        "startAt": "0:12",
-        "audioDuration": 7
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1814709189",
+        "startAt": "0:00",
+        "audioDuration": 7.5
       },
       {
-        "word": "PHONE",
-        "startX": 0,
-        "startY": 7,
+        "word": "CHURCH",
+        "startX": 1,
+        "startY": 8,
         "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Take me to where? ",
+        "audioUrl": "197499806",
+        "startAt": "0:58",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "NOAH",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "Noun in this song title",
-        "audioUrl": "1475286229",
-        "startAt": "1:54",
+        "textClue": "Artist first name",
+        "audioUrl": "1342838488",
+        "startAt": "0:20",
         "audioDuration": 9
       },
       {
-        "word": "LOPEZ",
-        "startX": 0,
-        "startY": 5,
+        "word": "BTS",
+        "startX": 4,
+        "startY": 4,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "This artist's last name (known for her movies)",
-        "audioUrl": "262762329",
-        "startAt": "0:19",
-        "audioDuration": 10
-      },
-      {
-        "word": "GREEN",
-        "startX": 3,
-        "startY": 3,
-        "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Color of this album artwork",
-        "audioUrl": "1817690628",
-        "startAt": "0:06",
-        "audioDuration": 6.5
-      },
-      {
-        "word": "MINECRAFT",
-        "startX": 7,
-        "startY": 0,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "Video game this song is from",
-        "audioUrl": "98816333",
-        "startAt": "1:40",
-        "audioDuration": 8
-      },
-      {
-        "word": "FIFTH",
-        "startX": 10,
-        "startY": 5,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "First word in this artist name",
-        "audioUrl": "262603156",
-        "startAt": "0:20",
-        "audioDuration": 8
-      }
-    ]
-  },
-  "2025-03-10": {
-    "title": "",
-    "version": "1.0.0",
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "theme": "black",
-    "words": [
-      {
-        "word": "JOEL",
-        "startX": 2,
-        "startY": 1,
-        "direction": "across",
-        "color": "#FE9C9C",
         "textClue": "Artist name",
-        "audioUrl": "257053998",
+        "audioUrl": "1454538880",
         "startAt": "0:20",
-        "audioDuration": 6.5
+        "audioDuration": 8
       },
       {
-        "word": "RUN",
-        "startX": 9,
-        "startY": 3,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "born for what reason?",
-        "audioUrl": "257037374",
-        "startAt": "0:20",
-        "audioDuration": 6.5
-      },
-      {
-        "word": "SEPTEMBER",
-        "startX": 1,
-        "startY": 4,
-        "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "Song title",
-        "audioUrl": "256031283",
-        "startAt": "0:15",
-        "audioDuration": 10
-      },
-      {
-        "word": "YUSUF",
+        "word": "STITCH",
         "startX": 6,
-        "startY": 7,
-        "direction": "across",
-        "color": "#FF5B5E",
-        "textClue": "The artist formerly known as Cat Stevens",
-        "audioUrl": "336094125",
-        "startAt": "0:14",
-        "audioDuration": 10
-      },
-      {
-        "word": "SEGER",
-        "startX": 0,
-        "startY": 8,
-        "direction": "across",
-        "color": "#568EFF",
-        "textClue": "Artist name",
-        "audioUrl": "151375397",
-        "startAt": "0:19",
-        "audioDuration": 7
-      },
-      {
-        "word": "JOLENE",
-        "startX": 2,
-        "startY": 1,
+        "startY": 3,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Song title",
-        "audioUrl": "328182539",
-        "startAt": "0:00",
+        "textClue": "This song is featured in a movie about a which alien?",
+        "audioUrl": "2091738387",
+        "startAt": "0:24",
         "audioDuration": 8
       },
       {
-        "word": "TMHCR",
-        "startX": 4,
-        "startY": 4,
+        "word": "SHIVERS",
+        "startX": 8,
+        "startY": 1,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "Acronym of this song",
-        "audioUrl": "252839926",
-        "startAt": "0:20",
-        "audioDuration": 7
-      },
-      {
-        "word": "BARRACUDA",
-        "startX": 9,
-        "startY": 1,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "This song title shares the name with a fish",
-        "audioUrl": "113343540",
-        "startAt": "0:39",
-        "audioDuration": 10
-      },
-      {
-        "word": "FUNKY",
-        "startX": 11,
-        "startY": 1,
-        "direction": "down",
-        "color": "#28D66A",
-        "textClue": "What kind of music now?",
-        "audioUrl": "253507498",
-        "startAt": "0:20",
-        "audioDuration": 10
-      }
-    ]
-  },
-  "2025-03-11": {
-    "title": "",
-    "version": "1.0.0",
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "theme": "green",
-    "words": [
-      {
-        "word": "JCOLE",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "color": "#FE9C9C",
-        "textClue": "Artist name",
-        "audioUrl": "563703438",
-        "startAt": "0:23",
-        "audioDuration": 8
-      },
-      {
-        "word": "ZENDAYA",
-        "startX": 0,
-        "startY": 2,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "Name of this artist, now primarily an actress",
-        "audioUrl": "253478539",
-        "startAt": "0:00",
-        "audioDuration": 15
-      },
-      {
-        "word": "SANDMAN",
-        "startX": 5,
-        "startY": 4,
-        "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "Second word of this song title",
-        "audioUrl": "788079790",
-        "startAt": "1:10",
-        "audioDuration": 8.5
-      },
-      {
-        "word": "DOLLAR",
-        "startX": 4,
-        "startY": 6,
-        "direction": "across",
-        "color": "#FF5B5E",
-        "textClue": "Something a woman would never get out of 50 Cent",
-        "audioUrl": "255894149",
-        "startAt": "0:00",
-        "audioDuration": 5.25
-      },
-      {
-        "word": "THISLOVE",
-        "startX": 0,
-        "startY": 8,
-        "direction": "across",
-        "color": "#568EFF",
         "textClue": "Song title",
-        "audioUrl": "256187778",
+        "audioUrl": "1118084470",
+        "startAt": "0:52",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "PARIS",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "What city is referenced in this track?",
+        "audioUrl": "1561604740",
         "startAt": "0:00",
         "audioDuration": 12
-      },
-      {
-        "word": "CHER",
-        "startX": 1,
-        "startY": 0,
-        "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Artist name",
-        "audioUrl": "1636601835",
-        "startAt": "0:55",
-        "audioDuration": 17
-      },
-      {
-        "word": "BADATLOVE",
-        "startX": 6,
-        "startY": 1,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "Song title",
-        "audioUrl": "323294441",
-        "startAt": "0:20",
-        "audioDuration": 7
-      },
-      {
-        "word": "MURDER",
-        "startX": 9,
-        "startY": 4,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "The crime that took place in this song title",
-        "audioUrl": "252795038",
-        "startAt": "0:40",
-        "audioDuration": 11
-      },
-      {
-        "word": "DRUNK",
-        "startX": 11,
-        "startY": 1,
-        "direction": "down",
-        "color": "#28D66A",
-        "textClue": "Second word of this song title",
-        "audioUrl": "1567640773",
-        "startAt": "0:32",
-        "audioDuration": 10
       }
     ]
   }
