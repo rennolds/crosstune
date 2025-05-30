@@ -2224,14 +2224,12 @@
   input.revealed {
     color: inherit !important;
     font-weight: bold !important;
-    font-size: 21px !important;
     font-family: inherit !important;
   }
 
   .revealed {
     color: inherit !important;
     font-weight: bold !important;
-    font-size: inherit !important;
     font-family: inherit !important;
   }
 </style>
