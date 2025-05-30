@@ -3096,5 +3096,305 @@
         "audioDuration": 12
       }
     ]
+  },
+
+  "2025-02-01": {
+    "title": "Surfing the radio in 2014",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "EGYPTIAN",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "In this music video, Katy Perry presents herself as this",
+        "audioUrl": "115637399",
+        "startAt": "0:14",
+        "audioDuration": 14
+      },
+      {
+        "word": "ALLOFME",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "113662676",
+        "startAt": "0:24",
+        "audioDuration": 15
+      },
+      {
+        "word": "TIMBER",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "575051724",
+        "startAt": "0:22",
+        "audioDuration": 15
+      },
+      {
+        "word": "SHIA",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First name of the actor featured in this music video, of Transformers fame",
+        "audioUrl": "185001835",
+        "startAt": "0:07",
+        "audioDuration": 16
+      },
+      {
+        "word": "LATCH",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "90111828",
+        "startAt": "0:34",
+        "audioDuration": 8.55
+      },
+      {
+        "word": "TALKDIRTY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "256050744",
+        "startAt": "0:30",
+        "audioDuration": 9
+      },
+      {
+        "word": "FANCY",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "255793175",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "JESSIEJ",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "309401672",
+        "startAt": "0:00",
+        "audioDuration": 15
+      }
+    ]
+  },
+
+  "2025-02-02": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "KELLY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1634470338",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "POKERFACE",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255905673",
+        "startAt": "0:18",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "MADEFOR",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1564180549",
+        "startAt": "0:11",
+        "audioDuration": 13.2
+      },
+      {
+        "word": "TIMBER",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "575051724",
+        "startAt": "0:11",
+        "audioDuration": 11.5
+      },
+      {
+        "word": "FEELGOOD",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "512243433",
+        "startAt": "0:00",
+        "audioDuration": 5.9
+      },
+      {
+        "word": "STARTERCAP",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "256256955",
+        "startAt": "0:00",
+        "audioDuration": 23
+      },
+      {
+        "word": "THEREAPER",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "253572856",
+        "startAt": "0:13",
+        "audioDuration": 12
+      },
+      {
+        "word": "CHANCE",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "90243752",
+        "startAt": "0:28",
+        "audioDuration": 16
+      }
+    ]
+  },
+
+  "2025-02-03": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "LEWIS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "526155132",
+        "startAt": "0:40",
+        "audioDuration": 12.5
+      },
+      {
+        "word": "DEATHCAB",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "_______ For Cutie",
+        "audioUrl": "256201357",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "SURPRISES",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Second word of song title",
+        "audioUrl": "265069091",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "MADEFOR",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Last two words of song title",
+        "audioUrl": "1564180549",
+        "startAt": "0:38",
+        "audioDuration": 15
+      },
+      {
+        "word": "SCARF",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Article of clothing mentioned in this track",
+        "audioUrl": "1177191082",
+        "startAt": "1:14",
+        "audioDuration": 15.5
+      },
+      {
+        "word": "GIRLS",
+        "startX": 4,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Juice WRLD laments this",
+        "audioUrl": "373180994",
+        "startAt": "1:25",
+        "audioDuration": 15
+      },
+      {
+        "word": "LANADELREY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "30668857",
+        "startAt": "1:04",
+        "audioDuration": 20
+      },
+      {
+        "word": "SCIENTIST",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Occupation in this song title",
+        "audioUrl": "255770516",
+        "startAt": "0:27",
+        "audioDuration": 13
+      }
+    ]
   }
 }
