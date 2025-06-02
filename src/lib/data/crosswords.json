@@ -350,14 +350,14 @@
         "audioDuration": 10
       },
       {
-        "word": "CIRCLES",
+        "word": "CHICKEN",
         "startX": 2,
         "startY": 2,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Song title",
-        "audioUrl": "672849185",
-        "startAt": "0:33",
+        "textClue": "The protein featured in this song",
+        "audioUrl": "583100079",
+        "startAt": "0:18",
         "audioDuration": 8
       },
       {
