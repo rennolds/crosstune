@@ -296,105 +296,6 @@
       }
     ]
   },
-  "2025-03-03": {
-    "title": "",
-    "version": "1.0.0",
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "theme": "black",
-    "words": [
-      {
-        "word": "ET",
-        "startX": 5,
-        "startY": 0,
-        "direction": "across",
-        "color": "#FE9C9C",
-        "textClue": "Song title (also a Spielberg film)",
-        "audioUrl": "256250223",
-        "startAt": "0:006",
-        "audioDuration": 6.5
-      },
-      {
-        "word": "CHARLIXCX",
-        "startX": 2,
-        "startY": 2,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "Artist name",
-        "audioUrl": "1839756210",
-        "startAt": "0:51",
-        "audioDuration": 6.5
-      },
-      {
-        "word": "OASIS",
-        "startX": 4,
-        "startY": 6,
-        "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "Artist name",
-        "audioUrl": "283975590",
-        "startAt": "1:34",
-        "audioDuration": 7
-      },
-      {
-        "word": "LEONA",
-        "startX": 4,
-        "startY": 8,
-        "direction": "across",
-        "color": "#FF5B5E",
-        "textClue": "Artist first name",
-        "audioUrl": "256620844",
-        "startAt": "0:20",
-        "audioDuration": 10
-      },
-      {
-        "word": "CHICKEN",
-        "startX": 2,
-        "startY": 2,
-        "direction": "down",
-        "color": "#568EFF",
-        "textClue": "The protein featured in this song",
-        "audioUrl": "111127967",
-        "startAt": "0:18",
-        "audioDuration": 7.5
-      },
-      {
-        "word": "EARFQUAKE",
-        "startX": 5,
-        "startY": 0,
-        "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Song title (watch out for unique spelling)",
-        "audioUrl": "621622326",
-        "startAt": "0:29",
-        "audioDuration": 6.5
-      },
-      {
-        "word": "XXX",
-        "startX": 8,
-        "startY": 1,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "First 3 letters in this artist's name",
-        "audioUrl": "543819150",
-        "startAt": "0:25",
-        "audioDuration": 7
-      },
-      {
-        "word": "SZA",
-        "startX": 8,
-        "startY": 6,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "Artist name",
-        "audioUrl": "1396885495",
-        "startAt": "0:39",
-        "audioDuration": 8
-      }
-    ]
-  },
   "2025-03-04": {
     "title": "",
     "version": "1.0.0",
@@ -491,6 +392,105 @@
         "audioUrl": "252971920",
         "startAt": "0:00",
         "audioDuration": 6.5
+      }
+    ]
+  },
+  "2025-03-05": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "RINGOSTARR",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The name of this band's drummer",
+        "audioUrl": "185886102",
+        "startAt": "1:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "SUGAR",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "...were going down swinging",
+        "audioUrl": "12039982",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "BILLIONAIRE",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "87615115",
+        "startAt": "0:10",
+        "audioDuration": 9.5
+      },
+      {
+        "word": "ACTION",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": "193829854",
+        "startAt": "0:50",
+        "audioDuration": 8
+      },
+      {
+        "word": "GOSPEL",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This artist is an example of what music genre?",
+        "audioUrl": "1169004973",
+        "startAt": "2:45",
+        "audioDuration": 12
+      },
+      {
+        "word": "TRAMPOLINE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "427402650",
+        "startAt": "0:51",
+        "audioDuration": 10
+      },
+      {
+        "word": "MILLER",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "256873763",
+        "startAt": "0:48",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "SCENE",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Selena Gomez & the ____",
+        "audioUrl": "309809821",
+        "startAt": "0:02",
+        "audioDuration": 7
       }
     ]
   }
