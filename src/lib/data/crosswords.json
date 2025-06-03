@@ -251,15 +251,15 @@
         "audioDuration": 10
       },
       {
-        "word": "CHEM",
-        "startX": 0,
-        "startY": 9,
-        "direction": "across",
+        "word": "CEELO",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
         "color": "#568EFF",
-        "textClue": "Last word of song title",
-        "audioUrl": "1901887812",
-        "startAt": "0:30",
-        "audioDuration": 6.5
+        "textClue": "Artist first name",
+        "audioUrl": "328201666",
+        "startAt": "0:00",
+        "audioDuration": 10
       },
       {
         "word": "CENTRALCEE",
