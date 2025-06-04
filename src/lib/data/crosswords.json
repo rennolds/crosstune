@@ -3594,7 +3594,7 @@
   },
   "2025-06-04": {
     "title": "",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "size": {
       "width": 12,
       "height": 10
@@ -3684,7 +3684,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Name of Selena Gomez's band, with \"the\"",
+        "textClue": "Name of Selena Gomez's band, without \"the\"",
         "audioUrl": "309809821",
         "startAt": "0:02",
         "audioDuration": 7
