@@ -3783,7 +3783,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Artist last name",
+        "textClue": "Artist first name",
         "audioUrl": "251387502",
         "startAt": "0:07",
         "audioDuration": 8
