@@ -3706,7 +3706,7 @@
         "startY": 0,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "The US state in this song name",
+        "textClue": "First word of this song title",
         "audioUrl": "257047675",
         "startAt": "0:20",
         "audioDuration": 7
