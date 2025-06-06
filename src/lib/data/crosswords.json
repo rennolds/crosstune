@@ -3792,7 +3792,7 @@
   },
   "2025-06-06": {
     "title": "",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "size": {
       "width": 12,
       "height": 10
@@ -3806,8 +3806,8 @@
         "direction": "across",
         "color": "#FE9C9C",
         "textClue": "Artist last name",
-        "audioUrl": "326293297",
-        "startAt": "0:16",
+        "audioUrl": "269479423",
+        "startAt": "0:12",
         "audioDuration": 6.5
       },
       {
