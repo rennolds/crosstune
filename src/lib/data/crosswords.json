@@ -696,10 +696,10 @@
         "startY": 0,
         "direction": "down",
         "color": "#28D66A",
-        "textClue": "Artist last name",
-        "audioUrl": "306383894",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "textClue": "Lil Wayne has 6 albums titled title \"this\"",
+        "audioUrl": "252944918",
+        "startAt": "0:15",
+        "audioDuration": 7
       },
       {
         "word": "HABITS",
