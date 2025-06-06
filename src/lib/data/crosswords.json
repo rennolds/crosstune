@@ -3789,5 +3789,115 @@
         "audioDuration": 8
       }
     ]
+  },
+  "2025-06-06": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CASH",
+        "startX": 7,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "326293297",
+        "startAt": "0:16",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "SINATRA",
+        "startX": 2,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": "259062076",
+        "startAt": "0:10",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "JET",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The method of transportation in this song",
+        "audioUrl": "252839857",
+        "startAt": "0:09",
+        "audioDuration": 9
+      },
+      {
+        "word": "YOSEMITE",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title (also a national park)",
+        "audioUrl": "480200364",
+        "startAt": "0:16",
+        "audioDuration": 7
+      },
+      {
+        "word": "BEATIT",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "278509342",
+        "startAt": "0:23",
+        "audioDuration": 7
+      },
+      {
+        "word": "WINNER",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Who takes it all in this song?",
+        "audioUrl": "326776606",
+        "startAt": "2:06",
+        "audioDuration": 10
+      },
+      {
+        "word": "STEFANI",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "248324863",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "MONEY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "255745394",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "CARTER",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Name in this album title (there are 6 of them)",
+        "audioUrl": "252944918",
+        "startAt": "0:15",
+        "audioDuration": 7
+      }
+    ]
   }
 }
