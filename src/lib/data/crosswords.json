@@ -3792,12 +3792,12 @@
   },
   "2025-06-06": {
     "title": "",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "size": {
       "width": 12,
       "height": 10
     },
-    "theme": "black",
+    "theme": "green",
     "words": [
       {
         "word": "CASH",
