@@ -37,7 +37,7 @@
         "startY": 9,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "An article of clothing",
+        "textClue": "Clothing item, plural",
         "audioUrl": "283122057",
         "startAt": "0:00",
         "audioDuration": 8.5
@@ -59,7 +59,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Artist last name",
+        "textClue": "Artist first name",
         "audioUrl": "279731748",
         "startAt": "0:00",
         "audioDuration": 8
@@ -81,7 +81,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "John Mayer famously covered this artist",
+        "textClue": "Original artist of this song, covered by John Mayer",
         "audioUrl": "255828746",
         "startAt": "0:01",
         "audioDuration": 15
