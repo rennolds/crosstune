@@ -1657,10 +1657,20 @@
     style="color: {isDark ? 'white' : 'black'}"
   >
     <h1 class="text-xl">
-      <span class="font-bold">{formatDate(displayDate)}</span>
-      {#if puzzle.title}
+      {#if puzzle.title && puzzle.author}
+        <span class="font-bold">{puzzle.title}</span>
+        <span> - </span>
+        <span class="italic">{puzzle.author}</span>
+      {:else if puzzle.title}
+        <span class="font-bold">{formatDate(displayDate)}</span>
         <span> - </span>
         <span class="italic">{puzzle.title}</span>
+      {:else if puzzle.author}
+        <span class="font-bold">{formatDate(displayDate)}</span>
+        <span> - </span>
+        <span class="italic">{puzzle.author}</span>
+      {:else}
+        <span class="font-bold">{formatDate(displayDate)}</span>
       {/if}
     </h1>
   </div>

@@ -161,8 +161,15 @@
         {formatDate(todayDate)}
       </div>
       {#if puzzle.title}
-        <div class="text-black italic dark:text-white text-base mt-0.5 font-light">
+        <div
+          class="text-black italic dark:text-white text-base mt-0.5 font-light"
+        >
           {puzzle.title}
+        </div>
+      {/if}
+      {#if puzzle.author}
+        <div class="text-black dark:text-white text-base mt-0.5 font-light">
+          by {puzzle.author}
         </div>
       {/if}
     </div>
