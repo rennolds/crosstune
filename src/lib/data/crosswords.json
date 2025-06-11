@@ -58,7 +58,7 @@
         "startY": 8,
         "direction": "across",
         "color": "#568EFF",
-        "textClue": "Artist name",
+        "textClue": "Lead singer's first name",
         "audioUrl": "12841530",
         "startAt": "0:19",
         "audioDuration": 7.5
