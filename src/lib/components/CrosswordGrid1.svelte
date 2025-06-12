@@ -56,9 +56,6 @@
   let showUnavailableMessage = $state(false);
   let hasShownUnavailableMessage = $state(false);
 
-  // State for fallback puzzle notification
-  let showFallbackNotification = $state(false);
-
   // Update widget status continuously to check for readiness changes
   $effect(() => {
     // Set up an interval to check widget status every 500ms
@@ -104,7 +101,6 @@
   // Get today's puzzle or fall back to the first available puzzle
   function getTodaysPuzzleInfo() {
     const todayDate = getEastCoastDate();
-    const puzzleDates = Object.keys(crosswords);
 
     // Try to get today's puzzle
     if (crosswords[todayDate]) {
@@ -115,23 +111,8 @@
       };
     }
 
-    // Fall back to first available puzzle
-    const firstAvailableDate = puzzleDates.sort()[0];
-    if (crosswords[firstAvailableDate]) {
-      return {
-        puzzle: crosswords[firstAvailableDate],
-        dateKey: firstAvailableDate,
-        isFallback: true,
-      };
-    }
-    // Should ideally not happen if crosswords.json is never empty
-    // Return a dummy puzzle or throw error
-    console.error("No puzzles available in crosswords.json");
-    return {
-      puzzle: { size: { width: 10, height: 10 }, words: [], version: "error" },
-      dateKey: todayDate, // or a default error key
-      isFallback: true, // Treat as fallback to indicate an issue
-    };
+    // No puzzle available - return null to trigger error state
+    return null;
   }
 
   // Get puzzle - prioritize customPuzzle if provided (for archive mode)
@@ -146,8 +127,15 @@
       : getTodaysPuzzleInfo()
   );
 
-  const puzzle = $derived(puzzleInfo.puzzle);
-  const { size, words } = $derived(puzzle); // size and words will react to puzzle changes
+  // If no puzzle is available, show error state
+  if (!puzzleInfo) {
+    // No need to set any state since we're using conditional rendering
+  }
+
+  const puzzle = $derived(puzzleInfo?.puzzle);
+  const { size, words } = $derived(
+    puzzle || { size: { width: 0, height: 0 }, words: [] }
+  ); // Provide default values if puzzle is null
 
   let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
@@ -1594,40 +1582,6 @@
     }
   });
 
-  // Effect to show fallback notification
-  $effect(() => {
-    if (!isArchiveMode && puzzleInfo.isFallback) {
-      const today = getEastCoastDate();
-      // Show notification if a fallback is being used because today's puzzle is missing
-      if (puzzleInfo.dateKey !== today) {
-        //This implies today's puzzle was not found, and a fallback (firstAvailableDate) is being used.
-        showFallbackNotification = true;
-      } else if (crosswords[today] && puzzleInfo.puzzle !== crosswords[today]) {
-        // This condition means today's date *is* in crosswords.json,
-        // but getTodaysPuzzleInfo somehow still decided it's a fallback
-        // with today's dateKey. This might happen if the "first available" *is* today
-        // but we still want to signal it was a "fallback path".
-        // More directly: if isFallback is true, it means today's was not initially found.
-        showFallbackNotification = true;
-      }
-      // A simpler condition might just be:
-      // if (puzzleInfo.isFallback) showFallbackNotification = true;
-      // Because isFallback is true *only if* crosswords[todayDate] was initially not found.
-    } else {
-      showFallbackNotification = false;
-    }
-  });
-
-  // Simpler logic for fallback notification based on review:
-  // isFallback is true if getTodaysPuzzleInfo couldn't find crosswords[todayDate]
-  $effect(() => {
-    if (!isArchiveMode && puzzleInfo.isFallback) {
-      showFallbackNotification = true;
-    } else {
-      showFallbackNotification = false;
-    }
-  });
-
   // Pass words to parent component when they change
   $effect(() => {
     if (onWords && words) {
@@ -1650,405 +1604,426 @@
 
 <SoundCloudManager {words} />
 
-<div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
-  <!-- Date/title container aligned with crossword -->
-  <div
-    class="hidden md:block text-left mb-4"
-    style="color: {isDark ? 'white' : 'black'}"
-  >
-    <h1 class="text-xl">
-      <span class="font-bold">{formatDate(displayDate)}</span>
-      {#if puzzle.title}
-        <span> - </span>
-        <span class="italic">{puzzle.title}</span>
-      {/if}
-    </h1>
-  </div>
-
-  <div
-    class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
-    style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
-  >
-    <!-- Crossword grid container -->
-    <div class="flex-1 w-full">
-      <!-- Grid container -->
-      <div
-        class="w-full relative"
-        style="aspect-ratio: {size.width}/{size.height};"
-      >
-        <VinylRecord theme={puzzle.theme || "black"} {isPlaying} />
-
-        <!-- Remove the background image and instead use a transparent background -->
-        <div
-          class="absolute inset-0 grid"
-          style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
-        ></div>
-
-        <div
-          class="absolute inset-0 grid p-2"
-          style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
+{#if !puzzleInfo}
+  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
+    <div class="bg-blue-100 text-blue-700 p-4 rounded shadow-lg text-center">
+      <p class="text-sm">
+        We couldn't find a puzzle for today. Try refreshing the page, or check
+        back later!
+      </p>
+      <div class="mt-3 flex justify-center gap-3">
+        <button
+          onclick={() => window.location.reload()}
+          class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded"
         >
-          {#each grid as row, y}
-            {#each row as cell, x}
-              <div
-                class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
-                style="
-                {cell === null
-                  ? 'background-color: transparent;'
-                  : isCellHighlighted(x, y)?.type === 'focused'
-                    ? `background-color: #FFFF00; border: 0.6px solid black;`
-                    : isCellHighlighted(x, y)?.type === 'active'
-                      ? `background-color: ${isCellHighlighted(x, y).color}; border: 0.6px solid black;`
-                      : 'background-color: #FFF; border: 0.6px solid black;'}"
-              >
-                {#if cell !== null}
-                  {#if wordNumbers.has(`${x},${y}`)}
-                    <span
-                      class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none"
-                      style="color: {isDark ? 'black' : 'black'};"
-                    >
-                      {wordNumbers.get(`${x},${y}`)}
-                    </span>
-                  {/if}
-                  {#if spaceCells.has(`${x},${y}`)}
-                    <div
-                      class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400"
-                    >
-                      ␣
-                    </div>
-                  {:else}
-                    <input
-                      type="text"
-                      maxlength="1"
-                      data-x={x}
-                      data-y={y}
-                      class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
-                      class:cursor-text={!isMobileDevice}
-                      class:revealed={revealedCells.has(`${x},${y}`)}
-                      style=""
-                      bind:value={grid[y][x]}
-                      onkeydown={(e) => handleKeydown(e, x, y)}
-                      onclick={() => handleCellClick(x, y)}
-                      autocomplete="off"
-                      autocorrect="off"
-                      autocapitalize="off"
-                      spellcheck="false"
-                      {...isMobileDevice
-                        ? {
-                            readonly: true,
-                            inputmode: "none",
-                            tabindex: "-1",
-                          }
-                        : {}}
-                    />
-                    {#if revealedCells.has(`${x},${y}`)}
-                      <div class="absolute top-0 right-0 w-3 h-0 md:w-5">
-                        <div
-                          class="w-0 h-0 border-t-[6px] md:border-t-[10px] border-t-red-500 border-l-[4px] md:border-l-[6px] border-l-red-500 border-b-[4px] md:border-b-[6px] border-b-transparent border-r-[6px] md:border-r-[10px] border-r-transparent transform rotate-90 translate-x-[2px] md:translate-x-[4px] -translate-y-[0px]"
-                        ></div>
+          Refresh Page
+        </button>
+      </div>
+    </div>
+  </div>
+{:else}
+  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
+    <!-- Date/title container aligned with crossword -->
+    <div
+      class="hidden md:block text-left mb-4"
+      style="color: {isDark ? 'white' : 'black'}"
+    >
+      <h1 class="text-xl">
+        <span class="font-bold">{formatDate(displayDate)}</span>
+        {#if puzzle.title}
+          <span> - </span>
+          <span class="italic">{puzzle.title}</span>
+        {/if}
+      </h1>
+    </div>
+
+    <div
+      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
+      style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
+    >
+      <!-- Crossword grid container -->
+      <div class="flex-1 w-full">
+        <!-- Grid container -->
+        <div
+          class="w-full relative"
+          style="aspect-ratio: {size.width}/{size.height};"
+        >
+          <VinylRecord theme={puzzle.theme || "black"} {isPlaying} />
+
+          <!-- Remove the background image and instead use a transparent background -->
+          <div
+            class="absolute inset-0 grid"
+            style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
+          ></div>
+
+          <div
+            class="absolute inset-0 grid p-2"
+            style="grid-template-columns: repeat({size.width}, minmax(0, 1fr)); gap: 0px;"
+          >
+            {#each grid as row, y}
+              {#each row as cell, x}
+                <div
+                  class="aspect-square flex items-center justify-center relative transition-colors duration-200 z-10"
+                  style="
+                  {cell === null
+                    ? 'background-color: transparent;'
+                    : isCellHighlighted(x, y)?.type === 'focused'
+                      ? `background-color: #FFFF00; border: 0.6px solid black;`
+                      : isCellHighlighted(x, y)?.type === 'active'
+                        ? `background-color: ${isCellHighlighted(x, y).color}; border: 0.6px solid black;`
+                        : 'background-color: #FFF; border: 0.6px solid black;'}"
+                >
+                  {#if cell !== null}
+                    {#if wordNumbers.has(`${x},${y}`)}
+                      <span
+                        class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none"
+                        style="color: {isDark ? 'black' : 'black'};"
+                      >
+                        {wordNumbers.get(`${x},${y}`)}
+                      </span>
+                    {/if}
+                    {#if spaceCells.has(`${x},${y}`)}
+                      <div
+                        class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400"
+                      >
+                        ␣
                       </div>
+                    {:else}
+                      <input
+                        type="text"
+                        maxlength="1"
+                        data-x={x}
+                        data-y={y}
+                        class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
+                        class:cursor-text={!isMobileDevice}
+                        class:revealed={revealedCells.has(`${x},${y}`)}
+                        style=""
+                        bind:value={grid[y][x]}
+                        onkeydown={(e) => handleKeydown(e, x, y)}
+                        onclick={() => handleCellClick(x, y)}
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        {...isMobileDevice
+                          ? {
+                              readonly: true,
+                              inputmode: "none",
+                              tabindex: "-1",
+                            }
+                          : {}}
+                      />
+                      {#if revealedCells.has(`${x},${y}`)}
+                        <div class="absolute top-0 right-0 w-3 h-0 md:w-5">
+                          <div
+                            class="w-0 h-0 border-t-[6px] md:border-t-[10px] border-t-red-500 border-l-[4px] md:border-l-[6px] border-l-red-500 border-b-[4px] md:border-b-[6px] border-b-transparent border-r-[6px] md:border-r-[10px] border-r-transparent transform rotate-90 translate-x-[2px] md:translate-x-[4px] -translate-y-[0px]"
+                          ></div>
+                        </div>
+                      {/if}
                     {/if}
                   {/if}
-                {/if}
-              </div>
-            {/each}
-          {/each}
-        </div>
-      </div>
-    </div>
-
-    {#if isMobileDevice}
-      {#if activeClue}
-        <MobileControls
-          clue={activeClue}
-          onPlay={playClue}
-          {isPlaying}
-          {playingClue}
-          onStopAudio={stopAudio}
-          {words}
-          onKeyPress={handleVirtualKeyPress}
-        />
-      {/if}
-    {/if}
-    {#if !isMobileDevice}
-      <!-- Clue list container -->
-      <div class="w-full md:w-64 md:mt-0 mt-4">
-        <!-- Across Clues -->
-        <div>
-          <h2
-            class="text-xl font-bold mb-2"
-            style="color: {isDark ? 'white' : 'black'}"
-          >
-            Across
-          </h2>
-          <div class="space-y-1">
-            {#each acrossClues as clue}
-              <div
-                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
-                style="background-color: {activeClue &&
-                activeClue.startX === clue.startX &&
-                activeClue.startY === clue.startY &&
-                activeClue.direction === clue.direction
-                  ? isDark
-                    ? '#f3f3f3'
-                    : 'white'
-                  : 'transparent'}"
-                onclick={() => {
-                  if (isPlaying) stopAudio();
-                  const event = new CustomEvent("navigationrequest", {
-                    detail: {
-                      startX: clue.startX,
-                      startY: clue.startY,
-                      direction: "across",
-                    },
-                  });
-                  document.dispatchEvent(event);
-                }}
-              >
-                <div
-                  class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
-                  style="background-color: {clue.color};"
-                >
-                  <span class="font-semibold text-lg">{clue.number}A</span>
                 </div>
-                <span
-                  class="text-md flex-1 ml-2 truncate"
-                  style="color: {activeClue &&
-                  activeClue.startX === clue.startX &&
-                  activeClue.startY === clue.startY &&
-                  activeClue.direction === clue.direction
-                    ? 'black'
-                    : isDark
-                      ? 'white'
-                      : 'black'}"
-                >
-                  {clue.textClue}
-                </span>
-              </div>
+              {/each}
             {/each}
           </div>
         </div>
+      </div>
 
-        <!-- Down Clues -->
-        <div class="mt-4">
-          <h3
-            class="text-xl font-bold mb-2"
-            style="color: {isDark ? 'white' : 'black'}"
-          >
-            Down
-          </h3>
-          <div class="space-y-1">
-            {#each downClues as clue}
-              <div
-                class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
-                style="background-color: {activeClue &&
-                activeClue.startX === clue.startX &&
-                activeClue.startY === clue.startY &&
-                activeClue.direction === clue.direction
-                  ? isDark
-                    ? '#f3f3f3'
-                    : 'white'
-                  : 'transparent'}"
-                onclick={() => {
-                  if (isPlaying) stopAudio();
-                  const event = new CustomEvent("navigationrequest", {
-                    detail: {
-                      startX: clue.startX,
-                      startY: clue.startY,
-                      direction: "down",
-                    },
-                  });
-                  document.dispatchEvent(event);
-                }}
-              >
+      {#if isMobileDevice}
+        {#if activeClue}
+          <MobileControls
+            clue={activeClue}
+            onPlay={playClue}
+            {isPlaying}
+            {playingClue}
+            onStopAudio={stopAudio}
+            {words}
+            onKeyPress={handleVirtualKeyPress}
+          />
+        {/if}
+      {/if}
+      {#if !isMobileDevice}
+        <!-- Clue list container -->
+        <div class="w-full md:w-64 md:mt-0 mt-4">
+          <!-- Across Clues -->
+          <div>
+            <h2
+              class="text-xl font-bold mb-2"
+              style="color: {isDark ? 'white' : 'black'}"
+            >
+              Across
+            </h2>
+            <div class="space-y-1">
+              {#each acrossClues as clue}
                 <div
-                  class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
-                  style="background-color: {clue.color};"
-                >
-                  <span class="font-semibold text-lg">{clue.number}D</span>
-                </div>
-                <span
-                  class="text-md flex-1 ml-2 truncate"
-                  style="color: {activeClue &&
+                  class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
+                  style="background-color: {activeClue &&
                   activeClue.startX === clue.startX &&
                   activeClue.startY === clue.startY &&
                   activeClue.direction === clue.direction
-                    ? 'black'
-                    : isDark
-                      ? 'white'
-                      : 'black'}"
+                    ? isDark
+                      ? '#f3f3f3'
+                      : 'white'
+                    : 'transparent'}"
+                  onclick={() => {
+                    if (isPlaying) stopAudio();
+                    const event = new CustomEvent("navigationrequest", {
+                      detail: {
+                        startX: clue.startX,
+                        startY: clue.startY,
+                        direction: "across",
+                      },
+                    });
+                    document.dispatchEvent(event);
+                  }}
                 >
-                  {clue.textClue}
-                </span>
-              </div>
-            {/each}
+                  <div
+                    class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
+                    style="background-color: {clue.color};"
+                  >
+                    <span class="font-semibold text-lg">{clue.number}A</span>
+                  </div>
+                  <span
+                    class="text-md flex-1 ml-2 truncate"
+                    style="color: {activeClue &&
+                    activeClue.startX === clue.startX &&
+                    activeClue.startY === clue.startY &&
+                    activeClue.direction === clue.direction
+                      ? 'black'
+                      : isDark
+                        ? 'white'
+                        : 'black'}"
+                  >
+                    {clue.textClue}
+                  </span>
+                </div>
+              {/each}
+            </div>
+          </div>
+
+          <!-- Down Clues -->
+          <div class="mt-4">
+            <h3
+              class="text-xl font-bold mb-2"
+              style="color: {isDark ? 'white' : 'black'}"
+            >
+              Down
+            </h3>
+            <div class="space-y-1">
+              {#each downClues as clue}
+                <div
+                  class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
+                  style="background-color: {activeClue &&
+                  activeClue.startX === clue.startX &&
+                  activeClue.startY === clue.startY &&
+                  activeClue.direction === clue.direction
+                    ? isDark
+                      ? '#f3f3f3'
+                      : 'white'
+                    : 'transparent'}"
+                  onclick={() => {
+                    if (isPlaying) stopAudio();
+                    const event = new CustomEvent("navigationrequest", {
+                      detail: {
+                        startX: clue.startX,
+                        startY: clue.startY,
+                        direction: "down",
+                      },
+                    });
+                    document.dispatchEvent(event);
+                  }}
+                >
+                  <div
+                    class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
+                    style="background-color: {clue.color};"
+                  >
+                    <span class="font-semibold text-lg">{clue.number}D</span>
+                  </div>
+                  <span
+                    class="text-md flex-1 ml-2 truncate"
+                    style="color: {activeClue &&
+                    activeClue.startX === clue.startX &&
+                    activeClue.startY === clue.startY &&
+                    activeClue.direction === clue.direction
+                      ? 'black'
+                      : isDark
+                        ? 'white'
+                        : 'black'}"
+                  >
+                    {clue.textClue}
+                  </span>
+                </div>
+              {/each}
+            </div>
+          </div>
+        </div>
+      {/if}
+    </div>
+    {#if !isMobileDevice && activeClue}
+      <div class="hidden md:block w-full mx-auto mt-4">
+        <div
+          class="flex items-center justify-between h-13 rounded-md shadow-lg"
+          style="background-color: {isDark ? '#f3f3f3' || 'white' : 'white'}"
+        >
+          <!-- Left Section with clue info -->
+          <div class="flex items-center flex-1 pl-4">
+            <div
+              class="flex items-center justify-center rounded px-3 py-1"
+              style="background-color: {activeClue.color};"
+            >
+              <span class="text-xl font-semibold">
+                {activeClue.number}{activeClue.direction
+                  .charAt(0)
+                  .toUpperCase()}
+              </span>
+            </div>
+            <span class="text-xl text-black ml-3">{activeClue.textClue}</span>
+          </div>
+
+          <!-- Right Section with controls -->
+          <div class="flex items-center gap-4 pr-4">
+            <!-- Skip Previous Button -->
+            <button
+              class="p-2"
+              onclick={() => {
+                if (isPlaying) stopAudio();
+                const prevClue = findNextWord(activeClue);
+                const event = new CustomEvent("navigationrequest", {
+                  detail: {
+                    startX: prevClue.startX,
+                    startY: prevClue.startY,
+                    direction: prevClue.direction,
+                  },
+                });
+                document.dispatchEvent(event);
+              }}
+              aria-label="Previous clue"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z" />
+                <rect x="12" y="7.24" width="2" height="9.52" />
+              </svg>
+            </button>
+
+            <!-- Play/Pause Button -->
+            <button
+              onclick={() => playClue(activeClue)}
+              class="flex items-center justify-center"
+              disabled={!widgetReadyStatus[
+                `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
+              ] ||
+                isWidgetUnavailable(
+                  `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
+                )}
+            >
+              {#if isPlaying && playingClue === activeClue}
+                <!-- Pause icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 20 20"
+                  height="48px"
+                  viewBox="0 0 20 20"
+                  width="48px"
+                  fill="black"
+                >
+                  <g><rect fill="none" height="20" width="20" /></g>
+                  <g>
+                    <path
+                      d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
+                    />
+                  </g>
+                </svg>
+              {:else if !widgetReadyStatus[`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`]}
+                <!-- Loading spinner (also shown if unavailable but not ready yet) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48px"
+                  height="48px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="animate-spin"
+                >
+                  <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+                  <path
+                    d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
+                  />
+                </svg>
+              {:else if isWidgetUnavailable(`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`)}
+                <!-- Unavailable Icon (e.g., a muted speaker or cross) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="48px"
+                  viewBox="0 0 24 24"
+                  width="48px"
+                  fill="#cccccc"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
+                  />
+                </svg>
+              {:else}
+                <!-- Play icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 20 20"
+                  height="48px"
+                  viewBox="0 0 20 20"
+                  width="48px"
+                  fill="black"
+                >
+                  <g><rect fill="none" height="20" width="20" /></g>
+                  <g>
+                    <path
+                      d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
+                    />
+                  </g>
+                </svg>
+              {/if}
+            </button>
+
+            <!-- Skip Next Button -->
+            <button
+              class="p-2"
+              onclick={() => {
+                if (isPlaying) stopAudio();
+                const nextClue = findNextWord(activeClue);
+                const event = new CustomEvent("navigationrequest", {
+                  detail: {
+                    startX: nextClue.startX,
+                    startY: nextClue.startY,
+                    direction: nextClue.direction,
+                  },
+                });
+                document.dispatchEvent(event);
+              }}
+              aria-label="Next clue"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z" />
+                <rect x="10" y="7.24" width="2" height="9.52" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
     {/if}
   </div>
-  {#if !isMobileDevice && activeClue}
-    <div class="hidden md:block w-full mx-auto mt-4">
-      <div
-        class="flex items-center justify-between h-13 rounded-md shadow-lg"
-        style="background-color: {isDark ? '#f3f3f3' || 'white' : 'white'}"
-      >
-        <!-- Left Section with clue info -->
-        <div class="flex items-center flex-1 pl-4">
-          <div
-            class="flex items-center justify-center rounded px-3 py-1"
-            style="background-color: {activeClue.color};"
-          >
-            <span class="text-xl font-semibold">
-              {activeClue.number}{activeClue.direction.charAt(0).toUpperCase()}
-            </span>
-          </div>
-          <span class="text-xl text-black ml-3">{activeClue.textClue}</span>
-        </div>
-
-        <!-- Right Section with controls -->
-        <div class="flex items-center gap-4 pr-4">
-          <!-- Skip Previous Button -->
-          <button
-            class="p-2"
-            onclick={() => {
-              if (isPlaying) stopAudio();
-              const prevClue = findNextWord(activeClue);
-              const event = new CustomEvent("navigationrequest", {
-                detail: {
-                  startX: prevClue.startX,
-                  startY: prevClue.startY,
-                  direction: prevClue.direction,
-                },
-              });
-              document.dispatchEvent(event);
-            }}
-            aria-label="Previous clue"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M20.24 7.24V16.76L13.41 12L20.24 7.24Z" />
-              <rect x="12" y="7.24" width="2" height="9.52" />
-            </svg>
-          </button>
-
-          <!-- Play/Pause Button -->
-          <button
-            onclick={() => playClue(activeClue)}
-            class="flex items-center justify-center"
-            disabled={!widgetReadyStatus[
-              `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
-            ] ||
-              isWidgetUnavailable(
-                `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
-              )}
-          >
-            {#if isPlaying && playingClue === activeClue}
-              <!-- Pause icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 20 20"
-                height="48px"
-                viewBox="0 0 20 20"
-                width="48px"
-                fill="black"
-              >
-                <g><rect fill="none" height="20" width="20" /></g>
-                <g>
-                  <path
-                    d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8.25,13L8.25,13c-0.41,0-0.75-0.34-0.75-0.75v-4.5 C7.5,7.34,7.84,7,8.25,7h0C8.66,7,9,7.34,9,7.75v4.5C9,12.66,8.66,13,8.25,13z M11.75,13L11.75,13C11.34,13,11,12.66,11,12.25v-4.5 C11,7.34,11.34,7,11.75,7h0c0.41,0,0.75,0.34,0.75,0.75v4.5C12.5,12.66,12.16,13,11.75,13z"
-                  />
-                </g>
-              </svg>
-            {:else if !widgetReadyStatus[`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`]}
-              <!-- Loading spinner (also shown if unavailable but not ready yet) -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="48px"
-                height="48px"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="animate-spin"
-              >
-                <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
-                <path
-                  d="M12 2C6.47715 2 2 6.47715 2 12C2 12.6343 2.06115 13.2554 2.17856 13.8577"
-                />
-              </svg>
-            {:else if isWidgetUnavailable(`${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`)}
-              <!-- Unavailable Icon (e.g., a muted speaker or cross) -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="48px"
-                viewBox="0 0 24 24"
-                width="48px"
-                fill="#cccccc"
-              >
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
-                />
-              </svg>
-            {:else}
-              <!-- Play icon -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 20 20"
-                height="48px"
-                viewBox="0 0 20 20"
-                width="48px"
-                fill="black"
-              >
-                <g><rect fill="none" height="20" width="20" /></g>
-                <g>
-                  <path
-                    d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                  />
-                </g>
-              </svg>
-            {/if}
-          </button>
-
-          <!-- Skip Next Button -->
-          <button
-            class="p-2"
-            onclick={() => {
-              if (isPlaying) stopAudio();
-              const nextClue = findNextWord(activeClue);
-              const event = new CustomEvent("navigationrequest", {
-                detail: {
-                  startX: nextClue.startX,
-                  startY: nextClue.startY,
-                  direction: nextClue.direction,
-                },
-              });
-              document.dispatchEvent(event);
-            }}
-            aria-label="Next clue"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M3.76 7.24V16.76L10.59 12L3.76 7.24Z" />
-              <rect x="10" y="7.24" width="2" height="9.52" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  {/if}
-</div>
+{/if}
 
 {#if showOverlay}
   <ResultOverlay
@@ -2076,34 +2051,6 @@
       onclick={() => (showUnavailableMessage = false)}
       class="mt-2 text-xs underline font-semibold">Dismiss</button
     >
-  </div>
-{/if}
-
-{#if showFallbackNotification}
-  <div
-    class="fixed bottom-16 right-4 md:bottom-4 md:left-4 md:right-auto bg-blue-100 text-blue-700 p-4 rounded shadow-lg z-50 max-w-sm"
-  >
-    <p class="text-sm">
-      Today's puzzle couldn't be found, so we've given you an old one. Refresh
-      the page to get the latest puzzles and play todays!
-    </p>
-    <p class="text-sm mt-1">
-      Please refresh the page to get the latest puzzles.
-    </p>
-    <div class="mt-3 flex gap-3">
-      <button
-        onclick={() => window.location.reload()}
-        class="text-xs bg-blue-500 hover:bg-blue-600 text-white font-semibold py-1 px-3 rounded"
-      >
-        Refresh Page
-      </button>
-      <button
-        onclick={() => (showFallbackNotification = false)}
-        class="text-xs text-blue-600 hover:text-blue-800 font-semibold underline"
-      >
-        Dismiss
-      </button>
-    </div>
   </div>
 {/if}
 
