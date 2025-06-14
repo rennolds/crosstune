@@ -846,8 +846,7 @@
         // --- GA Event ---
         if (typeof gtag === "function") {
           gtag("event", "reveal_word", {
-            event_category: "gameplay",
-            event_label: activeWord.word,
+            word: activeWord.word,
           });
         }
         // --- End GA Event ---
