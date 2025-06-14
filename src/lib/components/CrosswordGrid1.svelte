@@ -847,7 +847,7 @@
         if (typeof gtag === "function") {
           gtag("event", "reveal_word", {
             event_category: "gameplay",
-            event_label: `${activeWord.number}${activeWord.direction.charAt(0).toUpperCase()}`,
+            event_label: activeWord.word,
           });
         }
         // --- End GA Event ---
