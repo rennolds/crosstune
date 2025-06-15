@@ -4702,5 +4702,203 @@
         "audioDuration": 19
       }
     ]
+  },
+  "2025-06-15": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "WORK",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "255769417",
+        "startAt": "0:15",
+        "audioDuration": 7
+      },
+      {
+        "word": "PUK",
+        "startX": 6,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Acronym of this song title",
+        "audioUrl": "256168961",
+        "startAt": "0:51.5",
+        "audioDuration": 5
+      },
+      {
+        "word": "CHEERLEADER",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256767919",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "NF",
+        "startX": 10,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "341199320",
+        "startAt": "0:29",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "HALO",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "256526301",
+        "startAt": "0:10",
+        "audioDuration": 16.75
+      },
+      {
+        "word": "KNEEDEEP",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "255858653",
+        "startAt": "0:43.5",
+        "audioDuration": 7
+      },
+      {
+        "word": "UNCLEPHIL",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Who J. Cole first shouts out on this track",
+        "audioUrl": "1011563983",
+        "startAt": "0:53",
+        "audioDuration": 8
+      },
+      {
+        "word": "DEMONS",
+        "startX": 10,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "271224938",
+        "startAt": "0:36",
+        "audioDuration": 9
+      }
+    ]
+  },
+  "2025-06-16": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "purple",
+    "words": [
+      {
+        "word": "THERAPIST",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Olivia helped her ex find a _________",
+        "audioUrl": "1048163956",
+        "startAt": "0:22",
+        "audioDuration": 18.5
+      },
+      {
+        "word": "NICKI",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name",
+        "audioUrl": "1685291844",
+        "startAt": "0:14",
+        "audioDuration": 16
+      },
+      {
+        "word": "CIGARETTE",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "A word in this song title",
+        "audioUrl": "112765370",
+        "startAt": "0:06",
+        "audioDuration": 14
+      },
+      {
+        "word": "BLACKKEYS",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name, drop \\\"the\\\"",
+        "audioUrl": "255881202",
+        "startAt": "1:02",
+        "audioDuration": 16.5
+      },
+      {
+        "word": "PRESSURE",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "A word in this song title",
+        "audioUrl": "284353702",
+        "startAt": "0:00",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "LUCKBABE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "1793155465",
+        "startAt": "0:20",
+        "audioDuration": 11
+      },
+      {
+        "word": "ALICIAKEYS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Featured artist on the chorus of this track",
+        "audioUrl": "279766910",
+        "startAt": "0:00",
+        "audioDuration": 10.2
+      },
+      {
+        "word": "INHERRE",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last two words of this song title (mind the spelling!)",
+        "audioUrl": "255960711",
+        "startAt": "0:55",
+        "audioDuration": 10.75
+      }
+    ]
   }
 }
