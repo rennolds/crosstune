@@ -4960,7 +4960,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Song title",
+        "textClue": "Song title (also an actor)",
         "audioUrl": "444288303",
         "startAt": "0:03",
         "audioDuration": 8.5
