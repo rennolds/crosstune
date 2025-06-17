@@ -4900,5 +4900,104 @@
         "audioDuration": 10.75
       }
     ]
+  },
+  "2025-06-17": {
+    "title": "",
+    "version": "1.0.2",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JELLYROLL",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "1389272428",
+        "startAt": "0:19",
+        "audioDuration": 7
+      },
+      {
+        "word": "IBIZA",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Location in song title",
+        "audioUrl": "255822981",
+        "startAt": "0:09.5",
+        "audioDuration": 19.1
+      },
+      {
+        "word": "ONEREPUBLIC",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "1266866860",
+        "startAt": "0:20",
+        "audioDuration": 7
+      },
+      {
+        "word": "HERO",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "255882260",
+        "startAt": "0:10",
+        "audioDuration": 13
+      },
+      {
+        "word": "JACKIECHAN",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "444288303",
+        "startAt": "0:03",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "STEVIE",
+        "startX": 4,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": "259058842",
+        "startAt": "0:23.5",
+        "audioDuration": 8
+      },
+      {
+        "word": "BUBBLY",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "252465788",
+        "startAt": "0:16",
+        "audioDuration": 7
+      },
+      {
+        "word": "MINE",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "346585632",
+        "startAt": "0:27",
+        "audioDuration": 7
+      }
+    ]
   }
 }
