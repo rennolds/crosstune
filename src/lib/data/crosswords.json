@@ -5714,5 +5714,105 @@
         "audioDuration": 10.75
       }
     ]
+  },
+
+  "2025-06-25": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CUFF",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First word of this song title",
+        "audioUrl": "1313216011",
+        "startAt": "1:08",
+        "audioDuration": 16.6
+      },
+      {
+        "word": "ROXANNE",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title, also a girls name",
+        "audioUrl": "252610842",
+        "startAt": "0:20",
+        "audioDuration": 6.7
+      },
+      {
+        "word": "DIDBALLET",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Complete the lyric: He was a punk, she",
+        "audioUrl": "256037743",
+        "startAt": "0:07",
+        "audioDuration": 15.15
+      },
+      {
+        "word": "STARBOY",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "284056452",
+        "startAt": "0:36.5",
+        "audioDuration": 11
+      },
+      {
+        "word": "CLARITY",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "260999200",
+        "startAt": "0:00",
+        "audioDuration": 16
+      },
+      {
+        "word": "FUN",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": "231862397",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "SKRILLEX",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "45719017",
+        "startAt": "0:06",
+        "audioDuration": 15.4
+      },
+      {
+        "word": "MANEATER",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1571114044",
+        "startAt": "0:52",
+        "audioDuration": 30
+      }
+    ]
   }
 }
