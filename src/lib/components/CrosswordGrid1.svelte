@@ -1124,20 +1124,22 @@
 
             // Check if the current word is now complete
             if (currentWord && isWordComplete(currentWord)) {
-              // Find and move to the next word
-              const nextWord = findNextWord(currentWord);
-              if (isPlaying) {
+              // Find and move to the next unfilled word
+              const nextWord = findNextUnfilledWord(x, y, currentDirection);
+              if (nextWord && isPlaying) {
                 stopAudio();
               }
-              focusedX = nextWord.startX;
-              focusedY = nextWord.startY;
-              currentDirection = nextWord.direction;
+              if (nextWord) {
+                focusedX = nextWord.startX;
+                focusedY = nextWord.startY;
+                currentDirection = nextWord.direction;
 
-              // Focus the input at the new position
-              const nextInput = document.querySelector(
-                `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
-              );
-              nextInput?.focus();
+                // Focus the input at the new position
+                const nextInput = document.querySelector(
+                  `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
+                );
+                nextInput?.focus();
+              }
             } else {
               // Regular movement within the word
               if (currentDirection === "across") {
