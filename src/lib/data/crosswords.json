@@ -5513,7 +5513,7 @@
         "textClue": "This song title, without the repeating",
         "audioUrl": "253510882",
         "startAt": "0:00",
-        "audioDuration": 8.62
+        "audioDuration": 8.7
       },
       {
         "word": "BELOVED",
@@ -5602,6 +5602,116 @@
         "audioUrl": "2022404597",
         "startAt": "0:37",
         "audioDuration": 15.75
+      }
+    ]
+  },
+  "2025-06-24": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "HEATWAVES",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "828639601",
+        "startAt": "0:17.5",
+        "audioDuration": 23.5
+      },
+      {
+        "word": "LOST",
+        "startX": 6,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title; also shares a name with a famous TV show",
+        "audioUrl": "1647150384",
+        "startAt": "1:56",
+        "audioDuration": 16
+      },
+      {
+        "word": "ELECTRICFEEL",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "257761786",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "LONELY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "255878019",
+        "startAt": "0:40.5",
+        "audioDuration": 13
+      },
+      {
+        "word": "HAPPIER",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Name of this Marshmello–Bastille collaboration",
+        "audioUrl": "486671055",
+        "startAt": "1:35.5",
+        "audioDuration": 19.75
+      },
+      {
+        "word": "THESIGN",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "230451035",
+        "startAt": "1:59.25",
+        "audioDuration": 10.25
+      },
+      {
+        "word": "STAN",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Name of the famous rap song that sampled this track",
+        "audioUrl": "137575980",
+        "startAt": "0:32",
+        "audioDuration": 24.5
+      },
+      {
+        "word": "BUTTERCUP",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last word of this song title",
+        "audioUrl": "256209220",
+        "startAt": "1:19.12",
+        "audioDuration": 19
+      },
+      {
+        "word": "MOVEALONG",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "259126025",
+        "startAt": "0:07",
+        "audioDuration": 10.75
       }
     ]
   }
