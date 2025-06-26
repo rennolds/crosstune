@@ -5715,7 +5715,6 @@
       }
     ]
   },
-
   "2025-06-25": {
     "title": "",
     "version": "1.0.0",
@@ -5812,6 +5811,105 @@
         "audioUrl": "1571114044",
         "startAt": "0:52",
         "audioDuration": 30
+      }
+    ]
+  },
+  "2025-06-26": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SUSPICIOUS",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First word of this song title",
+        "audioUrl": "259004287",
+        "startAt": "0:08",
+        "audioDuration": 19.3
+      },
+      {
+        "word": "POSNER",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": "528789177",
+        "startAt": "0:00",
+        "audioDuration": 14.5
+      },
+      {
+        "word": "AMERICAN",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "First word of this song title",
+        "audioUrl": "341881983",
+        "startAt": "0:16",
+        "audioDuration": 16.2
+      },
+      {
+        "word": "HALO",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "256526301",
+        "startAt": "0:12",
+        "audioDuration": 12.5
+      },
+      {
+        "word": "SHAPE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of this song title",
+        "audioUrl": "301161123",
+        "startAt": "0:00",
+        "audioDuration": 9
+      },
+      {
+        "word": "ANIMAL",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word of this song title",
+        "audioUrl": "257061431",
+        "startAt": "0:12",
+        "audioDuration": 16
+      },
+      {
+        "word": "BLUE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Color in this song title",
+        "audioUrl": "271217847",
+        "startAt": "0:10",
+        "audioDuration": 13.65
+      },
+      {
+        "word": "SZA",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "655177583",
+        "startAt": "0:56.5",
+        "audioDuration": 29.5
       }
     ]
   }
