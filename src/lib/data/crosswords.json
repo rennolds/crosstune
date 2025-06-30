@@ -6319,5 +6319,214 @@
         "audioDuration": 16.3
       }
     ]
+  },
+  "2025-04-01": {
+    "title": "Dance Pop",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CALVINHARRIS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "143553285",
+        "startAt": "1:27",
+        "audioDuration": 14
+      },
+      {
+        "word": "BRITNEY",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name",
+        "audioUrl": "112436777",
+        "startAt": "0:12",
+        "audioDuration": 11
+      },
+      {
+        "word": "HEAD",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Last word of song title",
+        "audioUrl": "256059800",
+        "startAt": "1:45",
+        "audioDuration": 19
+      },
+      {
+        "word": "DUA",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": "1521663877",
+        "startAt": "0:40.2",
+        "audioDuration": 22
+      },
+      {
+        "word": "ABBA",
+        "startX": 0,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "253187333",
+        "startAt": "0:16",
+        "audioDuration": 13.5
+      },
+      {
+        "word": "VONDUTCH",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title of this BRAT summer hit",
+        "audioUrl": "1753913496",
+        "startAt": "1:33",
+        "audioDuration": 22
+      },
+      {
+        "word": "HAYLEY",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First name of the featured artist",
+        "audioUrl": "260999187",
+        "startAt": "0:45.5",
+        "audioDuration": 14.4
+      },
+      {
+        "word": "RUSH",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1564144813",
+        "startAt": "0:44",
+        "audioDuration": 17
+      },
+      {
+        "word": "SUGAR",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255894453",
+        "startAt": "0:15",
+        "audioDuration": 13
+      }
+    ]
+  },
+  "2025-07-02": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "FEBRUARY",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The month referenced in this tracks chorus",
+        "audioUrl": "273792931",
+        "startAt": "0:52.45",
+        "audioDuration": 16
+      },
+      {
+        "word": "MAGIC",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Second word of this song title",
+        "audioUrl": "286535849",
+        "startAt": "0:20.5",
+        "audioDuration": 11.5
+      },
+      {
+        "word": "WITHYOU",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The last two words of this song title",
+        "audioUrl": "167444670",
+        "startAt": "0:08",
+        "audioDuration": 16.5
+      },
+      {
+        "word": "PINKFLOYD",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Name of this British band",
+        "audioUrl": "255745394",
+        "startAt": "0:10",
+        "audioDuration": 16.4
+      },
+      {
+        "word": "BONJOVI",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Band/frontman name",
+        "audioUrl": "252909349",
+        "startAt": "0:00",
+        "audioDuration": 11
+      },
+      {
+        "word": "BLANKSPACE",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "275940522",
+        "startAt": "0:00",
+        "audioDuration": 10.4
+      },
+      {
+        "word": "THESUN",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "256245852",
+        "startAt": "0:00",
+        "audioDuration": 16.7
+      },
+      {
+        "word": "RIGHTROUND",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "256209444",
+        "startAt": "0:46.5",
+        "audioDuration": 14.5
+      }
+    ]
   }
 }
