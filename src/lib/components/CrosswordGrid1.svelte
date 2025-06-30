@@ -796,11 +796,14 @@
   // Function to reveal the currently focused cell
   function revealSquare() {
     if (!getIsCorrect()) {
+      // Get the correct letter from the current word
+      const activeWord = findActiveWord();
+      
       // --- GA Event ---
       if (typeof gtag === "function") {
         gtag("event", "reveal_square", {
           event_category: "gameplay",
-          event_label: `${focusedX},${focusedY}`,
+          event_label: activeWord ? activeWord.word : `${focusedX},${focusedY}`,
         });
       }
       // --- End GA Event ---
@@ -809,8 +812,6 @@
       const y = focusedY;
       const cellKey = `${x},${y}`;
 
-      // Get the correct letter from the current word
-      const activeWord = findActiveWord();
       if (activeWord) {
         const letterIndex =
           activeWord.direction === "across"
