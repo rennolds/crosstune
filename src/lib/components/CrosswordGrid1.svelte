@@ -798,7 +798,7 @@
     if (!getIsCorrect()) {
       // Get the correct letter from the current word
       const activeWord = findActiveWord();
-      
+
       // --- GA Event ---
       if (typeof gtag === "function") {
         gtag("event", "reveal_square", {

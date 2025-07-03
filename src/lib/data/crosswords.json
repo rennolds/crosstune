@@ -6528,5 +6528,105 @@
         "audioDuration": 14.5
       }
     ]
+  },
+
+  "2025-07-03": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "KEEF",
+        "startX": 6,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last word of artist stage name",
+        "audioUrl": "71476488",
+        "startAt": "0:27",
+        "audioDuration": 13
+      },
+      {
+        "word": "RADIOACTIVE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "453755493",
+        "startAt": "0:28",
+        "audioDuration": 13
+      },
+      {
+        "word": "CRAZY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "The \"kind of rap\" in this track",
+        "audioUrl": "1370060752",
+        "startAt": "0:33",
+        "audioDuration": 13
+      },
+      {
+        "word": "MADONNA",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "10594383",
+        "startAt": "0:46",
+        "audioDuration": 9
+      },
+      {
+        "word": "ROAR",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "115637334",
+        "startAt": "0:00",
+        "audioDuration": 13.25
+      },
+      {
+        "word": "LICENSE",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Second word of this song title",
+        "audioUrl": "957446587",
+        "startAt": "0:11.5",
+        "audioDuration": 17
+      },
+      {
+        "word": "BEAUTIFUL",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last word of this song title",
+        "audioUrl": "255958498",
+        "startAt": "0:00",
+        "audioDuration": 22
+      },
+      {
+        "word": "LIKETHAT",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1781131074",
+        "startAt": "1:30",
+        "audioDuration": 19.5
+      }
+    ]
   }
 }
