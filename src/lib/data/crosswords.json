@@ -6826,5 +6826,104 @@
         "audioDuration": 7
       }
     ]
+  },
+  "2025-07-06": {
+    "title": "Divorced Dad Rock",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "EVENFLOW",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title, or a \"steady stream\"",
+        "audioUrl": "710006401",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "STOP",
+        "startX": 8,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Can't ____",
+        "audioUrl": "273203300",
+        "startAt": "0:22",
+        "audioDuration": 21
+      },
+      {
+        "word": "CREED",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Band name, also a statement of belief",
+        "audioUrl": "1851533283",
+        "startAt": "1:12.5",
+        "audioDuration": 21
+      },
+      {
+        "word": "PARALYZER",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "6221233",
+        "startAt": "0:51",
+        "audioDuration": 18
+      },
+      {
+        "word": "NIRVANA",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Band name",
+        "audioUrl": "258954148",
+        "startAt": "0:52",
+        "audioDuration": 16
+      },
+      {
+        "word": "CHAINS",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Alice in ____",
+        "audioUrl": "253572851",
+        "startAt": "0:17",
+        "audioDuration": 11
+      },
+      {
+        "word": "NICKELBACK",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": "256079866",
+        "startAt": "0:00",
+        "audioDuration": 14
+      },
+      {
+        "word": "LAST",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of this song title",
+        "audioUrl": "256141460",
+        "startAt": "0:00",
+        "audioDuration": 7.5
+      }
+    ]
   }
 }
