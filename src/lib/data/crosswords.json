@@ -14,7 +14,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "First two words of this song title",
+        "textClue": "____ ____ Love",
         "audioUrl": "1301020471",
         "startAt": "0:02",
         "audioDuration": 8
@@ -42,14 +42,14 @@
         "audioDuration": 4
       },
       {
-        "word": "INDEPENT",
+        "word": "LISTEN",
         "startX": 2,
         "startY": 8,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "Second word in this song title",
-        "audioUrl": "257096844",
-        "startAt": "1:09",
+        "textClue": "What do the Doobie Brothers want you to do to the music?",
+        "audioUrl": "213950895",
+        "startAt": "0:26",
         "audioDuration": 8
       },
       {
@@ -91,7 +91,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Number in this artist name",
+        "textClue": "Number in this artist's name",
         "audioUrl": "202364187",
         "startAt": "0:17",
         "audioDuration": 7
