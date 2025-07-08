@@ -1,5 +1,4 @@
 {
-  
   "2025-03-07": {
     "title": "",
     "version": "1.0.0",
@@ -17,8 +16,8 @@
         "color": "#FE9C9C",
         "textClue": "First two words of this song title",
         "audioUrl": "1301020471",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "0:02",
+        "audioDuration": 8
       },
       {
         "word": "INMYHEAD",
@@ -28,8 +27,8 @@
         "color": "#28D66A",
         "textClue": "Song title",
         "audioUrl": "12804665",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "0:09",
+        "audioDuration": 7
       },
       {
         "word": "TIME",
@@ -39,8 +38,8 @@
         "color": "#FFCEFD",
         "textClue": "Word that appears twice in this song title",
         "audioUrl": "422881566",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "1:14.5",
+        "audioDuration": 4
       },
       {
         "word": "INDEPENT",
@@ -50,8 +49,8 @@
         "color": "#FF5B5E",
         "textClue": "Second word in this song title",
         "audioUrl": "257096844",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "1:09",
+        "audioDuration": 8
       },
       {
         "word": "PAPARAZZI",
@@ -61,8 +60,8 @@
         "color": "#568EFF",
         "textClue": "Song title",
         "audioUrl": "255908043",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "0:40",
+        "audioDuration": 5.5
       },
       {
         "word": "SUNSHINE",
@@ -72,8 +71,8 @@
         "color": "#FFB34B",
         "textClue": "What is missing when she's gone?",
         "audioUrl": "253615025",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "0:14",
+        "audioDuration": 7.5
       },
       {
         "word": "KYLIE",
@@ -83,8 +82,8 @@
         "color": "#00FFFF",
         "textClue": "Artist first name",
         "audioUrl": "256059800",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "0:27",
+        "audioDuration": 8
       },
       {
         "word": "TWENTY",
@@ -94,8 +93,8 @@
         "color": "#FE9C9C",
         "textClue": "Number in this artist name",
         "audioUrl": "202364187",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "startAt": "0:17",
+        "audioDuration": 7
       }
     ]
   },
