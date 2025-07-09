@@ -7123,5 +7123,115 @@
         "audioDuration": 7
       }
     ]
+  },
+  "2025-07-09": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ZACHBRYAN",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "1247116825",
+        "startAt": "1:29",
+        "audioDuration": 7
+      },
+      {
+        "word": "FLEETWOODMAC",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "254399552",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "NEVER",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Word that appears twice in this song title",
+        "audioUrl": "431031276",
+        "startAt": "0:43",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "LIVIN",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word of this song title",
+        "audioUrl": "16737972",
+        "startAt": "0:35",
+        "audioDuration": 8
+      },
+      {
+        "word": "COMEONOVER",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What does Christina Aguilera want you to do?",
+        "audioUrl": "289451172",
+        "startAt": "0:10",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "BROWN",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Color in this band's name",
+        "audioUrl": "111128019",
+        "startAt": "0:58",
+        "audioDuration": 8
+      },
+      {
+        "word": "YOLO",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "What is 'The Motto' of Drake in this song's hook?",
+        "audioUrl": "257461404",
+        "startAt": "0:19",
+        "audioDuration": 9
+      },
+      {
+        "word": "MILLION",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Dollar amount in this song title",
+        "audioUrl": "1806996909",
+        "startAt": "0:25",
+        "audioDuration": 7
+      },
+      {
+        "word": "ICECUBE",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name (a founding member of N.W.A.)",
+        "audioUrl": "1303800163",
+        "startAt": "0:19",
+        "audioDuration": 8
+      }
+    ]
   }
 }
