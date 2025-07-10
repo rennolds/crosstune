@@ -7293,7 +7293,7 @@
         "startY": 8,
         "direction": "across",
         "color": "#568EFF",
-        "textClue": "Name of this female rap duo (also how I like my eggs?)",
+        "textClue": "Name of this female rap group (also my fav condiments)",
         "audioUrl": "253183119",
         "startAt": "0:57.5",
         "audioDuration": 7.5
@@ -7305,8 +7305,8 @@
         "direction": "down",
         "color": "#FFB34B",
         "textClue": "What's it all about in this song?",
-        "audioUrl": "255821207",
-        "startAt": "0:41",
+        "audioUrl": "254082101",
+        "startAt": "0:20",
         "audioDuration": 8
       },
       {
@@ -7315,7 +7315,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "First word in this song title",
+        "textClue": "First word of this song title",
         "audioUrl": "1709664822",
         "startAt": "1:26",
         "audioDuration": 7
@@ -7326,7 +7326,7 @@
         "startY": 2,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Song title",
+        "textClue": "First word of this song title",
         "audioUrl": "879176395",
         "startAt": "1:15",
         "audioDuration": 7
