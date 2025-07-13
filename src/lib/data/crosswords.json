@@ -7558,7 +7558,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Song title",
+        "textClue": "Second word of this song title",
         "audioUrl": "255904811",
         "startAt": "0:17",
         "audioDuration": 7
@@ -7569,7 +7569,7 @@
         "startY": 5,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "Song title",
+        "textClue": "The exact day of the month referenced in this song",
         "audioUrl": "256031283",
         "startAt": "0:00",
         "audioDuration": 21
@@ -7580,7 +7580,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "Song title",
+        "textClue": "Last two words of this song title",
         "audioUrl": "737896987",
         "startAt": "0:16",
         "audioDuration": 9.5
@@ -7602,7 +7602,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Song title",
+        "textClue": "Second word of this song title",
         "audioUrl": "251834916",
         "startAt": "0:12",
         "audioDuration": 12
@@ -7613,7 +7613,7 @@
         "startY": 3,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "Song title",
+        "textClue": "First word of this song title, or, \"what-goes-around-comes-around\"",
         "audioUrl": "1668429972",
         "startAt": "2:54",
         "audioDuration": 16
@@ -7624,7 +7624,7 @@
         "startY": 4,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Song title",
+        "textClue": "First word of this song title",
         "audioUrl": "1297701826",
         "startAt": "0:41.9",
         "audioDuration": 30
