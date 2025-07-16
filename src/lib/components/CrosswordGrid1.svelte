@@ -1530,59 +1530,59 @@
   // Get the current date to display
   const displayDate = $derived(selectedDate || puzzleInfo.dateKey);
 
-  // Effect to handle unavailable widgets
-  $effect(() => {
-    const unavailable = getUnavailableWidgets();
-    if (unavailable.size > 0) {
-      let changed = false;
-      let newlyRevealedCells = new Set(revealedCells);
+  // Effect to handle unavailable widgets - TEMPORARILY DISABLED
+  // $effect(() => {
+  //   const unavailable = getUnavailableWidgets();
+  //   if (unavailable.size > 0) {
+  //     let changed = false;
+  //     let newlyRevealedCells = new Set(revealedCells);
 
-      unavailable.forEach((widgetId) => {
-        const [startX, startY, direction] = widgetId.split(":");
-        const wordToReveal = words.find(
-          (w) =>
-            w.startX == startX &&
-            w.startY == startY &&
-            w.direction === direction
-        );
+  //     unavailable.forEach((widgetId) => {
+  //       const [startX, startY, direction] = widgetId.split(":");
+  //       const wordToReveal = words.find(
+  //         (w) =>
+  //           w.startX == startX &&
+  //           w.startY == startY &&
+  //           w.direction === direction
+  //       );
 
-        if (wordToReveal) {
-          for (let i = 0; i < wordToReveal.word.length; i++) {
-            const x =
-              direction === "across"
-                ? wordToReveal.startX + i
-                : parseInt(startX);
-            const y =
-              direction === "down" ? wordToReveal.startY + i : parseInt(startY);
-            const cellKey = `${x},${y}`;
+  //       if (wordToReveal) {
+  //         for (let i = 0; i < wordToReveal.word.length; i++) {
+  //           const x =
+  //             direction === "across"
+  //               ? wordToReveal.startX + i
+  //               : parseInt(startX);
+  //           const y =
+  //             direction === "down" ? wordToReveal.startY + i : parseInt(startY);
+  //           const cellKey = `${x},${y}`;
 
-            // Skip spaces and already revealed cells
-            if (wordToReveal.word[i] === " " || revealedCells.has(cellKey))
-              continue;
+  //           // Skip spaces and already revealed cells
+  //           if (wordToReveal.word[i] === " " || revealedCells.has(cellKey))
+  //             continue;
 
-            // Update grid with correct letter
-            grid[y][x] = wordToReveal.word[i];
-            newlyRevealedCells.add(cellKey);
-            changed = true;
-          }
-        }
-      });
+  //           // Update grid with correct letter
+  //           grid[y][x] = wordToReveal.word[i];
+  //           newlyRevealedCells.add(cellKey);
+  //           changed = true;
+  //         }
+  //       }
+  //     });
 
-      if (changed) {
-        revealedCells = newlyRevealedCells;
-        if (!isArchiveMode) {
-          saveRevealedCells(revealedCells);
-          saveGridState(grid, puzzle.version);
-          saveUnavailableWidgets(unavailable);
-        }
-        // Show message only once per session if there are unavailable widgets
-        if (!hasShownUnavailableMessage) {
-          showUnavailableMessage = true;
-          hasShownUnavailableMessage = true;
-        }
-      }
-    }
-  });
+  //     if (changed) {
+  //       revealedCells = newlyRevealedCells;
+  //       if (!isArchiveMode) {
+  //         saveRevealedCells(revealedCells);
+  //         saveGridState(grid, puzzle.version);
+  //         saveUnavailableWidgets(unavailable);
+  //       }
+  //       // Show message only once per session if there are unavailable widgets
+  //       if (!hasShownUnavailableMessage) {
+  //         showUnavailableMessage = true;
+  //         hasShownUnavailableMessage = true;
+  //       }
+  //     }
+  //   }
+  // });
 
   // Pass words to parent component when they change
   $effect(() => {
