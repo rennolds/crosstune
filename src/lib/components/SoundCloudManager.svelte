@@ -27,7 +27,24 @@
 
               const onError = (error) => {
                 console.warn(`Widget ${widgetId} failed to load:`, error);
-                markWidgetAsUnavailable(widgetId);
+                // Don't mark as unavailable immediately - give it a chance to work
+                // even if source maps fail to load
+                setTimeout(() => {
+                  // Check if widget is actually functional despite source map errors
+                  try {
+                    widget.isPaused((paused) => {
+                      if (paused !== undefined) {
+                        // Widget is functional, mark as ready
+                        markWidgetAsReady(widgetId);
+                      } else {
+                        // Widget is not functional, mark as unavailable
+                        markWidgetAsUnavailable(widgetId);
+                      }
+                    });
+                  } catch (e) {
+                    markWidgetAsUnavailable(widgetId);
+                  }
+                }, 2000);
                 widget.unbind(SC.Widget.Events.ERROR, onError);
               };
 
@@ -66,7 +83,7 @@
     scrolling="no"
     frameborder="no"
     allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false&visual=false"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false&color=ff5500&auto_play=false"
   >
   </iframe>
 {/each}
