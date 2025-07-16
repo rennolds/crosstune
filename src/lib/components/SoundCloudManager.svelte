@@ -9,15 +9,23 @@
   $effect(() => {
     function initializeWidgets() {
       console.log("Initializing SoundCloud Widgets for current words...");
+      console.log("Words:", words);
+      console.log("SC.Widget available:", !!window.SC?.Widget);
 
       words.forEach((word) => {
         const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
+        console.log(
+          `Setting up widget for ${widgetId}, audioUrl: ${word.audioUrl}`
+        );
+
         requestAnimationFrame(() => {
           const iframe = document.getElementById(widgetId);
 
           if (iframe) {
+            console.log(`Found iframe for ${widgetId}:`, iframe.src);
             try {
               const widget = SC.Widget(iframe);
+              console.log(`Created SC.Widget for ${widgetId}:`, widget);
 
               const onReady = () => {
                 console.log(`Widget ${widgetId} is ready`);
@@ -38,8 +46,7 @@
               markWidgetAsUnavailable(widgetId);
             }
           } else {
-            // This might happen briefly during transitions, usually not an error
-            // console.warn(`Iframe ${widgetId} not found during initialization.`);
+            console.warn(`Iframe ${widgetId} not found during initialization.`);
           }
         });
       });
@@ -65,8 +72,8 @@
     class="hidden"
     scrolling="no"
     frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false"
+    allow="autoplay; encrypted-media"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false&color=ff5500&auto_play=false"
   >
   </iframe>
 {/each}

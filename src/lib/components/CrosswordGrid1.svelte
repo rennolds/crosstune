@@ -1286,12 +1286,35 @@
       const audio = SC.Widget(iframe);
       currentAudio = audio;
 
+      console.log(`DEBUG: Created audio widget for ${widgetId}:`, audio);
+      console.log(
+        `DEBUG: Seeking to ${convertTimestampToMs(clue.startAt)}ms for ${clue.startAt}`
+      );
+
       // Create a unique identifier for this play session
       const playSessionId = Date.now();
       audio._playSessionId = playSessionId;
 
       audio.seekTo(convertTimestampToMs(clue.startAt));
+      console.log(`DEBUG: About to call audio.play() for ${widgetId}`);
       await audio.play();
+      console.log(`DEBUG: audio.play() completed for ${widgetId}`);
+
+      // Debug: Check widget state after play
+      setTimeout(() => {
+        audio.getPosition((position) => {
+          console.log(
+            `DEBUG: Widget ${widgetId} position after play:`,
+            position
+          );
+        });
+        audio.isPaused((paused) => {
+          console.log(
+            `DEBUG: Widget ${widgetId} paused state after play:`,
+            paused
+          );
+        });
+      }, 1000);
 
       // === Check if playback actually started ===
       // TEMPORARILY DISABLED - Debugging mobile playback issues
