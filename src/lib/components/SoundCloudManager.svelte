@@ -26,30 +26,62 @@
               };
 
               const onError = (error) => {
-                console.warn(`Widget ${widgetId} failed to load:`, error);
-                // Don't mark as unavailable immediately - give it a chance to work
-                // even if source maps fail to load
+                console.warn(
+                  `Widget ${widgetId} error (may be just source maps):`,
+                  error
+                );
+                // Don't mark as unavailable for source map errors
+                // Check if widget is functional after a delay
                 setTimeout(() => {
-                  // Check if widget is actually functional despite source map errors
                   try {
                     widget.isPaused((paused) => {
                       if (paused !== undefined) {
-                        // Widget is functional, mark as ready
+                        // Widget is responding, mark as ready
+                        console.log(
+                          `Widget ${widgetId} is functional despite errors`
+                        );
                         markWidgetAsReady(widgetId);
                       } else {
-                        // Widget is not functional, mark as unavailable
+                        // Widget is not responding, mark as unavailable
                         markWidgetAsUnavailable(widgetId);
                       }
                     });
                   } catch (e) {
-                    markWidgetAsUnavailable(widgetId);
+                    // If isPaused fails, try one more check
+                    try {
+                      widget.play(); // This will fail if widget is not functional
+                      widget.pause(); // Immediately pause
+                      markWidgetAsReady(widgetId);
+                    } catch (e2) {
+                      markWidgetAsUnavailable(widgetId);
+                    }
                   }
-                }, 2000);
+                }, 3000); // Give it 3 seconds to settle
                 widget.unbind(SC.Widget.Events.ERROR, onError);
               };
 
               widget.bind(SC.Widget.Events.READY, onReady);
               widget.bind(SC.Widget.Events.ERROR, onError);
+
+              // Also set a fallback timer to mark as ready if no events fire
+              setTimeout(() => {
+                try {
+                  widget.isPaused((paused) => {
+                    if (paused !== undefined) {
+                      console.log(
+                        `Widget ${widgetId} marked as ready via fallback`
+                      );
+                      markWidgetAsReady(widgetId);
+                    }
+                  });
+                } catch (e) {
+                  // Final fallback - just mark as ready and see if it works
+                  console.log(
+                    `Widget ${widgetId} final fallback - marking as ready`
+                  );
+                  markWidgetAsReady(widgetId);
+                }
+              }, 5000);
             } catch (e) {
               console.error(`Error creating SC.Widget for ${widgetId}:`, e);
               markWidgetAsUnavailable(widgetId);
@@ -83,7 +115,7 @@
     scrolling="no"
     frameborder="no"
     allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false&color=ff5500&auto_play=false"
+    src="https://w.soundcloud.com/player/?visual=true&url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&show_artwork=false&show_user=false&show_playcount=false&download=false&sharing=false&buying=false&auto_play=false"
   >
   </iframe>
 {/each}

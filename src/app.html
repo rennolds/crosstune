@@ -44,11 +44,18 @@
     <script>
       // Override console.error to suppress SoundCloud source map errors
       const originalError = console.error;
+      const originalWarn = console.warn;
+
       console.error = function (...args) {
         const message = args.join(" ");
         if (
           (message.includes("widget-") && message.includes(".js.map")) ||
           (message.includes("Failed to load resource") &&
+            message.includes("widget-")) ||
+          message.includes("Not allowed to request resource") ||
+          (message.includes("Cannot load") &&
+            message.includes("web-sourcemaps")) ||
+          (message.includes("due to access control checks") &&
             message.includes("widget-"))
         ) {
           // Suppress SoundCloud source map errors
@@ -57,12 +64,28 @@
         originalError.apply(console, args);
       };
 
+      console.warn = function (...args) {
+        const message = args.join(" ");
+        if (
+          (message.includes("[blocked]") && message.includes("widget-")) ||
+          (message.includes("requested insecure content") &&
+            message.includes("web-sourcemaps")) ||
+          (message.includes("must be served over HTTPS") &&
+            message.includes("widget-"))
+        ) {
+          // Suppress SoundCloud source map warnings
+          return;
+        }
+        originalWarn.apply(console, args);
+      };
+
       // Also suppress network errors for SoundCloud source maps
       window.addEventListener("error", function (e) {
         if (
           e.message &&
-          e.message.includes("widget-") &&
-          e.message.includes(".js.map")
+          ((e.message.includes("widget-") && e.message.includes(".js.map")) ||
+            e.message.includes("web-sourcemaps") ||
+            e.message.includes("Not allowed to request resource"))
         ) {
           e.preventDefault();
           return false;
