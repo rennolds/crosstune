@@ -1294,64 +1294,105 @@
       await audio.play();
 
       // === Check if playback actually started ===
+      // TEMPORARILY DISABLED - Debugging mobile playback issues
       // Sometimes geoblocked tracks fail silently without errors/events
       // Check if the widget is immediately paused after attempting play
-      audio.isPaused((paused) => {
-        if (paused) {
-          console.warn(
-            `Widget ${widgetId} reported paused immediately after play(). Marking as unavailable.`
-          );
-          markWidgetAsUnavailable(widgetId);
+      // audio.isPaused((paused) => {
+      //   if (paused) {
+      //     console.warn(
+      //       `Widget ${widgetId} reported paused immediately after play(). Marking as unavailable.`
+      //     );
+      //     markWidgetAsUnavailable(widgetId);
 
-          // Reset playback state
+      //     // Reset playback state
+      //     isPlaying = false;
+      //     playingClue = null;
+      //     currentAudio = null; // Ensure we don't hold reference to failed audio
+      //     // No need to call pause() here as it's already paused
+      //   } else {
+      //     // Playback seems to have started, proceed with timeout logic
+      //     // console.log(`Widget ${widgetId} playback initiated successfully.`); // Removed success log
+
+      //     // Detect Safari browser
+      //     const isSafari = /^((?!chrome|android).)*safari/i.test(
+      //       navigator.userAgent
+      //     );
+
+      //     // Determine timeout duration
+      //     let timeoutDuration;
+      //     if (
+      //       clue.audioDuration &&
+      //       typeof clue.audioDuration === "number" &&
+      //       clue.audioDuration > 0
+      //     ) {
+      //       // Use duration from JSON (assuming it's in seconds), add 1 second for Safari
+      //       timeoutDuration = clue.audioDuration * 1000 + (isSafari ? 1000 : 0);
+      //       console.log(
+      //         `Using custom duration ${clue.audioDuration}s + ${isSafari ? 1 : 0}s (Safari) = ${timeoutDuration}ms`
+      //       );
+      //     } else {
+      //       // Default duration logic
+      //       timeoutDuration = isSafari ? 7500 : 6500;
+      //       console.log(
+      //         `Using default ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
+      //       );
+      //     }
+
+      //     setTimeout(() => {
+      //       // Only pause if this is still the current audio AND from the same play session
+      //       if (
+      //         audio === currentAudio &&
+      //         audio._playSessionId === playSessionId
+      //       ) {
+      //         audio.pause();
+      //         isPlaying = false;
+      //         playingClue = null;
+      //         currentAudio = null;
+      //       }
+      //     }, timeoutDuration); // Use the calculated duration
+      //   }
+      // });
+      // === End playback check ===
+
+      // TEMPORARY: Skip the isPaused check and go straight to timeout logic
+      console.log(
+        `DEBUG: Skipping isPaused check for ${widgetId}, proceeding with timeout logic`
+      );
+
+      // Detect Safari browser
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent
+      );
+
+      // Determine timeout duration
+      let timeoutDuration;
+      if (
+        clue.audioDuration &&
+        typeof clue.audioDuration === "number" &&
+        clue.audioDuration > 0
+      ) {
+        // Use duration from JSON (assuming it's in seconds), add 1 second for Safari
+        timeoutDuration = clue.audioDuration * 1000 + (isSafari ? 1000 : 0);
+        console.log(
+          `Using custom duration ${clue.audioDuration}s + ${isSafari ? 1 : 0}s (Safari) = ${timeoutDuration}ms`
+        );
+      } else {
+        // Default duration logic
+        timeoutDuration = isSafari ? 7500 : 6500;
+        console.log(
+          `Using default ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
+        );
+      }
+
+      setTimeout(() => {
+        // Only pause if this is still the current audio AND from the same play session
+        if (audio === currentAudio && audio._playSessionId === playSessionId) {
+          audio.pause();
           isPlaying = false;
           playingClue = null;
-          currentAudio = null; // Ensure we don't hold reference to failed audio
-          // No need to call pause() here as it's already paused
-        } else {
-          // Playback seems to have started, proceed with timeout logic
-          // console.log(`Widget ${widgetId} playback initiated successfully.`); // Removed success log
-
-          // Detect Safari browser
-          const isSafari = /^((?!chrome|android).)*safari/i.test(
-            navigator.userAgent
-          );
-
-          // Determine timeout duration
-          let timeoutDuration;
-          if (
-            clue.audioDuration &&
-            typeof clue.audioDuration === "number" &&
-            clue.audioDuration > 0
-          ) {
-            // Use duration from JSON (assuming it's in seconds), add 1 second for Safari
-            timeoutDuration = clue.audioDuration * 1000 + (isSafari ? 1000 : 0);
-            console.log(
-              `Using custom duration ${clue.audioDuration}s + ${isSafari ? 1 : 0}s (Safari) = ${timeoutDuration}ms`
-            );
-          } else {
-            // Default duration logic
-            timeoutDuration = isSafari ? 7500 : 6500;
-            console.log(
-              `Using default ${timeoutDuration}ms timeout for audio (${isSafari ? "Safari" : "non-Safari"})`
-            );
-          }
-
-          setTimeout(() => {
-            // Only pause if this is still the current audio AND from the same play session
-            if (
-              audio === currentAudio &&
-              audio._playSessionId === playSessionId
-            ) {
-              audio.pause();
-              isPlaying = false;
-              playingClue = null;
-              currentAudio = null;
-            }
-          }, timeoutDuration); // Use the calculated duration
+          currentAudio = null;
         }
-      });
-      // === End playback check ===
+      }, timeoutDuration); // Use the calculated duration
 
       /* // Remove commented out block below
       // Original timeout logic moved inside the 'else' block of isPaused check
