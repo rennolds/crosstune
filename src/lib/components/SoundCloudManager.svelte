@@ -66,7 +66,7 @@
     scrolling="no"
     frameborder="no"
     allow="autoplay"
-    src="https://wt.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false&visual=false"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{word.audioUrl}&amp;show_user=false&show_artwork=false&show_playcount=false&download=false&sharing=false&buying=false&visual=false"
   >
   </iframe>
 {/each}
