@@ -8037,5 +8037,104 @@
         "audioDuration": 8.75
       }
     ]
+  },
+  "2025-07-18": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "STARBOY",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "284056452",
+        "startAt": "0:36",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "DRINK",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What are you pouring Post Malone?",
+        "audioUrl": "1853063589",
+        "startAt": "0:39",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "DANCEMONKEY",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "658272458",
+        "startAt": "0:20",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "THEPOLICE",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "252610610",
+        "startAt": "0:13",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "IDIDIT",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Title of this star-studded DJ Khaled song",
+        "audioUrl": "1039539055",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "MACKLEMORE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist",
+        "audioUrl": "342981665",
+        "startAt": "0:40",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "OCEAN",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "1652881803",
+        "startAt": "0:20",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "KEEP",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "____ on loving you",
+        "audioUrl": "253249319",
+        "startAt": "0:10",
+        "audioDuration": 15
+      }
+    ]
   }
 }
