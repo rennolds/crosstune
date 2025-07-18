@@ -8108,7 +8108,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Artist",
+        "textClue": "Artist name",
         "audioUrl": "342981665",
         "startAt": "0:40",
         "audioDuration": 8.5
