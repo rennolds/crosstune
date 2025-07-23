@@ -8560,7 +8560,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Artist name but drop the \"the\"",
+        "textClue": "Artist name but drop \"the\"",
         "audioUrl": "178328397",
         "startAt": "1:21",
         "audioDuration": 14.4
