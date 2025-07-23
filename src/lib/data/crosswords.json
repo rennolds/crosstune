@@ -8560,7 +8560,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Artist name but drop the \\\"the\\\"",
+        "textClue": "Artist name but drop the \"the\"",
         "audioUrl": "178328397",
         "startAt": "1:21",
         "audioDuration": 14.4
@@ -8616,9 +8616,9 @@
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "Song title",
-        "audioUrl": "",
-        "startAt": "0:20",
-        "audioDuration": 6.5
+        "audioUrl": "479762340",
+        "startAt": "0:31",
+        "audioDuration": 9
       },
       {
         "word": "BLACK",
