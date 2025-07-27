@@ -8937,7 +8937,7 @@
       "width": 12,
       "height": 10
     },
-    "theme": "green",
+    "theme": "purple",
     "words": [
       {
         "word": "ONTHERUN",
@@ -9022,7 +9022,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Complete the lyric: Don't believe me, just ____",
+        "textClue": "Complete the lyric: Don't believe me, ____",
         "audioUrl": "265535208",
         "startAt": "0:15",
         "audioDuration": 10
