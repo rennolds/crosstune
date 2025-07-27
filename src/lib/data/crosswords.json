@@ -9028,5 +9028,203 @@
         "audioDuration": 10
       }
     ]
+  },
+  "2025-07-28": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "TIVO",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Pitbull's life is a movie, and we just ___ (a DVR brand)",
+        "audioUrl": "256122842",
+        "startAt": "0:07",
+        "audioDuration": 18
+      },
+      {
+        "word": "OZZY",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Legendary ‘Prince of Darkness’ first name",
+        "audioUrl": "252996256",
+        "startAt": "0:06",
+        "audioDuration": 9
+      },
+      {
+        "word": "TEENAGERS",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "214807117",
+        "startAt": "0:08.6",
+        "audioDuration": 26.5
+      },
+      {
+        "word": "SEEYOU",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First two words of this song title",
+        "audioUrl": "202631934",
+        "startAt": "1:08",
+        "audioDuration": 12
+      },
+      {
+        "word": "PUTH",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This singers last name",
+        "audioUrl": "1347359749",
+        "startAt": "0:25",
+        "audioDuration": 20
+      },
+      {
+        "word": "SAMEOLD",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The kind of love Selena is sick of",
+        "audioUrl": "253612830",
+        "startAt": "0:00",
+        "audioDuration": 28
+      },
+      {
+        "word": "BREAKAWAY",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "1634469765",
+        "startAt": "0:00",
+        "audioDuration": 17
+      },
+      {
+        "word": "ILOVEYOUSO",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "169210568",
+        "startAt": "1:39.435",
+        "audioDuration": 27
+      }
+    ]
+  },
+  "2025-07-30": {
+    "title": "Produced by Max Martin",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "BOYS",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Second word of this group name",
+        "audioUrl": "256038285",
+        "startAt": "0:18.5",
+        "audioDuration": 10
+      },
+      {
+        "word": "BEENGONE",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "1634470338",
+        "startAt": "0:00",
+        "audioDuration": 12
+      },
+      {
+        "word": "MYFACE",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "253876860",
+        "startAt": "0:25",
+        "audioDuration": 9
+      },
+      {
+        "word": "INTO",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First word of this song title",
+        "audioUrl": "261531030",
+        "startAt": "0:10",
+        "audioDuration": 16
+      },
+      {
+        "word": "CANTSTOP",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "First two words of this song title",
+        "audioUrl": "262637985",
+        "startAt": "0:05",
+        "audioDuration": 19
+      },
+      {
+        "word": "CHERRY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "A flavor of chapstick",
+        "audioUrl": "256250237",
+        "startAt": "0:19",
+        "audioDuration": 15
+      },
+      {
+        "word": "LONELINESS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Something that is killing Britney",
+        "audioUrl": "1320743473",
+        "startAt": "0:47.5",
+        "audioDuration": 15.8
+      },
+      {
+        "word": "WANEGBT",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This track name as an acronym",
+        "audioUrl": "252454981",
+        "startAt": "0:00",
+        "audioDuration": 16.5
+      }
+    ]
   }
 }
