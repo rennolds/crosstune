@@ -9438,7 +9438,7 @@
   },
   "2025-08-01": {
     "title": "Album Titles",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "size": {
       "width": 12,
       "height": 10
@@ -9446,7 +9446,7 @@
     "theme": "green",
     "words": [
       {
-        "word": "BLONDE",
+        "word": "BLOND",
         "startX": 3,
         "startY": 1,
         "direction": "across",
@@ -9514,7 +9514,7 @@
       {
         "word": "RED",
         "startX": 8,
-        "startY": 0,
+        "startY": 4,
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "Album title",
