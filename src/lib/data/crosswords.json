@@ -9732,5 +9732,105 @@
         "audioDuration": 20
       }
     ]
+  },
+  
+  "2025-08-04": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ARIANA",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "470720937",
+        "startAt": "0:10",
+        "audioDuration": 4.5
+      },
+      {
+        "word": "LUCIDDREAMS",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "328259811",
+        "startAt": "1:08",
+        "audioDuration": 7
+      },
+      {
+        "word": "LOGIC",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "318368285",
+        "startAt": "1:10",
+        "audioDuration": 7
+      },
+      {
+        "word": "LETYOUDOWN",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "341199320",
+        "startAt": "1:05",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "AMERICA",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This is ____",
+        "audioUrl": "439450881",
+        "startAt": "0:51",
+        "audioDuration": 6.25
+      },
+      {
+        "word": "BED",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "One of the only things this artist loves",
+        "audioUrl": "386265671",
+        "startAt": "0:19",
+        "audioDuration": 7
+      },
+      {
+        "word": "BAZZI",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "346585632",
+        "startAt": "0:34",
+        "audioDuration": 7
+      },
+      {
+        "word": "WOLVES",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "348550251",
+        "startAt": "0:38",
+        "audioDuration": 6.5
+      }
+    ]
   }
 }
