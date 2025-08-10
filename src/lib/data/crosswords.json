@@ -10424,6 +10424,17 @@
         "audioUrl": "823932871",
         "startAt": "1:10",
         "audioDuration": 14
+      },
+      {
+        "word": "SNOW",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "☃️🌨️",
+        "audioUrl": "122326263",
+        "startAt": "0:14",
+        "audioDuration": 10
       }
     ]
   },
