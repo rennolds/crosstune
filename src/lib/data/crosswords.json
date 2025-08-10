@@ -9128,8 +9128,8 @@
       }
     ]
   },
-  "2025-07-28": {
-    "title": "",
+  "2025-08-09": {
+    "title": "Emoji test 👋",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -9143,7 +9143,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Artist name",
+        "textClue": "🦴🦴🦷",
         "audioUrl": "382603370",
         "startAt": "0:17",
         "audioDuration": 8
@@ -9154,7 +9154,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Song title",
+        "textClue": "🫦🫦🫦🫦🫦🫦 🫦🫦",
         "audioUrl": "255782644",
         "startAt": "0:20",
         "audioDuration": 6.5
@@ -9176,7 +9176,7 @@
         "startY": 5,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "This song is sung a cappella by the cast of what show?",
+        "textClue": "🫦This song is sung a cappella by the cast of what show?",
         "audioUrl": "261139150",
         "startAt": "0:20",
         "audioDuration": 8
