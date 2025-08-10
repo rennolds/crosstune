@@ -10339,6 +10339,94 @@
       }
     ]
   },
+  "2025-08-10": {
+    "title": "❌💿🧩",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CALMDOWN",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "😮‍💨⬇️",
+        "audioUrl": "1200502645",
+        "startAt": "0:17",
+        "audioDuration": 8
+      },
+      {
+        "word": "KILLBILL",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "🔪👨🏻",
+        "audioUrl": "1396880485",
+        "startAt": "0:32",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "COUNTDOWN",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "⏰⬇️",
+        "audioUrl": "199941967",
+        "startAt": "0:20",
+        "audioDuration": 8
+      },
+      {
+        "word": "DREAMON",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "🛌💤🔋",
+        "audioUrl": "1242388744",
+        "startAt": "0:38",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "FIRST",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "🥇",
+        "audioUrl": "256079755",
+        "startAt": "0:11",
+        "audioDuration": 18
+      },
+      {
+        "word": "BADBLOOD",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "👎🩸",
+        "audioUrl": "1650652419",
+        "startAt": "0:57",
+        "audioDuration": 7
+      },
+      {
+        "word": "VENUS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "👩🪐",
+        "audioUrl": "823932871",
+        "startAt": "1:10",
+        "audioDuration": 14
+      }
+    ]
+  },
   "2025-08-16": {
     "title": "hbd chris",
     "version": "1.0.0",
