@@ -176,9 +176,9 @@
           </div>
         {/if}
 
-        <!-- Themed title display (when in themed mode) -->
+        <!-- Themed title display (when in themed mode) - Mobile only -->
         {#if isThemedMode && themedTitle}
-          <div class="ml-4 font-medium text-sm md:text-base flex items-center">
+          <div class="ml-4 font-medium text-sm flex items-center md:hidden">
             <span class="ml-1">{themedTitle}</span>
           </div>
         {/if}

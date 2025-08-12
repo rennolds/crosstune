@@ -107,6 +107,28 @@
         <div
           class="relative h-32 md:h-48 bg-gradient-to-br from-purple-400 to-pink-400 overflow-hidden"
         >
+          <!-- Mobile Views Count (top left) -->
+          <div class="absolute top-2 left-2 z-10 md:hidden">
+            <div class="flex items-center bg-black/60 rounded px-2 py-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-3 w-3 mr-1 text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="text-xs font-medium text-white">
+                {playCounts[puzzle.date] ?? "..."}
+              </span>
+            </div>
+          </div>
+
           <!-- Completion indicator -->
           {#if completionStatus[puzzle.date]}
             <div class="absolute top-2 right-2 z-10">

@@ -2069,6 +2069,8 @@
     isCorrect={getIsCorrect()}
     onClose={handleCloseOverlay}
     {isArchiveMode}
+    {isThemedMode}
+    puzzleTitle={puzzle.title}
     words={puzzle.words}
     {selectedDate}
     {totalLetterCount}
