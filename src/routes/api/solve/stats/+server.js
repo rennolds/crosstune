@@ -1,5 +1,3 @@
-import { json } from '@sveltejs/kit';
-
 /** @type {import('./$types').RequestHandler} */
 export async function GET({ platform, url }) {
 	try {
@@ -7,8 +5,10 @@ export async function GET({ platform, url }) {
 		const db = platform?.env?.['solve-db'];
 		
 		if (!db) {
-			console.error('Database not available');
-			return json({ error: 'Database not available' }, { status: 500 });
+			return new Response(JSON.stringify({ error: 'Database not available' }), {
+				status: 500,
+				headers: { 'Content-Type': 'application/json' }
+			});
 		}
 
 		// Check for query parameters
@@ -16,7 +16,7 @@ export async function GET({ platform, url }) {
 		const offset = parseInt(url.searchParams.get('offset') || '0');
 
 		// Get solve counts for all puzzles, ordered by solve count descending
-		const results = await db.prepare(`
+		const { results } = await db.prepare(`
 			SELECT puzzle_id, solve_count, updated_at
 			FROM solves 
 			ORDER BY solve_count DESC, updated_at DESC
@@ -29,15 +29,20 @@ export async function GET({ platform, url }) {
 			FROM solves
 		`).first();
 
-		return json({
-			puzzles: results.results || [],
+		return new Response(JSON.stringify({
+			puzzles: results || [],
 			total: totalResult?.total || 0,
 			limit,
 			offset
+		}), {
+			headers: { 'Content-Type': 'application/json' }
 		});
 
 	} catch (error) {
 		console.error('Error retrieving solve stats:', error);
-		return json({ error: 'Internal server error' }, { status: 500 });
+		return new Response(JSON.stringify({ error: 'Internal server error' }), {
+			status: 500,
+			headers: { 'Content-Type': 'application/json' }
+		});
 	}
 }
