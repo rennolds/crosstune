@@ -71,6 +71,25 @@
     }
   }
 
+  // Function to handle Themed Boards navigation
+  function navigateToThemedBoards() {
+    // Get the current path
+    const currentPath = window.location.pathname;
+
+    // If we're on the /themed route but viewing a specific puzzle
+    if (currentPath.startsWith("/themed") && window.location.search !== "") {
+      // Strip the search parameters to go back to themed boards list
+      window.location.href = "/themed";
+    } else if (currentPath !== "/themed") {
+      // If we're on any other page (not themed at all)
+      window.location.href = "/themed";
+    }
+
+    if (isMobileDevice) {
+      onClose();
+    }
+  }
+
   function handleFollowUs() {
     if (browser) {
       window.open("https://twitter.com/spotle_io", "_blank");
@@ -152,6 +171,12 @@
               on:click={navigateToArchives}
             >
               Archives
+            </div>
+            <div
+              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
+              on:click={navigateToThemedBoards}
+            >
+              Themed Boards
             </div>
             <div
               class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"

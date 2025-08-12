@@ -1,0 +1,11 @@
+{
+    "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/master/packages/wrangler/config-schema.json",
+    "d1_databases": [
+      {
+        "binding": "solve-db",
+        "database_name": "crosstune-solves",
+        "database_id": "c1d1de28-ceb3-4bb7-9175-776396f4e4d5",
+        "preview_database_id": "DB"
+      }
+    ]
+  }

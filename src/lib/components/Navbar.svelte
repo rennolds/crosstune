@@ -20,9 +20,13 @@
   let {
     archiveDate = null,
     isArchiveMode = false,
+    themedTitle = null,
+    isThemedMode = false,
     onRevealSquare = null,
     onRevealWord = null,
     onRevealPuzzle = null,
+    onNavigateToThemedBoards = null,
+    onNavigateToArchives = null,
     hideTimer = false, // Add new prop to hide the timer
     words = [], // Add words prop to check widget readiness
   } = $props();
@@ -169,6 +173,13 @@
         {#if isArchiveMode && archiveDate}
           <div class="ml-4 font-medium text-sm md:text-base flex items-center">
             <span class="ml-1">{archiveDate}</span>
+          </div>
+        {/if}
+
+        <!-- Themed title display (when in themed mode) -->
+        {#if isThemedMode && themedTitle}
+          <div class="ml-4 font-medium text-sm md:text-base flex items-center">
+            <span class="ml-1">{themedTitle}</span>
           </div>
         {/if}
       </div>
