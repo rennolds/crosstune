@@ -26,5 +26,8 @@
 		"@supabase/supabase-js": "^2.48.1",
 		"moment": "^2.30.1",
 		"moment-timezone": "^0.5.48"
+	},
+	"optionalDependencies": {
+		"@rollup/rollup-linux-x64-gnu": "4.9.5"
 	}
 }
