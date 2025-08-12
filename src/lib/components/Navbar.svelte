@@ -160,6 +160,11 @@
               />
             </svg>
           {/if}
+
+          <!-- Orange notification dot -->
+          <div
+            class="absolute top-1 right-1 w-2.5 h-2.5 bg-orange-500 rounded-full"
+          ></div>
         </button>
 
         <!-- Only show timer if not in archive list view -->

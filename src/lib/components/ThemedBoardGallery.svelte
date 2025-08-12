@@ -99,7 +99,7 @@
       class="text-lg md:text-xl mt-2 max-w-2xl mx-auto"
       style="color: {isDark ? '#d1d5db' : '#6b7280'}"
     >
-      themed puzzles. new puzzle every sunday.
+      themed puzzles. new every sunday.
     </p>
   </div>
 
