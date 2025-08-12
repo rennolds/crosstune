@@ -111,6 +111,7 @@
       <CrosswordGrid1
         puzzle={selectedPuzzle}
         isArchiveMode={true}
+        isThemedMode={true}
         {selectedDate}
         onSetRevealFunctions={handleRevealFunctions}
       />

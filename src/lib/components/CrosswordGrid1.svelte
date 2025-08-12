@@ -40,6 +40,7 @@
   let {
     puzzle: customPuzzle = null,
     isArchiveMode = false,
+    isThemedMode = false,
     selectedDate = null,
     onSetRevealFunctions = null,
     onWords = null, // Add onWords prop
@@ -1419,6 +1420,34 @@
     playingClue = null;
   }
 
+  // Function to log puzzle completion to database
+  async function logPuzzleCompletion(puzzleId) {
+    try {
+      const response = await fetch("/api/solve", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          puzzle_id: puzzleId,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Failed to log puzzle completion:", errorData);
+        return false;
+      }
+
+      const result = await response.json();
+      console.log("Puzzle completion logged successfully:", result);
+      return true;
+    } catch (error) {
+      console.error("Error logging puzzle completion:", error);
+      return false;
+    }
+  }
+
   let showOverlay = $state(false);
   let finalTime = $state(0);
   let hasShownIncorrectMessage = $state(false);
@@ -1472,6 +1501,11 @@
           }
         }
         // --- End GA Event ---
+
+        // Log themed puzzle completion to database
+        if (isThemedMode && selectedDate) {
+          logPuzzleCompletion(selectedDate);
+        }
 
         if (isArchiveMode && selectedDate) {
           markPuzzleAsSolved(selectedDate);
