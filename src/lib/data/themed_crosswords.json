@@ -1,9 +1,110 @@
 {
-  "2025-01-12": {
+  "2025-08-10": {
+    "title": "Marvelous Motown",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "thumbnail": "themed/marvelous_motown.png",
+    "author": "Paul Pursifull",
+    "words": [
+      {
+        "word": "ABC",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "253540427",
+        "startAt": "0:05",
+        "audioDuration": 8
+      },
+      {
+        "word": "FEELINGGOOD",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "528265470",
+        "startAt": "0:46",
+        "audioDuration": 9
+      },
+      {
+        "word": "STOP",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Title word of this song!",
+        "audioUrl": "287323439",
+        "startAt": "0:03",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "ROSS",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "254149925",
+        "startAt": "0:18",
+        "audioDuration": 9
+      },
+      {
+        "word": "RESPECT",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "477107679",
+        "startAt": "0:09",
+        "audioDuration": 9
+      },
+      {
+        "word": "MARVIN",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name (The Prince of Soul)",
+        "audioUrl": "253483570",
+        "startAt": "0:20",
+        "audioDuration": 14
+      },
+      {
+        "word": "MYGIRL",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "319393353",
+        "startAt": "0:09",
+        "audioDuration": 8
+      },
+      {
+        "word": "GROUND",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Higher ____",
+        "audioUrl": "355774706",
+        "startAt": "0:30",
+        "audioDuration": 6.5
+      }
+    ]
+  },
+  "2025-08-03": {
     "title": "It was never a phase",
     "author": "Tommy Rennolds",
     "version": "1.0.0",
-    "thumbnail": "",
+    "thumbnail": "themed/it_was_never_a_phase.png",
     "size": {
       "width": 12,
       "height": 10
@@ -18,7 +119,8 @@
         "color": "#FE9C9C",
         "textClue": "Artist name",
         "audioUrl": "4720038",
-        "startAt": "0:01"
+        "startAt": "0:01",
+        "audioDuration": 10.5
       },
       {
         "word": "NOBODY",
@@ -28,7 +130,8 @@
         "color": "#28D66A",
         "textClue": "Who showed up to Sum 41's house party",
         "audioUrl": "256148157",
-        "startAt": "0:09"
+        "startAt": "0:09",
+        "audioDuration": 19.2
       },
       {
         "word": "RATIONALITY",
@@ -38,7 +141,8 @@
         "color": "#FFCEFD",
         "textClue": "Something that pairs well with poise",
         "audioUrl": "12841530",
-        "startAt": "0:11"
+        "startAt": "0:19",
+        "audioDuration": 13.85
       },
       {
         "word": "YEAD",
@@ -48,7 +152,8 @@
         "color": "#FF5B5E",
         "textClue": "A word in the chorus of this track, spelled as Tom DeLonge sings it",
         "audioUrl": "256119442",
-        "startAt": "1:18"
+        "startAt": "1:18",
+        "audioDuration": 12
       },
       {
         "word": "IPROMISE",
@@ -58,7 +163,8 @@
         "color": "#568EFF",
         "textClue": "In the parentheses of this song title",
         "audioUrl": "256032560",
-        "startAt": "0:26"
+        "startAt": "0:26",
+        "audioDuration": 12.2
       },
       {
         "word": "AAR",
@@ -68,7 +174,8 @@
         "color": "#FFB34B",
         "textClue": "Artist name, as an acronym  ",
         "audioUrl": "26318705",
-        "startAt": "0:00"
+        "startAt": "0:14",
+        "audioDuration": 15.5
       },
       {
         "word": "HAYLEY",
@@ -78,7 +185,8 @@
         "color": "#00FFFF",
         "textClue": "Leader singer of this band",
         "audioUrl": "214807501",
-        "startAt": "0:44"
+        "startAt": "0:44",
+        "audioDuration": 15.75
       },
       {
         "word": "CUT",
@@ -86,13 +194,14 @@
         "startY": 3,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Follow the song title and you get this word",
+        "textClue": "The word you get if you follow the song titles instruction",
         "audioUrl": "330578122",
-        "startAt": "0:05"
+        "startAt": "0:05",
+        "audioDuration": 6.5
       }
     ]
   },
-  "2025-01-19": {
+  "2025-07-27": {
     "title": "Rock Classics",
     "author": "Mike Chen",
     "version": "1.0.0",
@@ -136,42 +245,6 @@
         "audioUrl": "456789123",
         "startAt": "0:10",
         "audioDuration": 7
-      }
-    ]
-  },
-  "2025-01-26": {
-    "title": "Hip Hop Essentials",
-    "author": "DJ Marcus",
-    "version": "1.0.0",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Taylor_Swift_%286966830273%29.jpg",
-    "description": "The beats and rhymes that shaped hip hop culture",
-    "size": {
-      "width": 11,
-      "height": 9
-    },
-    "theme": "purple",
-    "words": [
-      {
-        "word": "STRAIGHT",
-        "startX": 1,
-        "startY": 1,
-        "direction": "across",
-        "color": "#9B59B6",
-        "textClue": "N.W.A's controversial anthem",
-        "audioUrl": "111222333",
-        "startAt": "0:00",
-        "audioDuration": 5
-      },
-      {
-        "word": "CALIFORNIADREAMIN",
-        "startX": 0,
-        "startY": 4,
-        "direction": "across",
-        "color": "#E74C3C",
-        "textClue": "2Pac's West Coast classic",
-        "audioUrl": "444555666",
-        "startAt": "0:20",
-        "audioDuration": 10
       }
     ]
   }

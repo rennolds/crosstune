@@ -34,6 +34,7 @@
     loadUnavailableWidgets,
     markPuzzleAsSolved,
     isPuzzleVersionValid,
+    markThemedPuzzleAsSolved,
   } from "$lib/utils/storage";
 
   // New props for archive mode
@@ -1505,6 +1506,7 @@
         // Log themed puzzle completion to database
         if (isThemedMode && selectedDate) {
           logPuzzleCompletion(selectedDate);
+          markThemedPuzzleAsSolved(selectedDate);
         }
 
         if (isArchiveMode && selectedDate) {

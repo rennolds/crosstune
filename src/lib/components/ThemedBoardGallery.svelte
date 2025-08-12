@@ -1,11 +1,15 @@
 <script>
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
+  import { isThemedPuzzleSolved } from "$lib/utils/storage.js";
 
   let { themedCrosswords, onSelectDate } = $props();
   let isDark = $derived(getIsDarkMode());
 
   // Store for play counts
   let playCounts = $state({});
+
+  // Store for completion status
+  let completionStatus = $state({});
 
   // Function to format date in a readable way
   function formatDate(dateString) {
@@ -41,17 +45,38 @@
         date,
         ...puzzle,
       }))
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .sort((a, b) => {
+        const dateA = new Date(a.date + "T12:00:00");
+        const dateB = new Date(b.date + "T12:00:00");
+        return dateB - dateA; // Newest first
+      })
   );
 
-  // Load play counts when puzzles change
+  // Load play counts and completion status when puzzles change
   $effect(() => {
     if (sortedPuzzles.length > 0) {
       sortedPuzzles.forEach(async (puzzle) => {
         const count = await fetchPlayCount(puzzle.date);
         playCounts[puzzle.date] = count;
+        completionStatus[puzzle.date] = isThemedPuzzleSolved(puzzle.date);
       });
     }
+  });
+
+  // Refresh completion status periodically to catch updates from the current session
+  $effect(() => {
+    const interval = setInterval(() => {
+      if (sortedPuzzles.length > 0) {
+        sortedPuzzles.forEach((puzzle) => {
+          const isCompleted = isThemedPuzzleSolved(puzzle.date);
+          if (completionStatus[puzzle.date] !== isCompleted) {
+            completionStatus[puzzle.date] = isCompleted;
+          }
+        });
+      }
+    }, 1000); // Check every second
+
+    return () => clearInterval(interval);
   });
 </script>
 
@@ -62,7 +87,7 @@
       class="text-lg md:text-xl mt-2 max-w-2xl mx-auto"
       style="color: {isDark ? '#d1d5db' : '#6b7280'}"
     >
-      Special puzzles released every Sunday
+      themed puzzles. new puzzle every sunday.
     </p>
   </div>
 
@@ -72,13 +97,35 @@
   >
     {#each sortedPuzzles as puzzle}
       <div
-        class="puzzle-card bg-white dark:bg-[#303030] rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group border border-gray-200 dark:border-gray-700"
+        class="puzzle-card bg-white dark:bg-[#303030] rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group border-2"
+        class:border-green-500={completionStatus[puzzle.date]}
+        class:border-gray-200={!completionStatus[puzzle.date] && !isDark}
+        class:dark:border-gray-700={!completionStatus[puzzle.date] && isDark}
         onclick={() => onSelectDate(puzzle.date)}
       >
         <!-- Thumbnail -->
         <div
           class="relative h-32 md:h-48 bg-gradient-to-br from-purple-400 to-pink-400 overflow-hidden"
         >
+          <!-- Completion indicator -->
+          {#if completionStatus[puzzle.date]}
+            <div class="absolute top-2 right-2 z-10">
+              <div class="bg-green-500 rounded-full p-1 shadow-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          {/if}
           {#if puzzle.thumbnail}
             <img
               src={puzzle.thumbnail}
@@ -142,7 +189,7 @@
           </div>
 
           <!-- Play Count Badge -->
-          <div class="flex items-center justify-between">
+          <div class="flex items-center">
             <span
               class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
               style="background-color: {puzzle.theme === 'pink'
@@ -157,28 +204,6 @@
             >
               plays: {playCounts[puzzle.date] ?? "..."}
             </span>
-
-            <!-- Play button -->
-            <button
-              class="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-200 hover:opacity-90"
-              style="background-color: {puzzle.theme === 'pink'
-                ? '#ec4899'
-                : puzzle.theme === 'purple'
-                  ? '#8b5cf6'
-                  : '#1f2937'}; color: white;"
-            >
-              Play
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 ml-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M10,2c-4.42,0-8,3.58-8,8s3.58,8,8,8s8-3.58,8-8S14.42,2,10,2z M8,12.59V7.41c0-0.39,0.44-0.63,0.77-0.42l4.07,2.59 c0.31,0.2,0.31,0.65,0,0.84l-4.07,2.59C8.44,13.22,8,12.98,8,12.59z"
-                />
-              </svg>
-            </button>
           </div>
         </div>
       </div>

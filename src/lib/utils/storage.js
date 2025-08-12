@@ -8,7 +8,8 @@ const STORAGE_KEYS = {
     REVEALED_CELLS: 'crosstune_revealed_cells',
     SOLVED_PUZZLES: 'crosstune_solved_puzzles',
     PUZZLE_VERSION: 'crosstune_puzzle_version',
-    UNAVAILABLE_WIDGETS: 'crosstune_unavailable_widgets'
+    UNAVAILABLE_WIDGETS: 'crosstune_unavailable_widgets',
+    THEMED_SOLVED_PUZZLES: 'crosstune_themed_solved_puzzles'
 };
 // Helper to get East Coast date in YYYY-MM-DD format 
 export function getEastCoastDate() {
@@ -87,6 +88,7 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
   localStorage.removeItem(STORAGE_KEYS.PUZZLE_VERSION);
   localStorage.removeItem(STORAGE_KEYS.UNAVAILABLE_WIDGETS);
+  // Note: We don't clear SOLVED_PUZZLES and THEMED_SOLVED_PUZZLES as they should persist
 }
 
 export function saveRevealedCells(revealedCells) {
@@ -168,4 +170,35 @@ export function loadUnavailableWidgets() {
   
   // Convert the parsed array back to a Set
   return new Set(JSON.parse(unavailableWidgets));
+}
+
+// Functions for themed puzzle completion tracking
+export function markThemedPuzzleAsSolved(date) {
+  if (typeof window === 'undefined') return;
+  
+  const solvedThemedPuzzles = getThemedSolvedPuzzles();
+  if (!solvedThemedPuzzles.includes(date)) {
+    solvedThemedPuzzles.push(date);
+    localStorage.setItem(STORAGE_KEYS.THEMED_SOLVED_PUZZLES, JSON.stringify(solvedThemedPuzzles));
+  }
+}
+
+/**
+ * Gets all solved themed puzzles
+ * @returns {string[]} Array of dates in YYYY-MM-DD format
+ */
+export function getThemedSolvedPuzzles() {
+  if (typeof window === 'undefined') return [];
+  
+  const storedPuzzles = localStorage.getItem(STORAGE_KEYS.THEMED_SOLVED_PUZZLES);
+  return storedPuzzles ? JSON.parse(storedPuzzles) : [];
+}
+
+/**
+ * Checks if a specific themed puzzle is solved
+ * @param {string} date - The puzzle date in YYYY-MM-DD format
+ * @returns {boolean} True if the themed puzzle is solved
+ */
+export function isThemedPuzzleSolved(date) {
+  return getThemedSolvedPuzzles().includes(date);
 }
