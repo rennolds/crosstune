@@ -24,6 +24,18 @@
     });
   }
 
+  // Function to get fun alternating colors for play count badges
+  function getBadgeColor(index) {
+    const colors = [
+      "#8b5cf6", // Purple
+      "#10b981", // Green
+      "#f59e0b", // Yellow
+      "#3b82f6", // Blue
+      "#ec4899", // Pink
+    ];
+    return colors[index % colors.length];
+  }
+
   // Function to fetch play count for a puzzle
   async function fetchPlayCount(puzzleDate) {
     try {
@@ -95,7 +107,7 @@
   <div
     class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto px-0 md:px-4 lg:px-8"
   >
-    {#each sortedPuzzles as puzzle}
+    {#each sortedPuzzles as puzzle, index}
       <div
         class="puzzle-card bg-white dark:bg-[#303030] rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group border-2"
         class:border-green-500={completionStatus[puzzle.date]}
@@ -213,16 +225,8 @@
           <!-- Play Count Badge -->
           <div class="flex items-center">
             <span
-              class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
-              style="background-color: {puzzle.theme === 'pink'
-                ? '#fce7f3'
-                : puzzle.theme === 'purple'
-                  ? '#f3e8ff'
-                  : '#f3f4f6'}; color: {puzzle.theme === 'pink'
-                ? '#be185d'
-                : puzzle.theme === 'purple'
-                  ? '#7c3aed'
-                  : '#374151'};"
+              class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
+              style="background-color: {getBadgeColor(index)};"
             >
               plays: {playCounts[puzzle.date] ?? "..."}
             </span>

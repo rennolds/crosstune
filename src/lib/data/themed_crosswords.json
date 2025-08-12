@@ -119,7 +119,7 @@
         "color": "#FE9C9C",
         "textClue": "Artist name",
         "audioUrl": "4720038",
-        "startAt": "0:01",
+        "startAt": "0:00.8",
         "audioDuration": 10.5
       },
       {
@@ -128,7 +128,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Who showed up to Sum 41's house party",
+        "textClue": "Who came to Sum 41's house party?",
         "audioUrl": "256148157",
         "startAt": "0:09",
         "audioDuration": 19.2
@@ -139,7 +139,7 @@
         "startY": 5,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "Something that pairs well with poise",
+        "textClue": "A good quality to face things with, per the chorus",
         "audioUrl": "12841530",
         "startAt": "0:19",
         "audioDuration": 13.85
@@ -150,7 +150,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "A word in the chorus of this track, spelled as Tom DeLonge sings it",
+        "textClue": "A body part in the chorus, spelled as Tom DeLonge sings it",
         "audioUrl": "256119442",
         "startAt": "1:18",
         "audioDuration": 12
@@ -161,7 +161,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "In the parentheses of this song title",
+        "textClue": "The parentheses of this song title",
         "audioUrl": "256032560",
         "startAt": "0:26",
         "audioDuration": 12.2
@@ -172,7 +172,7 @@
         "startY": 7,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Artist name, as an acronym  ",
+        "textClue": "Artist name, as an acronym",
         "audioUrl": "26318705",
         "startAt": "0:14",
         "audioDuration": 15.5
@@ -201,50 +201,104 @@
       }
     ]
   },
-  "2025-07-27": {
-    "title": "Rock Classics",
-    "author": "Mike Chen",
+"2025-07-27": {
+    "title": "Disney on Ice",
     "version": "1.0.0",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Taylor_Swift_%286966830273%29.jpg",
-    "description": "Timeless rock anthems that defined generations",
     "size": {
-      "width": 10,
-      "height": 8
+      "width": 12,
+      "height": 10
     },
+    "thumbnail": "themed/disney_on_ice.png",
+    "author": "Paul Pursifull",
     "theme": "black",
     "words": [
       {
-        "word": "STAIRWAY",
-        "startX": 1,
-        "startY": 1,
+        "word": "PHIL",
+        "startX": 7,
+        "startY": 0,
         "direction": "across",
-        "color": "#FF6B6B",
-        "textClue": "Led Zeppelin's epic journey",
-        "audioUrl": "123456789",
-        "startAt": "0:00",
+        "color": "#FE9C9C",
+        "textClue": "Composer last name",
+        "audioUrl": "259075258",
+        "startAt": "0:11",
         "audioDuration": 8
       },
       {
-        "word": "BOHEMIAN",
+        "word": "HAKUNAMATATA",
         "startX": 0,
-        "startY": 3,
+        "startY": 4,
         "direction": "across",
-        "color": "#4ECDC4",
-        "textClue": "Queen's operatic masterpiece",
-        "audioUrl": "987654321",
-        "startAt": "0:15",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "253142770",
+        "startAt": "0:12",
+        "audioDuration": 8
+      },
+      {
+        "word": "SIMBA",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Character who sings this song",
+        "audioUrl": "255052117",
+        "startAt": "0:23",
         "audioDuration": 6
       },
       {
-        "word": "SWEETCHILD",
+        "word": "POCAHONTAS",
         "startX": 0,
-        "startY": 6,
-        "direction": "across",
-        "color": "#45B7D1",
-        "textClue": "Guns N' Roses ballad",
-        "audioUrl": "456789123",
-        "startAt": "0:10",
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Character who sings this song",
+        "audioUrl": "253616414",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "HERCULES",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Movie title",
+        "audioUrl": "112950952",
+        "startAt": "0:33",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "ALADDIN",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Movie title",
+        "audioUrl": "131273234",
+        "startAt": "0:16",
         "audioDuration": 7
+      },
+      {
+        "word": "TANGLED",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Movie title",
+        "audioUrl": "253167413",
+        "startAt": "0:18",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "LETITGO",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "This is the German language version of what song?",
+        "audioUrl": "267246892",
+        "startAt": "2:53.5",
+        "audioDuration": 5
       }
     ]
   }
