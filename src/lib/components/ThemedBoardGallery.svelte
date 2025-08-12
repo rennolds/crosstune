@@ -4,6 +4,9 @@
   let { themedCrosswords, onSelectDate } = $props();
   let isDark = $derived(getIsDarkMode());
 
+  // Store for play counts
+  let playCounts = $state({});
+
   // Function to format date in a readable way
   function formatDate(dateString) {
     if (!dateString) return "";
@@ -17,6 +20,20 @@
     });
   }
 
+  // Function to fetch play count for a puzzle
+  async function fetchPlayCount(puzzleDate) {
+    try {
+      const response = await fetch(`/api/solve/${puzzleDate}`);
+      if (response.ok) {
+        const data = await response.json();
+        return data.solve_count || 0;
+      }
+    } catch (error) {
+      console.error("Error fetching play count:", error);
+    }
+    return 0;
+  }
+
   // Convert themed crosswords object to array and sort by date (newest first)
   let sortedPuzzles = $derived(
     Object.entries(themedCrosswords)
@@ -26,6 +43,16 @@
       }))
       .sort((a, b) => new Date(b.date) - new Date(a.date))
   );
+
+  // Load play counts when puzzles change
+  $effect(() => {
+    if (sortedPuzzles.length > 0) {
+      sortedPuzzles.forEach(async (puzzle) => {
+        const count = await fetchPlayCount(puzzle.date);
+        playCounts[puzzle.date] = count;
+      });
+    }
+  });
 </script>
 
 <div class="themed-gallery">
@@ -114,7 +141,7 @@
             </p>
           </div>
 
-          <!-- Grid Size Badge -->
+          <!-- Play Count Badge -->
           <div class="flex items-center justify-between">
             <span
               class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
@@ -128,7 +155,7 @@
                   ? '#7c3aed'
                   : '#374151'};"
             >
-              {puzzle.size.width}×{puzzle.size.height}
+              plays: {playCounts[puzzle.date] ?? "..."}
             </span>
 
             <!-- Play button -->
