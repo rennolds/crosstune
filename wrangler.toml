@@ -1,0 +1,18 @@
+[build]
+command = "npm run build"
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+[build.environment]
+NODE_VERSION = "20"
+
+# D1 Database configuration
+[[d1_databases]]
+binding = "solve-db"
+database_name = "crosstune-solves"
+database_id = "c1d1de28-ceb3-4bb7-9175-776396f4e4d5"
+
+[env.production]
+name = "crosstune"
+
+[env.preview]
+name = "crosstune-preview" 
