@@ -20,9 +20,13 @@
   let {
     archiveDate = null,
     isArchiveMode = false,
+    themedTitle = null,
+    isThemedMode = false,
     onRevealSquare = null,
     onRevealWord = null,
     onRevealPuzzle = null,
+    onNavigateToThemedBoards = null,
+    onNavigateToArchives = null,
     hideTimer = false, // Add new prop to hide the timer
     words = [], // Add words prop to check widget readiness
   } = $props();
@@ -156,6 +160,11 @@
               />
             </svg>
           {/if}
+
+          <!-- Orange notification dot -->
+          <div
+            class="absolute top-1 right-1 w-2.5 h-2.5 bg-orange-500 rounded-full"
+          ></div>
         </button>
 
         <!-- Only show timer if not in archive list view -->
@@ -169,6 +178,13 @@
         {#if isArchiveMode && archiveDate}
           <div class="ml-4 font-medium text-sm md:text-base flex items-center">
             <span class="ml-1">{archiveDate}</span>
+          </div>
+        {/if}
+
+        <!-- Themed title display (when in themed mode) - Mobile only -->
+        {#if isThemedMode && themedTitle}
+          <div class="ml-4 font-medium text-sm flex items-center md:hidden">
+            <span class="ml-1">{themedTitle}</span>
           </div>
         {/if}
       </div>

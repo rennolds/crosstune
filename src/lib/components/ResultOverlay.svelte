@@ -7,6 +7,8 @@
     onClose,
     hideKeyboard,
     isArchiveMode = false,
+    isThemedMode = false,
+    puzzleTitle = null,
     words = [], // Accept words prop, remove placeholder songs
     selectedDate,
     totalLetterCount = null,
@@ -179,9 +181,14 @@
       resultText = `I solved the puzzle in ${formatTime(time)} and revealed ${revealedLetterCount} ${revealedLetterCount === 1 ? "letter" : "letters"}.`;
     }
 
-    const shareText = isArchiveMode
-      ? `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\n${resultText}\n\ncrosstune.io`
-      : `Crosstune #${puzzleNumber} - ${formattedDate}\n\n${resultText}\n\ncrosstune.io`;
+    let shareText;
+    if (isThemedMode && puzzleTitle) {
+      shareText = `Crosstune - ${puzzleTitle}\n\n${resultText}\n\ncrosstune.io`;
+    } else if (isArchiveMode) {
+      shareText = `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\n${resultText}\n\ncrosstune.io`;
+    } else {
+      shareText = `Crosstune #${puzzleNumber} - ${formattedDate}\n\n${resultText}\n\ncrosstune.io`;
+    }
 
     if (isMobile && navigator.share) {
       navigator

@@ -161,7 +161,9 @@
         {formatDate(todayDate)}
       </div>
       {#if puzzle.title}
-        <div class="text-black italic dark:text-white text-base mt-0.5 font-light">
+        <div
+          class="text-black italic dark:text-white text-base mt-0.5 font-light"
+        >
           {puzzle.title}
         </div>
       {/if}
@@ -174,6 +176,20 @@
     >
       Start
     </button>
+
+    <!-- Themed Puzzle Announcement -->
+    <div class="mt-8 text-center">
+      <p class="text-orange-400 font-normal text-lg">
+        themed puzzles just dropped.
+        <a
+          href="/themed"
+          class="underline hover:text-orange-500 transition-colors"
+        >
+          play them now!
+        </a>
+        <br />
+      </p>
+    </div>
   </div>
 
   <!-- Spacer for mobile -->
