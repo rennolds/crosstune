@@ -10438,106 +10438,6 @@
       }
     ]
   },
-  "2025-08-16": {
-    "title": "hbd chris",
-    "version": "1.0.0",
-    "size": {
-      "width": 12,
-      "height": 10
-    },
-    "theme": "black",
-    "words": [
-      {
-        "word": "LOWLIFE",
-        "startX": 1,
-        "startY": 1,
-        "direction": "across",
-        "color": "#FE9C9C",
-        "textClue": "Song title",
-        "audioUrl": "257040555",
-        "startAt": "0:03",
-        "audioDuration": 8.25
-      },
-      {
-        "word": "JOSH",
-        "startX": 0,
-        "startY": 3,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "First name of this duo's drummer",
-        "audioUrl": "256133595",
-        "startAt": "0:36",
-        "audioDuration": 25
-      },
-      {
-        "word": "CMIYGL",
-        "startX": 2,
-        "startY": 5,
-        "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "This album title, as an acroynm",
-        "audioUrl": "1074518497",
-        "startAt": "0:46",
-        "audioDuration": 28
-      },
-      {
-        "word": "SUPERMAN",
-        "startX": 2,
-        "startY": 7,
-        "direction": "across",
-        "color": "#FF5B5E",
-        "textClue": "Superhero movie that used this song as the outro",
-        "audioUrl": "303295729",
-        "startAt": "3:15",
-        "audioDuration": 16
-      },
-      {
-        "word": "JAPAN",
-        "startX": 0,
-        "startY": 3,
-        "direction": "down",
-        "color": "#568EFF",
-        "textClue": "Country this artist was born in",
-        "audioUrl": "1563214087",
-        "startAt": "0:07",
-        "audioDuration": 19
-      },
-      {
-        "word": "ROSS",
-        "startX": 2,
-        "startY": 0,
-        "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Last name of the featured artist rapping on this verse",
-        "audioUrl": "1220153869",
-        "startAt": "5:47.5",
-        "audioDuration": 18.4
-      },
-      {
-        "word": "LILWAYNE",
-        "startX": 5,
-        "startY": 0,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "Artist name",
-        "audioUrl": "252944918",
-        "startAt": "0:15",
-        "audioDuration": 15
-      },
-      {
-        "word": "GAMBINO",
-        "startX": 9,
-        "startY": 2,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "Last name of this artists alter ego",
-        "audioUrl": "122326263",
-        "startAt": "2:10.9",
-        "audioDuration": 13
-      }
-    ]
-  },
-  
   "2025-08-11": {
     "title": "",
     "version": "1.0.0",
@@ -10733,6 +10633,204 @@
         "audioUrl": "297284292",
         "startAt": "0:29",
         "audioDuration": 8
+      }
+    ]
+  },
+  "2025-08-13": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BADBOYS",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (also reality TV show theme)",
+        "audioUrl": "830594362",
+        "startAt": "0:09",
+        "audioDuration": 8
+      },
+      {
+        "word": "MIGUEL",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "19756456",
+        "startAt": "0:21.5",
+        "audioDuration": 8
+      },
+      {
+        "word": "GOOD",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The adjective in this band's name",
+        "audioUrl": "252519729",
+        "startAt": "0:15",
+        "audioDuration": 8
+      },
+      {
+        "word": "KELLY",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The last letter in this artist's stage name stands for what?",
+        "audioUrl": "632723961",
+        "startAt": "0:13",
+        "audioDuration": 7
+      },
+      {
+        "word": "JAILHOUSE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "____ Rock (Song title)",
+        "audioUrl": "326749273",
+        "startAt": "0:12",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "BAD",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The adjective that the singer claims to born",
+        "audioUrl": "320254874",
+        "startAt": "0:10",
+        "audioDuration": 18
+      },
+      {
+        "word": "PSY",
+        "startX": 8,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "253503116",
+        "startAt": "0:12",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "NSYNC",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "263191599",
+        "startAt": "0:16",
+        "audioDuration": 10
+      }
+    ]
+  },
+  "2025-08-16": {
+    "title": "hbd chris",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "LOWLIFE",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "257040555",
+        "startAt": "0:03",
+        "audioDuration": 8.25
+      },
+      {
+        "word": "JOSH",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First name of this duo's drummer",
+        "audioUrl": "256133595",
+        "startAt": "0:36",
+        "audioDuration": 25
+      },
+      {
+        "word": "CMIYGL",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "This album title, as an acronym",
+        "audioUrl": "1074518497",
+        "startAt": "0:46",
+        "audioDuration": 28
+      },
+      {
+        "word": "SUPERMAN",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Superhero movie that used this song as the outro",
+        "audioUrl": "303295729",
+        "startAt": "3:15",
+        "audioDuration": 16
+      },
+      {
+        "word": "JAPAN",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Country this artist was born in",
+        "audioUrl": "1563214087",
+        "startAt": "0:07",
+        "audioDuration": 19
+      },
+      {
+        "word": "ROSS",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last name of the featured artist rapping on this verse",
+        "audioUrl": "1220153869",
+        "startAt": "5:47.5",
+        "audioDuration": 18.4
+      },
+      {
+        "word": "LILWAYNE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "252944918",
+        "startAt": "0:15",
+        "audioDuration": 15
+      },
+      {
+        "word": "GAMBINO",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last name of this artist's alter ego",
+        "audioUrl": "122326263",
+        "startAt": "2:10.9",
+        "audioDuration": 13
       }
     ]
   }
