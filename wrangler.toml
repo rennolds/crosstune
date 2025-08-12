@@ -2,9 +2,6 @@
 command = "npm run build"
 pages_build_output_dir = ".svelte-kit/cloudflare"
 
-[build.environment]
-NODE_VERSION = "20"
-
 # D1 Database configuration
 [[d1_databases]]
 binding = "solve-db"
