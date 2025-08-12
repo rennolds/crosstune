@@ -10639,7 +10639,7 @@
   },
   "2025-08-12": {
     "title": "Ladies First",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "size": {
       "width": 12,
       "height": 10
@@ -10647,7 +10647,7 @@
     "theme": "black",
     "words": [
       {
-        "word": "VALARIE",
+        "word": "VALERIE",
         "startX": 1,
         "startY": 1,
         "direction": "across",
