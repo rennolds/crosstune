@@ -194,7 +194,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "The word you get if you follow the song titles instruction",
+        "textClue": "The last word of this song title",
         "audioUrl": "263253117",
         "startAt": "0:14",
         "audioDuration": 13.5
