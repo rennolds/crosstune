@@ -113,7 +113,19 @@
         class:border-green-500={completionStatus[puzzle.date]}
         class:border-gray-200={!completionStatus[puzzle.date] && !isDark}
         class:dark:border-gray-700={!completionStatus[puzzle.date] && isDark}
-        onclick={() => onSelectDate(puzzle.date)}
+        onclick={() => {
+          // --- GA Event ---
+          if (typeof gtag === "function") {
+            gtag("event", "themed_game_clicked", {
+              event_category: "themed",
+              event_label: puzzle.date,
+              puzzle_title: puzzle.title,
+              puzzle_author: puzzle.author,
+            });
+          }
+          // --- End GA Event ---
+          onSelectDate(puzzle.date);
+        }}
       >
         <!-- Thumbnail -->
         <div

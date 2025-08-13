@@ -1478,7 +1478,16 @@
 
         // --- GA Event ---
         if (typeof gtag === "function") {
-          if (isArchiveMode) {
+          if (isThemedMode) {
+            // Themed game completion
+            gtag("event", "themed_game_completed", {
+              event_category: "themed",
+              event_label: selectedDate,
+              puzzle_title: puzzle.title,
+              value: finalTime,
+              revealed_cell_count: revealedCells.size,
+            });
+          } else if (isArchiveMode) {
             // Archive game completion
             gtag("event", "completed_archive_game", {
               event_category: "archive",
