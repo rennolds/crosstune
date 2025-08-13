@@ -139,18 +139,18 @@
         "startY": 5,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "A good quality to face things with, per the chorus",
+        "textClue": "A quality that pairs well with poise",
         "audioUrl": "12841530",
         "startAt": "0:19",
         "audioDuration": 13.85
       },
       {
-        "word": "YEAD",
+        "word": "HEAD",
         "startX": 3,
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "A body part in the chorus, spelled as Tom DeLonge sings it",
+        "textClue": "A body part in the chorus",
         "audioUrl": "256119442",
         "startAt": "1:18",
         "audioDuration": 12
@@ -161,7 +161,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "The parentheses of this song title",
+        "textClue": "I'm Not Okay (_____)",
         "audioUrl": "256032560",
         "startAt": "0:26",
         "audioDuration": 12.2
@@ -189,15 +189,15 @@
         "audioDuration": 15.75
       },
       {
-        "word": "CUT",
-        "startX": 10,
-        "startY": 3,
+        "word": "ENEMY",
+        "startX": 11,
+        "startY": 1,
         "direction": "down",
         "color": "#FE9C9C",
         "textClue": "The word you get if you follow the song titles instruction",
-        "audioUrl": "330578122",
-        "startAt": "0:05",
-        "audioDuration": 6.5
+        "audioUrl": "263253117",
+        "startAt": "0:14",
+        "audioDuration": 13.5
       }
     ]
   },
