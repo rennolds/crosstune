@@ -321,7 +321,7 @@
 <main
   class="min-h-screen bg-white dark:bg-[#202020] text-black dark:text-white"
 >
-  <div class="container mx-auto px-4 py-8">
+  <div class="container mx-auto px-4 py-8 pt-16 md:pt-8">
     {#if !showSplash && !showWordForms && !showFinalDetails}
       <!-- Direction Toggle for Grid Page -->
       <div class="text-center mb-8">
@@ -662,13 +662,54 @@
           </button>
           <button
             class="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors"
-            onclick={() => {
-              // TODO: Handle final submission
-              console.log("Complete puzzle data:", {
-                grid: gridData,
-                words: detectedWords,
-                details: finalDetails,
-              });
+            onclick={async () => {
+              try {
+                const response = await fetch("/api/submit-puzzle", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    grid: gridData,
+                    words: detectedWords,
+                    details: finalDetails,
+                  }),
+                });
+
+                if (response.ok) {
+                  const result = await response.json();
+                  wordCountWarning =
+                    "Puzzle submitted successfully! Thank you for your submission.";
+                  showWarning = true;
+
+                  // Reset form after successful submission
+                  setTimeout(() => {
+                    gridData = Array(10)
+                      .fill()
+                      .map(() => Array(12).fill(""));
+                    showSplash = true;
+                    showWordForms = false;
+                    showFinalDetails = false;
+                    detectedWords = [];
+                    finalDetails = {
+                      creditName: "",
+                      boardTitle: "",
+                      email: "",
+                      notes: "",
+                    };
+                    showWarning = false;
+                  }, 3000);
+                } else {
+                  wordCountWarning =
+                    "Failed to submit puzzle. Please try again.";
+                  showWarning = true;
+                }
+              } catch (error) {
+                console.error("Submission error:", error);
+                wordCountWarning =
+                  "Error submitting puzzle. Please check your connection and try again.";
+                showWarning = true;
+              }
             }}
           >
             Submit Puzzle
