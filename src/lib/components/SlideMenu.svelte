@@ -90,6 +90,14 @@
     }
   }
 
+  // Function to handle Create Puzzle navigation
+  function navigateToCreate() {
+    window.location.href = "/create";
+    if (isMobileDevice) {
+      onClose();
+    }
+  }
+
   function handleFollowUs() {
     if (browser) {
       window.open("https://twitter.com/spotle_io", "_blank");
@@ -182,6 +190,12 @@
               >
                 NEW
               </span>
+            </div>
+            <div
+              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
+              on:click={navigateToCreate}
+            >
+              Create Puzzle
             </div>
             <div
               class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
