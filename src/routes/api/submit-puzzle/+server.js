@@ -4,13 +4,18 @@ import { env } from '$env/dynamic/private';
 
 export async function POST({ request }) {
   try {
+    console.log('POST request received for puzzle submission');
+    
     // Check if Discord webhook URL is configured
     if (!env.DISCORD_WEBHOOK_URL) {
       console.error('DISCORD_WEBHOOK_URL environment variable is not set');
       return new Response('Service configuration error', { status: 500 });
     }
+    
+    console.log('Discord webhook URL is configured:', env.DISCORD_WEBHOOK_URL);
 
     const submissionData = await request.json();
+    console.log('Received submission data:', JSON.stringify(submissionData, null, 2));
 
     if (!submissionData.grid || !submissionData.words || submissionData.words.length === 0) {
       return new Response('Invalid puzzle submission', { status: 400 });
@@ -98,11 +103,31 @@ export async function POST({ request }) {
       ]
     };
 
+    console.log('Sending Discord message...');
+    console.log('Discord message size:', JSON.stringify(discordMessage).length, 'characters');
+    
     await axios.post(env.DISCORD_WEBHOOK_URL, discordMessage);
+    console.log('Discord message sent successfully');
 
     return json({ status: 'success', message: 'Puzzle submitted successfully!' });
   } catch (error) {
-    console.error('Failed to submit puzzle:', error);
-    return new Response('Internal Server Error', { status: 500 });
+    console.error('Failed to submit puzzle - Error details:', {
+      message: error.message,
+      stack: error.stack,
+      response: error.response ? {
+        status: error.response.status,
+        statusText: error.response.statusText,
+        data: error.response.data
+      } : 'No response data'
+    });
+    
+    // Return more specific error information
+    if (error.response) {
+      return new Response(`Discord webhook error: ${error.response.status} ${error.response.statusText}`, { status: 500 });
+    } else if (error.request) {
+      return new Response('Network error: Could not reach Discord webhook', { status: 500 });
+    } else {
+      return new Response(`Internal error: ${error.message}`, { status: 500 });
+    }
   }
 }
