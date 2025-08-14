@@ -1,9 +1,15 @@
 import { json } from '@sveltejs/kit';
 import axios from 'axios';
-import { DISCORD_WEBHOOK_URL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export async function POST({ request }) {
   try {
+    // Check if Discord webhook URL is configured
+    if (!env.DISCORD_WEBHOOK_URL) {
+      console.error('DISCORD_WEBHOOK_URL environment variable is not set');
+      return new Response('Service configuration error', { status: 500 });
+    }
+
     const submissionData = await request.json();
 
     if (!submissionData.grid || !submissionData.words || submissionData.words.length === 0) {
@@ -92,7 +98,7 @@ export async function POST({ request }) {
       ]
     };
 
-    await axios.post(DISCORD_WEBHOOK_URL, discordMessage);
+    await axios.post(env.DISCORD_WEBHOOK_URL, discordMessage);
 
     return json({ status: 'success', message: 'Puzzle submitted successfully!' });
   } catch (error) {
