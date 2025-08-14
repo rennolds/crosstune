@@ -1,30 +1,13 @@
 import { json } from '@sveltejs/kit';
 import axios from 'axios';
-import { env } from '$env/dynamic/private';
+import { DISCORD_WEBHOOK_URL } from '$env/static/private';
 
 export async function POST({ request }) {
   try {
-    console.log('POST request received for puzzle submission');
-    
-    // Add debug header to verify function is executing
-    const headers = new Headers();
-    headers.set('X-Debug-Function-Executed', 'true');
-    
-    // Check if Discord webhook URL is configured
-    if (!env.DISCORD_WEBHOOK_URL) {
-      console.error('DISCORD_WEBHOOK_URL environment variable is not set');
-      headers.set('X-Debug-Error', 'discord-webhook-not-set');
-      return new Response('Service configuration error', { status: 500, headers });
-    }
-    
-    console.log('Discord webhook URL is configured:', env.DISCORD_WEBHOOK_URL);
-
     const submissionData = await request.json();
-    console.log('Received submission data:', JSON.stringify(submissionData, null, 2));
 
     if (!submissionData.grid || !submissionData.words || submissionData.words.length === 0) {
-      headers.set('X-Debug-Error', 'invalid-puzzle-data');
-      return new Response('Invalid puzzle submission', { status: 400, headers });
+      return new Response('Invalid puzzle submission', { status: 400 });
     }
 
     // Convert grid data to crossword JSON format (matching crosswords.json structure)
@@ -109,38 +92,11 @@ export async function POST({ request }) {
       ]
     };
 
-    console.log('Sending Discord message...');
-    console.log('Discord message size:', JSON.stringify(discordMessage).length, 'characters');
-    
-    await axios.post(env.DISCORD_WEBHOOK_URL, discordMessage);
-    console.log('Discord message sent successfully');
+    await axios.post(DISCORD_WEBHOOK_URL, discordMessage);
 
-    headers.set('X-Debug-Success', 'discord-webhook-sent');
-    return json({ status: 'success', message: 'Puzzle submitted successfully!' }, { headers });
+    return json({ status: 'success', message: 'Puzzle submitted successfully!' });
   } catch (error) {
-    console.error('Failed to submit puzzle - Error details:', {
-      message: error.message,
-      stack: error.stack,
-      response: error.response ? {
-        status: error.response.status,
-        statusText: error.response.statusText,
-        data: error.response.data
-      } : 'No response data'
-    });
-    
-    // Return more specific error information
-    const errorHeaders = new Headers();
-    errorHeaders.set('X-Debug-Function-Executed', 'true');
-    
-    if (error.response) {
-      errorHeaders.set('X-Debug-Error', `discord-webhook-response-${error.response.status}`);
-      return new Response(`Discord webhook error: ${error.response.status} ${error.response.statusText}`, { status: 500, headers: errorHeaders });
-    } else if (error.request) {
-      errorHeaders.set('X-Debug-Error', 'network-error');
-      return new Response('Network error: Could not reach Discord webhook', { status: 500, headers: errorHeaders });
-    } else {
-      errorHeaders.set('X-Debug-Error', 'internal-error');
-      return new Response(`Internal error: ${error.message}`, { status: 500, headers: errorHeaders });
-    }
+    console.error('Failed to submit puzzle:', error);
+    return new Response('Internal Server Error', { status: 500 });
   }
 }
