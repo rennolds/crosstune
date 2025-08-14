@@ -43,6 +43,7 @@
     isArchiveMode = false,
     isThemedMode = false,
     selectedDate = null,
+    selectedId = null,
     onSetRevealFunctions = null,
     onWords = null,
     onNavigateBack = null,
@@ -1469,9 +1470,9 @@
         // --- End GA Event ---
 
         // Log themed puzzle completion to database
-        if (isThemedMode && selectedDate) {
-          logPuzzleCompletion(selectedDate);
-          markThemedPuzzleAsSolved(selectedDate);
+        if (isThemedMode && selectedId) {
+          logPuzzleCompletion(selectedId);
+          markThemedPuzzleAsSolved(selectedId);
         }
 
         if (isArchiveMode && selectedDate) {
@@ -1529,7 +1530,9 @@
   }
 
   // Get the current date to display
-  const displayDate = $derived(selectedDate || puzzleInfo.dateKey);
+  const displayDate = $derived(
+    isThemedMode ? puzzle?.date_available : selectedDate || puzzleInfo.dateKey
+  );
 
   // Effect to handle unavailable widgets
   $effect(() => {

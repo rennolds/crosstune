@@ -95,7 +95,7 @@
   class="vinyl-container"
   style="transform: translate(-50%, -50%) rotate({rotation}deg);"
 >
-  <img src="{theme}_vinyl.png" alt="Vinyl Record" />
+  <img src="/{theme}_vinyl.png" alt="Vinyl Record" />
 </div>
 
 <style>

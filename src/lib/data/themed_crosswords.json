@@ -1,7 +1,9 @@
 {
-  "2025-08-10": {
+  "1": {
+    "id": 1,
     "title": "Marvelous Motown",
     "version": "1.0.0",
+    "date_available": "2025-08-10",
     "size": {
       "width": 12,
       "height": 10
@@ -100,10 +102,12 @@
       }
     ]
   },
-  "2025-08-03": {
+  "2": {
+    "id": 2,
     "title": "It was never a phase",
     "author": "Tommy Rennolds",
     "version": "1.0.0",
+    "date_available": "2025-08-03",
     "thumbnail": "themed/it_was_never_a_phase.png",
     "size": {
       "width": 12,
@@ -201,9 +205,11 @@
       }
     ]
   },
-"2025-07-27": {
+  "3": {
+    "id": 3,
     "title": "Disney on Ice",
     "version": "1.0.0",
+    "date_available": "2025-07-27",
     "size": {
       "width": 12,
       "height": 10

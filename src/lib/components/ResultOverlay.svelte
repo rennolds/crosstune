@@ -1,6 +1,11 @@
 <script>
   import moment from "moment-timezone";
 
+  // Simple function to convert title to URL slug
+  function titleToSlug(title) {
+    return title?.toLowerCase().replace(/[^a-z0-9]/g, "") || "";
+  }
+
   let {
     time,
     isCorrect,
@@ -184,9 +189,12 @@
 
     let shareText;
     if (isThemedMode && puzzleTitle) {
-      const themedUrl = selectedDate
-        ? `crosstune.io/themed?date=${selectedDate}`
-        : "crosstune.io/themed";
+      let themedUrl = "crosstune.io/themed";
+      if (puzzleTitle) {
+        // Use clean slug-based URL
+        const puzzleSlug = titleToSlug(puzzleTitle);
+        themedUrl = `crosstune.io/themed/${puzzleSlug}`;
+      }
       shareText = `Crosstune - ${puzzleTitle}\n\n${resultText}\n\n${themedUrl}`;
     } else if (isArchiveMode) {
       shareText = `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\n${resultText}\n\ncrosstune.io`;

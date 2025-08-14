@@ -2,7 +2,7 @@
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
   import { isThemedPuzzleSolved } from "$lib/utils/storage.js";
 
-  let { themedCrosswords, onSelectDate } = $props();
+  let { themedCrosswords, onSelectPuzzle } = $props();
   let isDark = $derived(getIsDarkMode());
 
   // Store for play counts
@@ -37,9 +37,9 @@
   }
 
   // Function to fetch play count for a puzzle
-  async function fetchPlayCount(puzzleDate) {
+  async function fetchPlayCount(puzzleId) {
     try {
-      const response = await fetch(`/api/solve/${puzzleDate}`);
+      const response = await fetch(`/api/solve/${puzzleId}`);
       if (response.ok) {
         const data = await response.json();
         return data.solve_count || 0;
@@ -50,16 +50,16 @@
     return 0;
   }
 
-  // Convert themed crosswords object to array and sort by date (newest first)
+  // Convert themed crosswords object to array and sort by date_available (newest first)
   let sortedPuzzles = $derived(
     Object.entries(themedCrosswords)
-      .map(([date, puzzle]) => ({
-        date,
+      .map(([id, puzzle]) => ({
+        id: parseInt(id),
         ...puzzle,
       }))
       .sort((a, b) => {
-        const dateA = new Date(a.date + "T12:00:00");
-        const dateB = new Date(b.date + "T12:00:00");
+        const dateA = new Date(a.date_available + "T12:00:00");
+        const dateB = new Date(b.date_available + "T12:00:00");
         return dateB - dateA; // Newest first
       })
   );
@@ -68,9 +68,9 @@
   $effect(() => {
     if (sortedPuzzles.length > 0) {
       sortedPuzzles.forEach(async (puzzle) => {
-        const count = await fetchPlayCount(puzzle.date);
-        playCounts[puzzle.date] = count;
-        completionStatus[puzzle.date] = isThemedPuzzleSolved(puzzle.date);
+        const count = await fetchPlayCount(puzzle.id);
+        playCounts[puzzle.id] = count;
+        completionStatus[puzzle.id] = isThemedPuzzleSolved(puzzle.id);
       });
     }
   });
@@ -80,9 +80,9 @@
     const interval = setInterval(() => {
       if (sortedPuzzles.length > 0) {
         sortedPuzzles.forEach((puzzle) => {
-          const isCompleted = isThemedPuzzleSolved(puzzle.date);
-          if (completionStatus[puzzle.date] !== isCompleted) {
-            completionStatus[puzzle.date] = isCompleted;
+          const isCompleted = isThemedPuzzleSolved(puzzle.id);
+          if (completionStatus[puzzle.id] !== isCompleted) {
+            completionStatus[puzzle.id] = isCompleted;
           }
         });
       }
@@ -110,21 +110,21 @@
     {#each sortedPuzzles as puzzle, index}
       <div
         class="puzzle-card bg-white dark:bg-[#303030] rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group border-2"
-        class:border-green-500={completionStatus[puzzle.date]}
-        class:border-gray-200={!completionStatus[puzzle.date] && !isDark}
-        class:dark:border-gray-700={!completionStatus[puzzle.date] && isDark}
+        class:border-green-500={completionStatus[puzzle.id]}
+        class:border-gray-200={!completionStatus[puzzle.id] && !isDark}
+        class:dark:border-gray-700={!completionStatus[puzzle.id] && isDark}
         onclick={() => {
           // --- GA Event ---
           if (typeof gtag === "function") {
             gtag("event", "themed_game_clicked", {
               event_category: "themed",
-              event_label: puzzle.date,
+              event_label: puzzle.id,
               puzzle_title: puzzle.title,
               puzzle_author: puzzle.author,
             });
           }
           // --- End GA Event ---
-          onSelectDate(puzzle.date);
+          onSelectPuzzle(puzzle.id);
         }}
       >
         <!-- Thumbnail -->
@@ -148,13 +148,13 @@
                 />
               </svg>
               <span class="text-xs font-medium text-white">
-                {playCounts[puzzle.date] ?? "..."}
+                {playCounts[puzzle.id] ?? "..."}
               </span>
             </div>
           </div>
 
           <!-- Completion indicator -->
-          {#if completionStatus[puzzle.date]}
+          {#if completionStatus[puzzle.id]}
             <div class="absolute top-2 right-2 z-10">
               <div class="bg-green-500 rounded-full p-1 shadow-lg">
                 <svg
@@ -240,7 +240,7 @@
               class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium text-white"
               style="background-color: {getBadgeColor(index)};"
             >
-              plays: {playCounts[puzzle.date] ?? "..."}
+              plays: {playCounts[puzzle.id] ?? "..."}
             </span>
           </div>
         </div>

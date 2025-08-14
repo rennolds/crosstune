@@ -173,19 +173,21 @@ export function loadUnavailableWidgets() {
 }
 
 // Functions for themed puzzle completion tracking
-export function markThemedPuzzleAsSolved(date) {
+export function markThemedPuzzleAsSolved(puzzleId) {
   if (typeof window === 'undefined') return;
   
+  // Convert puzzleId to string for consistent storage
+  const puzzleIdStr = String(puzzleId);
   const solvedThemedPuzzles = getThemedSolvedPuzzles();
-  if (!solvedThemedPuzzles.includes(date)) {
-    solvedThemedPuzzles.push(date);
+  if (!solvedThemedPuzzles.includes(puzzleIdStr)) {
+    solvedThemedPuzzles.push(puzzleIdStr);
     localStorage.setItem(STORAGE_KEYS.THEMED_SOLVED_PUZZLES, JSON.stringify(solvedThemedPuzzles));
   }
 }
 
 /**
  * Gets all solved themed puzzles
- * @returns {string[]} Array of dates in YYYY-MM-DD format
+ * @returns {string[]} Array of puzzle IDs as strings
  */
 export function getThemedSolvedPuzzles() {
   if (typeof window === 'undefined') return [];
@@ -196,9 +198,11 @@ export function getThemedSolvedPuzzles() {
 
 /**
  * Checks if a specific themed puzzle is solved
- * @param {string} date - The puzzle date in YYYY-MM-DD format
+ * @param {string|number} puzzleId - The puzzle ID
  * @returns {boolean} True if the themed puzzle is solved
  */
-export function isThemedPuzzleSolved(date) {
-  return getThemedSolvedPuzzles().includes(date);
+export function isThemedPuzzleSolved(puzzleId) {
+  // Convert puzzleId to string for consistent comparison
+  const puzzleIdStr = String(puzzleId);
+  return getThemedSolvedPuzzles().includes(puzzleIdStr);
 }
