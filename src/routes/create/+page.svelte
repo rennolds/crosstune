@@ -11,6 +11,7 @@
   let showSplash = $state(true);
   let showWordForms = $state(false);
   let showFinalDetails = $state(false);
+  let showSuccessScreen = $state(false);
   let detectedWords = $state([]);
   let finalDetails = $state({
     creditName: "",
@@ -228,6 +229,24 @@
     showSplash = false;
   }
 
+  function handleSubmitAnother() {
+    // Reset everything and go back to splash
+    gridData = Array(10)
+      .fill()
+      .map(() => Array(12).fill(""));
+    showSplash = true;
+    showWordForms = false;
+    showFinalDetails = false;
+    showSuccessScreen = false;
+    detectedWords = [];
+    finalDetails = {
+      creditName: "",
+      boardTitle: "",
+      email: "",
+      notes: "",
+    };
+  }
+
   function handleFinalDetailsClick() {
     if (!validateWordForms()) {
       return; // Don't proceed if validation fails
@@ -322,7 +341,7 @@
   class="min-h-screen bg-white dark:bg-[#202020] text-black dark:text-white"
 >
   <div class="container mx-auto px-4 py-8 pt-16 md:pt-8">
-    {#if !showSplash && !showWordForms && !showFinalDetails}
+    {#if !showSplash && !showWordForms && !showFinalDetails && !showSuccessScreen}
       <!-- Direction Toggle for Grid Page -->
       <div class="text-center mb-8">
         <div class="flex items-center justify-center space-x-4">
@@ -452,7 +471,7 @@
           </button>
         </div>
       </div>
-    {:else if !showWordForms && !showFinalDetails}
+    {:else if !showWordForms && !showFinalDetails && !showSuccessScreen}
       <!-- Grid Creation Step -->
       <div class="flex justify-center px-2 md:px-0">
         <div
@@ -678,27 +697,9 @@
 
                 if (response.ok) {
                   const result = await response.json();
-                  wordCountWarning =
-                    "Puzzle submitted successfully! Thank you for your submission.";
-                  showWarning = true;
-
-                  // Reset form after successful submission
-                  setTimeout(() => {
-                    gridData = Array(10)
-                      .fill()
-                      .map(() => Array(12).fill(""));
-                    showSplash = true;
-                    showWordForms = false;
-                    showFinalDetails = false;
-                    detectedWords = [];
-                    finalDetails = {
-                      creditName: "",
-                      boardTitle: "",
-                      email: "",
-                      notes: "",
-                    };
-                    showWarning = false;
-                  }, 3000);
+                  // Show success screen instead of warning
+                  showFinalDetails = false;
+                  showSuccessScreen = true;
                 } else {
                   wordCountWarning =
                     "Failed to submit puzzle. Please try again.";
@@ -714,6 +715,39 @@
           >
             Submit Puzzle
           </button>
+        </div>
+      </div>
+    {:else if showSuccessScreen}
+      <!-- Success Screen -->
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="p-8">
+          <h2 class="text-3xl font-bold mb-6">Thanks for your submission!</h2>
+          <p class="text-lg mb-8">We'll check out your puzzle asap!</p>
+
+          <p class="text-lg mb-8">In the meantime...</p>
+
+          <div class="space-y-4">
+            <button
+              class="w-full bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              onclick={handleSubmitAnother}
+            >
+              SUBMIT ANOTHER ONE
+            </button>
+
+            <button
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              onclick={() => (window.location.href = "/")}
+            >
+              PLAY TODAY'S
+            </button>
+
+            <button
+              class="w-full bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              onclick={() => (window.location.href = "/themed")}
+            >
+              PLAY THEMED PUZZLES
+            </button>
+          </div>
         </div>
       </div>
     {/if}
