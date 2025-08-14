@@ -44,7 +44,8 @@
     isThemedMode = false,
     selectedDate = null,
     onSetRevealFunctions = null,
-    onWords = null, // Add onWords prop
+    onWords = null,
+    onNavigateBack = null,
   } = $props();
 
   let isMobileDevice = $state(false);
@@ -2040,6 +2041,7 @@
     {totalLetterCount}
     {foundLetterCount}
     {revealedLetterCount}
+    {onNavigateBack}
   />
 {/if}
 

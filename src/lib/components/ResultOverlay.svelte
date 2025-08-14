@@ -14,6 +14,7 @@
     totalLetterCount = null,
     foundLetterCount = null,
     revealedLetterCount = null,
+    onNavigateBack = null,
   } = $props();
 
   // Add state for track metadata
@@ -183,7 +184,10 @@
 
     let shareText;
     if (isThemedMode && puzzleTitle) {
-      shareText = `Crosstune - ${puzzleTitle}\n\n${resultText}\n\ncrosstune.io`;
+      const themedUrl = selectedDate
+        ? `crosstune.io/themed?date=${selectedDate}`
+        : "crosstune.io/themed";
+      shareText = `Crosstune - ${puzzleTitle}\n\n${resultText}\n\n${themedUrl}`;
     } else if (isArchiveMode) {
       shareText = `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\n${resultText}\n\ncrosstune.io`;
     } else {
@@ -300,7 +304,16 @@
         SHARE RESULT
       </button>
 
-      {#if isArchiveMode}
+      {#if isThemedMode}
+        <div class="text-center">
+          <button
+            onclick={onNavigateBack}
+            class="text-blue-500 hover:underline text-md font-small bg-transparent border-none cursor-pointer"
+          >
+            Play another puzzle.
+          </button>
+        </div>
+      {:else if isArchiveMode}
         <div class="text-center">
           <a
             href="/archives"

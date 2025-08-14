@@ -114,6 +114,7 @@
         isThemedMode={true}
         {selectedDate}
         onSetRevealFunctions={handleRevealFunctions}
+        onNavigateBack={navigateToThemedBoards}
       />
     </div>
   {:else}
