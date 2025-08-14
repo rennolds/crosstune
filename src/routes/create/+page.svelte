@@ -8,6 +8,7 @@
   );
   let selectedCell = $state({ row: -1, col: -1 });
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
+  let showSplash = $state(true);
   let showWordForms = $state(false);
   let showFinalDetails = $state(false);
   let detectedWords = $state([]);
@@ -17,6 +18,8 @@
     email: "",
     notes: "",
   });
+  let wordCountWarning = $state("");
+  let showWarning = $state(false);
 
   $effect(() => {
     if (typeof document !== "undefined") {
@@ -47,7 +50,7 @@
   }
 
   function handleCellInput(event, row, col) {
-    const value = event.target.value.toUpperCase().slice(0, 1);
+    const value = event.target.value.toUpperCase().slice(-1); // Take the last character typed
     gridData[row][col] = value;
 
     // Move to next cell after input based on direction
@@ -70,6 +73,11 @@
         }, 0);
       }
     }
+  }
+
+  function handleCellFocus(event, row, col) {
+    // Select all text when focusing on a cell so typing will replace it
+    event.target.select();
   }
 
   function toggleDirection() {
@@ -170,15 +178,64 @@
     return words;
   }
 
+  function validateWordCount(words) {
+    const wordCount = words.length;
+    if (wordCount < 8) {
+      wordCountWarning = `You need at least 8 words. Currently have ${wordCount} words.`;
+      showWarning = true;
+      return false;
+    } else if (wordCount > 9) {
+      wordCountWarning = `Maximum 9 words allowed. Currently have ${wordCount} words.`;
+      showWarning = true;
+      return false;
+    }
+    return true;
+  }
+
   function handleNextClick() {
     const words = detectWords();
+
+    if (!validateWordCount(words)) {
+      return; // Don't proceed if word count is invalid
+    }
+
     detectedWords = words;
     showWordForms = true;
+    showWarning = false; // Hide any existing warnings
+  }
+
+  function dismissWarning() {
+    showWarning = false;
+  }
+
+  function validateWordForms() {
+    for (let i = 0; i < detectedWords.length; i++) {
+      const word = detectedWords[i];
+      if (
+        !word.clue.trim() ||
+        !word.artistName.trim() ||
+        !word.songName.trim()
+      ) {
+        wordCountWarning = `All fields are required. Please fill in clue, artist name, and song name for "${word.word}".`;
+        showWarning = true;
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function handleStartCreating() {
+    showSplash = false;
   }
 
   function handleFinalDetailsClick() {
+    if (!validateWordForms()) {
+      return; // Don't proceed if validation fails
+    }
+
     showWordForms = false;
     showFinalDetails = true;
+    showWarning = false; // Hide any existing warnings
   }
 
   function handleKeyDown(event, row, col) {
@@ -265,76 +322,156 @@
   class="min-h-screen bg-white dark:bg-[#202020] text-black dark:text-white"
 >
   <div class="container mx-auto px-4 py-8">
-    <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold mb-2">Create Your Puzzle</h1>
-      {#if !showWordForms && !showFinalDetails}
-        <p class="text-gray-600 dark:text-gray-400">
-          Design a 12x10 crossword puzzle to submit for featuring
-        </p>
-
-        <!-- Direction Toggle -->
-        <div class="mt-4 flex items-center justify-center space-x-4">
-          <div class="flex items-center space-x-2">
-            <span class="text-sm font-medium">Direction:</span>
+    {#if !showSplash && !showWordForms && !showFinalDetails}
+      <!-- Direction Toggle for Grid Page -->
+      <div class="text-center mb-8">
+        <div class="flex items-center justify-center space-x-4">
+          <div class="flex items-center space-x-3">
+            <span class="text-sm font-medium">across</span>
             <button
-              class="px-3 py-1 rounded-lg border-2 transition-colors font-medium"
-              class:bg-blue-500={direction === "ACROSS"}
-              class:text-white={direction === "ACROSS"}
-              class:border-blue-500={direction === "ACROSS"}
-              class:bg-transparent={direction !== "ACROSS"}
-              class:text-gray-700={direction !== "ACROSS"}
-              class:dark:text-gray-300={direction !== "ACROSS"}
-              class:border-gray-300={direction !== "ACROSS"}
-              onclick={toggleDirection}
-            >
-              ACROSS
-            </button>
-            <button
-              class="px-3 py-1 rounded-lg border-2 transition-colors font-medium"
+              class="relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               class:bg-blue-500={direction === "DOWN"}
-              class:text-white={direction === "DOWN"}
-              class:border-blue-500={direction === "DOWN"}
-              class:bg-transparent={direction !== "DOWN"}
-              class:text-gray-700={direction !== "DOWN"}
-              class:dark:text-gray-300={direction !== "DOWN"}
-              class:border-gray-300={direction !== "DOWN"}
+              class:bg-gray-300={direction === "ACROSS"}
+              class:dark:bg-gray-600={direction === "ACROSS"}
               onclick={toggleDirection}
+              aria-label="Toggle direction"
             >
-              DOWN
+              <span
+                class="inline-block w-4 h-4 transform bg-white rounded-full transition-transform"
+                class:translate-x-6={direction === "DOWN"}
+                class:translate-x-1={direction === "ACROSS"}
+              ></span>
             </button>
+            <span class="text-sm font-medium">down</span>
           </div>
         </div>
 
-        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+        <p
+          class="text-sm text-gray-500 dark:text-gray-400 mt-2 hidden md:block"
+        >
           Press ENTER to toggle direction while typing
         </p>
-      {:else if showWordForms}
-        <p class="text-gray-600 dark:text-gray-400">
-          Enter clues and song information for each word
-        </p>
-      {:else if showFinalDetails}
-        <p class="text-gray-600 dark:text-gray-400">
-          Just a few optional details and you're done!
-        </p>
-      {/if}
-    </div>
+      </div>
+    {/if}
 
-    {#if !showWordForms && !showFinalDetails}
+    {#if showSplash}
+      <!-- Splash Screen / Guidelines -->
+      <div class="max-w-4xl mx-auto">
+        <div class="p-6 mb-6">
+          <h2 class="text-2xl font-bold mb-3">
+            Create your own crosstune puzzle to be featured!
+          </h2>
+
+          <div class="space-y-2">
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">1.</span>
+              <span
+                >Fill the puzzle grid with your answers (songs, artists,
+                lyrics...)</span
+              >
+            </div>
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">2.</span>
+              <span>Add the clue & song hint on the next page</span>
+            </div>
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">3.</span>
+              <span
+                >Give us your contact info and we'll reach out if we feature the
+                puzzle!</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">Helpful info</h3>
+
+          <div class="space-y-3">
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">1.</span>
+              <span>Each puzzle must have at least 8 words</span>
+            </div>
+
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">2.</span>
+              <span
+                >Answers can't float in empty space and must be connected</span
+              >
+            </div>
+
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">3.</span>
+              <div>
+                <div class="mb-1">
+                  Hints can be as creative as you'd like. Some common ones:
+                </div>
+                <div class="ml-4 space-y-0.5">
+                  <div class="flex items-start">
+                    <span class="mr-2">a.</span>
+                    <span>Song title</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="mr-2">b.</span>
+                    <span>Artist name</span>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="mr-2">c.</span>
+                    <span>Complete the lyric: ____</span>
+                  </div>
+                </div>
+                <div class="mt-1 text-sm">
+                  Very trivia focused clues like "what country was this artist
+                  born in" or "what year did this song come out?" are
+                  discouraged.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">4.</span>
+              <span>Profanity will not be featured on the Daily.</span>
+            </div>
+
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">5.</span>
+              <span
+                >We occasionally can't get a certain song or play any snippet
+                we'd like, so we may need to tweak your puzzle a bit.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-6">
+          <button
+            class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+            onclick={handleStartCreating}
+          >
+            Start Creating
+          </button>
+        </div>
+      </div>
+    {:else if !showWordForms && !showFinalDetails}
       <!-- Grid Creation Step -->
-      <div class="flex justify-center">
-        <div class="grid grid-cols-12 gap-1 bg-black p-2 rounded-lg">
+      <div class="flex justify-center px-2 md:px-0">
+        <div
+          class="grid grid-cols-12 gap-0.5 md:gap-1 bg-black p-1 md:p-2 rounded-lg w-full max-w-fit overflow-x-auto"
+        >
           {#each gridData as row, rowIndex}
             {#each row as cell, colIndex}
               <div class="relative">
                 <input
                   type="text"
-                  class="w-8 h-8 text-center text-black font-bold text-sm border-2 border-gray-300 focus:border-blue-500 focus:outline-none bg-white"
+                  class="w-8 h-8 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg border border-gray-300 focus:border-blue-500 focus:outline-none bg-white"
                   class:bg-blue-100={selectedCell.row === rowIndex &&
                     selectedCell.col === colIndex}
                   value={cell}
                   data-row={rowIndex}
                   data-col={colIndex}
                   onclick={() => handleCellClick(rowIndex, colIndex)}
+                  onfocus={(event) =>
+                    handleCellFocus(event, rowIndex, colIndex)}
                   oninput={(event) =>
                     handleCellInput(event, rowIndex, colIndex)}
                   onkeydown={(event) =>
@@ -347,38 +484,39 @@
         </div>
       </div>
 
-      <div class="mt-8 text-center">
-        <div class="space-y-4">
-          <div class="flex justify-center space-x-4">
-            <button
-              class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-              onclick={() => {
-                // Clear grid
-                gridData = Array(10)
-                  .fill()
-                  .map(() => Array(12).fill(""));
-                showWordForms = false;
-                showFinalDetails = false;
-                detectedWords = [];
-                finalDetails = {
-                  creditName: "",
-                  boardTitle: "",
-                  email: "",
-                  notes: "",
-                };
-              }}
-            >
-              Clear Grid
-            </button>
+      <div class="mt-8">
+        <div class="flex justify-between items-center max-w-md mx-auto">
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            onclick={() => {
+              // Clear grid and reset to splash
+              gridData = Array(10)
+                .fill()
+                .map(() => Array(12).fill(""));
+              showSplash = true;
+              showWordForms = false;
+              showFinalDetails = false;
+              detectedWords = [];
+              finalDetails = {
+                creditName: "",
+                boardTitle: "",
+                email: "",
+                notes: "",
+              };
+            }}
+          >
+            Clear Grid
+          </button>
 
-            <button
-              class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-              onclick={handleNextClick}
-            >
-              NEXT
-            </button>
-          </div>
+          <button
+            class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            onclick={handleNextClick}
+          >
+            NEXT
+          </button>
+        </div>
 
+        <div class="text-center mt-4">
           <div class="text-sm text-gray-600 dark:text-gray-400">
             Use letters and numbers to fill your crossword. Navigate with arrow
             keys or mouse clicks.
@@ -402,36 +540,41 @@
 
               <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label class="block text-sm font-medium mb-1">Clue:</label>
+                  <label class="block text-sm font-medium mb-1">
+                    Clue: <span class="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
+                    required
                     class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
                     bind:value={detectedWords[index].clue}
-                    placeholder="Enter the crossword clue"
+                    placeholder="Enter the crossword clue (required)"
                   />
                 </div>
 
                 <div>
-                  <label class="block text-sm font-medium mb-1"
-                    >Artist Name:</label
-                  >
+                  <label class="block text-sm font-medium mb-1">
+                    Artist Name: <span class="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
+                    required
                     class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
                     bind:value={detectedWords[index].artistName}
-                    placeholder="Enter artist name"
+                    placeholder="Enter artist name (required)"
                   />
                 </div>
 
                 <div>
-                  <label class="block text-sm font-medium mb-1"
-                    >Song Name:</label
-                  >
+                  <label class="block text-sm font-medium mb-1">
+                    Song Name: <span class="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
+                    required
                     class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
                     bind:value={detectedWords[index].songName}
-                    placeholder="Enter song name"
+                    placeholder="Enter song name (required)"
                   />
                 </div>
               </div>
@@ -535,6 +678,38 @@
     {/if}
   </div>
 </main>
+
+<!-- Word Count Warning -->
+{#if showWarning}
+  <div
+    class="fixed top-20 right-4 bg-red-500 text-white px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
+  >
+    <div class="flex items-start justify-between">
+      <div class="mr-3">
+        <p class="text-sm font-medium">{wordCountWarning}</p>
+      </div>
+      <button
+        onclick={dismissWarning}
+        class="flex-shrink-0 p-1 hover:bg-red-600 rounded transition-colors"
+        aria-label="Dismiss warning"
+      >
+        <svg
+          class="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+{/if}
 
 <style>
   input:focus {
