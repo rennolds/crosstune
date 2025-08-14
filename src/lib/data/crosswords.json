@@ -10735,8 +10735,107 @@
       }
     ]
   },
+  "2025-08-14": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "purple",
+    "words": [
+      {
+        "word": "WILLOW",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First name of this nepo baby",
+        "audioUrl": "1035037183",
+        "startAt": "0:37",
+        "audioDuration": 32
+      },
+      {
+        "word": "ANTI",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "This track is the lead single of what album?",
+        "audioUrl": "255769417",
+        "startAt": "0:07",
+        "audioDuration": 13
+      },
+      {
+        "word": "SAYITAINTSO",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256246110",
+        "startAt": "1:08",
+        "audioDuration": 22
+      },
+      {
+        "word": "CHANDELIER",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "139590122",
+        "startAt": "0:21.5",
+        "audioDuration": 19.25
+      },
+      {
+        "word": "IWANNA",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "____ Be Yours",
+        "audioUrl": "366184949",
+        "startAt": "0:16",
+        "audioDuration": 16
+      },
+      {
+        "word": "SHUTUP",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First two words of this song title",
+        "audioUrl": "167152767",
+        "startAt": "0:00",
+        "audioDuration": 19.5
+      },
+      {
+        "word": "APUNK",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "265546394",
+        "startAt": "0:11.5",
+        "audioDuration": 15.5
+      },
+      {
+        "word": "WITHASMILE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This song title, minus the first word",
+        "audioUrl": "2028935000",
+        "startAt": "0:38",
+        "audioDuration": 19
+      }
+    ]
+  },
   "2025-08-16": {
-    "title": "hbd chris",
+    "title": "hbd chris b-e",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -10795,9 +10894,9 @@
         "direction": "down",
         "color": "#568EFF",
         "textClue": "Country this artist was born in",
-        "audioUrl": "1563214087",
-        "startAt": "0:07",
-        "audioDuration": 19
+        "audioUrl": "301971182",
+        "startAt": "0:29.5",
+        "audioDuration": 33
       },
       {
         "word": "ROSS",
@@ -10831,6 +10930,215 @@
         "audioUrl": "122326263",
         "startAt": "2:10.9",
         "audioDuration": 13
+      }
+    ]
+  },
+  "2025-08-17": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BLINK182",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "audioUrl": "268845826",
+        "startAt": "0:20.5",
+        "audioDuration": 22
+      },
+      {
+        "word": "1979",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "255892543",
+        "startAt": "0:07",
+        "audioDuration": 22
+      },
+      {
+        "word": "SNOOZE",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1396885495",
+        "startAt": "0:33.79",
+        "audioDuration": 22
+      },
+      {
+        "word": "OKAY",
+        "startX": 5,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "I'm Not ____",
+        "audioUrl": "256032560",
+        "startAt": "0:24",
+        "audioDuration": 13.8
+      },
+      {
+        "word": "DOSES",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Pairs well with Mimosas",
+        "audioUrl": "352002485",
+        "startAt": "1:48",
+        "audioDuration": 32
+      },
+      {
+        "word": "SUNSHINE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Second word of this the album (also good for getting vitamin d)",
+        "audioUrl": "1768722903",
+        "startAt": "2:06.5",
+        "audioDuration": 31.5
+      },
+      {
+        "word": "AGORA",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word of this song title",
+        "audioUrl": "1619585556",
+        "startAt": "0:07.9",
+        "audioDuration": 19.9
+      },
+      {
+        "word": "GIMMEMORE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "256271854",
+        "startAt": "0:00",
+        "audioDuration": 17
+      },
+      {
+        "word": "RAE",
+        "startX": 7,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last name of this artist/former Tik Toker",
+        "audioUrl": "1892454861",
+        "startAt": "0:31",
+        "audioDuration": 14
+      }
+    ]
+  },
+  "2025-08-19": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JENNA",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First name of the actress featured in this music video",
+        "audioUrl": "1901884557",
+        "startAt": "1:57",
+        "audioDuration": 20.65
+      },
+      {
+        "word": "LAURYN",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist stage name, but just the first name",
+        "audioUrl": "253540232",
+        "startAt": "0:16",
+        "audioDuration": 12
+      },
+      {
+        "word": "BRITNEY",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "First name of the singer who the DJ played",
+        "audioUrl": "256019933",
+        "startAt": "1:27.25",
+        "audioDuration": 10
+      },
+      {
+        "word": "STACY",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The person we all feel bad for on this track",
+        "audioUrl": "256197826",
+        "startAt": "0:07.5",
+        "audioDuration": 16.6
+      },
+      {
+        "word": "MICK",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Kick 'em to the curb unless they look like ____",
+        "audioUrl": "289946362",
+        "startAt": "0:16.32",
+        "audioDuration": 14
+      },
+      {
+        "word": "THURMAN",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last name of the actress this song is about",
+        "audioUrl": "263910481",
+        "startAt": "0:48.8",
+        "audioDuration": 24.5
+      },
+      {
+        "word": "ELLIOT",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist stage name, but just the last name",
+        "audioUrl": "255814770",
+        "startAt": "0:22",
+        "audioDuration": 15
+      },
+      {
+        "word": "JESSIE",
+        "startX": 7,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The subject of envy on this track",
+        "audioUrl": "253506870",
+        "startAt": "0:18",
+        "audioDuration": 12
       }
     ]
   }
