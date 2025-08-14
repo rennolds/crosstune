@@ -203,6 +203,7 @@
     detectedWords = words;
     showWordForms = true;
     showWarning = false; // Hide any existing warnings
+    scrollToTop();
   }
 
   function dismissWarning() {
@@ -227,6 +228,7 @@
 
   function handleStartCreating() {
     showSplash = false;
+    scrollToTop();
   }
 
   function handleSubmitAnother() {
@@ -245,6 +247,7 @@
       email: "",
       notes: "",
     };
+    scrollToTop();
   }
 
   function handleFinalDetailsClick() {
@@ -255,6 +258,7 @@
     showWordForms = false;
     showFinalDetails = true;
     showWarning = false; // Hide any existing warnings
+    scrollToTop();
   }
 
   function handleKeyDown(event, row, col) {
@@ -327,6 +331,12 @@
 
   function navigateToThemed() {
     window.location.href = "/themed";
+  }
+
+  function scrollToTop() {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 </script>
 
@@ -522,6 +532,7 @@
                 email: "",
                 notes: "",
               };
+              scrollToTop();
             }}
           >
             Clear Grid
@@ -604,7 +615,10 @@
         <div class="flex justify-center space-x-4 mt-8">
           <button
             class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-            onclick={() => (showWordForms = false)}
+            onclick={() => {
+              showWordForms = false;
+              scrollToTop();
+            }}
           >
             Back to Grid
           </button>
@@ -675,6 +689,7 @@
             onclick={() => {
               showFinalDetails = false;
               showWordForms = true;
+              scrollToTop();
             }}
           >
             Back to Clues
@@ -700,6 +715,7 @@
                   // Show success screen instead of warning
                   showFinalDetails = false;
                   showSuccessScreen = true;
+                  scrollToTop();
                 } else {
                   wordCountWarning =
                     "Failed to submit puzzle. Please try again.";
