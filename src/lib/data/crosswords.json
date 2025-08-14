@@ -10834,6 +10834,106 @@
       }
     ]
   },
+  
+  "2025-08-15": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "DEMONS",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "271224938",
+        "startAt": "0:38.75",
+        "audioDuration": 7
+      },
+      {
+        "word": "DOECHII",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "1902541839",
+        "startAt": "0:49.5",
+        "audioDuration": 7
+      },
+      {
+        "word": "ANGELS",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "427879689",
+        "startAt": "0:50",
+        "audioDuration": 9.3
+      },
+      {
+        "word": "LOVE",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "\"in the name of ____\"",
+        "audioUrl": "275869874",
+        "startAt": "0:21",
+        "audioDuration": 7
+      },
+      {
+        "word": "LONELY",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "If you're what?",
+        "audioUrl": "255861762",
+        "startAt": "0:19",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "HBFS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Acronym of the four attributes that we become in this song",
+        "audioUrl": "254111788",
+        "startAt": "0:18",
+        "audioDuration": 10
+      },
+      {
+        "word": "HUMAN",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "I'm only what?",
+        "audioUrl": "278704006",
+        "startAt": "1:22.5",
+        "audioDuration": 9
+      },
+      {
+        "word": "GOBLIN",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song/Album title ",
+        "audioUrl": "60030308",
+        "startAt": "1:55",
+        "audioDuration": 14
+      }
+    ]
+  },
   "2025-08-16": {
     "title": "hbd chris b-e",
     "version": "1.0.0",
