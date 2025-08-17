@@ -11034,8 +11034,8 @@
     ]
   },
   "2025-08-17": {
-    "title": "",
-    "version": "1.0.0",
+    "title": "For Audrey",
+    "version": "1.0.1",
     "size": {
       "width": 12,
       "height": 10
@@ -11103,7 +11103,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Second word of this the album (also good for getting vitamin d)",
+        "textClue": "Second word of this album (also good for getting vitamin d)",
         "audioUrl": "1768722903",
         "startAt": "2:06.5",
         "audioDuration": 31.5
