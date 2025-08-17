@@ -50,13 +50,19 @@
     return 0;
   }
 
-  // Convert themed crosswords object to array and sort by date_available (newest first)
+  // Convert themed crosswords object to array, filter by availability date, and sort by date_available (newest first)
   let sortedPuzzles = $derived(
     Object.entries(themedCrosswords)
       .map(([id, puzzle]) => ({
         id: parseInt(id),
         ...puzzle,
       }))
+      .filter((puzzle) => {
+        // Only show puzzles that are available (date_available <= today)
+        const puzzleDate = new Date(puzzle.date_available + "T12:00:00-04:00"); // EST/EDT timezone
+        const today = new Date();
+        return puzzleDate <= today;
+      })
       .sort((a, b) => {
         const dateA = new Date(a.date_available + "T12:00:00");
         const dateB = new Date(b.date_available + "T12:00:00");
