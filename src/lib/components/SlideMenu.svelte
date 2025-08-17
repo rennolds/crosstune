@@ -192,10 +192,15 @@
               </span>
             </div>
             <div
-              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
+              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400 flex items-center gap-2"
               on:click={navigateToCreate}
             >
               Create Puzzle
+              <span
+                class="new-badge bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold"
+              >
+                NEW
+              </span>
             </div>
             <div
               class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"

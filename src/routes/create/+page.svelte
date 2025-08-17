@@ -350,7 +350,7 @@
 <main
   class="min-h-screen bg-white dark:bg-[#202020] text-black dark:text-white"
 >
-  <div class="container mx-auto px-4 py-8 pt-16 md:pt-8">
+  <div class="create-container mx-auto px-4 py-8 md:pt-16">
     {#if !showSplash && !showWordForms && !showFinalDetails && !showSuccessScreen}
       <!-- Direction Toggle for Grid Page -->
       <div class="text-center mb-8">
@@ -378,7 +378,12 @@
         <p
           class="text-sm text-gray-500 dark:text-gray-400 mt-2 hidden md:block"
         >
-          Press ENTER to toggle direction while typing
+          press ENTER to toggle direction while typing.
+        </p>
+        <p
+          class="text-sm text-gray-500 dark:text-gray-400 mt-2 hidden md:block"
+        >
+          navigate with arrow keys or mouse clicks.
         </p>
       </div>
     {/if}
@@ -538,18 +543,24 @@
             Clear Grid
           </button>
 
-          <button
-            class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+          <div
+            class="text-black dark:text-white font-semibold cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
             onclick={handleNextClick}
           >
-            NEXT
-          </button>
-        </div>
-
-        <div class="text-center mt-4">
-          <div class="text-sm text-gray-600 dark:text-gray-400">
-            Use letters and numbers to fill your crossword. Navigate with arrow
-            keys or mouse clicks.
+            clues and song snippets
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
           </div>
         </div>
       </div>
@@ -712,7 +723,6 @@
 
                 if (response.ok) {
                   const result = await response.json();
-                  // Show success screen instead of warning
                   showFinalDetails = false;
                   showSuccessScreen = true;
                   scrollToTop();
@@ -805,5 +815,13 @@
 <style>
   input:focus {
     z-index: 10;
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    .create-container {
+      padding-top: 3.5rem; /* Increase padding to ensure proper spacing below navbar */
+      margin-top: 0;
+    }
   }
 </style>
