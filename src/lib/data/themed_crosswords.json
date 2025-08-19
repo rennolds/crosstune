@@ -307,5 +307,118 @@
         "audioDuration": 5
       }
     ]
+  },
+  "4": {
+    "title": "2010s EDM",
+    "version": "1.0.0",
+    "date_available": "2025-08-17",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "thumbnail": "https://djmag.com/sites/default/files/styles/djm_23_961x540_jpg/public/article/image/H0O2msA.jpg?itok=afk5pl2a",
+    "author": "Tommy Rennolds",
+    "theme": "purple",
+    "words": [
+      {
+        "word": "SOCLOSE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "255884736",
+        "startAt": "0:14.5",
+        "audioDuration": 12
+      },
+      {
+        "word": "LEANON",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "193781466",
+        "startAt": "0:49.5",
+        "audioDuration": 17
+      },
+      {
+        "word": "TITANIUM",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "216540875",
+        "startAt": "0:45",
+        "audioDuration": 32
+      },
+      {
+        "word": "STAY",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "308997360",
+        "startAt": "1:05",
+        "audioDuration": 18
+      },
+      {
+        "word": "HOPELESS",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "The kind of place in this song",
+        "audioUrl": "23907786",
+        "startAt": "1:03",
+        "audioDuration": 23
+      },
+      {
+        "word": "CLARITY",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "260999200",
+        "startAt": "0:06",
+        "audioDuration": 24
+      },
+      {
+        "word": "ROSE",
+        "startX": 5,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "This song title but singular (also a flower)",
+        "audioUrl": "258097961",
+        "startAt": "1:13.5",
+        "audioDuration": 24
+      },
+      {
+        "word": "BIEBER",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last name of the featured artist",
+        "audioUrl": "193270658",
+        "startAt": "1:04",
+        "audioDuration": 18.5
+      },
+      {
+        "word": "LEVELS",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "284331783",
+        "startAt": "0:00",
+        "audioDuration": 22
+      }
+    ]
   }
 } 

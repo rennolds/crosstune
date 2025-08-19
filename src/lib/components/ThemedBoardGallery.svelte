@@ -1,6 +1,9 @@
 <script>
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
-  import { isThemedPuzzleSolved } from "$lib/utils/storage.js";
+  import {
+    isThemedPuzzleSolved,
+    getEastCoastDate,
+  } from "$lib/utils/storage.js";
 
   let { themedCrosswords, onSelectPuzzle } = $props();
   let isDark = $derived(getIsDarkMode());
@@ -50,13 +53,19 @@
     return 0;
   }
 
-  // Convert themed crosswords object to array and sort by date_available (newest first)
+  // Convert themed crosswords object to array, filter by availability date, and sort by date_available (newest first)
   let sortedPuzzles = $derived(
     Object.entries(themedCrosswords)
       .map(([id, puzzle]) => ({
         id: parseInt(id),
         ...puzzle,
       }))
+      .filter((puzzle) => {
+        // Only show puzzles that are available (date_available <= today in EST)
+        // Use the same date logic as the main daily puzzle
+        const todayEst = getEastCoastDate(); // Gets current date in EST as YYYY-MM-DD
+        return puzzle.date_available <= todayEst;
+      })
       .sort((a, b) => {
         const dateA = new Date(a.date_available + "T12:00:00");
         const dateB = new Date(b.date_available + "T12:00:00");
