@@ -473,7 +473,7 @@
         </div>
 
         <!-- Desktop button - shown at bottom -->
-        <div class="text-center mt-6 hidden md:block">
+        <div class="text-center mt-6 hidden md:block pb-24">
           <button
             class="rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={handleStartCreating}
@@ -545,7 +545,7 @@
         </div>
       </div>
 
-      <div class="mt-4">
+      <div class="mt-4 pb-24">
         <div class="flex justify-between items-center max-w-md mx-auto">
           <button
             class="bg-rose-500 hover:bg-rose-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
