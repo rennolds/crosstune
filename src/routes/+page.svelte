@@ -43,7 +43,9 @@
 {#if showSplash}
   <SplashScreen onPlay={handlePlay} />
 {:else}
-  <main class="dark min-h-screen flex flex-col md:pt-0 pt-16">
+  <main
+    class="min-h-screen flex flex-col md:pt-0 pt-16 bg-gray-200 dark:bg-[#303030]"
+  >
     <div class="flex-1 pt-0 md:pt-0 lg:mr-35">
       <CrosswordGrid1
         onSetRevealFunctions={handleRevealFunctions}

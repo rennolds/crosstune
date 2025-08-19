@@ -13,6 +13,18 @@
   let showFinalDetails = $state(false);
   let showSuccessScreen = $state(false);
   let detectedWords = $state([]);
+
+  // Game colors from crosswords.json
+  const gameColors = [
+    "#FFB34B", // Orange
+    "#00FFFF", // Cyan
+    "#FE9C9C", // Pink
+    "#28D66A", // Green
+    "#FFCEFD", // Light Pink
+    "#FF5B5E", // Red
+    "#568EFF", // Blue
+  ];
+
   let finalDetails = $state({
     creditName: "",
     boardTitle: "",
@@ -347,42 +359,15 @@
   hideTimer={true}
 />
 
-<main
-  class="min-h-screen bg-white dark:bg-[#202020] text-black dark:text-white"
->
+<main class="min-h-screen flex flex-col text-black dark:text-white">
   <div class="create-container mx-auto px-4 py-8 md:pt-16">
     {#if !showSplash && !showWordForms && !showFinalDetails && !showSuccessScreen}
-      <!-- Direction Toggle for Grid Page -->
-      <div class="text-center mb-8">
-        <div class="flex items-center justify-center space-x-4">
-          <div class="flex items-center space-x-3">
-            <span class="text-sm font-medium">across</span>
-            <button
-              class="relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              class:bg-blue-500={direction === "DOWN"}
-              class:bg-gray-300={direction === "ACROSS"}
-              class:dark:bg-gray-600={direction === "ACROSS"}
-              onclick={toggleDirection}
-              aria-label="Toggle direction"
-            >
-              <span
-                class="inline-block w-4 h-4 transform bg-white rounded-full transition-transform"
-                class:translate-x-6={direction === "DOWN"}
-                class:translate-x-1={direction === "ACROSS"}
-              ></span>
-            </button>
-            <span class="text-sm font-medium">down</span>
-          </div>
-        </div>
-
-        <p
-          class="text-sm text-gray-500 dark:text-gray-400 mt-2 hidden md:block"
-        >
+      <!-- Instructions for Grid Page -->
+      <div class="text-center mb-6">
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
           press ENTER to toggle direction while typing.
         </p>
-        <p
-          class="text-sm text-gray-500 dark:text-gray-400 mt-2 hidden md:block"
-        >
+        <p class="text-sm text-gray-500 dark:text-gray-400">
           navigate with arrow keys or mouse clicks.
         </p>
       </div>
@@ -392,9 +377,19 @@
       <!-- Splash Screen / Guidelines -->
       <div class="max-w-4xl mx-auto">
         <div class="p-6 mb-6">
-          <h2 class="text-2xl font-bold mb-3">
+          <h2 class="text-2xl font-bold mb-6">
             Create your own crosstune puzzle to be featured!
           </h2>
+
+          <!-- Mobile button - shown early -->
+          <div class="text-center mb-6 md:hidden">
+            <button
+              class="rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
+              onclick={handleStartCreating}
+            >
+              Start Creating
+            </button>
+          </div>
 
           <div class="space-y-2">
             <div class="flex items-start">
@@ -477,9 +472,10 @@
           </div>
         </div>
 
-        <div class="text-center mt-6">
+        <!-- Desktop button - shown at bottom -->
+        <div class="text-center mt-6 hidden md:block">
           <button
-            class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+            class="rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={handleStartCreating}
           >
             Start Creating
@@ -518,10 +514,41 @@
         </div>
       </div>
 
-      <div class="mt-8">
+      <!-- Direction Toggle below grid -->
+      <div class="text-center mt-4 mb-4">
+        <div class="flex items-center justify-center space-x-4">
+          <div class="flex items-center space-x-3">
+            <span class="text-sm font-medium text-black dark:text-white"
+              >across</span
+            >
+            <button
+              class="relative inline-flex items-center h-6 rounded-full w-11 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              class:bg-orange-400={direction === "DOWN"}
+              class:bg-gray-300={direction === "ACROSS"}
+              class:dark:bg-gray-600={direction === "ACROSS"}
+              onclick={toggleDirection}
+              aria-label="Toggle direction"
+            >
+              <span
+                class="inline-block w-4 h-4 transform rounded-full transition-transform"
+                class:bg-white={direction === "DOWN"}
+                class:bg-gray-600={direction === "ACROSS"}
+                class:dark:bg-gray-300={direction === "ACROSS"}
+                class:translate-x-6={direction === "DOWN"}
+                class:translate-x-1={direction === "ACROSS"}
+              ></span>
+            </button>
+            <span class="text-sm font-medium text-black dark:text-white"
+              >down</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
         <div class="flex justify-between items-center max-w-md mx-auto">
           <button
-            class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            class="bg-rose-500 hover:bg-rose-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
             onclick={() => {
               // Clear grid and reset to splash
               gridData = Array(10)
@@ -547,7 +574,7 @@
             class="text-black dark:text-white font-semibold cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
             onclick={handleNextClick}
           >
-            clues and song snippets
+            clues and songs
             <svg
               class="w-4 h-4"
               fill="none"
@@ -566,78 +593,172 @@
       </div>
     {:else if showWordForms}
       <!-- Word Forms Step -->
-      <div class="max-w-4xl mx-auto">
-        <div class="space-y-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-8 text-center">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            Add Clues & Song Details
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400">
+            Fill in the clue and song information for each word in your puzzle
+          </p>
+        </div>
+
+        <div class="space-y-8">
           {#each detectedWords as word, index}
             <div
-              class="border border-gray-200 dark:border-gray-700 rounded-lg p-4"
+              class="bg-gray-50 dark:bg-[#303030] border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
-              <div class="flex items-center mb-3">
-                <span class="font-bold text-lg mr-2">{word.word}</span>
-                <span class="text-sm text-gray-500 dark:text-gray-400">
-                  ({word.direction} - Row {word.row + 1}, Col {word.col + 1})
-                </span>
+              <!-- Word Header -->
+              <div
+                class="flex items-center justify-between mb-6 pb-4 border-b border-gray-200 dark:border-gray-700"
+              >
+                <div class="flex items-center space-x-3">
+                  <div
+                    class="flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm text-white shadow-sm"
+                    style="background-color: {gameColors[
+                      index % gameColors.length
+                    ]}"
+                  >
+                    {index + 1}
+                  </div>
+                  <div>
+                    <span
+                      class="font-bold text-2xl text-gray-900 dark:text-white tracking-wider"
+                    >
+                      {word.word}
+                    </span>
+                    <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                      {word.direction} • Row {word.row + 1}, Col {word.col + 1}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="text-sm text-gray-500 dark:text-gray-400 font-medium"
+                >
+                  {word.word.length} letters
+                </div>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Form Fields -->
+              <div class="space-y-6">
+                <!-- Clue Field - Full Width -->
                 <div>
-                  <label class="block text-sm font-medium mb-1">
-                    Clue: <span class="text-red-500">*</span>
+                  <label
+                    for="clue-{index}"
+                    class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                  >
+                    <svg
+                      class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                    Clue
+                    <span class="text-red-500 ml-1">*</span>
                   </label>
                   <input
+                    id="clue-{index}"
                     type="text"
                     required
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
+                    placeholder="Enter your creative clue here..."
+                    class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                     bind:value={detectedWords[index].clue}
-                    placeholder="Enter the crossword clue (required)"
                   />
                 </div>
 
-                <div>
-                  <label class="block text-sm font-medium mb-1">
-                    Artist Name: <span class="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                    bind:value={detectedWords[index].artistName}
-                    placeholder="Enter artist name (required)"
-                  />
-                </div>
+                <!-- Artist and Song Fields - Side by Side -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="artist-{index}"
+                      class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                    >
+                      <svg
+                        class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        ></path>
+                      </svg>
+                      Artist Name
+                      <span class="text-red-500 ml-1">*</span>
+                    </label>
+                    <input
+                      id="artist-{index}"
+                      type="text"
+                      required
+                      placeholder="Artist or band name"
+                      class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                      bind:value={detectedWords[index].artistName}
+                    />
+                  </div>
 
-                <div>
-                  <label class="block text-sm font-medium mb-1">
-                    Song Name: <span class="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                    bind:value={detectedWords[index].songName}
-                    placeholder="Enter song name (required)"
-                  />
+                  <div>
+                    <label
+                      for="song-{index}"
+                      class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                    >
+                      <svg
+                        class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                        ></path>
+                      </svg>
+                      Song Name
+                      <span class="text-red-500 ml-1">*</span>
+                    </label>
+                    <input
+                      id="song-{index}"
+                      type="text"
+                      required
+                      placeholder="Song title"
+                      class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                      bind:value={detectedWords[index].songName}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           {/each}
         </div>
 
-        <div class="flex justify-center space-x-4 mt-8">
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 mt-12 pt-8 border-t border-gray-200 dark:border-gray-700"
+        >
           <button
-            class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            class="w-full sm:w-auto px-8 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] text-gray-700 dark:text-gray-300 font-semibold transition-all duration-200 hover:border-gray-400 dark:hover:border-gray-500"
             onclick={() => {
               showWordForms = false;
               scrollToTop();
             }}
           >
-            Back to Grid
+            ← Back to Grid
           </button>
           <button
-            class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-colors"
+            class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={handleFinalDetailsClick}
           >
-            Final Details
+            Continue to Final Details →
           </button>
         </div>
       </div>
@@ -651,7 +772,7 @@
             </label>
             <input
               type="text"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
               bind:value={finalDetails.creditName}
               placeholder="Your name or handle (optional)"
             />
@@ -663,7 +784,7 @@
             </label>
             <input
               type="text"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
               bind:value={finalDetails.boardTitle}
               placeholder="Give your puzzle a title (optional)"
             />
@@ -676,7 +797,7 @@
             </label>
             <input
               type="email"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
               bind:value={finalDetails.email}
               placeholder="your.email@example.com (optional)"
             />
@@ -687,7 +808,7 @@
               Any other notes for us?
             </label>
             <textarea
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800 h-24 resize-vertical"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
               bind:value={finalDetails.notes}
               placeholder="Any additional notes or comments (optional)"
             ></textarea>
@@ -696,7 +817,7 @@
 
         <div class="flex justify-center space-x-4 mt-8">
           <button
-            class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] transition-colors"
             onclick={() => {
               showFinalDetails = false;
               showWordForms = true;
@@ -706,7 +827,7 @@
             Back to Clues
           </button>
           <button
-            class="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors"
+            class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={async () => {
               try {
                 const response = await fetch("/api/submit-puzzle", {
@@ -754,21 +875,21 @@
 
           <div class="space-y-4">
             <button
-              class="w-full bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              class="w-full rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
               onclick={handleSubmitAnother}
             >
               SUBMIT ANOTHER ONE
             </button>
 
             <button
-              class="w-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              class="w-full rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
               onclick={() => (window.location.href = "/")}
             >
               PLAY TODAY'S
             </button>
 
             <button
-              class="w-full bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              class="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
               onclick={() => (window.location.href = "/themed")}
             >
               PLAY THEMED PUZZLES
@@ -783,7 +904,7 @@
 <!-- Word Count Warning -->
 {#if showWarning}
   <div
-    class="fixed top-20 right-4 bg-red-500 text-white px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
+    class="fixed top-20 right-4 bg-amber-100 dark:bg-amber-900 border-l-4 border-amber-500 text-amber-800 dark:text-amber-200 px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
   >
     <div class="flex items-start justify-between">
       <div class="mr-3">
@@ -791,7 +912,7 @@
       </div>
       <button
         onclick={dismissWarning}
-        class="flex-shrink-0 p-1 hover:bg-red-600 rounded transition-colors"
+        class="flex-shrink-0 p-1 hover:bg-amber-200 dark:hover:bg-amber-800 rounded transition-colors"
         aria-label="Dismiss warning"
       >
         <svg
@@ -820,8 +941,9 @@
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     .create-container {
-      padding-top: 3.5rem; /* Increase padding to ensure proper spacing below navbar */
+      padding-top: 5rem; /* Increase padding to ensure proper spacing below navbar and instructions */
       margin-top: 0;
+      padding-bottom: 2rem; /* Add bottom padding for better mobile experience */
     }
   }
 </style>
