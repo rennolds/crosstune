@@ -743,7 +743,7 @@
         </div>
 
         <div
-          class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 mt-12 pt-8 border-t border-gray-200 dark:border-gray-700"
+          class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 mt-12 pt-8 pb-24 border-t border-gray-200 dark:border-gray-700"
         >
           <button
             class="w-full sm:w-auto px-8 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] text-gray-700 dark:text-gray-300 font-semibold transition-all duration-200 hover:border-gray-400 dark:hover:border-gray-500"
@@ -815,7 +815,7 @@
           </div>
         </div>
 
-        <div class="flex justify-center space-x-4 mt-8">
+        <div class="flex justify-center space-x-4 mt-8 pb-24">
           <button
             class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] transition-colors"
             onclick={() => {
@@ -867,7 +867,7 @@
     {:else if showSuccessScreen}
       <!-- Success Screen -->
       <div class="max-w-2xl mx-auto text-center">
-        <div class="p-8">
+        <div class="p-8 pb-24">
           <h2 class="text-3xl font-bold mb-6">Thanks for your submission!</h2>
           <p class="text-lg mb-8">We'll check out your puzzle asap!</p>
 

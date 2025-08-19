@@ -1645,7 +1645,7 @@
 
     <div
       class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
-      style="background-color: {isDark ? '#202020' : '#F3F4F6'}"
+      style="background-color: {isDark ? '#303030' : 'bg-gray-200'}"
     >
       <!-- Crossword grid container -->
       <div class="flex-1 w-full">
