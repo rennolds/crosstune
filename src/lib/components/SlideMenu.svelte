@@ -90,6 +90,14 @@
     }
   }
 
+  // Function to handle Create Puzzle navigation
+  function navigateToCreate() {
+    window.location.href = "/create";
+    if (isMobileDevice) {
+      onClose();
+    }
+  }
+
   function handleFollowUs() {
     if (browser) {
       window.open("https://twitter.com/spotle_io", "_blank");
@@ -131,7 +139,7 @@
 
   {#if isOpen}
     <div
-      class="slide-menu fixed top-0 md:mt-6 mt-14 md:pt-0 pt-[calc(10px)] bg-white dark:bg-[#303030] overflow-auto
+      class="slide-menu fixed top-0 md:mt-6 mt-14 md:pt-0 pt-[calc(10px)] bg-gray-200 dark:bg-[#303030] overflow-auto
             w-full shadow-lg h-full left-0"
       style="z-index: 50;"
     >
@@ -177,6 +185,17 @@
               on:click={navigateToThemedBoards}
             >
               Themed Puzzles
+              <span
+                class="new-badge bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold"
+              >
+                NEW
+              </span>
+            </div>
+            <div
+              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400 flex items-center gap-2"
+              on:click={navigateToCreate}
+            >
+              Create Puzzle
               <span
                 class="new-badge bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold"
               >

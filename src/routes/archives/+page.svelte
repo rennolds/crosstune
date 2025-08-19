@@ -115,7 +115,7 @@
   words={puzzle?.words || []}
 />
 
-<main class="dark min-h-screen flex flex-col">
+<main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedDate}
     <!-- In archive puzzle mode -->
     <div class="flex-1 pt-12.5 md:pt-0 lg:mr-35">

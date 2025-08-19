@@ -8,7 +8,7 @@ html, body {
 }
 
 :root {
-  --app-background: #F3F4F6;
+  --app-background: #E5E7EB; /* bg-gray-200 */
   /* --text-primary: #000000; */
   /* --clue-background: #FFFFFF;
   --clue-border: #E5E7EB; */
@@ -16,7 +16,7 @@ html, body {
 }
 
 .dark {
-  --app-background: #202020;
+  --app-background: #303030; /* dark:bg-[#303030] */
   /* --text-primary: #FFFFFF; */
   /* --clue-background: #374151;
   --clue-border: #4B5563; */

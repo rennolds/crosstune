@@ -58,7 +58,7 @@
   words={[]}
 />
 
-<main class="dark min-h-screen flex flex-col">
+<main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   <!-- Themed boards gallery mode -->
   <div class="themed-container mx-auto px-4 py-4 w-full max-w-6xl">
     <ThemedBoardGallery
