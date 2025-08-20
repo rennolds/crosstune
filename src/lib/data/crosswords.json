@@ -11340,5 +11340,105 @@
         "audioDuration": 12
       }
     ]
+  },
+
+  "2025-08-20": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JUMP",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "232329335",
+        "startAt": "0:12.5",
+        "audioDuration": 10
+      },
+      {
+        "word": "VANESSA",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255837979",
+        "startAt": "0:00",
+        "audioDuration": 9.2
+      },
+      {
+        "word": "HYPNOTIZE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "257080271",
+        "startAt": "0:38.1",
+        "audioDuration": 22
+      },
+      {
+        "word": "JUSTAGIRL",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "256153841",
+        "startAt": "0:07",
+        "audioDuration": 23
+      },
+      {
+        "word": "BABY",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of this song title",
+        "audioUrl": "256024569",
+        "startAt": "0:00",
+        "audioDuration": 1.65
+      },
+      {
+        "word": "JACKSON",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Surname in this song title",
+        "audioUrl": "904106608",
+        "startAt": "1:22",
+        "audioDuration": 14.5
+      },
+      {
+        "word": "GENIE",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of this song title",
+        "audioUrl": "257475638",
+        "startAt": "0:12",
+        "audioDuration": 18
+      },
+      {
+        "word": "THEDARK",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Dancing in ____",
+        "audioUrl": "257037364",
+        "startAt": "0:10",
+        "audioDuration": 16.1
+      }
+    ]
   }
 }
