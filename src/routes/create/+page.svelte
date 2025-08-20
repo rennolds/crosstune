@@ -425,12 +425,19 @@
             <div class="flex items-start">
               <span class="font-semibold mr-2">2.</span>
               <span
-                >Answers can't float in empty space and must be connected</span
+                >Most tracks played must be "household names." If it's too obscure, we can't use it.</span
               >
             </div>
 
             <div class="flex items-start">
               <span class="font-semibold mr-2">3.</span>
+              <span
+                >Answers can't float in empty space and must be connected</span
+              >
+            </div>
+
+            <div class="flex items-start">
+              <span class="font-semibold mr-2">4.</span>
               <div>
                 <div class="mb-1">
                   Hints can be as creative as you'd like. Some common ones:
@@ -458,12 +465,12 @@
             </div>
 
             <div class="flex items-start">
-              <span class="font-semibold mr-2">4.</span>
-              <span>Profanity will not be featured on the Daily.</span>
+              <span class="font-semibold mr-2">5.</span>
+              <span>Profanity will not be featured on the Daily (usually).</span>
             </div>
 
             <div class="flex items-start">
-              <span class="font-semibold mr-2">5.</span>
+              <span class="font-semibold mr-2">6.</span>
               <span
                 >We occasionally can't get a certain song or play any snippet
                 we'd like, so we may need to tweak your puzzle a bit.</span
