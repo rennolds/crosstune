@@ -11344,7 +11344,7 @@
 
   "2025-08-20": {
     "title": "",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "size": {
       "width": 12,
       "height": 10
@@ -11368,7 +11368,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Song title",
+        "textClue": "Artist first name",
         "audioUrl": "255837979",
         "startAt": "0:00",
         "audioDuration": 9.2
