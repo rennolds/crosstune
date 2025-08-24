@@ -1049,7 +1049,7 @@
 
                   <!-- SoundCloud Widget Area -->
                   <div
-                    class="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border"
+                    class="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border max-w-lg mx-auto"
                   >
                     <h4 class="font-semibold text-sm mb-3">
                       Preview & Set Timing
@@ -1057,10 +1057,10 @@
 
                     {#if soundcloudValidation[`word-${index}`]?.trackId}
                       <!-- SoundCloud iframe -->
-                      <div class="w-full max-w-md mx-auto mb-4">
+                      <div class="mb-4 flex justify-center">
                         <iframe
                           id="widget-{index}"
-                          class="w-full"
+                          class="w-full max-w-md"
                           height="120"
                           scrolling="no"
                           frameborder="no"
@@ -1077,7 +1077,9 @@
                       <!-- Enhanced Timing Controls -->
                       <div class="space-y-4">
                         <!-- Time Controls -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div
+                          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center"
+                        >
                           <div>
                             <label class="block text-xs font-medium mb-2"
                               >Start Time</label
@@ -1086,7 +1088,7 @@
                               <input
                                 type="text"
                                 placeholder="0:00"
-                                class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-center"
                                 value={widgetTiming[`word-${index}`]?.startAt ||
                                   "0:00"}
                                 oninput={(event) => {
@@ -1115,7 +1117,7 @@
                                 class="px-3 py-2 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
                                 onclick={() => getCurrentTime(index)}
                               >
-                                Use Current
+                                Set Start Point
                               </button>
                             </div>
                           </div>
@@ -1128,7 +1130,7 @@
                               <input
                                 type="text"
                                 placeholder="0:06"
-                                class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-center"
                                 value={widgetTiming[`word-${index}`]?.endAt ||
                                   "0:06"}
                                 readonly
@@ -1144,59 +1146,65 @@
                         </div>
 
                         <!-- Duration Controls -->
-                        <div>
-                          <label class="block text-xs font-medium mb-2"
-                            >Duration</label
-                          >
-                          <div class="flex items-center gap-2 mb-2">
-                            <input
-                              type="number"
-                              min="1"
-                              max="30"
-                              class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
-                              value={widgetTiming[`word-${index}`]
-                                ?.audioDuration || 6}
-                              oninput={(event) =>
-                                updateDuration(
-                                  index,
-                                  parseInt(event.target.value) || 6
-                                )}
-                            />
-                            <span class="text-xs text-gray-500">seconds</span>
-                            <button
-                              class="px-3 py-2 text-xs bg-green-500 text-white rounded hover:bg-green-600 transition-colors ml-2"
-                              onclick={() => previewSegment(index)}
+                        <div class="flex justify-center">
+                          <div>
+                            <label
+                              class="block text-xs font-medium mb-2 text-center"
+                              >Duration</label
                             >
-                              ▶ Preview Segment
-                            </button>
-                          </div>
-
-                          <!-- Quick Duration Presets -->
-                          <div class="flex gap-2">
-                            <span class="text-xs text-gray-500 self-center"
-                              >Quick:</span
-                            >
-                            {#each [3, 6, 10, 15] as duration}
+                            <div class="flex items-center gap-2 mb-2">
+                              <input
+                                type="number"
+                                min="1"
+                                max="30"
+                                class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                                value={widgetTiming[`word-${index}`]
+                                  ?.audioDuration || 6}
+                                oninput={(event) =>
+                                  updateDuration(
+                                    index,
+                                    parseInt(event.target.value) || 6
+                                  )}
+                              />
+                              <span class="text-xs text-gray-500">seconds</span>
                               <button
-                                class="px-2 py-1 text-xs rounded transition-colors"
-                                class:bg-blue-500={widgetTiming[`word-${index}`]
-                                  ?.audioDuration === duration}
-                                class:text-white={widgetTiming[`word-${index}`]
-                                  ?.audioDuration === duration}
-                                class:bg-gray-200={widgetTiming[`word-${index}`]
-                                  ?.audioDuration !== duration}
-                                class:dark:bg-gray-700={widgetTiming[
-                                  `word-${index}`
-                                ]?.audioDuration !== duration}
-                                class:hover:bg-blue-400={widgetTiming[
-                                  `word-${index}`
-                                ]?.audioDuration !== duration}
-                                onclick={() =>
-                                  setPresetDuration(index, duration)}
+                                class="px-3 py-2 text-xs bg-green-500 text-white rounded hover:bg-green-600 transition-colors ml-2"
+                                onclick={() => previewSegment(index)}
                               >
-                                {duration}s
+                                ▶ Preview Segment
                               </button>
-                            {/each}
+                            </div>
+
+                            <!-- Quick Duration Presets -->
+                            <div class="flex gap-2 justify-center">
+                              <span class="text-xs text-gray-500 self-center"
+                                >Quick:</span
+                              >
+                              {#each [3, 6, 10, 15] as duration}
+                                <button
+                                  class="px-2 py-1 text-xs rounded transition-colors"
+                                  class:bg-blue-500={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration === duration}
+                                  class:text-white={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration === duration}
+                                  class:bg-gray-200={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration !== duration}
+                                  class:dark:bg-gray-700={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration !== duration}
+                                  class:hover:bg-blue-400={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration !== duration}
+                                  onclick={() =>
+                                    setPresetDuration(index, duration)}
+                                >
+                                  {duration}s
+                                </button>
+                              {/each}
+                            </div>
                           </div>
                         </div>
 
@@ -1211,9 +1219,9 @@
                       </div>
                     {:else}
                       <!-- Placeholder -->
-                      <div class="w-full max-w-md mx-auto mb-4">
+                      <div class="mb-4 flex justify-center">
                         <div
-                          class="w-full h-[120px] bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600"
+                          class="w-full max-w-md h-[120px] bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600"
                         >
                           <div
                             class="text-center text-gray-500 dark:text-gray-400"
@@ -1242,40 +1250,94 @@
                       </div>
 
                       <!-- Disabled Timing Controls -->
-                      <div
-                        class="grid grid-cols-1 md:grid-cols-2 gap-4 opacity-50"
-                      >
-                        <div>
-                          <label class="block text-xs font-medium mb-2"
-                            >Start Time</label
-                          >
-                          <div class="flex items-center gap-2">
-                            <input
-                              type="text"
-                              placeholder="0:00"
-                              disabled
-                              class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
-                              value="0:00"
-                            />
-                            <button
-                              disabled
-                              class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed"
+                      <div class="space-y-4 opacity-50">
+                        <!-- Time Controls -->
+                        <div
+                          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center"
+                        >
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >Start Time</label
                             >
-                              Use Current
-                            </button>
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:00"
+                                disabled
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed text-center"
+                                value="0:00"
+                              />
+                              <button
+                                disabled
+                                class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed"
+                              >
+                                Set Start Point
+                              </button>
+                            </div>
+                          </div>
+
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >End Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:06"
+                                disabled
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed text-center"
+                                value="0:06"
+                              />
+                              <button
+                                disabled
+                                class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed"
+                              >
+                                Set End Point
+                              </button>
+                            </div>
                           </div>
                         </div>
 
-                        <div>
-                          <label class="block text-xs font-medium mb-2"
-                            >Duration (seconds)</label
-                          >
-                          <input
-                            type="number"
-                            disabled
-                            class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
-                            value="6"
-                          />
+                        <!-- Duration Controls -->
+                        <div class="flex justify-center">
+                          <div>
+                            <label
+                              class="block text-xs font-medium mb-2 text-center"
+                              >Duration</label
+                            >
+                            <div class="flex items-center gap-2 mb-2">
+                              <input
+                                type="number"
+                                min="1"
+                                max="30"
+                                disabled
+                                class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
+                                value="6"
+                              />
+                              <span class="text-xs text-gray-500">seconds</span>
+                              <button
+                                disabled
+                                class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed ml-2"
+                              >
+                                ▶ Preview Segment
+                              </button>
+                            </div>
+
+                            <!-- Quick Duration Presets -->
+                            <div class="flex gap-2 justify-center">
+                              <span class="text-xs text-gray-500 self-center"
+                                >Quick:</span
+                              >
+                              {#each [3, 6, 10, 15] as duration}
+                                <button
+                                  disabled
+                                  class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700 text-gray-500 cursor-not-allowed"
+                                >
+                                  {duration}s
+                                </button>
+                              {/each}
+                            </div>
+                          </div>
                         </div>
                       </div>
 
