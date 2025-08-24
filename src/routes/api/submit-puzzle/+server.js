@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 import axios from 'axios';
 import { DISCORD_WEBHOOK_URL } from '$env/static/private';
 
-export async function POST({ request }) {
+export async function POST({ request, platform }) {
   try {
     const submissionData = await request.json();
 
@@ -11,6 +11,16 @@ export async function POST({ request }) {
     }
 
     // Convert grid data to crossword JSON format (matching crosswords.json structure)
+    const colorPalette = [
+      "#FE9C9C",
+      "#28D66A",
+      "#FFCEFD",
+      "#FF5B5E",
+      "#568EFF",
+      "#FFB34B",
+      "#00FFFF",
+    ];
+
     const crosswordData = {
       title: submissionData.details.boardTitle || "",
       version: "1.0.0",
@@ -19,12 +29,12 @@ export async function POST({ request }) {
         height: 10
       },
       theme: "black",
-      words: submissionData.words.map((word) => ({
+      words: submissionData.words.map((word, index) => ({
         word: word.word,
         startX: word.col,
         startY: word.row,
         direction: word.direction.toLowerCase(),
-        color: "#FF5B5E", // Default color, to be assigned later
+        color: colorPalette[index % colorPalette.length],
         textClue: word.clue,
         audioUrl: word.trackId.toString(), // SoundCloud track ID
         startAt: word.startAt || "0:00", // User-selected start time
@@ -53,6 +63,31 @@ export async function POST({ request }) {
       longestWord: Math.max(...submissionData.words.map(word => word.word.length)),
       shortestWord: Math.min(...submissionData.words.map(word => word.word.length))
     };
+
+    // Persist to database (custom_puzzles)
+    const db = platform?.env?.['solve-db'];
+    if (!db) {
+      return new Response('Database not available', { status: 500 });
+    }
+
+    const generateId = () =>
+      (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function')
+        ? crypto.randomUUID()
+        : 'p_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+
+    const puzzleId = generateId();
+
+    await db
+      .prepare(
+        `INSERT INTO custom_puzzles (id, puzzle_json, created_by)
+         VALUES (?, ?, ?)`
+      )
+      .bind(
+        puzzleId,
+        JSON.stringify(crosswordData),
+        submissionData?.details?.creditName || null
+      )
+      .run();
 
     // Construct the Discord message
     const discordMessage = {
@@ -85,7 +120,7 @@ export async function POST({ request }) {
         {
           title: '🔧 Crossword JSON Data',
           color: 3447003, // Blue color
-          description: `\`\`\`json\n${JSON.stringify(crosswordData, null, 2).substring(0, 1990)}\`\`\``,
+          description: `\`\`\`json\n${JSON.stringify({ id: puzzleId, ...crosswordData }, null, 2).substring(0, 1990)}\`\`\``,
           timestamp: new Date().toISOString()
         }
       ]
@@ -93,7 +128,7 @@ export async function POST({ request }) {
 
     await axios.post(DISCORD_WEBHOOK_URL, discordMessage);
 
-    return json({ status: 'success', message: 'Puzzle submitted successfully!' });
+    return json({ status: 'success', id: puzzleId, message: 'Puzzle submitted successfully!' });
   } catch (error) {
     console.error('Failed to submit puzzle:', error);
     return new Response('Internal Server Error', { status: 500 });
