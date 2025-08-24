@@ -1188,7 +1188,7 @@
     }
     // For backspace, we need to handle it specially since it's an action rather than a character input
     if (key === "Backspace") {
-      // If current cell has content, clear it
+      // If current cell has content, clear it and stay there
       if (grid[focusedY][focusedX]) {
         grid[focusedY][focusedX] = "";
       }
@@ -1197,35 +1197,55 @@
         if (currentDirection === "across") {
           let newX = focusedX - 1;
           while (newX >= 0) {
-            // Find the first non-space input cell going backwards
+            // Find the first non-space, non-revealed input cell going backwards
             if (
               grid[focusedY][newX] !== null &&
-              !spaceCells.has(`${newX},${focusedY}`)
+              !spaceCells.has(`${newX},${focusedY}`) &&
+              !revealedCells.has(`${newX},${focusedY}`)
             ) {
               grid[focusedY][newX] = "";
               moveFocus(newX, focusedY);
               break;
+            } else if (
+              grid[focusedY][newX] !== null &&
+              !spaceCells.has(`${newX},${focusedY}`) &&
+              revealedCells.has(`${newX},${focusedY}`)
+            ) {
+              // Skip revealed cells but keep moving backwards
+              newX--;
+              continue;
             }
             newX--;
           }
         } else {
           let newY = focusedY - 1;
           while (newY >= 0) {
-            // Find the first non-space input cell going up
+            // Find the first non-space, non-revealed input cell going up
             if (
               grid[newY][focusedX] !== null &&
-              !spaceCells.has(`${focusedX},${newY}`)
+              !spaceCells.has(`${focusedX},${newY}`) &&
+              !revealedCells.has(`${focusedX},${newY}`)
             ) {
               grid[newY][focusedX] = "";
               moveFocus(focusedX, newY);
               break;
+            } else if (
+              grid[newY][focusedX] !== null &&
+              !spaceCells.has(`${focusedX},${newY}`) &&
+              revealedCells.has(`${focusedX},${newY}`)
+            ) {
+              // Skip revealed cells but keep moving upwards
+              newY--;
+              continue;
             }
             newY--;
           }
         }
       }
-      saveGridState(grid, puzzle.version);
-      saveRevealedCells(revealedCells);
+      if (!isArchiveMode) {
+        saveRevealedCells(revealedCells);
+        saveGridState(grid, puzzle.version);
+      }
       return;
     }
 
