@@ -272,10 +272,41 @@
       const urlObj = new URL(url);
       return (
         urlObj.hostname === "soundcloud.com" ||
-        urlObj.hostname === "www.soundcloud.com"
+        urlObj.hostname === "www.soundcloud.com" ||
+        urlObj.hostname === "on.soundcloud.com" ||
+        urlObj.hostname === "m.soundcloud.com"
       );
     } catch {
       return false;
+    }
+  }
+
+  function normalizeSoundCloudUrl(rawUrl) {
+    if (!rawUrl) return "";
+    let url = rawUrl.trim();
+    // Remove leading '@' that some apps prepend
+    if (url.startsWith("@")) url = url.slice(1).trim();
+    // Best-effort: ensure it starts with http(s)
+    if (!/^https?:\/\//i.test(url)) {
+      url = `https://${url}`;
+    }
+    try {
+      const u = new URL(url);
+      // Strip common tracking params to stabilize the URL
+      [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "ref",
+        "si",
+        "p",
+        "c",
+      ].forEach((k) => u.searchParams.delete(k));
+      return u.toString();
+    } catch {
+      return rawUrl.trim();
     }
   }
 
@@ -289,7 +320,14 @@
       trackId: null,
     };
 
-    if (!url.trim()) {
+    const normalizedUrl = normalizeSoundCloudUrl(url);
+
+    // If normalization changed the URL, update the bound value so the user sees the cleaned link
+    if (normalizedUrl !== url) {
+      detectedWords[wordIndex].soundcloudUrl = normalizedUrl;
+    }
+
+    if (!normalizedUrl.trim()) {
       soundcloudValidation[validationKey] = {
         status: "empty",
         message: "",
@@ -298,7 +336,7 @@
       return;
     }
 
-    if (!isValidSoundCloudUrl(url)) {
+    if (!isValidSoundCloudUrl(normalizedUrl)) {
       soundcloudValidation[validationKey] = {
         status: "invalid",
         message: "Please enter a valid SoundCloud URL",
@@ -308,7 +346,7 @@
     }
 
     try {
-      const result = await getSoundCloudId(url);
+      const result = await getSoundCloudId(normalizedUrl);
       if (result && result.type === "tracks") {
         soundcloudValidation[validationKey] = {
           status: "valid",
@@ -473,7 +511,7 @@
   async function getSoundCloudId(permalinkUrl) {
     try {
       const res = await fetch(
-        "https://soundcloud.com/oembed?format=json&url=" +
+        "https://soundcloud.com/oembed?format=json&maxheight=120&show_teaser=false&show_comments=false&url=" +
           encodeURIComponent(permalinkUrl)
       );
 
@@ -944,7 +982,13 @@
             Add Clues & Song Details
           </h2>
           <p class="text-gray-600 dark:text-gray-400">
-            Fill in the clue and song information for each word in your puzzle
+            Write your clues and add audio snippets for each word.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400">
+            All audio must come from <a
+              href="https://soundcloud.com"
+              class="text-orange-500">SoundCloud</a
+            >.
           </p>
         </div>
 
@@ -1154,7 +1198,7 @@
                           src="https://w.soundcloud.com/player/?visual=false&url=https%3A//api.soundcloud.com/tracks/{soundcloudValidation[
                             `word-${index}`
                           ]
-                            .trackId}&show_artwork=false&show_user=false&show_playcount=false&download=false&sharing=false&buying=false&auto_play=false"
+                            .trackId}&show_artwork=false&show_user=false&show_playcount=false&show_comments=false&show_reposts=false&hide_related=true&show_teaser=false&download=false&sharing=false&buying=false&auto_play=false"
                         ></iframe>
                       </div>
 
