@@ -217,7 +217,50 @@
       return; // Don't proceed if word count is invalid
     }
 
-    detectedWords = words;
+    // Merge previously entered data (clues, URLs, validation, timing) when returning from grid
+    const previousWords = Array.isArray(detectedWords) ? detectedWords : [];
+    const previousValidation = soundcloudValidation || {};
+    const previousTiming = widgetTiming || {};
+
+    const makeKey = (w) => `${w.direction}-${w.row}-${w.col}-${w.word}`;
+
+    const previousMap = new Map();
+    previousWords.forEach((w, idx) => {
+      previousMap.set(makeKey(w), { word: w, index: idx });
+    });
+
+    const mergedWords = words.map((w) => {
+      const key = makeKey(w);
+      if (previousMap.has(key)) {
+        const { word: prev } = previousMap.get(key);
+        return {
+          ...w,
+          clue: prev.clue || "",
+          soundcloudUrl: prev.soundcloudUrl || "",
+        };
+      }
+      return w;
+    });
+
+    // Remap validation/timing by new indices
+    const newValidation = {};
+    const newTiming = {};
+    mergedWords.forEach((w, newIdx) => {
+      const key = makeKey(w);
+      const prev = previousMap.get(key);
+      if (prev) {
+        const oldIdx = prev.index;
+        const oldVal = previousValidation[`word-${oldIdx}`];
+        const oldTime = previousTiming[`word-${oldIdx}`];
+        if (oldVal) newValidation[`word-${newIdx}`] = oldVal;
+        if (oldTime) newTiming[`word-${newIdx}`] = oldTime;
+      }
+    });
+
+    detectedWords = mergedWords;
+    soundcloudValidation = newValidation;
+    widgetTiming = newTiming;
+
     showWordForms = true;
     showWarning = false; // Hide any existing warnings
     scrollToTop();
@@ -876,6 +919,9 @@
                 <input
                   type="text"
                   class="w-8 h-8 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg border border-gray-300 focus:border-blue-500 focus:outline-none bg-white"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
                   class:bg-blue-100={selectedCell.row === rowIndex &&
                     selectedCell.col === colIndex}
                   value={cell}
@@ -996,6 +1042,10 @@
           {#each detectedWords as word, index}
             <div
               class="bg-gray-50 dark:bg-[#303030] border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+              class:border-green-500={detectedWords[index].clue &&
+                detectedWords[index].clue.trim().length > 0}
+              class:dark\:border-green-500={detectedWords[index].clue &&
+                detectedWords[index].clue.trim().length > 0}
             >
               <!-- Word Header -->
               <div
@@ -1056,6 +1106,8 @@
                     id="clue-{index}"
                     type="text"
                     required
+                    autocomplete="off"
+                    autocapitalize="off"
                     placeholder="Enter your creative clue here..."
                     class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                     bind:value={detectedWords[index].clue}
@@ -1088,6 +1140,9 @@
                     id="soundcloud-{index}"
                     type="url"
                     required
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
                     placeholder="https://soundcloud.com/artist/track-name"
                     class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                     class:border-gray-300={!soundcloudValidation[
@@ -1336,14 +1391,16 @@
                           </div>
                         </div>
 
-                        <div
-                          class="text-xs text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded"
-                        >
-                          <strong>💡 Tips:</strong> Play the track above, navigate
-                          to your desired start point, then click "Use Current".
-                          Navigate to the end point and click "Set End Point", or
-                          use the duration presets for quick selection.
-                        </div>
+                        {#if index === 0}
+                          <div
+                            class="text-xs text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded"
+                          >
+                            <strong>💡 Tips:</strong> Play the track above, navigate
+                            to your desired start point, then click "Use Current".
+                            Navigate to the end point and click "Set End Point",
+                            or use the duration presets for quick selection.
+                          </div>
+                        {/if}
                       </div>
                     {:else}
                       <!-- Placeholder -->
@@ -1496,6 +1553,8 @@
           <input
             id="board-title"
             type="text"
+            autocomplete="off"
+            autocapitalize="off"
             class="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             bind:value={finalDetails.boardTitle}
             placeholder="Give your puzzle a title"
@@ -1674,6 +1733,9 @@
                 <input
                   id="credit-name"
                   type="text"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
                   class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
                   bind:value={finalDetails.creditName}
                   placeholder="Give us a name or handle (optional)"
@@ -1681,14 +1743,18 @@
               </div>
               <div>
                 <label for="credit-email" class="block text-sm font-medium mb-2"
-                  >What's your email?)</label
+                  >What's your email?</label
                 >
                 <input
                   id="credit-email"
                   type="email"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  inputmode="email"
                   class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
                   bind:value={finalDetails.email}
-                  placeholder="We'll contact you if the puzzle is featured (optional"
+                  placeholder="We'll contact you if the puzzle is featured (optional)"
                 />
               </div>
               <div>
@@ -1697,6 +1763,8 @@
                 >
                 <textarea
                   id="credit-notes"
+                  autocomplete="off"
+                  autocapitalize="off"
                   class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
                   bind:value={finalDetails.notes}
                   placeholder="Additional info (optional)"
@@ -1773,7 +1841,9 @@
 <!-- Word Count Warning -->
 {#if showWarning}
   <div
-    class="fixed top-20 right-4 bg-amber-100 dark:bg-amber-900 border-l-4 border-amber-500 text-amber-800 dark:text-amber-200 px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
+    class="fixed right-4 bg-amber-100 dark:bg-amber-900 border-l-4 border-amber-500 text-amber-800 dark:text-amber-200 px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
+    class:top-20={!isMobile}
+    class:top-32={isMobile}
   >
     <div class="flex items-start justify-between">
       <div class="mr-3">
