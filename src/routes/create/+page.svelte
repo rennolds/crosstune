@@ -15,6 +15,7 @@
   let detectedWords = $state([]);
   let soundcloudValidation = $state({}); // Track validation status for each word
   let widgetTiming = $state({}); // Track start/end times for each word
+  import { validateClue } from "$lib/utils/filters.js";
 
   // Game colors from crosswords.json
   const gameColors = [
@@ -230,6 +231,24 @@
 
       if (!word.clue.trim() || !word.soundcloudUrl.trim()) {
         wordCountWarning = `All fields are required. Please fill in clue and SoundCloud URL for "${word.word}".`;
+        showWarning = true;
+        return false;
+      }
+
+      // Clue safety validation
+      const clueCheck = validateClue(word.clue);
+      if (!clueCheck.valid) {
+        const reasons = clueCheck.reasons;
+        let msg = `Clue for "${word.word}" is not allowed: `;
+        const map = {
+          url: "no URLs",
+          pii: "no personal contact info",
+          profanity: "disallowed language",
+          length: "too long (max 140 chars)",
+          empty: "cannot be empty",
+        };
+        msg += reasons.map((r) => map[r] || r).join(", ");
+        wordCountWarning = msg;
         showWarning = true;
         return false;
       }

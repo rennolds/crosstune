@@ -1,4 +1,5 @@
 import { json } from '@sveltejs/kit';
+import { validateClue, sanitizeClue } from '$lib/utils/filters.js';
 import axios from 'axios';
 import { DISCORD_WEBHOOK_URL } from '$env/static/private';
 
@@ -29,18 +30,24 @@ export async function POST({ request, platform }) {
         height: 10
       },
       theme: "black",
-      words: submissionData.words.map((word, index) => ({
-        word: word.word,
-        startX: word.col,
-        startY: word.row,
-        direction: word.direction.toLowerCase(),
-        color: colorPalette[index % colorPalette.length],
-        textClue: word.clue,
-        audioUrl: word.trackId.toString(), // SoundCloud track ID
-        startAt: word.startAt || "0:00", // User-selected start time
-        audioDuration: word.audioDuration || 6, // User-selected duration
-        soundcloudUrl: word.soundcloudUrl // Store original URL for reference
-      }))
+      words: submissionData.words.map((word, index) => {
+        const { valid, reasons, value } = validateClue(word.clue || '');
+        if (!valid) {
+          throw { status: 400, index, reasons };
+        }
+        return {
+          word: word.word,
+          startX: word.col,
+          startY: word.row,
+          direction: word.direction.toLowerCase(),
+          color: colorPalette[index % colorPalette.length],
+          textClue: sanitizeClue(value),
+          audioUrl: word.trackId.toString(), // SoundCloud track ID
+          startAt: word.startAt || "0:00", // User-selected start time
+          audioDuration: word.audioDuration || 6, // User-selected duration
+          soundcloudUrl: word.soundcloudUrl // Store original URL for reference
+        };
+      })
     };
 
     // Format submission details as a simple list
@@ -130,6 +137,9 @@ export async function POST({ request, platform }) {
 
     return json({ status: 'success', id: puzzleId, message: 'Puzzle submitted successfully!' });
   } catch (error) {
+    if (error && error.status === 400) {
+      return json({ error: 'Invalid clue', index: error.index, reasons: error.reasons }, { status: 400 });
+    }
     console.error('Failed to submit puzzle:', error);
     return new Response('Internal Server Error', { status: 500 });
   }
