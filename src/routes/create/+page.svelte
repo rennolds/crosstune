@@ -10,8 +10,13 @@
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
   let showSplash = $state(true);
   let showWordForms = $state(false);
-  let showFinalDetails = $state(false);
   let showSuccessScreen = $state(false);
+  let createdPuzzleId = $state("");
+  let shareCopied = $state(false);
+  let submittingToUs = $state(false);
+  let submitProgress = $state(0);
+  let submittedToUs = $state(false);
+  let isMobile = $state(false);
   let detectedWords = $state([]);
   let soundcloudValidation = $state({}); // Track validation status for each word
   let widgetTiming = $state({}); // Track start/end times for each word
@@ -58,6 +63,9 @@
         .addEventListener("change", (e) => {
           metaThemeColor.content = e.matches ? "#202020" : "#ffffff";
         });
+
+      // Detect mobile for share behavior
+      isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
   });
 
@@ -194,12 +202,8 @@
 
   function validateWordCount(words) {
     const wordCount = words.length;
-    if (wordCount < 8) {
-      wordCountWarning = `You need at least 8 words. Currently have ${wordCount} words.`;
-      showWarning = true;
-      return false;
-    } else if (wordCount > 9) {
-      wordCountWarning = `Maximum 9 words allowed. Currently have ${wordCount} words.`;
+    if (wordCount < 1) {
+      wordCountWarning = `Add at least 1 word to continue.`;
       showWarning = true;
       return false;
     }
@@ -519,8 +523,12 @@
       .map(() => Array(12).fill(""));
     showSplash = true;
     showWordForms = false;
-    showFinalDetails = false;
     showSuccessScreen = false;
+    createdPuzzleId = "";
+    shareCopied = false;
+    submittingToUs = false;
+    submitProgress = 0;
+    submittedToUs = false;
     detectedWords = [];
     soundcloudValidation = {}; // Clear validation state
     widgetTiming = {}; // Clear timing data
@@ -530,17 +538,6 @@
       email: "",
       notes: "",
     };
-    scrollToTop();
-  }
-
-  function handleFinalDetailsClick() {
-    if (!validateWordForms()) {
-      return; // Don't proceed if validation fails
-    }
-
-    showWordForms = false;
-    showFinalDetails = true;
-    showWarning = false; // Hide any existing warnings
     scrollToTop();
   }
 
@@ -621,6 +618,80 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
+
+  function getShareUrl() {
+    const origin =
+      typeof window !== "undefined"
+        ? window.location.origin
+        : "https://crosstune.io";
+    return `${origin}/puzzles/${createdPuzzleId}`;
+  }
+
+  async function handleShareOrCopy() {
+    const url = getShareUrl();
+    try {
+      if (isMobile && navigator.share) {
+        await navigator.share({
+          title: "Crosstune Puzzle",
+          text: `Try this Crosstune puzzle I made! ${url}`,
+          url,
+        });
+      } else {
+        await navigator.clipboard.writeText(url);
+        shareCopied = true;
+        setTimeout(() => (shareCopied = false), 1500);
+      }
+    } catch (_) {
+      try {
+        await navigator.clipboard.writeText(url);
+        shareCopied = true;
+        setTimeout(() => (shareCopied = false), 1500);
+      } catch {}
+    }
+  }
+
+  function playNow() {
+    const url = getShareUrl();
+    window.open(url, "_blank", "noopener");
+  }
+
+  async function handleSubmitToUs() {
+    if (!createdPuzzleId || submittedToUs) return;
+    // Require at least 8 words for official submission
+    if (detectedWords.length < 0) {
+      wordCountWarning =
+        "Please include at least 8 words before submitting to us.";
+      showWarning = true;
+      return;
+    }
+    submittingToUs = true;
+    submitProgress = 10;
+    let timer = setInterval(() => {
+      submitProgress = Math.min(90, submitProgress + 5);
+    }, 150);
+    try {
+      const res = await fetch("/api/submit-existing", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: createdPuzzleId,
+          creditName: finalDetails.creditName,
+          email: finalDetails.email,
+          notes: finalDetails.notes,
+        }),
+      });
+      if (!res.ok) throw new Error("Submit failed");
+      submitProgress = 100;
+      submittedToUs = true;
+    } catch (e) {
+      wordCountWarning = "Failed to submit. Please try again.";
+      showWarning = true;
+      submitProgress = 0;
+    } finally {
+      clearInterval(timer);
+      submittingToUs = false;
+    }
+  }
 </script>
 
 <Navbar
@@ -632,7 +703,7 @@
 
 <main class="min-h-screen flex flex-col text-black dark:text-white">
   <div class="create-container mx-auto px-4 py-8 md:pt-16">
-    {#if !showSplash && !showWordForms && !showFinalDetails && !showSuccessScreen}
+    {#if !showSplash && !showWordForms && !showSuccessScreen}
       <!-- Instructions for Grid Page -->
       <div class="text-center mb-6">
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
@@ -649,7 +720,7 @@
       <div class="max-w-4xl mx-auto">
         <div class="p-6 mb-6">
           <h2 class="text-2xl font-bold mb-6">
-            Create your own crosstune puzzle to be featured!
+            Create your own Crosstune puzzle!
           </h2>
 
           <!-- Mobile button - shown early -->
@@ -662,95 +733,88 @@
             </button>
           </div>
 
-          <div class="space-y-2">
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">1.</span>
-              <span
-                >Fill the puzzle grid with your answers (songs, artists,
-                lyrics...)</span
-              >
-            </div>
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">2.</span>
-              <span>Add the clue & song hint on the next page</span>
-            </div>
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">3.</span>
-              <span
-                >Give us your contact info and we'll reach out if we feature the
-                puzzle!</span
-              >
-            </div>
+          <div class="space-y-3">
+            <p>
+              Get a link to share with your friends, fans, or idk, play it
+              yourself.
+            </p>
+            <p>
+              If you're proud of it, submit it to us to be featured on the Daily
+              or Themed section!
+            </p>
           </div>
         </div>
 
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-3">Helpful info</h3>
+        {#if false}
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">Helpful info</h3>
 
-          <div class="space-y-3">
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">1.</span>
-              <span>Each puzzle must have at least 8 words</span>
-            </div>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">1.</span>
+                <span>Each puzzle must have at least 8 words</span>
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">2.</span>
-              <span
-                >Most tracks played must be "household names." If it's too
-                obscure, we can't use it.</span
-              >
-            </div>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">2.</span>
+                <span
+                  >Most tracks played must be "household names." If it's too
+                  obscure, we can't use it.</span
+                >
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">3.</span>
-              <span
-                >Answers can't float in empty space and must be connected</span
-              >
-            </div>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">3.</span>
+                <span
+                  >Answers can't float in empty space and must be connected</span
+                >
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">4.</span>
-              <div>
-                <div class="mb-1">
-                  Hints can be as creative as you'd like. Some common ones:
-                </div>
-                <div class="ml-4 space-y-0.5">
-                  <div class="flex items-start">
-                    <span class="mr-2">a.</span>
-                    <span>Song title</span>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">4.</span>
+                <div>
+                  <div class="mb-1">
+                    Hints can be as creative as you'd like. Some common ones:
                   </div>
-                  <div class="flex items-start">
-                    <span class="mr-2">b.</span>
-                    <span>Artist name</span>
+                  <div class="ml-4 space-y-0.5">
+                    <div class="flex items-start">
+                      <span class="mr-2">a.</span>
+                      <span>Song title</span>
+                    </div>
+                    <div class="flex items-start">
+                      <span class="mr-2">b.</span>
+                      <span>Artist name</span>
+                    </div>
+                    <div class="flex items-start">
+                      <span class="mr-2">c.</span>
+                      <span>Complete the lyric: ____</span>
+                    </div>
                   </div>
-                  <div class="flex items-start">
-                    <span class="mr-2">c.</span>
-                    <span>Complete the lyric: ____</span>
+                  <div class="mt-1 text-sm">
+                    Very trivia focused clues like "what country was this artist
+                    born in" or "what year did this song come out?" are
+                    discouraged.
                   </div>
-                </div>
-                <div class="mt-1 text-sm">
-                  Very trivia focused clues like "what country was this artist
-                  born in" or "what year did this song come out?" are
-                  discouraged.
                 </div>
               </div>
-            </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">5.</span>
-              <span>Profanity will not be featured on the Daily (usually).</span
-              >
-            </div>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">5.</span>
+                <span
+                  >Profanity will not be featured on the Daily (usually).</span
+                >
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">6.</span>
-              <span
-                >We occasionally can't get a certain song or play any snippet
-                we'd like, so we may need to tweak your puzzle a bit.</span
-              >
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">6.</span>
+                <span
+                  >We occasionally can't get a certain song or play any snippet
+                  we'd like, so we may need to tweak your puzzle a bit.</span
+                >
+              </div>
             </div>
           </div>
-        </div>
+        {/if}
 
         <!-- Desktop button - shown at bottom -->
         <div class="text-center mt-6 hidden md:block pb-24">
@@ -762,7 +826,7 @@
           </button>
         </div>
       </div>
-    {:else if !showWordForms && !showFinalDetails && !showSuccessScreen}
+    {:else if !showWordForms && !showSuccessScreen}
       <!-- Grid Creation Step -->
       <div class="flex justify-center px-2 md:px-0">
         <div
@@ -836,7 +900,6 @@
                 .map(() => Array(12).fill(""));
               showSplash = true;
               showWordForms = false;
-              showFinalDetails = false;
               detectedWords = [];
               finalDetails = {
                 creditName: "",
@@ -850,9 +913,11 @@
             Clear Grid
           </button>
 
-          <div
-            class="text-black dark:text-white font-semibold cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
+          <button
+            type="button"
+            class="text-black dark:text-white font-semibold hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
             onclick={handleNextClick}
+            aria-label="Proceed to clues and songs"
           >
             clues and songs
             <svg
@@ -868,7 +933,7 @@
                 d="M9 5l7 7-7 7"
               ></path>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     {:else if showWordForms}
@@ -1374,6 +1439,25 @@
           {/each}
         </div>
 
+        <!-- Title input moved to bottom of clues/songs page -->
+        <div class="max-w-2xl mx-auto mt-10">
+          <label
+            for="board-title"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
+            Title for the board? <span class="text-xs text-gray-500"
+              >(optional)</span
+            >
+          </label>
+          <input
+            id="board-title"
+            type="text"
+            class="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            bind:value={finalDetails.boardTitle}
+            placeholder="Give your puzzle a title"
+          />
+        </div>
+
         <div
           class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 mt-12 pt-8 pb-24 border-t border-gray-200 dark:border-gray-700"
         >
@@ -1388,85 +1472,13 @@
           </button>
           <button
             class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-            onclick={handleFinalDetailsClick}
-          >
-            Continue to Final Details →
-          </button>
-        </div>
-      </div>
-    {:else if showFinalDetails}
-      <!-- Final Details Step -->
-      <div class="max-w-2xl mx-auto">
-        <div class="space-y-6">
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              Want credit? Give us a name/handle to shoutout
-            </label>
-            <input
-              type="text"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-              bind:value={finalDetails.creditName}
-              placeholder="Your name or handle (optional)"
-            />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              Title for the board?
-            </label>
-            <input
-              type="text"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-              bind:value={finalDetails.boardTitle}
-              placeholder="Give your puzzle a title (optional)"
-            />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              How can we reach out to you to let you know we're featuring the
-              puzzle? Email only please!
-            </label>
-            <input
-              type="email"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-              bind:value={finalDetails.email}
-              placeholder="your.email@example.com (optional)"
-            />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              Any other notes for us?
-            </label>
-            <textarea
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
-              bind:value={finalDetails.notes}
-              placeholder="Any additional notes or comments (optional)"
-            ></textarea>
-          </div>
-        </div>
-
-        <div class="flex justify-center space-x-4 mt-8 pb-24">
-          <button
-            class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] transition-colors"
-            onclick={() => {
-              showFinalDetails = false;
-              showWordForms = true;
-              scrollToTop();
-            }}
-          >
-            Back to Clues
-          </button>
-          <button
-            class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             onclick={async (event) => {
+              if (!validateWordForms()) return;
               const button = event.target;
               button.disabled = true;
               button.textContent = "Processing...";
 
               try {
-                // Use pre-validated track IDs and timing data
                 const wordsWithTrackIds = detectedWords.map((word, index) => {
                   const validationKey = `word-${index}`;
                   const validation = soundcloudValidation[validationKey];
@@ -1483,7 +1495,7 @@
                   };
                 });
 
-                const response = await fetch("/api/submit-puzzle", {
+                const response = await fetch("/api/create-puzzle", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -1497,61 +1509,217 @@
 
                 if (response.ok) {
                   const result = await response.json();
-                  showFinalDetails = false;
+                  createdPuzzleId = result.id;
+                  showWordForms = false;
                   showSuccessScreen = true;
                   scrollToTop();
                 } else {
                   wordCountWarning =
-                    "Failed to submit puzzle. Please try again.";
+                    "Failed to create puzzle. Please try again.";
                   showWarning = true;
                   button.disabled = false;
-                  button.textContent = "Submit Puzzle";
+                  button.textContent = "Create & Get Share Link";
                 }
               } catch (error) {
-                console.error("Submission error:", error);
+                console.error("Create error:", error);
                 wordCountWarning =
-                  "Error submitting puzzle. Please check your connection and try again.";
+                  "Error creating puzzle. Please check your connection and try again.";
                 showWarning = true;
                 button.disabled = false;
-                button.textContent = "Submit Puzzle";
+                button.textContent = "Create & Get Share Link";
               }
             }}
           >
-            Submit Puzzle
+            Create & Get Share Link
           </button>
         </div>
       </div>
     {:else if showSuccessScreen}
-      <!-- Success Screen -->
-      <div class="max-w-2xl mx-auto text-center">
-        <div class="p-8 pb-24">
-          <h2 class="text-3xl font-bold mb-6">Thanks for your submission!</h2>
-          <p class="text-lg mb-8">We'll check out your puzzle asap!</p>
-
-          <p class="text-lg mb-8">In the meantime...</p>
-
-          <div class="space-y-4">
-            <button
-              class="w-full rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-              onclick={handleSubmitAnother}
+      <!-- Post-Creation Share & Submit Screen -->
+      <div class="max-w-3xl mx-auto">
+        <div class="p-8 pb-6">
+          <h2 class="text-2xl font-bold mb-4">Voilà, here is your creation.</h2>
+          <div class="max-w-2xl mx-auto">
+            <div
+              class="text-xs italic text-gray-600 dark:text-gray-500 text-right mb-1"
             >
-              SUBMIT ANOTHER ONE
-            </button>
-
-            <button
-              class="w-full rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-              onclick={() => (window.location.href = "/")}
+              *This link will be live for 30 days
+            </div>
+            <div
+              class="text-sm md:text-base bg-gray-100 dark:bg-[#D9D9D9] px-3 py-2 rounded select-all break-all text-black dark:text-black"
             >
-              PLAY TODAY'S
-            </button>
-
-            <button
-              class="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
-              onclick={() => (window.location.href = "/themed")}
-            >
-              PLAY THEMED PUZZLES
-            </button>
+              {typeof window !== "undefined"
+                ? getShareUrl()
+                : `https://crosstune.io/puzzles/${createdPuzzleId}`}
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <button
+                class="rounded-xs px-4 py-2 mt-2 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors"
+                onclick={playNow}
+              >
+                Play Now
+              </button>
+              <button
+                class="inline-flex items-center justify-center h-9 w-9 transition-colors text-black dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 align-middle"
+                onclick={handleShareOrCopy}
+                aria-label={isMobile
+                  ? "Share"
+                  : shareCopied
+                    ? "Copied!"
+                    : "Copy link"}
+                title={isMobile ? "Share" : "Copy link"}
+              >
+                {#if isMobile}
+                  <!-- Share icon (provided) -->
+                  <svg
+                    class="block h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.293 2.29279C11.4805 2.10532 11.7348 2 12 2C12.2652 2 12.5195 2.10532 12.707 2.29279L15.707 5.29279C15.8892 5.48139 15.99 5.73399 15.9877 5.99619C15.9854 6.25838 15.8802 6.5092 15.6948 6.6946C15.5094 6.88001 15.2586 6.98518 14.9964 6.98746C14.7342 6.98974 14.4816 6.88894 14.293 6.70679L13 5.41379V14.9998C13 15.265 12.8946 15.5194 12.7071 15.7069C12.5196 15.8944 12.2652 15.9998 12 15.9998C11.7348 15.9998 11.4804 15.8944 11.2929 15.7069C11.1054 15.5194 11 15.265 11 14.9998V5.41379L9.707 6.70679C9.5184 6.88894 9.2658 6.98974 9.0036 6.98746C8.7414 6.98518 8.49059 6.88001 8.30518 6.6946C8.11977 6.5092 8.0146 6.25838 8.01233 5.99619C8.01005 5.73399 8.11084 5.48139 8.293 5.29279L11.293 2.29279ZM4 10.9998C4 10.4694 4.21071 9.96065 4.58579 9.58557C4.96086 9.2105 5.46957 8.99979 6 8.99979H8C8.26522 8.99979 8.51957 9.10514 8.70711 9.29268C8.89464 9.48022 9 9.73457 9 9.99979C9 10.265 8.89464 10.5194 8.70711 10.7069C8.51957 10.8944 8.26522 10.9998 8 10.9998H6V19.9998H18V10.9998H16C15.7348 10.9998 15.4804 10.8944 15.2929 10.7069C15.1054 10.5194 15 10.265 15 9.99979C15 9.73457 15.1054 9.48022 15.2929 9.29268C15.4804 9.10514 15.7348 8.99979 16 8.99979H18C18.5304 8.99979 19.0391 9.2105 19.4142 9.58557C19.7893 9.96065 20 10.4694 20 10.9998V19.9998C20 20.5302 19.7893 21.0389 19.4142 21.414C19.0391 21.7891 18.5304 21.9998 18 21.9998H6C5.46957 21.9998 4.96086 21.7891 4.58579 21.414C4.21071 21.0389 4 20.5302 4 19.9998V10.9998Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                {:else}
+                  <!-- Desktop copy icon (provided) -->
+                  <svg
+                    class="block h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M6.59998 11.3968C6.59998 8.67077 6.59998 7.30777 7.44398 6.46077C8.28698 5.61377 9.64398 5.61377 12.36 5.61377H15.24C17.955 5.61377 19.313 5.61377 20.157 6.46077C21.001 7.30777 21 8.67077 21 11.3968V16.2168C21 18.9428 21 20.3058 20.157 21.1528C19.313 21.9998 17.955 21.9998 15.24 21.9998H12.36C9.64498 21.9998 8.28698 21.9998 7.44398 21.1528C6.59998 20.3058 6.59998 18.9428 6.59998 16.2168V11.3968Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                {/if}
+              </button>
+              {#if shareCopied}
+                <div class="text-xs text-green-600 dark:text-green-400">
+                  Copied!
+                </div>
+              {/if}
+            </div>
           </div>
+        </div>
+        <div class="px-8 mt-6">
+          <div
+            class="max-w-2xl mx-auto border border-black-200 dark:border-gray-700 rounded-lg p-6"
+          >
+            <h3 class="text-lg font-bold mb-2 text-center">
+              Think your puzzle is great? Send it to us.
+            </h3>
+            <p
+              class="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center"
+            >
+              Can be featured on The Daily or Themed Section
+            </p>
+            <!-- Author/Email/Notes moved above submit button -->
+            <div class="space-y-4 mb-4">
+              <div>
+                <label for="credit-name" class="block text-sm font-medium mb-2"
+                  >Want a shoutout?</label
+                >
+                <input
+                  id="credit-name"
+                  type="text"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
+                  bind:value={finalDetails.creditName}
+                  placeholder="Give us a name or handle (optional)"
+                />
+              </div>
+              <div>
+                <label for="credit-email" class="block text-sm font-medium mb-2"
+                  >What's your email?)</label
+                >
+                <input
+                  id="credit-email"
+                  type="email"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
+                  bind:value={finalDetails.email}
+                  placeholder="We'll contact you if the puzzle is featured (optional"
+                />
+              </div>
+              <div>
+                <label for="credit-notes" class="block text-sm font-medium mb-2"
+                  >Anything else we should know?</label
+                >
+                <textarea
+                  id="credit-notes"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
+                  bind:value={finalDetails.notes}
+                  placeholder="Additional info (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="mb-4 flex flex-col items-center">
+              <button
+                class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors disabled:cursor-not-allowed"
+                disabled={submittingToUs || submittedToUs}
+                onclick={handleSubmitToUs}
+              >
+                {submittedToUs ? "Submitted ✓" : "Submit"}
+              </button>
+
+              {#if submittedToUs}
+                <!-- Hide bar when complete and show a success line instead (button stays disabled) -->
+                <div
+                  class="mt-3 text-green-600 dark:text-green-400 text-sm font-semibold"
+                >
+                  All set!
+                </div>
+              {:else if submittingToUs || submitProgress > 0}
+                <div
+                  class="mt-3 h-2 w-full max-w-sm bg-gray-200 dark:bg-gray-700 rounded"
+                >
+                  <div
+                    class="h-2 bg-green-500 rounded transition-all"
+                    style={`width: ${submitProgress}%`}
+                  ></div>
+                </div>
+              {/if}
+            </div>
+
+            <h4 class="text-sm italic font-semibold mb-2">
+              Notes about features
+            </h4>
+            <div class="space-y-3 text-xs italic">
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">1.</span>
+                <span>Each puzzle must have at least 8 words</span>
+              </div>
+
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">2.</span>
+                <span
+                  >Most tracks played must be "household names." If it's too
+                  obscure, we can't use it.</span
+                >
+              </div>
+
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">3.</span>
+                <span
+                  >Answers can't float in empty space and must be connected</span
+                >
+              </div>
+
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">4.</span>
+                <span
+                  >Profanity will not be featured on the Daily (usually).</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="pb-24"></div>
         </div>
       </div>
     {/if}
