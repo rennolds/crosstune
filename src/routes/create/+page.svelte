@@ -13,6 +13,8 @@
   let showFinalDetails = $state(false);
   let showSuccessScreen = $state(false);
   let detectedWords = $state([]);
+  let soundcloudValidation = $state({}); // Track validation status for each word
+  let widgetTiming = $state({}); // Track start/end times for each word
 
   // Game colors from crosswords.json
   const gameColors = [
@@ -121,8 +123,7 @@
               row: row,
               col: startCol,
               clue: "",
-              artistName: "",
-              songName: "",
+              soundcloudUrl: "",
             });
           }
           currentWord = "";
@@ -165,8 +166,7 @@
               row: startRow,
               col: col,
               clue: "",
-              artistName: "",
-              songName: "",
+              soundcloudUrl: "",
             });
           }
           currentWord = "";
@@ -225,17 +225,267 @@
   function validateWordForms() {
     for (let i = 0; i < detectedWords.length; i++) {
       const word = detectedWords[i];
-      if (
-        !word.clue.trim() ||
-        !word.artistName.trim() ||
-        !word.songName.trim()
-      ) {
-        wordCountWarning = `All fields are required. Please fill in clue, artist name, and song name for "${word.word}".`;
+      const validationKey = `word-${i}`;
+      const validation = soundcloudValidation[validationKey];
+
+      if (!word.clue.trim() || !word.soundcloudUrl.trim()) {
+        wordCountWarning = `All fields are required. Please fill in clue and SoundCloud URL for "${word.word}".`;
+        showWarning = true;
+        return false;
+      }
+
+      // Check if SoundCloud URL validation is complete and valid
+      if (!validation || validation.status !== "valid" || !validation.trackId) {
+        wordCountWarning = `Please wait for SoundCloud URL validation to complete for "${word.word}", or check that the URL is valid.`;
         showWarning = true;
         return false;
       }
     }
     return true;
+  }
+
+  function isValidSoundCloudUrl(url) {
+    try {
+      const urlObj = new URL(url);
+      return (
+        urlObj.hostname === "soundcloud.com" ||
+        urlObj.hostname === "www.soundcloud.com"
+      );
+    } catch {
+      return false;
+    }
+  }
+
+  async function validateSoundCloudUrl(url, wordIndex) {
+    const validationKey = `word-${wordIndex}`;
+
+    // Reset validation state
+    soundcloudValidation[validationKey] = {
+      status: "validating",
+      message: "Checking SoundCloud URL...",
+      trackId: null,
+    };
+
+    if (!url.trim()) {
+      soundcloudValidation[validationKey] = {
+        status: "empty",
+        message: "",
+        trackId: null,
+      };
+      return;
+    }
+
+    if (!isValidSoundCloudUrl(url)) {
+      soundcloudValidation[validationKey] = {
+        status: "invalid",
+        message: "Please enter a valid SoundCloud URL",
+        trackId: null,
+      };
+      return;
+    }
+
+    try {
+      const result = await getSoundCloudId(url);
+      if (result && result.type === "tracks") {
+        soundcloudValidation[validationKey] = {
+          status: "valid",
+          message: "✓ Track found and ready for timing",
+          trackId: result.id,
+        };
+
+        // Initialize timing data
+        if (!widgetTiming[validationKey]) {
+          widgetTiming[validationKey] = {
+            startAt: "0:00",
+            endAt: "0:06",
+            audioDuration: 6,
+          };
+        }
+      } else {
+        soundcloudValidation[validationKey] = {
+          status: "invalid",
+          message:
+            "Could not find a valid SoundCloud track. Make sure it's a track (not a playlist).",
+          trackId: null,
+        };
+      }
+    } catch (error) {
+      soundcloudValidation[validationKey] = {
+        status: "error",
+        message: "Error checking SoundCloud URL. Please try again.",
+        trackId: null,
+      };
+    }
+  }
+
+  // Debounce function to avoid too many API calls
+  let validationTimeouts = {};
+  function debouncedValidation(url, wordIndex) {
+    const validationKey = `word-${wordIndex}`;
+
+    // Clear existing timeout
+    if (validationTimeouts[validationKey]) {
+      clearTimeout(validationTimeouts[validationKey]);
+    }
+
+    // Set new timeout
+    validationTimeouts[validationKey] = setTimeout(() => {
+      validateSoundCloudUrl(url, wordIndex);
+    }, 500); // Wait 500ms after user stops typing
+  }
+
+  function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  }
+
+  function parseTime(timeString) {
+    const [mins, secs] = timeString.split(":").map(Number);
+    return mins * 60 + secs;
+  }
+
+  function updateStartTime(wordIndex, seconds) {
+    const widgetKey = `word-${wordIndex}`;
+    if (!widgetTiming[widgetKey]) {
+      widgetTiming[widgetKey] = {
+        startAt: "0:00",
+        endAt: "0:06",
+        audioDuration: 6,
+      };
+    }
+    widgetTiming[widgetKey].startAt = formatTime(seconds);
+
+    // Update end time based on start + duration
+    const duration = widgetTiming[widgetKey].audioDuration;
+    widgetTiming[widgetKey].endAt = formatTime(seconds + duration);
+  }
+
+  function updateDuration(wordIndex, duration) {
+    const widgetKey = `word-${wordIndex}`;
+    if (!widgetTiming[widgetKey]) {
+      widgetTiming[widgetKey] = {
+        startAt: "0:00",
+        endAt: "0:06",
+        audioDuration: 6,
+      };
+    }
+    widgetTiming[widgetKey].audioDuration = duration;
+
+    // Update end time based on start + duration
+    const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
+    const endSeconds = startSeconds + duration;
+    widgetTiming[widgetKey].endAt = formatTime(endSeconds);
+  }
+
+  function getCurrentTime(wordIndex) {
+    const iframe = document.getElementById(`widget-${wordIndex}`);
+    if (iframe && window.SC && window.SC.Widget) {
+      const widget = window.SC.Widget(iframe);
+
+      widget.getPosition((position) => {
+        const seconds = Math.floor(position / 1000); // Convert from milliseconds
+        updateStartTime(wordIndex, seconds);
+      });
+    } else {
+      console.warn("SoundCloud Widget API not available or iframe not found");
+    }
+  }
+
+  function setEndPoint(wordIndex) {
+    const iframe = document.getElementById(`widget-${wordIndex}`);
+    if (iframe && window.SC && window.SC.Widget) {
+      const widget = window.SC.Widget(iframe);
+
+      widget.getPosition((position) => {
+        const endSeconds = Math.floor(position / 1000);
+        const widgetKey = `word-${wordIndex}`;
+
+        if (!widgetTiming[widgetKey]) {
+          widgetTiming[widgetKey] = {
+            startAt: "0:00",
+            endAt: "0:06",
+            audioDuration: 6,
+          };
+        }
+
+        const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
+        const duration = Math.max(1, endSeconds - startSeconds); // Minimum 1 second
+
+        widgetTiming[widgetKey].endAt = formatTime(endSeconds);
+        widgetTiming[widgetKey].audioDuration = duration;
+      });
+    } else {
+      console.warn("SoundCloud Widget API not available or iframe not found");
+    }
+  }
+
+  function setPresetDuration(wordIndex, duration) {
+    updateDuration(wordIndex, duration);
+  }
+
+  function previewSegment(wordIndex) {
+    const iframe = document.getElementById(`widget-${wordIndex}`);
+    if (iframe && window.SC && window.SC.Widget) {
+      const widget = window.SC.Widget(iframe);
+      const widgetKey = `word-${wordIndex}`;
+      const timing = widgetTiming[widgetKey];
+
+      if (timing) {
+        const startMs = parseTime(timing.startAt) * 1000;
+        const durationMs = timing.audioDuration * 1000;
+
+        // Seek to start position and play
+        widget.seekTo(startMs);
+        widget.play();
+
+        // Stop after duration
+        setTimeout(() => {
+          widget.pause();
+        }, durationMs);
+      }
+    }
+  }
+
+  async function getSoundCloudId(permalinkUrl) {
+    try {
+      const res = await fetch(
+        "https://soundcloud.com/oembed?format=json&url=" +
+          encodeURIComponent(permalinkUrl)
+      );
+
+      if (!res.ok) {
+        throw new Error(`SoundCloud API returned ${res.status}`);
+      }
+
+      const data = await res.json();
+      const { html } = data;
+
+      // Try multiple patterns to extract track ID from the iframe src
+      const patterns = [
+        /tracks%2F(\d+)/, // URL-encoded format: tracks%2F123456
+        /tracks\/(\d+)/, // Direct format: tracks/123456
+        /api\.soundcloud\.com\/(tracks|playlists)\/(\d+)/, // Original format
+      ];
+
+      for (const pattern of patterns) {
+        const match = html.match(pattern);
+        if (match) {
+          const trackId = match[1] || match[2]; // Handle different capture groups
+          const type = match[1] === trackId ? "tracks" : match[1] || "tracks";
+          return { type: type, id: Number(trackId) };
+        }
+      }
+
+      console.error(
+        "Could not extract track ID from SoundCloud embed HTML:",
+        html
+      );
+      return null;
+    } catch (error) {
+      console.error("Error fetching SoundCloud ID:", error);
+      return null;
+    }
   }
 
   function handleStartCreating() {
@@ -253,6 +503,8 @@
     showFinalDetails = false;
     showSuccessScreen = false;
     detectedWords = [];
+    soundcloudValidation = {}; // Clear validation state
+    widgetTiming = {}; // Clear timing data
     finalDetails = {
       creditName: "",
       boardTitle: "",
@@ -425,7 +677,8 @@
             <div class="flex items-start">
               <span class="font-semibold mr-2">2.</span>
               <span
-                >Most tracks played must be "household names." If it's too obscure, we can't use it.</span
+                >Most tracks played must be "household names." If it's too
+                obscure, we can't use it.</span
               >
             </div>
 
@@ -466,7 +719,8 @@
 
             <div class="flex items-start">
               <span class="font-semibold mr-2">5.</span>
-              <span>Profanity will not be featured on the Daily (usually).</span>
+              <span>Profanity will not be featured on the Daily (usually).</span
+              >
             </div>
 
             <div class="flex items-start">
@@ -680,68 +934,358 @@
                   />
                 </div>
 
-                <!-- Artist and Song Fields - Side by Side -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      for="artist-{index}"
-                      class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                <!-- SoundCloud URL Field -->
+                <div>
+                  <label
+                    for="soundcloud-{index}"
+                    class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                  >
+                    <svg
+                      class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        ></path>
-                      </svg>
-                      Artist Name
-                      <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <input
-                      id="artist-{index}"
-                      type="text"
-                      required
-                      placeholder="Artist or band name"
-                      class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
-                      bind:value={detectedWords[index].artistName}
-                    />
-                  </div>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                      ></path>
+                    </svg>
+                    SoundCloud URL
+                    <span class="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="soundcloud-{index}"
+                    type="url"
+                    required
+                    placeholder="https://soundcloud.com/artist/track-name"
+                    class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                    class:border-gray-300={!soundcloudValidation[
+                      `word-${index}`
+                    ] ||
+                      soundcloudValidation[`word-${index}`].status === "empty"}
+                    class:dark:border-gray-600={!soundcloudValidation[
+                      `word-${index}`
+                    ] ||
+                      soundcloudValidation[`word-${index}`].status === "empty"}
+                    class:border-yellow-400={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "validating"}
+                    class:focus:ring-yellow-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "validating"}
+                    class:border-green-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "valid"}
+                    class:focus:ring-green-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "valid"}
+                    class:border-red-500={soundcloudValidation[`word-${index}`]
+                      ?.status === "invalid" ||
+                      soundcloudValidation[`word-${index}`]?.status === "error"}
+                    class:focus:ring-red-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "invalid" ||
+                      soundcloudValidation[`word-${index}`]?.status === "error"}
+                    bind:value={detectedWords[index].soundcloudUrl}
+                    oninput={(event) =>
+                      debouncedValidation(event.target.value, index)}
+                  />
 
-                  <div>
-                    <label
-                      for="song-{index}"
-                      class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                  <!-- Validation feedback -->
+                  {#if soundcloudValidation[`word-${index}`]?.message}
+                    <div
+                      class="text-xs mt-2 flex items-center gap-1"
+                      class:text-yellow-600={soundcloudValidation[
+                        `word-${index}`
+                      ].status === "validating"}
+                      class:text-green-600={soundcloudValidation[
+                        `word-${index}`
+                      ].status === "valid"}
+                      class:text-red-600={soundcloudValidation[`word-${index}`]
+                        .status === "invalid" ||
+                        soundcloudValidation[`word-${index}`].status ===
+                          "error"}
                     >
-                      <svg
-                        class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      {#if soundcloudValidation[`word-${index}`].status === "validating"}
+                        <svg
+                          class="w-3 h-3 animate-spin"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                          ></path>
+                        </svg>
+                      {:else if soundcloudValidation[`word-${index}`].status === "valid"}
+                        <svg
+                          class="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                      {/if}
+                      {soundcloudValidation[`word-${index}`].message}
+                    </div>
+                  {:else}
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                      Paste the full SoundCloud URL for the track you want to
+                      use
+                    </p>
+                  {/if}
+
+                  <!-- SoundCloud Widget Area -->
+                  <div
+                    class="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border"
+                  >
+                    <h4 class="font-semibold text-sm mb-3">
+                      Preview & Set Timing
+                    </h4>
+
+                    {#if soundcloudValidation[`word-${index}`]?.trackId}
+                      <!-- SoundCloud iframe -->
+                      <div class="w-full max-w-md mx-auto mb-4">
+                        <iframe
+                          id="widget-{index}"
+                          class="w-full"
+                          height="120"
+                          scrolling="no"
+                          frameborder="no"
+                          allow="autoplay"
+                          title="SoundCloud player for {detectedWords[index]
+                            .word}"
+                          src="https://w.soundcloud.com/player/?visual=false&url=https%3A//api.soundcloud.com/tracks/{soundcloudValidation[
+                            `word-${index}`
+                          ]
+                            .trackId}&show_artwork=false&show_user=false&show_playcount=false&download=false&sharing=false&buying=false&auto_play=false"
+                        ></iframe>
+                      </div>
+
+                      <!-- Enhanced Timing Controls -->
+                      <div class="space-y-4">
+                        <!-- Time Controls -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >Start Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:00"
+                                class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                                value={widgetTiming[`word-${index}`]?.startAt ||
+                                  "0:00"}
+                                oninput={(event) => {
+                                  const widgetKey = `word-${index}`;
+                                  if (!widgetTiming[widgetKey]) {
+                                    widgetTiming[widgetKey] = {
+                                      startAt: "0:00",
+                                      endAt: "0:06",
+                                      audioDuration: 6,
+                                    };
+                                  }
+                                  widgetTiming[widgetKey].startAt =
+                                    event.target.value;
+                                  // Update end time and duration
+                                  const startSeconds = parseTime(
+                                    event.target.value
+                                  );
+                                  const duration =
+                                    widgetTiming[widgetKey].audioDuration;
+                                  widgetTiming[widgetKey].endAt = formatTime(
+                                    startSeconds + duration
+                                  );
+                                }}
+                              />
+                              <button
+                                class="px-3 py-2 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                                onclick={() => getCurrentTime(index)}
+                              >
+                                Use Current
+                              </button>
+                            </div>
+                          </div>
+
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >End Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:06"
+                                class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                                value={widgetTiming[`word-${index}`]?.endAt ||
+                                  "0:06"}
+                                readonly
+                              />
+                              <button
+                                class="px-3 py-2 text-xs bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors"
+                                onclick={() => setEndPoint(index)}
+                              >
+                                Set End Point
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Duration Controls -->
+                        <div>
+                          <label class="block text-xs font-medium mb-2"
+                            >Duration</label
+                          >
+                          <div class="flex items-center gap-2 mb-2">
+                            <input
+                              type="number"
+                              min="1"
+                              max="30"
+                              class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                              value={widgetTiming[`word-${index}`]
+                                ?.audioDuration || 6}
+                              oninput={(event) =>
+                                updateDuration(
+                                  index,
+                                  parseInt(event.target.value) || 6
+                                )}
+                            />
+                            <span class="text-xs text-gray-500">seconds</span>
+                            <button
+                              class="px-3 py-2 text-xs bg-green-500 text-white rounded hover:bg-green-600 transition-colors ml-2"
+                              onclick={() => previewSegment(index)}
+                            >
+                              ▶ Preview Segment
+                            </button>
+                          </div>
+
+                          <!-- Quick Duration Presets -->
+                          <div class="flex gap-2">
+                            <span class="text-xs text-gray-500 self-center"
+                              >Quick:</span
+                            >
+                            {#each [3, 6, 10, 15] as duration}
+                              <button
+                                class="px-2 py-1 text-xs rounded transition-colors"
+                                class:bg-blue-500={widgetTiming[`word-${index}`]
+                                  ?.audioDuration === duration}
+                                class:text-white={widgetTiming[`word-${index}`]
+                                  ?.audioDuration === duration}
+                                class:bg-gray-200={widgetTiming[`word-${index}`]
+                                  ?.audioDuration !== duration}
+                                class:dark:bg-gray-700={widgetTiming[
+                                  `word-${index}`
+                                ]?.audioDuration !== duration}
+                                class:hover:bg-blue-400={widgetTiming[
+                                  `word-${index}`
+                                ]?.audioDuration !== duration}
+                                onclick={() =>
+                                  setPresetDuration(index, duration)}
+                              >
+                                {duration}s
+                              </button>
+                            {/each}
+                          </div>
+                        </div>
+
+                        <div
+                          class="text-xs text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded"
+                        >
+                          <strong>💡 Tips:</strong> Play the track above, navigate
+                          to your desired start point, then click "Use Current".
+                          Navigate to the end point and click "Set End Point", or
+                          use the duration presets for quick selection.
+                        </div>
+                      </div>
+                    {:else}
+                      <!-- Placeholder -->
+                      <div class="w-full max-w-md mx-auto mb-4">
+                        <div
+                          class="w-full h-[120px] bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600"
+                        >
+                          <div
+                            class="text-center text-gray-500 dark:text-gray-400"
+                          >
+                            <svg
+                              class="w-8 h-8 mx-auto mb-2"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                              ></path>
+                            </svg>
+                            <p class="text-sm">
+                              SoundCloud player will appear here
+                            </p>
+                            <p class="text-xs">
+                              Enter a valid SoundCloud URL above
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Disabled Timing Controls -->
+                      <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-4 opacity-50"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                        ></path>
-                      </svg>
-                      Song Name
-                      <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <input
-                      id="song-{index}"
-                      type="text"
-                      required
-                      placeholder="Song title"
-                      class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
-                      bind:value={detectedWords[index].songName}
-                    />
+                        <div>
+                          <label class="block text-xs font-medium mb-2"
+                            >Start Time</label
+                          >
+                          <div class="flex items-center gap-2">
+                            <input
+                              type="text"
+                              placeholder="0:00"
+                              disabled
+                              class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
+                              value="0:00"
+                            />
+                            <button
+                              disabled
+                              class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed"
+                            >
+                              Use Current
+                            </button>
+                          </div>
+                        </div>
+
+                        <div>
+                          <label class="block text-xs font-medium mb-2"
+                            >Duration (seconds)</label
+                          >
+                          <input
+                            type="number"
+                            disabled
+                            class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
+                            value="6"
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        class="mt-3 text-xs text-gray-500 dark:text-gray-500"
+                      >
+                        Timing controls will be enabled once a valid SoundCloud
+                        URL is provided.
+                      </div>
+                    {/if}
                   </div>
                 </div>
               </div>
@@ -834,9 +1378,30 @@
             Back to Clues
           </button>
           <button
-            class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-            onclick={async () => {
+            class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            onclick={async (event) => {
+              const button = event.target;
+              button.disabled = true;
+              button.textContent = "Processing...";
+
               try {
+                // Use pre-validated track IDs and timing data
+                const wordsWithTrackIds = detectedWords.map((word, index) => {
+                  const validationKey = `word-${index}`;
+                  const validation = soundcloudValidation[validationKey];
+                  const timing = widgetTiming[validationKey] || {
+                    startAt: "0:00",
+                    audioDuration: 6,
+                  };
+
+                  return {
+                    ...word,
+                    trackId: validation.trackId,
+                    startAt: timing.startAt,
+                    audioDuration: timing.audioDuration,
+                  };
+                });
+
                 const response = await fetch("/api/submit-puzzle", {
                   method: "POST",
                   headers: {
@@ -844,7 +1409,7 @@
                   },
                   body: JSON.stringify({
                     grid: gridData,
-                    words: detectedWords,
+                    words: wordsWithTrackIds,
                     details: finalDetails,
                   }),
                 });
@@ -858,12 +1423,16 @@
                   wordCountWarning =
                     "Failed to submit puzzle. Please try again.";
                   showWarning = true;
+                  button.disabled = false;
+                  button.textContent = "Submit Puzzle";
                 }
               } catch (error) {
                 console.error("Submission error:", error);
                 wordCountWarning =
                   "Error submitting puzzle. Please check your connection and try again.";
                 showWarning = true;
+                button.disabled = false;
+                button.textContent = "Submit Puzzle";
               }
             }}
           >

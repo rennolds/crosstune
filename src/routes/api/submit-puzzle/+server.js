@@ -26,11 +26,10 @@ export async function POST({ request }) {
         direction: word.direction.toLowerCase(),
         color: "#FF5B5E", // Default color, to be assigned later
         textClue: word.clue,
-        audioUrl: "", // To be filled later
-        startAt: "", // To be filled later
-        audioDuration: 0, // To be filled later
-        metadata_song: word.songName,
-        metadata_artist: word.artistName
+        audioUrl: word.trackId.toString(), // SoundCloud track ID
+        startAt: word.startAt || "0:00", // User-selected start time
+        audioDuration: word.audioDuration || 6, // User-selected duration
+        soundcloudUrl: word.soundcloudUrl // Store original URL for reference
       }))
     };
 
@@ -44,7 +43,7 @@ export async function POST({ request }) {
 
     // Create word list for Discord
     const wordList = submissionData.words.map((word, index) => 
-      `${index + 1}. **${word.word}** (${word.direction}) - ${word.clue}\n   Artist: ${word.artistName} | Song: ${word.songName}`
+      `${index + 1}. **${word.word}** (${word.direction}) - ${word.clue}\n   SoundCloud URL: ${word.soundcloudUrl}\n   Audio URL: ${word.trackId}\n   Timing: ${word.startAt || '0:00'} for ${word.audioDuration || 6}s`
     ).join('\n\n');
 
     // Calculate stats
@@ -73,7 +72,7 @@ export async function POST({ request }) {
               inline: true
             },
             {
-              name: '🎵 Words & Clues',
+              name: '🎵 Words, Clues & SoundCloud Links',
               value: wordList.length > 1024 ? wordList.substring(0, 1021) + '...' : wordList,
               inline: false
             }
