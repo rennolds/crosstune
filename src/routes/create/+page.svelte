@@ -838,77 +838,6 @@
           </div>
         </div>
 
-        {#if false}
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-3">Helpful info</h3>
-
-            <div class="space-y-3">
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">1.</span>
-                <span>Each puzzle must have at least 8 words</span>
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">2.</span>
-                <span
-                  >Most tracks played must be "household names." If it's too
-                  obscure, we can't use it.</span
-                >
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">3.</span>
-                <span
-                  >Answers can't float in empty space and must be connected</span
-                >
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">4.</span>
-                <div>
-                  <div class="mb-1">
-                    Hints can be as creative as you'd like. Some common ones:
-                  </div>
-                  <div class="ml-4 space-y-0.5">
-                    <div class="flex items-start">
-                      <span class="mr-2">a.</span>
-                      <span>Song title</span>
-                    </div>
-                    <div class="flex items-start">
-                      <span class="mr-2">b.</span>
-                      <span>Artist name</span>
-                    </div>
-                    <div class="flex items-start">
-                      <span class="mr-2">c.</span>
-                      <span>Complete the lyric: ____</span>
-                    </div>
-                  </div>
-                  <div class="mt-1 text-sm">
-                    Very trivia focused clues like "what country was this artist
-                    born in" or "what year did this song come out?" are
-                    discouraged.
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">5.</span>
-                <span
-                  >Profanity will not be featured on the Daily (usually).</span
-                >
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">6.</span>
-                <span
-                  >We occasionally can't get a certain song or play any snippet
-                  we'd like, so we may need to tweak your puzzle a bit.</span
-                >
-              </div>
-            </div>
-          </div>
-        {/if}
-
         <!-- Desktop button - shown at bottom -->
         <div class="text-center mt-6 hidden md:block pb-24">
           <button
@@ -1840,7 +1769,7 @@
                 <span class="font-semibold mr-2">2.</span>
                 <span
                   >Most tracks played must be "household names." If it's too
-                  obscure, we can't use it.</span
+                  obscure, we can't use it</span
                 >
               </div>
 
@@ -1854,7 +1783,7 @@
               <div class="flex items-start">
                 <span class="font-semibold mr-2">4.</span>
                 <span
-                  >Profanity will not be featured on the Daily (usually).</span
+                  >Profanity will not be featured on the Daily (usually)</span
                 >
               </div>
             </div>
