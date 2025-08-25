@@ -911,14 +911,14 @@
       <!-- Grid Creation Step -->
       <div class="flex justify-center px-2 md:px-0 w-full overflow-x-hidden">
         <div
-          class="grid grid-cols-12 gap-px bg-black p-1 md:p-2 rounded-lg w-fit md:w-auto overflow-x-hidden"
+          class="grid grid-cols-12 gap-px bg-black p-1 md:p-2 rounded-lg w-full md:w-auto overflow-x-hidden"
         >
           {#each gridData as row, rowIndex}
             {#each row as cell, colIndex}
               <div class="relative">
                 <input
                   type="text"
-                  class="w-7 h-7 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg focus:outline-none bg-white"
+                  class="w-full aspect-square md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg focus:outline-none bg-white"
                   autocomplete="off"
                   autocapitalize="off"
                   spellcheck="false"
