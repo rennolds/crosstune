@@ -483,11 +483,13 @@
         audioDuration: 6,
       };
     }
-    widgetTiming[widgetKey].audioDuration = duration;
+    // Enforce 30-second maximum limit
+    const clampedDuration = Math.min(Math.max(1, duration), 30);
+    widgetTiming[widgetKey].audioDuration = clampedDuration;
 
     // Update end time based on start + duration
     const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
-    const endSeconds = startSeconds + duration;
+    const endSeconds = startSeconds + clampedDuration;
     widgetTiming[widgetKey].endAt = formatTime(endSeconds);
   }
 
@@ -523,7 +525,7 @@
         }
 
         const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
-        const duration = Math.max(1, endSeconds - startSeconds); // Minimum 1 second
+        const duration = Math.min(Math.max(1, endSeconds - startSeconds), 30); // Minimum 1 second, maximum 30 seconds
 
         widgetTiming[widgetKey].endAt = formatTime(endSeconds);
         widgetTiming[widgetKey].audioDuration = duration;
@@ -534,7 +536,8 @@
   }
 
   function setPresetDuration(wordIndex, duration) {
-    updateDuration(wordIndex, duration);
+    // Enforce 30-second maximum limit for preset durations
+    updateDuration(wordIndex, Math.min(duration, 30));
   }
 
   function previewSegment(wordIndex) {
@@ -1343,7 +1346,7 @@
                           <div>
                             <label
                               class="block text-xs font-medium mb-2 text-center"
-                              >Duration</label
+                              >Duration (30s max)</label
                             >
                             <div class="flex items-center gap-2 mb-2">
                               <input
@@ -1353,11 +1356,19 @@
                                 class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
                                 value={widgetTiming[`word-${index}`]
                                   ?.audioDuration || 6}
-                                oninput={(event) =>
+                                oninput={(event) => {
+                                  const value = parseInt(event.target.value);
+                                  if (value > 30) {
+                                    event.target.value = 30;
+                                  }
                                   updateDuration(
                                     index,
-                                    parseInt(event.target.value) || 6
-                                  )}
+                                    Math.min(
+                                      parseInt(event.target.value) || 6,
+                                      30
+                                    )
+                                  );
+                                }}
                               />
                               <span class="text-xs text-gray-500">seconds</span>
                               <button
@@ -1406,7 +1417,7 @@
                             class="text-xs text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded"
                           >
                             <strong>💡 Tips:</strong> Play the track above, navigate
-                            to your desired start point, then click "Use Current".
+                            to your desired start point, then click "Set Start Point".
                             Navigate to the end point and click "Set End Point",
                             or use the duration presets for quick selection.
                           </div>
@@ -1673,53 +1684,57 @@
               >
                 Play Now
               </button>
-              <button
-                class="inline-flex items-center justify-center h-9 w-9 transition-colors text-black dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 align-middle"
-                onclick={handleShareOrCopy}
-                aria-label={isMobile
-                  ? "Share"
-                  : shareCopied
-                    ? "Copied!"
-                    : "Copy link"}
-                title={isMobile ? "Share" : "Copy link"}
-              >
-                {#if isMobile}
-                  <!-- Share icon (provided) -->
-                  <svg
-                    class="block h-6 w-6"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+              <div class="relative flex items-center">
+                {#if shareCopied}
+                  <div
+                    class="absolute right-12 text-xs text-green-600 dark:text-green-400 whitespace-nowrap"
                   >
-                    <path
-                      d="M11.293 2.29279C11.4805 2.10532 11.7348 2 12 2C12.2652 2 12.5195 2.10532 12.707 2.29279L15.707 5.29279C15.8892 5.48139 15.99 5.73399 15.9877 5.99619C15.9854 6.25838 15.8802 6.5092 15.6948 6.6946C15.5094 6.88001 15.2586 6.98518 14.9964 6.98746C14.7342 6.98974 14.4816 6.88894 14.293 6.70679L13 5.41379V14.9998C13 15.265 12.8946 15.5194 12.7071 15.7069C12.5196 15.8944 12.2652 15.9998 12 15.9998C11.7348 15.9998 11.4804 15.8944 11.2929 15.7069C11.1054 15.5194 11 15.265 11 14.9998V5.41379L9.707 6.70679C9.5184 6.88894 9.2658 6.98974 9.0036 6.98746C8.7414 6.98518 8.49059 6.88001 8.30518 6.6946C8.11977 6.5092 8.0146 6.25838 8.01233 5.99619C8.01005 5.73399 8.11084 5.48139 8.293 5.29279L11.293 2.29279ZM4 10.9998C4 10.4694 4.21071 9.96065 4.58579 9.58557C4.96086 9.2105 5.46957 8.99979 6 8.99979H8C8.26522 8.99979 8.51957 9.10514 8.70711 9.29268C8.89464 9.48022 9 9.73457 9 9.99979C9 10.265 8.89464 10.5194 8.70711 10.7069C8.51957 10.8944 8.26522 10.9998 8 10.9998H6V19.9998H18V10.9998H16C15.7348 10.9998 15.4804 10.8944 15.2929 10.7069C15.1054 10.5194 15 10.265 15 9.99979C15 9.73457 15.1054 9.48022 15.2929 9.29268C15.4804 9.10514 15.7348 8.99979 16 8.99979H18C18.5304 8.99979 19.0391 9.2105 19.4142 9.58557C19.7893 9.96065 20 10.4694 20 10.9998V19.9998C20 20.5302 19.7893 21.0389 19.4142 21.414C19.0391 21.7891 18.5304 21.9998 18 21.9998H6C5.46957 21.9998 4.96086 21.7891 4.58579 21.414C4.21071 21.0389 4 20.5302 4 19.9998V10.9998Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                {:else}
-                  <!-- Desktop copy icon (provided) -->
-                  <svg
-                    class="block h-6 w-6"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M6.59998 11.3968C6.59998 8.67077 6.59998 7.30777 7.44398 6.46077C8.28698 5.61377 9.64398 5.61377 12.36 5.61377H15.24C17.955 5.61377 19.313 5.61377 20.157 6.46077C21.001 7.30777 21 8.67077 21 11.3968V16.2168C21 18.9428 21 20.3058 20.157 21.1528C19.313 21.9998 17.955 21.9998 15.24 21.9998H12.36C9.64498 21.9998 8.28698 21.9998 7.44398 21.1528C6.59998 20.3058 6.59998 18.9428 6.59998 16.2168V11.3968Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                    Copied!
+                  </div>
                 {/if}
-              </button>
-              {#if shareCopied}
-                <div class="text-xs text-green-600 dark:text-green-400">
-                  Copied!
-                </div>
-              {/if}
+                <button
+                  class="inline-flex items-center justify-center h-9 w-9 transition-colors text-black dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 align-middle"
+                  onclick={handleShareOrCopy}
+                  aria-label={isMobile
+                    ? "Share"
+                    : shareCopied
+                      ? "Copied!"
+                      : "Copy link"}
+                  title={isMobile ? "Share" : "Copy link"}
+                >
+                  {#if isMobile}
+                    <!-- Share icon (provided) -->
+                    <svg
+                      class="block h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.293 2.29279C11.4805 2.10532 11.7348 2 12 2C12.2652 2 12.5195 2.10532 12.707 2.29279L15.707 5.29279C15.8892 5.48139 15.99 5.73399 15.9877 5.99619C15.9854 6.25838 15.8802 6.5092 15.6948 6.6946C15.5094 6.88001 15.2586 6.98518 14.9964 6.98746C14.7342 6.98974 14.4816 6.88894 14.293 6.70679L13 5.41379V14.9998C13 15.265 12.8946 15.5194 12.7071 15.7069C12.5196 15.8944 12.2652 15.9998 12 15.9998C11.7348 15.9998 11.4804 15.8944 11.2929 15.7069C11.1054 15.5194 11 15.265 11 14.9998V5.41379L9.707 6.70679C9.5184 6.88894 9.2658 6.98974 9.0036 6.98746C8.7414 6.98518 8.49059 6.88001 8.30518 6.6946C8.11977 6.5092 8.0146 6.25838 8.01233 5.99619C8.01005 5.73399 8.11084 5.48139 8.293 5.29279L11.293 2.29279ZM4 10.9998C4 10.4694 4.21071 9.96065 4.58579 9.58557C4.96086 9.2105 5.46957 8.99979 6 8.99979H8C8.26522 8.99979 8.51957 9.10514 8.70711 9.29268C8.89464 9.48022 9 9.73457 9 9.99979C9 10.265 8.89464 10.5194 8.70711 10.7069C8.51957 10.8944 8.26522 10.9998 8 10.9998H6V19.9998H18V10.9998H16C15.7348 10.9998 15.4804 10.8944 15.2929 10.7069C15.1054 10.5194 15 10.265 15 9.99979C15 9.73457 15.1054 9.48022 15.2929 9.29268C15.4804 9.10514 15.7348 8.99979 16 8.99979H18C18.5304 8.99979 19.0391 9.2105 19.4142 9.58557C19.7893 9.96065 20 10.4694 20 10.9998V19.9998C20 20.5302 19.7893 21.0389 19.4142 21.414C19.0391 21.7891 18.5304 21.9998 18 21.9998H6C5.46957 21.9998 4.96086 21.7891 4.58579 21.414C4.21071 21.0389 4 20.5302 4 19.9998V10.9998Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  {:else}
+                    <!-- Desktop copy icon (provided) -->
+                    <svg
+                      class="block h-6 w-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M6.59998 11.3968C6.59998 8.67077 6.59998 7.30777 7.44398 6.46077C8.28698 5.61377 9.64398 5.61377 12.36 5.61377H15.24C17.955 5.61377 19.313 5.61377 20.157 6.46077C21.001 7.30777 21 8.67077 21 11.3968V16.2168C21 18.9428 21 20.3058 20.157 21.1528C19.313 21.9998 17.955 21.9998 15.24 21.9998H12.36C9.64498 21.9998 8.28698 21.9998 7.44398 21.1528C6.59998 20.3058 6.59998 18.9428 6.59998 16.2168V11.3968Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  {/if}
+                </button>
+              </div>
             </div>
           </div>
         </div>
