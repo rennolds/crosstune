@@ -20,7 +20,7 @@
   let detectedWords = $state([]);
   let soundcloudValidation = $state({}); // Track validation status for each word
   let widgetTiming = $state({}); // Track start/end times for each word
-  import { validateClue } from "$lib/utils/filters.js";
+  import { validateClue, containsProfanity } from "$lib/utils/filters.js";
 
   // Game colors from crosswords.json
   const gameColors = [
@@ -215,6 +215,15 @@
 
     if (!validateWordCount(words)) {
       return; // Don't proceed if word count is invalid
+    }
+
+    // Block malicious/offensive words before proceeding
+    for (const w of words) {
+      if (containsProfanity(w.word)) {
+        wordCountWarning = `Word "${w.word}" is not allowed.`;
+        showWarning = true;
+        return;
+      }
     }
 
     // Merge previously entered data (clues, URLs, validation, timing) when returning from grid

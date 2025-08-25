@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { validateClue, sanitizeClue, sanitizeTitle, sanitizeAuthor } from '$lib/utils/filters.js';
+import { validateClue, sanitizeClue, sanitizeTitle, sanitizeAuthor, containsProfanity } from '$lib/utils/filters.js';
 
 export async function POST({ request, platform }) {
   try {
@@ -18,6 +18,12 @@ export async function POST({ request, platform }) {
       "#FFB34B",
       "#00FFFF",
     ];
+
+    // Reject if any words contain profanity/blocked content
+    const badWordIndex = submissionData.words.findIndex((w) => containsProfanity(w.word || ''));
+    if (badWordIndex !== -1) {
+      return json({ error: 'Invalid word', index: badWordIndex }, { status: 400 });
+    }
 
     const crosswordData = {
       title: sanitizeTitle(submissionData.details?.boardTitle || ""),
