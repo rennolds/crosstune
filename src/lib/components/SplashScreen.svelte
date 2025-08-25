@@ -57,7 +57,7 @@
 </script>
 
 <div
-  class="fixed inset-0 bg-gray-200 dark:bg-[#222] flex flex-col items-center px-4"
+  class="fixed inset-0 bg-gray-200 dark:bg-[#222] flex flex-col items-center px-4 overflow-y-auto md:overflow-visible pb-12 md:pb-0"
 >
   <div class="pt-22 mt-7.5 md:mt-20 flex flex-col items-center gap-4">
     <!-- Placeholder logo -->
@@ -172,23 +172,28 @@
     <!-- Play Button -->
     <button
       onclick={handlePlay}
-      class="rounded-xs mt-12 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
+      class="rounded-xs mt-10 md:mt-12 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
     >
       Start
     </button>
 
-    <!-- Themed Puzzle Announcement -->
-    <div class="mt-8 text-center">
-      <p class="text-orange-400 font-normal text-lg">
-        themed puzzles just dropped.
-        <a
-          href="/themed"
-          class="underline hover:text-orange-500 transition-colors"
-        >
-          play them now!
-        </a>
-        <br />
-      </p>
+    <!-- Announcement / CTA -->
+    <div class="mt-6 md:mt-8 w-full px-4">
+      <div
+        class="max-w-md mx-auto bg-orange-500 text-white rounded-xl p-3 md:p-4 shadow"
+      >
+        <p class="text-xs md:text-sm leading-relaxed">
+          In the past week we've received over 1,000 user created puzzles and we
+          can't possibly feature them all. They deserve to be played! Create
+          Puzzle has been rebranded so you can create shareable puzzles for your
+          friends! <a
+            href="/create"
+            class="underline font-semibold hover:text-orange-100 transition-colors"
+            >try it now.</a
+          > user board gallery coming soon!
+        </p>
+        <p class="mt-2 text-xs md:text-sm">- Tommy & Paul</p>
+      </div>
     </div>
   </div>
 
@@ -199,7 +204,7 @@
 <style>
   :global(body) {
     @media (max-width: 768px) {
-      overflow: hidden;
+      overflow: auto;
     }
   }
 </style>

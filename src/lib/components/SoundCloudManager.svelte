@@ -7,6 +7,7 @@
   let { words } = $props();
 
   $effect(() => {
+    if (typeof window === "undefined") return;
     function initializeWidgets() {
       console.log("Initializing SoundCloud Widgets for current words...");
 
@@ -94,15 +95,19 @@
       });
     }
 
-    if (window.SC && window.SC.Widget) {
+    if (typeof window !== "undefined" && window.SC && window.SC.Widget) {
       initializeWidgets();
     } else {
-      window.onSCWidgetApiReady = initializeWidgets;
+      if (typeof window !== "undefined") {
+        window.onSCWidgetApiReady = initializeWidgets;
+      }
     }
 
     return () => {
-      if (window.onSCWidgetApiReady === initializeWidgets) {
-        window.onSCWidgetApiReady = undefined;
+      if (typeof window !== "undefined") {
+        if (window.onSCWidgetApiReady === initializeWidgets) {
+          window.onSCWidgetApiReady = undefined;
+        }
       }
     };
   });

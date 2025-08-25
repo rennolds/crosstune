@@ -47,12 +47,17 @@
     onSetRevealFunctions = null,
     onWords = null,
     onNavigateBack = null,
+    hideHeader = false,
   } = $props();
 
   let isMobileDevice = $state(false);
   let isDark = $derived(getIsDarkMode());
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  const audioCtx = new AudioContext();
+  const AudioContext =
+    typeof window !== "undefined"
+      ? window.AudioContext || window.webkitAudioContext
+      : null;
+  const audioCtx =
+    typeof window !== "undefined" && AudioContext ? new AudioContext() : null;
 
   let widgetReadyStatus = $state({});
 
@@ -92,6 +97,7 @@
   });
 
   $effect(() => {
+    if (typeof window === "undefined") return;
     isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
 
     // Listen for changes in screen size
@@ -1526,6 +1532,7 @@
   }
 
   $effect(() => {
+    if (typeof window === "undefined") return;
     if (puzzle.backgroundImage) {
       const img = new Image();
       img.onerror = handleBackgroundImageError;
@@ -1650,18 +1657,20 @@
 {:else}
   <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
     <!-- Date/title container aligned with crossword -->
-    <div
-      class="hidden md:block text-left mb-4"
-      style="color: {isDark ? 'white' : 'black'}"
-    >
-      <h1 class="text-xl">
-        <span class="font-bold">{formatDate(displayDate)}</span>
-        {#if puzzle.title}
-          <span> - </span>
-          <span class="italic">{puzzle.title}</span>
-        {/if}
-      </h1>
-    </div>
+    {#if !hideHeader}
+      <div
+        class="hidden md:block text-left mb-4"
+        style="color: {isDark ? 'white' : 'black'}"
+      >
+        <h1 class="text-xl">
+          <span class="font-bold">{formatDate(displayDate)}</span>
+          {#if puzzle.title}
+            <span> - </span>
+            <span class="italic">{puzzle.title}</span>
+          {/if}
+        </h1>
+      </div>
+    {/if}
 
     <div
       class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
@@ -2058,6 +2067,7 @@
     onClose={handleCloseOverlay}
     {isArchiveMode}
     {isThemedMode}
+    isCustomMode={!isThemedMode && isArchiveMode}
     puzzleTitle={puzzle.title}
     words={puzzle.words}
     {selectedDate}

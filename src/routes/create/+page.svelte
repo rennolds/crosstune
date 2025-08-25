@@ -10,9 +10,17 @@
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
   let showSplash = $state(true);
   let showWordForms = $state(false);
-  let showFinalDetails = $state(false);
   let showSuccessScreen = $state(false);
+  let createdPuzzleId = $state("");
+  let shareCopied = $state(false);
+  let submittingToUs = $state(false);
+  let submitProgress = $state(0);
+  let submittedToUs = $state(false);
+  let isMobile = $state(false);
   let detectedWords = $state([]);
+  let soundcloudValidation = $state({}); // Track validation status for each word
+  let widgetTiming = $state({}); // Track start/end times for each word
+  import { validateClue } from "$lib/utils/filters.js";
 
   // Game colors from crosswords.json
   const gameColors = [
@@ -55,6 +63,9 @@
         .addEventListener("change", (e) => {
           metaThemeColor.content = e.matches ? "#202020" : "#ffffff";
         });
+
+      // Detect mobile for share behavior
+      isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
   });
 
@@ -121,8 +132,7 @@
               row: row,
               col: startCol,
               clue: "",
-              artistName: "",
-              songName: "",
+              soundcloudUrl: "",
             });
           }
           currentWord = "";
@@ -165,8 +175,7 @@
               row: startRow,
               col: col,
               clue: "",
-              artistName: "",
-              songName: "",
+              soundcloudUrl: "",
             });
           }
           currentWord = "";
@@ -193,12 +202,8 @@
 
   function validateWordCount(words) {
     const wordCount = words.length;
-    if (wordCount < 8) {
-      wordCountWarning = `You need at least 8 words. Currently have ${wordCount} words.`;
-      showWarning = true;
-      return false;
-    } else if (wordCount > 9) {
-      wordCountWarning = `Maximum 9 words allowed. Currently have ${wordCount} words.`;
+    if (wordCount < 1) {
+      wordCountWarning = `Add at least 1 word to continue.`;
       showWarning = true;
       return false;
     }
@@ -212,7 +217,50 @@
       return; // Don't proceed if word count is invalid
     }
 
-    detectedWords = words;
+    // Merge previously entered data (clues, URLs, validation, timing) when returning from grid
+    const previousWords = Array.isArray(detectedWords) ? detectedWords : [];
+    const previousValidation = soundcloudValidation || {};
+    const previousTiming = widgetTiming || {};
+
+    const makeKey = (w) => `${w.direction}-${w.row}-${w.col}-${w.word}`;
+
+    const previousMap = new Map();
+    previousWords.forEach((w, idx) => {
+      previousMap.set(makeKey(w), { word: w, index: idx });
+    });
+
+    const mergedWords = words.map((w) => {
+      const key = makeKey(w);
+      if (previousMap.has(key)) {
+        const { word: prev } = previousMap.get(key);
+        return {
+          ...w,
+          clue: prev.clue || "",
+          soundcloudUrl: prev.soundcloudUrl || "",
+        };
+      }
+      return w;
+    });
+
+    // Remap validation/timing by new indices
+    const newValidation = {};
+    const newTiming = {};
+    mergedWords.forEach((w, newIdx) => {
+      const key = makeKey(w);
+      const prev = previousMap.get(key);
+      if (prev) {
+        const oldIdx = prev.index;
+        const oldVal = previousValidation[`word-${oldIdx}`];
+        const oldTime = previousTiming[`word-${oldIdx}`];
+        if (oldVal) newValidation[`word-${newIdx}`] = oldVal;
+        if (oldTime) newTiming[`word-${newIdx}`] = oldTime;
+      }
+    });
+
+    detectedWords = mergedWords;
+    soundcloudValidation = newValidation;
+    widgetTiming = newTiming;
+
     showWordForms = true;
     showWarning = false; // Hide any existing warnings
     scrollToTop();
@@ -225,17 +273,323 @@
   function validateWordForms() {
     for (let i = 0; i < detectedWords.length; i++) {
       const word = detectedWords[i];
-      if (
-        !word.clue.trim() ||
-        !word.artistName.trim() ||
-        !word.songName.trim()
-      ) {
-        wordCountWarning = `All fields are required. Please fill in clue, artist name, and song name for "${word.word}".`;
+      const validationKey = `word-${i}`;
+      const validation = soundcloudValidation[validationKey];
+
+      if (!word.clue.trim() || !word.soundcloudUrl.trim()) {
+        wordCountWarning = `All fields are required. Please fill in clue and SoundCloud URL for "${word.word}".`;
+        showWarning = true;
+        return false;
+      }
+
+      // Clue safety validation
+      const clueCheck = validateClue(word.clue);
+      if (!clueCheck.valid) {
+        const reasons = clueCheck.reasons;
+        let msg = `Clue for "${word.word}" is not allowed: `;
+        const map = {
+          url: "no URLs",
+          pii: "no personal contact info",
+          profanity: "disallowed language",
+          length: "too long (max 140 chars)",
+          empty: "cannot be empty",
+        };
+        msg += reasons.map((r) => map[r] || r).join(", ");
+        wordCountWarning = msg;
+        showWarning = true;
+        return false;
+      }
+
+      // Check if SoundCloud URL validation is complete and valid
+      if (!validation || validation.status !== "valid" || !validation.trackId) {
+        wordCountWarning = `Please wait for SoundCloud URL validation to complete for "${word.word}", or check that the URL is valid.`;
         showWarning = true;
         return false;
       }
     }
     return true;
+  }
+
+  function isValidSoundCloudUrl(url) {
+    try {
+      const urlObj = new URL(url);
+      return (
+        urlObj.hostname === "soundcloud.com" ||
+        urlObj.hostname === "www.soundcloud.com" ||
+        urlObj.hostname === "on.soundcloud.com" ||
+        urlObj.hostname === "m.soundcloud.com"
+      );
+    } catch {
+      return false;
+    }
+  }
+
+  function normalizeSoundCloudUrl(rawUrl) {
+    if (!rawUrl) return "";
+    let url = rawUrl.trim();
+    // Remove leading '@' that some apps prepend
+    if (url.startsWith("@")) url = url.slice(1).trim();
+    // Best-effort: ensure it starts with http(s)
+    if (!/^https?:\/\//i.test(url)) {
+      url = `https://${url}`;
+    }
+    try {
+      const u = new URL(url);
+      // Strip common tracking params to stabilize the URL
+      [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "ref",
+        "si",
+        "p",
+        "c",
+      ].forEach((k) => u.searchParams.delete(k));
+      return u.toString();
+    } catch {
+      return rawUrl.trim();
+    }
+  }
+
+  async function validateSoundCloudUrl(url, wordIndex) {
+    const validationKey = `word-${wordIndex}`;
+
+    // Reset validation state
+    soundcloudValidation[validationKey] = {
+      status: "validating",
+      message: "Checking SoundCloud URL...",
+      trackId: null,
+    };
+
+    const normalizedUrl = normalizeSoundCloudUrl(url);
+
+    // If normalization changed the URL, update the bound value so the user sees the cleaned link
+    if (normalizedUrl !== url) {
+      detectedWords[wordIndex].soundcloudUrl = normalizedUrl;
+    }
+
+    if (!normalizedUrl.trim()) {
+      soundcloudValidation[validationKey] = {
+        status: "empty",
+        message: "",
+        trackId: null,
+      };
+      return;
+    }
+
+    if (!isValidSoundCloudUrl(normalizedUrl)) {
+      soundcloudValidation[validationKey] = {
+        status: "invalid",
+        message: "Please enter a valid SoundCloud URL",
+        trackId: null,
+      };
+      return;
+    }
+
+    try {
+      const result = await getSoundCloudId(normalizedUrl);
+      if (result && result.type === "tracks") {
+        soundcloudValidation[validationKey] = {
+          status: "valid",
+          message: "✓ Track found and ready for timing",
+          trackId: result.id,
+        };
+
+        // Initialize timing data
+        if (!widgetTiming[validationKey]) {
+          widgetTiming[validationKey] = {
+            startAt: "0:00",
+            endAt: "0:06",
+            audioDuration: 6,
+          };
+        }
+      } else {
+        soundcloudValidation[validationKey] = {
+          status: "invalid",
+          message:
+            "Could not find a valid SoundCloud track. Make sure it's a track (not a playlist).",
+          trackId: null,
+        };
+      }
+    } catch (error) {
+      soundcloudValidation[validationKey] = {
+        status: "error",
+        message: "Error checking SoundCloud URL. Please try again.",
+        trackId: null,
+      };
+    }
+  }
+
+  // Debounce function to avoid too many API calls
+  let validationTimeouts = {};
+  function debouncedValidation(url, wordIndex) {
+    const validationKey = `word-${wordIndex}`;
+
+    // Clear existing timeout
+    if (validationTimeouts[validationKey]) {
+      clearTimeout(validationTimeouts[validationKey]);
+    }
+
+    // Set new timeout
+    validationTimeouts[validationKey] = setTimeout(() => {
+      validateSoundCloudUrl(url, wordIndex);
+    }, 500); // Wait 500ms after user stops typing
+  }
+
+  function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  }
+
+  function parseTime(timeString) {
+    const [mins, secs] = timeString.split(":").map(Number);
+    return mins * 60 + secs;
+  }
+
+  function updateStartTime(wordIndex, seconds) {
+    const widgetKey = `word-${wordIndex}`;
+    if (!widgetTiming[widgetKey]) {
+      widgetTiming[widgetKey] = {
+        startAt: "0:00",
+        endAt: "0:06",
+        audioDuration: 6,
+      };
+    }
+    widgetTiming[widgetKey].startAt = formatTime(seconds);
+
+    // Update end time based on start + duration
+    const duration = widgetTiming[widgetKey].audioDuration;
+    widgetTiming[widgetKey].endAt = formatTime(seconds + duration);
+  }
+
+  function updateDuration(wordIndex, duration) {
+    const widgetKey = `word-${wordIndex}`;
+    if (!widgetTiming[widgetKey]) {
+      widgetTiming[widgetKey] = {
+        startAt: "0:00",
+        endAt: "0:06",
+        audioDuration: 6,
+      };
+    }
+    widgetTiming[widgetKey].audioDuration = duration;
+
+    // Update end time based on start + duration
+    const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
+    const endSeconds = startSeconds + duration;
+    widgetTiming[widgetKey].endAt = formatTime(endSeconds);
+  }
+
+  function getCurrentTime(wordIndex) {
+    const iframe = document.getElementById(`widget-${wordIndex}`);
+    if (iframe && window.SC && window.SC.Widget) {
+      const widget = window.SC.Widget(iframe);
+
+      widget.getPosition((position) => {
+        const seconds = Math.floor(position / 1000); // Convert from milliseconds
+        updateStartTime(wordIndex, seconds);
+      });
+    } else {
+      console.warn("SoundCloud Widget API not available or iframe not found");
+    }
+  }
+
+  function setEndPoint(wordIndex) {
+    const iframe = document.getElementById(`widget-${wordIndex}`);
+    if (iframe && window.SC && window.SC.Widget) {
+      const widget = window.SC.Widget(iframe);
+
+      widget.getPosition((position) => {
+        const endSeconds = Math.floor(position / 1000);
+        const widgetKey = `word-${wordIndex}`;
+
+        if (!widgetTiming[widgetKey]) {
+          widgetTiming[widgetKey] = {
+            startAt: "0:00",
+            endAt: "0:06",
+            audioDuration: 6,
+          };
+        }
+
+        const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
+        const duration = Math.max(1, endSeconds - startSeconds); // Minimum 1 second
+
+        widgetTiming[widgetKey].endAt = formatTime(endSeconds);
+        widgetTiming[widgetKey].audioDuration = duration;
+      });
+    } else {
+      console.warn("SoundCloud Widget API not available or iframe not found");
+    }
+  }
+
+  function setPresetDuration(wordIndex, duration) {
+    updateDuration(wordIndex, duration);
+  }
+
+  function previewSegment(wordIndex) {
+    const iframe = document.getElementById(`widget-${wordIndex}`);
+    if (iframe && window.SC && window.SC.Widget) {
+      const widget = window.SC.Widget(iframe);
+      const widgetKey = `word-${wordIndex}`;
+      const timing = widgetTiming[widgetKey];
+
+      if (timing) {
+        const startMs = parseTime(timing.startAt) * 1000;
+        const durationMs = timing.audioDuration * 1000;
+
+        // Seek to start position and play
+        widget.seekTo(startMs);
+        widget.play();
+
+        // Stop after duration
+        setTimeout(() => {
+          widget.pause();
+        }, durationMs);
+      }
+    }
+  }
+
+  async function getSoundCloudId(permalinkUrl) {
+    try {
+      const res = await fetch(
+        "https://soundcloud.com/oembed?format=json&maxheight=120&show_teaser=false&show_comments=false&url=" +
+          encodeURIComponent(permalinkUrl)
+      );
+
+      if (!res.ok) {
+        throw new Error(`SoundCloud API returned ${res.status}`);
+      }
+
+      const data = await res.json();
+      const { html } = data;
+
+      // Try multiple patterns to extract track ID from the iframe src
+      const patterns = [
+        /tracks%2F(\d+)/, // URL-encoded format: tracks%2F123456
+        /tracks\/(\d+)/, // Direct format: tracks/123456
+        /api\.soundcloud\.com\/(tracks|playlists)\/(\d+)/, // Original format
+      ];
+
+      for (const pattern of patterns) {
+        const match = html.match(pattern);
+        if (match) {
+          const trackId = match[1] || match[2]; // Handle different capture groups
+          const type = match[1] === trackId ? "tracks" : match[1] || "tracks";
+          return { type: type, id: Number(trackId) };
+        }
+      }
+
+      console.error(
+        "Could not extract track ID from SoundCloud embed HTML:",
+        html
+      );
+      return null;
+    } catch (error) {
+      console.error("Error fetching SoundCloud ID:", error);
+      return null;
+    }
   }
 
   function handleStartCreating() {
@@ -250,26 +604,21 @@
       .map(() => Array(12).fill(""));
     showSplash = true;
     showWordForms = false;
-    showFinalDetails = false;
     showSuccessScreen = false;
+    createdPuzzleId = "";
+    shareCopied = false;
+    submittingToUs = false;
+    submitProgress = 0;
+    submittedToUs = false;
     detectedWords = [];
+    soundcloudValidation = {}; // Clear validation state
+    widgetTiming = {}; // Clear timing data
     finalDetails = {
       creditName: "",
       boardTitle: "",
       email: "",
       notes: "",
     };
-    scrollToTop();
-  }
-
-  function handleFinalDetailsClick() {
-    if (!validateWordForms()) {
-      return; // Don't proceed if validation fails
-    }
-
-    showWordForms = false;
-    showFinalDetails = true;
-    showWarning = false; // Hide any existing warnings
     scrollToTop();
   }
 
@@ -350,6 +699,80 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
+
+  function getShareUrl() {
+    const origin =
+      typeof window !== "undefined"
+        ? window.location.origin
+        : "https://crosstune.io";
+    return `${origin}/puzzles/${createdPuzzleId}`;
+  }
+
+  async function handleShareOrCopy() {
+    const url = getShareUrl();
+    try {
+      if (isMobile && navigator.share) {
+        await navigator.share({
+          title: "Crosstune Puzzle",
+          text: `Try this Crosstune puzzle I made! ${url}`,
+          url,
+        });
+      } else {
+        await navigator.clipboard.writeText(url);
+        shareCopied = true;
+        setTimeout(() => (shareCopied = false), 1500);
+      }
+    } catch (_) {
+      try {
+        await navigator.clipboard.writeText(url);
+        shareCopied = true;
+        setTimeout(() => (shareCopied = false), 1500);
+      } catch {}
+    }
+  }
+
+  function playNow() {
+    const url = getShareUrl();
+    window.open(url, "_blank", "noopener");
+  }
+
+  async function handleSubmitToUs() {
+    if (!createdPuzzleId || submittedToUs) return;
+    // Require at least 8 words for official submission
+    if (detectedWords.length < 0) {
+      wordCountWarning =
+        "Please include at least 8 words before submitting to us.";
+      showWarning = true;
+      return;
+    }
+    submittingToUs = true;
+    submitProgress = 10;
+    let timer = setInterval(() => {
+      submitProgress = Math.min(90, submitProgress + 5);
+    }, 150);
+    try {
+      const res = await fetch("/api/submit-existing", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: createdPuzzleId,
+          creditName: finalDetails.creditName,
+          email: finalDetails.email,
+          notes: finalDetails.notes,
+        }),
+      });
+      if (!res.ok) throw new Error("Submit failed");
+      submitProgress = 100;
+      submittedToUs = true;
+    } catch (e) {
+      wordCountWarning = "Failed to submit. Please try again.";
+      showWarning = true;
+      submitProgress = 0;
+    } finally {
+      clearInterval(timer);
+      submittingToUs = false;
+    }
+  }
 </script>
 
 <Navbar
@@ -361,7 +784,7 @@
 
 <main class="min-h-screen flex flex-col text-black dark:text-white">
   <div class="create-container mx-auto px-4 py-8 md:pt-16">
-    {#if !showSplash && !showWordForms && !showFinalDetails && !showSuccessScreen}
+    {#if !showSplash && !showWordForms && !showSuccessScreen}
       <!-- Instructions for Grid Page -->
       <div class="text-center mb-6">
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
@@ -378,7 +801,7 @@
       <div class="max-w-4xl mx-auto">
         <div class="p-6 mb-6">
           <h2 class="text-2xl font-bold mb-6">
-            Create your own crosstune puzzle to be featured!
+            Create your own Crosstune puzzle!
           </h2>
 
           <!-- Mobile button - shown early -->
@@ -391,93 +814,88 @@
             </button>
           </div>
 
-          <div class="space-y-2">
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">1.</span>
-              <span
-                >Fill the puzzle grid with your answers (songs, artists,
-                lyrics...)</span
-              >
-            </div>
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">2.</span>
-              <span>Add the clue & song hint on the next page</span>
-            </div>
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">3.</span>
-              <span
-                >Give us your contact info and we'll reach out if we feature the
-                puzzle!</span
-              >
-            </div>
+          <div class="space-y-3">
+            <p>
+              Get a link to share with your friends, fans, or idk, play it
+              yourself.
+            </p>
+            <p>
+              If you're proud of it, submit it to us to be featured on the Daily
+              or Themed section!
+            </p>
           </div>
         </div>
 
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-3">Helpful info</h3>
+        {#if false}
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">Helpful info</h3>
 
-          <div class="space-y-3">
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">1.</span>
-              <span>Each puzzle must have at least 8 words</span>
-            </div>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">1.</span>
+                <span>Each puzzle must have at least 8 words</span>
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">2.</span>
-              <span
-                >Most tracks played must be "household names." If it's too obscure, we can't use it.</span
-              >
-            </div>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">2.</span>
+                <span
+                  >Most tracks played must be "household names." If it's too
+                  obscure, we can't use it.</span
+                >
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">3.</span>
-              <span
-                >Answers can't float in empty space and must be connected</span
-              >
-            </div>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">3.</span>
+                <span
+                  >Answers can't float in empty space and must be connected</span
+                >
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">4.</span>
-              <div>
-                <div class="mb-1">
-                  Hints can be as creative as you'd like. Some common ones:
-                </div>
-                <div class="ml-4 space-y-0.5">
-                  <div class="flex items-start">
-                    <span class="mr-2">a.</span>
-                    <span>Song title</span>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">4.</span>
+                <div>
+                  <div class="mb-1">
+                    Hints can be as creative as you'd like. Some common ones:
                   </div>
-                  <div class="flex items-start">
-                    <span class="mr-2">b.</span>
-                    <span>Artist name</span>
+                  <div class="ml-4 space-y-0.5">
+                    <div class="flex items-start">
+                      <span class="mr-2">a.</span>
+                      <span>Song title</span>
+                    </div>
+                    <div class="flex items-start">
+                      <span class="mr-2">b.</span>
+                      <span>Artist name</span>
+                    </div>
+                    <div class="flex items-start">
+                      <span class="mr-2">c.</span>
+                      <span>Complete the lyric: ____</span>
+                    </div>
                   </div>
-                  <div class="flex items-start">
-                    <span class="mr-2">c.</span>
-                    <span>Complete the lyric: ____</span>
+                  <div class="mt-1 text-sm">
+                    Very trivia focused clues like "what country was this artist
+                    born in" or "what year did this song come out?" are
+                    discouraged.
                   </div>
-                </div>
-                <div class="mt-1 text-sm">
-                  Very trivia focused clues like "what country was this artist
-                  born in" or "what year did this song come out?" are
-                  discouraged.
                 </div>
               </div>
-            </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">5.</span>
-              <span>Profanity will not be featured on the Daily (usually).</span>
-            </div>
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">5.</span>
+                <span
+                  >Profanity will not be featured on the Daily (usually).</span
+                >
+              </div>
 
-            <div class="flex items-start">
-              <span class="font-semibold mr-2">6.</span>
-              <span
-                >We occasionally can't get a certain song or play any snippet
-                we'd like, so we may need to tweak your puzzle a bit.</span
-              >
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">6.</span>
+                <span
+                  >We occasionally can't get a certain song or play any snippet
+                  we'd like, so we may need to tweak your puzzle a bit.</span
+                >
+              </div>
             </div>
           </div>
-        </div>
+        {/if}
 
         <!-- Desktop button - shown at bottom -->
         <div class="text-center mt-6 hidden md:block pb-24">
@@ -489,18 +907,21 @@
           </button>
         </div>
       </div>
-    {:else if !showWordForms && !showFinalDetails && !showSuccessScreen}
+    {:else if !showWordForms && !showSuccessScreen}
       <!-- Grid Creation Step -->
-      <div class="flex justify-center px-2 md:px-0">
+      <div class="flex justify-center px-2 md:px-0 w-full overflow-x-hidden">
         <div
-          class="grid grid-cols-12 gap-0.5 md:gap-1 bg-black p-1 md:p-2 rounded-lg w-full max-w-fit overflow-x-auto"
+          class="grid grid-cols-12 gap-px bg-black p-1 md:p-2 rounded-lg w-fit md:w-auto overflow-x-hidden"
         >
           {#each gridData as row, rowIndex}
             {#each row as cell, colIndex}
               <div class="relative">
                 <input
                   type="text"
-                  class="w-8 h-8 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg border border-gray-300 focus:border-blue-500 focus:outline-none bg-white"
+                  class="w-7 h-7 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg focus:outline-none bg-white"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
                   class:bg-blue-100={selectedCell.row === rowIndex &&
                     selectedCell.col === colIndex}
                   value={cell}
@@ -563,7 +984,6 @@
                 .map(() => Array(12).fill(""));
               showSplash = true;
               showWordForms = false;
-              showFinalDetails = false;
               detectedWords = [];
               finalDetails = {
                 creditName: "",
@@ -577,9 +997,11 @@
             Clear Grid
           </button>
 
-          <div
-            class="text-black dark:text-white font-semibold cursor-pointer hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
+          <button
+            type="button"
+            class="text-black dark:text-white font-semibold hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-2"
             onclick={handleNextClick}
+            aria-label="Proceed to clues and songs"
           >
             clues and songs
             <svg
@@ -595,7 +1017,7 @@
                 d="M9 5l7 7-7 7"
               ></path>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     {:else if showWordForms}
@@ -606,7 +1028,13 @@
             Add Clues & Song Details
           </h2>
           <p class="text-gray-600 dark:text-gray-400">
-            Fill in the clue and song information for each word in your puzzle
+            Write your clues and add audio snippets for each word.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400">
+            All audio must come from <a
+              href="https://soundcloud.com"
+              class="text-orange-500">SoundCloud</a
+            >.
           </p>
         </div>
 
@@ -614,6 +1042,10 @@
           {#each detectedWords as word, index}
             <div
               class="bg-gray-50 dark:bg-[#303030] border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+              class:border-green-500={detectedWords[index].clue &&
+                detectedWords[index].clue.trim().length > 0}
+              class:dark\:border-green-500={detectedWords[index].clue &&
+                detectedWords[index].clue.trim().length > 0}
             >
               <!-- Word Header -->
               <div
@@ -674,79 +1106,459 @@
                     id="clue-{index}"
                     type="text"
                     required
+                    autocomplete="off"
+                    autocapitalize="off"
                     placeholder="Enter your creative clue here..."
                     class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                     bind:value={detectedWords[index].clue}
                   />
                 </div>
 
-                <!-- Artist and Song Fields - Side by Side -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      for="artist-{index}"
-                      class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                <!-- SoundCloud URL Field -->
+                <div>
+                  <label
+                    for="soundcloud-{index}"
+                    class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                  >
+                    <svg
+                      class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        ></path>
-                      </svg>
-                      Artist Name
-                      <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <input
-                      id="artist-{index}"
-                      type="text"
-                      required
-                      placeholder="Artist or band name"
-                      class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
-                      bind:value={detectedWords[index].artistName}
-                    />
-                  </div>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                      ></path>
+                    </svg>
+                    SoundCloud URL
+                    <span class="text-red-500 ml-1">*</span>
+                  </label>
+                  <input
+                    id="soundcloud-{index}"
+                    type="url"
+                    required
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    placeholder="https://soundcloud.com/artist/track-name"
+                    class="w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                    class:border-gray-300={!soundcloudValidation[
+                      `word-${index}`
+                    ] ||
+                      soundcloudValidation[`word-${index}`].status === "empty"}
+                    class:dark:border-gray-600={!soundcloudValidation[
+                      `word-${index}`
+                    ] ||
+                      soundcloudValidation[`word-${index}`].status === "empty"}
+                    class:border-yellow-400={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "validating"}
+                    class:focus:ring-yellow-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "validating"}
+                    class:border-green-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "valid"}
+                    class:focus:ring-green-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "valid"}
+                    class:border-red-500={soundcloudValidation[`word-${index}`]
+                      ?.status === "invalid" ||
+                      soundcloudValidation[`word-${index}`]?.status === "error"}
+                    class:focus:ring-red-500={soundcloudValidation[
+                      `word-${index}`
+                    ]?.status === "invalid" ||
+                      soundcloudValidation[`word-${index}`]?.status === "error"}
+                    bind:value={detectedWords[index].soundcloudUrl}
+                    oninput={(event) =>
+                      debouncedValidation(event.target.value, index)}
+                  />
 
-                  <div>
-                    <label
-                      for="song-{index}"
-                      class="flex items-center text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                  <!-- Validation feedback -->
+                  {#if soundcloudValidation[`word-${index}`]?.message}
+                    <div
+                      class="text-xs mt-2 flex items-center gap-1"
+                      class:text-yellow-600={soundcloudValidation[
+                        `word-${index}`
+                      ].status === "validating"}
+                      class:text-green-600={soundcloudValidation[
+                        `word-${index}`
+                      ].status === "valid"}
+                      class:text-red-600={soundcloudValidation[`word-${index}`]
+                        .status === "invalid" ||
+                        soundcloudValidation[`word-${index}`].status ===
+                          "error"}
                     >
-                      <svg
-                        class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      {#if soundcloudValidation[`word-${index}`].status === "validating"}
+                        <svg
+                          class="w-3 h-3 animate-spin"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                          ></path>
+                        </svg>
+                      {:else if soundcloudValidation[`word-${index}`].status === "valid"}
+                        <svg
+                          class="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          ></path>
+                        </svg>
+                      {/if}
+                      {soundcloudValidation[`word-${index}`].message}
+                    </div>
+                  {:else}
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                      Paste the full SoundCloud URL for the track you want to
+                      use
+                    </p>
+                  {/if}
+
+                  <!-- SoundCloud Widget Area -->
+                  <div
+                    class="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border max-w-lg mx-auto"
+                  >
+                    <h4 class="font-semibold text-sm mb-3">
+                      Preview & Set Timing
+                    </h4>
+
+                    {#if soundcloudValidation[`word-${index}`]?.trackId}
+                      <!-- SoundCloud iframe -->
+                      <div class="mb-4 flex justify-center">
+                        <iframe
+                          id="widget-{index}"
+                          class="w-full max-w-md"
+                          height="120"
+                          scrolling="no"
+                          frameborder="no"
+                          allow="autoplay"
+                          title="SoundCloud player for {detectedWords[index]
+                            .word}"
+                          src="https://w.soundcloud.com/player/?visual=false&url=https%3A//api.soundcloud.com/tracks/{soundcloudValidation[
+                            `word-${index}`
+                          ]
+                            .trackId}&show_artwork=false&show_user=false&show_playcount=false&show_comments=false&show_reposts=false&hide_related=true&show_teaser=false&download=false&sharing=false&buying=false&auto_play=false"
+                        ></iframe>
+                      </div>
+
+                      <!-- Enhanced Timing Controls -->
+                      <div class="space-y-4">
+                        <!-- Time Controls -->
+                        <div
+                          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center"
+                        >
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >Start Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:00"
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-center"
+                                value={widgetTiming[`word-${index}`]?.startAt ||
+                                  "0:00"}
+                                oninput={(event) => {
+                                  const widgetKey = `word-${index}`;
+                                  if (!widgetTiming[widgetKey]) {
+                                    widgetTiming[widgetKey] = {
+                                      startAt: "0:00",
+                                      endAt: "0:06",
+                                      audioDuration: 6,
+                                    };
+                                  }
+                                  widgetTiming[widgetKey].startAt =
+                                    event.target.value;
+                                  // Update end time and duration
+                                  const startSeconds = parseTime(
+                                    event.target.value
+                                  );
+                                  const duration =
+                                    widgetTiming[widgetKey].audioDuration;
+                                  widgetTiming[widgetKey].endAt = formatTime(
+                                    startSeconds + duration
+                                  );
+                                }}
+                              />
+                              <button
+                                class="px-3 py-2 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                                onclick={() => getCurrentTime(index)}
+                              >
+                                Set Start Point
+                              </button>
+                            </div>
+                          </div>
+
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >End Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:06"
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-center"
+                                value={widgetTiming[`word-${index}`]?.endAt ||
+                                  "0:06"}
+                                readonly
+                              />
+                              <button
+                                class="px-3 py-2 text-xs bg-purple-500 text-white rounded hover:bg-purple-600 transition-colors"
+                                onclick={() => setEndPoint(index)}
+                              >
+                                Set End Point
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Duration Controls -->
+                        <div class="flex justify-center">
+                          <div>
+                            <label
+                              class="block text-xs font-medium mb-2 text-center"
+                              >Duration</label
+                            >
+                            <div class="flex items-center gap-2 mb-2">
+                              <input
+                                type="number"
+                                min="1"
+                                max="30"
+                                class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
+                                value={widgetTiming[`word-${index}`]
+                                  ?.audioDuration || 6}
+                                oninput={(event) =>
+                                  updateDuration(
+                                    index,
+                                    parseInt(event.target.value) || 6
+                                  )}
+                              />
+                              <span class="text-xs text-gray-500">seconds</span>
+                              <button
+                                class="px-3 py-2 text-xs bg-green-500 text-white rounded hover:bg-green-600 transition-colors ml-2"
+                                onclick={() => previewSegment(index)}
+                              >
+                                ▶ Preview Segment
+                              </button>
+                            </div>
+
+                            <!-- Quick Duration Presets -->
+                            <div class="flex gap-2 justify-center">
+                              <span class="text-xs text-gray-500 self-center"
+                                >Quick:</span
+                              >
+                              {#each [3, 6, 10, 15] as duration}
+                                <button
+                                  class="px-2 py-1 text-xs rounded transition-colors"
+                                  class:bg-blue-500={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration === duration}
+                                  class:text-white={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration === duration}
+                                  class:bg-gray-200={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration !== duration}
+                                  class:dark:bg-gray-700={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration !== duration}
+                                  class:hover:bg-blue-400={widgetTiming[
+                                    `word-${index}`
+                                  ]?.audioDuration !== duration}
+                                  onclick={() =>
+                                    setPresetDuration(index, duration)}
+                                >
+                                  {duration}s
+                                </button>
+                              {/each}
+                            </div>
+                          </div>
+                        </div>
+
+                        {#if index === 0}
+                          <div
+                            class="text-xs text-gray-600 dark:text-gray-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded"
+                          >
+                            <strong>💡 Tips:</strong> Play the track above, navigate
+                            to your desired start point, then click "Use Current".
+                            Navigate to the end point and click "Set End Point",
+                            or use the duration presets for quick selection.
+                          </div>
+                        {/if}
+                      </div>
+                    {:else}
+                      <!-- Placeholder -->
+                      <div class="mb-4 flex justify-center">
+                        <div
+                          class="w-full max-w-md h-[120px] bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600"
+                        >
+                          <div
+                            class="text-center text-gray-500 dark:text-gray-400"
+                          >
+                            <svg
+                              class="w-8 h-8 mx-auto mb-2"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                              ></path>
+                            </svg>
+                            <p class="text-sm">
+                              SoundCloud player will appear here
+                            </p>
+                            <p class="text-xs">
+                              Enter a valid SoundCloud URL above
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Disabled Timing Controls -->
+                      <div class="space-y-4 opacity-50">
+                        <!-- Time Controls -->
+                        <div
+                          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center"
+                        >
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >Start Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:00"
+                                disabled
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed text-center"
+                                value="0:00"
+                              />
+                              <button
+                                disabled
+                                class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed"
+                              >
+                                Set Start Point
+                              </button>
+                            </div>
+                          </div>
+
+                          <div>
+                            <label class="block text-xs font-medium mb-2"
+                              >End Time</label
+                            >
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="text"
+                                placeholder="0:06"
+                                disabled
+                                class="w-16 px-2 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed text-center"
+                                value="0:06"
+                              />
+                              <button
+                                disabled
+                                class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed"
+                              >
+                                Set End Point
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Duration Controls -->
+                        <div class="flex justify-center">
+                          <div>
+                            <label
+                              class="block text-xs font-medium mb-2 text-center"
+                              >Duration</label
+                            >
+                            <div class="flex items-center gap-2 mb-2">
+                              <input
+                                type="number"
+                                min="1"
+                                max="30"
+                                disabled
+                                class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 cursor-not-allowed"
+                                value="6"
+                              />
+                              <span class="text-xs text-gray-500">seconds</span>
+                              <button
+                                disabled
+                                class="px-3 py-2 text-xs bg-gray-400 text-white rounded cursor-not-allowed ml-2"
+                              >
+                                ▶ Preview Segment
+                              </button>
+                            </div>
+
+                            <!-- Quick Duration Presets -->
+                            <div class="flex gap-2 justify-center">
+                              <span class="text-xs text-gray-500 self-center"
+                                >Quick:</span
+                              >
+                              {#each [3, 6, 10, 15] as duration}
+                                <button
+                                  disabled
+                                  class="px-2 py-1 text-xs rounded bg-gray-200 dark:bg-gray-700 text-gray-500 cursor-not-allowed"
+                                >
+                                  {duration}s
+                                </button>
+                              {/each}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="mt-3 text-xs text-gray-500 dark:text-gray-500"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                        ></path>
-                      </svg>
-                      Song Name
-                      <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <input
-                      id="song-{index}"
-                      type="text"
-                      required
-                      placeholder="Song title"
-                      class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
-                      bind:value={detectedWords[index].songName}
-                    />
+                        Timing controls will be enabled once a valid SoundCloud
+                        URL is provided.
+                      </div>
+                    {/if}
                   </div>
                 </div>
               </div>
             </div>
           {/each}
+        </div>
+
+        <!-- Title input moved to bottom of clues/songs page -->
+        <div class="max-w-2xl mx-auto mt-10">
+          <label
+            for="board-title"
+            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
+            Title for the board? <span class="text-xs text-gray-500"
+              >(optional)</span
+            >
+          </label>
+          <input
+            id="board-title"
+            type="text"
+            autocomplete="off"
+            autocapitalize="off"
+            class="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            bind:value={finalDetails.boardTitle}
+            placeholder="Give your puzzle a title"
+          />
         </div>
 
         <div
@@ -763,145 +1575,263 @@
           </button>
           <button
             class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-            onclick={handleFinalDetailsClick}
-          >
-            Continue to Final Details →
-          </button>
-        </div>
-      </div>
-    {:else if showFinalDetails}
-      <!-- Final Details Step -->
-      <div class="max-w-2xl mx-auto">
-        <div class="space-y-6">
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              Want credit? Give us a name/handle to shoutout
-            </label>
-            <input
-              type="text"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-              bind:value={finalDetails.creditName}
-              placeholder="Your name or handle (optional)"
-            />
-          </div>
+            onclick={async (event) => {
+              if (!validateWordForms()) return;
+              const button = event.target;
+              button.disabled = true;
+              button.textContent = "Processing...";
 
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              Title for the board?
-            </label>
-            <input
-              type="text"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-              bind:value={finalDetails.boardTitle}
-              placeholder="Give your puzzle a title (optional)"
-            />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              How can we reach out to you to let you know we're featuring the
-              puzzle? Email only please!
-            </label>
-            <input
-              type="email"
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-              bind:value={finalDetails.email}
-              placeholder="your.email@example.com (optional)"
-            />
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">
-              Any other notes for us?
-            </label>
-            <textarea
-              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
-              bind:value={finalDetails.notes}
-              placeholder="Any additional notes or comments (optional)"
-            ></textarea>
-          </div>
-        </div>
-
-        <div class="flex justify-center space-x-4 mt-8 pb-24">
-          <button
-            class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] transition-colors"
-            onclick={() => {
-              showFinalDetails = false;
-              showWordForms = true;
-              scrollToTop();
-            }}
-          >
-            Back to Clues
-          </button>
-          <button
-            class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-            onclick={async () => {
               try {
-                const response = await fetch("/api/submit-puzzle", {
+                const wordsWithTrackIds = detectedWords.map((word, index) => {
+                  const validationKey = `word-${index}`;
+                  const validation = soundcloudValidation[validationKey];
+                  const timing = widgetTiming[validationKey] || {
+                    startAt: "0:00",
+                    audioDuration: 6,
+                  };
+
+                  return {
+                    ...word,
+                    trackId: validation.trackId,
+                    startAt: timing.startAt,
+                    audioDuration: timing.audioDuration,
+                  };
+                });
+
+                const response = await fetch("/api/create-puzzle", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
                   },
                   body: JSON.stringify({
                     grid: gridData,
-                    words: detectedWords,
+                    words: wordsWithTrackIds,
                     details: finalDetails,
                   }),
                 });
 
                 if (response.ok) {
                   const result = await response.json();
-                  showFinalDetails = false;
+                  createdPuzzleId = result.id;
+                  showWordForms = false;
                   showSuccessScreen = true;
                   scrollToTop();
                 } else {
                   wordCountWarning =
-                    "Failed to submit puzzle. Please try again.";
+                    "Failed to create puzzle. Please try again.";
                   showWarning = true;
+                  button.disabled = false;
+                  button.textContent = "Create & Get Share Link";
                 }
               } catch (error) {
-                console.error("Submission error:", error);
+                console.error("Create error:", error);
                 wordCountWarning =
-                  "Error submitting puzzle. Please check your connection and try again.";
+                  "Error creating puzzle. Please check your connection and try again.";
                 showWarning = true;
+                button.disabled = false;
+                button.textContent = "Create & Get Share Link";
               }
             }}
           >
-            Submit Puzzle
+            Create & Get Share Link
           </button>
         </div>
       </div>
     {:else if showSuccessScreen}
-      <!-- Success Screen -->
-      <div class="max-w-2xl mx-auto text-center">
-        <div class="p-8 pb-24">
-          <h2 class="text-3xl font-bold mb-6">Thanks for your submission!</h2>
-          <p class="text-lg mb-8">We'll check out your puzzle asap!</p>
-
-          <p class="text-lg mb-8">In the meantime...</p>
-
-          <div class="space-y-4">
-            <button
-              class="w-full rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-              onclick={handleSubmitAnother}
+      <!-- Post-Creation Share & Submit Screen -->
+      <div class="max-w-3xl mx-auto">
+        <div class="p-8 pb-6">
+          <h2 class="text-2xl font-bold mb-4">Voilà, here is your creation.</h2>
+          <div class="max-w-2xl mx-auto">
+            <div
+              class="text-xs italic text-gray-600 dark:text-gray-500 text-right mb-1"
             >
-              SUBMIT ANOTHER ONE
-            </button>
-
-            <button
-              class="w-full rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
-              onclick={() => (window.location.href = "/")}
+              *This link will be live for 30 days
+            </div>
+            <div
+              class="text-sm md:text-base bg-gray-100 dark:bg-[#D9D9D9] px-3 py-2 rounded select-all break-all text-black dark:text-black"
             >
-              PLAY TODAY'S
-            </button>
-
-            <button
-              class="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
-              onclick={() => (window.location.href = "/themed")}
-            >
-              PLAY THEMED PUZZLES
-            </button>
+              {typeof window !== "undefined"
+                ? getShareUrl()
+                : `https://crosstune.io/puzzles/${createdPuzzleId}`}
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <button
+                class="rounded-xs px-4 py-2 mt-2 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors"
+                onclick={playNow}
+              >
+                Play Now
+              </button>
+              <button
+                class="inline-flex items-center justify-center h-9 w-9 transition-colors text-black dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 align-middle"
+                onclick={handleShareOrCopy}
+                aria-label={isMobile
+                  ? "Share"
+                  : shareCopied
+                    ? "Copied!"
+                    : "Copy link"}
+                title={isMobile ? "Share" : "Copy link"}
+              >
+                {#if isMobile}
+                  <!-- Share icon (provided) -->
+                  <svg
+                    class="block h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.293 2.29279C11.4805 2.10532 11.7348 2 12 2C12.2652 2 12.5195 2.10532 12.707 2.29279L15.707 5.29279C15.8892 5.48139 15.99 5.73399 15.9877 5.99619C15.9854 6.25838 15.8802 6.5092 15.6948 6.6946C15.5094 6.88001 15.2586 6.98518 14.9964 6.98746C14.7342 6.98974 14.4816 6.88894 14.293 6.70679L13 5.41379V14.9998C13 15.265 12.8946 15.5194 12.7071 15.7069C12.5196 15.8944 12.2652 15.9998 12 15.9998C11.7348 15.9998 11.4804 15.8944 11.2929 15.7069C11.1054 15.5194 11 15.265 11 14.9998V5.41379L9.707 6.70679C9.5184 6.88894 9.2658 6.98974 9.0036 6.98746C8.7414 6.98518 8.49059 6.88001 8.30518 6.6946C8.11977 6.5092 8.0146 6.25838 8.01233 5.99619C8.01005 5.73399 8.11084 5.48139 8.293 5.29279L11.293 2.29279ZM4 10.9998C4 10.4694 4.21071 9.96065 4.58579 9.58557C4.96086 9.2105 5.46957 8.99979 6 8.99979H8C8.26522 8.99979 8.51957 9.10514 8.70711 9.29268C8.89464 9.48022 9 9.73457 9 9.99979C9 10.265 8.89464 10.5194 8.70711 10.7069C8.51957 10.8944 8.26522 10.9998 8 10.9998H6V19.9998H18V10.9998H16C15.7348 10.9998 15.4804 10.8944 15.2929 10.7069C15.1054 10.5194 15 10.265 15 9.99979C15 9.73457 15.1054 9.48022 15.2929 9.29268C15.4804 9.10514 15.7348 8.99979 16 8.99979H18C18.5304 8.99979 19.0391 9.2105 19.4142 9.58557C19.7893 9.96065 20 10.4694 20 10.9998V19.9998C20 20.5302 19.7893 21.0389 19.4142 21.414C19.0391 21.7891 18.5304 21.9998 18 21.9998H6C5.46957 21.9998 4.96086 21.7891 4.58579 21.414C4.21071 21.0389 4 20.5302 4 19.9998V10.9998Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                {:else}
+                  <!-- Desktop copy icon (provided) -->
+                  <svg
+                    class="block h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M6.59998 11.3968C6.59998 8.67077 6.59998 7.30777 7.44398 6.46077C8.28698 5.61377 9.64398 5.61377 12.36 5.61377H15.24C17.955 5.61377 19.313 5.61377 20.157 6.46077C21.001 7.30777 21 8.67077 21 11.3968V16.2168C21 18.9428 21 20.3058 20.157 21.1528C19.313 21.9998 17.955 21.9998 15.24 21.9998H12.36C9.64498 21.9998 8.28698 21.9998 7.44398 21.1528C6.59998 20.3058 6.59998 18.9428 6.59998 16.2168V11.3968Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                {/if}
+              </button>
+              {#if shareCopied}
+                <div class="text-xs text-green-600 dark:text-green-400">
+                  Copied!
+                </div>
+              {/if}
+            </div>
           </div>
+        </div>
+        <div class="px-8 mt-6">
+          <div
+            class="max-w-2xl mx-auto border border-black-200 dark:border-gray-700 rounded-lg p-6"
+          >
+            <h3 class="text-lg font-bold mb-2 text-center">
+              Think your puzzle is great? Send it to us.
+            </h3>
+            <p
+              class="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center"
+            >
+              Can be featured on The Daily or Themed Section
+            </p>
+            <!-- Author/Email/Notes moved above submit button -->
+            <div class="space-y-4 mb-4">
+              <div>
+                <label for="credit-name" class="block text-sm font-medium mb-2"
+                  >Want a shoutout?</label
+                >
+                <input
+                  id="credit-name"
+                  type="text"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
+                  bind:value={finalDetails.creditName}
+                  placeholder="Give us a name or handle (optional)"
+                />
+              </div>
+              <div>
+                <label for="credit-email" class="block text-sm font-medium mb-2"
+                  >What's your email?</label
+                >
+                <input
+                  id="credit-email"
+                  type="email"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  inputmode="email"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
+                  bind:value={finalDetails.email}
+                  placeholder="We'll contact you if the puzzle is featured (optional)"
+                />
+              </div>
+              <div>
+                <label for="credit-notes" class="block text-sm font-medium mb-2"
+                  >Anything else we should know?</label
+                >
+                <textarea
+                  id="credit-notes"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
+                  bind:value={finalDetails.notes}
+                  placeholder="Additional info (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="mb-4 flex flex-col items-center">
+              <button
+                class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors disabled:cursor-not-allowed"
+                disabled={submittingToUs || submittedToUs}
+                onclick={handleSubmitToUs}
+              >
+                {submittedToUs ? "Submitted ✓" : "Submit"}
+              </button>
+
+              {#if submittedToUs}
+                <!-- Hide bar when complete and show a success line instead (button stays disabled) -->
+                <div
+                  class="mt-3 text-green-600 dark:text-green-400 text-sm font-semibold"
+                >
+                  All set!
+                </div>
+              {:else if submittingToUs || submitProgress > 0}
+                <div
+                  class="mt-3 h-2 w-full max-w-sm bg-gray-200 dark:bg-gray-700 rounded"
+                >
+                  <div
+                    class="h-2 bg-green-500 rounded transition-all"
+                    style={`width: ${submitProgress}%`}
+                  ></div>
+                </div>
+              {/if}
+            </div>
+
+            <h4 class="text-sm italic font-semibold mb-2">
+              Notes about features
+            </h4>
+            <div class="space-y-3 text-xs italic">
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">1.</span>
+                <span>Each puzzle must have at least 8 words</span>
+              </div>
+
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">2.</span>
+                <span
+                  >Most tracks played must be "household names." If it's too
+                  obscure, we can't use it.</span
+                >
+              </div>
+
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">3.</span>
+                <span
+                  >Answers can't float in empty space and must be connected</span
+                >
+              </div>
+
+              <div class="flex items-start">
+                <span class="font-semibold mr-2">4.</span>
+                <span
+                  >Profanity will not be featured on the Daily (usually).</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="pb-24"></div>
         </div>
       </div>
     {/if}
@@ -911,7 +1841,9 @@
 <!-- Word Count Warning -->
 {#if showWarning}
   <div
-    class="fixed top-20 right-4 bg-amber-100 dark:bg-amber-900 border-l-4 border-amber-500 text-amber-800 dark:text-amber-200 px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
+    class="fixed right-4 bg-amber-100 dark:bg-amber-900 border-l-4 border-amber-500 text-amber-800 dark:text-amber-200 px-4 py-3 rounded-lg shadow-lg z-40 max-w-sm"
+    class:top-20={!isMobile}
+    class:top-32={isMobile}
   >
     <div class="flex items-start justify-between">
       <div class="mr-3">
