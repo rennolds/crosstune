@@ -38,7 +38,7 @@
           <li class="p-4 flex items-center justify-between">
             <div>
               <div class="font-semibold text-black dark:text-white">
-                {p.title || "Untitled puzzle"}
+                {p.title}
               </div>
               <div class="text-sm text-gray-500">{p.id}</div>
             </div>

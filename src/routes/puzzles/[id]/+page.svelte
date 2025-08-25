@@ -57,7 +57,7 @@
       <h1
         class="text-base md:text-xl font-bold text-black dark:text-white mb-1 text-left ml-2 md:ml-0"
       >
-        {puzzle?.title || "Untitled puzzle"}
+        {puzzle?.title}
       </h1>
       {#if created_by}
         <p
