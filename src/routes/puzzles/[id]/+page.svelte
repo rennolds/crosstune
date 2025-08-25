@@ -26,6 +26,16 @@
   onMount(async () => {
     const mod = await import("$lib/components/CrosswordGrid1.svelte");
     GridComponent = mod.default;
+
+    // Fire GA event when a custom puzzle page is opened
+    if (typeof gtag === "function") {
+      gtag("event", "user_puzzle_opened", {
+        event_category: "custom",
+        event_label: puzzle?.title,
+        puzzle_id: id,
+        created_by,
+      });
+    }
   });
 
   // No archive/themed mode; render as standalone custom puzzle
