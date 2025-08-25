@@ -909,16 +909,16 @@
       </div>
     {:else if !showWordForms && !showSuccessScreen}
       <!-- Grid Creation Step -->
-      <div class="flex justify-center px-2 md:px-0">
+      <div class="flex justify-center px-2 md:px-0 w-full overflow-x-hidden">
         <div
-          class="grid grid-cols-12 gap-0.5 md:gap-1 bg-black p-1 md:p-2 rounded-lg w-full max-w-fit overflow-x-auto"
+          class="grid grid-cols-12 gap-px bg-black p-1 md:p-2 rounded-lg w-fit md:w-auto overflow-x-hidden"
         >
           {#each gridData as row, rowIndex}
             {#each row as cell, colIndex}
               <div class="relative">
                 <input
                   type="text"
-                  class="w-8 h-8 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg border border-gray-300 focus:border-blue-500 focus:outline-none bg-white"
+                  class="w-7 h-7 md:w-10 md:h-10 text-center text-black font-bold text-sm md:text-lg focus:outline-none bg-white"
                   autocomplete="off"
                   autocapitalize="off"
                   spellcheck="false"
