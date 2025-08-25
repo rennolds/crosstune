@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import axios from 'axios';
 import { DISCORD_WEBHOOK_URL } from '$env/static/private';
+import { sanitizeAuthor, sanitizeTitle, validateNotes } from '$lib/utils/filters.js';
 
 export async function POST({ request, platform }) {
   try {
@@ -24,6 +25,13 @@ export async function POST({ request, platform }) {
     }
 
     const puzzle = JSON.parse(row.puzzle_json);
+    // Sanitize title (max 100 already stored, but ensure on outbound)
+    puzzle.title = sanitizeTitle(puzzle.title || '');
+
+    // Sanitize submitter and notes for outbound to Discord
+    const safeCredit = sanitizeAuthor(creditName || '');
+    const { valid: notesValid, value: safeNotes } = validateNotes(notes || '');
+    const outboundNotes = notesValid ? safeNotes : '(notes removed: malicious content)';
 
     const wordList = (puzzle.words || [])
       .map((w, i) => `${i + 1}. **${w.word}** (${w.direction}) - ${w.textClue}\n   SoundCloud URL: ${w.soundcloudUrl}\n   Audio URL: ${w.audioUrl}\n   Timing: ${w.startAt || '0:00'} for ${w.audioDuration || 6}s`)
@@ -47,7 +55,7 @@ export async function POST({ request, platform }) {
             },
             {
               name: '👤 Submitted by',
-              value: creditName || '(anonymous)',
+              value: safeCredit || '(anonymous)',
               inline: true
             },
             {
@@ -57,8 +65,8 @@ export async function POST({ request, platform }) {
             },
             {
               name: '📝 Notes',
-              value: (notes && notes.trim())
-                ? (notes.length > 1024 ? notes.substring(0, 1021) + '...' : notes)
+              value: (outboundNotes && outboundNotes.trim())
+                ? (outboundNotes.length > 1024 ? outboundNotes.substring(0, 1021) + '...' : outboundNotes)
                 : '(none)',
               inline: false
             },

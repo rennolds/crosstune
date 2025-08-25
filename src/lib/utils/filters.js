@@ -25,8 +25,6 @@ const PROFANITY_WORDS = [
   'bangbus',
   'bareback',
   'barely legal',
-  'barenaked',
-  'bastard',
   'bastardo',
   'bastinado',
   'bbw',
@@ -43,8 +41,6 @@ const PROFANITY_WORDS = [
   'big tits',
   'bimbos',
   'birdlock',
-  'bitch',
-  'bitches',
   'black cock',
   'blonde action',
   'blonde on blonde action',
@@ -63,7 +59,6 @@ const PROFANITY_WORDS = [
   'bullet vibe',
   'bung hole',
   'bunghole',
-  'busty',
   'camel toe',
   'camgirl',
   'camslut',
@@ -245,7 +240,6 @@ const PROFANITY_WORDS = [
   'raping',
   'rapist',
   'rectum',
-  'reverse cowgirl',
   'rimjob',
   'rimming',
   'rosy palm',
@@ -254,8 +248,6 @@ const PROFANITY_WORDS = [
   'sadism',
   'santorum',
   'scat',
-  'schlong',
-  'scissoring',
   'semen',
   'sexcam',
   'sexo',
@@ -275,7 +267,6 @@ const PROFANITY_WORDS = [
   'splooge',
   'splooge moose',
   'spooge',
-  'spread legs',
   'spunk',
   'strap on',
   'strapon',
@@ -303,7 +294,6 @@ const PROFANITY_WORDS = [
   'twink',
   'twinkie',
   'two girls one cup',
-  'undressing',
   'upskirt',
   'urethra play',
   'urophilia',
@@ -426,7 +416,7 @@ export function validateClue(input) {
   if (!value) {
     reasons.push('empty');
   }
-  if (value.length > 140) {
+  if (value.length > 150) {
     reasons.push('length');
   }
   if (containsUrl(value)) {
@@ -446,4 +436,53 @@ export function validateClue(input) {
   };
 }
 
+
+// Additional sanitizers/validators for other fields
+export function sanitizeTitle(input) {
+  const value = normalizeText(input);
+  return value.slice(0, 100);
+}
+
+export function sanitizeAuthor(input) {
+  const value = normalizeText(input);
+  // Allow reasonably long names/handles
+  return value.slice(0, 80);
+}
+
+export function validateNotes(input) {
+  const value = normalizeText(input);
+  // Notes are optional
+  if (!value) {
+    return { valid: true, value: '' , reasons: [] };
+  }
+  const reasons = [];
+  if (value.length > 300) {
+    reasons.push('length');
+  }
+
+  // Basic malicious payload detection (SQLi / XSS hints)
+  const MALICIOUS_PATTERNS = [
+    /<\s*script\b/i,
+    /javascript:/i,
+    /on\w+\s*=\s*['"][^'"\n]*['"]/i,
+    /(;\s*)?--\s*$/m,
+    /\/\*/,
+    /\b(union\s+all\s+select|union\s+select)\b/i,
+    /\b(drop|truncate|alter)\s+table\b/i,
+    /\b(insert\s+into|update\s+\w+\s+set|delete\s+from)\b/i,
+    /\bxp_cmdshell\b/i,
+    /\bwaitfor\b/i,
+    /\bsleep\s*\(/i
+  ];
+
+  const hasMalicious = MALICIOUS_PATTERNS.some((re) => re.test(value));
+  if (hasMalicious) {
+    reasons.push('malicious');
+  }
+
+  // Strip control characters from value for safety in downstream sinks
+  const cleaned = value.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '');
+
+  return { valid: reasons.length === 0, value: cleaned, reasons };
+}
 

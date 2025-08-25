@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { validateClue, sanitizeClue } from '$lib/utils/filters.js';
+import { validateClue, sanitizeClue, sanitizeTitle, sanitizeAuthor } from '$lib/utils/filters.js';
 
 export async function POST({ request, platform }) {
   try {
@@ -20,7 +20,7 @@ export async function POST({ request, platform }) {
     ];
 
     const crosswordData = {
-      title: submissionData.details?.boardTitle || "",
+      title: sanitizeTitle(submissionData.details?.boardTitle || ""),
       version: "1.0.0",
       size: {
         width: 12,
@@ -59,6 +59,8 @@ export async function POST({ request, platform }) {
 
     const puzzleId = generateId();
 
+    const createdBy = sanitizeAuthor(submissionData?.details?.creditName || "");
+
     await db
       .prepare(
         `INSERT INTO custom_puzzles (id, puzzle_json, created_by)
@@ -67,7 +69,7 @@ export async function POST({ request, platform }) {
       .bind(
         puzzleId,
         JSON.stringify(crosswordData),
-        submissionData?.details?.creditName || null
+        createdBy || null
       )
       .run();
 
