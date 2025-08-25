@@ -2067,6 +2067,7 @@
     onClose={handleCloseOverlay}
     {isArchiveMode}
     {isThemedMode}
+    isCustomMode={!isThemedMode && isArchiveMode}
     puzzleTitle={puzzle.title}
     words={puzzle.words}
     {selectedDate}

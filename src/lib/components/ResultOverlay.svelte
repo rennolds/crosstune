@@ -13,6 +13,7 @@
     hideKeyboard,
     isArchiveMode = false,
     isThemedMode = false,
+    isCustomMode = false,
     puzzleTitle = null,
     words = [], // Accept words prop, remove placeholder songs
     selectedDate,
@@ -196,6 +197,9 @@
         themedUrl = `crosstune.io/themed/${puzzleSlug}`;
       }
       shareText = `Crosstune - ${puzzleTitle}\n\n${resultText}\n\n${themedUrl}`;
+    } else if (isCustomMode) {
+      // Custom/created puzzles: no archive/date text
+      shareText = `Crosstune - ${puzzleTitle || "Custom Puzzle"}\n\n${resultText}\n\ncrosstune.io`;
     } else if (isArchiveMode) {
       shareText = `Crosstune #${puzzleNumber} - ${selectedDate ? moment(selectedDate).format("MMMM Do") : formattedDate} (Archive)\n\n${resultText}\n\ncrosstune.io`;
     } else {
@@ -320,6 +324,12 @@
           >
             Play another puzzle.
           </button>
+        </div>
+      {:else if isCustomMode}
+        <div class="text-center">
+          <a href="/" class="text-blue-500 hover:underline text-md font-small">
+            Play today's puzzle.
+          </a>
         </div>
       {:else if isArchiveMode}
         <div class="text-center">
