@@ -12007,7 +12007,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "This is sung by who? TV show with the same name",
+        "textClue": "Artist name (Theme song of show by the same name)",
         "audioUrl": "253178839",
         "startAt": "0:45",
         "audioDuration": 12.5
