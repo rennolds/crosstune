@@ -12118,8 +12118,8 @@
         "direction": "down",
         "color": "#568EFF",
         "textClue": "Song title",
-        "audioUrl": "252909748",
-        "startAt": "0:44",
+        "audioUrl": "265032121",
+        "startAt": "0:55",
         "audioDuration": 15
       },
       {
@@ -12139,10 +12139,10 @@
         "startY": 5,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "First word of song title",
-        "audioUrl": "66452338",
-        "startAt": "01:00",
-        "audioDuration": 15
+        "textClue": "Second word of this song title",
+        "audioUrl": "233719633",
+        "startAt": "00:26",
+        "audioDuration": 12
       },
       {
         "word": "CHAIN",
