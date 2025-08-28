@@ -12167,5 +12167,104 @@
         "audioDuration": 15
       }
     ]
+  },
+  "2025-08-28": {
+    "title": "outta this world",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "MERCURY",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last name of this band's lead singer",
+        "audioUrl": "252514617",
+        "startAt": "0:25",
+        "audioDuration": 9
+      },
+      {
+        "word": "MOON",
+        "startX": 7,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Last word of this song title",
+        "audioUrl": "323290925",
+        "startAt": "0:17",
+        "audioDuration": 9
+      },
+      {
+        "word": "STARWARS",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "This is the theme to what franchise?",
+        "audioUrl": "178106130",
+        "startAt": "0:00",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "GRAVITY",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "7633922",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "ROCKETMAN",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1432234669",
+        "startAt": "0:52",
+        "audioDuration": 11.5
+      },
+      {
+        "word": "JUPITER",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last word of this song title",
+        "audioUrl": "256053900",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "MARS",
+        "startX": 7,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "328200344",
+        "startAt": "0:03",
+        "audioDuration": 8
+      },
+      {
+        "word": "ALIENS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Tom DeLonge wants you to know that ____ exist (song title)",
+        "audioUrl": "256119556",
+        "startAt": "0:04",
+        "audioDuration": 8
+      }
+    ]
   }
 }
