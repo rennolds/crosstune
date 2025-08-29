@@ -2096,7 +2096,7 @@
 {/if}
 
 <style>
-  @media (max-width: 768px) {/
+  @media (max-width: 768px) {
     :global(.w-full.md\:max-w-3xl) {
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
