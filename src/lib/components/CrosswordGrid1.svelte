@@ -1655,7 +1655,7 @@
     </div>
   </div>
 {:else}
-  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2 pb-4 md:pb-0">
+  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
     <!-- Date/title container aligned with crossword -->
     {#if !hideHeader}
       <div
@@ -1673,7 +1673,7 @@
     {/if}
 
     <div
-      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mt-0 mb-8 md:mb-1"
+      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
       style="background-color: {isDark ? '#303030' : 'bg-gray-200'}"
     >
       <!-- Crossword grid container -->
@@ -1896,7 +1896,7 @@
     </div>
     {#if !isMobileDevice && activeClue}
       <div
-        class="hidden md:block w-full mx-auto mt-4 pb-20 sound-player-container"
+       class="hidden md:block w-full mx-auto mt-4"
       >
         <div
           class="flex items-center justify-between h-13 rounded-md shadow-lg"
@@ -2098,23 +2098,6 @@
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile and ensure sound player visibility */
   @media (max-width: 768px) {
-    /* Add extra bottom spacing for the entire main container to account for ads and scrolling */
-    :global(.w-full.md\:max-w-3xl) {
-      margin-bottom: 5rem !important; /* Extra space for mobile devices */
-      padding-bottom: 2rem !important; /* Additional padding for scroll space */
-    }
-
-    /* Ensure main content area has bottom padding to account for mobile controls */
-    :global(.min-h-screen.flex.flex-col) {
-      padding-bottom: 14rem !important; /* Space for mobile controls (clue + keyboard) */
-    }
-    /* Remove fixed body positioning that might interfere */
-    /* :global(body) {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      /* top: 50px; /* Removed */
 
     /* Main component wrapper on mobile */
     .dark.flex.flex-col {
@@ -2192,14 +2175,6 @@
 
     :global(.slide-menu-open) {
       pointer-events: none;
-    }
-  } /* End of media query */
-
-  /* Ensure sound player has adequate spacing from page bottom on desktop */
-  @media (min-width: 768px) {
-    /* Add extra space below the sound player container */
-    .sound-player-container {
-      margin-bottom: 3rem !important; /* Additional bottom margin for desktop sound player */
     }
   }
 
