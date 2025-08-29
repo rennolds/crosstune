@@ -1,6 +1,20 @@
 <script>
   import Navbar from "$lib/components/Navbar.svelte";
 
+  // Development login function for testing
+  function goToSpotleLogin() {
+    const url = new URL("https://spotle.io/login");
+    url.searchParams.set("r", window.location.origin); // e.g., https://crosstune.io
+    url.searchParams.set("next", "/"); // land here after callback
+    window.location.href = url.toString();
+  }
+
+  // Development flag - only show login button in development
+  const isDev =
+    typeof window !== "undefined" &&
+    (window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1");
+
   let gridData = $state(
     Array(10)
       .fill()
@@ -1827,6 +1841,17 @@
       </button>
     </div>
   </div>
+{/if}
+
+<!-- Development login button - completely hidden from production users -->
+{#if isDev}
+  <button
+    onclick={goToSpotleLogin}
+    class="fixed bottom-4 right-4 opacity-10 hover:opacity-100 bg-red-500 text-white px-3 py-2 rounded text-xs z-50"
+    title="DEV: Test Login"
+  >
+    DEV LOGIN
+  </button>
 {/if}
 
 <style>
