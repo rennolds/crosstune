@@ -1673,7 +1673,7 @@
     {/if}
 
     <div
-      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mt-0 mb-8 md:mb-1"
+      class="dark flex flex-col md:flex-row w-full pb-0 md:pb-2 pr-2 pl-2 pt-0 mt-0 mb-0 md:mb-1 h-full md:h-auto"
       style="background-color: {isDark ? '#303030' : 'bg-gray-200'}"
     >
       <!-- Crossword grid container -->
@@ -2096,17 +2096,16 @@
 {/if}
 
 <style>
-  /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile and ensure sound player visibility */
-  @media (max-width: 768px) {
-    /* Add extra bottom spacing for the entire main container to account for ads and scrolling */
+  @media (max-width: 768px) {/
     :global(.w-full.md\:max-w-3xl) {
-      margin-bottom: 5rem !important; /* Extra space for mobile devices */
-      padding-bottom: 2rem !important; /* Additional padding for scroll space */
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
     }
 
-    /* Ensure main content area has bottom padding to account for mobile controls */
     :global(.min-h-screen.flex.flex-col) {
-      padding-bottom: 14rem !important; /* Space for mobile controls (clue + keyboard) */
+      height: 100vh !important;
+      min-height: 100vh !important;
+      padding-bottom: 0 !important;
     }
     /* Remove fixed body positioning that might interfere */
     /* :global(body) {
@@ -2118,9 +2117,12 @@
 
     /* Main component wrapper on mobile */
     .dark.flex.flex-col {
-      height: 100%; /* Fill parent provided by +page.svelte's flex-1 div */
+      height: calc(
+        100vh - 64px - 120px
+      ); /* Subtract navbar height (64px) and mobile controls height (~120px) */
       display: flex;
       flex-direction: column;
+      overflow: hidden; /* Prevent any scrolling */
     }
 
     /* The flex container holding the grid */
@@ -2128,16 +2130,18 @@
       flex: 1 1 auto; /* Grow and shrink to fill available vertical space */
       min-height: 0; /* Allow shrinking within flex column */
       display: flex; /* Center the grid inside */
-      align-items: center; /* Center vertically now */
+      align-items: center; /* Center vertically */
       justify-content: center;
       overflow: hidden; /* Prevent the grid overflowing this container */
     }
 
     /* Grid aspect-ratio wrapper sizing */
     .w-full.relative[style*="aspect-ratio"] {
-      /* Default mobile sizing - prioritize width */
+      /* Default mobile sizing - fit within available space */
       max-width: 95vw; /* Use viewport width unit */
-      max-height: 90vh; /* Use viewport height unit, allow generous height */
+      max-height: calc(
+        100vh - 64px - 120px - 2rem
+      ); /* Available height minus navbar, controls, and some padding */
       /* The inline aspect-ratio style combined with max constraints will size it */
     }
 
@@ -2145,8 +2149,10 @@
     @media (max-aspect-ratio: 9/16) {
       .w-full.relative[style*="aspect-ratio"] {
         max-width: 96vw; /* Allow slightly more width */
-        /* Let aspect-ratio dictate height based on width */
-        max-height: none; /* Remove max-height constraint */
+        /* Still constrain height to prevent scrolling */
+        max-height: calc(
+          100vh - 64px - 120px - 1rem
+        ); /* Tighter constraint for tall screens */
       }
       /* Adjust font size for tall, narrow screens if needed */
       input {
@@ -2166,7 +2172,9 @@
     @media (min-aspect-ratio: 9/17) {
       .w-full.relative[style*="aspect-ratio"] {
         max-width: 94vw;
-        max-height: 85vh; /* Can be more constrained vertically */
+        max-height: calc(
+          100vh - 64px - 120px - 1.5rem
+        ); /* Constrained to available height */
       }
       input {
         font-size: clamp(
