@@ -12266,5 +12266,94 @@
         "audioDuration": 8
       }
     ]
+  },
+  
+  "2025-08-29": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "STRIPPER",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Who is T-Pain in love with in this song?",
+        "audioUrl": "1320393613",
+        "startAt": "0:04.2",
+        "audioDuration": 5.8
+      },
+      {
+        "word": "HOTNCOLD",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "256250242",
+        "startAt": "0:03",
+        "audioDuration": 7
+      },
+      {
+        "word": "SUMMER",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "255884750",
+        "startAt": "0:05",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "SCREAMO",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "What genre is this song?",
+        "audioUrl": "269464837",
+        "startAt": "2:58",
+        "audioDuration": 8
+      },
+      {
+        "word": "SPAGHETTI",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What did this artist eat for dinner?",
+        "audioUrl": "256256957",
+        "startAt": "0:45",
+        "audioDuration": 10
+      },
+      {
+        "word": "FANCY",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "255793175",
+        "startAt": "0:40",
+        "audioDuration": 8
+      },
+      {
+        "word": "NEWRULES",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "325519648",
+        "startAt": "0:41",
+        "audioDuration": 9
+      }
+    ]
   }
 }
