@@ -319,49 +319,6 @@
     return true;
   }
 
-  function isValidSoundCloudUrl(url) {
-    try {
-      const urlObj = new URL(url);
-      return (
-        urlObj.hostname === "soundcloud.com" ||
-        urlObj.hostname === "www.soundcloud.com" ||
-        urlObj.hostname === "on.soundcloud.com" ||
-        urlObj.hostname === "m.soundcloud.com"
-      );
-    } catch {
-      return false;
-    }
-  }
-
-  function normalizeSoundCloudUrl(rawUrl) {
-    if (!rawUrl) return "";
-    let url = rawUrl.trim();
-    // Remove leading '@' that some apps prepend
-    if (url.startsWith("@")) url = url.slice(1).trim();
-    // Best-effort: ensure it starts with http(s)
-    if (!/^https?:\/\//i.test(url)) {
-      url = `https://${url}`;
-    }
-    try {
-      const u = new URL(url);
-      // Strip common tracking params to stabilize the URL
-      [
-        "utm_source",
-        "utm_medium",
-        "utm_campaign",
-        "utm_term",
-        "utm_content",
-        "ref",
-        "si",
-        "p",
-        "c",
-      ].forEach((k) => u.searchParams.delete(k));
-      return u.toString();
-    } catch {
-      return rawUrl.trim();
-    }
-  }
-
   async function validateSoundCloudUrl(url, wordIndex) {
     const validationKey = `word-${wordIndex}`;
 
@@ -372,14 +329,7 @@
       trackId: null,
     };
 
-    const normalizedUrl = normalizeSoundCloudUrl(url);
-
-    // If normalization changed the URL, update the bound value so the user sees the cleaned link
-    if (normalizedUrl !== url) {
-      detectedWords[wordIndex].soundcloudUrl = normalizedUrl;
-    }
-
-    if (!normalizedUrl.trim()) {
+    if (!url.trim()) {
       soundcloudValidation[validationKey] = {
         status: "empty",
         message: "",
@@ -388,22 +338,28 @@
       return;
     }
 
-    if (!isValidSoundCloudUrl(normalizedUrl)) {
-      soundcloudValidation[validationKey] = {
-        status: "invalid",
-        message: "Please enter a valid SoundCloud URL",
-        trackId: null,
-      };
-      return;
-    }
-
     try {
-      const result = await getSoundCloudId(normalizedUrl);
-      if (result && result.type === "tracks") {
+      // Use server-side validation endpoint to avoid CORS and regional issues
+      const response = await fetch("/api/validate-soundcloud", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ url: url.trim() }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.status === "valid") {
+        // Update the URL if it was normalized by the server
+        if (result.normalizedUrl !== url) {
+          detectedWords[wordIndex].soundcloudUrl = result.normalizedUrl;
+        }
+
         soundcloudValidation[validationKey] = {
           status: "valid",
-          message: "✓ Track found and ready for timing",
-          trackId: result.id,
+          message: result.message || "✓ Track found and ready for timing",
+          trackId: result.trackId,
         };
 
         // Initialize timing data
@@ -415,17 +371,18 @@
           };
         }
       } else {
+        // Handle error responses from server
         soundcloudValidation[validationKey] = {
-          status: "invalid",
-          message:
-            "Could not find a valid SoundCloud track. Make sure it's a track (not a playlist).",
+          status: result.status === "error" ? "error" : "invalid",
+          message: result.error || "Could not validate SoundCloud URL",
           trackId: null,
         };
       }
     } catch (error) {
+      console.error("Error validating SoundCloud URL:", error);
       soundcloudValidation[validationKey] = {
         status: "error",
-        message: "Error checking SoundCloud URL. Please try again.",
+        message: "Network error. Please check your connection and try again.",
         trackId: null,
       };
     }
@@ -560,47 +517,6 @@
           widget.pause();
         }, durationMs);
       }
-    }
-  }
-
-  async function getSoundCloudId(permalinkUrl) {
-    try {
-      const res = await fetch(
-        "https://soundcloud.com/oembed?format=json&maxheight=120&show_teaser=false&show_comments=false&url=" +
-          encodeURIComponent(permalinkUrl)
-      );
-
-      if (!res.ok) {
-        throw new Error(`SoundCloud API returned ${res.status}`);
-      }
-
-      const data = await res.json();
-      const { html } = data;
-
-      // Try multiple patterns to extract track ID from the iframe src
-      const patterns = [
-        /tracks%2F(\d+)/, // URL-encoded format: tracks%2F123456
-        /tracks\/(\d+)/, // Direct format: tracks/123456
-        /api\.soundcloud\.com\/(tracks|playlists)\/(\d+)/, // Original format
-      ];
-
-      for (const pattern of patterns) {
-        const match = html.match(pattern);
-        if (match) {
-          const trackId = match[1] || match[2]; // Handle different capture groups
-          const type = match[1] === trackId ? "tracks" : match[1] || "tracks";
-          return { type: type, id: Number(trackId) };
-        }
-      }
-
-      console.error(
-        "Could not extract track ID from SoundCloud embed HTML:",
-        html
-      );
-      return null;
-    } catch (error) {
-      console.error("Error fetching SoundCloud ID:", error);
-      return null;
     }
   }
 
