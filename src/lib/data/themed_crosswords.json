@@ -523,5 +523,108 @@
         "audioDuration": 10
       }
     ]
+  },
+  "6": {
+    "id": 6,
+    "title": "For the Gleeks",
+    "version": "1.0.0",
+    "date_available": "2025-08-31",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "thumbnail": "https://www.independent.com/wp-content/uploads/2010/11/03/CRGroup_GLEE_lead.jpg",
+    "author": "Hazy Anne",
+    "theme": "pink",
+    "words": [
+      {
+        "word": "DARRENCRISS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Actor who plays the character singing this song",
+        "audioUrl": "261139609",
+        "startAt": "0:01",
+        "audioDuration": 10
+      },
+      {
+        "word": "NAYA",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First name of the actor who plays the character singing",
+        "audioUrl": "261138935",
+        "startAt": "0:16",
+        "audioDuration": 10
+      },
+      {
+        "word": "SURVIVOR",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "261139140",
+        "startAt": "0:18",
+        "audioDuration": 8
+      },
+      {
+        "word": "SANTANA",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First name of the character singing this song",
+        "audioUrl": "1159250605",
+        "startAt": "0:27",
+        "audioDuration": 10
+      },
+      {
+        "word": "FORGETYOU",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "261139387",
+        "startAt": "0:05",
+        "audioDuration": 6
+      },
+      {
+        "word": "CAST",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "This song is performed by the ____",
+        "audioUrl": "261139631",
+        "startAt": "0:17",
+        "audioDuration": 13
+      },
+      {
+        "word": "IDINA",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First name of the actress who played Rachel Berry's mom",
+        "audioUrl": "261139681",
+        "startAt": "0:12",
+        "audioDuration": 12
+      },
+      {
+        "word": "SPEARS",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last name of the original artist of this song",
+        "audioUrl": "261138946",
+        "startAt": "0:06",
+        "audioDuration": 12
+      }
+    ]
   }
 } 
