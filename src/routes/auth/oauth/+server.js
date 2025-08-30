@@ -9,7 +9,7 @@ function safeNext(raw) {
 }
 
 export async function GET({ url, cookies }) {
-  const code = url.searchParams.get('code');
+  const provider = url.searchParams.get('provider') ?? 'google';
   const next = safeNext(url.searchParams.get('next'));
 
   const supabase = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY, {
@@ -23,13 +23,17 @@ export async function GET({ url, cookies }) {
     }
   });
 
-  if (code) {
-    const { error } = await supabase.auth.exchangeCodeForSession(code);
-    if (error) {
-      // e.g., missing/invalid PKCE verifier cookie
-      throw redirect(303, '/auth/auth-code-error');
-    }
+  // MUST be same-origin for PKCE
+  const redirectTo = `${url.origin}/auth/callback?next=${encodeURIComponent(next)}`;
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider,
+    options: { redirectTo }
+  });
+
+  if (error || !data?.url) {
+    throw redirect(303, '/auth/auth-code-error');
   }
 
-  throw redirect(303, next);
+  throw redirect(303, data.url);
 }
