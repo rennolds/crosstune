@@ -12357,7 +12357,7 @@
     ]
   },
     "2025-08-30": {
-  "title": "ALL OUT 90'S! (submitted by Noor)",
+  "title": "ALL OUT 90'S! (by Noor)",
   "version": "1.0.0",
   "size": {
     "width": 12,
@@ -12492,7 +12492,7 @@
       "startY": 2,
       "direction": "down",
       "color": "#FFB34B",
-      "textClue": "Last name of this song title",
+      "textClue": "Last word of this song title",
       "audioUrl": "231848695",
       "startAt": "1:29",
       "audioDuration": 10
