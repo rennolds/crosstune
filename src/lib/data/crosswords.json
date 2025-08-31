@@ -12525,7 +12525,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Album title",
+        "textClue": "Song title",
         "audioUrl": "2108590512",
         "startAt": "0:10",
         "audioDuration": 15
