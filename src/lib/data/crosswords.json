@@ -12712,7 +12712,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Artist name (in a relationship with ?A)",
+        "textClue": "Artist name (in a relationship with 8A)",
         "audioUrl": "255769632",
         "startAt": "0:47.3",
         "audioDuration": 10
@@ -12756,7 +12756,7 @@
         "startY": 8,
         "direction": "across",
         "color": "#568EFF",
-        "textClue": "Second word of artist name (in a relationship with ?A)",
+        "textClue": "Second word of artist name (in a relationship with 3A)",
         "audioUrl": "447287277",
         "startAt": "0:30",
         "audioDuration": 10
