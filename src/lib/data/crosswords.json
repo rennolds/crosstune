@@ -12795,5 +12795,115 @@
         "audioDuration": 8.5
       }
     ]
-  }
+  },
+  "2025-09-03": {
+  "title": "",
+  "version": "1.0.0",
+  "size": {
+    "width": 12,
+    "height": 10
+  },
+  "theme": "pink",
+  "words": [
+    {
+      "word": "RAINBOW",
+      "startX": 4,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "The last word of this song's title (perf. by Israel Kamakawiwoʻole)",
+      "audioUrl": "253558222",
+      "startAt": "0:43",
+      "audioDuration": 20
+    },
+    {
+      "word": "GREEN",
+      "startX": 0,
+      "startY": 3,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "The color in this artist's name",
+      "audioUrl": "354086738",
+      "startAt": "0:00",
+      "audioDuration": 10
+    },
+    {
+      "word": "YELLOW",
+      "startX": 3,
+      "startY": 5,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Song title",
+      "audioUrl": "255770358",
+      "startAt": "0:00",
+      "audioDuration": 6
+    },
+    {
+      "word": "PURPLE",
+      "startX": 2,
+      "startY": 8,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "First word of this song title",
+      "audioUrl": "328488435",
+      "startAt": "0:10",
+      "audioDuration": 11
+    },
+    {
+      "word": "RED",
+      "startX": 1,
+      "startY": 3,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "First word of this band's name",
+      "audioUrl": "273203300",
+      "startAt": "0:20",
+      "audioDuration": 10
+    },
+    {
+      "word": "BLUE",
+      "startX": 2,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Mr. who?",
+      "audioUrl": "253507627",
+      "startAt": "0:00",
+      "audioDuration": 6
+    },
+    {
+      "word": "ORANGE",
+      "startX": 4,
+      "startY": 0,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "The color in this artist's name",
+      "audioUrl": "304472603",
+      "startAt": "0:00",
+      "audioDuration": 6
+    },
+    {
+      "word": "PINK",
+      "startX": 6,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "First word of this song title",
+      "audioUrl": "790026607",
+      "startAt": "0:00",
+      "audioDuration": 12.5
+    },
+    {
+      "word": "GOLDEN",
+      "startX": 7,
+      "startY": 4,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Song title of this surprise smash hit",
+      "audioUrl": "2123745324",
+      "startAt": "01:00",
+      "audioDuration": 10
+    }
+  ]
+}
 }
