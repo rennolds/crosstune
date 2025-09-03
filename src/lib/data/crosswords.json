@@ -16,8 +16,8 @@
       "color": "#FE9C9C",
       "textClue": "The last word of this song's title performed by Israel Kamakawiwoʻole",
       "audioUrl": "253558222",
-      "startAt": "0:00",
-      "audioDuration": 6
+      "startAt": "0:43",
+      "audioDuration": 20
     },
     {
       "word": "GREEN",
@@ -49,8 +49,8 @@
       "color": "#FF5B5E",
       "textClue": "First word of this song title",
       "audioUrl": "328488435",
-      "startAt": "0:00",
-      "audioDuration": 10
+      "startAt": "0:10",
+      "audioDuration": 11
     },
     {
       "word": "RED",
@@ -94,7 +94,7 @@
       "textClue": "First word of this song title",
       "audioUrl": "790026607",
       "startAt": "0:00",
-      "audioDuration": 6
+      "audioDuration": 12.5
     },
     {
       "word": "GOLDEN",
@@ -102,7 +102,7 @@
       "startY": 4,
       "direction": "down",
       "color": "#28D66A",
-      "textClue": "Song title",
+      "textClue": "Song title of this surprise smash hit",
       "audioUrl": "2123745324",
       "startAt": "01:00",
       "audioDuration": 10
