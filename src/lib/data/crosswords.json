@@ -28,7 +28,7 @@
       "textClue": "Movie Title as an Abbreviation",
       "audioUrl": "1564584115",
       "startAt": "0:00",
-      "audioDuration": 3
+      "audioDuration": 5
     },
     {
       "word": "ITTSV",
@@ -50,7 +50,7 @@
       "textClue": "Movie Title",
       "audioUrl": "1576930806",
       "startAt": "0:00",
-      "audioDuration": 4
+      "audioDuration": 5
     },
     {
       "word": "NTTD",
@@ -83,7 +83,7 @@
       "textClue": "Movie Title",
       "audioUrl": "256032920",
       "startAt": "0:00",
-      "audioDuration": 3
+      "audioDuration": 5
     },
     {
       "word": "TROLLS",
@@ -94,7 +94,7 @@
       "textClue": "Movie Title",
       "audioUrl": "262637985",
       "startAt": "0:00",
-      "audioDuration": 3
+      "audioDuration": 5
     }
   ]
 },
