@@ -1,6 +1,6 @@
 {
-  "2025-09-04": {
-  "title": "",
+"2025-09-04": {
+  "title": "Country Bangers",
   "version": "1.0.0",
   "size": {
     "width": 12,
@@ -9,147 +9,92 @@
   "theme": "black",
   "words": [
     {
-      "word": "FROM",
-      "startX": 0,
-      "startY": 0,
+      "word": "HEARTACHE",
+      "startX": 1,
+      "startY": 2,
       "direction": "across",
       "color": "#FE9C9C",
-      "textClue": "Song Title",
-      "audioUrl": "2022877972",
-      "startAt": "0:00",
-      "audioDuration": 6
+      "textClue": "\"She was a ____ on the dancefloor\"",
+      "audioUrl": "266120258",
+      "startAt": "1:19",
+      "audioDuration": 7
     },
     {
-      "word": "NEYO",
-      "startX": 3,
-      "startY": 2,
+      "word": "ZAC",
+      "startX": 1,
+      "startY": 4,
       "direction": "across",
       "color": "#28D66A",
-      "textClue": "Artist title",
-      "audioUrl": "257026494",
-      "startAt": "0:00",
-      "audioDuration": 6
+      "textClue": "First Word in This Artist's Name",
+      "audioUrl": "255858691",
+      "startAt": "0:39",
+      "audioDuration": 9
     },
     {
-      "word": "BRAT",
-      "startX": 8,
-      "startY": 2,
-      "direction": "across",
-      "color": "#FFCEFD",
-      "textClue": "album title",
-      "audioUrl": "1787008837",
-      "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "HEYA",
+      "word": "SONG",
       "startX": 0,
-      "startY": 4,
-      "direction": "across",
-      "color": "#FF5B5E",
-      "textClue": "song title",
-      "audioUrl": "382886567",
-      "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "EASY",
-      "startX": 6,
-      "startY": 4,
-      "direction": "across",
-      "color": "#568EFF",
-      "textClue": "_____ like a sunday morning",
-      "audioUrl": "1457144296",
-      "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "TOOL",
-      "startX": 3,
-      "startY": 5,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "aint the sharpest _____ in the shed",
-      "audioUrl": "253185930",
-      "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "SANTANA",
-      "startX": 1,
       "startY": 8,
       "direction": "across",
-      "color": "#00FFFF",
-      "textClue": "artist name",
-      "audioUrl": "254171313",
-      "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "SHE",
-      "startX": 0,
-      "startY": 3,
-      "direction": "down",
-      "color": "#FE9C9C",
-      "textClue": "Song title",
-      "audioUrl": "265576491",
-      "startAt": "0:50",
-      "audioDuration": 6
-    },
-    {
-      "word": "MANHATTAN",
-      "startX": 3,
-      "startY": 0,
-      "direction": "down",
-      "color": "#28D66A",
-      "textClue": "naked in ______",
-      "audioUrl": "1616876040",
-      "startAt": "0:40",
-      "audioDuration": 6
-    },
-    {
-      "word": "LIONEL",
-      "startX": 6,
-      "startY": 0,
-      "direction": "down",
       "color": "#FFCEFD",
-      "textClue": "first name of artist",
-      "audioUrl": "424640757",
+      "textClue": "Second Word in This Song Title",
+      "audioUrl": "252454084",
       "startAt": "0:00",
-      "audioDuration": 6
+      "audioDuration": 10
     },
     {
-      "word": "SEAL",
-      "startX": 8,
-      "startY": 4,
-      "direction": "down",
+      "word": "KEITH",
+      "startX": 5,
+      "startY": 8,
+      "direction": "across",
       "color": "#FF5B5E",
-      "textClue": "artist name",
-      "audioUrl": "427297782",
-      "startAt": "0:00",
-      "audioDuration": 6
+      "textClue": "This Artist's Last Name",
+      "audioUrl": "279390662",
+      "startAt": "0:47",
+      "audioDuration": 20
     },
     {
-      "word": "SORRY",
+      "word": "WATCHING",
+      "startX": 3,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "First Word of This Song Title",
+      "audioUrl": "334659715",
+      "startAt": "0:59",
+      "audioDuration": 20
+    },
+    {
+      "word": "HARVESTER",
+      "startX": 6,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Second Word of This Song Title",
+      "audioUrl": "136551167",
+      "startAt": "1:44",
+      "audioDuration": 21
+    },
+    {
+      "word": "BOOT",
+      "startX": 8,
+      "startY": 5,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "First Word of This Song Title",
+      "audioUrl": "253426003",
+      "startAt": "0:00",
+      "audioDuration": 21
+    },
+    {
+      "word": "CHECK",
       "startX": 9,
       "startY": 0,
       "direction": "down",
-      "color": "#568EFF",
-      "textClue": "song name",
-      "audioUrl": "737719381",
+      "color": "#FE9C9C",
+      "textClue": "Where'd the waitress leave her number?",
+      "audioUrl": "324527624",
       "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "TEATIME",
-      "startX": 11,
-      "startY": 2,
-      "direction": "down",
-      "color": "#FFB34B",
-      "textClue": "when does everybody agree",
-      "audioUrl": "1367286193",
-      "startAt": "0:00",
-      "audioDuration": 6
+      "audioDuration": 28
     }
   ]
 },
