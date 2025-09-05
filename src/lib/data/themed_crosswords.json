@@ -883,5 +883,139 @@
         "soundcloudUrl": "https://soundcloud.com/kanyemixes/kanye-west-jay-zno-church-in-the-wildnas-in-parisotis"
       }
     ]    
-  }
+  },
+  "9": {
+    "title": "Coming of Age Movie Type Beat",
+    "date_available": "2025-09-14",
+    "author": "Tommy Rennolds",
+    "version": "1.0.0",
+    "thumbnail": "https://i.pinimg.com/474x/68/2f/14/682f143120ad7d88b3ef1f9fa5166448.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "FLOATON",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "253507018",
+        "startAt": "0:03",
+        "audioDuration": 21,
+        "soundcloudUrl": "https://soundcloud.com/modest-mouse-official/float-on"
+      },
+      {
+        "word": "DONTYOU",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First two words of this hit featured in \"Breakfast Club\"",
+        "audioUrl": "256203235",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/simple-minds-official/dont-you-forget-about-me-1"
+      },
+      {
+        "word": "ITSOVER",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "420858726",
+        "startAt": "2:30",
+        "audioDuration": 24,
+        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/dont-dream-its-over-1"
+      },
+      {
+        "word": "FOLKS",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Young ____",
+        "audioUrl": "256100967",
+        "startAt": "0:00",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/peterbjornjohn/young-folks"
+      },
+      {
+        "word": "DOGDAYS",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "First two words of this song title",
+        "audioUrl": "251381111",
+        "startAt": "3:03",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/florence-the-machine/dog-days-are-over"
+      },
+      {
+        "word": "PIXIES",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Band name/mythical creatures",
+        "audioUrl": "511252770",
+        "startAt": "0:13",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/pixiesmusic/where-is-my-mind"
+      },
+      {
+        "word": "FUN",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name, dropping the punctuation",
+        "audioUrl": "231862397",
+        "startAt": "0:00",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://soundcloud.com/funofficial/fun-we-are-young-feat-janelle"
+      },
+      {
+        "word": "TONGUETIED",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "271221781",
+        "startAt": "0:37",
+        "audioDuration": 23,
+        "soundcloudUrl": "https://soundcloud.com/grouplove/tongue-tied"
+      },
+      {
+        "word": "HEROES",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "342965056",
+        "startAt": "0:09",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/davidbowieofficial/heroes-2017-remastered-version"
+      },
+      {
+        "word": "SMITHS",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Band name, sans \"the\"",
+        "audioUrl": "195692771",
+        "startAt": "1:02",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/thesmiths/there-is-a-light-that-never-goes-out"
+      }
+    ]
+  }  
 } 
