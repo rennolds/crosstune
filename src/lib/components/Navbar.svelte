@@ -41,7 +41,8 @@
     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   }
 
-  function toggleRevealMenu() {
+  function toggleRevealMenu(event) {
+    event.stopPropagation();
     isRevealMenuOpen = !isRevealMenuOpen;
   }
 

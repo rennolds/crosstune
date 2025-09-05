@@ -13112,5 +13112,124 @@
         "soundcloudUrl": "https://soundcloud.com/wham-official/last-christmas-remastered"
       }
     ]
+  },
+  "2025-09-05": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "TEARS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Name of Sabrina's latest single",
+        "audioUrl": "2160904617",
+        "startAt": "0:21",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/tears"
+      },
+      {
+        "word": "MAMA",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The person addressed at the beginning of this song",
+        "audioUrl": "253578518",
+        "startAt": "0:11",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/where-is-the-love-album"
+      },
+      {
+        "word": "SOUR",
+        "startX": 8,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Album title, also a flavor of candy",
+        "audioUrl": "1048163956",
+        "startAt": "2:25",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/good-4-u-1?in=oliviarodrigo%2Fsets%2Fsour-8"
+      },
+      {
+        "word": "CALLON",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First two words of this song title",
+        "audioUrl": "255983128",
+        "startAt": "0:05",
+        "audioDuration": 23,
+        "soundcloudUrl": "https://soundcloud.com/eric-prydz/call-on-me-radio-edit"
+      },
+      {
+        "word": "MONTERO",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1014672238",
+        "startAt": "0:39",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/secret-service-862007284/montero-call-me-by-your-name?in=secret-service-862007284%2Fsets%2Fmontero-152448210"
+      },
+      {
+        "word": "AFRICA",
+        "startX": 4,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "253091872",
+        "startAt": "0:11",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/toto-official/africa-7"
+      },
+      {
+        "word": "ROLEMODELZ",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "No ____ _____ (Mind the spelling)",
+        "audioUrl": "1011563983",
+        "startAt": "0:38",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/nothingbutpain/no-role-modelz"
+      },
+      {
+        "word": "SELENA",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "2059551788",
+        "startAt": "0:14",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/selena-gomez-official/bluest-flame"
+      },
+      {
+        "word": "MCCARTNEY",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Last name of one of the featured artists on this track",
+        "audioUrl": "267452739",
+        "startAt": "0:14",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/fourfiveseconds"
+      }
+    ]
   }  
 }

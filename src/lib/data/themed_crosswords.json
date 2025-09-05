@@ -629,8 +629,8 @@
   },
   "7": {
     "id": 7,
-    "date_available": "2025-09-04",
-    "title": "Taylor's Version I",
+    "date_available": "2025-09-07",
+    "title": "Swifties",
     "version": "1.0.0",
     "thumbnail": "https://media.allure.com/photos/68aded72fad9478bcb949dbe/16:9/w_2560%2Cc_limit/taylor%2520swift%2520engagement%2520manicure.jpg",
     "author": "Reese M.",
@@ -737,16 +737,16 @@
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/dear-john"
       },
       {
-        "word": "GOLD",
+        "word": "WELL",
         "startX": 6,
         "startY": 6,
         "direction": "down",
         "color": "#28D66A",
-        "textClue": "First word in song title",
-        "audioUrl": "945469414",
+        "textClue": "Last word in song title",
+        "audioUrl": "252454576",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/gold-rush"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/all-too-well"
       },
       {
         "word": "TEARDROPS",
