@@ -178,7 +178,7 @@
     </button>
 
     <!-- Announcement / CTA -->
-    <div class="mt-6 md:mt-8 w-full px-4">
+    <!-- <div class="mt-6 md:mt-8 w-full px-4">
       <div
         class="max-w-md mx-auto bg-orange-500 text-white rounded-xl p-3 md:p-4 shadow"
       >
@@ -194,7 +194,7 @@
         </p>
         <p class="mt-2 text-xs md:text-sm">- Tommy & Paul</p>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- Spacer for mobile -->

@@ -626,5 +626,262 @@
         "audioDuration": 12
       }
     ]
+  },
+  "7": {
+    "id": 7,
+    "date_available": "2025-09-07",
+    "title": "Swifties",
+    "version": "1.0.0",
+    "thumbnail": "https://media.allure.com/photos/68aded72fad9478bcb949dbe/16:9/w_2560%2Cc_limit/taylor%2520swift%2520engagement%2520manicure.jpg",
+    "author": "Reese M.",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "SHEERAN",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last name of artist featured on this song",
+        "audioUrl": "252454144",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/everything-has-changed"
+      },
+      {
+        "word": "LWYMMD",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title, as an acronym",
+        "audioUrl": "339400425",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/look-what-you-made-me-do"
+      },
+      {
+        "word": "KARMA",
+        "startX": 7,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "_____ is my boyfriend",
+        "audioUrl": "1367286613",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/karma"
+      },
+      {
+        "word": "FEARLESS",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "252454402",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/fearless"
+      },
+      {
+        "word": "WILDEST",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Adjective in song title",
+        "audioUrl": "327237476",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/wildest-dreams"
+      },
+      {
+        "word": "BETTY",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "863079313",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/betty"
+      },
+      {
+        "word": "MAN",
+        "startX": 4,
+        "startY": 7,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Second word in song title",
+        "audioUrl": "669538220",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/the-man"
+      },
+      {
+        "word": "JOHN",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Name in song title",
+        "audioUrl": "252454456",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/dear-john"
+      },
+      {
+        "word": "WELL",
+        "startX": 6,
+        "startY": 6,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Last word in song title",
+        "audioUrl": "252454576",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/all-too-well"
+      },
+      {
+        "word": "TEARDROPS",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First word in song title",
+        "audioUrl": "252454520",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/teardrops-on-my-guitar-radio"
+      },
+      {
+        "word": "HEART",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Last word in song title",
+        "audioUrl": "1803423213",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/i-can-do-it-with-a-broken"
+      }
+    ]    
+  },
+  "8": {
+    "id": 8,
+    "date_available": "2025-09-07",
+    "author": "ph4ntomproduct1",
+    "title": "Rap Cities",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CHICAGO",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "City that this song is about (Artist's Hometown)",
+        "audioUrl": "255766393",
+        "startAt": "0:12",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/homecoming"
+      },
+      {
+        "word": "LOSANGELES",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title is a ZIP code in this city's metro area",
+        "audioUrl": "642883782",
+        "startAt": "1:57",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/xixdemonios/travis-scott-90210-432-hz"
+      },
+      {
+        "word": "TOKYO",
+        "startX": 4,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "First word of this Song Title",
+        "audioUrl": "253603961",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/teriyaki-boyz/tokyo-drift-fast-furious-from"
+      },
+      {
+        "word": "TORONTO",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Hometown of this famous artist",
+        "audioUrl": "257461521",
+        "startAt": "1:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-headlines"
+      },
+      {
+        "word": "LONDON",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Last word of this song title",
+        "audioUrl": "625403232",
+        "startAt": "0:31",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/youngthugworld/the-london"
+      },
+      {
+        "word": "ATLANTA",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First 3 letters of the Song Title are the abbreviation for this city",
+        "audioUrl": "253850882",
+        "startAt": "0:18",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/outkast-music/atliens-1"
+      },
+      {
+        "word": "NEWYORK",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "City that this song is about",
+        "audioUrl": "279766910",
+        "startAt": "0:12",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/empire-state-of-mind-1"
+      },
+      {
+        "word": "PARIS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last word in this Song Title",
+        "audioUrl": "1184136907",
+        "startAt": "6:16",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/kanyemixes/kanye-west-jay-zno-church-in-the-wildnas-in-parisotis"
+      }
+    ]    
   }
 } 
