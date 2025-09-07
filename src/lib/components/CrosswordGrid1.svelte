@@ -1633,6 +1633,10 @@
   let totalLetterCount = $derived(count);
   let revealedLetterCount = $derived(revealedCells.size);
   let foundLetterCount = $derived(totalLetterCount - revealedLetterCount);
+
+  // Calculate total clues for compact layout
+  let totalClues = $derived(acrossClues.length + downClues.length);
+  let isCompactLayout = $derived(totalClues >= 10);
 </script>
 
 <SoundCloudManager {words} />
@@ -1779,19 +1783,19 @@
       {/if}
       {#if !isMobileDevice}
         <!-- Clue list container -->
-        <div class="w-full md:w-64 md:mt-0 mt-4">
+        <div class="w-full md:w-64 md:mt-0 mt-4 {isCompactLayout ? 'max-h-96 overflow-y-auto' : ''}">
           <!-- Across Clues -->
           <div>
             <h2
-              class="text-xl font-bold mb-2"
+              class="{isCompactLayout ? 'text-lg' : 'text-xl'} font-bold {isCompactLayout ? 'mb-1' : 'mb-2'}"
               style="color: {isDark ? 'white' : 'black'}"
             >
               Across
             </h2>
-            <div class="space-y-1">
+            <div class="{isCompactLayout ? 'space-y-0.5' : 'space-y-1'}">
               {#each acrossClues as clue}
                 <div
-                  class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
+                  class="flex items-center {isCompactLayout ? 'gap-1' : 'gap-2'} rounded {isCompactLayout ? 'py-0.5 px-1' : 'py-1 px-2'} transition-colors duration-200 cursor-pointer hover:bg-white/10"
                   style="background-color: {activeClue &&
                   activeClue.startX === clue.startX &&
                   activeClue.startY === clue.startY &&
@@ -1813,13 +1817,13 @@
                   }}
                 >
                   <div
-                    class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
+                    class="flex-shrink-0 flex items-center justify-center {isCompactLayout ? 'w-6 h-6' : 'w-8 h-8'} rounded"
                     style="background-color: {clue.color};"
                   >
-                    <span class="font-semibold text-lg">{clue.number}A</span>
+                    <span class="font-semibold {isCompactLayout ? 'text-sm' : 'text-lg'}">{clue.number}A</span>
                   </div>
                   <span
-                    class="text-md flex-1 ml-2 truncate"
+                    class="{isCompactLayout ? 'text-sm' : 'text-md'} flex-1 {isCompactLayout ? 'ml-1' : 'ml-2'} truncate"
                     style="color: {activeClue &&
                     activeClue.startX === clue.startX &&
                     activeClue.startY === clue.startY &&
@@ -1837,17 +1841,17 @@
           </div>
 
           <!-- Down Clues -->
-          <div class="mt-4">
+          <div class="{isCompactLayout ? 'mt-2' : 'mt-4'}">
             <h3
-              class="text-xl font-bold mb-2"
+              class="{isCompactLayout ? 'text-lg' : 'text-xl'} font-bold {isCompactLayout ? 'mb-1' : 'mb-2'}"
               style="color: {isDark ? 'white' : 'black'}"
             >
               Down
             </h3>
-            <div class="space-y-1">
+            <div class="{isCompactLayout ? 'space-y-0.5' : 'space-y-1'}">
               {#each downClues as clue}
                 <div
-                  class="flex items-center gap-2 rounded py-1 px-2 transition-colors duration-200 cursor-pointer hover:bg-white/10"
+                  class="flex items-center {isCompactLayout ? 'gap-1' : 'gap-2'} rounded {isCompactLayout ? 'py-0.5 px-1' : 'py-1 px-2'} transition-colors duration-200 cursor-pointer hover:bg-white/10"
                   style="background-color: {activeClue &&
                   activeClue.startX === clue.startX &&
                   activeClue.startY === clue.startY &&
@@ -1869,13 +1873,13 @@
                   }}
                 >
                   <div
-                    class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded"
+                    class="flex-shrink-0 flex items-center justify-center {isCompactLayout ? 'w-6 h-6' : 'w-8 h-8'} rounded"
                     style="background-color: {clue.color};"
                   >
-                    <span class="font-semibold text-lg">{clue.number}D</span>
+                    <span class="font-semibold {isCompactLayout ? 'text-sm' : 'text-lg'}">{clue.number}D</span>
                   </div>
                   <span
-                    class="text-md flex-1 ml-2 truncate"
+                    class="{isCompactLayout ? 'text-sm' : 'text-md'} flex-1 {isCompactLayout ? 'ml-1' : 'ml-2'} truncate"
                     style="color: {activeClue &&
                     activeClue.startX === clue.startX &&
                     activeClue.startY === clue.startY &&
@@ -2212,5 +2216,32 @@
     color: inherit !important;
     font-weight: bold !important;
     font-family: inherit !important;
+  }
+
+  /* Compact layout scrollbar styling */
+  .max-h-96::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .max-h-96::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .max-h-96::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+
+  .max-h-96::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Dark mode scrollbar */
+  .dark .max-h-96::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .max-h-96::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
   }
 </style>

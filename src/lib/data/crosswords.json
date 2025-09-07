@@ -13232,6 +13232,110 @@
       }
     ]
   },
+  "2025-09-07": {
+    "title": "",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "DANCER",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What is Lil Tecca turning you into?",
+        "audioUrl": "624758298",
+        "startAt": "0:21",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/liltecca/lil-tecca-ransom-1"
+      },
+      {
+        "word": "VLV",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Acronym of this song",
+        "audioUrl": "255770309",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/coldplay/viva-la-vida"
+      },
+      {
+        "word": "ROCKANDROLL",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Finish the lyric",
+        "audioUrl": "73115683",
+        "startAt": "0:00",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/cleopatra-recs/starship-we-built-this-city"
+      },
+      {
+        "word": "DETROIT",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "____ Rock City (26th most populous city in US)",
+        "audioUrl": "253155328",
+        "startAt": "1:38",
+        "audioDuration": 21,
+        "soundcloudUrl": "https://soundcloud.com/kiss-official/detroit-rock-city-2012-remix"
+      },
+      {
+        "word": "FLORENCE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of this artist's name",
+        "audioUrl": "251381111",
+        "startAt": "1:14",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/florence-the-machine/dog-days-are-over"
+      },
+      {
+        "word": "SANDMAN",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (Also a Marvel villain)",
+        "audioUrl": "788079790",
+        "startAt": "0:13",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/enter-sandman-1"
+      },
+      {
+        "word": "CUPID",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The first word of this song title (often heard at weddings)",
+        "audioUrl": "254418682",
+        "startAt": "1:27",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/cupid-official/cupid-shuffle"
+      },
+      {
+        "word": "BOB",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "215516981",
+        "startAt": "0:34",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/bobatl/bob-so-good"
+      }
+    ]
+  },    
   "2025-09-08": {
     "title": "",
     "version": "1.0.0",
@@ -13338,5 +13442,371 @@
         "soundcloudUrl": "https://soundcloud.com/jasonderulo/ridin-solo-edit"
       }
     ]
-  }  
+  },
+  "2025-09-09": {
+    "title": "",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "purple",
+    "words": [
+      {
+        "word": "STANDBYME",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "231712962",
+        "startAt": "0:14",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/benekingofficial/ben-e-king-stand-by-me"
+      },
+      {
+        "word": "MINE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "R U?",
+        "audioUrl": "255984179",
+        "startAt": "0:02",
+        "audioDuration": 26,
+        "soundcloudUrl": "https://soundcloud.com/arcticmonkeys/r-u-mine-1"
+      },
+      {
+        "word": "PRETTYWOMAN",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Oh, ____ ____",
+        "audioUrl": "253510590",
+        "startAt": "0:01",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/roy-orbison-official/oh-pretty-woman-2"
+      },
+      {
+        "word": "DEAL",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "She's trying to make a ___",
+        "audioUrl": "254527393",
+        "startAt": "0:49.5",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/kate-bush-official/running-up-that-hill-a-deal"
+      },
+      {
+        "word": "BRAZIL",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title (also a place)",
+        "audioUrl": "257061399",
+        "startAt": "0:06",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/deccoooo/brazil-1"
+      },
+      {
+        "word": "EASTWOOD",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Surname in this song title",
+        "audioUrl": "231155880",
+        "startAt": "1:35",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/everythinggorillazp1/clinteastwood"
+      },
+      {
+        "word": "YOURLOVE",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "1148968594",
+        "startAt": "1:12",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/redbone-official/come-and-get-your-love-5"
+      },
+      {
+        "word": "TONIGHT",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last word of this song title",
+        "audioUrl": "259055335",
+        "startAt": "0:13",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/frank-sinatra/the-way-you-look-tonight-1"
+      }
+    ]
+  },
+  "2025-09-10": {
+    "title": "Iconic Piano Intros II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SCIENTIST",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Occupation in this song title",
+        "audioUrl": "255770516",
+        "startAt": "0:00",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/coldplay/the-scientist"
+      },
+      {
+        "word": "SEEYOUAGAIN",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255837274",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/wizkhalifa/see-you-again-feat-charlie"
+      },
+      {
+        "word": "THISLOVE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256187778",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/maroon-5/this-love"
+      },
+      {
+        "word": "LOVESONG",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "344306941",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/sarabareilles/love-song-1"
+      },
+      {
+        "word": "ALLOFME",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "113662676",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/johnlegend/all-of-me-3"
+      },
+      {
+        "word": "IMAGINE",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "251343373",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/john-lennon-official/imagine-2010-remaster"
+      },
+      {
+        "word": "TINYDANCER",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "309183958",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/elton-john/tiny-dancer-1"
+      },
+      {
+        "word": "RUNAWAY",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "255766590",
+        "startAt": "0:16",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/runaway-album-version-explicit"
+      }
+    ]
+  },  
+  "2025-09-12": {
+    "title": "Ms. Lewis's Core Class",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CAESAR",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This artist's surname is a salad",
+        "audioUrl": "2053339760",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/danielcaesar/loose"
+      },
+      {
+        "word": "EXILE",
+        "startX": 7,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title (feat. Bon Iver)",
+        "audioUrl": "863080522",
+        "startAt": "0:01",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/exile-feat-bon-iver"
+      },
+      {
+        "word": "UP",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "979291342",
+        "startAt": "0:06",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/iamcardib/up-1"
+      },
+      {
+        "word": "EYES",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "What does the ocean have? (Ocean ____)",
+        "audioUrl": "233719633",
+        "startAt": "0:05",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/billieeilish/ocean-eyes"
+      },
+      {
+        "word": "CIDER",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Beabadoobee loves to drink apple _____.",
+        "audioUrl": "1239870826",
+        "startAt": "0:38",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/kkurumi/beabadoobee-apple-cider"
+      },
+      {
+        "word": "MAROON",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "The color in this band name",
+        "audioUrl": "256187803",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/maroon-5/payphone"
+      },
+      {
+        "word": "PINK",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "The first word in this song title",
+        "audioUrl": "866361016",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/jacobnamath/frank-ocean-pink-white-slowed"
+      },
+      {
+        "word": "HEYYA",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Instead of 'hello,' you could say...",
+        "audioUrl": "253850736",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/outkast-music/hey-ya-radio-mix-club-mix"
+      },
+      {
+        "word": "DEEP",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "What's Adele rolling in?",
+        "audioUrl": "254407925",
+        "startAt": "0:10",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/adelemusic/rolling-in-the-deep"
+      },
+      {
+        "word": "SUPERMAN",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Eminem is a _____",
+        "audioUrl": "256257307",
+        "startAt": "0:20",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/superman-album-version"
+      },
+      {
+        "word": "EASYONME",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1142001742",
+        "startAt": "0:30",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/adelemusic/easy-on-me"
+      },
+      {
+        "word": "BESTPART",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "You're the ____.",
+        "audioUrl": "1572823111",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/jeremy-mcclain-383700971/best-part-1"
+      }
+    ]
+  }
 }
