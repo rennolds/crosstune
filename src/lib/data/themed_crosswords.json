@@ -672,8 +672,8 @@
         "color": "#FFCEFD",
         "textClue": "_____ is my boyfriend",
         "audioUrl": "1367286613",
-        "startAt": "0:00",
-        "audioDuration": 8,
+        "startAt": "0:06",
+        "audioDuration": 10.75,
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/karma"
       },
       {
@@ -708,8 +708,8 @@
         "color": "#FFB34B",
         "textClue": "Song title",
         "audioUrl": "863079313",
-        "startAt": "0:00",
-        "audioDuration": 8,
+        "startAt": "0:02",
+        "audioDuration": 17,
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/betty"
       },
       {
@@ -721,7 +721,7 @@
         "textClue": "Second word in song title",
         "audioUrl": "669538220",
         "startAt": "0:00",
-        "audioDuration": 6,
+        "audioDuration": 4.25,
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/the-man"
       },
       {
@@ -745,7 +745,7 @@
         "textClue": "Last word in song title",
         "audioUrl": "252454576",
         "startAt": "0:00",
-        "audioDuration": 8,
+        "audioDuration": 10,
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/all-too-well"
       },
       {
@@ -754,10 +754,10 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFCEFD",
-        "textClue": "First word in song title",
+        "textClue": "First word in the title of Taylor's debut single",
         "audioUrl": "252454520",
-        "startAt": "0:00",
-        "audioDuration": 8,
+        "startAt": "0:04",
+        "audioDuration": 16.2,
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/teardrops-on-my-guitar-radio"
       },
       {
@@ -768,8 +768,8 @@
         "color": "#FF5B5E",
         "textClue": "Last word in song title",
         "audioUrl": "1803423213",
-        "startAt": "0:00",
-        "audioDuration": 8,
+        "startAt": "0:06.75",
+        "audioDuration": 15,
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/i-can-do-it-with-a-broken"
       }
     ]    
