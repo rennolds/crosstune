@@ -101,7 +101,7 @@
   });
 </script>
 
-<div class="themed-gallery">
+<div class="themed-gallery pb-24 md:pb-32">
   <!-- Header -->
   <div class="text-center mb-8">
     <p
