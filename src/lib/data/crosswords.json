@@ -13907,5 +13907,219 @@
         "audioDuration": 8
       }
     ]
-  }
+  },
+  "2025-09-13": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "PARTON",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist’s last name",
+        "audioUrl": "499321992",
+        "startAt": "0:00",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/dollyparton/9-to-5-11"
+      },
+      {
+        "word": "THEWAY",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "257504071",
+        "startAt": "0:18",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/the-way-1"
+      },
+      {
+        "word": "ONTHEFLOOR",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "262762329",
+        "startAt": "0:00",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/jenniferlopez/on-the-floor-album-version"
+      },
+      {
+        "word": "INBLACK",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Back ___",
+        "audioUrl": "864893902",
+        "startAt": "0:00",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/user-976076831/06-back-in-black"
+      },
+      {
+        "word": "SOFTLY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Killing Me ___",
+        "audioUrl": "253511306",
+        "startAt": "0:00",
+        "audioDuration": 28,
+        "soundcloudUrl": "https://soundcloud.com/fugees/killing-me-softly-with-his-3"
+      },
+      {
+        "word": "DIRTBAG",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The noun in this song title",
+        "audioUrl": "252921297",
+        "startAt": "0:14",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/wheatus-official/teenage-dirtbag-1"
+      },
+      {
+        "word": "EENIE",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of this song title",
+        "audioUrl": "461627763",
+        "startAt": "0:05",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/seankingston/eenie-meenie-radio-version"
+      },
+      {
+        "word": "LOVEFOOL",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "263297161",
+        "startAt": "0:00",
+        "audioDuration": 22,
+        "soundcloudUrl": "https://soundcloud.com/thecardigans/lovefool-radio-edit"
+      }
+    ]
+  },
+  "2025-09-14": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SPECIAL",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "I wish I was ______",
+        "audioUrl": "265069081",
+        "startAt": "0:16",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/radiohead/creep"
+      },
+      {
+        "word": "NOAHKAHAN",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist’s name",
+        "audioUrl": "1528422475",
+        "startAt": "0:33",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/noahkahan/dial-drunk"
+      },
+      {
+        "word": "HILL",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "On Melancholy ____",
+        "audioUrl": "231447195",
+        "startAt": "0:17",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/everythinggorillazp3/onmelancholyhill"
+      },
+      {
+        "word": "BOYS",
+        "startX": 7,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Girls & ____",
+        "audioUrl": "256124600",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/blurofficial/girls-and-boys"
+      },
+      {
+        "word": "DREAMS",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Second word of this song title",
+        "audioUrl": "252884609",
+        "startAt": "0:00",
+        "audioDuration": 15.85,
+        "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/are-we-still-friends"
+      },
+      {
+        "word": "ESCAPISM",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title, also a word to describe distraction from reality",
+        "audioUrl": "1349199607",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/raye/escapism-feat-070-shake"
+      },
+      {
+        "word": "WINEHOUSE",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last name of artist",
+        "audioUrl": "236967116",
+        "startAt": "0:18",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/ereny_youssef/amy-winehouse-back-to-black"
+      },
+      {
+        "word": "MONKEYS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Last word of band name",
+        "audioUrl": "166007443",
+        "startAt": "0:52",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/articmonkeys-1/arctic-monkeys-fluorescent"
+      }
+    ]
+  }  
 }

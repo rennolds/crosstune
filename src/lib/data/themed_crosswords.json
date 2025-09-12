@@ -1018,5 +1018,139 @@
         "soundcloudUrl": "https://soundcloud.com/thesmiths/there-is-a-light-that-never-goes-out"
       }
     ]
-  }  
+  },
+  "10": {
+    "title": "Clubbing in the 2000's",
+    "date_available": "2025-09-21",
+    "author": "Tommy Rennolds",
+    "version": "1.0.0",
+    "thumbnail": "",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "LILJON",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Name of one of the featured artists",
+        "audioUrl": "256397243",
+        "startAt": "0:00",
+        "audioDuration": 21,
+        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/yeah"
+      },
+      {
+        "word": "GETLOW",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "318930349",
+        "startAt": "0:00",
+        "audioDuration": 22,
+        "soundcloudUrl": "https://soundcloud.com/lil_jon/get-low"
+      },
+      {
+        "word": "TAILFEATHER",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Shake Ya ____",
+        "audioUrl": "252917670",
+        "startAt": "0:11",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/murphy-lee-official/shake-ya-tailfeather-radio-1"
+      },
+      {
+        "word": "HUMPS",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "My ____",
+        "audioUrl": "253579468",
+        "startAt": "0:00",
+        "audioDuration": 27,
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/my-humps-album-version"
+      },
+      {
+        "word": "PIMP",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "255894098",
+        "startAt": "0:00",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/50_cent/p-i-m-p-1"
+      },
+      {
+        "word": "LOLLIPOP",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "360856238",
+        "startAt": "0:00",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/nickolas-muzzi/lil-wayne-lollipop"
+      },
+      {
+        "word": "LOW",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "1827317058",
+        "startAt": "0:14",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain-1"
+      },
+      {
+        "word": "DRANK",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "T-Pain wants to buy U a ____",
+        "audioUrl": "257063740",
+        "startAt": "0:01",
+        "audioDuration": 28,
+        "soundcloudUrl": "https://soundcloud.com/t-pain/buy-u-a-drank-shawty-snappin"
+      },
+      {
+        "word": "SHAKE",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Second half of this song title",
+        "audioUrl": "283999696",
+        "startAt": "0:00",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/iamkelis/milkshake-3"
+      },
+      {
+        "word": "YOURBODY",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title, minus the first word",
+        "audioUrl": "256093123",
+        "startAt": "0:00",
+        "audioDuration": 27,
+        "soundcloudUrl": "https://soundcloud.com/justintimberlake/rock-your-body"
+      }
+    ]
+  }
 } 
