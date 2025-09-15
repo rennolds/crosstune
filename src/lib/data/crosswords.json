@@ -14121,5 +14121,112 @@
         "soundcloudUrl": "https://soundcloud.com/articmonkeys-1/arctic-monkeys-fluorescent"
       }
     ]
-  }  
+  },
+  "2025-09-15": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "KUNGFU",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The type of martial art in this song",
+        "audioUrl": "253182587",
+        "startAt": "1:07",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/carl-douglas-music/kung-fu-fighting-1"
+      },
+      {
+        "word": "FREEBIRD",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "55541152",
+        "startAt": "4:44",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/sammael1985/lynyrd-skynyrd-free-bird"
+      },
+      {
+        "word": "CRAZY",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Beer is good, people are ____",
+        "audioUrl": "225743425",
+        "startAt": "0:53",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/belindaturner/billycurrington-peoplearecrazy-youtube2"
+      },
+      {
+        "word": "JUMP",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "232329335",
+        "startAt": "0:26",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/vanhalenofficial/van-halen-jump"
+      },
+      {
+        "word": "FOXTROT",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What type of dance are the fireflies teaching?",
+        "audioUrl": "46352948",
+        "startAt": "0:18",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/owlcityofficial/fireflies"
+      },
+      {
+        "word": "BREACH",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Album title",
+        "audioUrl": "2111802015",
+        "startAt": "0:16",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/the-contract"
+      },
+      {
+        "word": "CHICAGO",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title (also the 3rd most populous city in the U.S.)",
+        "audioUrl": "278508940",
+        "startAt": "0:06",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/mjimmortal/chicago"
+      },
+      {
+        "word": "BADDAY",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "...you had a ____",
+        "audioUrl": "254645097",
+        "startAt": "0:15",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/daniel-powter-official/bad-day-1"
+      }
+    ]
+  }
 }
