@@ -14370,18 +14370,6 @@
         "soundcloudUrl": ""
       },
       {
-        "word": "DAISES",
-        "startX": 3,
-        "startY": 5,
-        "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "Song title (single from this Artist's most recent album)",
-        "audioUrl": "2128194861",
-        "startAt": "0:17",
-        "audioDuration": 8,
-        "soundcloudUrl": ""
-      },
-      {
         "word": "ALL",
         "startX": 9,
         "startY": 6,
