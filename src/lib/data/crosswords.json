@@ -14,11 +14,11 @@
       "startY": 1,
       "direction": "across",
       "color": "#FE9C9C",
-      "textClue": "Mammal in this band's name",
-      "audioUrl": "2150078661",
-      "startAt": "0:16",
-      "audioDuration": 10,
-      "soundcloudUrl": "https://on.soundcloud.com/5R4FOUTkJgQ4JyKeDZ"
+      "textClue": "Artist first name",
+      "audioUrl": "1166759635",
+      "startAt": "0:00",
+      "audioDuration": 17,
+      "soundcloudUrl": ""
     },
     {
       "word": "NODOUBT",
@@ -26,7 +26,7 @@
       "startY": 3,
       "direction": "across",
       "color": "#28D66A",
-      "textClue": "Ska-rock band where this singer got her start",
+      "textClue": "Ska-punk band where this singer got her start",
       "audioUrl": "248324863",
       "startAt": "0:12",
       "audioDuration": 6,
@@ -103,18 +103,6 @@
       "startAt": "2:14",
       "audioDuration": 8,
       "soundcloudUrl": "https://on.soundcloud.com/LS1jWyfDuPyrYzDDbZ"
-    },
-    {
-      "word": "YOU",
-      "startX": 8,
-      "startY": 1,
-      "direction": "down",
-      "color": "#28D66A",
-      "textClue": "Pronoun in this song title",
-      "audioUrl": "253184815",
-      "startAt": "0:18",
-      "audioDuration": 10,
-      "soundcloudUrl": "https://on.soundcloud.com/LTXQrCymTnu3o9y0I4"
     },
     {
       "word": "STARLIGHT",
