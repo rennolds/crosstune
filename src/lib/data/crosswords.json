@@ -14447,7 +14447,7 @@
         "startY": 2,
         "direction": "down",
         "color": "#FFCEFD",
-        "textClue": "Song title",
+        "textClue": "Album title (this artist's most recent)",
         "audioUrl": "2152155717",
         "startAt": "1:48",
         "audioDuration": 12,
