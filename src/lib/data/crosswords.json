@@ -75,7 +75,7 @@
       "direction": "down",
       "color": "#FFB34B",
       "textClue": "If you want to destroy my ____...",
-      "audioUrl": "253A206714488",
+      "audioUrl": "206714488",
       "startAt": "0:59.5",
       "audioDuration": 7,
       "soundcloudUrl": ""
@@ -88,7 +88,7 @@
       "color": "#00FFFF",
       "textClue": "The garment referenced in this track",
       "audioUrl": "252779715",
-      "startAt": "0:00",
+      "startAt": "0:20",
       "audioDuration": 6,
       "soundcloudUrl": "https://soundcloud.com/brian-hyland-official/itsy-bitsy-teenie-weenie-1"
     },
@@ -101,7 +101,7 @@
       "textClue": "\"no shirt no ____\"",
       "audioUrl": "55492059",
       "startAt": "1:31",
-      "audioDuration": 8,
+      "audioDuration": 8.5,
       "soundcloudUrl": "https://soundcloud.com/theneighbourhood/sweater-weather-1"
     }
   ]
