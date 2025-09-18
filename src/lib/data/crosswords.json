@@ -74,10 +74,10 @@
       "startY": 0,
       "direction": "down",
       "color": "#FFB34B",
-      "textClue": "If you want to destroy my ____...",
+      "textClue": "\"If you want to destroy my ____...\"",
       "audioUrl": "206714488",
       "startAt": "1:00",
-      "audioDuration": 8,
+      "audioDuration": 7.6,
       "soundcloudUrl": ""
     },
     {
