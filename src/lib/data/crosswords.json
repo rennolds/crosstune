@@ -29,7 +29,7 @@
       "textClue": "Song title",
       "audioUrl": "255960948",
       "startAt": "0:22",
-      "audioDuration": 8,
+      "audioDuration": 9,
       "soundcloudUrl": "https://soundcloud.com/nelly-official/air-force-ones-album-version-1"
     },
     {
@@ -76,8 +76,8 @@
       "color": "#FFB34B",
       "textClue": "If you want to destroy my ____...",
       "audioUrl": "206714488",
-      "startAt": "0:59.5",
-      "audioDuration": 7,
+      "startAt": "1:00",
+      "audioDuration": 8,
       "soundcloudUrl": ""
     },
     {
@@ -88,8 +88,8 @@
       "color": "#00FFFF",
       "textClue": "The garment referenced in this track",
       "audioUrl": "252779715",
-      "startAt": "0:20",
-      "audioDuration": 6,
+      "startAt": "0:20.5",
+      "audioDuration": 7,
       "soundcloudUrl": "https://soundcloud.com/brian-hyland-official/itsy-bitsy-teenie-weenie-1"
     },
     {
@@ -101,7 +101,7 @@
       "textClue": "\"no shirt no ____\"",
       "audioUrl": "55492059",
       "startAt": "1:31",
-      "audioDuration": 8.5,
+      "audioDuration": 8.8,
       "soundcloudUrl": "https://soundcloud.com/theneighbourhood/sweater-weather-1"
     }
   ]
