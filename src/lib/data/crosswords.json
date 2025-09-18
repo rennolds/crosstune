@@ -14442,5 +14442,112 @@
         "soundcloudUrl": ""
       }
     ]
+  },
+   "2025-09-18": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ALLEN",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Hoodie ____ (Artist name)",
+        "audioUrl": "201300736",
+        "startAt": "0:57",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/hoodie-allen-music/hoodie-allen-no-interruption"
+      },
+      {
+        "word": "AIRFORCEONES",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255960948",
+        "startAt": "0:22",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/nelly-official/air-force-ones-album-version-1"
+      },
+      {
+        "word": "PATEK",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The watch brand on Drake's wrist in this track",
+        "audioUrl": "739466311",
+        "startAt": "0:12",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/futureisnow/life-is-good-feat-drake"
+      },
+      {
+        "word": "CARDIGAN",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "863079868",
+        "startAt": "0:05",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/cardigan"
+      },
+      {
+        "word": "UNDERWEAR",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What is \"she\" wearing?",
+        "audioUrl": "256195283",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/5-seconds-of-summer/she-looks-so-perfect"
+      },
+      {
+        "word": "SWEATER",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"If you want to destroy my ____...\"",
+        "audioUrl": "206714488",
+        "startAt": "1:00",
+        "audioDuration": 7.6,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "BIKINI",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The garment referenced in this track",
+        "audioUrl": "252779715",
+        "startAt": "0:20.5",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/brian-hyland-official/itsy-bitsy-teenie-weenie-1"
+      },
+      {
+        "word": "BLOUSE",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "\"No shirt, no ____...\"",
+        "audioUrl": "55492059",
+        "startAt": "1:31",
+        "audioDuration": 8.8,
+        "soundcloudUrl": "https://soundcloud.com/theneighbourhood/sweater-weather-1"
+      }
+    ]
   }
 }
