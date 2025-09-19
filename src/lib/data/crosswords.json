@@ -14549,5 +14549,112 @@
         "soundcloudUrl": "https://soundcloud.com/theneighbourhood/sweater-weather-1"
       }
     ]
+  },
+  "2025-09-19": {
+    "title": "Good Things Come In Threes",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "LILUZI",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The first two words in this artist's name",
+        "audioUrl": "313999085",
+        "startAt": "0:26",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/liluzivert/xo-tour-llif3-1"
+      },
+      {
+        "word": "VANFLEET",
+        "startX": 2,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The last two words in this artist's name",
+        "audioUrl": "315239993",
+        "startAt": "0:14",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/gretavanfleet/highway-tune-1"
+      },
+      {
+        "word": "THIRDEYE",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The first two words in this artist's name",
+        "audioUrl": "205004785",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/thirdeyeblind/jumper"
+      },
+      {
+        "word": "MARY",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The female name in this band",
+        "audioUrl": "256026676",
+        "startAt": "0:12",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/peterpaulmary/puff-the-magic-dragon"
+      },
+      {
+        "word": "JIMMY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "First word of this artist's name",
+        "audioUrl": "256030899",
+        "startAt": "0:10",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/jimmyeatworld/the-middle"
+      },
+      {
+        "word": "LANADELREY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "This artist's name",
+        "audioUrl": "1517325979",
+        "startAt": "0:48",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/lana-del-rey/say-yes-to-heaven"
+      },
+      {
+        "word": "EYEDPEAS",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The last two words in this artist's name",
+        "audioUrl": "253579436",
+        "startAt": "1:42",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/meet-me-halfway-album-version"
+      },
+      {
+        "word": "MARY",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This artist's first name",
+        "audioUrl": "255803826",
+        "startAt": "0:18",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/officialmaryjblige/family-affair-1"
+      }
+    ]
   }
 }
