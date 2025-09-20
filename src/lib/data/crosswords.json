@@ -14763,5 +14763,112 @@
         "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-texas-hold-em"
       }
     ]
+  },
+  "2025-09-21": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "PLEASE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title x3",
+        "audioUrl": "1840545771",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-please"
+      },
+      {
+        "word": "UMBRELLA",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255769529",
+        "startAt": "0:32",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/umbrella"
+      },
+      {
+        "word": "ELLIE",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Featured Artist first name",
+        "audioUrl": "641819847",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/elliegoulding/hate-me"
+      },
+      {
+        "word": "AURORA",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "190236801",
+        "startAt": "0:51",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/auroraaksnes/runawaysingle"
+      },
+      {
+        "word": "SUKI",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "1265974222",
+        "startAt": "1:23",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/suki_waterhouse/good-looking"
+      },
+      {
+        "word": "PERFECT",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "310108203",
+        "startAt": "0:17",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/edsheeran/perfect"
+      },
+      {
+        "word": "LOLA",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Featured Artist first name",
+        "audioUrl": "1828822362",
+        "startAt": "2:12",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/lolayoung-music/messy"
+      },
+      {
+        "word": "SHAKEITOFF",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "294363326",
+        "startAt": "0:00",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/shake-it-off"
+      }
+    ]
   }
 }
