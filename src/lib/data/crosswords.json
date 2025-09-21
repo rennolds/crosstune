@@ -14121,5 +14121,754 @@
         "soundcloudUrl": "https://soundcloud.com/articmonkeys-1/arctic-monkeys-fluorescent"
       }
     ]
-  }  
+  },
+  "2025-09-15": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "KUNGFU",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The type of martial art in this song",
+        "audioUrl": "253182587",
+        "startAt": "1:07",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/carl-douglas-music/kung-fu-fighting-1"
+      },
+      {
+        "word": "FREEBIRD",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "55541152",
+        "startAt": "4:44",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/sammael1985/lynyrd-skynyrd-free-bird"
+      },
+      {
+        "word": "CRAZY",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Beer is good, people are ____",
+        "audioUrl": "225743425",
+        "startAt": "0:53",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/belindaturner/billycurrington-peoplearecrazy-youtube2"
+      },
+      {
+        "word": "JUMP",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "232329335",
+        "startAt": "0:26",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/vanhalenofficial/van-halen-jump"
+      },
+      {
+        "word": "FOXTROT",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What type of dance are the fireflies teaching?",
+        "audioUrl": "46352948",
+        "startAt": "0:18",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/owlcityofficial/fireflies"
+      },
+      {
+        "word": "BREACH",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Album title",
+        "audioUrl": "2111802015",
+        "startAt": "0:16",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/the-contract"
+      },
+      {
+        "word": "CHICAGO",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title (also the 3rd most populous city in the U.S.)",
+        "audioUrl": "278508940",
+        "startAt": "0:06",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/mjimmortal/chicago"
+      },
+      {
+        "word": "BADDAY",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "...you had a ____",
+        "audioUrl": "254645097",
+        "startAt": "0:15",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/daniel-powter-official/bad-day-1"
+      }
+    ]
+  },
+  "2025-09-16": {
+    "title": "By Carley W",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ILLBETHERE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "28161303",
+        "startAt": "0:05",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/mjimmortal/ill"
+      },
+      {
+        "word": "FINESSE",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "293231247",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/finesse"
+      },
+      {
+        "word": "HOME",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "666771050",
+        "startAt": "0:15",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/edward-sharpe-mag-zeros/home-2019-remaster"
+      },
+      {
+        "word": "BILLY",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": "255996553",
+        "startAt": "0:45",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/official-billy-idol/white-wedding"
+      },
+      {
+        "word": "FINNEAS",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name (with a much more famous little sister)",
+        "audioUrl": "515787486",
+        "startAt": "1:04",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/finneasmusic/lets-fall-in-love-for-the-night?utm_campa="
+      },
+      {
+        "word": "LOSTBOY",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "254105160",
+        "startAt": "0:05",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/ruthbofficial/lost-boy"
+      },
+      {
+        "word": "HOHEY",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "604385229",
+        "startAt": "0:36",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/the_lumineers/ho-hey"
+      },
+      {
+        "word": "RAMBLIN",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of song title",
+        "audioUrl": "255900929",
+        "startAt": "0:52",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/the-allman-brothers-band/ramblin-man"
+      }
+    ]
+  },
+  "2025-09-17": {
+    "title": "By emocart00ngf",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "WOLFGANG",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "1166759635",
+        "startAt": "0:00",
+        "audioDuration": 17,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "NODOUBT",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Ska-punk band where Gwen Stefani got her start",
+        "audioUrl": "442351380",
+        "startAt": "0:41",
+        "audioDuration": 11,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "ALL",
+        "startX": 9,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "____ Falls Down",
+        "audioUrl": "255766378",
+        "startAt": "0:21",
+        "audioDuration": 9,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "AMINE",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "251059513",
+        "startAt": "0:14",
+        "audioDuration": 14,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "STING",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": "253087160",
+        "startAt": "0:18",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/sting/fields-of-gold"
+      },
+      {
+        "word": "HOUSE",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Our ____",
+        "audioUrl": "1088546446",
+        "startAt": "0:00",
+        "audioDuration": 21,
+        "soundcloudUrl": "https://on.soundcloud.com/KvbTLB7AU4GwAKmKL8"
+      },
+      {
+        "word": "FONTAINES",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of this Irish band's name",
+        "audioUrl": "1798465345",
+        "startAt": "0:40",
+        "audioDuration": 8,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "STARLINE",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Album title (this artist's most recent)",
+        "audioUrl": "2152155717",
+        "startAt": "1:48",
+        "audioDuration": 12,
+        "soundcloudUrl": ""
+      }
+    ]
+  },
+   "2025-09-18": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ALLEN",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Hoodie ____ (Artist name)",
+        "audioUrl": "201300736",
+        "startAt": "0:57",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/hoodie-allen-music/hoodie-allen-no-interruption"
+      },
+      {
+        "word": "AIRFORCEONES",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255960948",
+        "startAt": "0:22",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/nelly-official/air-force-ones-album-version-1"
+      },
+      {
+        "word": "PATEK",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The watch brand on Drake's wrist in this track",
+        "audioUrl": "739466311",
+        "startAt": "0:12",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/futureisnow/life-is-good-feat-drake"
+      },
+      {
+        "word": "CARDIGAN",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "863079868",
+        "startAt": "0:05",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/cardigan"
+      },
+      {
+        "word": "UNDERWEAR",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What is \"she\" wearing?",
+        "audioUrl": "256195283",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/5-seconds-of-summer/she-looks-so-perfect"
+      },
+      {
+        "word": "SWEATER",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"If you want to destroy my ____...\"",
+        "audioUrl": "206714488",
+        "startAt": "1:00",
+        "audioDuration": 7.6,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "BIKINI",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The garment referenced in this track",
+        "audioUrl": "252779715",
+        "startAt": "0:20.5",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/brian-hyland-official/itsy-bitsy-teenie-weenie-1"
+      },
+      {
+        "word": "BLOUSE",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "\"No shirt, no ____...\"",
+        "audioUrl": "55492059",
+        "startAt": "1:31",
+        "audioDuration": 8.8,
+        "soundcloudUrl": "https://soundcloud.com/theneighbourhood/sweater-weather-1"
+      }
+    ]
+  },
+  "2025-09-19": {
+    "title": "Good Things Come In Threes",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "LILUZI",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The first two words in this artist's name",
+        "audioUrl": "313999085",
+        "startAt": "0:26",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/liluzivert/xo-tour-llif3-1"
+      },
+      {
+        "word": "VANFLEET",
+        "startX": 2,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The last two words in this artist's name",
+        "audioUrl": "315239993",
+        "startAt": "0:14",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/gretavanfleet/highway-tune-1"
+      },
+      {
+        "word": "THIRDEYE",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The first two words in this artist's name",
+        "audioUrl": "205004785",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/thirdeyeblind/jumper"
+      },
+      {
+        "word": "MARY",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The female name in this band",
+        "audioUrl": "256026676",
+        "startAt": "0:12",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/peterpaulmary/puff-the-magic-dragon"
+      },
+      {
+        "word": "JIMMY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "First word of this artist's name",
+        "audioUrl": "256030899",
+        "startAt": "0:10",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/jimmyeatworld/the-middle"
+      },
+      {
+        "word": "LANADELREY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "This artist's name",
+        "audioUrl": "1517325979",
+        "startAt": "0:48",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/lana-del-rey/say-yes-to-heaven"
+      },
+      {
+        "word": "EYEDPEAS",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The last two words in this artist's name",
+        "audioUrl": "253579436",
+        "startAt": "1:42",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/meet-me-halfway-album-version"
+      },
+      {
+        "word": "MARY",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This artist's first name",
+        "audioUrl": "255803826",
+        "startAt": "0:18",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/officialmaryjblige/family-affair-1"
+      }
+    ]
+  },
+  "2025-09-20": {
+    "title": "Whistlin' Part I (inspired by TDVoldy)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "YOUNGFOLKS",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "4521808",
+        "startAt": "0:08",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/wichita-recordings/peter-bjorn-and-john-young-folks"
+      },
+      {
+        "word": "WHISTLE",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "256209502",
+        "startAt": "0:01",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/official_flo/whistle"
+      },
+      {
+        "word": "MAROON",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name (without the number)",
+        "audioUrl": "19505822",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/maroon-5/moves-like-jagger-clean"
+      },
+      {
+        "word": "BEHAPPY",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Don't worry ______",
+        "audioUrl": "115841065",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/yigitcanbal/bob-marley-dont-worry-be-happy"
+      },
+      {
+        "word": "ONEREPUBLIC",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "1266866860",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/onerepublic/i-aint-worried"
+      },
+      {
+        "word": "HOME",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "666771050",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/edward-sharpe-mag-zeros/home-2019-remaster"
+      },
+      {
+        "word": "LOSTONYOU",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "232952686",
+        "startAt": "0:21",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/iamlpmusic/lost-on-you"
+      },
+      {
+        "word": "TEXAS",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of this song title",
+        "audioUrl": "1744355502",
+        "startAt": "2:04",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-texas-hold-em"
+      }
+    ]
+  },
+  "2025-09-21": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "PLEASE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title x3",
+        "audioUrl": "1840545771",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-please"
+      },
+      {
+        "word": "UMBRELLA",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255769529",
+        "startAt": "0:32",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/umbrella"
+      },
+      {
+        "word": "ELLIE",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Featured Artist first name",
+        "audioUrl": "641819847",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/elliegoulding/hate-me"
+      },
+      {
+        "word": "AURORA",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "190236801",
+        "startAt": "0:51",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/auroraaksnes/runawaysingle"
+      },
+      {
+        "word": "SUKI",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "1265974222",
+        "startAt": "1:23",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/suki_waterhouse/good-looking"
+      },
+      {
+        "word": "PERFECT",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "310108203",
+        "startAt": "0:17",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/edsheeran/perfect"
+      },
+      {
+        "word": "LOLA",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Featured Artist first name",
+        "audioUrl": "1828822362",
+        "startAt": "2:12",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/lolayoung-music/messy"
+      },
+      {
+        "word": "SHAKEITOFF",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "294363326",
+        "startAt": "0:00",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/shake-it-off"
+      }
+    ]
+  }
 }
