@@ -14958,7 +14958,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "Artist name (abbreviated)",
+        "textClue": "Artist name",
         "audioUrl": "256135410",
         "startAt": "0:13",
         "audioDuration": 10,
