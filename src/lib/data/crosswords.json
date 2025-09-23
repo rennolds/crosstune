@@ -15001,5 +15001,112 @@
         "soundcloudUrl": "https://soundcloud.com/miauk/bad-girls"
       }
     ]
+  },
+  "2025-09-23": {
+    "title": "Artist Debuts II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BRUNO",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "29051293",
+        "startAt": "0:22",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/mr-killer/bruno-mars-just-the-way-you"
+      },
+      {
+        "word": "SNOOPDOGG",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "1496991703",
+        "startAt": "0:31",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/snoopdogg/who-am-i-whats-my-name-5"
+      },
+      {
+        "word": "OCEAN",
+        "startX": 6,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name",
+        "audioUrl": "1652881803",
+        "startAt": "0:19",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/songsthatarentonscbackup/frank-ocean-novacane-1"
+      },
+      {
+        "word": "TAYLOR",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "255959446",
+        "startAt": "0:06",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/jamestaylorofficial/carolina-in-my-mind"
+      },
+      {
+        "word": "SABRINA",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "257589556",
+        "startAt": "0:14",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/cant-blame-a-girl-for-trying"
+      },
+      {
+        "word": "NOAHKAHAN",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": "304313453",
+        "startAt": "1:48",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/noahkahan/young-blood"
+      },
+      {
+        "word": "RODRIGO",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "957446587",
+        "startAt": "0:08",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/drivers-license"
+      },
+      {
+        "word": "ZAYN",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "253794446",
+        "startAt": "0:14",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/zaynofficial/pillowtalk-1"
+      }
+    ]
   }
 }
