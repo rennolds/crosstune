@@ -15108,5 +15108,112 @@
         "soundcloudUrl": "https://soundcloud.com/zaynofficial/pillowtalk-1"
       }
     ]
+  },
+   "2025-09-24": {
+    "title": "\"oh boy\" (by scales)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "AMERICANBOY",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "341881983",
+        "startAt": "0:15",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/estelleofficial/american-boy-feat-kanye-west"
+      },
+      {
+        "word": "GIRL",
+        "startX": 8,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Who is on fire on this track?",
+        "audioUrl": "58831841",
+        "startAt": "1:31",
+        "audioDuration": 10,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "LIAR",
+        "startX": 8,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "That boy's a what?",
+        "audioUrl": "1427883292",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/pinkpantheress/boys-a-liar-pt-2"
+      },
+      {
+        "word": "BEACHBOYS",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name sans the",
+        "audioUrl": "246698836",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/thebeachboys/the-beach-boys-wouldnt-it-be"
+      },
+      {
+        "word": "JESSIES",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Who's girl?",
+        "audioUrl": "253506870",
+        "startAt": "0:08",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/rick-springfield-official/jessies-girl"
+      },
+      {
+        "word": "ISMINE",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"That boy ____\"",
+        "audioUrl": "1768728738",
+        "startAt": "0:42",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-the-boy-is-mine"
+      },
+      {
+        "word": "BADGIRLS",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "34548438",
+        "startAt": "0:02",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/interscope/m-i-a-bad-girls"
+      },
+      {
+        "word": "MYGIRL",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "319393353",
+        "startAt": "0:08",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/the-temptations/my-girl-3"
+      }
+    ]
   }
 }
