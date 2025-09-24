@@ -16,8 +16,8 @@
       "color": "#FE9C9C",
       "textClue": "Song title",
       "audioUrl": "341881983",
-      "startAt": "0:10",
-      "audioDuration": 10,
+      "startAt": "0:15",
+      "audioDuration": 8,
       "soundcloudUrl": "https://soundcloud.com/estelleofficial/american-boy-feat-kanye-west"
     },
     {
@@ -26,11 +26,11 @@
       "startY": 4,
       "direction": "across",
       "color": "#28D66A",
-      "textClue": "\"___, So Confusing\"",
-      "audioUrl": "1839735330",
-      "startAt": "0:01",
-      "audioDuration": 3,
-      "soundcloudUrl": "https://soundcloud.com/charlixcx/girl-so-confusing"
+      "textClue": "Who is on fire on this track?",
+      "audioUrl": "58831841",
+      "startAt": "1:31",
+      "audioDuration": 10,
+      "soundcloudUrl": ""
     },
     {
       "word": "LIAR",
@@ -74,7 +74,7 @@
       "startY": 1,
       "direction": "down",
       "color": "#FFB34B",
-      "textClue": "The boy __ ____",
+      "textClue": "That boy ____",
       "audioUrl": "1768728738",
       "startAt": "0:42",
       "audioDuration": 6,
