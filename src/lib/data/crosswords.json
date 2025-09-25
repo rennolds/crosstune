@@ -15215,5 +15215,112 @@
         "soundcloudUrl": "https://soundcloud.com/the-temptations/my-girl-3"
       }
     ]
+  },
+  "2025-09-25": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "TRAINOR",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "254082114",
+        "startAt": "0:20",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/meghantrainorofficial/dear-future-husband"
+      },
+      {
+        "word": "JOEBUDDEN",
+        "startX": 2,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name (also known for his self-titled podcast)",
+        "audioUrl": "256213491",
+        "startAt": "0:13",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/joebudden/pump-it-up-edited-album"
+      },
+      {
+        "word": "CHRISBROWN",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "This artist wakes up in 4D's body", 
+        "audioUrl": "402680568",
+        "startAt": "0:14",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/lil-dicky/freaky-friday-feat-chris-brown"
+      },
+      {
+        "word": "LILDICKY",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "This artist wakes up in 4D's body", 
+        "audioUrl": "402680568",
+        "startAt": "1:28",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/lil-dicky/freaky-friday-feat-chris-brown"
+      },
+      {
+        "word": "CARA",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": "313995511",
+        "startAt": "1:20",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/alessiacara/scars-to-your-beautiful"
+      },
+      {
+        "word": "LIFEGOESON",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "1056381013",
+        "startAt": "0:35",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/olivertree/life-goes-on"
+      },
+      {
+        "word": "RED",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Girl in ___",
+        "audioUrl": "292549863",
+        "startAt": "0:48",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/lyfsuxx/we-fell-in-love-in-buddyville"
+      },
+      {
+        "word": "ELEANOR",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First name of the woman who \"picks up rice in the church\"",
+        "audioUrl": "435126858",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/kaden-gencarelle-98629184/the-beatles-eleanor-rigby"
+      }
+    ]
   }
 }
