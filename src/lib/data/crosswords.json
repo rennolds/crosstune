@@ -15322,5 +15322,112 @@
         "soundcloudUrl": "https://soundcloud.com/kaden-gencarelle-98629184/the-beatles-eleanor-rigby"
       }
     ]
+  },
+  "2025-09-26": {
+    "title": "The \"Who\"?",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CHICKS",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "24514622",
+        "startAt": "0:52",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/dixiechicks/cowboy-take-me-away"
+      },
+      {
+        "word": "KILLERS",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "273792931",
+        "startAt": "1:05",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/thekillers/somebody-told-me-2"
+      },
+      {
+        "word": "WALTERS",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "169210568",
+        "startAt": "0:44",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/thewaltersband/i-love-you-so-1"
+      },
+      {
+        "word": "SCRIPT",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "270519075",
+        "startAt": "0:09",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/thescript/the-man-who-cant-be-moved"
+      },
+      {
+        "word": "FRAY",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "871518028",
+        "startAt": "0:19",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/the_fray/over-my-head-cable-car"
+      },
+      {
+        "word": "WHO",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "253188547",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/thewho/baba-oriley-original-album"
+      },
+      {
+        "word": "KIDLAROI",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "1658353617",
+        "startAt": "0:13",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/thekidlaroi/the-kid-laroi-nights-like-this"
+      },
+      {
+        "word": "CURE",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name sans \"The\"",
+        "audioUrl": "255775859",
+        "startAt": "0:05",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/thecureofficial/boys-dont-cry-1"
+      }
+    ]
   }
 }
