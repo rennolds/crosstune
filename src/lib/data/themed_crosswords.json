@@ -1153,9 +1153,12 @@
       }
     ]
   },
-  "2025-09-28": {
-    "title": "",
+  "11": {
+    "title": "Seeing Double",
+    "date_available": "2025-09-28",
+    "author": "Paul Pursifull",
     "version": "1.0.0",
+    "thumbnail": "themed/seeing_double.png",
     "size": {
       "width": 12,
       "height": 10
