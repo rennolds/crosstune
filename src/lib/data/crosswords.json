@@ -15429,5 +15429,124 @@
         "soundcloudUrl": "https://soundcloud.com/thecureofficial/boys-dont-cry-1"
       }
     ]
+  },
+  "2025-09-27": {
+    "title": "Picnic! (by Callum)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "APPLE",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1839750924",
+        "startAt": "0:02",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/charlixcx/apple"
+      },
+      {
+        "word": "ANT",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Second word of this band's name (pesky bug)",
+        "audioUrl": "259036113",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/alien-ant-farm-official/smooth-criminal-album-version"
+      },
+      {
+        "word": "PARK",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Second word of this band's name",
+        "audioUrl": "1266029521",
+        "startAt": "0:34",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/bleed-it-out-1"
+      },
+      {
+        "word": "SUMMER",
+        "startX": 6,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist's last name",
+        "audioUrl": "253181204",
+        "startAt": "1:48",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/donna-summer-official/hot-stuff-3"
+      },
+      {
+        "word": "FIELDS",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Second word of this song title",
+        "audioUrl": "325144218",
+        "startAt": "1:09",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/chiarajazmyn/the-beatles-strawberry-fields-forever"
+      },
+      {
+        "word": "BLANKET",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title, first word (a picnic must have)",
+        "audioUrl": "253183294",
+        "startAt": "0:04",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/billie-jo-spears/blanket-on-the-ground"
+      },
+      {
+        "word": "WATERMELON",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of this song title",
+        "audioUrl": "714012691",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/harrystyles/watermelon-sugar"
+      },
+      {
+        "word": "BLUESKY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Mr _______",
+        "audioUrl": "253507627",
+        "startAt": "0:07",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/electric-light-orchestra/mr-blue-sky-2"
+      },
+      {
+        "word": "BASKET",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word of this song title",
+        "audioUrl": "256240578",
+        "startAt": "0:45",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/greenday/basket-case"
+      }
+    ]
   }
 }
