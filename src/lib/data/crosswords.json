@@ -15548,5 +15548,112 @@
         "soundcloudUrl": "https://soundcloud.com/greenday/basket-case"
       }
     ]
+  },
+  "2025-09-28": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "GYOW",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Acronym of this song title",
+        "audioUrl": "254399552",
+        "startAt": "0:31",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/fleetwoodmacofficial/go-your-own-way"
+      },
+      {
+        "word": "AUSTIN",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Dasha says you'll still be in what city?",
+        "audioUrl": "1779265662",
+        "startAt": "0:50",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/dasha-sc-music/austin"
+      },
+      {
+        "word": "CRUISE",
+        "startX": 5,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "253006705",
+        "startAt": "0:00",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/flagaline/cruise-album-version"
+      },
+      {
+        "word": "POLYESTER",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Material of the sweater",
+        "audioUrl": "775304593",
+        "startAt": "0:27",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/conan-gray/heather"
+      },
+      {
+        "word": "HALSEY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "142231493",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/halseymusic/halsey-new-americana"
+      },
+      {
+        "word": "GREEDY",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "1611037203",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/tate-mcrae/greedy"
+      },
+      {
+        "word": "WHATCHASAY",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "12804663",
+        "startAt": "0:11.5",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/jasonderulo/whatcha-say-edit"
+      },
+      {
+        "word": "KISSME",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "254614865",
+        "startAt": "0:42",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/sixpence-none-the-richer-official/kiss-me-1"
+      }
+    ]
   }
 }
