@@ -53,19 +53,19 @@
       "textClue": "First word in song title",
       "audioUrl": "1802473740",
       "startAt": "0:13",
-      "audioDuration": 30,
+      "audioDuration": 15,
       "soundcloudUrl": "https://soundcloud.com/ravynlenaesounds/love-me-not"
     },
     {
       "word": "SAD",
       "startX": 2,
-      "startY": ,
+      "startY": 1,
       "direction": "across",
       "color": "#568EFF",
       "textClue": "Song title",
-      "audioUrl": "40374649",
-      "startAt": "0:00",
-      "audioDuration": 30,
+      "audioUrl": "543819150",
+      "startAt": "0:20",
+      "audioDuration": 8,
       "soundcloudUrl": "https://soundcloud.com/atlanticrecords/01-hero"
     },
     {
@@ -103,18 +103,6 @@
       "startAt": "0:38",
       "audioDuration": 14,
       "soundcloudUrl": "https://soundcloud.com/akon/lonely-old-version"
-    },
-    {
-      "word": "SORROW",
-      "startX": 8,
-      "startY": 3,
-      "direction": "down",
-      "color": "#FFCEFD",
-      "textClue": "Last word in song title",
-      "audioUrl": "1596099684",
-      "startAt": "0:00",
-      "audioDuration": 30,
-      "soundcloudUrl": "https://soundcloud.com/achane/east-side-of-sorrow"
     },
     {
       "word": "CRAZY",
