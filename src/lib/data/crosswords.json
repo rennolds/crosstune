@@ -15655,5 +15655,125 @@
         "soundcloudUrl": "https://soundcloud.com/sixpence-none-the-richer-official/kiss-me-1"
       }
     ]
+  },
+  {
+  "2025-09-29": {
+    "title": "Feels",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BITTER",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First word in song title, also a flavor/taste",
+        "audioUrl": "253097943",
+        "startAt": "0:00",
+        "audioDuration": 26,
+        "soundcloudUrl": "https://soundcloud.com/the-verve-official/bitter-sweet-symphony"
+      },
+      {
+        "word": "MELANCHOLY",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Second word in song title",
+        "audioUrl": "231447195",
+        "startAt": "1:39",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/everythinggorillazp3/onmelancholyhill"
+      },
+      {
+        "word": "RUSH",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1564144813",
+        "startAt": "0:08",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/troye-sivan/troye-sivan-rush-1"
+      },
+      {
+        "word": "LOVE",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First word in song title",
+        "audioUrl": "1802473740",
+        "startAt": "0:13",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/ravynlenaesounds/love-me-not"
+      },
+      {
+        "word": "SAD",
+        "startX": 9,
+        "startY": 2,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "543819150",
+        "startAt": "0:20",
+        "audioDuration": 8,
+        "soundcloudUrl": ""
+      },
+      {
+        "word": "GOOD",
+        "startX": 1,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Second word in song title",
+        "audioUrl": "256154864",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/michaelbuble/feeling-good"
+      },
+      {
+        "word": "BLUE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word in song title",
+        "audioUrl": "143239303",
+        "startAt": "0:00",
+        "audioDuration": 4,
+        "soundcloudUrl": "https://soundcloud.com/kawaiidjs/eiffel-65-im-blue-da-ba-dee"
+      },
+      {
+        "word": "LONELY",
+        "startX": 3,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255878019",
+        "startAt": "0:38",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/akon/lonely-old-version"
+      },
+      {
+        "word": "CRAZY",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "205012780",
+        "startAt": "0:00",
+        "audioDuration": 3,
+        "soundcloudUrl": "https://soundcloud.com/gnarls-barkley-1/crazy"
+      }
+    ]
   }
 }
