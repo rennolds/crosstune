@@ -15671,7 +15671,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "First word in song title, also a flavor/taste",
+        "textClue": "First word in song title (also a taste)",
         "audioUrl": "253097943",
         "startAt": "0:00",
         "audioDuration": 26,
@@ -15768,10 +15768,10 @@
         "direction": "down",
         "color": "#FF5B5E",
         "textClue": "Song title",
-        "audioUrl": "205012780",
+        "audioUrl": "256045306",
         "startAt": "0:00",
-        "audioDuration": 3,
-        "soundcloudUrl": "https://soundcloud.com/gnarls-barkley-1/crazy"
+        "audioDuration": 7,
+        "soundcloudUrl": ""
       }
     ]
   }
