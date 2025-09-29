@@ -34,9 +34,9 @@
     },
     {
       "word": "RUSH",
-      "startX": 8,
-      "startY": 6,
-      "direction": "across",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
       "color": "#FFCEFD",
       "textClue": "Song title",
       "audioUrl": "1564144813",
@@ -57,9 +57,9 @@
       "soundcloudUrl": "https://soundcloud.com/ravynlenaesounds/love-me-not"
     },
     {
-      "word": "HERO",
-      "startX": 5,
-      "startY": 7,
+      "word": "SAD",
+      "startX": 2,
+      "startY": ,
       "direction": "across",
       "color": "#568EFF",
       "textClue": "Song title",
@@ -67,18 +67,6 @@
       "startAt": "0:00",
       "audioDuration": 30,
       "soundcloudUrl": "https://soundcloud.com/atlanticrecords/01-hero"
-    },
-    {
-      "word": "WEAK",
-      "startX": 8,
-      "startY": 8,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "Song title",
-      "audioUrl": "289019755",
-      "startAt": "0:00",
-      "audioDuration": 28,
-      "soundcloudUrl": "https://soundcloud.com/ajrbrothers/weak-1"
     },
     {
       "word": "GOOD",
