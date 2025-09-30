@@ -15774,5 +15774,112 @@
         "soundcloudUrl": ""
       }
     ]
+  },
+  "2025-09-30": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ZACHBRYAN",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name (just had the largest ticketed concert in history)",
+        "audioUrl": "1828161255",
+        "startAt": "1:04",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/achane/pink-skies"
+      },
+      {
+        "word": "KIETH",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name (divorced from 7A)",
+        "audioUrl": "260256743",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/keith_urban/blue-aint-your-color"
+      },
+      {
+        "word": "SANTERIA",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256800193",
+        "startAt": "0:12",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/sublimeofficial/santeria"
+      },
+      {
+        "word": "NICOLE",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First name of the actress/singer on this duet (divorced from 5A)",
+        "audioUrl": "129471816",
+        "startAt": "0:41",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/rodaina-iii/somthing-stupid-nicole-kidman"
+      },
+      {
+        "word": "TYLER",
+        "startX": 7,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "2133746019",
+        "startAt": "0:14",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/sugar-on-my-tongue"
+      },
+      {
+        "word": "AMBER",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Her energy's color is what?",
+        "audioUrl": "196249390",
+        "startAt": "0:54",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/lloyd_braun_band/amber-311"
+      },
+      {
+        "word": "LASTRESORT",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "954032278",
+        "startAt": "0:00",
+        "audioDuration": 3,
+        "soundcloudUrl": "https://soundcloud.com/paparoach/last-resort-2020"
+      },
+      {
+        "word": "DONDA",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Album title",
+        "audioUrl": "1114928752",
+        "startAt": "0:13",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/hurricane?in=kanyewest%2Fsets%2Fdonda-7"
+      }
+    ]
   }
 }
