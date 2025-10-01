@@ -15881,5 +15881,112 @@
         "soundcloudUrl": "https://soundcloud.com/kanyewest/hurricane?in=kanyewest%2Fsets%2Fdonda-7"
       }
     ]
+  },
+  "2025-10-01": {
+    "title": "Whistlin' Part II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "WORRIED",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "I Ain't ____",
+        "audioUrl": "1266866860",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/onerepublic/i-aint-worried"
+      },
+      {
+        "word": "KWAI",
+        "startX": 8,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The name of the river in this song title",
+        "audioUrl": "1265005645",
+        "startAt": "0:18",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/frankchacksfieldorchestra-music/bridge-over-the-river-kwai"
+      },
+      {
+        "word": "GOODBADUGLY",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The three attributes in this song title (also a famous western)",
+        "audioUrl": "330146609",
+        "startAt": "0:05",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/ennio-morricone/the-good-the-bad-and-the-3"
+      },
+      {
+        "word": "WORLD",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "I'm on top of the ____",
+        "audioUrl": "271227851",
+        "startAt": "0:12",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/imaginedragons/on-top-of-the-world"
+      },
+      {
+        "word": "HAPPY",
+        "startX": 5,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Be what?",
+        "audioUrl": "115841065",
+        "startAt": "0:00",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/yigitcanbal/bob-marley-dont-worry-be-happy"
+      },
+      {
+        "word": "PUK",
+        "startX": 7,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Acronym of this song title",
+        "audioUrl": "256168961",
+        "startAt": "2:33",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/fosterthepeoplemusic/pumped-up-kicks"
+      },
+      {
+        "word": "DOCK",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "This singer is sitting on a what?",
+        "audioUrl": "159201770",
+        "startAt": "2:13",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/otisredding/otis-redding-stories-raphael-saddiq-on-sittin-on-the-dock-of-the-bay"
+      },
+      {
+        "word": "LAZY",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The what song?",
+        "audioUrl": "271221757",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/the-lazy-song"
+      }
+    ]
   }
 }
