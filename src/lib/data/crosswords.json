@@ -118,6 +118,137 @@
     }
   ]
 },
+  "2025-09-30": {
+  "title": "Sweet (by ??)",
+  "version": "1.0.0",
+  "size": {
+    "width": 12,
+    "height": 10
+  },
+  "theme": "black",
+  "words": [
+    {
+      "word": "ICECREAM",
+      "startX": 4,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "First Two Words In Title",
+      "audioUrl": "883389634",
+      "startAt": "0:10",
+      "audioDuration": 17,
+      "soundcloudUrl": ""
+    },
+    {
+      "word": "MARSHMELLO",
+      "startX": 1,
+      "startY": 4,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Artist Name, Mind the Spelling",
+      "audioUrl": "486671055",
+      "startAt": "1:45",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/marshmellomusic/happier-ft-bastille"
+    },
+    {
+      "word": "SUGAR",
+      "startX": 1,
+      "startY": 6,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "First Word In Title",
+      "audioUrl": "2133746019",
+      "startAt": "0:00",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/sugar-on-my-tongue"
+    },
+    {
+      "word": "CANDY",
+      "startX": 6,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "First Word In Title",
+      "audioUrl": "255894115",
+      "startAt": "0:00",
+      "audioDuration": 7,
+      "soundcloudUrl": "https://soundcloud.com/50_cent/candy-shop-album-version"
+    },
+    {
+      "word": "SWEET",
+      "startX": 2,
+      "startY": 8,
+      "direction": "across",
+      "color": "#568EFF",
+      "textClue": "First Word In Title",
+      "audioUrl": "253592092",
+      "startAt": "0:00",
+      "audioDuration": 3,
+      "soundcloudUrl": "https://soundcloud.com/guns-n-roses-official/sweet-child-o-mine"
+    },
+    {
+      "word": "JAM",
+      "startX": 1,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Second Word Of Artist Name",
+      "audioUrl": "253242575",
+      "startAt": "0:00",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/pearl-jam-official/evenflow-album-version"
+    },
+    {
+      "word": "MILKSHAKE",
+      "startX": 4,
+      "startY": 0,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Song Title",
+      "audioUrl": "283999696",
+      "startAt": "0:00",
+      "audioDuration": 1,
+      "soundcloudUrl": "https://soundcloud.com/iamkelis/milkshake-3"
+    },
+    {
+      "word": "CT",
+      "startX": 6,
+      "startY": 7,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "First Letter Of Second Word In Title, Abbreviation for confectionary",
+      "audioUrl": "867020239",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/user-821004829/babymetal-gimme-chocolate-mp3"
+    },
+    {
+      "word": "CAKE",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "First Word In Title",
+      "audioUrl": "260402125",
+      "startAt": "0:00",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/dnceofficial/cake-by-the-ocean-1"
+    },
+    {
+      "word": "HONEY",
+      "startX": 10,
+      "startY": 3,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "First Part Of Song Title",
+      "audioUrl": "611216295",
+      "startAt": "0:00",
+      "audioDuration": 19,
+      "soundcloudUrl": "https://soundcloud.com/heresjawny/honeypie"
+    }
+  ]
+},
   "2025-09-17": {
   "title": "",
   "version": "1.0.0",
