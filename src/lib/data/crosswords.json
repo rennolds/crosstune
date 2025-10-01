@@ -1,6 +1,6 @@
 {
   "2025-10-01": {
-  "title": "",
+  "title": "(by Shillz)",
   "version": "1.0.0",
   "size": {
     "width": 12,
@@ -33,18 +33,6 @@
       "soundcloudUrl": "https://soundcloud.com/edsheeran/autumn-leaves-deluxe-edition"
     },
     {
-      "word": "GARDEN",
-      "startX": 6,
-      "startY": 5,
-      "direction": "across",
-      "color": "#FFCEFD",
-      "textClue": "first word of song title",
-      "audioUrl": "793862350",
-      "startAt": "2:29",
-      "audioDuration": 10,
-      "soundcloudUrl": "https://soundcloud.com/phoebebridgers/garden-song"
-    },
-    {
       "word": "AIR",
       "startX": 0,
       "startY": 6,
@@ -67,18 +55,6 @@
       "startAt": "0:42",
       "audioDuration": 15,
       "soundcloudUrl": "https://soundcloud.com/hellsinger/neon-trees-animal"
-    },
-    {
-      "word": "SUN",
-      "startX": 6,
-      "startY": 8,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "Sheryl is soaking up what?",
-      "audioUrl": "1101019018",
-      "startAt": "2:14",
-      "audioDuration": 10,
-      "soundcloudUrl": "https://soundcloud.com/sherylcrow/soak-up-the-sun-live-from-the"
     },
     {
       "word": "EARTH",
@@ -120,7 +96,7 @@
       "word": "RAIN",
       "startX": 8,
       "startY": 5,
-      "direction": "down",
+      "direction": "across",
       "color": "#FFCEFD",
       "textClue": "last word of song title",
       "audioUrl": "343448894",
