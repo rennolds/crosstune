@@ -380,6 +380,113 @@
     }
   ]
 },
+  "2025-09-29": {
+  "title": "\"There's Love in the...Title?\" (by bingobonga)",
+  "version": "1.0.0",
+  "size": {
+    "width": 12,
+    "height": 10
+  },
+  "theme": "black",
+  "words": [
+    {
+      "word": "WHITNEY",
+      "startX": 2,
+      "startY": 2,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "First Name of Artist",
+      "audioUrl": "197803577",
+      "startAt": "1:37",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/marwanllam/whitney-houston-i-will"
+    },
+    {
+      "word": "STORY",
+      "startX": 0,
+      "startY": 4,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Second Word in Title",
+      "audioUrl": "983989414",
+      "startAt": "0:00",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/love-story-taylors-version"
+    },
+    {
+      "word": "KEYSHIA",
+      "startX": 0,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "First Name of Artist",
+      "audioUrl": "2099120265",
+      "startAt": "0:58",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/user109864308085/keyshia-cole-love"
+    },
+    {
+      "word": "ELLIE",
+      "startX": 6,
+      "startY": 9,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "First Name of Artist",
+      "audioUrl": "217488631",
+      "startAt": "0:17",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/ingofisco101/love-me-like-you-do"
+    },
+    {
+      "word": "HARRIS",
+      "startX": 3,
+      "startY": 2,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Last Name of Featured Artist",
+      "audioUrl": "23907786",
+      "startAt": "0:10",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/rihanna/we-found-love"
+    },
+    {
+      "word": "DRAKE",
+      "startX": 6,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "First Name of Artist",
+      "audioUrl": "2033730744",
+      "startAt": "1:14",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/partyomo/somebody-loves-me"
+    },
+    {
+      "word": "BEYONCE",
+      "startX": 8,
+      "startY": 0,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "First Name of Artist",
+      "audioUrl": "256526897",
+      "startAt": "0:00",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/beyonce/crazy-in-love-1"
+    },
+    {
+      "word": "WHEREISTHE",
+      "startX": 10,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Full Name of Song without Love",
+      "audioUrl": "253578518",
+      "startAt": "0:11",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/where-is-the-love-album"
+    }
+  ]
+},
   "2025-09-17": {
   "title": "",
   "version": "1.0.0",
