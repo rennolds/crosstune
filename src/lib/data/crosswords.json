@@ -15988,5 +15988,112 @@
         "soundcloudUrl": "https://soundcloud.com/brunomars/the-lazy-song"
       }
     ]
+  },
+  "2025-10-02": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "DIAMOND",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The gemstone in this song",
+        "audioUrl": "61225832",
+        "startAt": "0:11",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/diamonds"
+      },
+      {
+        "word": "TORN",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "256614041",
+        "startAt": "0:12",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/natalie-imbruglia/torn"
+      },
+      {
+        "word": "HOZIER",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "145926573",
+        "startAt": "0:46",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/jenn-n/hozier-work-song"
+      },
+      {
+        "word": "SEXY",
+        "startX": 7,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "This artist is bringing \"what\" back?",
+        "audioUrl": "256093147",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/justintimberlake/sexyback-2"
+      },
+      {
+        "word": "ZARA",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "312964112",
+        "startAt": "0:11",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/zaralarssonofficial/never-forget-you-3"
+      },
+      {
+        "word": "CHASING",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "The verb in this song title",
+        "audioUrl": "256206578",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/snowpatrol/chasing-cars-album-version"
+      },
+      {
+        "word": "POKERFACE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "255905673",
+        "startAt": "0:15",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/poker-face"
+      },
+      {
+        "word": "POMPEII",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "125057414",
+        "startAt": "0:50",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/arittra-barua/bastile-pompeii"
+      }
+    ]
   }
 }
