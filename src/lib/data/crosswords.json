@@ -114,7 +114,7 @@
       "audioUrl": "1297701826",
       "startAt": "0:38",
       "audioDuration": 10,
-      "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/tis-the-damn-season"
+      "soundcloudUrl": ""
     }
   ]
 },
@@ -133,7 +133,7 @@
       "startY": 1,
       "direction": "across",
       "color": "#FE9C9C",
-      "textClue": "First Two Words In Title",
+      "textClue": "Song title",
       "audioUrl": "883389634",
       "startAt": "0:10",
       "audioDuration": 17,
@@ -145,7 +145,7 @@
       "startY": 4,
       "direction": "across",
       "color": "#28D66A",
-      "textClue": "Artist Name, Mind the Spelling",
+      "textClue": "Artist Name (Mind the Spelling)",
       "audioUrl": "486671055",
       "startAt": "1:45",
       "audioDuration": 15,
@@ -177,7 +177,7 @@
     },
     {
       "word": "SWEET",
-      "startX": 2,
+      "startX": 1,
       "startY": 8,
       "direction": "across",
       "color": "#568EFF",
@@ -210,18 +210,6 @@
       "startAt": "0:00",
       "audioDuration": 1,
       "soundcloudUrl": "https://soundcloud.com/iamkelis/milkshake-3"
-    },
-    {
-      "word": "CT",
-      "startX": 6,
-      "startY": 7,
-      "direction": "down",
-      "color": "#FE9C9C",
-      "textClue": "First Letter Of Second Word In Title, Abbreviation for confectionary",
-      "audioUrl": "867020239",
-      "startAt": "0:00",
-      "audioDuration": 30,
-      "soundcloudUrl": "https://soundcloud.com/user-821004829/babymetal-gimme-chocolate-mp3"
     },
     {
       "word": "CAKE",
