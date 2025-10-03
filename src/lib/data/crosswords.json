@@ -820,6 +820,137 @@
     }
   ]
 },
+  "2025-09-26": {
+  "title": "",
+  "version": "1.0.0",
+  "size": {
+    "width": 12,
+    "height": 10
+  },
+  "theme": "black",
+  "words": [
+    {
+      "word": "LORDHURON",
+      "startX": 1,
+      "startY": 5,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Artist name",
+      "audioUrl": "273669198",
+      "startAt": "1:27",
+      "audioDuration": 7,
+      "soundcloudUrl": "https://soundcloud.com/lord-huron/the-night-we-met-1"
+    },
+    {
+      "word": "LOGIC",
+      "startX": 1,
+      "startY": 5,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Artist name",
+      "audioUrl": "257852347",
+      "startAt": "0:43",
+      "audioDuration": 13,
+      "soundcloudUrl": "https://soundcloud.com/logic_official/under-pressure-2"
+    },
+    {
+      "word": "HERO",
+      "startX": 2,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Song title",
+      "audioUrl": "255882260",
+      "startAt": "0:11",
+      "audioDuration": 12,
+      "soundcloudUrl": "https://soundcloud.com/enriqueiglesias/hero-album-version"
+    },
+    {
+      "word": "ROSES",
+      "startX": 3,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": "258097961",
+      "startAt": "0:45",
+      "audioDuration": 9,
+      "soundcloudUrl": "https://soundcloud.com/thechainsmokers/roses-1"
+    },
+    {
+      "word": "DAVID",
+      "startX": 4,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Artist first name",
+      "audioUrl": "46361966",
+      "startAt": "2:14",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/davidbowieofficial/04-starman-3"
+    },
+    {
+      "word": "HAIM",
+      "startX": 5,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Trio of sisters who share their band name with their last name",
+      "audioUrl": "103092486",
+      "startAt": "0:18",
+      "audioDuration": 8,
+      "soundcloudUrl": "https://soundcloud.com/haimtime/haimthewire"
+    },
+    {
+      "word": "TUTU",
+      "startX": 6,
+      "startY": 2,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Song title",
+      "audioUrl": "663110522",
+      "startAt": "0:29",
+      "audioDuration": 8,
+      "soundcloudUrl": "https://soundcloud.com/camiloofficial/tutu"
+    },
+    {
+      "word": "RIOT",
+      "startX": 7,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Album title",
+      "audioUrl": "256142117",
+      "startAt": "1:43",
+      "audioDuration": 8,
+      "soundcloudUrl": "https://soundcloud.com/paramore/misery-business-1"
+    },
+    {
+      "word": "COOLIO",
+      "startX": 8,
+      "startY": 0,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Artist name (who knows their 90's hip-hop?)",
+      "audioUrl": "118714349",
+      "startAt": "0:10",
+      "audioDuration": 14,
+      "soundcloudUrl": "https://soundcloud.com/coolio/gangstas-paradise"
+    },
+    {
+      "word": "NENA",
+      "startX": 9,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Artist name (Musikerin)",
+      "audioUrl": "317705238",
+      "startAt": "1:01",
+      "audioDuration": 11,
+      "soundcloudUrl": "https://soundcloud.com/cafedelantaarn/nena-99-luftballons-lyrics"
+    }
+  ]
+},
   "2025-09-17": {
   "title": "",
   "version": "1.0.0",
