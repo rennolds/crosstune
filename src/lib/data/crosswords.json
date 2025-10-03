@@ -713,6 +713,113 @@
     }
   ]
 },
+  "2025-09-27": {
+  "title": "\"Why does every song have a NaNaNa?\"",
+  "version": "1.0.0",
+  "size": {
+    "width": 12,
+    "height": 10
+  },
+  "theme": "black",
+  "words": [
+    {
+      "word": "BEATLES",
+      "startX": 4,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Artist name",
+      "audioUrl": "1459951630",
+      "startAt": "3:22",
+      "audioDuration": 8,
+      "soundcloudUrl": "https://soundcloud.com/ben-elgut/the-beatles-hey-jude"
+    },
+    {
+      "word": "WMYB",
+      "startX": 2,
+      "startY": 2,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Acronym of this song's title",
+      "audioUrl": "63137191",
+      "startAt": "2:08",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/user198664920/what-makes-you-beautiful-2"
+    },
+    {
+      "word": "RICHGIRL",
+      "startX": 4,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "If I was a ____",
+      "audioUrl": "251379012",
+      "startAt": "0:21.5",
+      "audioDuration": 5,
+      "soundcloudUrl": "https://soundcloud.com/gwen-stefani/rich-girl-album-version"
+    },
+    {
+      "word": "PYT",
+      "startX": 0,
+      "startY": 5,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": "132016546",
+      "startAt": "4:10",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/lewislastella/michael-jackson-p-y-t-lewis-lastella-extended-edit"
+    },
+    {
+      "word": "NANANA",
+      "startX": 4,
+      "startY": 7,
+      "direction": "across",
+      "color": "#568EFF",
+      "textClue": "Song title",
+      "audioUrl": "256032674",
+      "startAt": "0:11",
+      "audioDuration": 8,
+      "soundcloudUrl": "https://soundcloud.com/my-chemical-romance/na-na-na-na-na-na-na-na-na-2"
+    },
+    {
+      "word": "SOWHAT",
+      "startX": 2,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": "257052047",
+      "startAt": "0:02",
+      "audioDuration": 9,
+      "soundcloudUrl": "https://soundcloud.com/official-p-nk/so-what-1"
+    },
+    {
+      "word": "BOYFRIEND",
+      "startX": 4,
+      "startY": 0,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Song title",
+      "audioUrl": "431005941",
+      "startAt": "2:24",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/justin-bieber-sc/boyfriend"
+    },
+    {
+      "word": "SM",
+      "startX": 10,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Song title",
+      "audioUrl": "255769477",
+      "startAt": "0:00",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/rihanna/s-m-album-version"
+    }
+  ]
+},
   "2025-09-17": {
   "title": "",
   "version": "1.0.0",
