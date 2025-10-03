@@ -16095,5 +16095,124 @@
         "soundcloudUrl": "https://soundcloud.com/arittra-barua/bastile-pompeii"
       }
     ]
+  },
+  "2025-10-03": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "COLLINS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "259105098",
+        "startAt": "1:22",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/phil-collins-official/son-of-man"
+      },
+      {
+        "word": "AFFAIR",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Family ____",
+        "audioUrl": "255803826",
+        "startAt": "0:18",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/officialmaryjblige/family-affair-1"
+      },
+      {
+        "word": "FAMILYTIES",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1113703852",
+        "startAt": "0:33",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/hykeemcarter/family-ties"
+      },
+      {
+        "word": "CARRYON",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First two words of this song's title",
+        "audioUrl": "263256067",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/kansasband/carry-on-wayward-son"
+      },
+      {
+        "word": "MUMFORD",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of this band's name",
+        "audioUrl": "105110997",
+        "startAt": "0:28",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/user369496348/mumford-and-sons-little-lion"
+      },
+      {
+        "word": "PHIL",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "What is the name of the Uncle mentioned in this song?",
+        "audioUrl": "276855160",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/j-cole/no-role-modelz-1"
+      },
+      {
+        "word": "SON",
+        "startX": 5,
+        "startY": 7,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Second word of this song's title",
+        "audioUrl": "2160827448",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/nobodys-son"
+      },
+      {
+        "word": "STACYSMOM",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "313416343",
+        "startAt": "0:32",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/bowling-for-soup/stacys-mom"
+      },
+      {
+        "word": "KRACKER",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name (minus kinship)",
+        "audioUrl": "232329223",
+        "startAt": "0:29",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/unclekrackerofficial/uncle-kracker-follow-me"
+      }
+    ]
   }
 }
