@@ -17487,5 +17487,88 @@
         "soundcloudUrl": "https://soundcloud.com/justin_beiber_swag/wood"
       }
     ]
+  },
+  "2025-10-15": {
+    "title": "slowed + reverb II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "DANDELIONS",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1279730734",
+        "startAt": "0:55",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/softyxy/ruth-b-dandelions-slowed"
+      },
+      {
+        "word": "DRAKE",
+        "startX": 1,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "907532266",
+        "startAt": "1:25",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/reverbplanet/drake-passionfruit-slowed-and-reverb"
+      },
+      {
+        "word": "REDBONE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "296057577",
+        "startAt": "0:31",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/serenitychidori/redbone-slowed"
+      },
+      {
+        "word": "HAPPIER",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1303031488",
+        "startAt": "1:14",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/marshmellomusic/happier-slowed-reverb"
+      },
+      {
+        "word": "BIEBER",
+        "startX": 7,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": "1025479051",
+        "startAt": "0:20",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/user-924922916/peaches-justin-beiber-slowed-and-reverb"
+      },
+      {
+        "word": "5SOS",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Short form of this band's name",
+        "audioUrl": "691036816",
+        "startAt": "1:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/gothika-269514973/5sos-teeth-slowedreverb"
+      }
+    ]
   }
 }
