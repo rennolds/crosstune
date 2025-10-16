@@ -17582,5 +17582,112 @@
         "soundcloudUrl": "https://soundcloud.com/user-808890672/505-arctic-monkeys-s-l-o-w-e-d"
       }
     ]
+  },
+  "2025-10-16": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "DOLLARSIGNS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What does Rihanna see?",
+        "audioUrl": "271226201",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/pour-it-up-album-version"
+      },
+      {
+        "word": "NORTHERN",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word in this Noah Kahan song title",
+        "audioUrl": "1658900943",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/noahkahan/noah-kahan-hozier-northern"
+      },
+      {
+        "word": "FAMEISAGUN",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "2103401196",
+        "startAt": "0:07",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/addisonraemusic/fame-is-a-gun"
+      },
+      {
+        "word": "TAYLOR",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Last word in song title (also artist first name)",
+        "audioUrl": "2181405771",
+        "startAt": "0:36",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/elizabeth-taylor"
+      },
+      {
+        "word": "READY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "First word in title",
+        "audioUrl": "252893717",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/bridgitmendler/ready-or-not"
+      },
+      {
+        "word": "DANCEFLOOR",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last word in title",
+        "audioUrl": "256096617",
+        "startAt": "0:08",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/cascada/evacuate-the-dancefloor-1"
+      },
+      {
+        "word": "THREE",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Number in this duo's name",
+        "audioUrl": "254429735",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/3oh3-official/my-first-kiss-feat-ke-ha-1"
+      },
+      {
+        "word": "CLUMSY",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title (opposite of graceful)",
+        "audioUrl": "253183050",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/fergie-music/clumsy-album-version"
+      }
+    ]
   }
 }
