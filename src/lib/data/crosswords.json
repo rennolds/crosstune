@@ -17820,5 +17820,112 @@
         "soundcloudUrl": "https://soundcloud.com/dollyparton/9-to-5-11"
       }
     ]
+  },
+  "2025-10-18": {
+    "title": "Diss Tracks & Feuds (By DrLeon)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "NOTLIKEUS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "1814709189",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/not-like-us?in=ee-laz%2Fsets%2Fay"
+      },
+      {
+        "word": "FLOWERS",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song Title",
+        "audioUrl": "1586698367",
+        "startAt": "3:45",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/piklu-999589542/miley-cyrus-flowers-official"
+      },
+      {
+        "word": "SKIN",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "970423114",
+        "startAt": "0:25",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/skin"
+      },
+      {
+        "word": "ETHER",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song Title",
+        "audioUrl": "290148560",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/nasirjones/ether-1"
+      },
+      {
+        "word": "NOVASELINE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song Title",
+        "audioUrl": "253187248",
+        "startAt": "1:44",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/ice-cube/no-vaseline-1"
+      },
+      {
+        "word": "MINAJ",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last Name of Artist",
+        "audioUrl": "255821291",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/romans-revenge"
+      },
+      {
+        "word": "KILLSHOT",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "501481371",
+        "startAt": "0:05",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/killshot"
+      },
+      {
+        "word": "RAPDEVIL",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "500072673",
+        "startAt": "0:10",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/mgk/rap-devil"
+      }
+    ]
   }
 }
