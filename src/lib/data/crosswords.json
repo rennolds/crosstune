@@ -17955,7 +17955,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Song Name",
+        "textClue": "Artist Name",
         "audioUrl": "255893901",
         "startAt": "0:00",
         "audioDuration": 6,
