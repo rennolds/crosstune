@@ -18034,5 +18034,112 @@
         "soundcloudUrl": "https://soundcloud.com/tommytutoneofficial/867-5309-jenny-rerecorded"
       }
     ]
+  },
+  "2025-10-20": {
+  "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "KESHA",
+        "startX": 7,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "331357290",
+        "startAt": "0:14",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/kesha/praying"
+      },
+      {
+        "word": "BLACKBEAR",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name (as opposed to a grizzly)",
+        "audioUrl": "212447007",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/tarroofficial/blackbear-idfc-tarro-remixx"
+      },
+      {
+        "word": "COMPLIMENTS",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"I might be too strung out on ____\"",
+        "audioUrl": "257461521",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-headlines"
+      },
+      {
+        "word": "SCAR",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "\"the sunglasses are asking 'bout her ____\"",
+        "audioUrl": "231862397",
+        "startAt": "0:06",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/funofficial/fun-we-are-young-feat-janelle"
+      },
+      {
+        "word": "RADIOHEAD",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "265069091",
+        "startAt": "0:06",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/radiohead/no-surprises"
+      },
+      {
+        "word": "UMBRELLA",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "255769529",
+        "startAt": "0:30",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/umbrella"
+      },
+      {
+        "word": "ABRAMS",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name (shares name with Hollywood director)",
+        "audioUrl": "1936800857",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/gracie-abrams/thats-so-true"
+      },
+      {
+        "word": "ROSE",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "1005298411",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "soundcloudUrl": ""
+      }
+    ]
   }
 }
