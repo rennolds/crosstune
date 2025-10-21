@@ -18141,5 +18141,112 @@
         "soundcloudUrl": ""
       }
     ]
+  },
+  "2025-10-21": {
+    "title": "Surfing the radio in 1999",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SMOOTH",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "254171313",
+        "startAt": "0:00",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/santana-official/smooth"
+      },
+      {
+        "word": "CHANGE",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Something we could \"all use a little\" of",
+        "audioUrl": "253185930",
+        "startAt": "0:18",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/smash-mouth-official/all-star-album-version"
+      },
+      {
+        "word": "RICKYMARTIN",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "253508172",
+        "startAt": "0:08",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/ricky-martin-official/livin-la-vida-loca"
+      },
+      {
+        "word": "BELIEVE",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1636601835",
+        "startAt": "0:54",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/cher-scmusic/believe"
+      },
+      {
+        "word": "JUMPER",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "205004785",
+        "startAt": "0:00",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/thirdeyeblind/jumper"
+      },
+      {
+        "word": "NOSCRUBS",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "254119635",
+        "startAt": "0:15",
+        "audioDuration": 11.5,
+        "soundcloudUrl": "https://soundcloud.com/tlcofficial/no-scrubs-1"
+      },
+      {
+        "word": "THATWAY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "256038285",
+        "startAt": "0:00",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/thebackstreetboys/i-want-it-that-way"
+      },
+      {
+        "word": "GENIE",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of this song title",
+        "audioUrl": "257475638",
+        "startAt": "0:14",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/christinaaguilera/genie-in-a-bottle"
+      }
+    ]
   }
 }
