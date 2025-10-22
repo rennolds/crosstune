@@ -18475,6 +18475,425 @@
       }
     ]
   },
+  "2025-10-24": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "RICHKIDS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Super ____",
+        "audioUrl": "81073238",
+        "startAt": "0:19",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/defjam/frank-ocean-super-rich-kids"
+      },
+      {
+        "word": "JAROF",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "____ Hearts",
+        "audioUrl": "11824727",
+        "startAt": "0:39",
+        "audioDuration": 7.5,
+        "soundcloudUrl": "https://soundcloud.com/atlanticrecords/christina-perri-jar-of-hearts"
+      },
+      {
+        "word": "FAKEPLASTIC",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "____ Trees",
+        "audioUrl": "1670037423",
+        "startAt": "1:29",
+        "audioDuration": 22,
+        "soundcloudUrl": "https://soundcloud.com/okaythenncr/fake-plastic-trees-radiohead-original"
+      },
+      {
+        "word": "MONEY",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "____ Trees",
+        "audioUrl": "64065410",
+        "startAt": "0:26",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/interscope/kendrick-lamar-money-trees-ft"
+      },
+      {
+        "word": "STEREO",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "____ Hearts",
+        "audioUrl": "17086720",
+        "startAt": "0:23.15",
+        "audioDuration": 21.5,
+        "soundcloudUrl": "https://soundcloud.com/decaydancerecords/gym-class-heroes-stereo-hearts"
+      },
+      {
+        "word": "CHAMPAGNE",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "____ Supernova",
+        "audioUrl": "291233511",
+        "startAt": "1:54",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/oasisofficial/champagne-supernova-2"
+      },
+      {
+        "word": "BASS",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Super ____",
+        "audioUrl": "255821207",
+        "startAt": "0:06",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/super-bass-1"
+      },
+      {
+        "word": "REDWINE",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "____ Supernova",
+        "audioUrl": "1511247796",
+        "startAt": "0:15.2",
+        "audioDuration": 9.3,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/red-wine-supernova"
+      }
+    ]
+  },
+  "2025-10-26": {
+    "title": "",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BABY",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title without the city",
+        "audioUrl": "155176234",
+        "startAt": "1:10",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/interscope/lana-del-rey-brooklyn-baby"
+      },
+      {
+        "word": "KINGSOFLEON",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band name",
+        "audioUrl": "257057105",
+        "startAt": "0:02",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/kingsofleon/use-somebody"
+      },
+      {
+        "word": "COMPLICATED",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "256272271",
+        "startAt": "0:14",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/avrillavigne/complicated"
+      },
+      {
+        "word": "SURVIVE",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Finish the lyric: Without you it's hard to ___",
+        "audioUrl": "919269181",
+        "startAt": "0:15",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/cascada/everytime-we-touch"
+      },
+      {
+        "word": "INANGER",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Don't look back ____",
+        "audioUrl": "283975503",
+        "startAt": "1:07",
+        "audioDuration": 15.2,
+        "soundcloudUrl": "https://soundcloud.com/oasisofficial/dont-look-back-in-anger-1"
+      },
+      {
+        "word": "MASKOFF",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "307949010",
+        "startAt": "0:07",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/futureisnow/mask-off"
+      },
+      {
+        "word": "WELL",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Second word of this song title",
+        "audioUrl": "855251083",
+        "startAt": "1:23",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/wishing-well"
+      },
+      {
+        "word": "GIRLONFIRE",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "256056338",
+        "startAt": "0:15",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/aliciakeys/girl-on-fire"
+      }
+    ]
+  },
+  "2025-10-28": {
+    "title": "Mr. Who?",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "OFFICER",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Surname in this song title",
+        "audioUrl": "252945002",
+        "startAt": "0:08",
+        "audioDuration": 11.5,
+        "soundcloudUrl": "https://soundcloud.com/lilwayne/mrs-officer-album-version-1"
+      },
+      {
+        "word": "RAGER",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Surname in this song title",
+        "audioUrl": "256158716",
+        "startAt": "0:22",
+        "audioDuration": 14.5,
+        "soundcloudUrl": "https://soundcloud.com/cudderland/mr-rager-album-version"
+      },
+      {
+        "word": "ROBINSON",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Surname in this song title",
+        "audioUrl": "252859304",
+        "startAt": "0:17",
+        "audioDuration": 13.5,
+        "soundcloudUrl": "https://soundcloud.com/simon-garfunkel-official/mrs-robinson-2"
+      },
+      {
+        "word": "BLUESKY",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Surname in this song title",
+        "audioUrl": "253507627",
+        "startAt": "0:09",
+        "audioDuration": 19.5,
+        "soundcloudUrl": "https://soundcloud.com/electric-light-orchestra/mr-blue-sky-2"
+      },
+      {
+        "word": "JACKSON",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Surname in this song title",
+        "audioUrl": "253850862",
+        "startAt": "0:01",
+        "audioDuration": 13.5,
+        "soundcloudUrl": "https://soundcloud.com/outkast-music/ms-jackson-1"
+      },
+      {
+        "word": "JONES",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Surname in this song title",
+        "audioUrl": "257078222",
+        "startAt": "0:00",
+        "audioDuration": 9.5,
+        "soundcloudUrl": "https://soundcloud.com/countingcrows/mr-jones-album-version"
+      },
+      {
+        "word": "BRIGHTSIDE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Surname in this song title",
+        "audioUrl": "273792918",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/thekillers/mr-brightside-2"
+      },
+      {
+        "word": "CLEAN",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Surname in this song title",
+        "audioUrl": "282032290",
+        "startAt": "0:22.5",
+        "audioDuration": 9.6,
+        "soundcloudUrl": "https://soundcloud.com/ygravy/mr-clean-prod-white-shinobi"
+      }
+    ]
+  },
+  "2025-10-29": {
+    "title": "",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "STARSHIPS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "285001139",
+        "startAt": "0:05",
+        "audioDuration": 10.25,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1"
+      },
+      {
+        "word": "NAMEIS",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Hi, my ____",
+        "audioUrl": "256256880",
+        "startAt": "0:13",
+        "audioDuration": 12.9,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/my-name-is-1"
+      },
+      {
+        "word": "LOSECONTROL",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1529368726",
+        "startAt": "0:41",
+        "audioDuration": 12.5,
+        "soundcloudUrl": "https://soundcloud.com/teddyswims/lose-control"
+      },
+      {
+        "word": "SHAKEIT",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "253511122",
+        "startAt": "0:13",
+        "audioDuration": 12.5,
+        "soundcloudUrl": "https://soundcloud.com/metro-station/shake-it"
+      },
+      {
+        "word": "PHIL",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "421374102",
+        "startAt": "1:32",
+        "audioDuration": 14.5,
+        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/phil-collins-easy-lover-1984"
+      },
+      {
+        "word": "TENNESSEE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Chappell Roan is leaving ____",
+        "audioUrl": "790026607",
+        "startAt": "0:09",
+        "audioDuration": 18.5,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/pink-pony-club"
+      },
+      {
+        "word": "TAME",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First part of this artist name",
+        "audioUrl": "759895474",
+        "startAt": "0:54",
+        "audioDuration": 20.5,
+        "soundcloudUrl": "https://soundcloud.com/tame-impala/borderline-1"
+      },
+      {
+        "word": "HOOK",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title, or another word for chorus",
+        "audioUrl": "253597812",
+        "startAt": "0:09",
+        "audioDuration": 15.5,
+        "soundcloudUrl": "https://soundcloud.com/blues-traveler/hook-2"
+      }
+    ]
+  },
   "2025-10-31": {
     "title": "Happy Halloween",
     "version": "1.0.0",
