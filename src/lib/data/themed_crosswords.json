@@ -1676,5 +1676,127 @@
         "soundcloudUrl": "https://soundcloud.com/thestrokes/last-nite-rough-trade-version"
       }
     ]
+  },
+    "15": {
+    "title": "Doja",
+    "date_available": "2025-10-26",
+    "author": "Paul Pursifull",
+    "version": "1.0.0",
+    "thumbnail": "themed/doja",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "BACK",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"see it from the ____\"",
+        "audioUrl": "665718947",
+        "startAt": "0:10",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/juicy-1"
+      },
+      {
+        "word": "CANDY",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"She's just like ____\"",
+        "audioUrl": "414863073",
+        "startAt": "1:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/candy"
+      },
+      {
+        "word": "SAYSO",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "708018586",
+        "startAt": "0:18",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/say-so"
+      },
+      {
+        "word": "WOMAN",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1073025025",
+        "startAt": "0:19",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/woman"
+      },
+      {
+        "word": "PARACHUTE",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "What is Doja hanging from on the cover of 6th studio album?",
+        "audioUrl": "2149809222",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/jealous-type"
+      },
+      {
+        "word": "AMALA",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First album (also her first name)",
+        "audioUrl": "407291313",
+        "startAt": "0:22",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/go-to-town"
+      },
+      {
+        "word": "KISSMEMORE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "1023919816",
+        "startAt": "0:06",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/kiss-me-more-feat-sza"
+      },
+      {
+        "word": "COW",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "What animal does Doja claim to be on this track?",
+        "audioUrl": "502316700",
+        "startAt": "1:59",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/userunkown00/doja-cat-moo-bitch-im-a-cow"
+      },
+      {
+        "word": "PTTR",
+        "startX": 8,
+        "startY": 6,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Acronym of this song's title",
+        "audioUrl": "1576853254",
+        "startAt": "0:13",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/paint-the-town-red"
+      }
+    ]
   }
 } 
