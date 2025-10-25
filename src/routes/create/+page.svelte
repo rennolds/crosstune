@@ -20,6 +20,9 @@
   let detectedWords = $state([]);
   let soundcloudValidation = $state({}); // Track validation status for each word
   let widgetTiming = $state({}); // Track start/end times for each word
+  let isAdminMode = $state(false);
+  let jsonInput = $state("");
+  let jsonError = $state("");
   import { validateClue, containsProfanity } from "$lib/utils/filters.js";
 
   // Game colors from crosswords.json
@@ -66,6 +69,10 @@
 
       // Detect mobile for share behavior
       isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      // Check for admin mode via URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      isAdminMode = urlParams.get("admin") === "true";
     }
   });
 
@@ -536,6 +543,98 @@
     }
   }
 
+  function parseJsonAndPopulate(jsonText) {
+    try {
+      jsonError = "";
+      const parsed = JSON.parse(jsonText);
+
+      // Reset the grid
+      gridData = Array(10)
+        .fill()
+        .map(() => Array(12).fill(""));
+
+      // Populate grid from words
+      if (!parsed.words || !Array.isArray(parsed.words)) {
+        throw new Error("Invalid JSON structure: 'words' array is required");
+      }
+
+      const words = [];
+      const validation = {};
+      const timing = {};
+
+      parsed.words.forEach((word, idx) => {
+        const {
+          word: wordText,
+          startX,
+          startY,
+          direction,
+          textClue,
+          audioUrl,
+          startAt,
+          audioDuration,
+        } = word;
+
+        // Populate the grid
+        const isAcross = direction.toLowerCase() === "across";
+        for (let i = 0; i < wordText.length; i++) {
+          const row = isAcross ? startY : startY + i;
+          const col = isAcross ? startX + i : startX;
+          if (row >= 0 && row < 10 && col >= 0 && col < 12) {
+            gridData[row][col] = wordText[i];
+          }
+        }
+
+        // Build the soundcloud URL from trackId
+        const soundcloudUrl = audioUrl.startsWith("http")
+          ? audioUrl
+          : `https://soundcloud.com/placeholder/${audioUrl}`;
+
+        // Prepare word for detectedWords
+        words.push({
+          word: wordText,
+          direction: direction.toUpperCase(),
+          row: startY,
+          col: startX,
+          clue: textClue || "",
+          soundcloudUrl: soundcloudUrl,
+        });
+
+        // Set validation status (assume valid with trackId)
+        validation[`word-${idx}`] = {
+          status: "valid",
+          message: "✓ Track loaded from JSON",
+          trackId: audioUrl.replace(/[^0-9]/g, ""), // Extract numeric trackId
+        };
+
+        // Set timing data
+        timing[`word-${idx}`] = {
+          startAt: startAt || "0:00",
+          endAt: formatTime(
+            parseTime(startAt || "0:00") + (audioDuration || 6)
+          ),
+          audioDuration: audioDuration || 6,
+        };
+      });
+
+      detectedWords = words;
+      soundcloudValidation = validation;
+      widgetTiming = timing;
+
+      // Populate board title if present
+      if (parsed.title) {
+        finalDetails.boardTitle = parsed.title;
+      }
+
+      // Close splash and go to word forms
+      showSplash = false;
+      showWordForms = true;
+      scrollToTop();
+    } catch (error) {
+      console.error("JSON parse error:", error);
+      jsonError = error.message || "Invalid JSON format";
+    }
+  }
+
   function handleStartCreating() {
     showSplash = false;
     scrollToTop();
@@ -557,6 +656,8 @@
     detectedWords = [];
     soundcloudValidation = {}; // Clear validation state
     widgetTiming = {}; // Clear timing data
+    jsonInput = ""; // Clear admin JSON input
+    jsonError = ""; // Clear admin JSON error
     finalDetails = {
       creditName: "",
       boardTitle: "",
@@ -770,6 +871,63 @@
           </div>
         </div>
 
+        <!-- Admin-only JSON input section -->
+        {#if isAdminMode}
+          <div
+            class="p-6 mb-6 border-2 border-orange-500 rounded-lg bg-orange-50 dark:bg-orange-900/20"
+          >
+            <h3
+              class="text-lg font-bold mb-4 text-orange-700 dark:text-orange-300"
+            >
+              🔧 Admin Mode: Load from JSON
+            </h3>
+            <p class="text-sm mb-4 text-gray-700 dark:text-gray-300">
+              Paste a puzzle JSON definition to pre-populate the grid and clues:
+            </p>
+            <textarea
+              class="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white font-mono text-sm h-64 resize-vertical"
+              placeholder="Paste puzzle JSON here..."
+              bind:value={jsonInput}
+            ></textarea>
+
+            {#if jsonError}
+              <div
+                class="mt-3 p-3 bg-red-100 dark:bg-red-900/20 border border-red-400 rounded text-red-700 dark:text-red-300 text-sm"
+              >
+                <strong>Error:</strong>
+                {jsonError}
+              </div>
+            {/if}
+
+            <div class="mt-4 flex gap-3">
+              <button
+                class="rounded-xs px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors"
+                onclick={() => parseJsonAndPopulate(jsonInput)}
+                disabled={!jsonInput.trim()}
+              >
+                Load from JSON
+              </button>
+              <button
+                class="rounded-xs px-6 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-semibold transition-colors"
+                onclick={() => {
+                  jsonInput = "";
+                  jsonError = "";
+                }}
+              >
+                Clear
+              </button>
+            </div>
+
+            <div
+              class="mt-4 pt-4 border-t border-orange-300 dark:border-orange-700"
+            >
+              <p class="text-xs text-gray-600 dark:text-gray-400 italic">
+                Or start from scratch below ↓
+              </p>
+            </div>
+          </div>
+        {/if}
+
         <!-- Desktop button - shown at bottom -->
         <div class="text-center mt-6 hidden md:block pb-24">
           <button
@@ -858,6 +1016,8 @@
               showSplash = true;
               showWordForms = false;
               detectedWords = [];
+              jsonInput = ""; // Clear admin JSON input
+              jsonError = ""; // Clear admin JSON error
               finalDetails = {
                 creditName: "",
                 boardTitle: "",
