@@ -18581,7 +18581,7 @@
         "soundcloudUrl": "https://soundcloud.com/chappellroan/red-wine-supernova"
       }
     ]
-  },
+  }, 
   "2025-10-25": {
     "title": "(by Milo)",
     "version": "1.0.0",
@@ -18781,6 +18781,113 @@
       }
     ]
   },
+  "2025-10-28": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "AEROSMITH",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "audioUrl": "530870055",
+        "startAt": "0:08",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/aerosmith/walk-this-way-3"
+      },
+      {
+        "word": "WORRYCHILD",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Don't You ____",
+        "audioUrl": "418684980",
+        "startAt": "0:12",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/officialswedishhousemafia/dont-you-worry-child-radio"
+      },
+      {
+        "word": "LUPE",
+        "startX": 7,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "audioUrl": "1203456874",
+        "startAt": "0:14",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/lupefiasco/the-show-goes-on-2"
+      },
+      {
+        "word": "APOLOGIZE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "636890",
+        "startAt": "0:57",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/shalea/one-republic-apologize"
+      },
+      {
+        "word": "CRUSH",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This song title 3x (also a word for \"smitten\")",
+        "audioUrl": "214807501",
+        "startAt": "0:21",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/paramore/crushcrushcrush"
+      },
+      {
+        "word": "SCARY",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "What kind of monsters?",
+        "audioUrl": "21792166",
+        "startAt": "0:27",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/skrillex/scary-monsters-and-nice"
+      },
+      {
+        "word": "MORETIME",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title minus the first word",
+        "audioUrl": "254112129",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/daftpunkofficialmusic/one-more-time"
+      },
+      {
+        "word": "GOODTIME",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "280484320",
+        "startAt": "0:15",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/owlcityofficial/good-time-2"
+      }
+    ]
+  },  
   "2025-10-29": {
     "title": "Mr. Who?",
     "version": "1.0.0",
@@ -18885,107 +18992,110 @@
       }
     ]
   },
-  "2025-11-03": {
+  "2025-10-30": {
     "title": "",
     "version": "1.0.0",
-    "size": { "width": 12, "height": 10 },
+    "size": {
+      "width": 12,
+      "height": 10
+    },
     "theme": "black",
     "words": [
       {
-        "word": "STARSHIPS",
+        "word": "WORK",
         "startX": 3,
-        "startY": 0,
+        "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Song title",
-        "audioUrl": "285001139",
-        "startAt": "0:05",
-        "audioDuration": 10.25,
-        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1"
+        "textClue": "What you do during (song title)",
+        "audioUrl": "499321992",
+        "startAt": "0:18",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/dollyparton/9-to-5-11"
       },
       {
-        "word": "NAMEIS",
-        "startX": 4,
-        "startY": 2,
+        "word": "IKNOW",
+        "startX": 1,
+        "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Hi, my ____",
-        "audioUrl": "256256880",
-        "startAt": "0:13",
-        "audioDuration": 12.9,
-        "soundcloudUrl": "https://soundcloud.com/eminemofficial/my-name-is-1"
+        "textClue": "Last two words of this song title",
+        "audioUrl": "1130648506",
+        "startAt": "0:56",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/whitneyhouston/how-will-i-know-3"
       },
       {
-        "word": "LOSECONTROL",
+        "word": "STAYINALIVE",
         "startX": 1,
-        "startY": 4,
+        "startY": 5,
         "direction": "across",
         "color": "#FFCEFD",
         "textClue": "Song title",
-        "audioUrl": "1529368726",
-        "startAt": "0:41",
-        "audioDuration": 12.5,
-        "soundcloudUrl": "https://soundcloud.com/teddyswims/lose-control"
+        "audioUrl": "255993724",
+        "startAt": "0:12",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/beegees/stayin-alive-2007-remastered"
       },
       {
-        "word": "SHAKEIT",
+        "word": "JUDAS",
         "startX": 0,
-        "startY": 8,
+        "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
         "textClue": "Song title",
-        "audioUrl": "253511122",
-        "startAt": "0:13",
-        "audioDuration": 12.5,
-        "soundcloudUrl": "https://soundcloud.com/metro-station/shake-it"
+        "audioUrl": "255918513",
+        "startAt": "0:00",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/judas"
       },
       {
-        "word": "PHIL",
-        "startX": 1,
-        "startY": 1,
-        "direction": "down",
-        "color": "#568EFF",
-        "textClue": "Artist first name",
-        "audioUrl": "421374102",
-        "startAt": "1:32",
-        "audioDuration": 14.5,
-        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/phil-collins-easy-lover-1984"
-      },
-      {
-        "word": "TENNESSEE",
+        "word": "NOBODYSSON",
         "startX": 4,
         "startY": 0,
         "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Chappell Roan is leaving ____",
-        "audioUrl": "790026607",
-        "startAt": "0:09",
-        "audioDuration": 18.5,
-        "soundcloudUrl": "https://soundcloud.com/chappellroan/pink-pony-club"
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "2160827448",
+        "startAt": "0:10",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/nobodys-son"
       },
       {
-        "word": "TAME",
-        "startX": 8,
+        "word": "CHARLI",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": "819571501",
+        "startAt": "0:24",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/charlixcx/party-4-u"
+      },
+      {
+        "word": "VIRGIN",
+        "startX": 9,
         "startY": 4,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "First part of this artist name",
-        "audioUrl": "759895474",
-        "startAt": "0:54",
-        "audioDuration": 20.5,
-        "soundcloudUrl": "https://soundcloud.com/tame-impala/borderline-1"
+        "textClue": "Noun in this song title",
+        "audioUrl": "10594383",
+        "startAt": "0:34",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/madonna/like-a-virgin-album-version"
       },
       {
-        "word": "HOOK",
-        "startX": 10,
-        "startY": 3,
+        "word": "GIMME",
+        "startX": 11,
+        "startY": 1,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Song title, or another word for chorus",
-        "audioUrl": "253597812",
-        "startAt": "0:09",
-        "audioDuration": 15.5,
-        "soundcloudUrl": "https://soundcloud.com/blues-traveler/hook-2"
+        "textClue": "This word is this song title x3",
+        "audioUrl": "253122423",
+        "startAt": "0:16",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/abba-official/gimme-gimme-gimme-a-man-after"
       }
     ]
   },
@@ -19093,6 +19203,336 @@
         "startAt": "0:00",
         "audioDuration": 7,
         "soundcloudUrl": "https://soundcloud.com/moeman44/spooky-scary-skeletons"
+      }
+    ]
+  },
+  "2025-11-03": {
+    "title": "",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "STARSHIPS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "285001139",
+        "startAt": "0:05",
+        "audioDuration": 10.25,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1"
+      },
+      {
+        "word": "NAMEIS",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Hi, my ____",
+        "audioUrl": "256256880",
+        "startAt": "0:13",
+        "audioDuration": 12.9,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/my-name-is-1"
+      },
+      {
+        "word": "LOSECONTROL",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1529368726",
+        "startAt": "0:41",
+        "audioDuration": 12.5,
+        "soundcloudUrl": "https://soundcloud.com/teddyswims/lose-control"
+      },
+      {
+        "word": "SHAKEIT",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "253511122",
+        "startAt": "0:13",
+        "audioDuration": 12.5,
+        "soundcloudUrl": "https://soundcloud.com/metro-station/shake-it"
+      },
+      {
+        "word": "PHIL",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "421374102",
+        "startAt": "1:32",
+        "audioDuration": 14.5,
+        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/phil-collins-easy-lover-1984"
+      },
+      {
+        "word": "TENNESSEE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Chappell Roan is leaving ____",
+        "audioUrl": "790026607",
+        "startAt": "0:09",
+        "audioDuration": 18.5,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/pink-pony-club"
+      },
+      {
+        "word": "TAME",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First part of this artist name",
+        "audioUrl": "759895474",
+        "startAt": "0:54",
+        "audioDuration": 20.5,
+        "soundcloudUrl": "https://soundcloud.com/tame-impala/borderline-1"
+      },
+      {
+        "word": "HOOK",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title, or another word for chorus",
+        "audioUrl": "253597812",
+        "startAt": "0:09",
+        "audioDuration": 15.5,
+        "soundcloudUrl": "https://soundcloud.com/blues-traveler/hook-2"
+      }
+    ]
+  },
+  "2025-11-05": {
+    "title": "Crying in the car at 2 A.M. II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JOJI",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "1272150436",
+        "startAt": "0:00",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://soundcloud.com/jojiofficial/joji-glimpse-of-us"
+      },
+      {
+        "word": "XXX",
+        "startX": 8,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Shorthand for this artist name",
+        "audioUrl": "340471175",
+        "startAt": "0:28",
+        "audioDuration": 23,
+        "soundcloudUrl": "https://soundcloud.com/jahseh-onfroy/xxxtentacion-jocelyn-flores"
+      },
+      {
+        "word": "LONESOME",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Are You ____",
+        "audioUrl": "1204076131",
+        "startAt": "1:05",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/elvissonymusic/are-you-lonesome-863142987"
+      },
+      {
+        "word": "CASH",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "269479423",
+        "startAt": "0:10",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/johnnycash/hurt-album-version"
+      },
+      {
+        "word": "PARTYSOVER",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "512080026",
+        "startAt": "0:42",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/billieeilish/when-the-partys-over"
+      },
+      {
+        "word": "PHOEBE",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": "793861693",
+        "startAt": "1:11",
+        "audioDuration": 22,
+        "soundcloudUrl": "https://soundcloud.com/phoebebridgers/scott-street"
+      },
+      {
+        "word": "IFALLAPART",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "294691551",
+        "startAt": "0:35",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/postmalone/i-fall-apart-1"
+      },
+      {
+        "word": "SKINNYLOVE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "284874584",
+        "startAt": "0:32",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/boniver/skinny-love-1"
+      },
+      {
+        "word": "FIXYOU",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "513077301",
+        "startAt": "0:00",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://soundcloud.com/user-956334953/coldplay-fix-you"
+      }
+    ]
+  },
+  "2025-11-07": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "USEYOU",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Some of them want to what?",
+        "audioUrl": "133959325",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/giorgiomoroder/eurythmics-sweet-dreams-remix"
+      },
+      {
+        "word": "HEARTLESS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255766429",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/heartless"
+      },
+      {
+        "word": "DAISIES",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "2128194861",
+        "startAt": "0:14",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/daisies"
+      },
+      {
+        "word": "NEEDY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title, also a synonym for \"clingy\"",
+        "audioUrl": "571670346",
+        "startAt": "0:07",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/needy"
+      },
+      {
+        "word": "THEREASON",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "116071996",
+        "startAt": "0:41",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/kevin-brian-2/the-reason-hoobastank"
+      },
+      {
+        "word": "RAPSTAR",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "1023058027",
+        "startAt": "0:49",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/polo-g/polo-g-rapstar"
+      },
+      {
+        "word": "SWEETCHILD",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First two words of this song title",
+        "audioUrl": "253592092",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/guns-n-roses-official/sweet-child-o-mine"
+      },
+      {
+        "word": "JUICE",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The mixer in this song title",
+        "audioUrl": "1496998453",
+        "startAt": "0:19",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/snoopdogg/gin-and-juice-6"
       }
     ]
   }

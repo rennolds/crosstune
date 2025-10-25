@@ -1798,5 +1798,123 @@
         "soundcloudUrl": "https://soundcloud.com/amalaofficial/paint-the-town-red"
       }
     ]
-  }
+  },
+  "17": {
+    "title": "Fantasy Soundtracks",
+    "date_available": "2025-11-02",
+    "author": "Tommy Rennolds",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "PIRATE",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Occupation of this series hero",
+        "audioUrl": "66301726",
+        "startAt": "0:00",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/klausbadelt/8m67v5-6-18?in=esmail-ayman-tamim%2Fsets%2Fpirates-of-the-caribbean"
+      },
+      {
+        "word": "HALO",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Name of this series",
+        "audioUrl": "80736171",
+        "startAt": "0:12.5",
+        "audioDuration": 22.5,
+        "soundcloudUrl": "https://soundcloud.com/alexctba/halo-theme"
+      },
+      {
+        "word": "THRONES",
+        "startX": 5,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Last word of this series name",
+        "audioUrl": "144848972",
+        "startAt": "0:00",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://soundcloud.com/game-of-thrones-songs/opening-theme-game-of-thrones"
+      },
+      {
+        "word": "AVATAR",
+        "startX": 6,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Name of this cartoon",
+        "audioUrl": "173438373",
+        "startAt": "0:04",
+        "audioDuration": 24,
+        "soundcloudUrl": "https://soundcloud.com/kaleb-sikora-1/the-avatars-love"
+      },
+      {
+        "word": "LOTR",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Series name, as an acronym",
+        "audioUrl": "76616758",
+        "startAt": "0:18",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/hadeer-hassan/concerning-hobbits-howard"
+      },
+      {
+        "word": "GHIBLI",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Studio behind this waltzing theme",
+        "audioUrl": "756428086",
+        "startAt": "0:00",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/joe-hisaishi-official/merry-go-round-from-howls"
+      },
+      {
+        "word": "POTTER",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last name of the main character",
+        "audioUrl": "1242020578",
+        "startAt": "1:35",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/johnwilliams-official/hedwigs-theme-theme-from-harry"
+      },
+      {
+        "word": "DARTHMAUL",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Villain featured in this duel",
+        "audioUrl": "1128043075",
+        "startAt": "0:00",
+        "audioDuration": 21,
+        "soundcloudUrl": "https://soundcloud.com/johnwilliams-official/duel-of-the-fates"
+      },
+      {
+        "word": "DUNE",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Series name",
+        "audioUrl": "1740916821",
+        "startAt": "0:44",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/hans-zimmer-official/worm-ride"
+      }
+    ]
+  }  
 } 
