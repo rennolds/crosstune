@@ -406,12 +406,28 @@
 
   function formatTime(seconds) {
     const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, "0")}`;
+    const secs = seconds % 60;
+    const wholeSeconds = Math.floor(secs);
+    const decimal = secs - wholeSeconds;
+
+    if (decimal > 0.001) {
+      // If there's a meaningful decimal part
+      // Format to 1 decimal place, trimming trailing zeros
+      const decimalPart = (secs % 1).toFixed(1).substring(1); // Get ".X"
+      return `${mins}:${wholeSeconds.toString().padStart(2, "0")}${decimalPart}`;
+    }
+    return `${mins}:${wholeSeconds.toString().padStart(2, "0")}`;
   }
 
   function parseTime(timeString) {
-    const [mins, secs] = timeString.split(":").map(Number);
+    if (!timeString) return 0;
+    const parts = timeString.split(":");
+    if (parts.length !== 2) return 0;
+
+    const mins = Number(parts[0]) || 0;
+    const secsPart = parts[1];
+    const secs = Number(secsPart) || 0; // This will handle decimals like "23.5"
+
     return mins * 60 + secs;
   }
 
@@ -440,8 +456,8 @@
         audioDuration: 6,
       };
     }
-    // Enforce 30-second maximum limit
-    const clampedDuration = Math.min(Math.max(1, duration), 30);
+    // Enforce 30-second maximum limit, allow decimals
+    const clampedDuration = Math.min(Math.max(0.1, duration), 30);
     widgetTiming[widgetKey].audioDuration = clampedDuration;
 
     // Update end time based on start + duration
@@ -470,7 +486,7 @@
       const widget = window.SC.Widget(iframe);
 
       widget.getPosition((position) => {
-        const endSeconds = Math.floor(position / 1000);
+        const endSeconds = Math.floor(position / 1000); // Use integer for button-set values
         const widgetKey = `word-${wordIndex}`;
 
         if (!widgetTiming[widgetKey]) {
@@ -482,7 +498,7 @@
         }
 
         const startSeconds = parseTime(widgetTiming[widgetKey].startAt);
-        const duration = Math.min(Math.max(1, endSeconds - startSeconds), 30); // Minimum 1 second, maximum 30 seconds
+        const duration = Math.min(Math.max(0.1, endSeconds - startSeconds), 30); // Minimum 0.1 second, maximum 30 seconds
 
         widgetTiming[widgetKey].endAt = formatTime(endSeconds);
         widgetTiming[widgetKey].audioDuration = duration;
@@ -1196,20 +1212,21 @@
                             <div class="flex items-center gap-2 mb-2">
                               <input
                                 type="number"
-                                min="1"
+                                min="0.1"
                                 max="30"
+                                step="0.1"
                                 class="w-20 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700"
                                 value={widgetTiming[`word-${index}`]
                                   ?.audioDuration || 6}
                                 oninput={(event) => {
-                                  const value = parseInt(event.target.value);
+                                  const value = parseFloat(event.target.value);
                                   if (value > 30) {
                                     event.target.value = 30;
                                   }
                                   updateDuration(
                                     index,
                                     Math.min(
-                                      parseInt(event.target.value) || 6,
+                                      parseFloat(event.target.value) || 6,
                                       30
                                     )
                                   );
