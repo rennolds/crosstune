@@ -18582,6 +18582,101 @@
       }
     ]
   },
+  "2025-10-25": {
+    "title": "(by Milo)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+    {
+      "word": "MANINEED",
+      "startX": 1,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Song Title",
+      "audioUrl": "2152859232",
+      "startAt": "0:34",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/oliviaadean/man-i-need"
+    },
+    {
+      "word": "MANEATER",
+      "startX": 1,
+      "startY": 4,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Song Title",
+      "audioUrl": "252797301",
+      "startAt": "0:05",
+      "audioDuration": 18,
+      "soundcloudUrl": "https://soundcloud.com/nellyfurtado/maneater-album-version"
+    },
+    {
+      "word": "SANDMAN",
+      "startX": 0,
+      "startY": 9,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Second Word In Song Title",
+      "audioUrl": "1069042870",
+      "startAt": "0:00",
+      "audioDuration": 4,
+      "soundcloudUrl": "https://soundcloud.com/officialmetallica/enter-sandman-remastered-2021"
+    },
+    {
+      "word": "MANYMEN",
+      "startX": 1,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Song Title",
+      "audioUrl": "255894174",
+      "startAt": "0:00",
+      "audioDuration": 7,
+      "soundcloudUrl": "https://soundcloud.com/50_cent/many-men-wish-death"
+    },
+    {
+      "word": "MANCHILD",
+      "startX": 3,
+      "startY": 2,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Song Title",
+      "audioUrl": "2108590512",
+      "startAt": "0:23",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/manchild"
+    },
+    {
+      "word": "BATMAN",
+      "startX": 6,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Movie This Song Featured In",
+      "audioUrl": "258954123",
+      "startAt": "0:00",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/nirvana/something-in-the-way-album"
+    },
+    {
+      "word": "IRONMAN",
+      "startX": 8,
+      "startY": 3,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Song Title",
+      "audioUrl": "196149088",
+      "startAt": "0:00",
+      "audioDuration": 12,
+      "soundcloudUrl": "https://soundcloud.com/blacksabbath/iron-man"
+    }
+  ]
+},
   "2025-10-27": {
     "title": "",
     "version": "1.0.0",
