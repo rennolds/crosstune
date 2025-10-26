@@ -18781,6 +18781,115 @@
       }
     ]
   },
+  "2025-10-27": {
+    "2025-10-25": {
+      "title": "",
+      "version": "1.0.0",
+      "size": {
+        "width": 12,
+        "height": 10
+      },
+      "theme": "black",
+      "words": [
+        {
+          "word": "JUICEWRLD",
+          "startX": 0,
+          "startY": 1,
+          "direction": "across",
+          "color": "#FFB34B",
+          "textClue": "Which rapper later sampled this Sting hit?",
+          "audioUrl": "252663442",
+          "startAt": "0:00",
+          "audioDuration": 22.3,
+          "soundcloudUrl": "https://soundcloud.com/sting/shape-of-my-heart-album-1"
+        },
+        {
+          "word": "JUNO",
+          "startX": 6,
+          "startY": 5,
+          "direction": "across",
+          "color": "#568EFF",
+          "textClue": "Song title, also a 2007 coming-of-age film",
+          "audioUrl": "1901886333",
+          "startAt": "0:21",
+          "audioDuration": 17.2,
+          "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/juno"
+        },
+        {
+          "word": "BROWN",
+          "startX": 0,
+          "startY": 5,
+          "direction": "across",
+          "color": "#FE9C9C",
+          "textClue": "Adjective in this song title",
+          "audioUrl": "992480563",
+          "startAt": "0:12",
+          "audioDuration": 21,
+          "soundcloudUrl": "https://soundcloud.com/vanmorrisonofficial/brown-eyed-girl-12174645"
+        },
+        {
+          "word": "MARVIN",
+          "startX": 6,
+          "startY": 7,
+          "direction": "across",
+          "color": "#28D66A",
+          "textClue": "Artist first name",
+          "audioUrl": "253483570",
+          "startAt": "0:26",
+          "audioDuration": 20,
+          "soundcloudUrl": "https://soundcloud.com/marvin-gaye/whats-going-on-1"
+        },
+        {
+          "word": "HIGHHOPES",
+          "startX": 2,
+          "startY": 0,
+          "direction": "down",
+          "color": "#FFCEFD",
+          "textClue": "Song title",
+          "audioUrl": "444405351",
+          "startAt": "0:22",
+          "audioDuration": 13,
+          "soundcloudUrl": "https://soundcloud.com/panicatthedisco/high-hopes"
+        },
+        {
+          "word": "REDBONE",
+          "startX": 4,
+          "startY": 0,
+          "direction": "down",
+          "color": "#FF5B5E",
+          "textClue": "Song title",
+          "audioUrl": "291270561",
+          "startAt": "2:42",
+          "audioDuration": 19,
+          "soundcloudUrl": "https://soundcloud.com/childish-gambino/redbone"
+        },
+        {
+          "word": "RICKJAMES",
+          "startX": 6,
+          "startY": 1,
+          "direction": "down",
+          "color": "#568EFF",
+          "textClue": "Which artist is Nicki Minaj sampling?",
+          "audioUrl": "1322652760",
+          "startAt": "0:00",
+          "audioDuration": 15,
+          "soundcloudUrl": "https://soundcloud.com/nickiminaj/nicki-minaj-super-freaky-girl"
+        },
+        {
+          "word": "WOMAN",
+          "startX": 11,
+          "startY": 3,
+          "direction": "down",
+          "color": "#FFB34B",
+          "textClue": "Song title",
+          "audioUrl": "1073025025",
+          "startAt": "0:19",
+          "audioDuration": 10,
+          "soundcloudUrl": "https://soundcloud.com/amalaofficial/woman"
+        }
+      ]
+    }
+  },
   "2025-10-28": {
     "title": "",
     "version": "1.0.0",
@@ -19429,6 +19538,113 @@
       }
     ]
   },
+  "2025-11-06": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "AINTITFUN",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "204969250",
+        "startAt": "0:00",
+        "audioDuration": 24,
+        "soundcloudUrl": "https://soundcloud.com/paramore/aint-it-fun"
+      },
+      {
+        "word": "WHISPER",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What did it start with?",
+        "audioUrl": "441563229",
+        "startAt": "0:16.55",
+        "audioDuration": 11.5,
+        "soundcloudUrl": "https://soundcloud.com/user-623503384/neon-trees-everybody-talks-audiotrimmercom"
+      },
+      {
+        "word": "MOOD",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title, also a type of ring",
+        "audioUrl": "861425395",
+        "startAt": "0:23.75",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/24kgoldn/mood-feat-iann-dior"
+      },
+      {
+        "word": "SOMEHELP",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "I Had ____",
+        "audioUrl": "1817793996",
+        "startAt": "0:14",
+        "audioDuration": 16.5,
+        "soundcloudUrl": "https://soundcloud.com/postmalone/post-malone-i-had-some-help"
+      },
+      {
+        "word": "RICHGIRL",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "253506876",
+        "startAt": "0:00",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/daryl-hall-john-oates/rich-girl-remastered"
+      },
+      {
+        "word": "KISS",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "What did it start with?",
+        "audioUrl": "273792918",
+        "startAt": "0:05",
+        "audioDuration": 9.4,
+        "soundcloudUrl": "https://soundcloud.com/thekillers/mr-brightside-2"
+      },
+      {
+        "word": "FIRSTDATE",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "256119493",
+        "startAt": "0:07",
+        "audioDuration": 15.76,
+        "soundcloudUrl": "https://soundcloud.com/blink-182/first-date-album-version"
+      },
+      {
+        "word": "RAMONES",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "audioUrl": "213950869",
+        "startAt": "0:31",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/ramones/i-wanna-be-sedated-1"
+      }
+    ]
+  },
   "2025-11-07": {
     "title": "",
     "version": "1.0.0",
@@ -19533,6 +19749,110 @@
         "startAt": "0:19",
         "audioDuration": 15,
         "soundcloudUrl": "https://soundcloud.com/snoopdogg/gin-and-juice-6"
+      }
+    ]
+  },
+  "2025-11-12": {
+    "title": "Iconic Guitar Riffs",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "DAMMIT",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (also an expression of frustration)",
+        "audioUrl": "256119549",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/blink-182/dammit-album-version"
+      },
+      {
+        "word": "ACDC",
+        "startX": 8,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band name",
+        "audioUrl": "256074953",
+        "startAt": "0:04",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/acdcofficial/back-in-black"
+      },
+      {
+        "word": "BLACKSABBATH",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "audioUrl": "301983789",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/blacksabbath/paranoid-2"
+      },
+      {
+        "word": "SANDMAN",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Villain name",
+        "audioUrl": "788079790",
+        "startAt": "0:55",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/enter-sandman-1"
+      },
+      {
+        "word": "SMOKE",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "The upper layer in this song title",
+        "audioUrl": "213950668",
+        "startAt": "0:00",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/deeppurple/smoke-on-the-water-1"
+      },
+      {
+        "word": "WANNAKNOW",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "255984215",
+        "startAt": "0:04",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/arcticmonkeys/do-i-wanna-know-1"
+      },
+      {
+        "word": "CREAM",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name, also a common kitchen ingredient",
+        "audioUrl": "254542320",
+        "startAt": "0:00",
+        "audioDuration": 16.5,
+        "soundcloudUrl": "https://soundcloud.com/cream-official/sunshine-of-your-love-1"
+      },
+      {
+        "word": "WHITE",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The adjective in this band's name",
+        "audioUrl": "204963463",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/the-white-stripes/seven-nation-army"
       }
     ]
   }
