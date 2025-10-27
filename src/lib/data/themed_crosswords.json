@@ -1799,6 +1799,128 @@
       }
     ]
   },
+    "16": {
+    "title": "British Invasion",
+    "date_available": "2025-10-26",
+    "author": "Paul Pursifull",
+    "version": "1.0.0",
+    "thumbnail": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHQPX4Cnx6JKVG_Tk8LX69F16ugs4NGL2__3Mi3WXW8Qp4zlrtsl1pX0gkZdx1PQ2669kqsW55amuhuHlxD1sZ2HsrnDeHsuDGAAiNvjCTYLOg27On7YNVeCgd0SKXQkUR6xgIozq_70I/s1600/british-invasion-ron-magnes.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+  },
+  "theme": "black",
+  "words": [
+    {
+      "word": "WHO",
+      "startX": 7,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Artist name sans 'the'",
+      "audioUrl": "253188547",
+      "startAt": "0:00",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/thewho/baba-oriley-original-album"
+    },
+    {
+      "word": "UNUSUAL",
+      "startX": 1,
+      "startY": 3,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "The opening line of this song is 'It's not ____'",
+      "audioUrl": "259084586",
+      "startAt": "0:00",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/tom-jones-official/its-not-unusual-2nd-studio-1"
+    },
+    {
+      "word": "BEATLES",
+      "startX": 4,
+      "startY": 5,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Artist name sans 'the'",
+      "audioUrl": "220461019",
+      "startAt": "0:00",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/the-early-beatles/help"
+    },
+    {
+      "word": "CREAM",
+      "startX": 1,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "Artist name",
+      "audioUrl": "254542320",
+      "startAt": "0:11",
+      "audioDuration": 8,
+      "soundcloudUrl": "https://soundcloud.com/cream-official/sunshine-of-your-love-1"
+    },
+    {
+      "word": "KINKS",
+      "startX": 2,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Artist name sans 'the'",
+      "audioUrl": "252919412",
+      "startAt": "0:05",
+      "audioDuration": 9,
+      "soundcloudUrl": "https://soundcloud.com/thekinks/you-really-got-me"
+    },
+    {
+      "word": "TRS",
+      "startX": 4,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Abbreviated artist name",
+      "audioUrl": "255762164",
+      "startAt": "0:20",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/rolling-stones-official/sympathy-for-the-devil"
+    },
+    {
+      "word": "BLACK",
+      "startX": 4,
+      "startY": 5,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Paint it ____",
+      "audioUrl": "255762722",
+      "startAt": "0:05",
+      "audioDuration": 11,
+      "soundcloudUrl": "https://soundcloud.com/rolling-stones-official/paint-it-black-1"
+    },
+    {
+      "word": "WILDTHING",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Song title",
+      "audioUrl": "253186248",
+      "startAt": "0:00",
+      "audioDuration": 9,
+      "soundcloudUrl": "https://soundcloud.com/the-troggs/wild-thing-3"
+    },
+    {
+      "word": "ZOMBIES",
+      "startX": 9,
+      "startY": 0,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Artist name sans 'the'",
+      "audioUrl": "259051535",
+      "startAt": "0:04",
+      "audioDuration": 12,
+      "soundcloudUrl": "https://soundcloud.com/the-zombies-official/time-of-the-season"
+    }
+  ]
+},
   "17": {
     "title": "Fantasy Soundtracks",
     "date_available": "2025-11-02",
