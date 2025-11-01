@@ -35,6 +35,7 @@
     markPuzzleAsSolved,
     isPuzzleVersionValid,
     markThemedPuzzleAsSolved,
+    generatePuzzleHash,
   } from "$lib/utils/storage";
 
   // New props for archive mode
@@ -147,6 +148,9 @@
     puzzle || { size: { width: 0, height: 0 }, words: [] }
   ); // Provide default values if puzzle is null
 
+  // Generate a hash of the puzzle content to uniquely identify it
+  const puzzleHash = $derived(generatePuzzleHash(words));
+
   let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
   // Create grid and message state
@@ -206,7 +210,12 @@
         setUnavailableWidgets(new Set());
 
         // Save empty grid state with current version
-        saveGridState(grid, puzzle.version);
+        saveGridState(
+          grid,
+          puzzle.version,
+          { width: size.width, height: size.height },
+          puzzleHash
+        );
         saveRevealedCells(revealedCells);
         saveUnavailableWidgets(getUnavailableWidgets());
       } else {
@@ -216,7 +225,10 @@
           setSeconds(savedTimer);
         }
 
-        const savedGrid = loadGridState();
+        const savedGrid = loadGridState(
+          { width: size.width, height: size.height },
+          puzzleHash
+        );
         const savedRevealedCells = loadRevealedCells();
 
         if (savedGrid) {
@@ -842,7 +854,12 @@
           // Save grid state if not in archive mode
           if (!isArchiveMode) {
             saveRevealedCells(revealedCells);
-            saveGridState(grid, puzzle.version);
+            saveGridState(
+              grid,
+              puzzle.version,
+              { width: size.width, height: size.height },
+              puzzleHash
+            );
           }
         }
       }
@@ -887,7 +904,12 @@
         // Save grid state if not in archive mode
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
-          saveGridState(grid, puzzle.version);
+          saveGridState(
+            grid,
+            puzzle.version,
+            { width: size.width, height: size.height },
+            puzzleHash
+          );
         }
       }
     }
@@ -926,7 +948,12 @@
       // Save grid state if not in archive mode
       if (!isArchiveMode) {
         saveRevealedCells(revealedCells);
-        saveGridState(grid, puzzle.version);
+        saveGridState(
+          grid,
+          puzzle.version,
+          { width: size.width, height: size.height },
+          puzzleHash
+        );
       }
 
       // Show the win screen since the puzzle is complete
@@ -982,7 +1009,12 @@
       // Only save grid state if not in archive mode
       if (!isArchiveMode) {
         saveRevealedCells(revealedCells);
-        saveGridState(grid, puzzle.version);
+        saveGridState(
+          grid,
+          puzzle.version,
+          { width: size.width, height: size.height },
+          puzzleHash
+        );
       }
     }
 
@@ -1090,7 +1122,12 @@
         }
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
-          saveGridState(grid, puzzle.version);
+          saveGridState(
+            grid,
+            puzzle.version,
+            { width: size.width, height: size.height },
+            puzzleHash
+          );
         }
         break;
       default:
@@ -1250,7 +1287,12 @@
       }
       if (!isArchiveMode) {
         saveRevealedCells(revealedCells);
-        saveGridState(grid, puzzle.version);
+        saveGridState(
+          grid,
+          puzzle.version,
+          { width: size.width, height: size.height },
+          puzzleHash
+        );
       }
       return;
     }
@@ -1603,7 +1645,12 @@
         revealedCells = newlyRevealedCells;
         if (!isArchiveMode) {
           saveRevealedCells(revealedCells);
-          saveGridState(grid, puzzle.version);
+          saveGridState(
+            grid,
+            puzzle.version,
+            { width: size.width, height: size.height },
+            puzzleHash
+          );
           saveUnavailableWidgets(unavailable);
         }
         // Show message only once per session if there are unavailable widgets

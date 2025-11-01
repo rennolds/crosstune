@@ -9,41 +9,124 @@ const STORAGE_KEYS = {
     SOLVED_PUZZLES: 'crosstune_solved_puzzles',
     PUZZLE_VERSION: 'crosstune_puzzle_version',
     UNAVAILABLE_WIDGETS: 'crosstune_unavailable_widgets',
-    THEMED_SOLVED_PUZZLES: 'crosstune_themed_solved_puzzles'
+    THEMED_SOLVED_PUZZLES: 'crosstune_themed_solved_puzzles',
+    PUZZLE_HASH: 'crosstune_puzzle_hash'
 };
+
 // Helper to get East Coast date in YYYY-MM-DD format 
 export function getEastCoastDate() {
   return moment().tz('America/New_York').format('YYYY-MM-DD');
 }
 
+// Generate a simple hash from puzzle words to uniquely identify puzzle content
+export function generatePuzzleHash(words) {
+  if (!words || words.length === 0) return '';
+  
+  // Create a string from the first 3 words' answers and positions
+  // This is enough to uniquely identify a puzzle without being too expensive
+  const signature = words.slice(0, 3).map(w => 
+    `${w.word}:${w.startX}:${w.startY}:${w.direction}`
+  ).join('|');
+  
+  // Simple hash function
+  let hash = 0;
+  for (let i = 0; i < signature.length; i++) {
+    const char = signature.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32-bit integer
+  }
+  return hash.toString();
+}
+
 // Check if stored data is from today's puzzle
-function isStoredDataValid() {
+function isStoredDataValid(currentPuzzleHash) {
   if (typeof window === 'undefined') return;
 
   const lastPuzzleDate = localStorage.getItem(STORAGE_KEYS.LAST_PUZZLE_DATE);
   const currentDate = getEastCoastDate();
-  return lastPuzzleDate === currentDate;
+  
+  // Date must match
+  if (lastPuzzleDate !== currentDate) return false;
+  
+  // If puzzle hash is provided, it must also match
+  if (currentPuzzleHash) {
+    const storedHash = localStorage.getItem(STORAGE_KEYS.PUZZLE_HASH);
+    if (storedHash !== currentPuzzleHash) {
+      console.warn('Puzzle content has changed, clearing stored data');
+      return false;
+    }
+  }
+  
+  return true;
 }
 
-export function saveGridState(grid, puzzleVersion) {
+export function saveGridState(grid, puzzleVersion, gridDimensions, puzzleHash) {
   if (typeof window === 'undefined') return;
   
   const currentDate = getEastCoastDate();
-  localStorage.setItem(STORAGE_KEYS.GRID_STATE, JSON.stringify(grid));
+  const stateToSave = {
+    grid: grid,
+    dimensions: gridDimensions || { width: grid[0]?.length || 0, height: grid.length || 0 }
+  };
+  localStorage.setItem(STORAGE_KEYS.GRID_STATE, JSON.stringify(stateToSave));
   localStorage.setItem(STORAGE_KEYS.LAST_PUZZLE_DATE, currentDate);
   localStorage.setItem(STORAGE_KEYS.PUZZLE_VERSION, puzzleVersion);
+  if (puzzleHash) {
+    localStorage.setItem(STORAGE_KEYS.PUZZLE_HASH, puzzleHash);
+  }
 }
 
-export function loadGridState() {
+export function loadGridState(expectedDimensions, puzzleHash) {
   if (typeof window === 'undefined') return null;
   
-  if (!isStoredDataValid()) {
+  if (!isStoredDataValid(puzzleHash)) {
     clearStoredData();
     return null;
   }
 
   const gridState = localStorage.getItem(STORAGE_KEYS.GRID_STATE);
-  return gridState ? JSON.parse(gridState) : null;
+  if (!gridState) return null;
+  
+  try {
+    const parsed = JSON.parse(gridState);
+    
+    // Handle old format (just array) for backward compatibility
+    if (Array.isArray(parsed)) {
+      // Old format - validate dimensions if provided
+      if (expectedDimensions) {
+        const actualHeight = parsed.length;
+        const actualWidth = parsed[0]?.length || 0;
+        if (actualHeight !== expectedDimensions.height || actualWidth !== expectedDimensions.width) {
+          console.warn('Grid dimensions mismatch, clearing stored data');
+          clearStoredData();
+          return null;
+        }
+      }
+      return parsed;
+    }
+    
+    // New format with dimensions
+    if (parsed.grid && parsed.dimensions) {
+      // Validate dimensions match if expected dimensions provided
+      if (expectedDimensions) {
+        if (parsed.dimensions.height !== expectedDimensions.height || 
+            parsed.dimensions.width !== expectedDimensions.width) {
+          console.warn('Grid dimensions mismatch, clearing stored data');
+          clearStoredData();
+          return null;
+        }
+      }
+      return parsed.grid;
+    }
+    
+    // Invalid format
+    clearStoredData();
+    return null;
+  } catch (e) {
+    console.error('Error parsing grid state:', e);
+    clearStoredData();
+    return null;
+  }
 }
 
 export function saveTimerState(seconds) {
@@ -88,6 +171,7 @@ export function clearStoredData() {
   localStorage.removeItem(STORAGE_KEYS.REVEALED_CELLS);
   localStorage.removeItem(STORAGE_KEYS.PUZZLE_VERSION);
   localStorage.removeItem(STORAGE_KEYS.UNAVAILABLE_WIDGETS);
+  localStorage.removeItem(STORAGE_KEYS.PUZZLE_HASH);
   // Note: We don't clear SOLVED_PUZZLES and THEMED_SOLVED_PUZZLES as they should persist
 }
 
