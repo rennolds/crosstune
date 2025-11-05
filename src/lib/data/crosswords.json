@@ -19750,6 +19750,125 @@
       }
     ]
   },
+    "2025-11-05": {
+      "title": "Onomatopoeia (by ppcarrio)",
+      "version": "1.0.0",
+      "size": {
+        "width": 12,
+        "height": 10
+      },
+      "theme": "black",
+      "words": [
+        {
+        "word": "WHIP",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First word in this song's title",
+        "audioUrl": "6047056",
+        "startAt": "0:12",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/willowsmith/whip-my-hair"
+      },
+      {
+        "word": "BANG",
+        "startX": 8,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title (sans special character)",
+        "audioUrl": "746262037",
+        "startAt": "0:31",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/ajrbrothers/bang"
+      },
+      {
+        "word": "VROOMVROOM",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "248487507",
+        "startAt": "0:44",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/vroomvroomrecordings/charli-xcx-vroom-vroom"
+      },
+      {
+        "word": "KNOCKKNOCK",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "68197616",
+        "startAt": "0:08",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/tiinyyariiax27/mac-miller-knock-knock"
+      },
+      {
+        "word": "POP",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "First word in artist name",
+        "audioUrl": "850506619",
+        "startAt": "0:45",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/biggavelipro/what-you-know-bout-love"
+      },
+      {
+        "word": "SKRT",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "183137193",
+        "startAt": "0:30",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/kodak-black/skrt"
+      },
+      {
+        "word": "SNAP",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "audioUrl": "312409199",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/youngbloodzofficial/snap-yo-fingers"
+      },
+      {
+        "word": "WHAM",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name (sans special character)",
+        "audioUrl": "252824001",
+        "startAt": "0:11",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/wham-official/wake-me-up-before-you-go-go"
+      },
+      {
+        "word": "BOOMPOW",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Last two words in song title",
+        "audioUrl": "253612662",
+        "startAt": "0:08",
+        "audioDuration": 6.5,
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/boom-boom-pow-album-version-1"
+      }
+    ]
+  },
   "2025-11-12": {
     "title": "Iconic Guitar Riffs",
     "version": "1.0.0",
