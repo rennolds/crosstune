@@ -572,6 +572,7 @@
           audioUrl,
           startAt,
           audioDuration,
+          soundcloudUrl: jsonSoundcloudUrl,
         } = word;
 
         // Populate the grid
@@ -584,10 +585,24 @@
           }
         }
 
-        // Build the soundcloud URL from trackId
-        const soundcloudUrl = audioUrl.startsWith("http")
-          ? audioUrl
-          : `https://soundcloud.com/placeholder/${audioUrl}`;
+        // Use the soundcloudUrl from JSON (prioritize this field)
+        // Fall back to audioUrl for backwards compatibility
+        let soundcloudUrl = "";
+        if (jsonSoundcloudUrl && jsonSoundcloudUrl.trim()) {
+          soundcloudUrl = jsonSoundcloudUrl;
+          console.log(
+            `Using soundcloudUrl from JSON for ${wordText}:`,
+            soundcloudUrl
+          );
+        } else if (audioUrl) {
+          soundcloudUrl = audioUrl.startsWith("http")
+            ? audioUrl
+            : `https://soundcloud.com/placeholder/${audioUrl}`;
+          console.log(
+            `Using audioUrl (fallback) for ${wordText}:`,
+            soundcloudUrl
+          );
+        }
 
         // Prepare word for detectedWords
         words.push({
@@ -619,6 +634,8 @@
       detectedWords = words;
       soundcloudValidation = validation;
       widgetTiming = timing;
+
+      console.log("detectedWords after JSON parse:", detectedWords);
 
       // Populate board title if present
       if (parsed.title) {
