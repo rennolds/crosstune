@@ -19972,5 +19972,133 @@
         "soundcloudUrl": "https://soundcloud.com/the-white-stripes/seven-nation-army"
       }
     ]
+  },
+  "2025-11-07": {
+    "title": "70s 80s and 1994 (by Duncan)",
+    "version": "1.0.0",
+    "size": { "width": 12, "height": 10 },
+    "theme": "black",
+    "words": [
+      {
+        "word": "HI",
+        "startX": 9,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Synonym for the song title",
+        "audioUrl": "67984748",
+        "startAt": "0:00",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/the-cat-empire/hello-1"
+      },
+      {
+        "word": "YOUSHOOKME",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First three words of the song title",
+        "audioUrl": "256074990",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/acdcofficial/you-shook-me-all-night-long-1"
+      },
+      {
+        "word": "NO",
+        "startX": 9,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Second word of the song title",
+        "audioUrl": "255052488",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/tammi-terrell/aint-no-mountain-high-enough-1"
+      },
+      {
+        "word": "UPTOWN",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "_____ Girl",
+        "audioUrl": "257053801",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/billyjoel/uptown-girl-1"
+      },
+      {
+        "word": "RTP",
+        "startX": 8,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title abbreviated",
+        "audioUrl": "254447862",
+        "startAt": "0:00",
+        "audioDuration": 22,
+        "soundcloudUrl": "https://soundcloud.com/choirboys-official/run-to-paradise"
+      },
+      {
+        "word": "IGOTYOU",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "254525588",
+        "startAt": "0:23",
+        "audioDuration": 29,
+        "soundcloudUrl": "https://soundcloud.com/split-enz/i-got-you"
+      },
+      {
+        "word": "OASIS",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": "283975772",
+        "startAt": "2:10",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/oasisofficial/whatever"
+      },
+      {
+        "word": "FOX",
+        "startX": 5,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "_____ On The Run",
+        "audioUrl": "73102525",
+        "startAt": "0:00",
+        "audioDuration": 29,
+        "soundcloudUrl": "https://soundcloud.com/cleopatra-recs/sweet-fox-on-the-run"
+      },
+      {
+        "word": "GOLD",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1249138159",
+        "startAt": "0:00",
+        "audioDuration": 28,
+        "soundcloudUrl": "https://soundcloud.com/spandau_ballet/gold-2022-remix"
+      },
+      {
+        "word": "GIVEYOUUP",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Last three words of the song title",
+        "audioUrl": "1242868615",
+        "startAt": "0:00",
+        "audioDuration": 29,
+        "soundcloudUrl": "https://soundcloud.com/rick-astley-official/never-gonna-give-you-up-4"
+      }
+    ]
   }
 }
