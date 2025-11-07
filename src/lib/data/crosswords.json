@@ -20101,6 +20101,125 @@
       }
     ]
   },
+  "2025-11-08": {
+    "title": "Clearly Canadian",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "MCREA",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "2180391091",
+        "startAt": "0:11",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/edie-brown-56808177/tate-mcrae-tit-for-tat"
+      },
+      {
+        "word": "LAVIGNE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": "257060593",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/avrillavigne/girlfriend-explicit-version"
+      },
+      {
+        "word": "DION",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name",
+        "audioUrl": "256281898",
+        "startAt": "0:18",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/celinedionofficial/my-heart-will-go-on-from-the"
+      },
+      {
+        "word": "JEPSEN",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "50897188",
+        "startAt": "0:46",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/interscope/owl-city-and-carly-rae-jepsen"
+      },
+      {
+        "word": "WEEKND",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name (sans the)",
+        "audioUrl": "779347072",
+        "startAt": "1:17",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/save-your-tears"
+      },
+      {
+        "word": "TWAIN",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": "256231944",
+        "startAt": "0:40",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/shania-twain-music/that-dont-impress-me-much"
+      },
+      {
+        "word": "BIEBER",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "2128194861",
+        "startAt": "0:48",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/daisies"
+      },
+      {
+        "word": "MENDES",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "417368727",
+        "startAt": "0:58",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/officialshawnmendes/in-my-blood"
+      },
+      {
+        "word": "DEADMAU5",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name (mind the spelling)",
+        "audioUrl": "254013795",
+        "startAt": "0:43",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/deadmau5/ghosts-n-stuff-1"
+      }
+    ]
+  },
     "2025-11-09": {
     "title": "Finish the Lyric",
     "version": "1.0.0",
