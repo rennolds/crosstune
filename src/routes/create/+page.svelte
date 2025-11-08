@@ -23,6 +23,7 @@
   let isAdminMode = $state(false);
   let jsonInput = $state("");
   let jsonError = $state("");
+  let jsonCopied = $state(false);
   import { validateClue, containsProfanity } from "$lib/utils/filters.js";
 
   // Game colors from crosswords.json
@@ -796,6 +797,56 @@
   function playNow() {
     const url = getShareUrl();
     window.open(url, "_blank", "noopener");
+  }
+
+  async function handleCreateJSON() {
+    if (!validateWordForms()) return;
+
+    try {
+      const wordsWithTrackIds = detectedWords.map((word, index) => {
+        const validationKey = `word-${index}`;
+        const validation = soundcloudValidation[validationKey];
+        const timing = widgetTiming[validationKey] || {
+          startAt: "0:00",
+          audioDuration: 6,
+        };
+
+        return {
+          word: word.word,
+          startX: word.col,
+          startY: word.row,
+          direction: word.direction.toLowerCase(),
+          color: gameColors[index % gameColors.length],
+          textClue: word.clue,
+          audioUrl: validation.trackId,
+          startAt: timing.startAt,
+          audioDuration: timing.audioDuration,
+        };
+      });
+
+      const puzzleJSON = {
+        version: "1.0.0",
+        title: finalDetails.boardTitle || "Untitled Puzzle",
+        theme: "green", // Default theme
+        size: {
+          width: 12,
+          height: 10,
+        },
+        words: wordsWithTrackIds,
+      };
+
+      // Convert to pretty JSON
+      const prettyJSON = JSON.stringify(puzzleJSON, null, 2);
+
+      // Copy to clipboard
+      await navigator.clipboard.writeText(prettyJSON);
+      jsonCopied = true;
+      setTimeout(() => (jsonCopied = false), 2000);
+    } catch (error) {
+      console.error("Error creating JSON:", error);
+      wordCountWarning = "Failed to copy JSON to clipboard. Please try again.";
+      showWarning = true;
+    }
   }
 
   async function handleSubmitToUs() {
@@ -1634,6 +1685,21 @@
           >
             ← Back to Grid
           </button>
+          {#if isAdminMode}
+            <button
+              class="w-full sm:w-auto rounded-xs px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold transition-colors relative"
+              onclick={handleCreateJSON}
+            >
+              Create JSON
+              {#if jsonCopied}
+                <span
+                  class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+                >
+                  Copied to clipboard!
+                </span>
+              {/if}
+            </button>
+          {/if}
           <button
             class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={async (event) => {

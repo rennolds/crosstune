@@ -20308,7 +20308,7 @@
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "\"you’re a\"",
-        "audioUrl": "94800439",
+        "audioUrl": 94800439,
         "startAt": "0:56",
         "audioDuration": 6.1,
         "soundcloudUrl": "https://soundcloud.com/kiss-ramiscal/katy-perry-firework"
@@ -20326,5 +20326,816 @@
         "soundcloudUrl": "https://soundcloud.com/greenday/wake-me-up-when-september-3"
       }
     ]
-  }
+  },
+  "2025-11-10": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "INTOODEEP",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "256148211",
+        "startAt": "0:00",
+        "audioDuration": 23,
+        "soundcloudUrl": "https://soundcloud.com/sum41/in-too-deep"
+      },
+      {
+        "word": "VALENTINE",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Bloody ____",
+        "audioUrl": "805811791",
+        "startAt": "0:09",
+        "audioDuration": 21.2,
+        "soundcloudUrl": "https://soundcloud.com/mgk/bloody-valentine"
+      },
+      {
+        "word": "LANDSLIDE",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title, also a type of natural disaster",
+        "audioUrl": "254399196",
+        "startAt": "0:08",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/fleetwoodmacofficial/landslide"
+      },
+      {
+        "word": "SUGARBOO",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "A nickname for a significant other used in the pre-chorus",
+        "audioUrl": "897174484",
+        "startAt": "0:18.6",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/dualipa/levitating-feat-dababy"
+      },
+      {
+        "word": "KINKS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Band name sans \"the\"",
+        "audioUrl": "252919412",
+        "startAt": "0:13",
+        "audioDuration": 21.8,
+        "soundcloudUrl": "https://soundcloud.com/thekinks/you-really-got-me"
+      },
+      {
+        "word": "KISS",
+        "startX": 0,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Act of affection in this song title",
+        "audioUrl": "1023919816",
+        "startAt": "0:00",
+        "audioDuration": 17.3,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/kiss-me-more-feat-sza"
+      },
+      {
+        "word": "WECANTSTOP",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "256019943",
+        "startAt": "0:15",
+        "audioDuration": 9.7,
+        "soundcloudUrl": "https://soundcloud.com/mileycyrus/we-cant-stop-1"
+      },
+      {
+        "word": "SLIDE",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "256113054",
+        "startAt": "0:25",
+        "audioDuration": 17.5,
+        "soundcloudUrl": "https://soundcloud.com/thegoogoodolls/slide-1"
+      }
+    ]
+  },  
+  "2025-11-12": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "purple",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "FOREVERYOUNG",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 254417226,
+        "startAt": "0:14",
+        "audioDuration": 15
+      },
+      {
+        "word": "DAYDREAMS",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Cigarette ___",
+        "audioUrl": 112765370,
+        "startAt": "0:04",
+        "audioDuration": 22.2
+      },
+      {
+        "word": "CUDI",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The last word of this artist's stage name",
+        "audioUrl": 256158634,
+        "startAt": "0:54",
+        "audioDuration": 21
+      },
+      {
+        "word": "STEVE",
+        "startX": 5,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name",
+        "audioUrl": 1305194842,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "HEAVENS",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Third word of this song title",
+        "audioUrl": 256269138,
+        "startAt": "0:15",
+        "audioDuration": 13
+      },
+      {
+        "word": "FASTCAR",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 232328622,
+        "startAt": "0:43",
+        "audioDuration": 15.3
+      },
+      {
+        "word": "DARE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title (a synonym for challenge)",
+        "audioUrl": 512243487,
+        "startAt": "0:23",
+        "audioDuration": 17
+      },
+      {
+        "word": "DIET",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "A type of soda",
+        "audioUrl": 1018567435,
+        "startAt": "0:23",
+        "audioDuration": 24
+      },
+      {
+        "word": "SUGAR",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 255894453,
+        "startAt": "0:13",
+        "audioDuration": 18.7
+      },
+      {
+        "word": "SMITHS",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Band name, sans \"the\"",
+        "audioUrl": 195692771,
+        "startAt": "0:01",
+        "audioDuration": 17
+      }
+    ]
+  },
+  "2025-11-13": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BACKTO",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "____ Black",
+        "audioUrl": 236967116,
+        "startAt": "0:16",
+        "audioDuration": 18.4
+      },
+      {
+        "word": "FRIEND",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Just a ____",
+        "audioUrl": 231713248,
+        "startAt": "0:00",
+        "audioDuration": 17.2
+      },
+      {
+        "word": "SAVE",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "____ Tonight",
+        "audioUrl": 253505620,
+        "startAt": "0:12",
+        "audioDuration": 15
+      },
+      {
+        "word": "FEEL",
+        "startX": 3,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Electric ____",
+        "audioUrl": 257761786,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "TONIGHT",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "____ Tonight",
+        "audioUrl": 254132243,
+        "startAt": "0:01.8",
+        "audioDuration": 20.2
+      },
+      {
+        "word": "BACKIN",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "____ Black",
+        "audioUrl": 256074953,
+        "startAt": "0:09",
+        "audioDuration": 12
+      },
+      {
+        "word": "DREAM",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Just a ____",
+        "audioUrl": 255960902,
+        "startAt": "0:11",
+        "audioDuration": 18
+      },
+      {
+        "word": "LOVE",
+        "startX": 10,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Electric ____",
+        "audioUrl": 176758078,
+        "startAt": "0:49",
+        "audioDuration": 26
+      }
+    ]
+  },
+  "2025-11-16": {
+    "title": "Surfin' the radio in 2016",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "STARBOY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song (and album) title",
+        "audioUrl": "284056452",
+        "startAt": "0:05",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/starboy-1"
+      },
+      {
+        "word": "CHARLIE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Lead artist on this song featuring Selena Gomez",
+        "audioUrl": "256173835",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/charlieputh/we-dont-talk-anymore-feat"
+      },
+      {
+        "word": "LOVEYOURSELF",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "737896546",
+        "startAt": "0:00",
+        "audioDuration": 9.5,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/love-yourself"
+      },
+      {
+        "word": "FETTY",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First word of this artist's stage name",
+        "audioUrl": "382729481",
+        "startAt": "0:10",
+        "audioDuration": 5.5,
+        "soundcloudUrl": "https://soundcloud.com/harlem_fetty/679-feat-remy-boyz"
+      },
+      {
+        "word": "GRANDE",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": "257504086",
+        "startAt": "0:00",
+        "audioDuration": 12.3,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/dangerous-woman-1"
+      },
+      {
+        "word": "TWENTY",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "First word of this band name",
+        "audioUrl": "256133594",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/ride"
+      },
+      {
+        "word": "CLOSER",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "274720380",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/thechainsmokers/closer"
+      },
+      {
+        "word": "SORRY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "737719381",
+        "startAt": "0:00",
+        "audioDuration": 8.8,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/sorry"
+      },
+      {
+        "word": "YG",
+        "startX": 4,
+        "startY": 6,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Lead artist on this song featuring Drake and Kamaiyah",
+        "audioUrl": "264014623",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/yg400/why-you-always-hatin"
+      },
+      {
+        "word": "DNCE",
+        "startX": 7,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "audioUrl": "260402125",
+        "startAt": "0:07",
+        "audioDuration": 11.2,
+        "soundcloudUrl": "https://soundcloud.com/dnceofficial/cake-by-the-ocean-1"
+      },
+      {
+        "word": "PERFECT",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "257052799",
+        "startAt": "0:00",
+        "audioDuration": 15.2,
+        "soundcloudUrl": "https://soundcloud.com/onedirectionmusic/perfect"
+      },
+      {
+        "word": "MYFACE",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "253876860",
+        "startAt": "0:00",
+        "audioDuration": 12.4,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/cant-feel-my-face-1"
+      }
+    ]
+  },
+  "2025-11-19": {
+    "version": "1.0.0",
+    "title": "Count Me In",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BEMYGIRL",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Last three words of this song title",
+        "audioUrl": 45384891,
+        "startAt": "0:30.3",
+        "audioDuration": 3
+      },
+      {
+        "word": "THEBEATLES",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": 130728014,
+        "startAt": "0:00",
+        "audioDuration": 4
+      },
+      {
+        "word": "TONIGHT",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This song title is this word x2",
+        "audioUrl": 254132243,
+        "startAt": "0:00",
+        "audioDuration": 2
+      },
+      {
+        "word": "MYBABY",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First two lyrics after the count in",
+        "audioUrl": 253850736,
+        "startAt": "0:00",
+        "audioDuration": 1.8
+      },
+      {
+        "word": "HOTTOGO",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 1582588575,
+        "startAt": "0:00",
+        "audioDuration": 3.5
+      },
+      {
+        "word": "FERGIE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": 253183179,
+        "startAt": "0:00",
+        "audioDuration": 2.2
+      },
+      {
+        "word": "WANTME",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": 257049446,
+        "startAt": "0:15",
+        "audioDuration": 3.2
+      },
+      {
+        "word": "MARS",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": 328200344,
+        "startAt": "0:00",
+        "audioDuration": 3.8
+      }
+    ]
+  },
+  "2025-11-22": {
+    "version": "1.0.0",
+    "title": "By Brody",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "20DOLLARS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "The amount of money in his pocket",
+        "audioUrl": "94497567",
+        "startAt": "0:28",
+        "audioDuration": 10
+      },
+      {
+        "word": "TIME",
+        "startX": 8,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Running out of ____",
+        "audioUrl": "621578973",
+        "startAt": "0:25",
+        "audioDuration": 10
+      },
+      {
+        "word": "CLOUDED",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "719473789",
+        "startAt": "0:23",
+        "audioDuration": 6
+      },
+      {
+        "word": "LONELY",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Mr. ______",
+        "audioUrl": "255878019",
+        "startAt": "0:00",
+        "audioDuration": 6.6
+      },
+      {
+        "word": "DONT",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "294321837",
+        "startAt": "0:03",
+        "audioDuration": 6.4
+      },
+      {
+        "word": "2PAC",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "252536146",
+        "startAt": "0:15",
+        "audioDuration": 6.4
+      },
+      {
+        "word": "GODSPLAN",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "386265671",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "STAND",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word of this song title",
+        "audioUrl": "231712962",
+        "startAt": "0:30",
+        "audioDuration": 6
+      }
+    ]
+  },
+  "2025-11-23": {
+    "title": "Late 2000's Hits (by Uno)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "KANYEWEST",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "255766399",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/all-of-the-lights"
+      },
+      {
+        "word": "HUSTLER",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Finish the lyric: \"...diva is a female version of a _____...\"",
+        "audioUrl": "256526471",
+        "startAt": "0:12",
+        "audioDuration": 7.8,
+        "soundcloudUrl": "https://soundcloud.com/beyonce/diva"
+      },
+      {
+        "word": "HALO",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title (a feature of an angel)",
+        "audioUrl": "256526301",
+        "startAt": "0:12",
+        "audioDuration": 13.3,
+        "soundcloudUrl": "https://soundcloud.com/beyonce/halo"
+      },
+      {
+        "word": "CAREY",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "255783130",
+        "startAt": "0:00",
+        "audioDuration": 15.2,
+        "soundcloudUrl": "https://soundcloud.com/mariahcarey/obsessed"
+      },
+      {
+        "word": "NOAIR",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "254135788",
+        "startAt": "0:12",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/jordinsparksofficial/no-air"
+      },
+      {
+        "word": "SOWHAT",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "257052047",
+        "startAt": "0:00",
+        "audioDuration": 3.7,
+        "soundcloudUrl": "https://soundcloud.com/official-p-nk/so-what-1"
+      },
+      {
+        "word": "SECRETS",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Meant to be kept unknown, plural",
+        "audioUrl": "256149037",
+        "startAt": "0:07",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/onerepublic/secrets-1"
+      },
+      {
+        "word": "DEARMARIA",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The address in this song title",
+        "audioUrl": "4720038",
+        "startAt": "0:12",
+        "audioDuration": 16.6,
+        "soundcloudUrl": "https://soundcloud.com/hopelessrecords/dear-maria-count-me-in"
+      },
+      {
+        "word": "WERWHOWER",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Full song title (mind Kesha's spelling)",
+        "audioUrl": "256110520",
+        "startAt": "0:00",
+        "audioDuration": 23.5,
+        "soundcloudUrl": "https://soundcloud.com/kesha/we-r-who-we-r"
+      },
+      {
+        "word": "TELEPHONE",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "255904793",
+        "startAt": "0:47",
+        "audioDuration": 16.5,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/telephone"
+      }
+    ]
+  }  
 }

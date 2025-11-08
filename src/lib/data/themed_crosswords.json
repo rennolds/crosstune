@@ -2158,5 +2158,127 @@
         "soundcloudUrl": "https://soundcloud.com/wild-cherry-official/play-that-funky-music"
       }
     ]
+  },
+  "19": {
+    "title": "A frat party in 2017",
+    "date_available": "2025-11-16",
+    "author": "Tommy Rennolds",
+    "thumbnail": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "GIRLSAT",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "216540873",
+        "startAt": "0:00",
+        "audioDuration": 23.2,
+        "soundcloudUrl": "https://soundcloud.com/davidguetta/where-them-girls-at"
+      },
+      {
+        "word": "BOB",
+        "startX": 8,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Rapper name (punctuation removed)",
+        "audioUrl": "215772350",
+        "startAt": "0:00",
+        "audioDuration": 20.4,
+        "soundcloudUrl": "https://soundcloud.com/bobatl/bob-headband-feat-2-chainz"
+      },
+      {
+        "word": "FIREBALL",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Beverage of choice at the party",
+        "audioUrl": "197650018",
+        "startAt": "0:18",
+        "audioDuration": 13.2,
+        "soundcloudUrl": "https://soundcloud.com/gerard-puig-3/pitbull-john-ryan-fireball"
+      },
+      {
+        "word": "HAPPINESS",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The emotion in this song title",
+        "audioUrl": "18853020",
+        "startAt": "1:14",
+        "audioDuration": 23.5,
+        "soundcloudUrl": "https://soundcloud.com/steveaoki/kid-cudi-pursuit-of-happiness"
+      },
+      {
+        "word": "CLOSER",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "274720380",
+        "startAt": "0:09",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/thechainsmokers/closer"
+      },
+      {
+        "word": "GETLOW",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "318930349",
+        "startAt": "0:00",
+        "audioDuration": 18.4,
+        "soundcloudUrl": "https://soundcloud.com/lil_jon/get-low"
+      },
+      {
+        "word": "JORDAN",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Name of every frat boys role model (also the center of a 2013 Leo film)",
+        "audioUrl": "445847721",
+        "startAt": "0:19",
+        "audioDuration": 21.3,
+        "soundcloudUrl": "https://soundcloud.com/mutant32/jordan-belfort"
+      },
+      {
+        "word": "STARSHIPS",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "285001139",
+        "startAt": "0:15.2",
+        "audioDuration": 23,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1"
+      },
+      {
+        "word": "NOHANDS",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "38497323",
+        "startAt": "1:15.14",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/wakaflockaflame/no-hands"
+      }
+    ]    
   }
 }
