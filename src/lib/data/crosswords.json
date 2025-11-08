@@ -20111,7 +20111,7 @@
     "theme": "black",
     "words": [
       {
-        "word": "MCREA",
+        "word": "MCRAE",
         "startX": 7,
         "startY": 3,
         "direction": "across",
@@ -20209,7 +20209,7 @@
       {
         "word": "DEADMAU5",
         "startX": 11,
-        "startY": 1,
+        "startY": 2,
         "direction": "down",
         "color": "#28D66A",
         "textClue": "Artist name (mind the spelling)",
