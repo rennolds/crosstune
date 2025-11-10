@@ -21137,5 +21137,115 @@
         "soundcloudUrl": "https://soundcloud.com/ladygaga/telephone"
       }
     ]
-  }  
+  },
+    "2025-11-10": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JUMPIN",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This song title, without the repeating",
+        "audioUrl": "253510882",
+        "startAt": "0:00",
+        "audioDuration": 8.7
+      },
+      {
+        "word": "BELOVED",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "256187971",
+        "startAt": "0:07",
+        "audioDuration": 21
+      },
+      {
+        "word": "RARI",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Where the glock is kept in this track (spelt as it is pronounced)",
+        "audioUrl": "153330529",
+        "startAt": "0:19.85",
+        "audioDuration": 10.95
+      },
+      {
+        "word": "YOURLOVE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The substance Kesha is addicted to on this track",
+        "audioUrl": "1306953106",
+        "startAt": "0:20",
+        "audioDuration": 19
+      },
+      {
+        "word": "HAZEL",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Eye color in this song title",
+        "audioUrl": "1646284905",
+        "startAt": "0:00",
+        "audioDuration": 21.75
+      },
+      {
+        "word": "TOMORROW",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Opposite of this song title",
+        "audioUrl": "1940522583",
+        "startAt": "28:53",
+        "audioDuration": 9.5
+      },
+      {
+        "word": "MYHEART",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last two words of this song title",
+        "audioUrl": "256133530",
+        "startAt": "0:04.75",
+        "audioDuration": 13.5
+      },
+      {
+        "word": "TRAVIS",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First name of this rapper",
+        "audioUrl": "689814901",
+        "startAt": "0:14",
+        "audioDuration": 18
+      },
+      {
+        "word": "ORDINARY",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title, also a word for \"typical\"",
+        "audioUrl": "2022404597",
+        "startAt": "0:37",
+        "audioDuration": 15.75
+      }
+    ]
+  }
 }
