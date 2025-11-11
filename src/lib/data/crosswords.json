@@ -20788,7 +20788,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Lead artist on this song featuring Selena Gomez",
+        "textClue": "Artist first name",
         "audioUrl": "256173835",
         "startAt": "0:00",
         "audioDuration": 9,
@@ -21115,7 +21115,7 @@
     ]
   },
   "2025-11-23": {
-    "title": "Late 2000's Hits (by Uno)",
+    "title": "Late 2000's Bangers (by Uno)",
     "version": "1.0.0",
     "size": {
       "width": 12,
