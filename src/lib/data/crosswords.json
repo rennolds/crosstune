@@ -20761,6 +20761,116 @@
       }
     ]
   },
+    "2025-11-14": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+    {
+      "word": "ANIMALS",
+      "startX": 2,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": "271226216",
+      "startAt": "0:00",
+      "audioDuration": 6
+    },
+    {
+      "word": "MOBAMBA",
+      "startX": 1,
+      "startY": 5,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Song title",
+      "audioUrl": 328456146,
+      "startAt": "0:06",
+      "audioDuration": 6
+    },
+    {
+      "word": "22",
+      "startX": 2,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Song title",
+      "audioUrl": "252454199",
+      "startAt": "0:02",
+      "audioDuration": 11
+    },
+    {
+      "word": "ALLIASK",
+      "startX": 5,
+      "startY": 7,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Song title",
+      "audioUrl": "270475950",
+      "startAt": "0:15",
+      "audioDuration": 10
+    },
+    {
+      "word": "2PHONES",
+      "startX": 3,
+      "startY": 9,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Song title",
+      "audioUrl": "231758952",
+      "startAt": "0:27.5",
+      "audioDuration": 9.3
+    },
+    {
+      "word": "WAIT",
+      "startX": 2,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "First word in title",
+      "audioUrl": "652585262",
+      "startAt": "0:12",
+      "audioDuration": 13
+    },
+    {
+      "word": "212",
+      "startX": 3,
+      "startY": 7,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Song title",
+      "audioUrl": "1341156148",
+      "startAt": "2:18",
+      "audioDuration": 10
+    },
+    {
+      "word": "MARIMBA",
+      "startX": 5,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "What instrument is playing? (also a famous ringtone)",
+      "audioUrl": 193495861,
+      "startAt": "0:00",
+      "audioDuration": 5.3
+    },
+    {
+      "word": "LILYALLEN",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Artist featured on this T-Pain song",
+      "audioUrl": "257063807",
+      "startAt": "0:00",
+      "audioDuration": 10
+    }
+  ]
+},
   "2025-11-16": {
     "title": "Surfin' the radio in 2016",
     "version": "1.0.0",
