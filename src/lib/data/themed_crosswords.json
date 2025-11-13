@@ -2161,7 +2161,7 @@
   },
   "19": {
     "title": "A frat party in 2017",
-    "date_available": "2025-11-16",
+    "date_available": "2025-11-18",
     "author": "Tommy Rennolds",
     "thumbnail": "",
     "version": "1.0.0",
@@ -2173,8 +2173,8 @@
     "words": [
       {
         "word": "GIRLSAT",
-        "startX": 0,
-        "startY": 2,
+        "startX": 5,
+        "startY": 4,
         "direction": "across",
         "color": "#FE9C9C",
         "textClue": "Last two words of this song title",
@@ -2185,7 +2185,7 @@
       },
       {
         "word": "BOB",
-        "startX": 8,
+        "startX": 9,
         "startY": 2,
         "direction": "across",
         "color": "#28D66A",
@@ -2197,8 +2197,8 @@
       },
       {
         "word": "FIREBALL",
-        "startX": 4,
-        "startY": 4,
+        "startX": 1,
+        "startY": 1,
         "direction": "across",
         "color": "#FFCEFD",
         "textClue": "Beverage of choice at the party",
@@ -2209,9 +2209,9 @@
       },
       {
         "word": "HAPPINESS",
-        "startX": 2,
-        "startY": 7,
-        "direction": "across",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
         "color": "#FF5B5E",
         "textClue": "The emotion in this song title",
         "audioUrl": "18853020",
@@ -2221,8 +2221,8 @@
       },
       {
         "word": "CLOSER",
-        "startX": 3,
-        "startY": 9,
+        "startX": 2,
+        "startY": 6,
         "direction": "across",
         "color": "#568EFF",
         "textClue": "Song title",
@@ -2232,21 +2232,20 @@
         "soundcloudUrl": "https://soundcloud.com/thechainsmokers/closer"
       },
       {
-        "word": "GETLOW",
-        "startX": 0,
-        "startY": 2,
+        "word": "MOBAMBA",
+        "startX": 10,
+        "startY": 1,
         "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Song title",
-        "audioUrl": "318930349",
-        "startAt": "0:00",
-        "audioDuration": 18.4,
-        "soundcloudUrl": "https://soundcloud.com/lil_jon/get-low"
+        "color": "#00FFFF",
+        "textClue": "The frat party national anthem",
+        "audioUrl": "328456146",
+        "startAt": "0:03.5",
+        "audioDuration": 12
       },
       {
         "word": "JORDAN",
-        "startX": 2,
-        "startY": 0,
+        "startX": 0,
+        "startY": 3,
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "Name of every frat boys role model (also the center of a 2013 Leo film)",
@@ -2256,22 +2255,10 @@
         "soundcloudUrl": "https://soundcloud.com/mutant32/jordan-belfort"
       },
       {
-        "word": "STARSHIPS",
-        "startX": 6,
-        "startY": 1,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "Song title",
-        "audioUrl": "285001139",
-        "startAt": "0:15.2",
-        "audioDuration": 23,
-        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1"
-      },
-      {
         "word": "NOHANDS",
-        "startX": 9,
-        "startY": 1,
-        "direction": "down",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
         "color": "#28D66A",
         "textClue": "Song title",
         "audioUrl": "38497323",
@@ -2279,6 +2266,6 @@
         "audioDuration": 15,
         "soundcloudUrl": "https://soundcloud.com/wakaflockaflame/no-hands"
       }
-    ]    
+    ]
   }
 }
