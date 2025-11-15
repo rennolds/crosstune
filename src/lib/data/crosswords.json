@@ -20871,6 +20871,125 @@
     }
   ]
 },
+  "2025-11-15": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "MARVIN",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "253483570",
+        "startAt": "1:28",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/marvin-gaye/whats-going-on-1"
+      },
+      {
+        "word": "STAY",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"Should I ____?\"",
+        "audioUrl": "262767574",
+        "startAt": "0:13",
+        "audioDuration": 6.9,
+        "soundcloudUrl": "https://soundcloud.com/theclash/should-i-stay-or-should-i-go"
+      },
+      {
+        "word": "ARTICMONKEYS",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "audioUrl": "122531191",
+        "startAt": "0:47",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/humbertogallo/whyd-you-only-call-me-when"
+      },
+      {
+        "word": "DYLAN",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "256269230",
+        "startAt": "0:02",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/bobdylan/blowin-in-the-wind-1"
+      },
+      {
+        "word": "FROZEN",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Musical name",
+        "audioUrl": "122904820",
+        "startAt": "0:04",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/iwasakishiho/do-you-want-to-build-a-snowman"
+      },
+      {
+        "word": "REALLIFE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Is this the ____?\"",
+        "audioUrl": "253166273",
+        "startAt": "0:04",
+        "audioDuration": 10.2,
+        "soundcloudUrl": "https://soundcloud.com/queen-69312/bohemian-rhapsody-remastered-1"
+      },
+      {
+        "word": "SORRY",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "263728011",
+        "startAt": "0:47",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/one-409729617/justin-bieber-sorry"
+      },
+      {
+        "word": "HURTME",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "\"Do you really want to ____?\"",
+        "audioUrl": "256141289",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/cultureclubofficial/do-you-really-want-to-hurt-4"
+      },
+      {
+        "word": "YES",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Can he kick it?",
+        "audioUrl": "253508017",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/a-tribe-called-quest-official/can-i-kick-it-1"
+      }
+    ]
+  },
   "2025-11-16": {
     "title": "Surfin' the radio in 2016",
     "version": "1.0.0",
