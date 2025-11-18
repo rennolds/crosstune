@@ -21232,6 +21232,105 @@
       }
     ]
   },
+    "2025-11-18": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SUNSHINE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "What is she walking on?",
+        "audioUrl": 73115601,
+        "startAt": "0:13",
+        "audioDuration": 10.5
+      },
+      {
+        "word": "ISLAND",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "audioUrl": 256245852,
+        "startAt": "0:12",
+        "audioDuration": 14
+      },
+      {
+        "word": "SUNDRESS",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 530989494,
+        "startAt": "0:29",
+        "audioDuration": 15
+      },
+      {
+        "word": "SUNROOF",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 1166330065,
+        "startAt": "1:04",
+        "audioDuration": 7.4
+      },
+      {
+        "word": "SPORTSCAR",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 2014861735,
+        "startAt": "0:07",
+        "audioDuration": 7
+      },
+      {
+        "word": "SATURDAY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word of song title",
+        "audioUrl": 382329032,
+        "startAt": "0:04",
+        "audioDuration": 7.1
+      },
+      {
+        "word": "SUNSHINY",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What kind of day will it be?",
+        "audioUrl": 253183489,
+        "startAt": "0:06",
+        "audioDuration": 14
+      },
+      {
+        "word": "RAY",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": 1443821005,
+        "startAt": "0:27",
+        "audioDuration": 17
+      }
+    ]
+  },
   "2025-11-19": {
     "version": "1.0.0",
     "title": "Count Me In",
