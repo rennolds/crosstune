@@ -21426,10 +21426,120 @@
         "textClue": "Artist last name",
         "audioUrl": 328200344,
         "startAt": "0:00",
-        "audioDuration": 3.8
+        "audioDuration": 3.8`
       }
     ]
   },
+  "2025-11-20": {
+    "version": "1.0.0",
+    "title": "Famous Covers",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+    {
+      "word": "SIMON",
+      "startX": 1,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "First name of one of the original artists",
+      "audioUrl": 256180873,
+      "startAt": "1:30",
+      "audioDuration": 17
+    },
+    {
+      "word": "TRACY",
+      "startX": 0,
+      "startY": 3,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "First name of original artist",
+      "audioUrl": 1470097684,
+      "startAt": "0:13",
+      "audioDuration": 12
+    },
+    {
+      "word": "LORDE",
+      "startX": 7,
+      "startY": 3,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Who is covering Tears for Fears classic hit?",
+      "audioUrl": 295774814,
+      "startAt": "0:35",
+      "audioDuration": 15
+    },
+    {
+      "word": "MANESKIN",
+      "startX": 2,
+      "startY": 5,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Who is covering this Four Seasons' classic",
+      "audioUrl": 1099939945,
+      "startAt": "0:21",
+      "audioDuration": 11
+    },
+    {
+      "word": "DYLAN",
+      "startX": 1,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Last name of the artist Adele is covering in this track",
+      "audioUrl": 124514202,
+      "startAt": "0:35",
+      "audioDuration": 25
+    },
+    {
+      "word": "HURT",
+      "startX": 6,
+      "startY": 8,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "Song title (the quintessential cover)",
+      "audioUrl": 269479423,
+      "startAt": "0:12",
+      "audioDuration": 11
+    },
+    {
+      "word": "MICHAEL",
+      "startX": 3,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "The first name of the artist covering this Beatles' classic",
+      "audioUrl": 278509193,
+      "startAt": "0:09",
+      "audioDuration": 15
+    },
+    {
+      "word": "BONIVER",
+      "startX": 8,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Birdy is covering what artist?",
+      "audioUrl": 40268326,
+      "startAt": "1:02",
+      "audioDuration": 15
+    },
+    {
+      "word": "HENDRIX",
+      "startX": 11,
+      "startY": 2,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Last name of the artist covering this Dylan record?",
+      "audioUrl": 346047168,
+      "startAt": "0:14",
+      "audioDuration": 12
+    }
+  ]
+},
   "2025-11-22": {
     "version": "1.0.0",
     "title": "By Brody",
