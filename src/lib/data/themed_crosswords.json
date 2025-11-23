@@ -2267,5 +2267,129 @@
         "soundcloudUrl": "https://soundcloud.com/wakaflockaflame/no-hands"
       }
     ]
+  },
+  "20": {
+    "title": "80's Pop",
+    "date_available": "2025-11-23",
+    "author": "Uno",
+    "thumbnail": "https://cdn.apollo.audio/one/media/6548/cc28/a82e/7a05/a34b/83de/top-artists-from-80s-all-time.jpg",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BORDERLINE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "169388245",
+        "startAt": "2:42",
+        "audioDuration": 16
+      },
+      {
+        "word": "DANCE",
+        "startX": 2,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "What does she want to do?",
+        "audioUrl": "253799714",
+        "startAt": "2:03",
+        "audioDuration": 7
+      },
+      {
+        "word": "GOGO",
+        "startX": 8,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"before you ____\"",
+        "audioUrl": "300437872",
+        "startAt": "0:30",
+        "audioDuration": 6
+      },
+      {
+        "word": "ANNIE",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Who does Michael ask if they're okay?",
+        "audioUrl": "308950076",
+        "startAt": "2:30",
+        "audioDuration": 4
+      },
+      {
+        "word": "JUMP",
+        "startX": 8,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"Go ahead and ____\"",
+        "audioUrl": "232329335",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "EGYPTIAN",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "\"Walk like an ____\"",
+        "audioUrl": "420966381",
+        "startAt": "0:00",
+        "audioDuration": 12
+      },
+      {
+        "word": "DAVIDBOWIE",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "46361966",
+        "startAt": "0:52",
+        "audioDuration": 9
+      },
+      {
+        "word": "RUNNING",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The adjective in this song's title",
+        "audioUrl": "254527393",
+        "startAt": "0:42",
+        "audioDuration": 8
+      },
+      {
+        "word": "DIANA",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "audioUrl": 254149925,
+        "startAt": "0:08",
+        "audioDuration": 13
+      },
+      {
+        "word": "GIVEYOUUP",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "\"Never gonna ____\"",
+        "audioUrl": "1242868615",
+        "startAt": "0:00",
+        "audioDuration": 2
+      }
+    ]
   }
 }
