@@ -21868,5 +21868,104 @@
         "soundcloudUrl": "https://soundcloud.com/ladygaga/telephone"
       }
     ]
+  },
+  "2025-11-24": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BUDAPEST",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a European capital)",
+        "audioUrl": 255796418,
+        "startAt": "0:11",
+        "audioDuration": 8
+      },
+      {
+        "word": "RIPTIDE",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title (also a type of current)",
+        "audioUrl": 74958037,
+        "startAt": "1:46",
+        "audioDuration": 14
+      },
+      {
+        "word": "PANDA",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (also an endangered species)",
+        "audioUrl": 237603952,
+        "startAt": "0:39.5",
+        "audioDuration": 9
+      },
+      {
+        "word": "IMPALA",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Half of this artist's name (also an African mammal)",
+        "audioUrl": 759895474,
+        "startAt": "0:14",
+        "audioDuration": 15
+      },
+      {
+        "word": "GRENADE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title (also an explosive device)",
+        "audioUrl": 271221115,
+        "startAt": "0:17",
+        "audioDuration": 9
+      },
+      {
+        "word": "POMPEII",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title (also an ancient city)",
+        "audioUrl": 255961908,
+        "startAt": "0:11",
+        "audioDuration": 16
+      },
+      {
+        "word": "VIENNA",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title (also a European capital)",
+        "audioUrl": 257053810,
+        "startAt": "0:15",
+        "audioDuration": 13
+      },
+      {
+        "word": "AMNESIA",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a medical condition) ",
+        "audioUrl": 256195315,
+        "startAt": "0:09",
+        "audioDuration": 10
+      }
+    ]
   }
 }
