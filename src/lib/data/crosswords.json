@@ -22077,5 +22077,115 @@
         "audioDuration": 10
       }
     ]
+  },
+  "2025-11-26": {
+    "title": "❌💿🧩 3️⃣",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "JUMPER",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "🏃‍♂️🆙",
+        "audioUrl": 205004785,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "OCEANEYES",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "🏖️🌊👁️",
+        "audioUrl": 233719633,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "DEMONS",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "👿👹👺",
+        "audioUrl": 271224938,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "TRAPQUEEN",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "🪤👸🏾",
+        "audioUrl": 138636484,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "BLINK182",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "👁️⑱✌️",
+        "audioUrl": 1621973223,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "PERFECT",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "👌💯",
+        "audioUrl": 310108203,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "SUM41",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "🟰㊶",
+        "audioUrl": 256148222,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "PAYPHONE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "🪙☎️",
+        "audioUrl": 256187803,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "ROSES",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "🌹🥀",
+        "audioUrl": 258097961,
+        "startAt": "0:00",
+        "audioDuration": 6
+      }
+    ]
   }
 }
