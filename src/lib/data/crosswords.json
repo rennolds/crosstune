@@ -22187,5 +22187,115 @@
         "audioDuration": 6
       }
     ]
+  },
+  "2025-11-27": {
+    "version": "1.0.0",
+    "title": "Happy Thanksgiving!",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "WEARE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "____ Family",
+        "audioUrl": 204406669,
+        "startAt": "0:36",
+        "audioDuration": 17
+      },
+      {
+        "word": "BUSINESS",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Family ____",
+        "audioUrl": 255766509,
+        "startAt": "0:10",
+        "audioDuration": 19
+      },
+      {
+        "word": "CHIEFS",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The NFL franchise that shares a name with this artist",
+        "audioUrl": 71476488,
+        "startAt": "1:40",
+        "audioDuration": 10
+      },
+      {
+        "word": "UNEXT",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Thank ____",
+        "audioUrl": 523994058,
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "COWBOYS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "The NFL franchise that shares a name with this song title",
+        "audioUrl": 205000158,
+        "startAt": "0:43",
+        "audioDuration": 21
+      },
+      {
+        "word": "PIE",
+        "startX": 2,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "A staple of the Thanksgiving meal",
+        "audioUrl": 259092783,
+        "startAt": "0:00",
+        "audioDuration": 25
+      },
+      {
+        "word": "BLESSINGS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "You should be thankful for your ____ (song title)",
+        "audioUrl": 266129586,
+        "startAt": "1:03",
+        "audioDuration": 23
+      },
+      {
+        "word": "THANKYOU",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 695903493,
+        "startAt": "0:02",
+        "audioDuration": 16
+      },
+      {
+        "word": "LIONS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The NFL franchise that shares a name with this song title",
+        "audioUrl": 263253452,
+        "startAt": "0:00",
+        "audioDuration": 15
+      }
+    ]
   }
 }
