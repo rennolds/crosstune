@@ -22297,5 +22297,104 @@
         "audioDuration": 15
       }
     ]
+  },
+  "2025-11-28": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "CHASINGCARS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 256206578,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "THESCRIPT",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": 270519075,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "RASPUTIN",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 34999450,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "LADYA",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": 257048409,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "CENTERFOLD",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 256048078,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "AMPERSAND",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "The special character in this band's name",
+        "audioUrl": 271455456,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "BRAT",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Album title",
+        "audioUrl": 1839785652,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "PONTOON",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 256258771,
+        "startAt": "0:00",
+        "audioDuration": 6
+      }
+    ]
   }
 }
