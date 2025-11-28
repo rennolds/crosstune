@@ -22396,5 +22396,104 @@
         "audioDuration": 19
       }
     ]
+  },
+  "2025-11-29": {
+    "version": "1.0.0",
+    "title": "(by Carley W)",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "WEEZER",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 256245884,
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "MOANA",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Musical name",
+        "audioUrl": 293546331,
+        "startAt": "0:36",
+        "audioDuration": 10
+      },
+      {
+        "word": "TENERIFESEA",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 214693439,
+        "startAt": "0:18",
+        "audioDuration": 10
+      },
+      {
+        "word": "NAIL",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of song title",
+        "audioUrl": 1217147452,
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "HEYTHERE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Opening words of this song",
+        "audioUrl": 283122057,
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "ZOMBIE",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 407086932,
+        "startAt": "1:27",
+        "audioDuration": 14
+      },
+      {
+        "word": "BREAKEVEN",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 270519100,
+        "startAt": "0:13",
+        "audioDuration": 15
+      },
+      {
+        "word": "ALESSIA",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": 313995282,
+        "startAt": "0:22",
+        "audioDuration": 10
+      }
+    ]
   }
 }
