@@ -2391,5 +2391,129 @@
         "audioDuration": 2
       }
     ]
+  },
+  "21": {
+    "title": "Spotify Streaming Records",
+    "date_available": "2025-11-30",
+    "author": "Paul Pursifull",
+    "thumbnail": "https://images.fastcompany.com/image/upload/f_webp,c_fit,w_1920,q_auto/wp-cms/uploads/2023/01/p-1-90834980-spotify-vs-music.jpg",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SOUR",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Most-streamed album by a female artist [Album title]",
+        "audioUrl": 1048163956,
+        "startAt": "0:05",
+        "audioDuration": 10
+      },
+      {
+        "word": "TTPD",
+        "startX": 2,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Most-streamed album in a single day [Album Acronym]",
+        "audioUrl": 1803423306,
+        "startAt": "2:05",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "ESPRESSO",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Most-streamed song by a female artist [Song title]",
+        "audioUrl": 1799087761,
+        "startAt": "0:09",
+        "audioDuration": 6
+      },
+      {
+        "word": "ARIJIT",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Most followed artist on Spotify [First name]",
+        "audioUrl": 819450262,
+        "startAt": "0:16",
+        "audioDuration": 8
+      },
+      {
+        "word": "QUEEN",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Most-streamed rock artist [Artist name]",
+        "audioUrl": 252515196,
+        "startAt": "0:42",
+        "audioDuration": 10
+      },
+      {
+        "word": "APT",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "2nd-fastest song to reach 1B streams [Song title]",
+        "audioUrl": 1937452967,
+        "startAt": "0:10",
+        "audioDuration": 6
+      },
+      {
+        "word": "SWIFT",
+        "startX": 2,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Most streamed artist all time [Artist last name]",
+        "audioUrl": 1367286193,
+        "startAt": "0:44",
+        "audioDuration": 6
+      },
+      {
+        "word": "OPHELIA",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Most-streamed (non-seasonal) song in a single day [Song title, last word]",
+        "audioUrl": 2181406707,
+        "startAt": "0:38",
+        "audioDuration": 10.5
+      },
+      {
+        "word": "FLOWERS",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Fastest song to reach 1B streams [Song title]",
+        "audioUrl": 1423132066,
+        "startAt": "0:21",
+        "audioDuration": 12
+      },
+      {
+        "word": "SEVEN",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Most-streamed debut track by any artist [Song title]",
+        "audioUrl": 1657245045,
+        "startAt": "0:43",
+        "audioDuration": 10
+      }
+    ]
   }
 }
