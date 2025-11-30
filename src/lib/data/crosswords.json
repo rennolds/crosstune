@@ -22495,5 +22495,104 @@
         "audioDuration": 10
       }
     ]
+  },
+  "2025-11-30": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "EVANESCENCE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 1621290525,
+        "startAt": "0:31",
+        "audioDuration": 11
+      },
+      {
+        "word": "TROYE",
+        "startX": 6,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "audioUrl": 1564144813,
+        "startAt": "0:45",
+        "audioDuration": 11
+      },
+      {
+        "word": "OWLCITY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": 46352940,
+        "startAt": "0:13",
+        "audioDuration": 12
+      },
+      {
+        "word": "YELLOW",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 255770358,
+        "startAt": "1:25",
+        "audioDuration": 14
+      },
+      {
+        "word": "INSECURE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "You're what?",
+        "audioUrl": 256071623,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "CITYGIRLS",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title (shares name with a female hip-hop duo)",
+        "audioUrl": 560161071,
+        "startAt": "0:16",
+        "audioDuration": 13
+      },
+      {
+        "word": "ENCORE",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Album title (an audience might demand it)",
+        "audioUrl": 256256837,
+        "startAt": "1:31.3",
+        "audioDuration": 10
+      },
+      {
+        "word": "ELECTRIC",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "What street are we going to rock down to?",
+        "audioUrl": 1666640427,
+        "startAt": "0:16",
+        "audioDuration": 19
+      }
+    ]
   }
 }
