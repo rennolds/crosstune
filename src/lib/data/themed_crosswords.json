@@ -2515,5 +2515,272 @@
         "audioDuration": 10
       }
     ]
+  },
+  "23": {
+    "title": "The Carpenters",
+    "date_available": "2025-12-07",
+    "author": "lavendeerhaze",
+    "thumbnail": "https://pbs.twimg.com/media/Gp5gPoRWsAAS9cc.jpg",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "PICKINS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Slim ____",
+        "audioUrl": "1901884191",
+        "startAt": "1:43",
+        "audioDuration": 16.5,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/slim-pickins?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+      },
+      {
+        "word": "PLEASE",
+        "startX": 6,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title x3",
+        "audioUrl": "1840545771",
+        "startAt": "0:00",
+        "audioDuration": 6.4,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-please?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+      },
+      {
+        "word": "NONSENSE",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Famous for the varying outros",
+        "audioUrl": "1301637733",
+        "startAt": "2:20",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/nonsense"
+      },
+      {
+        "word": "HOT",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Last word of this song title",
+        "audioUrl": "2161676655",
+        "startAt": "23:28",
+        "audioDuration": 10.6,
+        "soundcloudUrl": "https://soundcloud.com/tell-fer/sabrina-carpenter-mans-best"
+      },
+      {
+        "word": "FLOOR",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "1st, 2nd, 3rd ____",
+        "audioUrl": "2161676655",
+        "startAt": "32:13",
+        "audioDuration": 7.8,
+        "soundcloudUrl": "https://soundcloud.com/tell-fer/sabrina-carpenter-mans-best"
+      },
+      {
+        "word": "EICS",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Album acronym this track is from",
+        "audioUrl": "1301633866",
+        "startAt": "0:43",
+        "audioDuration": 12.4,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/tornado-warnings"
+      },
+      {
+        "word": "MINUTES",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "15 of these",
+        "audioUrl": "2033600068",
+        "startAt": "0:00",
+        "audioDuration": 13.5,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/15-minutes?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+      },
+      {
+        "word": "ESPRESSO",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1799087761",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-espresso?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+      },
+      {
+        "word": "MANCHILD",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "The cuter word for it",
+        "audioUrl": "2108590512",
+        "startAt": "0:32.5",
+        "audioDuration": 8.5,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/manchild"
+      },
+      {
+        "word": "BEDCHEM",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title (a type of chemistry)",
+        "audioUrl": "1901887812",
+        "startAt": "1:01",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/bed-chem?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+      }
+    ]
+  },
+  "24": {
+    "title": "Songs that say shawty",
+    "date_available": "2025-12-14",
+    "author": "Tommy Rennolds",
+    "thumbnail": "",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BIRTHDAY",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This song celebrates shawty's ____",
+        "audioUrl": "255893901",
+        "startAt": "0:00",
+        "audioDuration": 6.2,
+        "soundcloudUrl": "https://soundcloud.com/50_cent/in-da-club"
+      },
+      {
+        "word": "FIREBURNING",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "309809494",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/seankingston/fire-burning-album-version"
+      },
+      {
+        "word": "LOW",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "271224235",
+        "startAt": "0:12",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain"
+      },
+      {
+        "word": "DOJA",
+        "startX": 8,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First part of this artist's name",
+        "audioUrl": "1073025196",
+        "startAt": "0:00",
+        "audioDuration": 17.25,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/get-into-it-yuh"
+      },
+      {
+        "word": "DECIDE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "If shawty's indecisive, she can't ____ (Sean Kingston's words)",
+        "audioUrl": "461627763",
+        "startAt": "0:00",
+        "audioDuration": 10.4,
+        "soundcloudUrl": "https://soundcloud.com/seankingston/eenie-meenie-radio-version"
+      },
+      {
+        "word": "MISTLETOE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "737719336",
+        "startAt": "0:57",
+        "audioDuration": 17.5,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/mistletoe"
+      },
+      {
+        "word": "JUICYJ",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Featured artist name",
+        "audioUrl": "170339902",
+        "startAt": "0:07",
+        "audioDuration": 13.8,
+        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/usher-i-dont-mind-feat-juicy-j"
+      },
+      {
+        "word": "BAR",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "In this track, shawty works behind the ___",
+        "audioUrl": "257063829",
+        "startAt": "0:17",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/t-pain/bartender-main-version"
+      },
+      {
+        "word": "IPOD",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Ancient device for listening to music featured in this track",
+        "audioUrl": "256078245",
+        "startAt": "0:50",
+        "audioDuration": 10.8,
+        "soundcloudUrl": "https://soundcloud.com/iyazliveofficial/replay"
+      },
+      {
+        "word": "WOW",
+        "startX": 9,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "590222589",
+        "startAt": "0:12",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/postmalone/wow-remix-feat-roddy-ricch"
+      }
+    ]
   }
 }
