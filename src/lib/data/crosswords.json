@@ -23144,7 +23144,7 @@
     ]
   },
   "2025-12-06": {
-    "title": "",
+    "title": "(by Blatus)",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -23152,140 +23152,140 @@
     },
     "theme": "pink",
     "words": [
-      {
-        "word": "CHEAPTHRILLS",
-        "startX": 0,
-        "startY": 0,
-        "direction": "across",
-        "color": "#FFB34B",
-        "textClue": "Song title",
-        "audioUrl": "258025315",
-        "startAt": "0:00",
-        "audioDuration": 15
-      },
-      {
-        "word": "HEATHENS",
-        "startX": 2,
-        "startY": 2,
-        "direction": "across",
-        "color": "#00FFFF",
-        "textClue": "Song title",
-        "audioUrl": "269483280",
-        "startAt": "0:16",
-        "audioDuration": 6
-      },
-      {
-        "word": "OUR",
-        "startX": 0,
-        "startY": 5,
-        "direction": "across",
-        "color": "#FE9C9C",
-        "textClue": "Whose time is it?",
-        "audioUrl": "190628327",
-        "startAt": "0:00",
-        "audioDuration": 15
-      },
-      {
-        "word": "CHROMA",
-        "startX": 6,
-        "startY": 5,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "Second word of this song title",
-        "audioUrl": "1943683355",
-        "startAt": "1:44",
-        "audioDuration": 10
-      },
-      {
-        "word": "STAYWITH",
-        "startX": 2,
-        "startY": 7,
-        "direction": "across",
-        "color": "#FFCEFD",
-        "textClue": "First two words of this song title",
-        "audioUrl": "253876259",
-        "startAt": "0:10",
-        "audioDuration": 15
-      },
-      {
-        "word": "SAFEANDSOUND",
-        "startX": 0,
-        "startY": 9,
-        "direction": "across",
-        "color": "#FF5B5E",
-        "textClue": "Song title",
-        "audioUrl": "1908350849",
-        "startAt": "0:10",
-        "audioDuration": 15
-      },
-      {
-        "word": "CANTHOLDUS",
-        "startX": 0,
-        "startY": 0,
-        "direction": "down",
-        "color": "#568EFF",
-        "textClue": "Song title",
-        "audioUrl": "182404702",
-        "startAt": "2:24",
-        "audioDuration": 7
-      },
-      {
-        "word": "HEARTS",
-        "startX": 2,
-        "startY": 2,
-        "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "Second word of this song title",
-        "audioUrl": "1267388815",
-        "startAt": "0:00",
-        "audioDuration": 15
-      },
-      {
-        "word": "PLACE",
-        "startX": 4,
-        "startY": 0,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "a ___ for my head",
-        "audioUrl": "219074811",
-        "startAt": "0:30",
-        "audioDuration": 15
-      },
-      {
-        "word": "AVA",
-        "startX": 4,
-        "startY": 7,
-        "direction": "down",
-        "color": "#FE9C9C",
-        "textClue": "First word of this artist's name",
-        "audioUrl": "773748067",
-        "startAt": "0:00",
-        "audioDuration": 10
-      },
-      {
-        "word": "SMOOTH",
-        "startX": 9,
-        "startY": 2,
-        "direction": "down",
-        "color": "#28D66A",
-        "textClue": "First word of this song title",
-        "audioUrl": "308950076",
-        "startAt": "0:17",
-        "audioDuration": 10
-      },
-      {
-        "word": "SOAPPALLED",
-        "startX": 11,
-        "startY": 0,
-        "direction": "down",
-        "color": "#FFCEFD",
-        "textClue": "Song title",
-        "audioUrl": "255766574",
-        "startAt": "0:00",
-        "audioDuration": 15
-      }
-    ]
-  },
+    {
+      "word": "CHEAPTHRILLS",
+      "startX": 0,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": "258025315",
+      "startAt": "0:00",
+      "audioDuration": 15
+    },
+    {
+      "word": "HEATHENS",
+      "startX": 2,
+      "startY": 2,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Song & Album title",
+      "audioUrl": "269483280",
+      "startAt": "0:16",
+      "audioDuration": 6
+    },
+    {
+      "word": "OUR",
+      "startX": 0,
+      "startY": 5,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Whose time is it?",
+      "audioUrl": "190628327",
+      "startAt": "0:00",
+      "audioDuration": 15
+    },
+    {
+      "word": "CHROMA",
+      "startX": 6,
+      "startY": 5,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "St. ____ [song title]",
+      "audioUrl": "1943683355",
+      "startAt": "1:44",
+      "audioDuration": 10
+    },
+    {
+      "word": "STAYWITH",
+      "startX": 2,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "First two words of this song's title",
+      "audioUrl": "253876259",
+      "startAt": "0:28",
+      "audioDuration": 14
+    },
+    {
+      "word": "SAFEANDSOUND",
+      "startX": 0,
+      "startY": 9,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": "1908350849",
+      "startAt": "0:25",
+      "audioDuration": 11
+    },
+    {
+      "word": "CANTHOLDUS",
+      "startX": 0,
+      "startY": 0,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Song title",
+      "audioUrl": "182404702",
+      "startAt": "2:38",
+      "audioDuration": 11
+    },
+    {
+      "word": "HEARTS",
+      "startX": 2,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Purple ____ [song title]",
+      "audioUrl": "1267388815",
+      "startAt": "0:00",
+      "audioDuration": 15
+    },
+    {
+      "word": "PLACE",
+      "startX": 4,
+      "startY": 0,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "A ___ for My Head [song title]",
+      "audioUrl": "219074811",
+      "startAt": "0:30",
+      "audioDuration": 15
+    },
+    {
+      "word": "AVA",
+      "startX": 4,
+      "startY": 7,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "First word of this artist's name",
+      "audioUrl": "773748067",
+      "startAt": "0:00",
+      "audioDuration": 10
+    },
+    {
+      "word": "SMOOTH",
+      "startX": 9,
+      "startY": 2,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "First word of this song title",
+      "audioUrl": "308950076",
+      "startAt": "0:17",
+      "audioDuration": 10
+    },
+    {
+      "word": "SOAPPALLED",
+      "startX": 11,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Song title (feat. JAY-Z, Pusha T, CyHi, Swizz Beatz, RZA)",
+      "audioUrl": "255766574",
+      "startAt": "0:00",
+      "audioDuration": 15
+    }
+  ]
+},
   "2025-12-07": {
     "title": "Artists You Know, Songs You Don't",
     "version": "1.0.0",
