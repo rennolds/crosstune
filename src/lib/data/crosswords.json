@@ -23285,5 +23285,243 @@
         "audioDuration": 15
       }
     ]
+  },
+  "2025-12-07": {
+    "title": "Artists You Know, Songs You Don't",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "CARPENTER",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "1901884290",
+        "startAt": "2:32",
+        "audioDuration": 23.8,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/dont-smile"
+      },
+      {
+        "word": "EAGLE",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band name, but singular",
+        "audioUrl": "255870539",
+        "startAt": "0:11",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/eaglesofficial/lyin-eyes"
+      },
+      {
+        "word": "LDR",
+        "startX": 9,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name as an acronym",
+        "audioUrl": "673138919",
+        "startAt": "0:09",
+        "audioDuration": 12.2,
+        "soundcloudUrl": "https://soundcloud.com/lana-del-rey/the-next-best-american-record"
+      },
+      {
+        "word": "KENDRICK",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First part of artist name",
+        "audioUrl": "1631800632",
+        "startAt": "0:17",
+        "audioDuration": 13.5,
+        "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/ignorance-is-bliss"
+      },
+      {
+        "word": "ARIANA",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "1768726386",
+        "startAt": "1:09",
+        "audioDuration": 19.2,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-intro-end-of-the"
+      },
+      {
+        "word": "HOUSTON",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": "253799631",
+        "startAt": "0:07",
+        "audioDuration": 16.5,
+        "soundcloudUrl": "https://soundcloud.com/whitneyhouston/lover-for-life"
+      },
+      {
+        "word": "THEKILLERS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": "273792832",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/thekillers/under-the-gun-album-version"
+      },
+      {
+        "word": "BLINK",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Shorthand for this band name",
+        "audioUrl": "256119556",
+        "startAt": "0:01",
+        "audioDuration": 20.4,
+        "soundcloudUrl": "https://soundcloud.com/blink-182/aliens-exist-album-version"
+      },
+      {
+        "word": "PERRY",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": "1541208880",
+        "startAt": "0:57.92",
+        "audioDuration": 22.2,
+        "soundcloudUrl": "https://soundcloud.com/katyperry/a-cup-of-coffee-remixed"
+      }
+    ]  
+  },
+  "2025-12-14": {
+    "title": "Artists You Know, Songs You Don't II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "AVICII",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "631662513",
+        "startAt": "1:43",
+        "audioDuration": 29,
+        "soundcloudUrl": "https://soundcloud.com/aviciiofficial/heaven"
+      },
+      {
+        "word": "PARAMORE",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band name",
+        "audioUrl": "256142123",
+        "startAt": "0:55",
+        "audioDuration": 22.7,
+        "soundcloudUrl": "https://soundcloud.com/paramore/for-a-pessimist-im-pretty"
+      },
+      {
+        "word": "BILLIE",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "audioUrl": "1096503190",
+        "startAt": "0:35",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/billieeilish/everybody-dies"
+      },
+      {
+        "word": "RADIO",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The piece of equipment in this band's name",
+        "audioUrl": "268007345",
+        "startAt": "0:11",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/radiohead/a-wolf-at-the-door"
+      },
+      {
+        "word": "GAGA",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "The gibberish part of this artist's name",
+        "audioUrl": "2047815152",
+        "startAt": "0:08",
+        "audioDuration": 19.3,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/zombieboy"
+      },
+      {
+        "word": "NICKI",
+        "startX": 3,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": "483613245",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/barbie-dreams"
+      },
+      {
+        "word": "CHARLIXCX",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "819571285",
+        "startAt": "2:17",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/charlixcx/detonate"
+      },
+      {
+        "word": "WONDER",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "259046512",
+        "startAt": "0:08",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/stevie-wonder-official/please-dont-go"
+      },
+      {
+        "word": "ABEL",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "This artist's actual first name; sounds like a synonym of the word capable",
+        "audioUrl": "385320476",
+        "startAt": "4:49",
+        "audioDuration": 19,
+        "soundcloudUrl": "https://soundcloud.com/user-25166470/the-weeknd-outside-explicit420"
+      }
+    ]
   }
 }
