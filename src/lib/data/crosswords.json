@@ -23405,6 +23405,106 @@
       }
     ]  
   },
+  {
+  "2025-12-08": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+    {
+      "word": "SHBOOM",
+      "startX": 1,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": 298760767,
+      "startAt": "0:00",
+      "audioDuration": 10
+    },
+    {
+      "word": "CASH",
+      "startX": 1,
+      "startY": 3,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Artist last name",
+      "audioUrl": 326291074,
+      "startAt": "0:17",
+      "audioDuration": 14
+    },
+    {
+      "word": "DEJAVU",
+      "startX": 5,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Song title (parles-tu français?)",
+      "audioUrl": 1020528670,
+      "startAt": "0:51",
+      "audioDuration": 15
+    },
+    {
+      "word": "DELILAH",
+      "startX": 5,
+      "startY": 7,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Name in this song's title",
+      "audioUrl": 283122057,
+      "startAt": "0:00",
+      "audioDuration": 6
+    },
+    {
+      "word": "SICKO",
+      "startX": 1,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "____ Mode [song title]",
+      "audioUrl": 480200517,
+      "startAt": "0:19",
+      "audioDuration": 13
+    },
+    {
+      "word": "MANEATER",
+      "startX": 6,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": 1571114044,
+      "startAt": "1:25",
+      "audioDuration": 7
+    },
+    {
+      "word": "KING",
+      "startX": 8,
+      "startY": 6,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Artist last name",
+      "audioUrl": 254068691,
+      "startAt": "0:14",
+      "audioDuration": 16
+    },
+    {
+      "word": "FIVE",
+      "startX": 9,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "How much?",
+      "audioUrl": 44717664,
+      "startAt": "1:35.5",
+      "audioDuration": 11
+    }
+  ]
+},
   "2025-12-14": {
     "title": "Artists You Know, Songs You Don't II",
     "version": "1.0.0",
