@@ -23504,6 +23504,105 @@
     }
   ]
 },
+  "2025-12-09": {
+    "title": "Country: England  Group Size: 1",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+    {
+      "word": "MANINEED",
+      "startX": 1,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": 2152859232,
+      "startAt": "0:48",
+      "audioDuration": 13
+    },
+    {
+      "word": "SMITH",
+      "startX": 0,
+      "startY": 6,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Artist last name",
+      "audioUrl": 76738498,
+      "startAt": "0:51",
+      "audioDuration": 11
+    },
+    {
+      "word": "BOWIE",
+      "startX": 6,
+      "startY": 6,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Artist last name",
+      "audioUrl": 46361965,
+      "startAt": "0:50",
+      "audioDuration": 11
+    },
+    {
+      "word": "BUSH",
+      "startX": 5,
+      "startY": 8,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Artist last name",
+      "audioUrl": 254529366,
+      "startAt": "0:19",
+      "audioDuration": 12
+    },
+    {
+      "word": "SADE",
+      "startX": 0,
+      "startY": 6,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Artist name",
+      "audioUrl": 1493298820,
+      "startAt": "1:03",
+      "audioDuration": 10
+    },
+    {
+      "word": "BRAZIL",
+      "startX": 2,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Song title (shares name with a country)",
+      "audioUrl": 1350966649,
+      "startAt": "1:23",
+      "audioDuration": 11
+    },
+    {
+      "word": "YOUNG",
+      "startX": 5,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Artist last name",
+      "audioUrl": 1828822362,
+      "startAt": "0:50",
+      "audioDuration": 6
+    },
+    {
+      "word": "WINEHOUSE",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Artist last name",
+      "audioUrl": 247837829,
+      "startAt": "0:00",
+      "audioDuration": 7
+    }
+  ]
+},
   "2025-12-14": {
     "title": "Artists You Know, Songs You Don't II",
     "version": "1.0.0",
