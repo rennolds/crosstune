@@ -23603,6 +23603,105 @@
     }
   ]
 },
+  "2025-12-10": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+    {
+      "word": "IBIZA",
+      "startX": 6,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Location in song title",
+      "audioUrl": 255822981,
+      "startAt": "0:09.5",
+      "audioDuration": 12
+    },
+    {
+      "word": "HARRISON",
+      "startX": 3,
+      "startY": 4,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Last name of this Beatles member",
+      "audioUrl": 252742078,
+      "startAt": “0:30",
+      "audioDuration": 8
+    },
+    {
+      "word": "FUN",
+      "startX": 8,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Band name (sans special character)",
+      "audioUrl": 231862397,
+      "startAt": "0:00”,
+      "audioDuration": 7
+    },
+    {
+      "word": "LOST",
+      "startX": 0,
+      "startY": 8,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Song title (shares a name with a TV show)",
+      "audioUrl": 1647150384,
+      "startAt": “1:56”,
+      "audioDuration": 16
+    },
+    {
+      "word": "HEART",
+      "startX": 3,
+      "startY": 4,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "The thing you need to listen to in this track",
+      "audioUrl": 254555572,
+      "startAt": “0:21”,
+      "audioDuration": 8
+    },
+    {
+      "word": "CARTER",
+      "startX": 5,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Name in this album title (there are 6 of them)",
+      "audioUrl": 252944918,
+      "startAt": “0:15”,
+      "audioDuration": 7
+    },
+    {
+      "word": "BIGGIE",
+      "startX": 7,
+      "startY": 0,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Nickname for this artist",
+      "audioUrl": 257079730,
+      "startAt": "0:21.5",
+      "audioDuration": 12.5
+    },
+    {
+      "word": "CHOPSUEY",
+      "startX": 9,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Song title (also a delicious dish)",
+      "audioUrl": 250983601,
+      "startAt": "0:48",
+      "audioDuration": 12
+    }
+  ]
+},
   "2025-12-14": {
     "title": "Artists You Know, Songs You Don't II",
     "version": "1.0.0",
