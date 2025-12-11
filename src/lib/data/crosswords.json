@@ -23702,6 +23702,149 @@
     }
   ]
 },
+  "2025-12-19": {
+    "title": "Surfin' the radio in 2015",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+    {
+      "word": "OMI",
+      "startX": 4,
+      "startY": 2,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Artist name",
+      "audioUrl": 256767919,
+      "startAt": "0:12",
+      "audioDuration": 11
+    },
+    {
+      "word": "GOOD",
+      "startX": 8,
+      "startY": 3,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "\"Honey I'm ____\" [Finish the lyric] ",
+      "audioUrl": 252540099,
+      "startAt": "0:03",
+      "audioDuration": 8
+    },
+    {
+      "word": "CENTURIES",
+      "startX": 0,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Measurement of time in this song",
+      "audioUrl": 263908744,
+      "startAt": "0:02",
+      "audioDuration": 11
+    },
+    {
+      "word": "LEANON",
+      "startX": 1,
+      "startY": 6,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Song title",
+      "audioUrl": 193781466,
+      "startAt": "0:30",
+      "audioDuration": 10
+    },
+    {
+      "word": "NEYO",
+      "startX": 8,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Featured artist name",
+      "audioUrl": 190628327,
+      "startAt": "0:08",
+      "audioDuration": 8
+    },
+    {
+      "word": "45",
+      "startX": 4,
+      "startY": 8,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "The 'numbers' in this song",
+      "audioUrl": 267452739,
+      "startAt": "0:00",
+      "audioDuration": 13
+    },
+    {
+      "word": "ELLIE",
+      "startX": 1,
+      "startY": 4,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Artist first name",
+      "audioUrl": 389163060,
+      "startAt": "0:19",
+      "audioDuration": 8
+    },
+    {
+      "word": "QUAN",
+      "startX": 2,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Hit the ____ (Titular dance move)",
+      "audioUrl": 250033408,
+      "startAt": "1:00",
+      "audioDuration": 8
+    },
+    {
+      "word": "XO",
+      "startX": 4,
+      "startY": 1,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "The 'letters' in this song",
+      "audioUrl": 168861838,
+      "startAt": "0:07",
+      "audioDuration": 12
+    },
+    {
+      "word": "MAROON5",
+      "startX": 5,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Artist name",
+      "audioUrl": 271229414,
+      "startAt": "0:07",
+      "audioDuration": 11
+    },
+    {
+      "word": "BIGSEAN",
+      "startX": 8,
+      "startY": 1,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Artist name",
+      "audioUrl": 199387210,
+      "startAt": "1:01",
+      "audioDuration": 7
+    },
+    {
+      "word": "BADBLOOD",
+      "startX": 11,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Song title",
+      "audioUrl": 1650652419,
+      "startAt": "0:48.2",
+      "audioDuration": 6.9
+    }
+  ]
+},
   "2025-12-14": {
     "title": "Artists You Know, Songs You Don't II",
     "version": "1.0.0",
