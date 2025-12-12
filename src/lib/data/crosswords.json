@@ -23846,7 +23846,7 @@
   ]
 },
   "2025-12-12": {
-    "title": "Who's that feat.",
+    "title": "\"Featuring who?\" (by Churro)",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -23860,7 +23860,7 @@
       "startY": 2,
       "direction": "across",
       "color": "#FFB34B",
-      "textClue": "Artist last name",
+      "textClue": "Featured artist last name",
       "audioUrl": "1817793996",
       "startAt": "2:00",
       "audioDuration": 15
@@ -23871,7 +23871,7 @@
       "startY": 3,
       "direction": "across",
       "color": "#00FFFF",
-      "textClue": "Artist",
+      "textClue": "Featured artist",
       "audioUrl": "897174484",
       "startAt": "0:00",
       "audioDuration": 15
@@ -23882,7 +23882,7 @@
       "startY": 6,
       "direction": "across",
       "color": "#FE9C9C",
-      "textClue": "First Part of Artist name",
+      "textClue": "First fart of featured artist's name",
       "audioUrl": "216602339",
       "startAt": "1:10",
       "audioDuration": 15
@@ -23893,10 +23893,10 @@
       "startY": 6,
       "direction": "across",
       "color": "#28D66A",
-      "textClue": "Artist last name",
+      "textClue": "Second part of featured artist's name",
       "audioUrl": "903528619",
-      "startAt": "0:00",
-      "audioDuration": 15
+      "startAt": "0:21",
+      "audioDuration": 10
     },
     {
       "word": "NICKI",
@@ -23904,10 +23904,10 @@
       "startY": 8,
       "direction": "across",
       "color": "#FFCEFD",
-      "textClue": "Artist First name",
+      "textClue": "Featured artist first name",
       "audioUrl": "309401672",
-      "startAt": "0:00",
-      "audioDuration": 30
+      "startAt": "0:07",
+      "audioDuration": 14
     },
     {
       "word": "BRUNO",
@@ -23915,9 +23915,9 @@
       "startY": 8,
       "direction": "across",
       "color": "#FF5B5E",
-      "textClue": "Artist first name",
+      "textClue": "Featured artist first name",
       "audioUrl": "242706733",
-      "startAt": "0:50",
+      "startAt": "0:54.2",
       "audioDuration": 15
     },
     {
@@ -23926,7 +23926,7 @@
       "startY": 4,
       "direction": "down",
       "color": "#568EFF",
-      "textClue": "Artist first name",
+      "textClue": "Featured artist first name",
       "audioUrl": "256173835",
       "startAt": "1:08",
       "audioDuration": 15
@@ -23937,7 +23937,7 @@
       "startY": 0,
       "direction": "down",
       "color": "#FFB34B",
-      "textClue": "Artist First name",
+      "textClue": "Featured artist first name",
       "audioUrl": "135180352",
       "startAt": "0:24",
       "audioDuration": 30
@@ -23948,10 +23948,10 @@
       "startY": 0,
       "direction": "down",
       "color": "#00FFFF",
-      "textClue": "Artist First Name",
+      "textClue": "Featured artist first name",
       "audioUrl": "373344446",
-      "startAt": "1:29",
-      "audioDuration": 20
+      "startAt": "1:36",
+      "audioDuration": 10
     },
     {
       "word": "ANDRE",
@@ -23959,7 +23959,7 @@
       "startY": 1,
       "direction": "down",
       "color": "#FE9C9C",
-      "textClue": "First Name minus #",
+      "textClue": "Featured artist name (minus the number)",
       "audioUrl": "1896466944",
       "startAt": "0:33",
       "audioDuration": 30
@@ -23970,7 +23970,7 @@
       "startY": 2,
       "direction": "down",
       "color": "#28D66A",
-      "textClue": "Artist",
+      "textClue": "Featured artist",
       "audioUrl": "1449953248",
       "startAt": "0:28",
       "audioDuration": 30
