@@ -23977,6 +23977,161 @@
     }
   ]
 },
+  "2025-12-13": {
+    "title": "🏃‍♂️ (by Will Vani)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+    {
+      "word": "BULLET",
+      "startX": 6,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Run faster than my what?",
+      "audioUrl": "256168961",
+      "startAt": "0:56",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/fosterthepeoplemusic/pumped-up-kicks"
+    },
+    {
+      "word": "AWAY",
+      "startX": 2,
+      "startY": 1,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Run ____",
+      "audioUrl": "1647152475",
+      "startAt": "2:02",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/songsthatarentonscbackup/kanye-west-runaway-feat-pusha-t"
+    },
+    {
+      "word": "RUDOLPH",
+      "startX": 0,
+      "startY": 3,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Run ____ Run",
+      "audioUrl": "259013590",
+      "startAt": "0:03",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/chuck-berry-official/run-rudolph-run"
+    },
+    {
+      "word": "PSYCHOKILLER",
+      "startX": 0,
+      "startY": 6,
+      "direction": "across",
+      "color": "#568EFF",
+      "textClue": "Who should you run from? [Song title]",
+      "audioUrl": "257083512",
+      "startAt": "0:20",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/talkingheads/psycho-killer"
+    },
+    {
+      "word": "JUNGLE",
+      "startX": 3,
+      "startY": 8,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Run Through The ____",
+      "audioUrl": "253535689",
+      "startAt": "0:40",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/creedence-clearwater-revival/run-through-the-jungle"
+    },
+    {
+      "word": "CREEP",
+      "startX": 0,
+      "startY": 2,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "She's running out the door because he's a ____",
+      "audioUrl": "1080978001",
+      "startAt": "3:27",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/deathismercy/radio-head-creep"
+    },
+    {
+      "word": "SUE",
+      "startX": 1,
+      "startY": 6,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Runaround ____",
+      "audioUrl": "254626988",
+      "startAt": "0:14",
+      "audioDuration": 15,
+      "soundcloudUrl": "https://soundcloud.com/dion_dion_dion/runaround-sue"
+    },
+    {
+      "word": "BAND",
+      "startX": 2,
+      "startY": 0,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "____ On The Run",
+      "audioUrl": "30065749",
+      "startAt": "0:00",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/paulmccartney/bandontherun-mix-by"
+    },
+    {
+      "word": "BORN",
+      "startX": 5,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "____ to Run",
+      "audioUrl": "257037374",
+      "startAt": "0:13",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-to-run-1"
+    },
+    {
+      "word": "HILL",
+      "startX": 7,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Running Up That ____",
+      "audioUrl": "254527393",
+      "startAt": "0:55",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/kate-bush-official/running-up-that-hill-a-deal"
+    },
+    {
+      "word": "LIKEHELL",
+      "startX": 9,
+      "startY": 0,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Run ____",
+      "audioUrl": "255745546",
+      "startAt": "0:20",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/officialpinkfloyd/run-like-hell-2011-remastered"
+    },
+    {
+      "word": "SCARED",
+      "startX": 11,
+      "startY": 3,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Running ______",
+      "audioUrl": "253512102",
+      "startAt": "0:19",
+      "audioDuration": 9.5,
+      "soundcloudUrl": "https://soundcloud.com/roy-orbison-official/running-scared-1"
+    }
+  ]
+},
   "2025-12-14": {
     "title": "Artists You Know, Songs You Don't II",
     "version": "1.0.0",
