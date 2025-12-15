@@ -24250,5 +24250,104 @@
         "soundcloudUrl": "https://soundcloud.com/user-25166470/the-weeknd-outside-explicit420"
       }
     ]
+  },
+  "2025-12-15": {
+    "title": "Famous Covers II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "TORN",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Title of this cover by Natalie Imbruglia",
+        "audioUrl": 212034334,
+        "startAt": "0:50",
+        "audioDuration": 11
+      },
+      {
+        "word": "BOXER",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Title of this cover by Mumford & Sons (sans the)",
+        "audioUrl": 418575612,
+        "startAt": "0:42",
+        "audioDuration": 16
+      },
+      {
+        "word": "LANDSLIDE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Title of this cover by The Chicks",
+        "audioUrl": 18906062,
+        "startAt": "0:52",
+        "audioDuration": 16
+      },
+      {
+        "word": "IMAGINE",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Title of this cover by A Perfect Circle",
+        "audioUrl": 90195933,
+        "startAt": "1:25",
+        "audioDuration": 20
+      },
+      {
+        "word": "AFRICA",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Title of this cover by Weezer",
+        "audioUrl": 450859938,
+        "startAt": "0:25",
+        "audioDuration": 11
+      },
+      {
+        "word": "YOURSONG",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Title of this cover by Ellie Goulding",
+        "audioUrl": 271219335,
+        "startAt": "1:05",
+        "audioDuration": 18
+      },
+      {
+        "word": "JOLENE",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Title of this cover by The White Stripes",
+        "audioUrl": 6257300,
+        "startAt": "0:44",
+        "audioDuration": 11
+      },
+      {
+        "word": "GIRLCRUSH",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title of this cover by Harry Styles",
+        "audioUrl": 1241395876,
+        "startAt": "0:10",
+        "audioDuration": 15
+      }
+    ]
   }
 }
