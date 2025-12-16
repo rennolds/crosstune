@@ -24402,9 +24402,9 @@
         "direction": "down",
         "color": "#FF5B5E",
         "textClue": "The two things he needs in this song \"____ and a ____\"",
-        "audioUrl": "1647163917",
-        "startAt": "0:00",
-        "audioDuration": 6,
+        "audioUrl": 1647163917,
+        "startAt": "1:28",
+        "audioDuration": 14
         "soundcloudUrl": "https://soundcloud.com/songsthatarentonscbackup/justin-bieber-beauty-and-a-beat-feat-nicki-minaj"
       },
       {
@@ -24438,10 +24438,10 @@
         "direction": "down",
         "color": "#00FFFF",
         "textClue": "The three initials in this group's name",
-        "audioUrl": "256076502",
-        "startAt": "0:08",
-        "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/run-dmcofficial/christmas-in-hollis"
+        "audioUrl": 281767995,
+        "startAt": "0:15",
+        "audioDuration": 11
+        "soundcloudUrl": ""
       },
       {
         "word": "NIRVANA",
