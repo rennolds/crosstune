@@ -24349,5 +24349,112 @@
         "audioDuration": 15
       }
     ]
+  },
+  "2025-12-16": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "MANCHILD",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "2108590512",
+        "startAt": "0:22",
+        "audioDuration": 5.7,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/manchild"
+      },
+      {
+        "word": "LOVER",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Album + Song title",
+        "audioUrl": "666283961",
+        "startAt": "0:11",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/lover"
+      },
+      {
+        "word": "SNOWMAN",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "350261863",
+        "startAt": "0:34",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/siamusic/snowman"
+      },
+      {
+        "word": "BEAUTYBEAT",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "The two things he needs in this song \"____ and a ____\"",
+        "audioUrl": "1647163917",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/songsthatarentonscbackup/justin-bieber-beauty-and-a-beat-feat-nicki-minaj"
+      },
+      {
+        "word": "CHILDISH",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Half of this artist's name",
+        "audioUrl": "255843062",
+        "startAt": "0:22",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/childish-gambino/3005-2"
+      },
+      {
+        "word": "WHISTLE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "256209502",
+        "startAt": "0:13",
+        "audioDuration": 7.8,
+        "soundcloudUrl": "https://soundcloud.com/official_flo/whistle"
+      },
+      {
+        "word": "DMC",
+        "startX": 7,
+        "startY": 7,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The three initials in this group's name",
+        "audioUrl": "256076502",
+        "startAt": "0:08",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/run-dmcofficial/christmas-in-hollis"
+      },
+      {
+        "word": "NIRVANA",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "audioUrl": "258954123",
+        "startAt": "1:41",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/nirvana/something-in-the-way-album"
+      }
+    ]
   }
 }
