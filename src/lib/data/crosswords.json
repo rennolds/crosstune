@@ -24772,5 +24772,115 @@
         "audioDuration": 7.5
       }
     ]
+  },
+  "2025-12-20": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "gnome",
+    "words": [
+      {
+        "word": "SWANS",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "7 of these",
+        "audioUrl": 271221512,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "HIPPO",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "What he wants, for short",
+        "audioUrl": 126540773,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "HYMNAL",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last word of this song title",
+        "audioUrl": 343951892,
+        "startAt": "0:54",
+        "audioDuration": 10.7
+      },
+      {
+        "word": "LICENSE",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What did she get last week?",
+        "audioUrl": 957446587,
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "ARTHUR",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name",
+        "audioUrl": 279731748,
+        "startAt": "0:09",
+        "audioDuration": 10
+      },
+      {
+        "word": "ACDC",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Band name",
+        "audioUrl": 256074979,
+        "startAt": "0:20",
+        "audioDuration": 8
+      },
+      {
+        "word": "SLOWHANDS",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 320938217,
+        "startAt": "0:19",
+        "audioDuration": 11
+      },
+      {
+        "word": "TIMBER",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 114238860,
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "SANTA",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "____ Baby",
+        "audioUrl": 1944163619,
+        "startAt": "0:12",
+        "audioDuration": 7.2
+      }
+    ]
   }
 }
