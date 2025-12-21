@@ -24882,5 +24882,104 @@
         "audioDuration": 7.2
       }
     ]
+  },
+  "2025-12-21": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "gnome",
+    "words": [
+      {
+        "word": "LEWIS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": 526155132,
+        "startAt": "0:08",
+        "audioDuration": 7
+      },
+      {
+        "word": "CARPENTER",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": 1397646415,
+        "startAt": "0:00",
+        "audioDuration": 11
+      },
+      {
+        "word": "SUNFLOWER",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 516180894,
+        "startAt": "0:01",
+        "audioDuration": 8
+      },
+      {
+        "word": "WALLOWS",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Band name",
+        "audioUrl": 566482608,
+        "startAt": "0:45",
+        "audioDuration": 10.8
+      },
+      {
+        "word": "FANCY",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 255793175,
+        "startAt": "0:51",
+        "audioDuration": 10
+      },
+      {
+        "word": "SINATRA",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": 1397955466,
+        "startAt": "0:09",
+        "audioDuration": 11
+      },
+      {
+        "word": "TAKEFIVE",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title \"ya like jazz?\" (You might say \"this\" before a brief break",
+        "audioUrl": 346045909,
+        "startAt": "0:19",
+        "audioDuration": 13
+      },
+      {
+        "word": "GRACIE",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": 788080327,
+        "startAt": "0:24.5",
+        "audioDuration": 9.2
+      }
+    ]
   }
 }
