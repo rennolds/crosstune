@@ -25080,5 +25080,115 @@
         "audioDuration": 7.5
       }
     ]
+  },
+  "2025-12-23": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "gnome",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "WHITE",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "____ Christmas",
+        "audioUrl": 253483824,
+        "startAt": "0:28",
+        "audioDuration": 23
+      },
+      {
+        "word": "BLUE",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "____ Christmas",
+        "audioUrl": 259005185,
+        "startAt": "0:00",
+        "audioDuration": 21
+      },
+      {
+        "word": "WILDEST",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "____ Dreams",
+        "audioUrl": 1126194298,
+        "startAt": "0:37.6",
+        "audioDuration": 17
+      },
+      {
+        "word": "RICH",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "____ Girl",
+        "audioUrl": 253511666,
+        "startAt": "0:13.25",
+        "audioDuration": 9.75
+      },
+      {
+        "word": "LAST",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "____ Christmas",
+        "audioUrl": 252824159,
+        "startAt": "0:00",
+        "audioDuration": 17
+      },
+      {
+        "word": "LUCID",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "____ Dreams",
+        "audioUrl": 328259811,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "SWEET",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "____ Dreams",
+        "audioUrl": 252884609,
+        "startAt": "0:12",
+        "audioDuration": 16
+      },
+      {
+        "word": "MATERIAL",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "____ Girl",
+        "audioUrl": 214807077,
+        "startAt": "0:27",
+        "audioDuration": 15.4
+      },
+      {
+        "word": "UPTOWN",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "____ Girl",
+        "audioUrl": 257053801,
+        "startAt": "0:00",
+        "audioDuration": 8.5
+      }
+    ]
   }
 }
