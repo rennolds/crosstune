@@ -24981,5 +24981,104 @@
         "audioDuration": 9.2
       }
     ]
+  },
+  "2025-12-22": {
+    "title": "Surfin' the radio in 2021",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "gnome",
+    "words": [
+      {
+        "word": "LUKECOMBS",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 911180284,
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "LILNASX",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": 1014672238,
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "PEACHES",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 1010966185,
+        "startAt": "0:18",
+        "audioDuration": 9
+      },
+      {
+        "word": "TEARS",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Save what?",
+        "audioUrl": 779347072,
+        "startAt": "0:08",
+        "audioDuration": 12
+      },
+      {
+        "word": "LOVE",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Pop Smoke asks what you know about \"this\"",
+        "audioUrl": 850506619,
+        "startAt": "0:41",
+        "audioDuration": 6
+      },
+      {
+        "word": "LEVITATING",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 781674976,
+        "startAt": "0:36",
+        "audioDuration": 8.8
+      },
+      {
+        "word": "BTS",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Band name",
+        "audioUrl": 1087164283,
+        "startAt": "0:04",
+        "audioDuration": 10
+      },
+      {
+        "word": "STAY",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 1082723470,
+        "startAt": "0:11",
+        "audioDuration": 7.5
+      }
+    ]
   }
 }
