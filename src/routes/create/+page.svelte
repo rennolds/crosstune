@@ -819,6 +819,7 @@
           color: gameColors[index % gameColors.length],
           textClue: word.clue,
           audioUrl: validation.trackId,
+          soundcloudUrl: word.soundcloudUrl,
           startAt: timing.startAt,
           audioDuration: timing.audioDuration,
         };
