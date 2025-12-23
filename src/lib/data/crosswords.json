@@ -25190,5 +25190,433 @@
         "audioDuration": 8.5
       }
     ]
+  },
+  "2025-12-26": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BILLYIDOL",
+        "startX": 2,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 255996560,
+        "soundcloudUrl": "https://soundcloud.com/official-billy-idol/rebel-yell",
+        "startAt": "0:15",
+        "audioDuration": 14
+      },
+      {
+        "word": "WISEMAN",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Never made it as a ____",
+        "audioUrl": 214807157,
+        "soundcloudUrl": "https://soundcloud.com/nickelback/how-you-remind-me",
+        "startAt": "0:03",
+        "audioDuration": 14
+      },
+      {
+        "word": "VAMPIRE",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (a mythical creature)",
+        "audioUrl": 1553375155,
+        "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/vampire",
+        "startAt": "2:29",
+        "audioDuration": 22.4
+      },
+      {
+        "word": "DRACULA",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title (also a famous instance of 3A)",
+        "audioUrl": 2177083860,
+        "soundcloudUrl": "https://soundcloud.com/aka-716226817/tame-impala-dracula",
+        "startAt": "0:26",
+        "audioDuration": 13
+      },
+      {
+        "word": "FRIENDS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Last word of this song title, before the parentheses",
+        "audioUrl": 1768729284,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-we-cant-be",
+        "startAt": "0:42.35",
+        "audioDuration": 12.4
+      },
+      {
+        "word": "KRYPTONITE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title (can mean \\\"achilles' heel\\\")",
+        "audioUrl": 256191738,
+        "soundcloudUrl": "https://soundcloud.com/3doorsdown/kryptonite-1",
+        "startAt": "0:16",
+        "audioDuration": 18.5
+      },
+      {
+        "word": "MIDDLE",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title, drop \\\"the\\\"",
+        "audioUrl": 256030899,
+        "soundcloudUrl": "https://soundcloud.com/jimmyeatworld/the-middle",
+        "startAt": "0:00",
+        "audioDuration": 16.3
+      },
+      {
+        "word": "ROMANCE",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Noun in this song title",
+        "audioUrl": 255904811,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/bad-romance-1",
+        "startAt": "0:17",
+        "audioDuration": 6.5
+      }
+    ]
+  },
+  "2025-12-27": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BREAK",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Verb in this song title",
+        "audioUrl": 539593383,
+        "soundcloudUrl": "https://soundcloud.com/taiocruz/break-your-heart-3",
+        "startAt": "0:10",
+        "audioDuration": 18
+      },
+      {
+        "word": "CAROLINE",
+        "startX": 2,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Name in this song title",
+        "audioUrl": 1959669387,
+        "soundcloudUrl": "https://soundcloud.com/theraverepublic/neil-diamond-sweet-caroline-rave-republic-festival-remix",
+        "startAt": "0:15",
+        "audioDuration": 13.7
+      },
+      {
+        "word": "FEELITCOMING",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title, drop the ‘I’”,
+        "audioUrl": 293178649,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/i-feel-it-coming-1",
+        "startAt": "0:40",
+        "audioDuration": 21
+      },
+      {
+        "word": "PAPAJOHNS",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Pizza chain referenced in this song",
+        "audioUrl": 1616879268,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/femininomenon-1",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "WAVINFLAG",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Name of this World Cup song",
+        "audioUrl": 252890285,
+        "soundcloudUrl": "https://soundcloud.com/knaan-official/wavin-flag-coca-cola-r-2",
+        "startAt": "0:00",
+        "audioDuration": 15.3
+      },
+      {
+        "word": "CALIFORNIA",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Location in this song title",
+        "audioUrl": 253613260,
+        "soundcloudUrl": "https://soundcloud.com/the-mamas-the-papas/california-dreamin-1",
+        "startAt": "0:02",
+        "audioDuration": 15
+      },
+      {
+        "word": "NUMB",
+        "startX": 10,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 255824765,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/numb",
+        "startAt": "0:21",
+        "audioDuration": 13
+      },
+      {
+        "word": "STING",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 252663442,
+        "soundcloudUrl": "https://soundcloud.com/sting/shape-of-my-heart-album-1",
+        "startAt": "0:00",
+        "audioDuration": 22
+      }
+    ]
+  },
+  "2025-12-28": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "RESPECT",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 255802771,
+        "soundcloudUrl": "https://soundcloud.com/arethafranklin/respect-1",
+        "startAt": "0:08",
+        "audioDuration": 18
+      },
+      {
+        "word": "LOVELY",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Adjective in this song title",
+        "audioUrl": 259085296,
+        "soundcloudUrl": "https://soundcloud.com/stevie-wonder-official/isnt-she-lovely",
+        "startAt": "0:00",
+        "audioDuration": 19
+      },
+      {
+        "word": "YUKON",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (also a Canadian territory)",
+        "audioUrl": 2128193169,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/yukon",
+        "startAt": "0:04",
+        "audioDuration": 15
+      },
+      {
+        "word": "SOMETHINGBAD",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What's about to happen?",
+        "audioUrl": 308686961,
+        "soundcloudUrl": "https://soundcloud.com/steevlacy/3-dark-red",
+        "startAt": "0:15",
+        "audioDuration": 7.3
+      },
+      {
+        "word": "DAYNNITE",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title (punctuation removed)",
+        "audioUrl": 237889026,
+        "soundcloudUrl": "https://soundcloud.com/darrion-eddie/kid-cudi-day-n-nite",
+        "startAt": "0:27.1",
+        "audioDuration": 14.5
+      },
+      {
+        "word": "IGOTYOU",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "It don't matter no, cuz ____",
+        "audioUrl": 255878086,
+        "soundcloudUrl": "https://soundcloud.com/akon/dont-matter-album-version",
+        "startAt": "0:29",
+        "audioDuration": 8.8
+      },
+      {
+        "word": "SAYMYNAME",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 253510334,
+        "soundcloudUrl": "https://soundcloud.com/destinys-child-official/say-my-name",
+        "startAt": "0:00",
+        "audioDuration": 18
+      },
+      {
+        "word": "SATURN",
+        "startX": 10,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a celestial body in the Milky Way)",
+        "audioUrl": 1754372958,
+        "soundcloudUrl": "https://soundcloud.com/szababy2/saturn",
+        "startAt": "0:08",
+        "audioDuration": 19
+      }
+    ]
+  },
+  "2025-12-29": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SORRY",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 737719381,
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/sorry",
+        "startAt": "0:00",
+        "audioDuration": 12.9
+      },
+      {
+        "word": "PONY",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Animal in this song title",
+        "audioUrl": 790026607,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/pink-pony-club",
+        "startAt": "0:46",
+        "audioDuration": 12
+      },
+      {
+        "word": "DISPOSITION",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Sweet ____",
+        "audioUrl": 255776720,
+        "soundcloudUrl": "https://soundcloud.com/the-temper-trap/sweet-disposition",
+        "startAt": "0:34",
+        "audioDuration": 16
+      },
+      {
+        "word": "LATCH",
+        "startX": 7,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 59051244,
+        "soundcloudUrl": "https://soundcloud.com/disclosuremusic/latch-ft-sam-smith",
+        "startAt": "0:14",
+        "audioDuration": 10
+      },
+      {
+        "word": "FOUNDLOVE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "We ____",
+        "audioUrl": 23907786,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/we-found-love",
+        "startAt": "0:59",
+        "audioDuration": 12.7
+      },
+      {
+        "word": "DAFTPUNK",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": “Artist “name,
+        "audioUrl": 254111919,
+        "soundcloudUrl": "https://soundcloud.com/daftpunkofficialmusic/digital-love?in=daftpunkofficialmusic%2Fsets%2Fdiscovery-8",
+        "startAt": "1:33",
+        "audioDuration": 19
+      },
+      {
+        "word": "SOCLOSE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Feel ___",
+        "audioUrl": 255884736,
+        "soundcloudUrl": "https://soundcloud.com/calvinharris/feel-so-close-radio-edit",
+        "startAt": "0:14",
+        "audioDuration": 12.9
+      },
+      {
+        "word": "PORTUGAL",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Country in this artist name",
+        "audioUrl": 310455689,
+        "soundcloudUrl": "https://soundcloud.com/portugaltheman/feel-it-still-1",
+        "startAt": "0:35",
+        "audioDuration": 15.3
+      }
+    ]
   }
 }
