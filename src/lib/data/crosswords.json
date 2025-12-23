@@ -25191,6 +25191,161 @@
       }
     ]
   },
+  "2025-12-24": {
+    "version": "1.0.0",
+    "title": "(by Kate)",
+    "theme": "gnome",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+    {
+      "word": "FRENCH",
+      "startX": 3,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Language this song is sung in",
+      "audioUrl": "1670662998",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/edith-piaf-official/non-je-ne-regrette-182617746"
+    },
+    {
+      "word": "MILK",
+      "startX": 5,
+      "startY": 2,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "1st part of song title",
+      "audioUrl": "283999696",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/iamkelis/milkshake-3"
+    },
+    {
+      "word": "LORD",
+      "startX": 0,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "1st word of artist name",
+      "audioUrl": "418005024",
+      "startAt": "0:30",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/lord-huron/when-the-night-is-over"
+    },
+    {
+      "word": "RINGS",
+      "startX": 6,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "Last word of this film's title",
+      "audioUrl": "314230139",
+      "startAt": "2:16",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/the-city-of-prague-philharmonic-orchestra/concerning-hobbits-from-the"
+    },
+    {
+      "word": "DRUMMING",
+      "startX": 0,
+      "startY": 6,
+      "direction": "across",
+      "color": "#568EFF",
+      "textClue": "Which song?",
+      "audioUrl": "251381480",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/florence-the-machine/drumming-song"
+    },
+    {
+      "word": "LAY",
+      "startX": 9,
+      "startY": 6,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "1st word of song title",
+      "audioUrl": "253122543",
+      "startAt": "2:12",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/abba-official/lay-all-your-love-on-me"
+    },
+    {
+      "word": "DOVES",
+      "startX": 2,
+      "startY": 8,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "2nd word of song title",
+      "audioUrl": "260422885",
+      "startAt": "1:19",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/prince/when-doves-cry-1"
+    },
+    {
+      "word": "LADIES",
+      "startX": 0,
+      "startY": 4,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "2nd word of song title",
+      "audioUrl": "256526486",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/beyonce/single-ladies-put-a-ring-on-3"
+    },
+    {
+      "word": "PEAR",
+      "startX": 2,
+      "startY": 1,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "____-shaped",
+      "audioUrl": "326755174",
+      "startAt": "0:44",
+      "audioDuration": 21,
+      "soundcloudUrl": "https://soundcloud.com/marilyn-monroe-official/diamonds-are-a-girls-best-18"
+    },
+    {
+      "word": "PIPER",
+      "startX": 5,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Who is calling you?",
+      "audioUrl": "256217892",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/ledzeppelin/stairway-to-heaven-2"
+    },
+    {
+      "word": "CALLING",
+      "startX": 7,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Artist name (minus 'the')",
+      "audioUrl": "253507526",
+      "startAt": "0:00",
+      "audioDuration": 30,
+      "soundcloudUrl": "https://soundcloud.com/the-calling-official/wherever-you-will-go"
+    },
+    {
+      "word": "SWAN",
+      "startX": 10,
+      "startY": 4,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "1st word of song title",
+      "audioUrl": "560435784",
+      "startAt": "0:53",
+      "audioDuration": 22,
+      "soundcloudUrl": "https://soundcloud.com/dualipa/swan-song-from-the-motion"
+    }
+  ]
+},
   "2025-12-26": {
     "version": "1.0.0",
     "title": "",
