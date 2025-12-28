@@ -2903,5 +2903,138 @@
         "soundcloudUrl": "https://soundcloud.com/darion-lopez-38557354/beat-it-michael-jackson"
       }
     ]
+  },
+  "26": {
+    "title": "All Ariana",
+    "date_available": "2025-12-28",
+    "author": "Hayley",
+    "thumbnail": "https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fariana-grande-2018-v0-xrafb34drukf1.png%3Fauto%3Dwebp%26s%3Da720b00ea70ca0eab51ca6dd7b4100145e1ae888",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "TEARS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "She doesn't have any of these left",
+        "audioUrl": "432427398",
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/no-tears-left-to-cry",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "ETERNAL",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of the album this song appears on",
+        "audioUrl": "1768729722",
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-eternal-sunshine",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "POV",
+        "startX": 9,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (an abbreviation)",
+        "audioUrl": "919105429",
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-pov",
+        "startAt": "0:23",
+        "audioDuration": 10
+      },
+      {
+        "word": "NASTY",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "919106869",
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-nasty",
+        "startAt": "0:16",
+        "audioDuration": 10
+      },
+      {
+        "word": "MYHAIR",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 919106629,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-my-hair",
+        "startAt": "0:10",
+        "audioDuration": 11
+      },
+      {
+        "word": "THIRTY",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Second word in song title (a number)",
+        "audioUrl": "919104553",
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-six-thirty",
+        "startAt": "0:14",
+        "audioDuration": 11
+      },
+      {
+        "word": "REM",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title (also a stage in the sleep cycle)",
+        "audioUrl": "616330317",
+        "soundcloudUrl": "https://soundcloud.com/silentwolfmusic/ariana-grande-rem",
+        "startAt": "0:37",
+        "audioDuration": 6
+      },
+      {
+        "word": "RAIN",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Weather event in this song",
+        "audioUrl": 486816183,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/raindrops-an-angel-cried",
+        "startAt": "0:08",
+        "audioDuration": 11
+      },
+      {
+        "word": "GLINDA",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "She's kinda wicked",
+        "audioUrl": "1964055863",
+        "soundcloudUrl": "https://soundcloud.com/wickedmoviecast/popular",
+        "startAt": "1:06",
+        "audioDuration": 6
+      },
+      {
+        "word": "PETE",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The name in this song's title",
+        "audioUrl": "641156541",
+        "soundcloudUrl": "https://soundcloud.com/user-958673303/pete-davidson-live-in-london-ariana-grande",
+        "startAt": "0:07",
+        "audioDuration": 10
+      }
+    ]
   }
 }
