@@ -25892,5 +25892,112 @@
         "audioDuration": 15.3
       }
     ]
+  },
+  "2025-12-30": {
+    "version": "1.0.0",
+    "title": "by Carley",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "EVANESCENCE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 1650400809,
+        "soundcloudUrl": "https://soundcloud.com/evanescence/my-immortal-remastered-2023",
+        "startAt": "0:42",
+        "audioDuration": 18
+      },
+      {
+        "word": "TENNISCOURT",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 95489889,
+        "soundcloudUrl": "https://soundcloud.com/lordemusic/tennis-court",
+        "startAt": "0:19",
+        "audioDuration": 10
+      },
+      {
+        "word": "BOOMBASTIC",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 13505233,
+        "soundcloudUrl": "https://soundcloud.com/direalshaggy/boombastic",
+        "startAt": "0:22",
+        "audioDuration": 9
+      },
+      {
+        "word": "PETTY",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": 255867009,
+        "soundcloudUrl": "https://soundcloud.com/tompettymusic/free-fallin-2",
+        "startAt": "0:11",
+        "audioDuration": 11
+      },
+      {
+        "word": "PAYNE",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name",
+        "audioUrl": 321858044,
+        "soundcloudUrl": "https://soundcloud.com/liampayneofficial/strip-that-down",
+        "startAt": "0:08",
+        "audioDuration": 7
+      },
+      {
+        "word": "ILLBE",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 38237308,
+        "soundcloudUrl": "https://soundcloud.com/thisischarlie/ill-be-edwin-mccain",
+        "startAt": "1:00",
+        "audioDuration": 11
+      },
+      {
+        "word": "COCO",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This song is an original from what movie soundtrack?",
+        "audioUrl": 346608553,
+        "soundcloudUrl": "https://soundcloud.com/anthonygonzalez-music/un-poco-loco-from-coco",
+        "startAt": "0:28",
+        "audioDuration": 8.6
+      },
+      {
+        "word": "UNTIL",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word of song title",
+        "audioUrl": 1112214940,
+        "soundcloudUrl": "https://soundcloud.com/stephensanchezofficial/until-i-found-you",
+        "startAt": "0:32",
+        "audioDuration": 9
+      }
+    ]
   }
 }
