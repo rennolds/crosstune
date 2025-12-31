@@ -26106,5 +26106,112 @@
         "audioDuration": 10
       }
     ]
+  },
+  "2026-01-02": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "PIANOMAN",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 574476711,
+        "soundcloudUrl": "https://soundcloud.com/deanstansby/pianoman",
+        "startAt": "0:08",
+        "audioDuration": 5
+      },
+      {
+        "word": "STAY",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 76458401,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/stay-f-mikky-ekko-preview",
+        "startAt": "0:06",
+        "audioDuration": 15.2
+      },
+      {
+        "word": "THECHAIN",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 254399470,
+        "soundcloudUrl": "https://soundcloud.com/fleetwoodmacofficial/the-chain-2004-remastered",
+        "startAt": "0:16",
+        "audioDuration": 11
+      },
+      {
+        "word": "HOLIDAY",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 1893659970,
+        "soundcloudUrl": "https://soundcloud.com/greenday/holiday-2",
+        "startAt": "0:16",
+        "audioDuration": 17.1
+      },
+      {
+        "word": "BILLS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title x3",
+        "audioUrl": 253514972,
+        "soundcloudUrl": "https://soundcloud.com/destinys-child-official/bills-bills-bills",
+        "startAt": "0:10",
+        "audioDuration": 12
+      },
+      {
+        "word": "HOLLY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Last name in this song title",
+        "audioUrl": 256245831,
+        "soundcloudUrl": "https://soundcloud.com/weezer/buddy-holly",
+        "startAt": "0:15",
+        "audioDuration": 13
+      },
+      {
+        "word": "WATERFALLS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 254119637,
+        "soundcloudUrl": "https://soundcloud.com/tlcofficial/waterfalls",
+        "startAt": "0:09",
+        "audioDuration": 17
+      },
+      {
+        "word": "THEWAY",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 257504071,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/the-way-1",
+        "startAt": "0:19",
+        "audioDuration": 11.5
+      }
+    ]
   }
 }
