@@ -25999,5 +25999,100 @@
         "audioDuration": 9
       }
     ]
+  },
+  "2025-12-31": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "HELL",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Gives you what?",
+        "audioUrl": 26322812,
+        "soundcloudUrl": "https://soundcloud.com/interscope/the-all-american-rejects-gives",
+        "startAt": "0:11",
+        "audioDuration": 9
+      },
+      {
+        "word": "GATES",
+        "startX": 6,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": 227010461,
+        "soundcloudUrl": "https://soundcloud.com/kevingates/really-really",
+        "startAt": "0:14",
+        "audioDuration": 9
+      },
+      {
+        "word": "RAPDEVIL",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 500072673,
+        "soundcloudUrl": "https://soundcloud.com/mgk/rap-devil",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "DEATH",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of band name",
+        "audioUrl": 256201357,
+        "soundcloudUrl": "https://soundcloud.com/deathcabforcutie/i-will-follow-you-into-the",
+        "startAt": "0:23",
+        "audioDuration": 14
+      },
+      {
+        "word": "CLOUD9",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title (also an idiom for being happy)",
+        "audioUrl": 728465092,
+        "soundcloudUrl": "https://soundcloud.com/beachbunnymusic/cloud-9",
+        "startAt": "0:18",
+        "audioDuration": 10
+      },
+      {
+        "word": "PARADISE",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 255770469,
+        "soundcloudUrl": "https://soundcloud.com/coldplay/paradise",
+        "startAt": "1:01.3",
+        "audioDuration": 8
+      },
+      {
+        "word": "FIRE",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Last word of song title",
+        "audioUrl": 326291074,
+        "soundcloudUrl": "https://soundcloud.com/johnnycash/ring-of-fire-12",
+        "startAt": "0:33.5",
+        "audioDuration": 10.5
+      }
+    ]
   }
 }
