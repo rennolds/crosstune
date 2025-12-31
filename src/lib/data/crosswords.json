@@ -26107,6 +26107,149 @@
       }
     ]
   },
+  "2026-01-01": {
+    "version": "1.0.0",
+    "title": "Happy New Year! (2025 Wrapped)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MAYHEM",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Album title, also a synonym for chaos",
+        "audioUrl": 2024565124,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/abracadabra",
+        "startAt": "0:11",
+        "audioDuration": 17
+      },
+      {
+        "word": "SOMBR",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "This artist released their debut album in 2025",
+        "audioUrl": 1990384383,
+        "soundcloudUrl": "https://soundcloud.com/sombrsongs/back-to-friends",
+        "startAt": "0:43",
+        "audioDuration": 21.6
+      },
+      {
+        "word": "GOLDEN",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 2123745324,
+        "soundcloudUrl": "https://soundcloud.com/huntrx-sc/golden",
+        "startAt": "0:13",
+        "audioDuration": 17.6
+      },
+      {
+        "word": "MANINEED",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 2152859232,
+        "soundcloudUrl": "https://soundcloud.com/oliviaadean/man-i-need",
+        "startAt": "0:24",
+        "audioDuration": 13.7
+      },
+      {
+        "word": "LANA",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Name of this deluxe album release",
+        "audioUrl": 1754372958,
+        "soundcloudUrl": "https://soundcloud.com/szababy2/saturn",
+        "startAt": "0:09",
+        "audioDuration": 10
+      },
+      {
+        "word": "AAR",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Acronym for this band that resurfaced in 2025 from their backyard shows",
+        "audioUrl": 259137939,
+        "soundcloudUrl": "https://soundcloud.com/the-all-american-rejects/dirty-little-secret-album",
+        "startAt": "0:15",
+        "audioDuration": 14
+      },
+      {
+        "word": "SUGAR",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Ingredient in this song title",
+        "audioUrl": 2133746019,
+        "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/sugar-on-my-tongue",
+        "startAt": "1:12",
+        "audioDuration": 21
+      },
+      {
+        "word": "AMINOR",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The line everyone sang along to in the 2025 Super Bowl",
+        "audioUrl": 1814709189,
+        "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/not-like-us",
+        "startAt": "0:59.3",
+        "audioDuration": 15.6
+      },
+      {
+        "word": "ORDINARY",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 2022404597,
+        "soundcloudUrl": "https://soundcloud.com/alexwaarren/ordinary",
+        "startAt": "0:34",
+        "audioDuration": 19.3
+      },
+      {
+        "word": "OPHELIA",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First name in this song title",
+        "audioUrl": 2181406707,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/the-fate-of-ophelia",
+        "startAt": "1:05",
+        "audioDuration": 20.1
+      },
+      {
+        "word": "MANCHILD",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 2108590512,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/manchild",
+        "startAt": "2:08.1",
+        "audioDuration": 14.7
+      }
+    ]
+  },
   "2026-01-02": {
     "version": "1.0.0",
     "title": "",
