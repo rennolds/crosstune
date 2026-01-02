@@ -2167,7 +2167,7 @@
 
 {#if showUnavailableMessage}
   <div
-    class="fixed bottom-4 right-4 bg-yellow-200 text-yellow-800 p-4 rounded shadow-lg z-50"
+    class="fixed bottom-[166px] right-4 bg-yellow-200 text-yellow-800 p-4 rounded shadow-lg z-50"
   >
     <p>
       This SoundCloud track isn't available in your region. We've revealed the
