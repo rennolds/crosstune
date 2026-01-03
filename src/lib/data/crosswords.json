@@ -26464,8 +26464,7 @@
       }
     ]
   },
-  "2026-01-04":
-  {
+  "2026-01-04": {
     "version": "1.0.0",
     "title": "by Vasec",
     "theme": "black",
@@ -26605,6 +26604,113 @@
         "soundcloudUrl": "https://soundcloud.com/journey-official/dont-stop-believin-1",
         "startAt": "0:08",
         "audioDuration": 17
+      }
+    ]
+  },
+  "2026-01-05": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "Instrumental II",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "GUITAR",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Instrument",
+        "audioUrl": 344240458,
+        "soundcloudUrl": "https://soundcloud.com/relient-k-official/getting-into-you",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "UKE",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Nickname for this instrument",
+        "audioUrl": 253558222,
+        "soundcloudUrl": "https://soundcloud.com/israel-kamakawiwoole/over-the-rainbow?in=mario-juarez-461968063%2Fsets%2Fukelele-songs-covers-1",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "CLARINET",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Instrument",
+        "audioUrl": 35539990,
+        "soundcloudUrl": "https://soundcloud.com/ccradiocc-classic-morning/17-mozart-clarinet-concerto-in",
+        "startAt": "0:17",
+        "audioDuration": 10
+      },
+      {
+        "word": "BANJO",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Instrument",
+        "audioUrl": 959597281,
+        "soundcloudUrl": "https://soundcloud.com/alejandro-chavez-920785612/bluegrass-banjo-country-banjo",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "TUBA",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Instrument",
+        "audioUrl": 259119333,
+        "soundcloudUrl": "https://soundcloud.com/veggietales-official/veggietales-theme-song",
+        "startAt": "0:00",
+        "audioDuration": 5
+      },
+      {
+        "word": "DIDGERIDOO",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Instrument",
+        "audioUrl": 42625810,
+        "soundcloudUrl": "https://soundcloud.com/banjoista/didgeridoo-australian",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "FLUTE",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Instrument",
+        "audioUrl": 486673950,
+        "soundcloudUrl": "https://soundcloud.com/russ/the-flute-song-prod-scott-storch",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "ORGAN",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Instrument",
+        "audioUrl": 567787563,
+        "soundcloudUrl": "https://soundcloud.com/paulamos-music/a-mighty-fortress-is-our-god-1",
+        "startAt": "0:00",
+        "audioDuration": 9
       }
     ]
   },
