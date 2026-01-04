@@ -3036,5 +3036,150 @@
         "audioDuration": 10
       }
     ]
+  },
+  "27": {
+    "title": "Kings of Country",
+    "date_available": "2026-01-04",
+    "author": "Paul Pursifull",
+    "thumbnail": "https://americanhatmakers.com/cdn/shop/articles/clint-eastwood-cowboy-fistful-dollars.webp?v=1681948384",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "COMBS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": 324527624,
+        "soundcloudUrl": "https://soundcloud.com/lukecombs/when-it-rains-it-pours",
+        "startAt": "0:14",
+        "audioDuration": 14
+      },
+      {
+        "word": "BROOKS",
+        "startX": 6,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": 1198228636,
+        "soundcloudUrl": "https://soundcloud.com/user-860294120/garth-brooks-friends-in-low",
+        "startAt": "0:46",
+        "audioDuration": 10
+      },
+      {
+        "word": "STRAIT",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": 256203010,
+        "soundcloudUrl": "https://soundcloud.com/george-strait-music/check-yes-or-no-album-version",
+        "startAt": "0:43",
+        "audioDuration": 7
+      },
+      {
+        "word": "WILLIAMS",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": 368428397,
+        "soundcloudUrl": "https://soundcloud.com/hank-williams-official/hey-good-lookin-23",
+        "startAt": "0:07",
+        "audioDuration": 13
+      },
+      {
+        "word": "HAGGARD",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name",
+        "audioUrl": 287253119,
+        "soundcloudUrl": "https://soundcloud.com/merle-haggard-official/mama-tried-3",
+        "startAt": "0:50",
+        "audioDuration": 11
+      },
+      {
+        "word": "JACKSON",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": 254074573,
+        "soundcloudUrl": "https://soundcloud.com/alanjacksonofficial/chattahoochee",
+        "startAt": "0:14",
+        "audioDuration": 10
+      },
+      {
+        "word": "CHESNEY",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": 522695301,
+        "soundcloudUrl": "https://soundcloud.com/kenny_chesney/american-kids",
+        "startAt": "0:16",
+        "audioDuration": 11
+      },
+      {
+        "word": "MCGRAW",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": 1173607246,
+        "soundcloudUrl": "https://soundcloud.com/timmcgrawofficial/tim-mcgraw-something-like-1",
+        "startAt": "0:40",
+        "audioDuration": 10
+      },
+      {
+        "word": "WILLIAMS",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": 736117876,
+        "soundcloudUrl": "https://soundcloud.com/don-williams-official/tulsa-time-5",
+        "startAt": "0:47",
+        "audioDuration": 12
+      },
+      {
+        "word": "ROGERS",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": 1473504976,
+        "soundcloudUrl": "https://soundcloud.com/royrogers-music/happy-trails",
+        "startAt": "0:08",
+        "audioDuration": 15
+      },
+      {
+        "word": "STAPLETON",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "audioUrl": 924198421,
+        "soundcloudUrl": "https://soundcloud.com/chris-stapleton-music/you-should-probably-leave",
+        "startAt": "0:31",
+        "audioDuration": 11
+      }
+    ]
   }
 }
