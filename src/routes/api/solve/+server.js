@@ -1,5 +1,5 @@
 /** @type {import('./$types').RequestHandler} */
-export async function POST({ request, platform }) {
+export async function POST({ request, locals }) {
 	try {
 		const { puzzle_id } = await request.json();
 		
@@ -10,24 +10,14 @@ export async function POST({ request, platform }) {
 			});
 		}
 
-		// Get the D1 database binding
-		const db = platform?.env?.['solve-db'];
-		
-		if (!db) {
-			return new Response(JSON.stringify({ error: 'Database not available' }), {
-				status: 500,
-				headers: { 'Content-Type': 'application/json' }
-			});
-		}
+		// Use Supabase RPC for atomic increment
+		const { error } = await locals.supabase
+			.rpc('increment_solve_count', { p_id: puzzle_id });
 
-		// Simple approach - just increment the solve count
-		const { results } = await db.prepare(`
-			INSERT INTO solves (puzzle_id, solve_count, updated_at)
-			VALUES (?, 1, unixepoch())
-			ON CONFLICT(puzzle_id) DO UPDATE SET
-				solve_count = solve_count + 1,
-				updated_at = unixepoch()
-		`).bind(puzzle_id).run();
+		if (error) {
+			console.error('Supabase error:', error);
+			throw error;
+		}
 
 		return new Response(JSON.stringify({ success: true, puzzle_id }), {
 			headers: { 'Content-Type': 'application/json' }

@@ -23,49 +23,30 @@
   let usernameValid = $state(true);
 
   async function handleUsernameInput(e) {
-    const val = e.target.value;
-    // Auto-convert to lowercase as user types
-    if (val !== val.toLowerCase()) {
-      username = val.toLowerCase();
-    } else {
-      username = val; // Ensure bound value updates if no change
-    }
+    const val = e.target.value.toLowerCase();
+    username = val;
 
-    // Real-time validation feedback
     if (!val) {
       usernameHint = "";
       usernameValid = true;
-    } else if (val.length < 3) {
+      return;
+    }
+
+    // Show friendly character countdown for short usernames
+    if (val.length < 3) {
       usernameHint = `${3 - val.length} more character${3 - val.length > 1 ? "s" : ""} needed`;
       usernameValid = false;
-    } else if (!/^[a-z0-9_]+$/.test(val)) {
-      usernameHint = "Only lowercase letters, numbers, and underscores";
-      usernameValid = false;
-    } else if (val.length > 24) {
-      usernameHint = "Maximum 24 characters";
+      return;
+    }
+
+    // Use centralized validation for everything else
+    const error = await validateUsername(val);
+    if (error) {
+      usernameHint = error;
       usernameValid = false;
     } else {
-      // Check profanity async
-      const error = await validateUsername(val);
-      if (
-        error &&
-        error !== "Username is required" &&
-        error !== "Username must be at least 3 characters" &&
-        error !== "Username must be at most 24 characters" &&
-        error !==
-          "Username can only contain lowercase letters, numbers, and underscores"
-      ) {
-        usernameHint = error;
-        usernameValid = false;
-      } else {
-        if (error) {
-          usernameHint = error;
-          usernameValid = false;
-        } else {
-          usernameHint = "✓ Looks good!";
-          usernameValid = true;
-        }
-      }
+      usernameHint = "✓ Looks good!";
+      usernameValid = true;
     }
   }
 
@@ -105,16 +86,16 @@
 
     if (candidate && allowed.includes(candidate)) {
       returnTo = candidate;
-      redirectTo = `${returnTo}/auth/callback`;
-      showForm = true;
     } else {
       // Default to current origin for local dev
       returnTo = window.location.origin;
-      redirectTo = `${returnTo}/auth/callback`;
-      showForm = true;
     }
 
     if (n && n.startsWith("/")) nextPath = n;
+    
+    // Construct the callback URL with the next parameter
+    redirectTo = `${returnTo}/auth/callback?next=${encodeURIComponent(nextPath)}`;
+    showForm = true;
   });
 
   async function onSubmit(e) {
@@ -184,6 +165,7 @@
 
         // Send signup magic link with user metadata
         const now = new Date().toISOString();
+        console.log("Sending signup magic link to:", email, "Redirect to:", redirectTo);
         const { error } = await supabase.auth.signInWithOtp({
           email,
           options: {
@@ -196,9 +178,14 @@
             },
           },
         });
-        if (error) throw error;
+        if (error) {
+           console.error("Signup error:", error);
+           throw error;
+        }
+        console.log("Signup magic link sent.");
       } else {
         // LOGIN: send login-only magic link
+        console.log("Sending login magic link to:", email, "Redirect to:", redirectTo);
         const { error } = await supabase.auth.signInWithOtp({
           email,
           options: {
@@ -207,6 +194,7 @@
           },
         });
         if (error) {
+          console.error("Login error:", error);
           const msg = String(error.message).toLowerCase();
           if (
             msg.includes("user not found") ||
@@ -217,6 +205,7 @@
           }
           throw error;
         }
+        console.log("Login magic link sent.");
       }
 
       sent = true;

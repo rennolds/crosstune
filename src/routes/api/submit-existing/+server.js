@@ -3,24 +3,20 @@ import axios from 'axios';
 import { DISCORD_WEBHOOK_URL } from '$env/static/private';
 import { sanitizeAuthor, sanitizeTitle, validateNotes } from '$lib/utils/filters.js';
 
-export async function POST({ request, platform }) {
+export async function POST({ request, locals }) {
   try {
     const { id, creditName, email, notes } = await request.json();
     if (!id) {
       return new Response('Missing id', { status: 400 });
     }
 
-    const db = platform?.env?.['solve-db'];
-    if (!db) {
-      return new Response('Database not available', { status: 500 });
-    }
+    const { data: row, error } = await locals.supabase
+      .from('crosstune_puzzles')
+      .select('id, puzzle_json')
+      .eq('id', id)
+      .single();
 
-    const row = await db
-      .prepare(`SELECT id, puzzle_json FROM custom_puzzles WHERE id = ?`)
-      .bind(id)
-      .first();
-
-    if (!row) {
+    if (error || !row) {
       return new Response('Not found', { status: 404 });
     }
 

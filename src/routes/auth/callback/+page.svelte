@@ -9,34 +9,64 @@
   onMount(async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const hashParams = new URLSearchParams(window.location.hash.slice(1));
-    const tokenHash = urlParams.get("token_hash");
-    const type = urlParams.get("type") || "email";
-    const next = data.next || "/";
+    let tokenHash = urlParams.get("token_hash");
+    let type = urlParams.get("type") || "email";
+    let next = data.next || "/";
+
+    // Workaround for Supabase appending parameters with '?' instead of '&' when 'next' is present
+    if (!tokenHash && next.includes("?")) {
+      try {
+        console.log("Detecting potential nested params in next:", next);
+        // Parse 'next' as a URL (relative to current origin)
+        const nestedUrl = new URL(next, window.location.origin);
+        const nestedTokenHash = nestedUrl.searchParams.get("token_hash");
+        
+        if (nestedTokenHash) {
+          console.log("Found nested token_hash. Extracting...");
+          tokenHash = nestedTokenHash;
+          type = nestedUrl.searchParams.get("type") || type;
+          // Clean up next (keep pathname, discard the nested query params)
+          next = nestedUrl.pathname;
+          console.log("Cleaned next:", next);
+        }
+      } catch (e) {
+        console.warn("Error parsing nested params:", e);
+      }
+    }
+
+    console.log("Auth callback client mount. TokenHash:", !!tokenHash, "Type:", type, "Next:", next);
 
     if (tokenHash) {
+      console.log("Verifying OTP...");
       const { error } = await supabase.auth.verifyOtp({
         token_hash: tokenHash,
         type,
       });
       if (!error) {
+        console.log("OTP verified. Redirecting to:", next);
         goto(next);
       } else {
+        console.error("OTP verification error:", error);
         goto("/auth/error");
       }
       return;
     }
 
+    console.log("Checking session...");
     const {
       data: { user },
     } = await supabase.auth.getUser();
+    
     if (user) {
+      console.log("User found in session. Redirecting to:", next);
       goto(next);
     } else {
+      console.log("No user found.");
       const errorDesc =
         urlParams.get("error_description") ||
         hashParams.get("error_description");
       if (errorDesc) {
-        console.error(errorDesc);
+        console.error("Auth error description:", errorDesc);
       }
       // If no user and no error, maybe just redirect to home or login?
       // setTimeout(() => goto('/login'), 3000);

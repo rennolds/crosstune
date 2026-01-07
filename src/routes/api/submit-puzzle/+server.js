@@ -3,7 +3,7 @@ import { validateClue, sanitizeClue } from '$lib/utils/filters.js';
 import axios from 'axios';
 import { DISCORD_WEBHOOK_URL } from '$env/static/private';
 
-export async function POST({ request, platform }) {
+export async function POST({ request, locals }) {
   try {
     const submissionData = await request.json();
 
@@ -76,12 +76,7 @@ export async function POST({ request, platform }) {
       shortestWord: Math.min(...submissionData.words.map(word => word.word.length))
     };
 
-    // Persist to database (custom_puzzles)
-    const db = platform?.env?.['solve-db'];
-    if (!db) {
-      return new Response('Database not available', { status: 500 });
-    }
-
+    // Persist to database (crosstune_puzzles)
     const generateId = () =>
       (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function')
         ? crypto.randomUUID()
@@ -89,17 +84,24 @@ export async function POST({ request, platform }) {
 
     const puzzleId = generateId();
 
-    await db
-      .prepare(
-        `INSERT INTO custom_puzzles (id, puzzle_json, created_by)
-         VALUES (?, ?, ?)`
-      )
-      .bind(
-        puzzleId,
-        JSON.stringify(crosswordData),
-        submissionData?.details?.creditName || null
-      )
-      .run();
+    const creditName = submissionData?.details?.creditName || null;
+    const { user } = await locals.safeGetSession();
+
+    const { error: insertError } = await locals.supabase
+      .from('crosstune_puzzles')
+      .insert({
+        id: puzzleId,
+        puzzle_json: JSON.stringify(crosswordData),
+        user_id: user?.id || null,
+        credit_name: creditName || 'anon',
+        featured_submission: false,
+        approval_status: 'N/A'
+      });
+
+    if (insertError) {
+      console.error('Supabase error:', insertError);
+      throw insertError;
+    }
 
     // Construct the Discord message
     const discordMessage = {

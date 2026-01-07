@@ -5,7 +5,7 @@
   let GridComponent = null;
 
   export let data;
-  const { id, puzzle, created_by } = data;
+  const { id, puzzle, credit_name } = data;
 
   // Capture reveal functions from the grid to wire into the Navbar's Reveal menu
   let revealFns = {};
@@ -33,7 +33,7 @@
         event_category: "custom",
         event_label: puzzle?.title,
         puzzle_id: id,
-        created_by,
+        created_by: credit_name,
       });
     }
   });
@@ -69,11 +69,11 @@
       >
         {puzzle?.title}
       </h1>
-      {#if created_by}
+      {#if credit_name && credit_name !== 'anon'}
         <p
           class="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-2 text-center md:text-left"
         >
-          by {created_by}
+          by {credit_name}
         </p>
       {/if}
     </div>
