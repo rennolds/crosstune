@@ -218,7 +218,7 @@
     return true;
   }
 
-  function handleNextClick() {
+  async function handleNextClick() {
     const words = detectWords();
 
     if (!validateWordCount(words)) {
@@ -227,7 +227,7 @@
 
     // Block malicious/offensive words before proceeding
     for (const w of words) {
-      if (containsProfanity(w.word)) {
+      if (await containsProfanity(w.word)) {
         wordCountWarning = `Word "${w.word}" is not allowed.`;
         showWarning = true;
         return;
@@ -287,7 +287,7 @@
     showWarning = false;
   }
 
-  function validateWordForms() {
+  async function validateWordForms() {
     for (let i = 0; i < detectedWords.length; i++) {
       const word = detectedWords[i];
       const validationKey = `word-${i}`;
@@ -300,7 +300,7 @@
       }
 
       // Clue safety validation
-      const clueCheck = validateClue(word.clue);
+      const clueCheck = await validateClue(word.clue);
       if (!clueCheck.valid) {
         const reasons = clueCheck.reasons;
         let msg = `Clue for "${word.word}" is not allowed: `;
@@ -800,7 +800,7 @@
   }
 
   async function handleCreateJSON() {
-    if (!validateWordForms()) return;
+    if (!(await validateWordForms())) return;
 
     try {
       const wordsWithTrackIds = detectedWords.map((word, index) => {
@@ -1704,7 +1704,7 @@
           <button
             class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={async (event) => {
-              if (!validateWordForms()) return;
+              if (!(await validateWordForms())) return;
               const button = event.target;
               button.disabled = true;
               button.textContent = "Processing...";

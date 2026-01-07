@@ -22,6 +22,28 @@ export async function POST({ request, platform }) {
       "#00FFFF",
     ];
 
+    // Validate clues first (async)
+    const validatedWords = [];
+    for (let index = 0; index < submissionData.words.length; index++) {
+      const word = submissionData.words[index];
+      const { valid, reasons, value } = await validateClue(word.clue || '');
+      if (!valid) {
+        throw { status: 400, index, reasons };
+      }
+      validatedWords.push({
+        word: word.word,
+        startX: word.col,
+        startY: word.row,
+        direction: word.direction.toLowerCase(),
+        color: colorPalette[index % colorPalette.length],
+        textClue: sanitizeClue(value),
+        audioUrl: word.trackId.toString(), // SoundCloud track ID
+        startAt: word.startAt || "0:00", // User-selected start time
+        audioDuration: word.audioDuration || 6, // User-selected duration
+        soundcloudUrl: word.soundcloudUrl // Store original URL for reference
+      });
+    }
+
     const crosswordData = {
       title: submissionData.details.boardTitle || "",
       version: "1.0.0",
@@ -30,24 +52,7 @@ export async function POST({ request, platform }) {
         height: 10
       },
       theme: "black",
-      words: submissionData.words.map((word, index) => {
-        const { valid, reasons, value } = validateClue(word.clue || '');
-        if (!valid) {
-          throw { status: 400, index, reasons };
-        }
-        return {
-          word: word.word,
-          startX: word.col,
-          startY: word.row,
-          direction: word.direction.toLowerCase(),
-          color: colorPalette[index % colorPalette.length],
-          textClue: sanitizeClue(value),
-          audioUrl: word.trackId.toString(), // SoundCloud track ID
-          startAt: word.startAt || "0:00", // User-selected start time
-          audioDuration: word.audioDuration || 6, // User-selected duration
-          soundcloudUrl: word.soundcloudUrl // Store original URL for reference
-        };
-      })
+      words: validatedWords
     };
 
     // Format submission details as a simple list

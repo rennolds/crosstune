@@ -20,9 +20,32 @@ export async function POST({ request, platform }) {
     ];
 
     // Reject if any words contain profanity/blocked content
-    const badWordIndex = submissionData.words.findIndex((w) => containsProfanity(w.word || ''));
-    if (badWordIndex !== -1) {
-      return json({ error: 'Invalid word', index: badWordIndex }, { status: 400 });
+    for (let i = 0; i < submissionData.words.length; i++) {
+      if (await containsProfanity(submissionData.words[i].word || '')) {
+        return json({ error: 'Invalid word', index: i }, { status: 400 });
+      }
+    }
+
+    // Validate clues first (async)
+    const validatedWords = [];
+    for (let index = 0; index < submissionData.words.length; index++) {
+      const word = submissionData.words[index];
+      const { valid, reasons, value } = await validateClue(word.clue || '');
+      if (!valid) {
+        throw { status: 400, index, reasons };
+      }
+      validatedWords.push({
+        word: word.word,
+        startX: word.col,
+        startY: word.row,
+        direction: word.direction.toLowerCase(),
+        color: colorPalette[index % colorPalette.length],
+        textClue: sanitizeClue(value),
+        audioUrl: word.trackId?.toString() || '',
+        startAt: word.startAt || '0:00',
+        audioDuration: word.audioDuration || 6,
+        soundcloudUrl: word.soundcloudUrl || ''
+      });
     }
 
     const crosswordData = {
@@ -33,24 +56,7 @@ export async function POST({ request, platform }) {
         height: 10,
       },
       theme: "black",
-      words: submissionData.words.map((word, index) => {
-        const { valid, reasons, value } = validateClue(word.clue || '');
-        if (!valid) {
-          throw { status: 400, index, reasons };
-        }
-        return {
-          word: word.word,
-          startX: word.col,
-          startY: word.row,
-          direction: word.direction.toLowerCase(),
-          color: colorPalette[index % colorPalette.length],
-          textClue: sanitizeClue(value),
-          audioUrl: word.trackId?.toString() || '',
-          startAt: word.startAt || '0:00',
-          audioDuration: word.audioDuration || 6,
-          soundcloudUrl: word.soundcloudUrl || ''
-        };
-      })
+      words: validatedWords
     };
 
     const db = platform?.env?.['solve-db'];

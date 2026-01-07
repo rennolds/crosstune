@@ -11,6 +11,8 @@
   import { getIsDarkMode, toggleDarkMode } from "$lib/stores/theme.svelte.js";
 
   import { getUser } from "$lib/stores/auth.svelte.js";
+  import { supabase } from "$lib/supabaseClient";
+  import { goto } from "$app/navigation";
 
   // Import the fixed SlideMenu component
   import SlideMenu from "./SlideMenu.svelte";
@@ -69,6 +71,11 @@
 
   function toggleHelpOverlay() {
     isHelpOverlayOpen = !isHelpOverlayOpen;
+  }
+
+  async function handleSignOut() {
+    await supabase.auth.signOut();
+    goto('/login');
   }
 
   // Toggle body class for mobile scroll lock
@@ -275,12 +282,39 @@
         </button> -->
 
         {#if getUser()}
+          <a
+            href="/profile"
+            class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Profile"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+          </a>
           <button
             onclick={handleSignOut}
-            class="p-2 rounded-md hover:bg-gray-100"
+            class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             Sign Out
           </button>
+        {:else}
+          <a
+            href="/login"
+            class="px-3 py-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
+          >
+            Login
+          </a>
         {/if}
       </div>
     </div>
