@@ -26951,5 +26951,124 @@
         "audioDuration": 15
       }
     ]
+  },
+  "2026-01-08": {
+    "version": "1.0.0",
+    "title": "Pop Divas",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DIVA",
+        "startX": 7,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 454260201,
+        "soundcloudUrl": "https://soundcloud.com/rednationmusic/beyonce-diva",
+        "startAt": "0:45",
+        "audioDuration": 7
+      },
+      {
+        "word": "TELEPHONE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 255904793,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/telephone",
+        "startAt": "0:46",
+        "audioDuration": 10
+      },
+      {
+        "word": "VOGUE",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (also a magazine)",
+        "audioUrl": 214807095,
+        "soundcloudUrl": "https://soundcloud.com/madonna/vogue",
+        "startAt": "1:40",
+        "audioDuration": 10
+      },
+      {
+        "word": "KYLIE",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name",
+        "audioUrl": 256059800,
+        "soundcloudUrl": "https://soundcloud.com/kylie-minogue-official/cant-get-you-out-of-my-head",
+        "startAt": "0:27",
+        "audioDuration": 6
+      },
+      {
+        "word": "PINK",
+        "startX": 1,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": 257052023,
+        "soundcloudUrl": "https://soundcloud.com/official-p-nk/raise-your-glass-1",
+        "startAt": "0:07",
+        "audioDuration": 7
+      },
+      {
+        "word": "MILEY",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": 256019943,
+        "soundcloudUrl": "https://soundcloud.com/mileycyrus/we-cant-stop-1",
+        "startAt": "0:06",
+        "audioDuration": 10
+      },
+      {
+        "word": "GIMMEMORE",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 256271854,
+        "soundcloudUrl": "https://soundcloud.com/britneyspears/gimme-more",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "LOPEZ",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": 262762329,
+        "soundcloudUrl": "https://soundcloud.com/jenniferlopez/on-the-floor-album-version",
+        "startAt": "0:19",
+        "audioDuration": 5
+      },
+      {
+        "word": "AGUILERA",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": 288669645,
+        "soundcloudUrl": "https://soundcloud.com/christinaaguilera/fighter",
+        "startAt": "0:17",
+        "audioDuration": 12
+      }
+    ]
   }
 }
