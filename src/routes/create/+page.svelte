@@ -708,33 +708,6 @@
     scrollToTop();
   }
 
-  function handleSubmitAnother() {
-    // Reset everything and go back to splash
-    localStorage.removeItem(STORAGE_KEY);
-    gridData = Array(10)
-      .fill()
-      .map(() => Array(12).fill(""));
-    showSplash = true;
-    showWordForms = false;
-    showSuccessScreen = false;
-    createdPuzzleId = "";
-    shareCopied = false;
-    detectedWords = [];
-    soundcloudValidation = {}; // Clear validation state
-    widgetTiming = {}; // Clear timing data
-    jsonInput = ""; // Clear admin JSON input
-    jsonError = ""; // Clear admin JSON error
-    finalDetails = {
-      creditName: "",
-      boardTitle: "",
-      email: "",
-      notes: "",
-      creditUser: true,
-      submitForReview: false,
-    };
-    scrollToTop();
-  }
-
   function handleKeyDown(event, row, col) {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -1106,6 +1079,8 @@
                 boardTitle: "",
                 email: "",
                 notes: "",
+                creditUser: true,
+                submitForReview: false,
               };
               scrollToTop();
             }}
