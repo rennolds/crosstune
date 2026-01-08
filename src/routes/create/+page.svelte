@@ -1868,15 +1868,12 @@
           </div>
         </div>
         <div class="px-8 mt-6 pb-24 text-left">
-          <p class="text-gray-600 dark:text-gray-400">
-            Thanks for creating a puzzle!
-          </p>
           <p class="text-gray-600 dark:text-gray-400 mt-2">
             You can view your puzzle on your profile at anytime.
           </p>
           {#if finalDetails.submitForReview}
             <p class="text-gray-600 dark:text-gray-400 mt-2">
-              Your puzzle has been submitted for review!
+              We'll email you if your puzzle is featured!
             </p>
           {/if}
         </div>
