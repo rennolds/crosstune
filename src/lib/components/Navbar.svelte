@@ -12,12 +12,10 @@
 
   import { getUser } from "$lib/stores/auth.svelte.js";
   import { supabase } from "$lib/supabaseClient";
-  import { goto } from "$app/navigation";
 
   // Import the fixed SlideMenu component
   import SlideMenu from "./SlideMenu.svelte";
   import RevealMenu from "./RevealMenu.svelte";
-  import ProfileMenu from "./ProfileMenu.svelte";
 
   let userProfile = $state(null);
 
@@ -70,7 +68,6 @@
   let isMenuOpen = $state(false);
   let isRevealMenuOpen = $state(false);
   let isHelpOverlayOpen = $state(false);
-  let isProfileOpen = $state(false);
 
   function formatTime(totalSeconds) {
     const minutes = Math.floor(totalSeconds / 60);
@@ -108,15 +105,10 @@
     isHelpOverlayOpen = !isHelpOverlayOpen;
   }
 
-  async function handleSignOut() {
-    await supabase.auth.signOut();
-    goto('/login');
-  }
-
   // Toggle body class for mobile scroll lock
   $effect(() => {
     if (typeof window !== "undefined") {
-      if (isMenuOpen || isHelpOverlayOpen || isProfileOpen) {
+      if (isMenuOpen || isHelpOverlayOpen) {
         document.body.classList.add("menu-open");
       } else {
         document.body.classList.remove("menu-open");
@@ -317,8 +309,8 @@
         </button> -->
 
         {#if getUser()}
-          <button
-            onclick={() => (isProfileOpen = !isProfileOpen)}
+          <a
+            href="/profile"
             class="flex items-center space-x-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             aria-label="User profile"
             style="position: relative; z-index: 60;"
@@ -329,7 +321,7 @@
             >
               {(userProfile?.username || getUser()?.user_metadata?.username || getUser()?.email || 'U').charAt(0).toUpperCase()}
             </div>
-          </button>
+          </a>
         {:else}
           <a
             href="/login"
@@ -427,13 +419,6 @@
 {/if}
 
 <SlideMenu isOpen={isMenuOpen} onClose={() => (isMenuOpen = false)} />
-
-<ProfileMenu 
-  isOpen={isProfileOpen} 
-  onClose={() => (isProfileOpen = false)} 
-  user={getUser()} 
-  {handleSignOut}
-/>
 
 <style>
   :global(body) {
