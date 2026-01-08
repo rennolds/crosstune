@@ -193,6 +193,15 @@
   function navigateToHome() {
     window.location.href = "/";
   }
+
+  function formatJoinDate(dateString) {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    return `Since ${date.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    })}`;
+  }
 </script>
 
 <Navbar
@@ -202,7 +211,7 @@
 
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   <div class="profile-container mx-auto px-4 py-8 w-full max-w-2xl">
-    <div class="flex flex-col h-full">
+    <div class="flex flex-col h-full pt-4 md:pt-0">
       <div class="flex items-center justify-between mb-8">
         <div class="flex items-center space-x-3 flex-1 min-w-0">
           <div
@@ -328,7 +337,9 @@
                   </svg>
                 </button>
               </div>
-              <span class="text-sm text-gray-500 dark:text-gray-400">{user?.email}</span>
+              <span class="text-sm text-gray-500 dark:text-gray-400">
+                {formatJoinDate(user?.created_at)}
+              </span>
             </div>
           {/if}
         </div>
@@ -349,7 +360,7 @@
           </div>
         {:else if puzzles.length === 0}
           <div
-            class="bg-white dark:bg-[#303030] p-6 rounded-xl text-center border border-gray-100 dark:border-gray-700 shadow-sm"
+            class="bg-white dark:bg-black p-6 rounded-xl text-center border border-gray-100 dark:border-gray-800 shadow-sm"
           >
             <p class="text-gray-600 dark:text-gray-400 mb-4">
               You haven't created any puzzles yet.
@@ -366,7 +377,7 @@
             {#each puzzles as puzzle}
               <a
                 href={`/puzzles/${puzzle.id}`}
-                class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-[#303030] border border-gray-100 dark:border-gray-700 hover:border-orange-500 dark:hover:border-orange-500 transition-all group shadow-sm"
+                class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800 hover:border-orange-500 dark:hover:border-orange-500 transition-all group shadow-sm"
               >
                 <span
                   class="font-medium text-black dark:text-white group-hover:text-orange-500 transition-colors"
@@ -397,11 +408,11 @@
       </div>
 
       <div
-        class="mt-8 pt-6 border-t border-gray-300 dark:border-gray-700"
+        class="mt-8 pt-6 border-t border-gray-300 dark:border-gray-700 flex justify-center"
       >
         <button
           onclick={handleSignOut}
-          class="w-full py-3 px-4 bg-black dark:bg-[#303030] text-white dark:text-white rounded-xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-700 active:scale-[0.98] transition-all flex items-center justify-center space-x-2 shadow-sm"
+          class="py-3 px-8 bg-black dark:bg-black text-white dark:text-white rounded-xl font-bold hover:bg-zinc-800 dark:hover:bg-zinc-900 active:scale-[0.98] transition-all flex items-center justify-center space-x-2 shadow-sm border dark:border-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
