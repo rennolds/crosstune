@@ -17,6 +17,40 @@
   // Import the fixed SlideMenu component
   import SlideMenu from "./SlideMenu.svelte";
   import RevealMenu from "./RevealMenu.svelte";
+  import ProfileMenu from "./ProfileMenu.svelte";
+
+  let userProfile = $state(null);
+
+  async function fetchUserProfile() {
+    const user = getUser();
+    if (!user) {
+      userProfile = null;
+      return;
+    }
+    try {
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('username, avatar_color')
+        .eq('id', user.id)
+        .maybeSingle();
+
+      if (!error && data) {
+        userProfile = data;
+      }
+    } catch (e) {
+      console.error("Error fetching profile in navbar:", e);
+    }
+  }
+
+  // Fetch profile when user changes
+  $effect(() => {
+    const user = getUser();
+    if (user) {
+      fetchUserProfile();
+    } else {
+      userProfile = null;
+    }
+  });
 
   // ADD new props for archive mode and reveal functions
   let {
@@ -36,6 +70,7 @@
   let isMenuOpen = $state(false);
   let isRevealMenuOpen = $state(false);
   let isHelpOverlayOpen = $state(false);
+  let isProfileOpen = $state(false);
 
   function formatTime(totalSeconds) {
     const minutes = Math.floor(totalSeconds / 60);
@@ -81,7 +116,7 @@
   // Toggle body class for mobile scroll lock
   $effect(() => {
     if (typeof window !== "undefined") {
-      if (isMenuOpen || isHelpOverlayOpen) {
+      if (isMenuOpen || isHelpOverlayOpen || isProfileOpen) {
         document.body.classList.add("menu-open");
       } else {
         document.body.classList.remove("menu-open");
@@ -282,31 +317,18 @@
         </button> -->
 
         {#if getUser()}
-          <a
-            href="/profile"
-            class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Profile"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
-          </a>
           <button
-            onclick={handleSignOut}
-            class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+            onclick={() => (isProfileOpen = !isProfileOpen)}
+            class="flex items-center space-x-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="User profile"
+            style="position: relative; z-index: 60;"
           >
-            Sign Out
+            <div 
+              class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm"
+              style="background-color: {userProfile?.avatar_color || '#f97316'}"
+            >
+              {(userProfile?.username || getUser()?.user_metadata?.username || getUser()?.email || 'U').charAt(0).toUpperCase()}
+            </div>
           </button>
         {:else}
           <a
@@ -405,6 +427,13 @@
 {/if}
 
 <SlideMenu isOpen={isMenuOpen} onClose={() => (isMenuOpen = false)} />
+
+<ProfileMenu 
+  isOpen={isProfileOpen} 
+  onClose={() => (isProfileOpen = false)} 
+  user={getUser()} 
+  {handleSignOut}
+/>
 
 <style>
   :global(body) {
