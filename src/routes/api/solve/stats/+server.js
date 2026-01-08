@@ -1,37 +1,26 @@
 /** @type {import('./$types').RequestHandler} */
-export async function GET({ platform, url }) {
+export async function GET({ locals, url }) {
 	try {
-		// Get the D1 database binding
-		const db = platform?.env?.['solve-db'];
-		
-		if (!db) {
-			return new Response(JSON.stringify({ error: 'Database not available' }), {
-				status: 500,
-				headers: { 'Content-Type': 'application/json' }
-			});
-		}
-
 		// Check for query parameters
 		const limit = parseInt(url.searchParams.get('limit') || '50');
 		const offset = parseInt(url.searchParams.get('offset') || '0');
 
-		// Get solve counts for all puzzles, ordered by solve count descending
-		const { results } = await db.prepare(`
-			SELECT puzzle_id, solve_count, updated_at
-			FROM solves 
-			ORDER BY solve_count DESC, updated_at DESC
-			LIMIT ? OFFSET ?
-		`).bind(limit, offset).all();
+		// Get solve counts for all puzzles
+		const { data: results, error, count } = await locals.supabase
+			.from('solves')
+			.select('puzzle_id, solve_count, updated_at', { count: 'exact' })
+			.order('solve_count', { ascending: false })
+			.order('updated_at', { ascending: false })
+			.range(offset, offset + limit - 1);
 
-		// Get total count
-		const totalResult = await db.prepare(`
-			SELECT COUNT(*) as total
-			FROM solves
-		`).first();
+		if (error) {
+			console.error('Supabase error:', error);
+			throw error;
+		}
 
 		return new Response(JSON.stringify({
 			puzzles: results || [],
-			total: totalResult?.total || 0,
+			total: count || 0,
 			limit,
 			offset
 		}), {

@@ -1,5 +1,5 @@
 /** @type {import('./$types').RequestHandler} */
-export async function GET({ params, platform }) {
+export async function GET({ params, locals }) {
 	try {
 		const { puzzle_id } = params;
 		
@@ -10,22 +10,16 @@ export async function GET({ params, platform }) {
 			});
 		}
 
-		// Get the D1 database binding
-		const db = platform?.env?.['solve-db'];
-		
-		if (!db) {
-			return new Response(JSON.stringify({ error: 'Database not available' }), {
-				status: 500,
-				headers: { 'Content-Type': 'application/json' }
-			});
-		}
+		const { data: result, error } = await locals.supabase
+			.from('solves')
+			.select('puzzle_id, solve_count, updated_at')
+			.eq('puzzle_id', puzzle_id)
+			.single();
 
-		// Get solve count for the puzzle
-		const result = await db.prepare(`
-			SELECT puzzle_id, solve_count, updated_at
-			FROM solves 
-			WHERE puzzle_id = ?
-		`).bind(puzzle_id).first();
+		if (error && error.code !== 'PGRST116') { // Ignore "not found" error
+			console.error('Supabase error:', error);
+			throw error;
+		}
 
 		if (!result) {
 			return new Response(JSON.stringify({ 

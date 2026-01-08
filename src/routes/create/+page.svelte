@@ -1,5 +1,7 @@
 <script>
   import Navbar from "$lib/components/Navbar.svelte";
+  import { getUser } from "$lib/stores/auth.svelte.js";
+  import { onMount } from "svelte";
 
   let gridData = $state(
     Array(10)
@@ -13,9 +15,6 @@
   let showSuccessScreen = $state(false);
   let createdPuzzleId = $state("");
   let shareCopied = $state(false);
-  let submittingToUs = $state(false);
-  let submitProgress = $state(0);
-  let submittedToUs = $state(false);
   let isMobile = $state(false);
   let detectedWords = $state([]);
   let soundcloudValidation = $state({}); // Track validation status for each word
@@ -38,10 +37,9 @@
   ];
 
   let finalDetails = $state({
-    creditName: "",
     boardTitle: "",
-    email: "",
-    notes: "",
+    creditUser: true,
+    submitForReview: false,
   });
   let wordCountWarning = $state("");
   let showWarning = $state(false);
@@ -74,6 +72,54 @@
       // Check for admin mode via URL parameter
       const urlParams = new URLSearchParams(window.location.search);
       isAdminMode = urlParams.get("admin") === "true";
+    }
+  });
+
+  const STORAGE_KEY = "crosstune_create_puzzle_state";
+
+  onMount(() => {
+    const savedState = localStorage.getItem(STORAGE_KEY);
+    if (savedState) {
+      try {
+        const parsed = JSON.parse(savedState);
+        gridData = parsed.gridData || gridData;
+        detectedWords = parsed.detectedWords || detectedWords;
+        soundcloudValidation =
+          parsed.soundcloudValidation || soundcloudValidation;
+        widgetTiming = parsed.widgetTiming || widgetTiming;
+        if (parsed.finalDetails) {
+          finalDetails = {
+            boardTitle: parsed.finalDetails.boardTitle || "",
+            creditUser: parsed.finalDetails.creditUser ?? true,
+            submitForReview: parsed.finalDetails.submitForReview ?? false,
+          };
+        }
+        showSplash = parsed.showSplash ?? showSplash;
+        showWordForms = parsed.showWordForms ?? showWordForms;
+
+        // Ensure valid view state
+        if (showWordForms) showSplash = false;
+      } catch (e) {
+        console.error("Failed to load puzzle state", e);
+      }
+    }
+  });
+
+  $effect(() => {
+    if (typeof localStorage !== "undefined") {
+      // Don't save state if we're on the success screen
+      if (showSuccessScreen) return;
+
+      const stateToSave = {
+        gridData,
+        detectedWords,
+        soundcloudValidation,
+        widgetTiming,
+        finalDetails,
+        showSplash,
+        showWordForms,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
     }
   });
 
@@ -218,7 +264,7 @@
     return true;
   }
 
-  function handleNextClick() {
+  async function handleNextClick() {
     const words = detectWords();
 
     if (!validateWordCount(words)) {
@@ -227,7 +273,7 @@
 
     // Block malicious/offensive words before proceeding
     for (const w of words) {
-      if (containsProfanity(w.word)) {
+      if (await containsProfanity(w.word)) {
         wordCountWarning = `Word "${w.word}" is not allowed.`;
         showWarning = true;
         return;
@@ -287,7 +333,7 @@
     showWarning = false;
   }
 
-  function validateWordForms() {
+  async function validateWordForms() {
     for (let i = 0; i < detectedWords.length; i++) {
       const word = detectedWords[i];
       const validationKey = `word-${i}`;
@@ -300,7 +346,7 @@
       }
 
       // Clue safety validation
-      const clueCheck = validateClue(word.clue);
+      const clueCheck = await validateClue(word.clue);
       if (!clueCheck.valid) {
         const reasons = clueCheck.reasons;
         let msg = `Clue for "${word.word}" is not allowed: `;
@@ -658,33 +704,6 @@
     scrollToTop();
   }
 
-  function handleSubmitAnother() {
-    // Reset everything and go back to splash
-    gridData = Array(10)
-      .fill()
-      .map(() => Array(12).fill(""));
-    showSplash = true;
-    showWordForms = false;
-    showSuccessScreen = false;
-    createdPuzzleId = "";
-    shareCopied = false;
-    submittingToUs = false;
-    submitProgress = 0;
-    submittedToUs = false;
-    detectedWords = [];
-    soundcloudValidation = {}; // Clear validation state
-    widgetTiming = {}; // Clear timing data
-    jsonInput = ""; // Clear admin JSON input
-    jsonError = ""; // Clear admin JSON error
-    finalDetails = {
-      creditName: "",
-      boardTitle: "",
-      email: "",
-      notes: "",
-    };
-    scrollToTop();
-  }
-
   function handleKeyDown(event, row, col) {
     if (event.key === "Enter") {
       event.preventDefault();
@@ -800,7 +819,7 @@
   }
 
   async function handleCreateJSON() {
-    if (!validateWordForms()) return;
+    if (!(await validateWordForms())) return;
 
     try {
       const wordsWithTrackIds = detectedWords.map((word, index) => {
@@ -849,44 +868,6 @@
       showWarning = true;
     }
   }
-
-  async function handleSubmitToUs() {
-    if (!createdPuzzleId || submittedToUs) return;
-    // Require at least 8 words for official submission
-    if (detectedWords.length < 0) {
-      wordCountWarning =
-        "Please include at least 8 words before submitting to us.";
-      showWarning = true;
-      return;
-    }
-    submittingToUs = true;
-    submitProgress = 10;
-    let timer = setInterval(() => {
-      submitProgress = Math.min(90, submitProgress + 5);
-    }, 150);
-    try {
-      const res = await fetch("/api/submit-existing", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: createdPuzzleId,
-          creditName: finalDetails.creditName,
-          email: finalDetails.email,
-          notes: finalDetails.notes,
-        }),
-      });
-      if (!res.ok) throw new Error("Submit failed");
-      submitProgress = 100;
-      submittedToUs = true;
-    } catch (e) {
-      wordCountWarning = "Failed to submit. Please try again.";
-      showWarning = true;
-      submitProgress = 0;
-    } finally {
-      clearInterval(timer);
-      submittingToUs = false;
-    }
-  }
 </script>
 
 <Navbar
@@ -931,7 +912,7 @@
           <div class="space-y-3">
             <p>
               Get a link to share with your friends, fans, or idk, play it
-              yourself.
+              yourself. All your puzzles will be stored in your profile, forever.
             </p>
             <p>
               If you're proud of it, submit it to us to be featured on the Daily
@@ -1079,6 +1060,7 @@
             class="bg-rose-500 hover:bg-rose-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
             onclick={() => {
               // Clear grid and reset to splash
+              localStorage.removeItem(STORAGE_KEY);
               gridData = Array(10)
                 .fill()
                 .map(() => Array(12).fill(""));
@@ -1088,10 +1070,9 @@
               jsonInput = ""; // Clear admin JSON input
               jsonError = ""; // Clear admin JSON error
               finalDetails = {
-                creditName: "",
                 boardTitle: "",
-                email: "",
-                notes: "",
+                creditUser: true,
+                submitForReview: false,
               };
               scrollToTop();
             }}
@@ -1653,25 +1634,75 @@
         </div>
 
         <!-- Title input moved to bottom of clues/songs page -->
-        <div class="max-w-2xl mx-auto mt-10">
-          <label
-            for="board-title"
-            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-          >
-            Title for the board? <span class="text-xs text-gray-500"
-              >(optional)</span
+        <div class="max-w-2xl mx-auto mt-10 space-y-8">
+          <div>
+            <label
+              for="board-title"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
             >
-          </label>
-          <input
-            id="board-title"
-            type="text"
-            autocomplete="off"
-            autocapitalize="off"
-            class="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-            bind:value={finalDetails.boardTitle}
-            placeholder="Give your puzzle a title"
-            maxlength="100"
-          />
+              Title for the board? <span class="text-xs text-gray-500"
+                >(optional)</span
+              >
+            </label>
+            <input
+              id="board-title"
+              type="text"
+              autocomplete="off"
+              autocapitalize="off"
+              class="w-full px-3 py-2 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+              bind:value={finalDetails.boardTitle}
+              placeholder="Give your puzzle a title"
+              maxlength="100"
+            />
+          </div>
+
+          <!-- Credit Username Checkbox -->
+          <div
+            class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700"
+          >
+            <label class="flex items-start cursor-pointer">
+              <div class="flex items-center h-5">
+                <input
+                  type="checkbox"
+                  bind:checked={finalDetails.creditUser}
+                  class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+              <div class="ml-2 text-sm">
+                <span class="font-medium text-gray-900 dark:text-gray-100"
+                  >Credit my username</span
+                >
+                <p class="text-gray-500 dark:text-gray-400 text-xs">
+                  Uncheck this if you want this puzzle to be anonymous
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <!-- Submit for Feature Checkbox -->
+          <div
+            class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700"
+          >
+            <label class="flex items-start cursor-pointer">
+              <div class="flex items-center h-5">
+                <input
+                  type="checkbox"
+                  bind:checked={finalDetails.submitForReview}
+                  class="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+              </div>
+              <div class="ml-2 text-sm">
+                <span class="font-medium text-gray-900 dark:text-gray-100"
+                  >Submit this puzzle to be featured</span
+                >
+                <p class="text-gray-500 dark:text-gray-400 text-xs mt-1">
+                  By checking this box, you grant Crosstune permission to use
+                  your puzzle in the daily, themed, or user sections. We may
+                  edit songs or clues for clarity and consistency : )
+                </p>
+              </div>
+            </label>
+          </div>
         </div>
 
         <div
@@ -1704,7 +1735,15 @@
           <button
             class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={async (event) => {
-              if (!validateWordForms()) return;
+              const user = getUser();
+
+              if (!user) {
+                // Save state is handled by effect, just redirect
+                window.location.href = "/login?next=/create";
+                return;
+              }
+
+              if (!(await validateWordForms())) return;
               const button = event.target;
               button.disabled = true;
               button.textContent = "Processing...";
@@ -1743,6 +1782,7 @@
                   createdPuzzleId = result.id;
                   showWordForms = false;
                   showSuccessScreen = true;
+                  localStorage.removeItem(STORAGE_KEY);
                   scrollToTop();
                 } else {
                   wordCountWarning =
@@ -1761,7 +1801,7 @@
               }
             }}
           >
-            Create & Get Share Link
+            {getUser() ? "Create & Get Share Link" : "Login to Create"}
           </button>
         </div>
       </div>
@@ -1771,11 +1811,7 @@
         <div class="p-8 pb-6">
           <h2 class="text-2xl font-bold mb-4">Voilà, here is your creation.</h2>
           <div class="max-w-2xl mx-auto">
-            <div
-              class="text-xs italic text-gray-600 dark:text-gray-500 text-right mb-1"
-            >
-              *This link will be live for 30 days
-            </div>
+
             <div
               class="text-sm md:text-base bg-gray-100 dark:bg-[#D9D9D9] px-3 py-2 rounded select-all break-all text-black dark:text-black"
             >
@@ -1844,128 +1880,15 @@
             </div>
           </div>
         </div>
-        <div class="px-8 mt-6">
-          <div
-            class="max-w-2xl mx-auto border border-black-200 dark:border-gray-700 rounded-lg p-6"
-          >
-            <h3 class="text-lg font-bold mb-2 text-center">
-              Think your puzzle is great? Send it to us.
-            </h3>
-            <p
-              class="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center"
-            >
-              Can be featured on The Daily or Themed Section
+        <div class="px-8 mt-6 pb-24 text-left">
+          <p class="text-gray-600 dark:text-gray-400 mt-2">
+            You can view your puzzle on your profile at anytime.
+          </p>
+          {#if finalDetails.submitForReview}
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+              We'll email you if your puzzle is featured!
             </p>
-            <!-- Author/Email/Notes moved above submit button -->
-            <div class="space-y-4 mb-4">
-              <div>
-                <label for="credit-name" class="block text-sm font-medium mb-2"
-                  >Want a shoutout?</label
-                >
-                <input
-                  id="credit-name"
-                  type="text"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-                  bind:value={finalDetails.creditName}
-                  placeholder="Give us a name or handle (optional)"
-                  maxlength="80"
-                />
-              </div>
-              <div>
-                <label for="credit-email" class="block text-sm font-medium mb-2"
-                  >What's your email?</label
-                >
-                <input
-                  id="credit-email"
-                  type="email"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                  inputmode="email"
-                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030]"
-                  bind:value={finalDetails.email}
-                  placeholder="We'll contact you if the puzzle is featured (optional)"
-                />
-              </div>
-              <div>
-                <label for="credit-notes" class="block text-sm font-medium mb-2"
-                  >Anything else we should know?</label
-                >
-                <textarea
-                  id="credit-notes"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-[#303030] h-24 resize-vertical"
-                  bind:value={finalDetails.notes}
-                  placeholder="Additional info (optional)"
-                  maxlength="300"
-                ></textarea>
-              </div>
-            </div>
-            <div class="mb-4 flex flex-col items-center">
-              <button
-                class="rounded-xs px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors disabled:cursor-not-allowed"
-                disabled={submittingToUs || submittedToUs}
-                onclick={handleSubmitToUs}
-              >
-                {submittedToUs ? "Submitted ✓" : "Submit"}
-              </button>
-
-              {#if submittedToUs}
-                <!-- Hide bar when complete and show a success line instead (button stays disabled) -->
-                <div
-                  class="mt-3 text-green-600 dark:text-green-400 text-sm font-semibold"
-                >
-                  All set!
-                </div>
-              {:else if submittingToUs || submitProgress > 0}
-                <div
-                  class="mt-3 h-2 w-full max-w-sm bg-gray-200 dark:bg-gray-700 rounded"
-                >
-                  <div
-                    class="h-2 bg-green-500 rounded transition-all"
-                    style={`width: ${submitProgress}%`}
-                  ></div>
-                </div>
-              {/if}
-            </div>
-
-            <h4 class="text-sm italic font-semibold mb-2">
-              Notes about features
-            </h4>
-            <div class="space-y-3 text-xs italic">
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">1.</span>
-                <span>Each puzzle must have at least 8 words</span>
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">2.</span>
-                <span
-                  >Most tracks played must be "household names." If it's too
-                  obscure, we can't use it</span
-                >
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">3.</span>
-                <span
-                  >Answers can't float in empty space and must be connected</span
-                >
-              </div>
-
-              <div class="flex items-start">
-                <span class="font-semibold mr-2">4.</span>
-                <span
-                  >Profanity will not be featured on the Daily (usually)</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="pb-24"></div>
+          {/if}
         </div>
       </div>
     {/if}

@@ -1,25 +1,31 @@
-import { error, json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 
-export async function load({ platform }) {
-  const db = platform?.env?.['solve-db'];
-  if (!db) {
-    throw error(500, 'Database not available');
+export async function load({ locals }) {
+  const { data: results, error: dbError } = await locals.supabase
+    .from('crosstune_puzzles')
+    .select('id, puzzle_json, created_at')
+    .order('created_at', { ascending: false })
+    .limit(50);
+
+  if (dbError) {
+    console.error('Database error:', dbError);
+    throw error(500, 'Database error');
   }
 
-  // Fetch recent custom puzzles with id, title, and created_at
-  const { results } = await db
-    .prepare(
-      `SELECT 
-        id,
-        json_extract(puzzle_json, '$.title') AS title,
-        created_at
-       FROM custom_puzzles
-       ORDER BY created_at DESC
-       LIMIT 50`
-    )
-    .all();
+  const puzzles = results.map(row => {
+    let title = '(Untitled)';
+    try {
+      const json = JSON.parse(row.puzzle_json);
+      title = json.title || '(Untitled)';
+    } catch (e) {}
+    return {
+      id: row.id,
+      title,
+      created_at: row.created_at // Supabase returns ISO string which works fine
+    };
+  });
 
-  return { puzzles: results ?? [] };
+  return { puzzles: puzzles ?? [] };
 }
 
 
