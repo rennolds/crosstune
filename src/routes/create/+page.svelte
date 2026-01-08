@@ -1,7 +1,7 @@
 <script>
   import Navbar from "$lib/components/Navbar.svelte";
   import { getUser } from "$lib/stores/auth.svelte.js";
-  import { onMount, untrack } from "svelte";
+  import { onMount } from "svelte";
 
   let gridData = $state(
     Array(10)
@@ -37,10 +37,7 @@
   ];
 
   let finalDetails = $state({
-    creditName: "",
     boardTitle: "",
-    email: "",
-    notes: "",
     creditUser: true,
     submitForReview: false,
   });
@@ -101,13 +98,6 @@
     }
   });
 
-  $effect(() => {
-    // Auto-populate credit name if authenticated and empty
-    const user = getUser();
-    if (user && untrack(() => !finalDetails.creditName)) {
-      finalDetails.creditName = user.user_metadata?.username || "";
-    }
-  });
 
   $effect(() => {
     if (typeof localStorage !== "undefined") {
@@ -1075,10 +1065,7 @@
               jsonInput = ""; // Clear admin JSON input
               jsonError = ""; // Clear admin JSON error
               finalDetails = {
-                creditName: "",
                 boardTitle: "",
-                email: "",
-                notes: "",
                 creditUser: true,
                 submitForReview: false,
               };
@@ -1679,30 +1666,11 @@
                 <p class="text-gray-500 dark:text-gray-400 text-xs">Uncheck this if you want this puzzle to be anonymous</p>
               </div>
             </label>
-
-            {#if finalDetails.creditUser}
-              <div class="mt-3 ml-6 transition-all duration-200">
-                <label for="credit-name" class="block text-xs font-medium mb-1 text-gray-700 dark:text-gray-300">
-                  Name to display
-                </label>
-                <input
-                  id="credit-name"
-                  type="text"
-                  autocomplete="off"
-                  autocapitalize="off"
-                  spellcheck="false"
-                  class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  bind:value={finalDetails.creditName}
-                  placeholder="Your name or handle"
-                  maxlength="80"
-                />
-              </div>
-            {/if}
           </div>
 
           <!-- Submit for Feature Checkbox -->
           <div class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <label class="flex items-start cursor-pointer mb-2">
+            <label class="flex items-start cursor-pointer">
               <div class="flex items-center h-5">
                 <input
                   type="checkbox"
@@ -1717,41 +1685,6 @@
                 </p>
               </div>
             </label>
-
-            {#if finalDetails.submitForReview}
-              <div class="mt-4 ml-6 space-y-4 border-t border-gray-200 dark:border-gray-600 pt-4">
-                <div>
-                  <label for="credit-email" class="block text-xs font-medium mb-1 text-gray-700 dark:text-gray-300">
-                    What's your email? <span class="text-gray-500 font-normal">(optional)</span>
-                  </label>
-                  <input
-                    id="credit-email"
-                    type="email"
-                    autocomplete="off"
-                    autocapitalize="off"
-                    spellcheck="false"
-                    inputmode="email"
-                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                    bind:value={finalDetails.email}
-                    placeholder="We'll contact you if featured"
-                  />
-                </div>
-                <div>
-                  <label for="credit-notes" class="block text-xs font-medium mb-1 text-gray-700 dark:text-gray-300">
-                    Anything else we should know? <span class="text-gray-500 font-normal">(optional)</span>
-                  </label>
-                  <textarea
-                    id="credit-notes"
-                    autocomplete="off"
-                    autocapitalize="off"
-                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white h-20 resize-vertical"
-                    bind:value={finalDetails.notes}
-                    placeholder="Additional info"
-                    maxlength="300"
-                  ></textarea>
-                </div>
-              </div>
-            {/if}
           </div>
         </div>
 
@@ -1943,8 +1876,7 @@
           </p>
           {#if finalDetails.submitForReview}
             <p class="text-gray-600 dark:text-gray-400 mt-2">
-              We'll notify you by email if we feature it on the daily or themed
-              section.
+              Your puzzle has been submitted for review!
             </p>
           {/if}
         </div>
