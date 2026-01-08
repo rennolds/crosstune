@@ -27,9 +27,9 @@
     }
     try {
       const { data, error } = await supabase
-        .from('profiles')
-        .select('username, avatar_color')
-        .eq('id', user.id)
+        .from("profiles")
+        .select("username, avatar_color")
+        .eq("id", user.id)
         .maybeSingle();
 
       if (!error && data) {
@@ -196,10 +196,10 @@
             </svg>
           {/if}
 
-          <!-- Orange notification dot -->
-          <div
+          <!-- Orange notification dot (Removed) -->
+          <!-- <div
             class="absolute top-1 right-1 w-2.5 h-2.5 bg-orange-500 rounded-full"
-          ></div>
+          ></div> -->
         </button>
 
         <!-- Only show timer if not in archive list view -->
@@ -315,11 +315,18 @@
             aria-label="User profile"
             style="position: relative; z-index: 60;"
           >
-            <div 
+            <div
               class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm"
               style="background-color: {userProfile?.avatar_color || '#f97316'}"
             >
-              {(userProfile?.username || getUser()?.user_metadata?.username || getUser()?.email || 'U').charAt(0).toUpperCase()}
+              {(
+                userProfile?.username ||
+                getUser()?.user_metadata?.username ||
+                getUser()?.email ||
+                "U"
+              )
+                .charAt(0)
+                .toUpperCase()}
             </div>
           </a>
         {:else}

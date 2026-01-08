@@ -84,12 +84,19 @@
         const parsed = JSON.parse(savedState);
         gridData = parsed.gridData || gridData;
         detectedWords = parsed.detectedWords || detectedWords;
-        soundcloudValidation = parsed.soundcloudValidation || soundcloudValidation;
+        soundcloudValidation =
+          parsed.soundcloudValidation || soundcloudValidation;
         widgetTiming = parsed.widgetTiming || widgetTiming;
-        finalDetails = parsed.finalDetails || finalDetails;
+        if (parsed.finalDetails) {
+          finalDetails = {
+            boardTitle: parsed.finalDetails.boardTitle || "",
+            creditUser: parsed.finalDetails.creditUser ?? true,
+            submitForReview: parsed.finalDetails.submitForReview ?? false,
+          };
+        }
         showSplash = parsed.showSplash ?? showSplash;
         showWordForms = parsed.showWordForms ?? showWordForms;
-        
+
         // Ensure valid view state
         if (showWordForms) showSplash = false;
       } catch (e) {
@@ -97,7 +104,6 @@
       }
     }
   });
-
 
   $effect(() => {
     if (typeof localStorage !== "undefined") {
@@ -111,7 +117,7 @@
         widgetTiming,
         finalDetails,
         showSplash,
-        showWordForms
+        showWordForms,
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
     }
@@ -862,7 +868,6 @@
       showWarning = true;
     }
   }
-
 </script>
 
 <Navbar
@@ -907,7 +912,7 @@
           <div class="space-y-3">
             <p>
               Get a link to share with your friends, fans, or idk, play it
-              yourself.
+              yourself. All your puzzles will be stored in your profile, forever.
             </p>
             <p>
               If you're proud of it, submit it to us to be featured on the Daily
@@ -1652,7 +1657,9 @@
           </div>
 
           <!-- Credit Username Checkbox -->
-          <div class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div
+            class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700"
+          >
             <label class="flex items-start cursor-pointer">
               <div class="flex items-center h-5">
                 <input
@@ -1662,14 +1669,20 @@
                 />
               </div>
               <div class="ml-2 text-sm">
-                <span class="font-medium text-gray-900 dark:text-gray-100">Credit my username</span>
-                <p class="text-gray-500 dark:text-gray-400 text-xs">Uncheck this if you want this puzzle to be anonymous</p>
+                <span class="font-medium text-gray-900 dark:text-gray-100"
+                  >Credit my username</span
+                >
+                <p class="text-gray-500 dark:text-gray-400 text-xs">
+                  Uncheck this if you want this puzzle to be anonymous
+                </p>
               </div>
             </label>
           </div>
 
           <!-- Submit for Feature Checkbox -->
-          <div class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div
+            class="bg-gray-50 dark:bg-[#303030] p-4 rounded-lg border border-gray-200 dark:border-gray-700"
+          >
             <label class="flex items-start cursor-pointer">
               <div class="flex items-center h-5">
                 <input
@@ -1679,9 +1692,13 @@
                 />
               </div>
               <div class="ml-2 text-sm">
-                <span class="font-medium text-gray-900 dark:text-gray-100">Submit this puzzle to be featured</span>
+                <span class="font-medium text-gray-900 dark:text-gray-100"
+                  >Submit this puzzle to be featured</span
+                >
                 <p class="text-gray-500 dark:text-gray-400 text-xs mt-1">
-                  By checking this box, you grant Crosstune permission to use your puzzle in the daily, themed, or user sections. We may edit songs or clues for clarity and consistency : )
+                  By checking this box, you grant Crosstune permission to use
+                  your puzzle in the daily, themed, or user sections. We may
+                  edit songs or clues for clarity and consistency : )
                 </p>
               </div>
             </label>
@@ -1719,7 +1736,7 @@
             class="w-full sm:w-auto rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={async (event) => {
               const user = getUser();
-              
+
               if (!user) {
                 // Save state is handled by effect, just redirect
                 window.location.href = "/login?next=/create";
@@ -1794,11 +1811,7 @@
         <div class="p-8 pb-6">
           <h2 class="text-2xl font-bold mb-4">Voilà, here is your creation.</h2>
           <div class="max-w-2xl mx-auto">
-            <div
-              class="text-xs italic text-gray-600 dark:text-gray-500 text-right mb-1"
-            >
-              *This link will be live for 30 days
-            </div>
+
             <div
               class="text-sm md:text-base bg-gray-100 dark:bg-[#D9D9D9] px-3 py-2 rounded select-all break-all text-black dark:text-black"
             >
