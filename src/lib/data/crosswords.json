@@ -27070,5 +27070,124 @@
         "audioDuration": 12
       }
     ]
+  },
+  "2026-01-09": {
+    "version": "1.0.0",
+    "title": "Surfin' the radio in 2019",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MORRIS",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "audioUrl": "577955046",
+        "startAt": "0:37",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/marenmorrisofficial/the-bones"
+      },
+      {
+        "word": "YOUNGBLOOD",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Album & song title",
+        "audioUrl": "425619897",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/5-seconds-of-summer/youngblood"
+      },
+      {
+        "word": "TECCA",
+        "startX": 7,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Lil ____",
+        "audioUrl": "624758298",
+        "startAt": "0:20",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/liltecca/lil-tecca-ransom-1"
+      },
+      {
+        "word": "JCOLE",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "563703438",
+        "startAt": "0:42.5",
+        "audioDuration": 7.9,
+        "soundcloudUrl": "https://soundcloud.com/j-cole/middle-child"
+      },
+      {
+        "word": "WOW",
+        "startX": 2,
+        "startY": 6,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "547071321",
+        "startAt": "0:20",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/postmalone/wow"
+      },
+      {
+        "word": "SUCKER",
+        "startX": 4,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "582706371",
+        "startAt": "0:14",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/jonasbrothers/sucker"
+      },
+      {
+        "word": "BETTER",
+        "startX": 7,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "498539598",
+        "startAt": "0:19",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/thegreatkhalid/better"
+      },
+      {
+        "word": "LIZZO",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "342438726",
+        "startAt": "0:36",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/lizzomusic/truth-hurts"
+      },
+      {
+        "word": "DRAKE",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Featured artist name",
+        "audioUrl": "480200517",
+        "startAt": "0:16",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/travisscott-2/sicko-mode"
+      }
+    ]
   }
 }
