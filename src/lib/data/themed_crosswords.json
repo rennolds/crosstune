@@ -3181,5 +3181,126 @@
         "audioDuration": 11
       }
     ]
+  },
+  "28": {
+    "title": "90's Hip-hop",
+    "date_available": "2026-01-11",
+    "author": "Paul Pursifull",
+    "thumbnail": "https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/12/featured-hip-hop2.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "NAS",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "971135476",
+        "startAt": "0:23",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/user-758819682/nas-ny-state-of-mind-432hz"
+      },
+      {
+        "word": "SALTNPEPA",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Duo name",
+        "audioUrl": "253183119",
+        "startAt": "0:58",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/salt-n-pepa-official/shoop"
+      },
+      {
+        "word": "CRACK",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "What kind of commandments?",
+        "audioUrl": "257084039",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/notoriousbig/ten-crack-commandments-3"
+      },
+      {
+        "word": "HITEMUP",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1492798312",
+        "startAt": "0:56",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/2pac/hit-em-up-feat-outlawz"
+      },
+      {
+        "word": "HOTSTEPPER",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Here Comes The ____",
+        "audioUrl": "239233507",
+        "startAt": "0:22",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/mahmoudmoo/here-comes-the-hotstepper"
+      },
+      {
+        "word": "PLAYER",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "He's not a ____",
+        "audioUrl": "1657541865",
+        "startAt": "1:16",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/toddchilds/big-punisher-feat-joe-still"
+      },
+      {
+        "word": "ANNIE",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "This song samples a song from \"what\" movie?",
+        "audioUrl": "269473333",
+        "startAt": "0:07",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/hard-knock-life-ghetto"
+      },
+      {
+        "word": "REGULATE",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1495672249",
+        "startAt": "0:50",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/warrengeezy/regulate-feat-nate-dogg"
+      },
+      {
+        "word": "MACK",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Who returned? (Artist first name)",
+        "audioUrl": "256126172",
+        "startAt": "0:21",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/markmorrisonmusic/return-of-the-mack-c-j-street"
+      }
+    ]
   }
 }
