@@ -27606,8 +27606,8 @@
       },
       {
         "word": "BYE",
-        "startX": 1,
-        "startY": 7,
+        "startX": 9,
+        "startY": 3,
         "direction": "across",
         "color": "#FF5B5E",
         "textClue": "The word repeated 3x",
@@ -27617,12 +27617,12 @@
         "soundcloudUrl": "https://soundcloud.com/the-cheerleader/nsync-bye-bye-bye"
       },
       {
-        "word": "OHOHOH",
-        "startX": 5,
-        "startY": 7,
-        "direction": "across",
+        "word": "BUM",
+        "startX": 4,
+        "startY": 5,
+        "direction": "down",
         "color": "#568EFF",
-        "textClue": "The three words that are ad-libbed in the chorus of this song",
+        "textClue": "The ad-libbed word in this song's chorus x3",
         "audioUrl": "1959669387",
         "startAt": "0:46",
         "audioDuration": 8,
