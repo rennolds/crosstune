@@ -58,13 +58,16 @@ export async function POST({ request }) {
     normalizedUrl = urlObj.toString();
 
     // Call SoundCloud oEmbed API from server-side to avoid CORS issues
+    // Use a standard browser User-Agent to avoid being blocked
     const oembedUrl = `https://soundcloud.com/oembed?format=json&maxheight=120&show_teaser=false&show_comments=false&url=${encodeURIComponent(normalizedUrl)}`;
     
     const response = await fetch(oembedUrl, {
       headers: {
-        'User-Agent': 'Crosstune/1.0 (+https://crosstune.io)',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'application/json',
-        'Accept-Language': 'en-US,en;q=0.9'
+        'Accept-Language': 'en-US,en;q=0.9',
+        // Request uncompressed response to avoid potential node-fetch/undici decompression issues
+        'Accept-Encoding': 'identity'
       },
       // Add timeout to prevent hanging requests
       signal: AbortSignal.timeout(10000) // 10 second timeout
@@ -90,7 +93,26 @@ export async function POST({ request }) {
       }, { status: 400 });
     }
 
-    const data = await response.json();
+    const responseText = await response.text();
+    
+    if (!responseText || !responseText.trim()) {
+      console.error('SoundCloud oEmbed returned empty body. Status:', response.status, 'Headers:', Object.fromEntries(response.headers));
+      return json({
+        error: 'SoundCloud returned an empty response. Please try again or check the URL.',
+        status: 'error'
+      }, { status: 502 });
+    }
+
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch (e) {
+      console.error('SoundCloud oEmbed JSON parse error. Body:', responseText.substring(0, 200));
+      return json({
+        error: 'Invalid response from SoundCloud. Please check the URL.',
+        status: 'invalid'
+      }, { status: 400 });
+    }
     
     if (!data.html) {
       return json({
