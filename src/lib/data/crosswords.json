@@ -27770,6 +27770,18 @@
         "startAt": "0:10",
         "audioDuration": 11,
         "soundcloudUrl": "https://soundcloud.com/harrychapin/cats-in-the-cradle"
+      },
+      {
+        "word": "BABY",
+        "startX": 0,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of Artist name",
+        "audioUrl": "1113703852",
+        "startAt": "0:52.8",
+        "audioDuration": 9.4,
+        "soundcloudUrl": "https://soundcloud.com/hykeemcarter/family-ties"
       }
     ]
   }
