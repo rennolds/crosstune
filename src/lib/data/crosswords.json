@@ -27677,5 +27677,112 @@
         "soundcloudUrl": "https://soundcloud.com/justinbieber/baby-feat-ludacris"
       }
     ]
+  },
+  "2026-01-14": {
+    "version": "1.0.0",
+    "title": "Family Matters",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "FAMILY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "He's a ___ man and a football fan",
+        "audioUrl": "253123158",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/abba-official/our-last-summer"
+      },
+      {
+        "word": "DAUGHTER",
+        "startX": 2,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Second word of the title",
+        "audioUrl": "2120063781",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/lordemusic/favourite-daughter"
+      },
+      {
+        "word": "BROTHER",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "My ___",
+        "audioUrl": "2181407187",
+        "startAt": "0:15",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/opalite"
+      },
+      {
+        "word": "SISTERS",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "I've got them all with me",
+        "audioUrl": "204406669",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/sistersledge/we-are-family"
+      },
+      {
+        "word": "MAMA",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Who the song is addressed to",
+        "audioUrl": "253166273",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/queen-69312/bohemian-rhapsody-remastered-1"
+      },
+      {
+        "word": "TWIN",
+        "startX": 3,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Like I lost my ___",
+        "audioUrl": "1803423438",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/down-bad"
+      },
+      {
+        "word": "FATHER",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word in the title",
+        "audioUrl": "2181407519",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/father-figure"
+      },
+      {
+        "word": "SON",
+        "startX": 8,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "\"Well my ___ turned ten just the other day\"",
+        "audioUrl": "231863483",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/harrychapin/harry-chapin-cats-in-the"
+      }
+    ]
   }
 }
