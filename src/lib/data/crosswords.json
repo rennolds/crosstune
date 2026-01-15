@@ -27784,5 +27784,112 @@
         "soundcloudUrl": "https://soundcloud.com/hykeemcarter/family-ties"
       }
     ]
+  },
+  "2026-01-15": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "pinn",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "PLASTIC",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Life in what?",
+        "audioUrl": "253187678",
+        "startAt": "0:09",
+        "audioDuration": 5.1,
+        "soundcloudUrl": "https://soundcloud.com/aqua-official/barbie-girl"
+      },
+      {
+        "word": "THIRD",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The planet mentioned in this song is what position from the sun?",
+        "audioUrl": "259085160",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/belinda-carlisle-official/heaven-is-a-place-on-earth"
+      },
+      {
+        "word": "SEVENTEEN",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"On the edge of ____\"",
+        "audioUrl": "216539971",
+        "startAt": "1:27",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/stevienicks/edge-of-seventeen"
+      },
+      {
+        "word": "1985",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1521578176",
+        "startAt": "0:47",
+        "audioDuration": 11.2,
+        "soundcloudUrl": "https://soundcloud.com/bowling-for-soup/1985-bfs-version"
+      },
+      {
+        "word": "THEBLOCK",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Where is she from?",
+        "audioUrl": "447113853",
+        "startAt": "0:18.4",
+        "audioDuration": 8.4,
+        "soundcloudUrl": "https://soundcloud.com/jenniferlopez/jenny-from-the-block-bronx"
+      },
+      {
+        "word": "PURSUE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Is it too late to ____\"",
+        "audioUrl": "1305194842",
+        "startAt": "0:08.2",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/steevlacy/bad-habit"
+      },
+      {
+        "word": "BLINK182",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": "256119549",
+        "startAt": "0:16",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/blink-182/dammit-album-version"
+      },
+      {
+        "word": "CHAPPELL",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "1793155465",
+        "startAt": "0:29",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/good-luck-babe"
+      }
+    ]
   }
 }
