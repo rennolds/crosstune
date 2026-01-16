@@ -28022,5 +28022,136 @@
         "soundcloudUrl": "https://soundcloud.com/twins-studio-563566876/doja-cat-paint-the-town-red"
       }
     ]
+  },
+  "2026-01-17": {
+    "version": "1.0.0",
+    "title": "2010s Essentials (by mdemaino27)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SUPERBASS",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "255821207",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/super-bass-1"
+      },
+      {
+        "word": "ILIKEIT",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "255882131",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/enriqueiglesias/i-like-it"
+      },
+      {
+        "word": "BETTER",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The last word of the song title",
+        "audioUrl": "266046395",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/officialshawnmendes/treat-you-better"
+      },
+      {
+        "word": "BOOMCLAP",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "274758260",
+        "startAt": "0:29",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/camilly-vitoria-rodrigues/boom-clap-charli-xcx"
+      },
+      {
+        "word": "SIA",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Name of the artist",
+        "audioUrl": "139590122",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/siamusic/sia-chandelier"
+      },
+      {
+        "word": "LEANON",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "193781466",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/majorlazer/major-lazer-dj-snake-lean-on-feat-mo"
+      },
+      {
+        "word": "BOY",
+        "startX": 4,
+        "startY": 7,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The last word in this band's name",
+        "audioUrl": "263908744",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/user-977421934/centuries"
+      },
+      {
+        "word": "BETTERNOW",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "434757993",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/postmalone/better-now"
+      },
+      {
+        "word": "SUMMER",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Season mentioned in the title",
+        "audioUrl": "257899623",
+        "startAt": "0:00",
+        "audioDuration": 27,
+        "soundcloudUrl": "https://soundcloud.com/ddlovato/cool-for-the-summer"
+      },
+      {
+        "word": "CUPS",
+        "startX": 11,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First word of the song title",
+        "audioUrl": "80867190",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/geoffrey-simeona/cups-when-im-gone-radio"
+      }
+    ]
   }
 }
