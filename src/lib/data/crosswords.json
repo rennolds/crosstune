@@ -28163,102 +28163,102 @@
       "height": 10
     },
     "words": [
-    {
-      "word": "SOFLY",
-      "startX": 6,
-      "startY": 3,
-      "direction": "across",
-      "color": "#FE9C9C",
-      "textClue": "\"Suga, how'd you get __ __\"",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "SHABOOZEY",
-      "startX": 1,
-      "startY": 5,
-      "direction": "across",
-      "color": "#28D66A",
-      "textClue": "Artist name",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "KUNGFU",
-      "startX": 4,
-      "startY": 9,
-      "direction": "across",
-      "color": "#FFCEFD",
-      "textClue": "The martial art in this song",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "CHER",
-      "startX": 2,
-      "startY": 4,
-      "direction": "down",
-      "color": "#FF5B5E",
-      "textClue": "Artist name",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "INBLACK",
-      "startX": 4,
-      "startY": 3,
-      "direction": "down",
-      "color": "#568EFF",
-      "textClue": "\"Back __ __\"",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "STOP",
-      "startX": 6,
-      "startY": 3,
-      "direction": "down",
-      "color": "#FFB34B",
-      "textClue": "The command! in this song's title",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "JUNO",
-      "startX": 7,
-      "startY": 0,
-      "direction": "down",
-      "color": "#00FFFF",
-      "textClue": "\"I might let you make me ____\"",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    },
-    {
-      "word": "DOLLY",
-      "startX": 9,
-      "startY": 1,
-      "direction": "down",
-      "color": "#FE9C9C",
-      "textClue": "Artist first name",
-      "audioUrl": "37309760",
-      "startAt": "0:00",
-      "audioDuration": 6,
-      "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
-    }
-  ]
-}
+      {
+        "word": "SOFLY",
+        "startX": 6,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"Suga, how'd you get __ __\"",
+        "audioUrl": "37309760",
+        "startAt": "0:23",
+        "audioDuration": 9.2,
+        "soundcloudUrl": "https://soundcloud.com/musicaficionados/baby-bash-suga-suga"
+      },
+      {
+        "word": "SHABOOZEY",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "audioUrl": "1950603999",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/shaboozey/good-news"
+      },
+      {
+        "word": "KUNGFU",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The martial art in this song",
+        "audioUrl": "253182587",
+        "startAt": "0:29",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/carl-douglas-music/kung-fu-fighting-1"
+      },
+      {
+        "word": "CHER",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "1636601835",
+        "startAt": "0:54",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/cher-scmusic/believe"
+      },
+      {
+        "word": "INBLACK",
+        "startX": 4,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "\"Back __ __\"",
+        "audioUrl": "256074953",
+        "startAt": "0:08.5",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/acdcofficial/back-in-black"
+      },
+      {
+        "word": "STOP",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The command in this song's title!",
+        "audioUrl": "287323439",
+        "startAt": "0:03",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/thesupremes/stop-in-the-name-of-love-18"
+      },
+      {
+        "word": "JUNO",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "\"I might let you make me ____\"",
+        "audioUrl": "1901886333",
+        "startAt": "0:51",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/juno"
+      },
+      {
+        "word": "DOLLY",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": "328183592",
+        "startAt": "0:13",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/dollyparton/i-will-always-love-you-13"
+      }
+    ]
+  }
 }
