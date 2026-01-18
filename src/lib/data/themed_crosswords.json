@@ -3302,5 +3302,162 @@
         "soundcloudUrl": "https://soundcloud.com/markmorrisonmusic/return-of-the-mack-c-j-street"
       }
     ]
+  },
+  "29": {
+    "title": "Bruno Mars",
+    "date_available": "2026-01-18",
+    "author": "anon",
+    "thumbnail": "https://ew.com/thmb/WhmFKloYCWVKMkDBrMeYCHQtPcU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/bruno-mars_0-4d3e8ba6593f403d85083e85810086db.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BROOKLYN",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Somewhere in ________",
+        "audioUrl": "256044826",
+        "startAt": "0:00",
+        "audioDuration": 22,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/somewhere-in-brooklyn"
+      },
+      {
+        "word": "MAN",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "When I was your ___",
+        "audioUrl": "1298158699",
+        "startAt": "0:00",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/poop-poop-828317186/bruno-mars-when-i-was-your-man"
+      },
+      {
+        "word": "COUNT",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "_____ on me",
+        "audioUrl": "256044831",
+        "startAt": "0:00",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/count-on-me"
+      },
+      {
+        "word": "WILD",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Young, ____, and free",
+        "audioUrl": "242706733",
+        "startAt": "0:00",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/ignacio-montero-villar/young-wild-and-free-ft-bruno"
+      },
+      {
+        "word": "ITWILLRAIN",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "song title",
+        "audioUrl": "343448894",
+        "startAt": "0:00",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/itzjay-55816819/it-will-rain"
+      },
+      {
+        "word": "BLUE",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "color in song title",
+        "audioUrl": "271222066",
+        "startAt": "0:12",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/liquor-store-blues-feat-damian"
+      },
+      {
+        "word": "WHATILIKE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "That's ____ _ ____",
+        "audioUrl": "293231242",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/thats-what-i-like"
+      },
+      {
+        "word": "RUN",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "___away baby",
+        "audioUrl": "328200343",
+        "startAt": "0:00",
+        "audioDuration": 18,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/runaway-baby"
+      },
+      {
+        "word": "GIRLS",
+        "startX": 4,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Young _____",
+        "audioUrl": "276935481",
+        "startAt": "0:00",
+        "audioDuration": 29,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/young-girls"
+      },
+      {
+        "word": "ONYOU",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Nothin __ ___",
+        "audioUrl": "214127881",
+        "startAt": "0:04",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/bobatl/nothin-on-you-feat-bruno-mars"
+      },
+      {
+        "word": "LAZY",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "feeling in this song title",
+        "audioUrl": "271221757",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/the-lazy-song"
+      },
+      {
+        "word": "WINDOW",
+        "startX": 10,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "last word in song title",
+        "audioUrl": "1154295199",
+        "startAt": "0:24",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/bruno-mars-anderson-paak-4"
+      }
+    ]
   }
 }
