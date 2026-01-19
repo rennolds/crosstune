@@ -28260,5 +28260,112 @@
         "soundcloudUrl": "https://soundcloud.com/dollyparton/i-will-always-love-you-13"
       }
     ]
+  },
+  "2026-01-19": {
+    "version": "1.0.0",
+    "title": "(Sped Up)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SUPERMAN",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (shares name with a superhero)",
+        "audioUrl": "1289839204",
+        "startAt": "1:10",
+        "audioDuration": 6.5,
+        "soundcloudUrl": "https://soundcloud.com/rvv3n666/eminem-superman-sped-upbass-boosted"
+      },
+      {
+        "word": "JESSIEJ",
+        "startX": 5,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name (not the wild west outlaw)",
+        "audioUrl": "1218288037",
+        "startAt": "1:01",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/user-392383164/domino"
+      },
+      {
+        "word": "TEKIT",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1638628764",
+        "startAt": "0:22",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/wearecafune/tek-it-sped-up"
+      },
+      {
+        "word": "GAGA",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Second part of artist name",
+        "audioUrl": "1280877499",
+        "startAt": "1:05",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/matas-r-872064188/lady-gaga-just-dance-sped-up"
+      },
+      {
+        "word": "ONEDANCE",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1978742995",
+        "startAt": "0:09",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/usnavygeek/one-dance-drake-sped-up"
+      },
+      {
+        "word": "OBSESSED",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (written about the artist in 3A)",
+        "audioUrl": "201023494",
+        "startAt": "0:48",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/michelle-adjei-1/mariah-carey-obsessed-sped-up"
+      },
+      {
+        "word": "TIMBERLAKE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "audioUrl": "1487723098",
+        "startAt": "1:05.5",
+        "audioDuration": 8.5,
+        "soundcloudUrl": "https://soundcloud.com/kyle-moua-831631970/mirrors-sped-up-justin"
+      },
+      {
+        "word": "WAKA",
+        "startX": 8,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This word x2",
+        "audioUrl": "1415542396",
+        "startAt": "0:16",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/joe-ling-841839530/shakira-waka-waka-sped-up"
+      }
+    ]
   }
 }
