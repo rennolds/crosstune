@@ -28486,5 +28486,100 @@
         "soundcloudUrl": "https://soundcloud.com/james-arthur-official/say-you-wont-let-go"
       }
     ]
+  },
+  "2026-01-21": {
+    "version": "1.0.0",
+    "title": "❌💿🧩 4️⃣",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "HEATWAVES",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "🥵🌊",
+        "audioUrl": "828639601",
+        "startAt": "0:17",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/glassanimals/heat-waves"
+      },
+      {
+        "word": "DYNOMITE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "🧨",
+        "audioUrl": "255782644",
+        "startAt": "0:07",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/taiocruz/dynamite"
+      },
+      {
+        "word": "GREENDAY",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "🟩🌅🌇",
+        "audioUrl": "256240207",
+        "startAt": "0:17",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/greenday/21-guns-1"
+      },
+      {
+        "word": "BOYSDONTCRY",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "👦🙅‍♂️😢",
+        "audioUrl": "53838029",
+        "startAt": "0:56",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/geovanni-gutierrez-sanchez/the-cure-boys-dont-cry"
+      },
+      {
+        "word": "STARSHIPS",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "⭐️🚢🛳️",
+        "audioUrl": "285001139",
+        "startAt": "1:25",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1"
+      },
+      {
+        "word": "HUNGRYEYES",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "🤤👁️👁️",
+        "audioUrl": "189580730",
+        "startAt": "1:23",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/hollywoodpantages/hungry-eyes-dirty-dancing"
+      },
+      {
+        "word": "SOS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "●●● ▬ ▬ ▬ ●●●",
+        "audioUrl": "253122491",
+        "startAt": "0:14",
+        "audioDuration": 5,
+        "soundcloudUrl": "https://soundcloud.com/abba-official/s-o-s-album-version"
+      }
+    ]
   }
 }
