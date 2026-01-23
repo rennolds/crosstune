@@ -28690,6 +28690,113 @@
     ]
   },
     "2026-01-23": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "LILWAYNE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Rapper featured on this song",
+        "audioUrl": "206686259",
+        "startAt": "1:48",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/h-za-n-de-m/bow-chika-wow-mike-posner"
+      },
+      {
+        "word": "AVE",
+        "startX": 9,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of this song title",
+        "audioUrl": "8212487",
+        "startAt": "0:16",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/deep-records/charles-gounod-ave-maria"
+      },
+      {
+        "word": "LAST",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "First word of this song title",
+        "audioUrl": "1436403670",
+        "startAt": "0:08",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/morgan-wallen/last-night"
+      },
+      {
+        "word": "TONGUETIED",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "271221781",
+        "startAt": "0:25",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/grouplove/tongue-tied"
+      },
+      {
+        "word": "JUSTAKID",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "141753560",
+        "startAt": "0:04",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/atlanticrecords/simple-plan-im-just-a-kid"
+      },
+      {
+        "word": "WALLOWS",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Band name",
+        "audioUrl": "566482608",
+        "startAt": "0:48",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/wallowsmusic/are-you-bored-yet-feat-clairo"
+      },
+      {
+        "word": "TRUCK",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Somethin' 'bout a what?",
+        "audioUrl": "276471938",
+        "startAt": "0:49",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/kipmoore/somethin-bout-a-truck-album"
+      },
+      {
+        "word": "VOWELS",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Which letters are missing from this song title?",
+        "audioUrl": "12039986",
+        "startAt": "0:31",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/falloutboy/08-thnks-fr-th-mmrs"
+      }
+    ]
+  },
+    "2026-01-24": {
     "title": "Songs to play in the garage (by dwt)",
     "version": "1.0.0",
     "size": {
