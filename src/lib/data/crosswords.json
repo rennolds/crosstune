@@ -28950,5 +28950,124 @@
         "audioDuration": 30
       }
     ]
+  },
+    "2026-01-25": {
+    "title": "GINGERS! (by quincey)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "AINTITFUN",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "204969250",
+        "soundcloudUrl": "https://soundcloud.com/paramore/aint-it-fun",
+        "startAt": "1:22",
+        "audioDuration": 10
+      },
+      {
+        "word": "GALWAY",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "____ Girl",
+        "audioUrl": "310108176",
+        "soundcloudUrl": "https://soundcloud.com/edsheeran/galway-girl",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "DOGDAYS",
+        "startX": 5,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What does Florence say is over?",
+        "audioUrl": "251381111",
+        "soundcloudUrl": "https://soundcloud.com/florence-the-machine/dog-days-are-over",
+        "startAt": "3:05",
+        "audioDuration": 7
+      },
+      {
+        "word": "HAYLEY",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name (Also a member in XX)",
+        "audioUrl": "2196581435",
+        "soundcloudUrl": "https://soundcloud.com/hayleywilliamsmusic/good-ol-days",
+        "startAt": "0:44",
+        "audioDuration": 16
+      },
+      {
+        "word": "ALONE",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "I think we're what now?",
+        "audioUrl": "73115708",
+        "soundcloudUrl": "https://soundcloud.com/cleopatra-recs/tiffany-i-think-we-re-alone",
+        "startAt": "0:22",
+        "audioDuration": 11
+      },
+      {
+        "word": "REBA",
+        "startX": 3,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": "253178839",
+        "soundcloudUrl": "https://soundcloud.com/rebamcentireofficial/im-a-survivor-album-version",
+        "startAt": "1:45",
+        "audioDuration": 9
+      },
+      {
+        "word": "TOGO",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "HOT ____",
+        "audioUrl": "1582588575",
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/hot-to-go",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "ROSE",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Lead singer's last name",
+        "audioUrl": "130988069",
+        "soundcloudUrl": "https://soundcloud.com/matheus-albuquerque-13/sweet-child-o-mine",
+        "startAt": "1:20",
+        "audioDuration": 13
+      },
+      {
+        "word": "ABIGAIL",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "\"You sit in class next to a redhead named ____\"",
+        "audioUrl": "1965967731",
+        "soundcloudUrl": "https://soundcloud.com/betty-furfaro/taylor-swift-fifteen",
+        "startAt": "1:48",
+        "audioDuration": 4.5
+      }
+    ]
   }
 }
