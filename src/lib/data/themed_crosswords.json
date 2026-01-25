@@ -3459,7 +3459,7 @@
         "soundcloudUrl": "https://soundcloud.com/brunomars/bruno-mars-anderson-paak-4"
       }
     ]
-  }
+  },
   "30": {
     "title": "Disney on Ice II",
     "date_available": "2026-01-25",
@@ -3501,7 +3501,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "I won't ask you to spell it—just give the first five letters.",
+        "textClue": "I won't ask you to spell it, just give the first five letters...",
         "audioUrl": "267396495",
         "startAt": "0:17",
         "audioDuration": 13,
