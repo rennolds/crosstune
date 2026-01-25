@@ -3459,5 +3459,126 @@
         "soundcloudUrl": "https://soundcloud.com/brunomars/bruno-mars-anderson-paak-4"
       }
     ]
+  },
+  "30": {
+    "title": "Disney on Ice II",
+    "date_available": "2026-01-25",
+    "author": "Paul Pursifull",
+    "thumbnail": "https://imgs.classicfm.com/images/25111?width=3259&crop=16_9&signature=WUFDZTE6xau3MxH6jztFxAxM51w=",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BRAVE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Musical name",
+        "audioUrl": "252603150",
+        "startAt": "0:29",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/julie-fowlis-official/touch-the-sky"
+      },
+      {
+        "word": "DWAYNE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Actor first name",
+        "audioUrl": "293546331",
+        "startAt": "0:35",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/dwaynejohnsonofficial/youre-welcome"
+      },
+      {
+        "word": "SUPER",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "I won't ask you to spell it—just give the first five letters.",
+        "audioUrl": "267396495",
+        "startAt": "0:17",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/dick-van-dyke-official/supercalifragilisticexpialidoc"
+      },
+      {
+        "word": "JUNGLEBOOK",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Musical name (sans the)",
+        "audioUrl": "267387954",
+        "startAt": "0:41",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/bruce-reitherman/the-bare-necessities"
+      },
+      {
+        "word": "ARIEL",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Character singing this song",
+        "audioUrl": "1500047809",
+        "startAt": "2:23",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/halle_bailey/part-of-your-world-from-the"
+      },
+      {
+        "word": "MULAN",
+        "startX": 3,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Musical name",
+        "audioUrl": "267471136",
+        "startAt": "0:16",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/donny-osmond-official/ill-make-a-man-out-of-you?in=jerry-goldsmith-official%2Fsets%2Fmulan-original-soundtrack"
+      },
+      {
+        "word": "BEOURGUEST",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "107304909",
+        "startAt": "0:25.6",
+        "audioDuration": 15.4,
+        "soundcloudUrl": "https://soundcloud.com/blessing-peter-1/be-our-guest"
+      },
+      {
+        "word": "PETERPAN",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "This song was written as a leitmotif for Tick-Tock the Crocodile in what Disney movie?",
+        "audioUrl": "267457730",
+        "startAt": "0:08",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/jack-lawrence-official/never-smile-at-a-crocodile"
+      },
+      {
+        "word": "LILO",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "The main character in this Disney movie",
+        "audioUrl": "2091738387",
+        "startAt": "0:23",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/iamtongi/hawaiian-roller-coaster-ride"
+      }
+    ]
   }
 }
