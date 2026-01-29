@@ -29549,5 +29549,160 @@
         "soundcloudUrl": "https://soundcloud.com/larryfisherman/nikes-on-my-feet"
       }
     ]
+  },
+    "2026-01-30": {
+    "title": "Amongus (by kubot)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SHARKS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (also San Jose's hockey team)",
+        "audioUrl": "1293239491",
+        "startAt": "0:06",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/imaginedragons/sharks"
+      },
+      {
+        "word": "SOS",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "602800461",
+        "startAt": "0:29",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/aviciiofficial/sos-feat-aloe-blacc"
+      },
+      {
+        "word": "BEER",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "What never broke his heart?",
+        "audioUrl": "614247258",
+        "startAt": "0:15",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/lukecombs/beer-never-broke-my-heart"
+      },
+      {
+        "word": "EACH",
+        "startX": 7,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Nice To ____ Other (song title)",
+        "audioUrl": "2104070730",
+        "startAt": "0:17",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/oliviaadean/nice-to-each-other"
+      },
+      {
+        "word": "IFI",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "__ __ Were a Boy (song title)",
+        "audioUrl": "256526882",
+        "startAt": "0:19",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/beyonce/if-i-were-a-boy"
+      },
+      {
+        "word": "UPTOWN",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "First word of the song title",
+        "audioUrl": "265535208",
+        "startAt": "0:10",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/markronson/uptown-funk"
+      },
+      {
+        "word": "SUSHI",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Music for a ___ restaurant",
+        "audioUrl": "1342866931",
+        "startAt": "1:05",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/manuel-alvarado-382498205/harry-styles-music-for-the-sushi-restaurant-audio"
+      },
+      {
+        "word": "SUSPICIOUS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "____ Minds (song title)",
+        "audioUrl": "259004287",
+        "startAt": "0:12",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/elvissonymusic/suspicious-minds-3"
+      },
+      {
+        "word": "BYE",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Word repeated in the song title",
+        "audioUrl": "263191606",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/n-sync-official/bye-bye-bye"
+      },
+      {
+        "word": "SAVE",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First word of the song title",
+        "audioUrl": "779347072",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/save-your-tears"
+      },
+      {
+        "word": "ALONE",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "294077550",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/alanwalker/alone?in=alanwalker%2Fsets%2Fdifferent-world-6"
+      },
+      {
+        "word": "RAH",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of the song title (sounds like an Egyptian god)",
+        "audioUrl": "1943680463",
+        "startAt": "0:42",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/rah-tah-tah"
+      }
+    ]
   }
 }
