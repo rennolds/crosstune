@@ -3580,5 +3580,113 @@
         "soundcloudUrl": "https://soundcloud.com/iamtongi/hawaiian-roller-coaster-ride"
       }
     ]
+  },
+  "31": {
+    "title": "pov: you're an it girl in the 2000's",
+    "date_available": "2026-02-01",
+    "author": "Tommy Rennolds",
+    "thumbnail": "https://imgix.bustle.com/rehost/2016/9/13/0c8607ea-19fa-4dcc-b623-374f2a8a2deb.jpg?w=1200&h=900&fit=crop&crop=faces&fm=jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "STEFANI",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": 251380719,
+        "soundcloudUrl": "https://soundcloud.com/gwen-stefani/hollaback-girl-album-version-1",
+        "startAt": "0:04.2",
+        "audioDuration": 18.9
+      },
+      {
+        "word": "SAYMYNAME",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 253510334,
+        "soundcloudUrl": "https://soundcloud.com/destinys-child-official/say-my-name",
+        "startAt": "0:00",
+        "audioDuration": 15.8
+      },
+      {
+        "word": "TOXIC",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 256024558,
+        "soundcloudUrl": "https://soundcloud.com/britneyspears/toxic",
+        "startAt": "0:14",
+        "audioDuration": 13
+      },
+      {
+        "word": "GENIE",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The imprisoned thing in this song title",
+        "audioUrl": 1288279645,
+        "soundcloudUrl": "https://soundcloud.com/2bflr1azmcun/genie-in-a-bottle-christina",
+        "startAt": "0:49",
+        "audioDuration": 12.7
+      },
+      {
+        "word": "MYLOVE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 256093076,
+        "soundcloudUrl": "https://soundcloud.com/justintimberlake/my-love-clean",
+        "startAt": "0:00",
+        "audioDuration": 14
+      },
+      {
+        "word": "SUNSHINE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Last word of this song title",
+        "audioUrl": 254118117,
+        "soundcloudUrl": "https://soundcloud.com/natashabedingfieldofficial/pocketful-of-sunshine-1",
+        "startAt": "0:05",
+        "audioDuration": 20
+      },
+      {
+        "word": "TIMBALAND",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Featured artist on this track",
+        "audioUrl": 253184404,
+        "soundcloudUrl": "https://soundcloud.com/nellyfurtado/promiscuous-album-version",
+        "startAt": "1:39",
+        "audioDuration": 26
+      },
+      {
+        "word": "MUSTANG",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Complete the lyric: Sippin' and reminiscin' On days when I had a ____",
+        "audioUrl": 253183202,
+        "soundcloudUrl": "https://soundcloud.com/fergie-music/glamorous",
+        "startAt": "0:15",
+        "audioDuration": 14
+      }
+    ]
   }
 }
