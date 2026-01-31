@@ -29704,5 +29704,112 @@
         "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/rah-tah-tah"
       }
     ]
+  },
+    "2026-01-31": {
+    "title": "Ending in Six",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "FRAY",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Band name (sans the) of this 2006 track",
+        "audioUrl": 871518028,
+        "soundcloudUrl": "https://soundcloud.com/the_fray/over-my-head-cable-car",
+        "startAt": "0:04",
+        "audioDuration": 10
+      },
+      {
+        "word": "STYLES",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist last name of this 2026 track",
+        "audioUrl": 2252638244,
+        "soundcloudUrl": "https://soundcloud.com/aka-716226817/harry-styles-aperture-slightly",
+        "startAt": "0:41",
+        "audioDuration": 12
+      },
+      {
+        "word": "DETROIT",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What US city does Kiss call \"Rock City\" in this 1976 track",
+        "audioUrl": 253155328,
+        "soundcloudUrl": "https://soundcloud.com/kiss-official/detroit-rock-city-2012-remix",
+        "startAt": "1:41",
+        "audioDuration": 11
+      },
+      {
+        "word": "BREATHAWAY",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"Take My ___ ___\" is the title of this 1986 track",
+        "audioUrl": 140056237,
+        "soundcloudUrl": "https://soundcloud.com/giorgiomoroder/berlin-take-my-breath-away",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "SIXTYSIX",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"...feeling it since nineteen ____\"",
+        "audioUrl": 310455689,
+        "soundcloudUrl": "https://soundcloud.com/portugaltheman/feel-it-still-1",
+        "startAt": "0:21.5",
+        "audioDuration": 7.2
+      },
+      {
+        "word": "RICHIE",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name of this 1986 track",
+        "audioUrl": 256150927,
+        "soundcloudUrl": "https://soundcloud.com/lionelrichieofficial/say-you-say-me-album-version",
+        "startAt": "0:30",
+        "audioDuration": 12
+      },
+      {
+        "word": "JAMESBLUNT",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist of this 2006 chart-topping track",
+        "audioUrl": 213950777,
+        "soundcloudUrl": "https://soundcloud.com/jamesblunt/youre-beautiful",
+        "startAt": "0:35",
+        "audioDuration": 11
+      },
+      {
+        "word": "SUBMARINE",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Yellow ____\" is the title of this 1966 track",
+        "audioUrl": 185886102,
+        "soundcloudUrl": "https://soundcloud.com/thebeatlesrevisited/yellow-submarine",
+        "startAt": "0:18",
+        "audioDuration": 9
+      }
+    ]
   }
 }
