@@ -3688,5 +3688,149 @@
         "audioDuration": 14
       }
     ]
+  },
+  "32": {
+    "title": "Titans of EDM",
+    "date_available": "2026-02-08",
+    "author": "Hydro",
+    "thumbnail": "https://www.hostelworld.com/blog/wp-content/uploads/2018/07/EDC-1313x875.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MAFIA",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist Name: 3rd Word",
+        "audioUrl": "58460326",
+        "startAt": "0:49",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/matorian13/swedish-house-mafia-feat-john"
+      },
+      {
+        "word": "DAVID",
+        "startX": 7,
+        "startY": 1,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist First Name",
+        "audioUrl": "32908947",
+        "startAt": "0:15",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/david-guetta-10/david-guetta-ft-kelly-rowland"
+      },
+      {
+        "word": "ATB",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist Name",
+        "audioUrl": "63922709",
+        "startAt": "0:29",
+        "audioDuration": 28,
+        "soundcloudUrl": "https://soundcloud.com/rocky-chauhan-2/atb-9pm-till-i-come-sequential"
+      },
+      {
+        "word": "SKRILLEX",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "21792166",
+        "startAt": "0:20",
+        "audioDuration": 28,
+        "soundcloudUrl": "https://soundcloud.com/skrillex/scary-monsters-and-nice"
+      },
+      {
+        "word": "AOKI",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist Last Name",
+        "audioUrl": "297272406",
+        "startAt": "0:50",
+        "audioDuration": 29,
+        "soundcloudUrl": "https://soundcloud.com/steveaoki/steve-aoki-louis-tomlinson-just-hold-on"
+      },
+      {
+        "word": "PUNK",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist Name: 2nd Word",
+        "audioUrl": "254111819",
+        "startAt": "0:38",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/daftpunkofficialmusic/television-rules-the-nation"
+      },
+      {
+        "word": "TIESTO",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist Name",
+        "audioUrl": "1394984266",
+        "startAt": "0:30",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/tiesto/lay-low"
+      },
+      {
+        "word": "AVICII",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist Name",
+        "audioUrl": "602800461",
+        "startAt": "0:24",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/aviciiofficial/sos-feat-aloe-blacc"
+      },
+      {
+        "word": "CALVIN",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist First Name",
+        "audioUrl": "80789028",
+        "startAt": "0:49",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/ultrarecords/calvin-harris-ft-florence"
+      },
+      {
+        "word": "GARRIX",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artist Last Name",
+        "audioUrl": "98081145",
+        "startAt": "1:30",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/martingarrix/martin-garrix-animals-original"
+      },
+      {
+        "word": "DEADMAU5",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name",
+        "audioUrl": "254013795",
+        "startAt": "0:30",
+        "audioDuration": 30,
+        "soundcloudUrl": "https://soundcloud.com/deadmau5/ghosts-n-stuff-1"
+      }
+    ]
   }
 }
