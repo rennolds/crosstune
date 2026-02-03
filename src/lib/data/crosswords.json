@@ -30109,5 +30109,136 @@
         "soundcloudUrl": "https://soundcloud.com/dianaross/upside-down-93-remix-1"
       }
     ]
+  },
+    "2026-02-03": {
+    "title": "Bouquet 💐 (by tadapandas)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "green",
+    "words": [
+      {
+        "word": "DANDELIONS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "\"I'm in a field of ____\" ",
+        "audioUrl": "318934824",
+        "soundcloudUrl": "https://soundcloud.com/ruthbofficial/dandelions",
+        "startAt": "0:11",
+        "audioDuration": 15
+      },
+      {
+        "word": "FORGETMENOT",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title (a flower to remember)",
+        "audioUrl": 256108814,
+        "soundcloudUrl": "https://soundcloud.com/patricerushen/forget-me-nots-1",
+        "startAt": "0:24",
+        "audioDuration": 17
+      },
+      {
+        "word": "IRIS",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (this flower is named after the Greek goddess of the rainbow)",
+        "audioUrl": 220647780,
+        "soundcloudUrl": "https://soundcloud.com/thegoogoodolls/iris-1",
+        "startAt": "0:58",
+        "audioDuration": 9
+      },
+      {
+        "word": "POPPY",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name (this flower can be used to produce opium... or muffins) ",
+        "audioUrl": 1832404059,
+        "soundcloudUrl": "https://soundcloud.com/poppy/new-way-out",
+        "startAt": "0:44",
+        "audioDuration": 8
+      },
+      {
+        "word": "SUN",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The flower in this song's title always points at what?",
+        "audioUrl": 516180894,
+        "soundcloudUrl": "https://soundcloud.com/postmalone/sunflower-spider-man-into-the",
+        "startAt": "0:03",
+        "audioDuration": 10
+      },
+      {
+        "word": "DAISY",
+        "startX": 6,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title (flower's name comes from old English meaning \"day's eye.\"",
+        "audioUrl": "844727143",
+        "soundcloudUrl": "https://soundcloud.com/ashnikko/daisy",
+        "startAt": "0:30",
+        "audioDuration": 8
+      },
+      {
+        "word": "DAFFODILS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title (this yellow flower is the national flower of Wales",
+        "audioUrl": 257063365,
+        "soundcloudUrl": "https://soundcloud.com/markronson/daffodils",
+        "startAt": "0:18",
+        "audioDuration": 6
+      },
+      {
+        "word": "ROSES",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also the national flower of England)",
+        "audioUrl": 258097961,
+        "soundcloudUrl": "https://soundcloud.com/thechainsmokers/roses-1",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "MARIGOLD",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title (gardeners often plant these flowers to repel pests)",
+        "audioUrl": 344240505,
+        "soundcloudUrl": "https://soundcloud.com/relient-k-official/marigold",
+        "startAt": "0:48",
+        "audioDuration": 6
+      },
+      {
+        "word": "LILY",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name (this flower is poisonous to cats)",
+        "audioUrl": 256038460,
+        "soundcloudUrl": "https://soundcloud.com/lilyallen/smile-explicit-version",
+        "startAt": "1:10",
+        "audioDuration": 10
+      }
+    ]
   }
 }
