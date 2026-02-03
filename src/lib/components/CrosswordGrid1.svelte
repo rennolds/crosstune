@@ -144,8 +144,8 @@
   }
 
   const puzzle = $derived(puzzleInfo?.puzzle);
-  const { size, words } = $derived(
-    puzzle || { size: { width: 0, height: 0 }, words: [] }
+  const { size, words, starting_characters } = $derived(
+    puzzle || { size: { width: 0, height: 0 }, words: [], starting_characters: [] }
   ); // Provide default values if puzzle is null
 
   // Generate a hash of the puzzle content to uniquely identify it
@@ -153,6 +153,7 @@
 
   let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
+  let startingCells = $state(new Set()); // Pre-filled hints that don't count as reveals
   // Create grid and message state
   let grid = $state(
     Array(size.height)
@@ -164,6 +165,29 @@
     if (isArchiveMode) {
       // For archive mode, reset the timer and ensure it starts when widgets are ready
       resetTimer();
+      
+      // Initialize grid for archive mode with starting characters
+      grid = Array(size.height)
+        .fill(null)
+        .map(() => Array(size.width).fill(null));
+      
+      // Initialize input cells
+      for (let y = 0; y < size.height; y++) {
+        for (let x = 0; x < size.width; x++) {
+          if (isInputCell(x, y)) {
+            if (spaceCells.has(`${x},${y}`)) {
+              grid[y][x] = " ";
+            } else {
+              grid[y][x] = "";
+            }
+          }
+        }
+      }
+      
+      // Reset revealed cells and apply starting characters to grid
+      revealedCells = new Set();
+      applyStartingCharactersToGrid(grid);
+      
       // Start the timer if all widgets are ready
       if (areAllWidgetsReady(words)) {
         setTimerRunning(true);
@@ -205,6 +229,9 @@
 
         // Reset revealed cells
         revealedCells = new Set();
+
+        // Apply starting characters to grid (pre-filled hints - these don't count as reveals)
+        applyStartingCharactersToGrid(grid);
 
         // Reset unavailable widgets
         setUnavailableWidgets(new Set());
@@ -281,6 +308,53 @@
         spaceCells.set(`${x},${y}`, true);
       }
     });
+  });
+
+  // Helper function to calculate which cells are starting cells (from puzzle data)
+  function calculateStartingCells() {
+    const cells = new Set();
+    if (!starting_characters || starting_characters.length === 0) {
+      return cells;
+    }
+    
+    starting_characters.forEach((entry) => {
+      const { characters, startX, startY, direction } = entry;
+      [...characters].forEach((char, index) => {
+        const x = direction === "across" ? startX + index : startX;
+        const y = direction === "across" ? startY : startY + index;
+        
+        // Only add if within grid bounds
+        if (x >= 0 && x < size.width && y >= 0 && y < size.height) {
+          cells.add(`${x},${y}`);
+        }
+      });
+    });
+    return cells;
+  }
+
+  // Helper function to apply starting characters to grid
+  function applyStartingCharactersToGrid(targetGrid) {
+    if (!starting_characters || starting_characters.length === 0) {
+      return;
+    }
+    
+    starting_characters.forEach((entry) => {
+      const { characters, startX, startY, direction } = entry;
+      [...characters].forEach((char, index) => {
+        const x = direction === "across" ? startX + index : startX;
+        const y = direction === "across" ? startY : startY + index;
+        
+        // Only apply if within grid bounds
+        if (x >= 0 && x < size.width && y >= 0 && y < size.height) {
+          targetGrid[y][x] = char;
+        }
+      });
+    });
+  }
+
+  // Always calculate starting cells from puzzle data (these never change)
+  $effect(() => {
+    startingCells = calculateStartingCells();
   });
 
   // Find all starting positions and sort them
@@ -981,8 +1055,9 @@
   }
 
   function handleKeydown(event, x, y) {
-    if (revealedCells.has(`${x},${y}`)) {
-      // Only allow navigation keys for revealed cells
+    const cellKey = `${x},${y}`;
+    if (revealedCells.has(cellKey) || startingCells.has(cellKey)) {
+      // Only allow navigation keys for revealed/starting cells
       if (
         ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Tab"].includes(
           event.key
@@ -990,7 +1065,7 @@
       ) {
         // Handle navigation as normal
       } else {
-        // Prevent modification of revealed cells
+        // Prevent modification of revealed/starting cells
         event.preventDefault();
         return;
       }
@@ -1075,21 +1150,23 @@
           if (currentDirection === "across") {
             let newX = x - 1;
             while (newX >= 0) {
-              // Find the first non-space, non-revealed input cell going backwards
+              const checkKey = `${newX},${y}`;
+              // Find the first non-space, non-revealed, non-starting input cell going backwards
               if (
                 grid[y][newX] !== null &&
-                !spaceCells.has(`${newX},${y}`) &&
-                !revealedCells.has(`${newX},${y}`)
+                !spaceCells.has(checkKey) &&
+                !revealedCells.has(checkKey) &&
+                !startingCells.has(checkKey)
               ) {
                 grid[y][newX] = "";
                 moveFocus(newX, y);
                 break;
               } else if (
                 grid[y][newX] !== null &&
-                !spaceCells.has(`${newX},${y}`) &&
-                revealedCells.has(`${newX},${y}`)
+                !spaceCells.has(checkKey) &&
+                (revealedCells.has(checkKey) || startingCells.has(checkKey))
               ) {
-                // Skip revealed cells but keep moving backwards
+                // Skip revealed/starting cells but keep moving backwards
                 newX--;
                 continue;
               }
@@ -1098,21 +1175,23 @@
           } else {
             let newY = y - 1;
             while (newY >= 0) {
-              // Find the first non-space, non-revealed input cell going up
+              const checkKey = `${x},${newY}`;
+              // Find the first non-space, non-revealed, non-starting input cell going up
               if (
                 grid[newY][x] !== null &&
-                !spaceCells.has(`${x},${newY}`) &&
-                !revealedCells.has(`${x},${newY}`)
+                !spaceCells.has(checkKey) &&
+                !revealedCells.has(checkKey) &&
+                !startingCells.has(checkKey)
               ) {
                 grid[newY][x] = "";
                 moveFocus(x, newY);
                 break;
               } else if (
                 grid[newY][x] !== null &&
-                !spaceCells.has(`${x},${newY}`) &&
-                revealedCells.has(`${x},${newY}`)
+                !spaceCells.has(checkKey) &&
+                (revealedCells.has(checkKey) || startingCells.has(checkKey))
               ) {
-                // Skip revealed cells but keep moving upwards
+                // Skip revealed/starting cells but keep moving upwards
                 newY--;
                 continue;
               }
@@ -1217,15 +1296,16 @@
 
   // Add new function to handle virtual keyboard input
   function handleVirtualKeyPress(key) {
-    // Check if current cell is revealed
-    if (revealedCells.has(`${focusedX},${focusedY}`)) {
+    const focusedKey = `${focusedX},${focusedY}`;
+    // Check if current cell is revealed or starting
+    if (revealedCells.has(focusedKey) || startingCells.has(focusedKey)) {
       // Only allow navigation keys
       if (
         ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Tab"].includes(key)
       ) {
         // Handle navigation as normal
       } else {
-        // Prevent modification of revealed cells
+        // Prevent modification of revealed/starting cells
         return;
       }
     }
@@ -1240,21 +1320,23 @@
         if (currentDirection === "across") {
           let newX = focusedX - 1;
           while (newX >= 0) {
-            // Find the first non-space, non-revealed input cell going backwards
+            const checkKey = `${newX},${focusedY}`;
+            // Find the first non-space, non-revealed, non-starting input cell going backwards
             if (
               grid[focusedY][newX] !== null &&
-              !spaceCells.has(`${newX},${focusedY}`) &&
-              !revealedCells.has(`${newX},${focusedY}`)
+              !spaceCells.has(checkKey) &&
+              !revealedCells.has(checkKey) &&
+              !startingCells.has(checkKey)
             ) {
               grid[focusedY][newX] = "";
               moveFocus(newX, focusedY);
               break;
             } else if (
               grid[focusedY][newX] !== null &&
-              !spaceCells.has(`${newX},${focusedY}`) &&
-              revealedCells.has(`${newX},${focusedY}`)
+              !spaceCells.has(checkKey) &&
+              (revealedCells.has(checkKey) || startingCells.has(checkKey))
             ) {
-              // Skip revealed cells but keep moving backwards
+              // Skip revealed/starting cells but keep moving backwards
               newX--;
               continue;
             }
@@ -1263,21 +1345,23 @@
         } else {
           let newY = focusedY - 1;
           while (newY >= 0) {
-            // Find the first non-space, non-revealed input cell going up
+            const checkKey = `${focusedX},${newY}`;
+            // Find the first non-space, non-revealed, non-starting input cell going up
             if (
               grid[newY][focusedX] !== null &&
-              !spaceCells.has(`${focusedX},${newY}`) &&
-              !revealedCells.has(`${focusedX},${newY}`)
+              !spaceCells.has(checkKey) &&
+              !revealedCells.has(checkKey) &&
+              !startingCells.has(checkKey)
             ) {
               grid[newY][focusedX] = "";
               moveFocus(focusedX, newY);
               break;
             } else if (
               grid[newY][focusedX] !== null &&
-              !spaceCells.has(`${focusedX},${newY}`) &&
-              revealedCells.has(`${focusedX},${newY}`)
+              !spaceCells.has(checkKey) &&
+              (revealedCells.has(checkKey) || startingCells.has(checkKey))
             ) {
-              // Skip revealed cells but keep moving upwards
+              // Skip revealed/starting cells but keep moving upwards
               newY--;
               continue;
             }
@@ -1783,6 +1867,7 @@
                         class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
                         class:cursor-text={!isMobileDevice}
                         class:revealed={revealedCells.has(`${x},${y}`)}
+                        class:starting={startingCells.has(`${x},${y}`)}
                         style=""
                         bind:value={grid[y][x]}
                         onkeydown={(e) => handleKeydown(e, x, y)}
@@ -1800,11 +1885,16 @@
                           : {}}
                       />
                       {#if revealedCells.has(`${x},${y}`)}
+                        <!-- Red triangle flag for revealed cells -->
                         <div class="absolute top-0 right-0 w-3 h-0 md:w-5">
                           <div
                             class="w-0 h-0 border-t-[6px] md:border-t-[10px] border-t-red-500 border-l-[4px] md:border-l-[6px] border-l-red-500 border-b-[4px] md:border-b-[6px] border-b-transparent border-r-[6px] md:border-r-[10px] border-r-transparent transform rotate-90 translate-x-[2px] md:translate-x-[4px] -translate-y-[0px]"
                           ></div>
                         </div>
+                      {/if}
+                      {#if startingCells.has(`${x},${y}`)}
+                        <!-- Grey background for starting cells (free hints) -->
+                        <div class="absolute inset-0 bg-gray-300 dark:bg-gray-600 opacity-40 pointer-events-none"></div>
                       {/if}
                     {/if}
                   {/if}
@@ -2293,6 +2383,19 @@
   }
 
   .revealed {
+    color: inherit !important;
+    font-weight: bold !important;
+    font-family: inherit !important;
+  }
+
+  /* Styles for starting cells (free hints that don't count as reveals) */
+  input.starting {
+    color: inherit !important;
+    font-weight: bold !important;
+    font-family: inherit !important;
+  }
+
+  .starting {
     color: inherit !important;
     font-weight: bold !important;
     font-family: inherit !important;
