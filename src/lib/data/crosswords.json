@@ -30252,6 +30252,125 @@
       }
     ]
   },
+  "2026-02-04": {
+    "title": "The ____ (by kubot)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "purple",
+    "words": [
+      {
+        "word": "WORLDISYOURS",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The ___",
+        "audioUrl": "290148162",
+        "startAt": "0:09",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/nasirjones/the-world-is-yours-1"
+      },
+      {
+        "word": "NEXTEPISODE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The ___",
+        "audioUrl": "252644357",
+        "startAt": "0:15",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/dr-dre-music/the-next-episode"
+      },
+      {
+        "word": "GREATEST",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The ___",
+        "audioUrl": "286261901",
+        "startAt": "0:07",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/siamusic/the-greatest-1"
+      },
+      {
+        "word": "TIME",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The ___",
+        "audioUrl": "253477360",
+        "startAt": "2:08",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/the-time-dirty-bit-album"
+      },
+      {
+        "word": "MOTTO",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "The ___",
+        "audioUrl": "257461404",
+        "startAt": "0:19",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-the-motto-album-version"
+      },
+      {
+        "word": "NIGHTS",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The ___",
+        "audioUrl": "284331776",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/aviciiofficial/the-nights"
+      },
+      {
+        "word": "ATEAM",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The ___",
+        "audioUrl": "45108181",
+        "startAt": "0:34",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/wmb/ed-sheeran-the-a-team"
+      },
+      {
+        "word": "BOX",
+        "startX": 8,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The ___",
+        "audioUrl": "723315721",
+        "startAt": "0:01",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/roddyricch/the-box"
+      },
+      {
+        "word": "SPECTRE",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "The ___ (also the name of a Bond film)",
+        "audioUrl": "380072606",
+        "startAt": "1:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/my-music-678000090/the-spectre"
+      }
+    ]
+  },
   "2026-02-05": {
     "title": "\"!\" (s/o laura0602)",
     "version": "1.0.0",
