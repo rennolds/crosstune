@@ -1,4 +1,5 @@
 <script>
+  import { untrack } from "svelte";
   import crosswords from "$lib/data/crosswords.json";
   import ResultOverlay from "./ResultOverlay.svelte";
   import SoundCloudManager from "./SoundCloudManager.svelte";
@@ -166,8 +167,8 @@
       // For archive mode, reset the timer and ensure it starts when widgets are ready
       resetTimer();
       
-      // Initialize grid for archive mode with starting characters
-      grid = Array(size.height)
+      // Build the grid completely before assigning to avoid mutation during effect
+      const newGrid = Array(size.height)
         .fill(null)
         .map(() => Array(size.width).fill(null));
       
@@ -176,20 +177,23 @@
         for (let x = 0; x < size.width; x++) {
           if (isInputCell(x, y)) {
             if (spaceCells.has(`${x},${y}`)) {
-              grid[y][x] = " ";
+              newGrid[y][x] = " ";
             } else {
-              grid[y][x] = "";
+              newGrid[y][x] = "";
             }
           }
         }
       }
       
-      // Reset revealed cells and apply starting characters to grid
-      revealedCells = new Set();
-      applyStartingCharactersToGrid(grid);
+      // Apply starting characters to the new grid (before assigning to state)
+      applyStartingCharactersToGrid(newGrid);
       
-      // Start the timer if all widgets are ready
-      if (areAllWidgetsReady(words)) {
+      // Now assign the fully built grid to state
+      grid = newGrid;
+      revealedCells = new Set();
+      
+      // Start the timer if all widgets are ready (use untrack to avoid dependency)
+      if (untrack(() => areAllWidgetsReady(words))) {
         setTimerRunning(true);
       }
     } else {
@@ -208,8 +212,8 @@
         saveTimerState(0);
         localStorage.setItem("crosstune_last_puzzle_date", currentDate);
 
-        // Reset grid and revealed cells for a new day
-        grid = Array(size.height)
+        // Build grid completely before assigning to avoid mutation during effect
+        const newGrid = Array(size.height)
           .fill(null)
           .map(() => Array(size.width).fill(null));
 
@@ -219,24 +223,25 @@
             if (isInputCell(x, y)) {
               // If it's a space cell, pre-fill it with a space
               if (spaceCells.has(`${x},${y}`)) {
-                grid[y][x] = " ";
+                newGrid[y][x] = " ";
               } else {
-                grid[y][x] = "";
+                newGrid[y][x] = "";
               }
             }
           }
         }
 
-        // Reset revealed cells
-        revealedCells = new Set();
-
         // Apply starting characters to grid (pre-filled hints - these don't count as reveals)
-        applyStartingCharactersToGrid(grid);
+        applyStartingCharactersToGrid(newGrid);
 
         // Reset unavailable widgets
         setUnavailableWidgets(new Set());
 
-        // Save empty grid state with current version
+        // Now assign to state
+        grid = newGrid;
+        revealedCells = new Set();
+
+        // Save grid state with current version
         saveGridState(
           grid,
           puzzle.version,
@@ -273,11 +278,8 @@
     }
   });
 
-  $effect(() => {
-    if (isArchiveMode && selectedDate) {
-      resetTimer();
-    }
-  });
+  // Note: resetTimer() for archive mode is already called in the main grid initialization effect above
+  // Removed duplicate effect that was causing potential infinite loop issues
   // Track currently focused cell
   let focusedX = $state(0);
   let focusedY = $state(0);
