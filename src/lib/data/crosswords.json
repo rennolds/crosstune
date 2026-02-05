@@ -30653,6 +30653,113 @@
       }
     ]
   },
+  "2026-02-09": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+    {
+      "word": "RUMOURS",
+      "startX": 0,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Album title",
+      "audioUrl": "254399326",
+      "startAt": "1:18",
+      "audioDuration": 9,
+      "soundcloudUrl": "https://soundcloud.com/fleetwoodmacofficial/dreams-remastered"
+    },
+    {
+      "word": "RED",
+      "startX": 9,
+      "startY": 2,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Title Track",
+      "audioUrl": "252454068",
+      "startAt": "0:15",
+      "audioDuration": 6,
+      "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/red"
+    },
+    {
+      "word": "POSITIONS",
+      "startX": 0,
+      "startY": 4,
+      "direction": "across",
+      "color": "#FFCEFD",
+      "textClue": "Title Track",
+      "audioUrl": "916465010",
+      "startAt": "0:30",
+      "audioDuration": 7.5,
+      "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-positions"
+    },
+    {
+      "word": "NEVERMIND",
+      "startX": 2,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": "411299880",
+      "startAt": "0:57",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/umit-basyigit/poeiziunxodm128-2"
+    },
+    {
+      "word": "PURPOSE",
+      "startX": 1,
+      "startY": 0,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Title Track",
+      "audioUrl": "737719738",
+      "startAt": "0:13",
+      "audioDuration": 12,
+      "soundcloudUrl": "https://soundcloud.com/justinbieber/purpose"
+    },
+    {
+      "word": "KOD",
+      "startX": 3,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Title Track",
+      "audioUrl": "432431433",
+      "startAt": "0:12",
+      "audioDuration": 7.8,
+      "soundcloudUrl": "https://soundcloud.com/j-cole/kod"
+    },
+    {
+      "word": "ASTROWORLD",
+      "startX": 6,
+      "startY": 0,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "Album title",
+      "audioUrl": "480200517",
+      "startAt": "1:02",
+      "audioDuration": 10,
+      "soundcloudUrl": "https://soundcloud.com/travisscott-2/sicko-mode?in=mercury-gade%2Fsets%2Fastroworld"
+    },
+    {
+      "word": "LEMONADE",
+      "startX": 10,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FE9C9C",
+      "textClue": "Song title",
+      "audioUrl": "874766908",
+      "startAt": "0:34.2",
+      "audioDuration": 10.5,
+      "soundcloudUrl": "https://soundcloud.com/internetmoneyrecords/17-lemonade-ft-don-toliver-gunna-nav-master"
+    }
+  ]
+},
   "2026-02-11": {
     "title": "",
     "version": "1.0.0",
