@@ -30546,6 +30546,113 @@
       }
     ]
   },
+  "2026-02-11": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "BEANIE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title (keeps your head warm)",
+        "audioUrl": 1754924034,
+        "soundcloudUrl": "https://soundcloud.com/chezile-music/beanie",
+        "startAt": "0:19",
+        "audioDuration": 15
+      },
+      {
+        "word": "EXILE",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 935742508,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/exile-the-long-pond-studio",
+        "startAt": "0:40",
+        "audioDuration": 18
+      },
+      {
+        "word": "APERTURE",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 2252638244,
+        "soundcloudUrl": "https://soundcloud.com/aka-716226817/harry-styles-aperture-slightly",
+        "startAt": "1:08",
+        "audioDuration": 13
+      },
+      {
+        "word": "RIOT",
+        "startX": 5,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 477997503,
+        "soundcloudUrl": "https://soundcloud.com/user-5784688/three-days-grace-riot",
+        "startAt": "1:30",
+        "audioDuration": 11
+      },
+      {
+        "word": "ELASTIC",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First word of song title",
+        "audioUrl": 185001835,
+        "soundcloudUrl": "https://soundcloud.com/siamusic/sia-elastic-heart",
+        "startAt": "0:06",
+        "audioDuration": 10
+      },
+      {
+        "word": "ANNEMARIE",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": 430533615,
+        "soundcloudUrl": "https://soundcloud.com/iamannemarie/2002-1",
+        "startAt": "0:41",
+        "audioDuration": 13
+      },
+      {
+        "word": "TORI",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": 256164271,
+        "soundcloudUrl": "https://soundcloud.com/torikelly/i-was-made-for-loving-you",
+        "startAt": "0:17",
+        "audioDuration": 11
+      },
+      {
+        "word": "EXCEPTION",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"You are the only ____\"",
+        "audioUrl": 294306970,
+        "soundcloudUrl": "https://soundcloud.com/paramore/the-only-exception-1",
+        "startAt": "0:51",
+        "audioDuration": 11
+      }
+    ]
+  },
   "2026-02-12": {
     "title": "Who...me? (by torie)",
     "version": "1.0.0",
