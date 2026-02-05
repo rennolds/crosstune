@@ -3690,8 +3690,128 @@
     ]
   },
   "32": {
-    "title": "Titans of EDM",
+    "title": "Did you say #2016Nostalgia",
     "date_available": "2026-02-08",
+    "author": "Paul Pursifull",
+    "thumbnail": "",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+    {
+      "word": "COLDWATER",
+      "startX": 1,
+      "startY": 0,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "What would he jump into for you? (Song title)",
+      "audioUrl": 292554088,
+      "soundcloudUrl": "https://soundcloud.com/majorlazer/major-lazer-cold-water-feat-justin-bieber-modon-omar-remix",
+      "startAt": "0:32",
+      "audioDuration": 6
+    },
+    {
+      "word": "HERE",
+      "startX": 5,
+      "startY": 2,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Song title",
+      "audioUrl": 313996248,
+      "soundcloudUrl": "https://soundcloud.com/alessiacara/here",
+      "startAt": "0:16",
+      "audioDuration": 9.5
+    },
+    {
+      "word": "PERFECT",
+      "startX": 3,
+      "startY": 5,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "\"Baby, I'm ____ for you\"",
+      "audioUrl": 257052799,
+      "soundcloudUrl": "https://soundcloud.com/onedirectionmusic/perfect",
+      "startAt": "0:14",
+      "audioDuration": 14
+    },
+    {
+      "word": "ALASKA",
+      "startX": 1,
+      "startY": 8,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Song title (also a US state) ",
+      "audioUrl": 268943589,
+      "soundcloudUrl": "https://soundcloud.com/maggierogers/alaska",
+      "startAt": "0:08",
+      "audioDuration": 9
+    },
+    {
+      "word": "PANDA",
+      "startX": 1,
+      "startY": 4,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Song title (endangered species)",
+      "audioUrl": 237603952,
+      "soundcloudUrl": "https://soundcloud.com/lifeofdesiigner/desiigner-panda",
+      "startAt": "0:39",
+      "audioDuration": 11
+    },
+    {
+      "word": "7YEARS",
+      "startX": 4,
+      "startY": 3,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": 231325606,
+      "soundcloudUrl": "https://soundcloud.com/lukasgraham/7-years",
+      "startAt": "0:18",
+      "audioDuration": 10
+    },
+    {
+      "word": "WFH",
+      "startX": 5,
+      "startY": 0,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Initials of this song's title (also known as telework)",
+      "audioUrl": 262603156,
+      "soundcloudUrl": "https://soundcloud.com/fifthharmony/work-from-home",
+      "startAt": "0:17",
+      "audioDuration": 10
+    },
+    {
+      "word": "RIDE",
+      "startX": 7,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": 256133594,
+      "soundcloudUrl": "https://soundcloud.com/twentyonepilots/ride",
+      "startAt": "0:38.5",
+      "audioDuration": 10.5
+    },
+    {
+      "word": "FUTURE",
+      "startX": 9,
+      "startY": 3,
+      "direction": "down",
+      "color": "#00FFFF",
+      "textClue": "This song is a collaboration between Drake and who?",
+      "audioUrl": 1010646661,
+      "soundcloudUrl": "https://soundcloud.com/mybodyisacage/jumpman",
+      "startAt": "1:04",
+      "audioDuration": 10
+    }
+  ]
+},
+  "33": {
+    "title": "Titans of EDM",
+    "date_available": "2026-02-15",
     "author": "Hydro",
     "thumbnail": "https://www.hostelworld.com/blog/wp-content/uploads/2018/07/EDC-1313x875.jpg",
     "size": {
