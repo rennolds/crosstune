@@ -30773,7 +30773,7 @@
     ]
   },
   "2026-02-08": {
-    "title": "Superbowl Performers (by Anon)",
+    "title": "Superbowl Performers",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -30897,7 +30897,7 @@
         "color": "#FFCEFD",
         "textClue": "Artist name (sans the)",
         "audioUrl": "1057419454",
-        "startAt": "02:31",
+        "startAt": "00:45",
         "audioDuration": 15,
         "soundcloudUrl": "https://soundcloud.com/babyloves2/ariana-grande-and-the-weeknd"
       }
