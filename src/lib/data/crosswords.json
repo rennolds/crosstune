@@ -31010,6 +31010,113 @@
     }
   ]
 },
+"2026-02-10": {
+  "version": "1.0.0",
+  "title": "",
+  "theme": "green",
+  "size": {
+    "width": 12,
+    "height": 10
+  },
+  "words": [
+    {
+      "word": "ONLYGIRL",
+      "startX": 0,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Song title (without the parentheses part)",
+      "audioUrl": 255769462,
+      "soundcloudUrl": "https://soundcloud.com/rihanna/only-girl-in-the-world-album",
+      "startAt": "0:00",
+      "audioDuration": 13.7
+    },
+    {
+      "word": "ALLFALLSDOWN",
+      "startX": 0,
+      "startY": 6,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Song title",
+      "audioUrl": 255766378,
+      "soundcloudUrl": "https://soundcloud.com/kanyewest/all-falls-down-album-version",
+      "startAt": "0:12",
+      "audioDuration": 16.3
+    },
+    {
+      "word": "ONFIRE",
+      "startX": 4,
+      "startY": 8,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Song title, excluding the first word",
+      "audioUrl": 19220631,
+      "soundcloudUrl": "https://soundcloud.com/kings-of-lyon/sex-on-fire",
+      "startAt": "0:22",
+      "audioDuration": 15
+    },
+    {
+      "word": "NOSLEEP",
+      "startX": 1,
+      "startY": 3,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Song title",
+      "audioUrl": 271228333,
+      "soundcloudUrl": "https://soundcloud.com/wizkhalifa/no-sleep-2",
+      "startAt": "0:08",
+      "audioDuration": 11.6
+    },
+    {
+      "word": "HALO",
+      "startX": 4,
+      "startY": 5,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "Song title",
+      "audioUrl": 256526301,
+      "soundcloudUrl": "https://soundcloud.com/beyonce/halo",
+      "startAt": "0:11",
+      "audioDuration": 13.7
+    },
+    {
+      "word": "LIGHTS",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Song title",
+      "audioUrl": 278706701,
+      "soundcloudUrl": "https://soundcloud.com/elliegoulding/lights-single-version",
+      "startAt": "0:35.1",
+      "audioDuration": 16.9
+    },
+    {
+      "word": "MAKEMONEY",
+      "startX": 9,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Complete the lyric: Wake up, you need to ____",
+      "audioUrl": 271221937,
+      "soundcloudUrl": "https://soundcloud.com/twentyonepilots/stressed-out",
+      "startAt": "2:08",
+      "audioDuration": 12.1
+    },
+    {
+      "word": "MRJONES",
+      "startX": 11,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Song title",
+      "audioUrl": 257078222,
+      "soundcloudUrl": "https://soundcloud.com/countingcrows/mr-jones-album-version",
+      "startAt": "0:00",
+      "audioDuration": 14
+    }
+  ]
+},
   "2026-02-11": {
     "title": "",
     "version": "1.0.0",
