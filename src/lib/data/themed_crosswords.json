@@ -3952,5 +3952,126 @@
         "soundcloudUrl": "https://soundcloud.com/deadmau5/ghosts-n-stuff-1"
       }
     ]
-  }
+  },
+  "34": {
+    "title": "Love is in the Air (Supply)",
+    "author": "Hydro",
+    "date_available": "2026-02-14",
+    "thumbnail": "https://i.scdn.co/image/ab67616d0000b273ce30c8ed175be2033b10b7a9",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "NOTHING",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What does the singer \"make love from\"?",
+        "audioUrl": "253819621",
+        "startAt": "0:19",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/making-love-out-of-nothing"
+      },
+      {
+        "word": "WITHOUTYOU",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "253820112",
+        "startAt": "0:06",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/without-you"
+      },
+      {
+        "word": "NIGHTS",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Even the ____ Are Better",
+        "audioUrl": "253819510",
+        "startAt": "0:12",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/even-the-nights-are-better-1"
+      },
+      {
+        "word": "LOVE",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "\"I'm all out of ____\"",
+        "audioUrl": "325717131",
+        "startAt": "1:30.6",
+        "audioDuration": 8.4,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/all-out-of-love-live-1"
+      },
+      {
+        "word": "GOODBYE",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "253819985",
+        "startAt": "0:14",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/goodbye"
+      },
+      {
+        "word": "LOST",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "I'm so ___ with out you",
+        "audioUrl": "325717131",
+        "startAt": "1:16",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/all-out-of-love-live-1"
+      },
+      {
+        "word": "HEREIAM",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "253819630",
+        "startAt": "0:13",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/here-i-am-just-when-i-thought"
+      },
+      {
+        "word": "LOSTINLOVE",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song/Album title",
+        "audioUrl": "253820182",
+        "startAt": "0:15",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/lost-in-love"
+      },
+      {
+        "word": "RUSSELL",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Singer first *or* last name",
+        "audioUrl": "253819535",
+        "startAt": "0:11",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/every-woman-in-the-world-1"
+      }
+    ]
+  }  
 }
