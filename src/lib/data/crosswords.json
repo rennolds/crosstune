@@ -31479,5 +31479,231 @@
         "audioDuration": 12
       }
     ]
+  },
+  "2026-02-14": {
+    "version": "1.0.0",
+    "title": "Valentine's Day",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MELODY",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Musical term in this song title",
+        "audioUrl": 252425831,
+        "soundcloudUrl": "https://soundcloud.com/the-righteous-brothers/unchained-melody",
+        "startAt": "0:00",
+        "audioDuration": 17
+      },
+      {
+        "word": "LOVE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 253123946,
+        "soundcloudUrl": "https://soundcloud.com/natkingcole/l-o-v-e-1990-digital-remaster",
+        "startAt": "0:07",
+        "audioDuration": 6
+      },
+      {
+        "word": "ETTA",
+        "startX": 7,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": 255873768,
+        "soundcloudUrl": "https://soundcloud.com/ettajamesofficial/a-sunday-kind-of-love-single",
+        "startAt": "0:00",
+        "audioDuration": 18
+      },
+      {
+        "word": "IMYOURS",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 26460191,
+        "soundcloudUrl": "https://soundcloud.com/jasonmraz/im-yours",
+        "startAt": "0:10",
+        "audioDuration": 15.2
+      },
+      {
+        "word": "FLOWERS",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title (a song for the anti-Valentine's Day people)",
+        "audioUrl": 1586698367,
+        "soundcloudUrl": "https://soundcloud.com/piklu-999589542/miley-cyrus-flowers-official",
+        "startAt": "0:33",
+        "audioDuration": 16
+      },
+      {
+        "word": "LOVELY",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Adjective in this song title",
+        "audioUrl": 259085296,
+        "soundcloudUrl": "https://soundcloud.com/stevie-wonder-official/isnt-she-lovely",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "BRUNO",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": 328200350,
+        "soundcloudUrl": "https://soundcloud.com/brunomars/just-the-way-you-are-2",
+        "startAt": "0:17",
+        "audioDuration": 16
+      },
+      {
+        "word": "PRESLEY",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "audioUrl": 1348109506,
+        "soundcloudUrl": "https://soundcloud.com/elvissonymusic/cant-help-falling-in-895474729",
+        "startAt": "0:20",
+        "audioDuration": 16
+      },
+      {
+        "word": "GAGA",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist \"last name\"",
+        "audioUrl": 2028935000,
+        "soundcloudUrl": "https://soundcloud.com/ilya-bokarev/lady-gaga-bruno-mars-die-with",
+        "startAt": "1:20",
+        "audioDuration": 17
+      }
+    ]
+  },
+  "2026-02-16": {
+    "version": "1.0.0",
+    "title": "Artist References",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DRDRE",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "The person locked in Eminem's basement",
+        "audioUrl": 256256887,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/the-real-slim-shady-album",
+        "startAt": "0:00",
+        "audioDuration": 18.2
+      },
+      {
+        "word": "IRONMAIDEN",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "The artist in concert in this song",
+        "audioUrl": 252921297,
+        "soundcloudUrl": "https://soundcloud.com/wheatus-official/teenage-dirtbag-1",
+        "startAt": "0:11",
+        "audioDuration": 16
+      },
+      {
+        "word": "USHER",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "She used to mess with ____",
+        "audioUrl": 255766412,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/gold-digger-album-version",
+        "startAt": "0:15",
+        "audioDuration": 13
+      },
+      {
+        "word": "U2",
+        "startX": 9,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Way before Nirvana there was ____",
+        "audioUrl": 252588647,
+        "soundcloudUrl": "https://soundcloud.com/bowling-for-soup/1985-1",
+        "startAt": "0:14",
+        "audioDuration": 13
+      },
+      {
+        "word": "PDIDDY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Kesha woke up feeling like ____, regrettably ",
+        "audioUrl": 289946362,
+        "soundcloudUrl": "https://soundcloud.com/kesha/tik-tok-3",
+        "startAt": "0:03.85",
+        "audioDuration": 19.6
+      },
+      {
+        "word": "BRITNEY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "The DJ played the ____ song",
+        "audioUrl": 256019933,
+        "soundcloudUrl": "https://soundcloud.com/mileycyrus/party-in-the-u-s-a",
+        "startAt": "1:30",
+        "audioDuration": 7
+      },
+      {
+        "word": "JAGGER",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Moves like this artist",
+        "audioUrl": 256187805,
+        "soundcloudUrl": "https://soundcloud.com/maroon-5/moves-like-jagger-remix-1",
+        "startAt": "1:05",
+        "audioDuration": 10.2
+      },
+      {
+        "word": "BLINK182",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The pop punk referenced by Halsey on this track",
+        "audioUrl": 274720380,
+        "soundcloudUrl": "https://soundcloud.com/thechainsmokers/closer",
+        "startAt": "0:09",
+        "audioDuration": 9
+      }
+    ]
   }
 }
