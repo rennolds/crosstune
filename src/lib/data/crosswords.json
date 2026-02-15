@@ -31599,6 +31599,125 @@
       }
     ]
   },
+  "2026-02-15": {
+    "title": "get the popcorn! (by Chris B-E)",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "THEBODYGUARD",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Film with the best-selling soundtrack of all time (probably thanks to this song)",
+        "audioUrl": "197803577",
+        "startAt": "3:14",
+        "audioDuration": 23,
+        "soundcloudUrl": "https://soundcloud.com/marwanllam/whitney-houston-i-will"
+      },
+      {
+        "word": "PIXIES",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"...you met me at a very strange time in my life...\" - The Narrator, Fight Club, while this band's song plays",
+        "audioUrl": "196215111",
+        "startAt": "0:16",
+        "audioDuration": 24,
+        "soundcloudUrl": "https://soundcloud.com/skylineguy/pixies-where-is-my-mind"
+      },
+      {
+        "word": "OBROTHER",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "First two words of this film title. The soundtrack won the Grammy for Album of the Year.",
+        "audioUrl": "253612770",
+        "startAt": "0:10",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/the-soggy-bottom-boys/i-am-a-man-of-constant-sorrow"
+      },
+      {
+        "word": "DONALDGLOVER",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Emmy- and Grammy-Award winner (his alter ego is to thank for the Grammys)",
+        "audioUrl": "122326263",
+        "startAt": "1:58",
+        "audioDuration": 28,
+        "soundcloudUrl": "https://soundcloud.com/childish-gambino/telegraph-ave"
+      },
+      {
+        "word": "BOND",
+        "startX": 0,
+        "startY": 6,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Film franchise this song, along with 3D belongs to.",
+        "audioUrl": "760294024",
+        "startAt": "2:54",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/billieeilish/no-time-to-die"
+      },
+      {
+        "word": "THREE6",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Eminem has the first rap song that won the Oscar for Best Song; this \"mafia\" made the second.",
+        "audioUrl": "255916271",
+        "startAt": "0:00",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/three-6-mafia/hard-out-here-for-a-pimp-1"
+      },
+      {
+        "word": "INCH",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Unit of measurement that appears in Trent Reznor's band - Reznor also composed this song for the Challengers soundtrack.",
+        "audioUrl": "1801631772",
+        "startAt": "0:15",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/trentreznor-music/challengers-match-point"
+      },
+      {
+        "word": "LAMBS",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "\"Put the lotion in the basket!\" - Buffalo Bill, before dancing to this song in \"The Silence of the ___\"",
+        "audioUrl": "40751",
+        "startAt": "3:29",
+        "audioDuration": 26,
+        "soundcloudUrl": "https://soundcloud.com/piratecatradio/07-q-lazzarus-goodbye-horses"
+      },
+      {
+        "word": "ADELE",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "She made this song and won the Oscar for Best Song (against a Les Mis song, mind you!)",
+        "audioUrl": "273480220",
+        "startAt": "3:11",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://soundcloud.com/user-720557634/adele-skyfall-official-lyrics-video"
+      }
+    ]
+  },  
   "2026-02-16": {
     "version": "1.0.0",
     "title": "Artist References",
