@@ -31837,6 +31837,110 @@
       }
     ]
   },
+  "2026-02-17": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": { "width": 12, "height": 10 },
+    "words": [
+      {
+        "word": "INTHEEND",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 219074813,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/in-the-end",
+        "startAt": "0:17",
+        "audioDuration": 16
+      },
+      {
+        "word": "FIREBURNING",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 309809494,
+        "soundcloudUrl": "https://soundcloud.com/seankingston/fire-burning-album-version",
+        "startAt": "0:00",
+        "audioDuration": 14
+      },
+      {
+        "word": "SKYFALL",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 254407939,
+        "soundcloudUrl": "https://soundcloud.com/adelemusic/skyfall-full-length",
+        "startAt": "0:03",
+        "audioDuration": 11
+      },
+      {
+        "word": "HOLYGRAIL",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 718243393,
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/holy-grail-feat-justin",
+        "startAt": "0:11",
+        "audioDuration": 12
+      },
+      {
+        "word": "SUBWAY",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title sans \"the\" - also a method of transportation",
+        "audioUrl": 2138540763,
+        "soundcloudUrl": "https://soundcloud.com/craig-d-635805731/the-subway",
+        "startAt": "2:27",
+        "audioDuration": 24
+      },
+      {
+        "word": "DIEFORYOU",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 294685643,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/die-for-you-1",
+        "startAt": "1:25",
+        "audioDuration": 14
+      },
+      {
+        "word": "JUICY",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 257082464,
+        "soundcloudUrl": "https://soundcloud.com/notoriousbig/juicy-2",
+        "startAt": "0:20",
+        "audioDuration": 17
+      },
+      {
+        "word": "FORGET",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Verb in this song title",
+        "audioUrl": 256203235,
+        "soundcloudUrl": "https://soundcloud.com/simple-minds-official/dont-you-forget-about-me-1",
+        "startAt": "0:00",
+        "audioDuration": 13
+      }
+    ]
+  },  
   "2026-02-18": {
     "version": "1.0.0",
     "title": "Artist References",
