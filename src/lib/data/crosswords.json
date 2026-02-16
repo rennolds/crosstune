@@ -32573,6 +32573,125 @@
       }
     ]
   },
+  "2026-02-24": {
+    "version": "1.0.0",
+    "title": "Black History Month",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ALRIGHT",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "What will we be?",
+        "audioUrl": 1960266603,
+        "soundcloudUrl": "https://soundcloud.com/korey-keat/alright-kendrick-lamar-4",
+        "startAt": "0:40",
+        "audioDuration": 11.2
+      },
+      {
+        "word": "WHATSGOINGON",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title - also a socially conscious question",
+        "audioUrl": 253483570,
+        "soundcloudUrl": "https://soundcloud.com/marvin-gaye/whats-going-on-1",
+        "startAt": "0:26",
+        "audioDuration": 13
+      },
+      {
+        "word": "THRILL",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What's gone?",
+        "audioUrl": 259054832,
+        "soundcloudUrl": "https://soundcloud.com/bb-king-official/the-thrill-is-gone-6",
+        "startAt": "0:33",
+        "audioDuration": 21
+      },
+      {
+        "word": "BROWN",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Last name of the \"Godfather of Soul\"",
+        "audioUrl": 523808226,
+        "soundcloudUrl": "https://soundcloud.com/james-brown-music/i-got-you-i-feel-good-8",
+        "startAt": "0:00",
+        "audioDuration": 21
+      },
+      {
+        "word": "LEFREAK",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 231848076,
+        "soundcloudUrl": "https://soundcloud.com/chicofficial/chic-le-freak",
+        "startAt": "0:00",
+        "audioDuration": 16.3
+      },
+      {
+        "word": "RESPECT",
+        "startX": 4,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 255802771,
+        "soundcloudUrl": "https://soundcloud.com/arethafranklin/respect-1",
+        "startAt": "0:04",
+        "audioDuration": 17.3
+      },
+      {
+        "word": "LOUIS",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First name of this jazz legend (nicknamed \"Satchmo\")",
+        "audioUrl": 386210504,
+        "soundcloudUrl": "https://soundcloud.com/louisarmstrongofficial/what-a-wonderful-world-25",
+        "startAt": "0:20",
+        "audioDuration": 16.3
+      },
+      {
+        "word": "DELIGHT",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The noun in this title - an early rap hit that broke into the mainstream",
+        "audioUrl": 232327378,
+        "soundcloudUrl": "https://soundcloud.com/thesugarhillgang/the-sugarhill-gang-rappers",
+        "startAt": "0:32",
+        "audioDuration": 19
+      },
+      {
+        "word": "MOUNTAIN",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Noun in this Motown duet title",
+        "audioUrl": 255052488,
+        "soundcloudUrl": "https://soundcloud.com/tammi-terrell/aint-no-mountain-high-enough-1",
+        "startAt": "0:52",
+        "audioDuration": 23
+      }
+    ]
+  },
   "2026-02-25": {
     "version": "1.0.0",
     "title": "The Numbers",
@@ -32692,7 +32811,7 @@
       }
     ]
   },
-  "2026-02-27": {
+  "2026-02-28": {
     "title": "Rainy Day Music (by tdesmond08)",
     "version": "1.0.0",
     "size": {
@@ -32823,7 +32942,7 @@
       }
     ]
   },  
-  "2026-02-28": {
+  "2026-03-01": {
     "version": "1.0.0",
     "title": "by Liv",
     "theme": "green",
