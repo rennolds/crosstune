@@ -2249,6 +2249,7 @@
     isCustomMode={!isThemedMode && isArchiveMode}
     puzzleTitle={puzzle.title}
     words={puzzle.words}
+    linkedPuzzles={puzzle.linked_puzzles || []}
     {selectedDate}
     {totalLetterCount}
     {foundLetterCount}

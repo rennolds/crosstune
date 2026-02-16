@@ -1,5 +1,6 @@
 <script>
   import moment from "moment-timezone";
+  import crosswords from "$lib/data/crosswords.json";
 
   // Simple function to convert title to URL slug
   function titleToSlug(title) {
@@ -16,12 +17,27 @@
     isCustomMode = false,
     puzzleTitle = null,
     words = [], // Accept words prop, remove placeholder songs
+    linkedPuzzles = [],
     selectedDate,
     totalLetterCount = null,
     foundLetterCount = null,
     revealedLetterCount = null,
     onNavigateBack = null,
   } = $props();
+
+  // Build linked puzzle info from dates
+  let linkedPuzzleInfo = $derived(
+    linkedPuzzles
+      .map((date) => {
+        const puzzle = crosswords[date];
+        if (!puzzle) return null;
+        return {
+          date,
+          title: puzzle.title || "Untitled Puzzle",
+        };
+      })
+      .filter(Boolean),
+  );
 
   // Add state for track metadata
   let trackMetadata = $state({});
@@ -108,7 +124,7 @@
   function openTrackInSoundCloud(trackId) {
     window.open(
       `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${trackId}`,
-      "_blank"
+      "_blank",
     );
   }
 
@@ -315,6 +331,23 @@
       >
         SHARE RESULT
       </button>
+
+      {#if linkedPuzzleInfo.length > 0}
+        <div class="w-full text-center">
+          <p class="text-sm text-gray-300 mb-2">Play similar puzzles!</p>
+          <div class="flex flex-col gap-2 items-center">
+            {#each linkedPuzzleInfo as linked}
+              <a
+                href="/archives?date={linked.date}"
+                data-sveltekit-reload
+                class="text-blue-400 hover:text-blue-300 hover:underline text-sm font-medium transition-colors"
+              >
+                {linked.title}
+              </a>
+            {/each}
+          </div>
+        </div>
+      {/if}
 
       {#if isThemedMode}
         <div class="text-center">

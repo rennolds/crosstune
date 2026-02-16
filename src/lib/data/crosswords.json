@@ -13551,6 +13551,7 @@
       "height": 10
     },
     "theme": "black",
+    "linked_puzzles": ["2025-05-04"],
     "words": [
       {
         "word": "SCIENTIST",
@@ -32178,7 +32179,126 @@
         "soundcloudUrl": "https://m.soundcloud.com/earthwindandfire/september-from-the-best-of?in=djrosez%2Fsets%2F70s"
       }
     ]
-  },  
+  },
+  "2026-02-20": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "purple",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SADNESS",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Emotion in the title of this remix",
+        "audioUrl": 255958625,
+        "soundcloudUrl": "https://soundcloud.com/lana-del-rey/summertime-sadness-cedric",
+        "startAt": "0:04",
+        "audioDuration": 18
+      },
+      {
+        "word": "JE",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Featured rapper’s initials",
+        "audioUrl": 266131486,
+        "soundcloudUrl": "https://soundcloud.com/chancetherapper/how-great-feat-jay-electronica-my-cousin-nicole",
+        "startAt": "4:28",
+        "audioDuration": 14.9
+      },
+      {
+        "word": "BREAKFREE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 1320746323,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande-sc/break-free-feat-zedd",
+        "startAt": "0:06",
+        "audioDuration": 24
+      },
+      {
+        "word": "PAPARAZZI",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 255908043,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/paparazzi",
+        "startAt": "2:38",
+        "audioDuration": 16.7
+      },
+      {
+        "word": "JUICY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 665718947,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/juicy-1",
+        "startAt": "0:06",
+        "audioDuration": 19.3
+      },
+      {
+        "word": "TASTE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 1901884557,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/taste",
+        "startAt": "1:58",
+        "audioDuration": 19.3
+      },
+      {
+        "word": "SMACKTHAT",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 255878067,
+        "soundcloudUrl": "https://soundcloud.com/akon/smack-that-dirty",
+        "startAt": "0:15",
+        "audioDuration": 13
+      },
+      {
+        "word": "MYLOVE",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "She calls late at night when she needs ___",
+        "audioUrl": 257462032,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-hotline-bling-1",
+        "startAt": "0:10",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "FEIN",
+        "startX": 11,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title, spelled without punctuation",
+        "audioUrl": 1576316053,
+        "soundcloudUrl": "https://soundcloud.com/travisscott-2/travis-scott-fe-n",
+        "startAt": "0:00",
+        "audioDuration": 18.8
+      }
+    ]
+  },
   "2026-02-21": {
     "version": "1.0.0",
     "title": "Iconic Intros (by kraglin)",
@@ -32692,7 +32812,7 @@
       }
     ]
   },
-  "2026-02-25": {
+  "2026-02-26": {
     "version": "1.0.0",
     "title": "The Numbers",
     "theme": "green",
@@ -33106,6 +33226,114 @@
         "soundcloudUrl": "https://on.soundcloud.com/QsFVK9aNeaGDSYCA0I",
         "startAt": "1:00",
         "audioDuration": 15
+      }
+    ]
+  },
+  "2026-03-03": {
+    "version": "1.0.0",
+    "title": "Iconic Piano Intros III",
+    "theme": "green",
+    "linked_puzzles": ["2025-05-04","2025-09-10"],
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BARBIE",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Film this song belongs to",
+        "audioUrl": 1564180549,
+        "soundcloudUrl": "https://soundcloud.com/billieeilish/what-was-i-made-for-from-the",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "SAYSOMETHING",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 256275314,
+        "soundcloudUrl": "https://soundcloud.com/agreatbigworld/say-something-7",
+        "startAt": "0:00",
+        "audioDuration": 16.3
+      },
+      {
+        "word": "8MILE",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Film this song belongs to",
+        "audioUrl": 256256957,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/lose-yourself",
+        "startAt": "0:01.5",
+        "audioDuration": 24.5
+      },
+      {
+        "word": "TRAIN",
+        "startX": 6,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band name",
+        "audioUrl": 256053900,
+        "soundcloudUrl": "https://soundcloud.com/trainofficial/drops-of-jupiter",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "BADDAY",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 254645097,
+        "soundcloudUrl": "https://soundcloud.com/daniel-powter-official/bad-day-1",
+        "startAt": "0:00",
+        "audioDuration": 8.8
+      },
+      {
+        "word": "METOLIFE",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title without the first word",
+        "audioUrl": 5669751,
+        "soundcloudUrl": "https://soundcloud.com/evanescence/bring-me-to-life",
+        "startAt": "0:00",
+        "audioDuration": 9
+      },
+      {
+        "word": "INTHEEND",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 219074813,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/in-the-end",
+        "startAt": "0:00",
+        "audioDuration": 17.2
+      },
+      {
+        "word": "PIANOMAN",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 257053979,
+        "soundcloudUrl": "https://soundcloud.com/billyjoel/piano-man-1",
+        "startAt": "0:00",
+        "audioDuration": 7
       }
     ]
   }
