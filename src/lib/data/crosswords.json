@@ -32802,9 +32802,17 @@
       "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-started-from-the-2",
       "startAt": "0:41",
       "audioDuration": 8.5
-    }
-  ]
-},
+      }
+    ],
+    "starting_characters": [
+      {
+        "characters": "&",
+        "startX": 1,
+        "startY": 5,
+        "direction": "down"
+      }
+    ]
+  },
   "2026-02-24": {
     "version": "1.0.0",
     "title": "Black History Month",
