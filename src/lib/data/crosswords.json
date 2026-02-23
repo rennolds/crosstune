@@ -32706,14 +32706,6 @@
       "height": 10
     },
     "theme": "black",
-    "starting_characters": [
-      {
-        "characters": "&",
-        "startX": 5,
-        "startY": 1,
-        "direction": "across"
-      },
-    ],
     "words": [
     {
       "word": "STOP",
