@@ -2074,7 +2074,7 @@
       {/if}
     </div>
     {#if !isMobileDevice && activeClue}
-      <div class="hidden md:block w-full mx-auto mt-4">
+      <div class="hidden md:block w-full mx-auto mt-4 mb-24">
         <div
           class="flex items-center justify-between h-13 rounded-md shadow-lg"
           style="background-color: {isDark ? '#f3f3f3' || 'white' : 'white'}"
