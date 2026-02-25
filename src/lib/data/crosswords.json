@@ -32698,6 +32698,121 @@
       }
     ]
   },
+    "2026-02-23": {
+    "title": "Surfin' the radio in 2013",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+    {
+      "word": "STOP",
+      "startX": 5,
+      "startY": 2,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "We can't ____",
+      "audioUrl": 256019943,
+      "soundcloudUrl": "https://soundcloud.com/mileycyrus/we-cant-stop-1",
+      "startAt": "0:00",
+      "audioDuration": 8
+    },
+    {
+      "word": "THRIFTSHOP",
+      "startX": 1,
+      "startY": 4,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "Song title",
+      "audioUrl": 256220503,
+      "soundcloudUrl": "https://soundcloud.com/macklemore/thrift-shop-feat-wanz",
+      "startAt": "0:53",
+      "audioDuration": 8
+    },
+    {
+      "word": "GONE",
+      "startX": 8,
+      "startY": 7,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "This song's title (x3)",
+      "audioUrl": 87078720,
+      "soundcloudUrl": "https://soundcloud.com/polydorpress/gone-gone-gone-phillip",
+      "startAt": "0:44",
+      "audioDuration": 10
+    },
+    {
+      "word": "SUIT&TIE",
+      "startX": 1,
+      "startY": 1,
+      "direction": "down",
+      "color": "#28D66A",
+      "textClue": "Song title (formal attire)",
+      "audioUrl": 256093133,
+      "soundcloudUrl": "https://soundcloud.com/justintimberlake/suit-tie",
+      "startAt": "0:14",
+      "audioDuration": 9
+    },
+    {
+      "word": "HARLEM",
+      "startX": 3,
+      "startY": 2,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "First word in song title (a NY neighborhood)",
+      "audioUrl": 35273963,
+      "soundcloudUrl": "https://soundcloud.com/baauer/harlem-shake",
+      "startAt": "0:00",
+      "audioDuration": 6
+    },
+    {
+      "word": "FUN",
+      "startX": 5,
+      "startY": 4,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Band name",
+      "audioUrl": 255967514,
+      "soundcloudUrl": "https://soundcloud.com/funofficial/some-nights",
+      "startAt": "1:02",
+      "audioDuration": 10
+    },
+    {
+      "word": "FOXSAY",
+      "startX": 7,
+      "startY": 1,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "What does the ____",
+      "audioUrl": 254638475,
+      "soundcloudUrl": "https://soundcloud.com/ylvis-official/the-fox-what-does-the-fox-say",
+      "startAt": "0:06",
+      "audioDuration": 10
+    },
+    {
+      "word": "BOTTOM",
+      "startX": 9,
+      "startY": 3,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Where did this artist \"start from\"?",
+      "audioUrl": 257461649,
+      "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-started-from-the-2",
+      "startAt": "0:41",
+      "audioDuration": 8.5
+      }
+    ],
+    "starting_characters": [
+      {
+        "characters": "&",
+        "startX": 1,
+        "startY": 5,
+        "direction": "down"
+      }
+    ]
+  },
   "2026-02-24": {
     "version": "1.0.0",
     "title": "Black History Month",
