@@ -33170,6 +33170,113 @@
       }
     ]
   },
+  "2026-02-27": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+    {
+      "word": "MONACO",
+      "startX": 3,
+      "startY": 1,
+      "direction": "across",
+      "color": "#FFB34B",
+      "textClue": "Song title (also a sovereign city-state)",
+      "audioUrl": 1639721172,
+      "soundcloudUrl": "https://soundcloud.com/badbunny15/bad-bunny-monaco",
+      "startAt": "0:20",
+      "audioDuration": 6
+    },
+    {
+      "word": "BEACH",
+      "startX": 0,
+      "startY": 3,
+      "direction": "across",
+      "color": "#00FFFF",
+      "textClue": "____ House (artist name)",
+      "audioUrl": 256022570,
+      "soundcloudUrl": "https://soundcloud.com/beachhouse/space-song",
+      "startAt": "0:50",
+      "audioDuration": 10
+    },
+    {
+      "word": "PURPLERAIN",
+      "startX": 2,
+      "startY": 6,
+      "direction": "across",
+      "color": "#FE9C9C",
+      "textClue": "Song title",
+      "audioUrl": 422523141,
+      "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/purple-rain",
+      "startAt": "0:17",
+      "audioDuration": 15
+    },
+    {
+      "word": "EASY",
+      "startX": 6,
+      "startY": 8,
+      "direction": "across",
+      "color": "#28D66A",
+      "textClue": "Loving Is ____ (Song title)",
+      "audioUrl": 716513638,
+      "soundcloudUrl": "https://soundcloud.com/rexorangecounty/loving-is-easy-feat-benny",
+      "startAt": "0:40",
+      "audioDuration": 10
+    },
+    {
+      "word": "PUFF",
+      "startX": 2,
+      "startY": 6,
+      "direction": "down",
+      "color": "#FFCEFD",
+      "textClue": "What is the dragon's name?",
+      "audioUrl": 29309357,
+      "soundcloudUrl": "https://soundcloud.com/david-tamulevich/puff-the-magic-dragon",
+      "startAt": "0:18",
+      "audioDuration": 10
+    },
+    {
+      "word": "NOAHCYRUS",
+      "startX": 4,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "Artist name (youngest of a family of famous musicians)",
+      "audioUrl": 656371052,
+      "soundcloudUrl": "https://soundcloud.com/noahcyrusofficial/july",
+      "startAt": "0:53",
+      "audioDuration": 13
+    },
+    {
+      "word": "LANADELREY",
+      "startX": 6,
+      "startY": 0,
+      "direction": "down",
+      "color": "#568EFF",
+      "textClue": "Artist name",
+      "audioUrl": 1517325979,
+      "soundcloudUrl": "https://soundcloud.com/lana-del-rey/say-yes-to-heaven",
+      "startAt": "0:48",
+      "audioDuration": 8
+    },
+    {
+      "word": "DOMINIC",
+      "startX": 10,
+      "startY": 1,
+      "direction": "down",
+      "color": "#FFB34B",
+      "textClue": "Artist first name",
+      "audioUrl": 513979875,
+      "soundcloudUrl": "https://soundcloud.com/dominicfike/babydoll",
+      "startAt": "0:09",
+      "audioDuration": 10
+    }
+  ]
+},
   "2026-02-28": {
     "title": "Rainy Day Music (by tdesmond08)",
     "version": "1.0.0",
