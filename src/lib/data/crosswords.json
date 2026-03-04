@@ -33804,5 +33804,124 @@
         "audioDuration": 7
       }
     ]
+  },
+  "2026-03-04": {
+    "version": "1.0.0",
+    "title": "After the Ampersand",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "CHONG",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "& ____ (artist name) (also famous for their movies)",
+        "audioUrl": 256159162,
+        "soundcloudUrl": "https://soundcloud.com/cheechchongofficial/up-in-smoke",
+        "startAt": "0:9.5",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "CHER",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "& ____ (artist name)",
+        "audioUrl": 232286796,
+        "soundcloudUrl": "https://soundcloud.com/sonnyandcherofficial/sonny-and-cher-i-got-you-babe",
+        "startAt": "0:15",
+        "audioDuration": 6
+      },
+      {
+        "word": "QUEENS",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "& ____ (song title) ",
+        "audioUrl": 773748067,
+        "soundcloudUrl": "https://soundcloud.com/avamax/kings-queens",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "OATES",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "& ____ (artist name)",
+        "audioUrl": 253506678,
+        "soundcloudUrl": "https://soundcloud.com/daryl-hall-john-oates/you-make-my-dreams-remastered",
+        "startAt": "0:09",
+        "audioDuration": 12
+      },
+      {
+        "word": "CLYDE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "& ____ (song title) ",
+        "audioUrl": 269472505,
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/03-bonnie-clyde-album-version",
+        "startAt": "0:09",
+        "audioDuration": 8
+      },
+      {
+        "word": "SONS",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "& ____ (artist name)",
+        "audioUrl": 271455488,
+        "soundcloudUrl": "https://soundcloud.com/mumfordandsons/little-lion-man-1",
+        "startAt": "1:21",
+        "audioDuration": 8
+      },
+      {
+        "word": "GARFUNKEL",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "& ____ (artist name)",
+        "audioUrl": 252859189,
+        "soundcloudUrl": "https://soundcloud.com/simon-garfunkel-official/homeward-bound-1",
+        "startAt": "0:15",
+        "audioDuration": 15
+      },
+      {
+        "word": "BROKE",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "& ____ (song title)",
+        "audioUrl": 309445880,
+        "soundcloudUrl": "https://soundcloud.com/thegreatkhalid/young-dumb-broke",
+        "startAt": "0:21",
+        "audioDuration": 10
+      },
+      {
+        "word": "SHOUT",
+        "startX": 10,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "& ____ (song title)",
+        "audioUrl": 271226613,
+        "soundcloudUrl": "https://soundcloud.com/will-i-am-official/scream-shout-1",
+        "startAt": "0:22",
+        "audioDuration": 6
+      }
+    ]
   }
 }
