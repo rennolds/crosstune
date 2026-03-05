@@ -33923,5 +33923,112 @@
         "audioDuration": 6
       }
     ]
+  },
+  "2026-03-05": {
+    "version": "1.0.0",
+    "title": "Counterpart II",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MCARTNEY",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name (shares a name with 8A)",
+        "audioUrl": 90432345,
+        "soundcloudUrl": "https://soundcloud.com/paulmccartney/blackbird-woa",
+        "startAt": "0:07",
+        "audioDuration": 9
+      },
+      {
+        "word": "ROBBIE",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist first name (shares a name with 1D)",
+        "audioUrl": 427879689,
+        "soundcloudUrl": "https://soundcloud.com/the-cheerleader/robbie-williams-angels",
+        "startAt": "0:50",
+        "audioDuration": 12
+      },
+      {
+        "word": "ANKA",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name (shares a name with 6A)",
+        "audioUrl": 346055314,
+        "soundcloudUrl": "https://soundcloud.com/paul-anka-official/put-your-head-on-my-5",
+        "startAt": "0:09",
+        "audioDuration": 14
+      },
+      {
+        "word": "JACKSON",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist last name (shares a name with 5D)",
+        "audioUrl": 278508705,
+        "soundcloudUrl": "https://soundcloud.com/mjimmortal/man-in-the-mirror",
+        "startAt": "0:17",
+        "audioDuration": 9
+      },
+      {
+        "word": "MAYER",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artist last name (shares a name with 4D)",
+        "audioUrl": 7633926,
+        "soundcloudUrl": "https://soundcloud.com/johnmayer/slow-dancing-in-a-burning-room",
+        "startAt": "1:32",
+        "audioDuration": 11
+      },
+      {
+        "word": "LENNON",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name (shares a name with 2D)",
+        "audioUrl": 251343373,
+        "soundcloudUrl": "https://soundcloud.com/john-lennon-official/imagine-2010-remaster",
+        "startAt": "0:13",
+        "audioDuration": 12
+      },
+      {
+        "word": "HAYLEY",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name (shares a name with 7A)",
+        "audioUrl": 2151496653,
+        "soundcloudUrl": "https://soundcloud.com/hayleywilliamsmusic/parachute",
+        "startAt": "1:21",
+        "audioDuration": 15
+      },
+      {
+        "word": "BUBLE",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist last name (shares a name with 3D)",
+        "audioUrl": 33016596,
+        "soundcloudUrl": "https://soundcloud.com/michaelbuble/havent-met-you-yet",
+        "startAt": "1:10",
+        "audioDuration": 10
+      }
+    ]
   }
 }
