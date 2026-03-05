@@ -5,23 +5,30 @@
   import { onMount } from 'svelte';
   import { invalidate } from '$app/navigation';
   import { supabase } from '$lib/supabaseClient';
+  import { browser } from '$app/environment';
 
   const PUBLISHER_ID = 1025391;
   const WEBSITE_ID = 75604;
 
   let { children, data } = $props();
 
-  // Sync initial session
+  // Guard store writes with browser check to prevent SSR cross-user leaks.
+  // Module-level stores are singletons; writing during SSR can bleed between requests.
   $effect(() => {
-     setUser(data.user ?? null);
-     setLoading(false);
+     if (browser) {
+       setUser(data.user ?? null);
+       setLoading(false);
+     }
   });
 
-  onMount(() => {
+  onMount(async () => {
+    // Verify the actual user from auth cookies instead of trusting SSR-provided data.
+    const { data: { user } } = await supabase.auth.getUser();
+    setUser(user ?? null);
+    setLoading(false);
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, _session) => {
-      if (_session?.expires_at !== data.session?.expires_at) {
-        invalidate('supabase:auth');
-      }
+      invalidate('supabase:auth');
       setUser(_session?.user ?? null);
     });
 
