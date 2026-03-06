@@ -34030,5 +34030,112 @@
         "audioDuration": 10
       }
     ]
+  },
+  "2026-03-06": {
+    "version": "1.0.0",
+    "title": "Oops! All Title Tracks",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "PIANOMAN",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Title track",
+        "audioUrl": 257053979,
+        "soundcloudUrl": "https://soundcloud.com/billyjoel/piano-man-1",
+        "startAt": "0:16",
+        "audioDuration": 11
+      },
+      {
+        "word": "THRILLER",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Title track",
+        "audioUrl": 1930382576,
+        "soundcloudUrl": "https://soundcloud.com/darion-lopez-38557354/thriller-michael-jackson",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "WATERLOO",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Title track",
+        "audioUrl": 253122406,
+        "soundcloudUrl": "https://soundcloud.com/abba-official/waterloo",
+        "startAt": "0:05",
+        "audioDuration": 10
+      },
+      {
+        "word": "JOLENE",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Title track",
+        "audioUrl": 328182539,
+        "soundcloudUrl": "https://soundcloud.com/dollyparton/jolene-album-version",
+        "startAt": "0:14",
+        "audioDuration": 6
+      },
+      {
+        "word": "ISTHISIT",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Title track",
+        "audioUrl": 671124932,
+        "soundcloudUrl": "https://soundcloud.com/thestrokes/is-this-it",
+        "startAt": "0:12",
+        "audioDuration": 12
+      },
+      {
+        "word": "LETITBE",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Title track",
+        "audioUrl": 342072525,
+        "soundcloudUrl": "https://soundcloud.com/user-483856068/the-beatles-let-it-be",
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "RED",
+        "startX": 7,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Title track",
+        "audioUrl": 252454068,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/red",
+        "startAt": "0:05.5",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "PARANOID",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Title track",
+        "audioUrl": 196148785,
+        "soundcloudUrl": "https://soundcloud.com/blacksabbath/paranoid",
+        "startAt": "0:06",
+        "audioDuration": 12
+      }
+    ]
   }
 }
