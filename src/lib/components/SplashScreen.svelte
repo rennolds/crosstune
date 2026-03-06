@@ -172,7 +172,7 @@
     <!-- Play Button -->
     <button
       onclick={handlePlay}
-      class="rounded-xs mt-10 md:mt-12 px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
+      class="rounded-xs mt-[30px] md:mt-[38px] px-12 py-3 bg-black dark:bg-white text-white dark:text-black text-xl font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
     >
       Start
     </button>
