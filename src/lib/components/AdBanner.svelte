@@ -82,6 +82,12 @@
           console.log("Missing Publisher Id and Website Id");
           return;
         }
+
+        // Don't load Ramp on mobile — bad ad covers the keyboard
+        if (window.innerWidth < 768) {
+          return;
+        }
+
         window.ramp = window.ramp || {};
         window.ramp.que = window.ramp.que || [];
         window.ramp.passiveMode = true;
