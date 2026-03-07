@@ -82,6 +82,10 @@
           console.log("Missing Publisher Id and Website Id");
           return;
         }
+        // Disable all Ramp ads on mobile
+        if (window.innerWidth < 768) {
+          return;
+        }
         window.ramp = window.ramp || {};
         window.ramp.que = window.ramp.que || [];
         window.ramp.passiveMode = true;
