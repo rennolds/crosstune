@@ -131,12 +131,11 @@
 
 <style>
   /* Adjust global padding to account for the ad banner on mobile */
-  /* Temporarily disabled while mobile ads are hidden */
-  /* :global(body) {
+  :global(body) {
     @media (max-width: 768px) {
       padding-top: 50px !important;
     }
-  } */
+  }
 
   /* Hard-contain the ad container — prevent any child from overflowing */
   #ad-container {
@@ -168,13 +167,6 @@
 
   /* Hide ads on desktop */
   @media (min-width: 768px) {
-    #ad-container {
-      display: none;
-    }
-  }
-
-  /* Temporarily hide ads on mobile (bad ad covering keyboard) */
-  @media (max-width: 767px) {
     #ad-container {
       display: none;
     }
