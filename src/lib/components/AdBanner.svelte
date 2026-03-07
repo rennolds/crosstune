@@ -82,10 +82,6 @@
           console.log("Missing Publisher Id and Website Id");
           return;
         }
-        // Disable all Ramp ads on mobile
-        if (window.innerWidth < 768) {
-          return;
-        }
         window.ramp = window.ramp || {};
         window.ramp.que = window.ramp.que || [];
         window.ramp.passiveMode = true;
@@ -131,12 +127,11 @@
 
 <style>
   /* Adjust global padding to account for the ad banner on mobile */
-  /* Temporarily disabled while mobile ads are hidden */
-  /* :global(body) {
+  :global(body) {
     @media (max-width: 768px) {
       padding-top: 50px !important;
     }
-  } */
+  }
 
   /* Hard-contain the ad container — prevent any child from overflowing */
   #ad-container {
@@ -166,17 +161,11 @@
     overflow: hidden !important;
   }
 
-  /* Hide ads on desktop */
+  /* Hide ads on desktop — mobile-only format */
   @media (min-width: 768px) {
     #ad-container {
       display: none;
     }
   }
 
-  /* Temporarily hide ads on mobile (bad ad covering keyboard) */
-  @media (max-width: 767px) {
-    #ad-container {
-      display: none;
-    }
-  }
 </style>
