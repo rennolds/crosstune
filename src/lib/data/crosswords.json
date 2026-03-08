@@ -67,7 +67,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "This band’s name is an abbreviation of their two hometowns",
+        "textClue": "This band\u2019s name is an abbreviation of their two hometowns",
         "audioUrl": "506276196",
         "startAt": "0:13"
       },
@@ -2223,7 +2223,7 @@
         "startY": 5,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "Hit song featured in 1986’s Top Gun",
+        "textClue": "Hit song featured in 1986\u2019s Top Gun",
         "audioUrl": "254034398",
         "startAt": "0:15",
         "audioDuration": 10
@@ -3154,7 +3154,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Clothing item left at Maggie Gyllenhaal’s, allegedly",
+        "textClue": "Clothing item left at Maggie Gyllenhaal\u2019s, allegedly",
         "audioUrl": "1177191082",
         "startAt": "1:14",
         "audioDuration": 15.5
@@ -3759,7 +3759,7 @@
         "startY": 2,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Part of the name of this producer (and fiancé of the singer)",
+        "textClue": "Part of the name of this producer (and fianc\u00e9 of the singer)",
         "audioUrl": "2059554976",
         "startAt": "0:16",
         "audioDuration": 10.5
@@ -4070,7 +4070,7 @@
         "textClue": "Artist name",
         "audioUrl": "1304903974",
         "startAt": "0:26",
-        "audioDuration": 10.50
+        "audioDuration": 10.5
       },
       {
         "word": "CRY",
@@ -5486,7 +5486,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "No love in this US State 🌪️",
+        "textClue": "No love in this US State \ud83c\udf2a\ufe0f",
         "audioUrl": "1817230494",
         "startAt": "0:11.5",
         "audioDuration": 6.5
@@ -5662,7 +5662,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Name of this Marshmello–Bastille collaboration",
+        "textClue": "Name of this Marshmello\u2013Bastille collaboration",
         "audioUrl": "486671055",
         "startAt": "1:35.5",
         "audioDuration": 19.75
@@ -8225,7 +8225,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "Writer’s last name of the musical this song is from",
+        "textClue": "Writer\u2019s last name of the musical this song is from",
         "audioUrl": "293546535",
         "startAt": "1:54",
         "audioDuration": 10
@@ -8280,7 +8280,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "This Beyoncé album title",
+        "textClue": "This Beyonc\u00e9 album title",
         "audioUrl": "610075416",
         "startAt": "0:22",
         "audioDuration": 8
@@ -9050,7 +9050,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Legendary ‘Prince of Darkness’ first name",
+        "textClue": "Legendary \u2018Prince of Darkness\u2019 first name",
         "audioUrl": "252996256",
         "startAt": "0:06",
         "audioDuration": 9
@@ -10334,7 +10334,7 @@
     ]
   },
   "2025-08-10": {
-    "title": "❌💿🧩",
+    "title": "\u274c\ud83d\udcbf\ud83e\udde9",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -10348,7 +10348,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "😮‍💨⬇️",
+        "textClue": "\ud83d\ude2e\u200d\ud83d\udca8\u2b07\ufe0f",
         "audioUrl": "1200502645",
         "startAt": "0:17",
         "audioDuration": 8
@@ -10359,7 +10359,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "🔪👨🏻",
+        "textClue": "\ud83d\udd2a\ud83d\udc68\ud83c\udffb",
         "audioUrl": "1396880485",
         "startAt": "0:32",
         "audioDuration": 6.5
@@ -10370,7 +10370,7 @@
         "startY": 6,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "⏰⬇️",
+        "textClue": "\u23f0\u2b07\ufe0f",
         "audioUrl": "199941967",
         "startAt": "0:20",
         "audioDuration": 8
@@ -10381,7 +10381,7 @@
         "startY": 8,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "🛌💤🔋",
+        "textClue": "\ud83d\udecc\ud83d\udca4\ud83d\udd0b",
         "audioUrl": "1242388744",
         "startAt": "0:38",
         "audioDuration": 8.5
@@ -10392,7 +10392,7 @@
         "startY": 3,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "🥇",
+        "textClue": "\ud83e\udd47",
         "audioUrl": "256079755",
         "startAt": "0:11",
         "audioDuration": 18
@@ -10403,7 +10403,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "👎🩸",
+        "textClue": "\ud83d\udc4e\ud83e\ude78",
         "audioUrl": "1650652419",
         "startAt": "0:57",
         "audioDuration": 7
@@ -10414,7 +10414,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "👩🪐",
+        "textClue": "\ud83d\udc69\ud83e\ude90",
         "audioUrl": "823932871",
         "startAt": "1:10",
         "audioDuration": 14
@@ -10425,7 +10425,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "☃️🌨️",
+        "textClue": "\u2603\ufe0f\ud83c\udf28\ufe0f",
         "audioUrl": "273203138",
         "startAt": "0:14",
         "audioDuration": 10
@@ -12097,7 +12097,7 @@
         "startY": 2,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "Don’t let the sound of your own ___ drive you crazy",
+        "textClue": "Don\u2019t let the sound of your own ___ drive you crazy",
         "audioUrl": "231849475",
         "startAt": "0:17",
         "audioDuration": 15
@@ -12801,7 +12801,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "The last word of this song's title (perf. by Israel Kamakawiwoʻole)",
+        "textClue": "The last word of this song's title (perf. by Israel Kamakawiwo\u02bbole)",
         "audioUrl": "253558222",
         "startAt": "0:43",
         "audioDuration": 20
@@ -13922,7 +13922,7 @@
         "startY": 1,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Artist’s last name",
+        "textClue": "Artist\u2019s last name",
         "audioUrl": "499321992",
         "startAt": "0:00",
         "audioDuration": 18,
@@ -14041,7 +14041,7 @@
         "startY": 3,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Artist’s name",
+        "textClue": "Artist\u2019s name",
         "audioUrl": "1528422475",
         "startAt": "0:33",
         "audioDuration": 10,
@@ -17060,7 +17060,7 @@
     ]
   },
   "2025-10-11": {
-    "title": "❌💿🧩 2️⃣",
+    "title": "\u274c\ud83d\udcbf\ud83e\udde9 2\ufe0f\u20e3",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -17074,7 +17074,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "🏰🇭🇺",
+        "textClue": "\ud83c\udff0\ud83c\udded\ud83c\uddfa",
         "audioUrl": "255796418",
         "startAt": "0:09.5",
         "audioDuration": 8,
@@ -17086,7 +17086,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "⭐😎",
+        "textClue": "\u2b50\ud83d\ude0e",
         "audioUrl": "284056452",
         "startAt": "0:16",
         "audioDuration": 7,
@@ -17098,7 +17098,7 @@
         "startY": 6,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "💡🌳",
+        "textClue": "\ud83d\udca1\ud83c\udf33",
         "audioUrl": "7907397",
         "startAt": "0:41.5",
         "audioDuration": 8,
@@ -17110,7 +17110,7 @@
         "startY": 8,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "🔭👁️",
+        "textClue": "\ud83d\udd2d\ud83d\udc41\ufe0f",
         "audioUrl": "220647780",
         "startAt": "0:49",
         "audioDuration": 8,
@@ -17122,7 +17122,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "🎈➡️",
+        "textClue": "\ud83c\udf88\u27a1\ufe0f",
         "audioUrl": "253507018",
         "startAt": "0:04",
         "audioDuration": 6,
@@ -17134,7 +17134,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "🤪🚂",
+        "textClue": "\ud83e\udd2a\ud83d\ude82",
         "audioUrl": "252996256",
         "startAt": "0:00",
         "audioDuration": 12,
@@ -17146,7 +17146,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "🛏️⚗️",
+        "textClue": "\ud83d\udecf\ufe0f\u2697\ufe0f",
         "audioUrl": "1901887812",
         "startAt": "0:32",
         "audioDuration": 8,
@@ -17158,7 +17158,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FE9C9C",
-        "textClue": "💧🎤",
+        "textClue": "\ud83d\udca7\ud83c\udfa4",
         "audioUrl": "1573592686",
         "startAt": "1:00",
         "audioDuration": 11,
@@ -17812,7 +17812,7 @@
         "startY": 4,
         "direction": "down",
         "color": "#FFCEFD",
-        "textClue": "Artist first name (get better soon 💕)",
+        "textClue": "Artist first name (get better soon \ud83d\udc95)",
         "audioUrl": "499321992",
         "startAt": "0:08",
         "audioDuration": 10,
@@ -20273,7 +20273,7 @@
         "startY": 9,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "“livin’ in a\"",
+        "textClue": "\u201clivin\u2019 in a\"",
         "audioUrl": "253594762",
         "startAt": "0:15",
         "audioDuration": 7.2,
@@ -20297,7 +20297,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "“Started from the\"",
+        "textClue": "\u201cStarted from the\"",
         "audioUrl": "257461649",
         "startAt": "1:34.5",
         "audioDuration": 6.1,
@@ -20309,7 +20309,7 @@
         "startY": 1,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "“Hello from the\"",
+        "textClue": "\u201cHello from the\"",
         "audioUrl": "244053814",
         "startAt": "2:21",
         "audioDuration": 11.2,
@@ -20321,7 +20321,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "\"you’re a\"",
+        "textClue": "\"you\u2019re a\"",
         "audioUrl": 94800439,
         "startAt": "0:56",
         "audioDuration": 6.1,
@@ -22093,7 +22093,7 @@
     ]
   },
   "2025-11-26": {
-    "title": "❌💿🧩 3️⃣",
+    "title": "\u274c\ud83d\udcbf\ud83e\udde9 3\ufe0f\u20e3",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -22107,7 +22107,7 @@
         "startY": 0,
         "direction": "across",
         "color": "#FFB34B",
-        "textClue": "🏃‍♂️🆙",
+        "textClue": "\ud83c\udfc3\u200d\u2642\ufe0f\ud83c\udd99",
         "audioUrl": 205004785,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22118,7 +22118,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#00FFFF",
-        "textClue": "🏖️🌊👁️",
+        "textClue": "\ud83c\udfd6\ufe0f\ud83c\udf0a\ud83d\udc41\ufe0f",
         "audioUrl": 233719633,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22129,7 +22129,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "👿👹👺",
+        "textClue": "\ud83d\udc7f\ud83d\udc79\ud83d\udc7a",
         "audioUrl": 271224938,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22140,7 +22140,7 @@
         "startY": 6,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "🪤👸🏾",
+        "textClue": "\ud83e\udea4\ud83d\udc78\ud83c\udffe",
         "audioUrl": 138636484,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22151,7 +22151,7 @@
         "startY": 9,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "👁️⑱✌️",
+        "textClue": "\ud83d\udc41\ufe0f\u2471\u270c\ufe0f",
         "audioUrl": 1621973223,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22162,7 +22162,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "👌💯",
+        "textClue": "\ud83d\udc4c\ud83d\udcaf",
         "audioUrl": 310108203,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22173,7 +22173,7 @@
         "startY": 5,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "🟰㊶",
+        "textClue": "\ud83d\udff0\u32b6",
         "audioUrl": 256148222,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22184,7 +22184,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "🪙☎️",
+        "textClue": "\ud83e\ude99\u260e\ufe0f",
         "audioUrl": 256187803,
         "startAt": "0:00",
         "audioDuration": 6
@@ -22195,7 +22195,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "🌹🥀",
+        "textClue": "\ud83c\udf39\ud83e\udd40",
         "audioUrl": 258097961,
         "startAt": "0:00",
         "audioDuration": 6
@@ -23456,7 +23456,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Song title (parles-tu français?)",
+        "textClue": "Song title (parles-tu fran\u00e7ais?)",
         "audioUrl": 1020528670,
         "startAt": "0:51",
         "audioDuration": 15
@@ -23992,7 +23992,7 @@
     ]
   },
   "2025-12-13": {
-    "title": "🏃‍♂️ (by Will Vani)",
+    "title": "\ud83c\udfc3\u200d\u2642\ufe0f (by Will Vani)",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -28503,7 +28503,7 @@
   },
   "2026-01-21": {
     "version": "1.0.0",
-    "title": "❌💿🧩 4️⃣",
+    "title": "\u274c\ud83d\udcbf\ud83e\udde9 4\ufe0f\u20e3",
     "theme": "black",
     "size": {
       "width": 12,
@@ -28516,7 +28516,7 @@
         "startY": 0,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "🥵🌊",
+        "textClue": "\ud83e\udd75\ud83c\udf0a",
         "audioUrl": "828639601",
         "startAt": "0:17",
         "audioDuration": 5,
@@ -28528,7 +28528,7 @@
         "startY": 2,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "🧨",
+        "textClue": "\ud83e\udde8",
         "audioUrl": "255782644",
         "startAt": "0:07",
         "audioDuration": 5,
@@ -28540,7 +28540,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "🟩🌅🌇",
+        "textClue": "\ud83d\udfe9\ud83c\udf05\ud83c\udf07",
         "audioUrl": "256240207",
         "startAt": "0:17",
         "audioDuration": 5,
@@ -28552,7 +28552,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#FF5B5E",
-        "textClue": "👦🙅‍♂️😢",
+        "textClue": "\ud83d\udc66\ud83d\ude45\u200d\u2642\ufe0f\ud83d\ude22",
         "audioUrl": "53838029",
         "startAt": "0:56",
         "audioDuration": 6,
@@ -28564,7 +28564,7 @@
         "startY": 9,
         "direction": "across",
         "color": "#568EFF",
-        "textClue": "⭐️🚢🛳️",
+        "textClue": "\u2b50\ufe0f\ud83d\udea2\ud83d\udef3\ufe0f",
         "audioUrl": "285001139",
         "startAt": "1:25",
         "audioDuration": 5,
@@ -28576,7 +28576,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "🤤👁️👁️",
+        "textClue": "\ud83e\udd24\ud83d\udc41\ufe0f\ud83d\udc41\ufe0f",
         "audioUrl": "189580730",
         "startAt": "1:23",
         "audioDuration": 5,
@@ -28588,7 +28588,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "●●● ▬ ▬ ▬ ●●●",
+        "textClue": "\u25cf\u25cf\u25cf \u25ac \u25ac \u25ac \u25cf\u25cf\u25cf",
         "audioUrl": "253122491",
         "startAt": "0:14",
         "audioDuration": 5,
@@ -28597,7 +28597,7 @@
     ]
   },
   "2026-01-22": {
-    "title": "You know the song, but who’s the artist? (by mcfindout)",
+    "title": "You know the song, but who\u2019s the artist? (by mcfindout)",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -30125,7 +30125,7 @@
     ]
   },
   "2026-02-03": {
-    "title": "Bouquet 💐 (by tadapandas)",
+    "title": "Bouquet \ud83d\udc90 (by tadapandas)",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -32055,7 +32055,7 @@
     ]
   },
   "2026-02-19": {
-    "title": "Disco 🕺 (by emandb)",
+    "title": "Disco \ud83d\udd7a (by emandb)",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -32212,7 +32212,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#00FFFF",
-        "textClue": "Featured rapper’s initials",
+        "textClue": "Featured rapper\u2019s initials",
         "audioUrl": 266131486,
         "soundcloudUrl": "https://soundcloud.com/chancetherapper/how-great-feat-jay-electronica-my-cousin-nicole",
         "startAt": "4:28",
@@ -32698,7 +32698,7 @@
       }
     ]
   },
-    "2026-02-23": {
+  "2026-02-23": {
     "title": "Surfin' the radio in 2013",
     "version": "1.0.0",
     "size": {
@@ -32707,101 +32707,101 @@
     },
     "theme": "black",
     "words": [
-    {
-      "word": "STOP",
-      "startX": 5,
-      "startY": 2,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "We can't ____",
-      "audioUrl": 256019943,
-      "soundcloudUrl": "https://soundcloud.com/mileycyrus/we-cant-stop-1",
-      "startAt": "0:00",
-      "audioDuration": 8
-    },
-    {
-      "word": "THRIFTSHOP",
-      "startX": 1,
-      "startY": 4,
-      "direction": "across",
-      "color": "#00FFFF",
-      "textClue": "Song title",
-      "audioUrl": 256220503,
-      "soundcloudUrl": "https://soundcloud.com/macklemore/thrift-shop-feat-wanz",
-      "startAt": "0:53",
-      "audioDuration": 8
-    },
-    {
-      "word": "GONE",
-      "startX": 8,
-      "startY": 7,
-      "direction": "across",
-      "color": "#FE9C9C",
-      "textClue": "This song's title (x3)",
-      "audioUrl": 87078720,
-      "soundcloudUrl": "https://soundcloud.com/polydorpress/gone-gone-gone-phillip",
-      "startAt": "0:44",
-      "audioDuration": 10
-    },
-    {
-      "word": "SUIT&TIE",
-      "startX": 1,
-      "startY": 1,
-      "direction": "down",
-      "color": "#28D66A",
-      "textClue": "Song title (formal attire)",
-      "audioUrl": 256093133,
-      "soundcloudUrl": "https://soundcloud.com/justintimberlake/suit-tie",
-      "startAt": "0:14",
-      "audioDuration": 9
-    },
-    {
-      "word": "HARLEM",
-      "startX": 3,
-      "startY": 2,
-      "direction": "down",
-      "color": "#FFCEFD",
-      "textClue": "First word in song title (a NY neighborhood)",
-      "audioUrl": 35273963,
-      "soundcloudUrl": "https://soundcloud.com/baauer/harlem-shake",
-      "startAt": "0:00",
-      "audioDuration": 6
-    },
-    {
-      "word": "FUN",
-      "startX": 5,
-      "startY": 4,
-      "direction": "down",
-      "color": "#FF5B5E",
-      "textClue": "Band name",
-      "audioUrl": 255967514,
-      "soundcloudUrl": "https://soundcloud.com/funofficial/some-nights",
-      "startAt": "1:02",
-      "audioDuration": 10
-    },
-    {
-      "word": "FOXSAY",
-      "startX": 7,
-      "startY": 1,
-      "direction": "down",
-      "color": "#568EFF",
-      "textClue": "What does the ____",
-      "audioUrl": 254638475,
-      "soundcloudUrl": "https://soundcloud.com/ylvis-official/the-fox-what-does-the-fox-say",
-      "startAt": "0:06",
-      "audioDuration": 10
-    },
-    {
-      "word": "BOTTOM",
-      "startX": 9,
-      "startY": 3,
-      "direction": "down",
-      "color": "#FFB34B",
-      "textClue": "Where did this artist \"start from\"?",
-      "audioUrl": 257461649,
-      "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-started-from-the-2",
-      "startAt": "0:41",
-      "audioDuration": 8.5
+      {
+        "word": "STOP",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "We can't ____",
+        "audioUrl": 256019943,
+        "soundcloudUrl": "https://soundcloud.com/mileycyrus/we-cant-stop-1",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "THRIFTSHOP",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 256220503,
+        "soundcloudUrl": "https://soundcloud.com/macklemore/thrift-shop-feat-wanz",
+        "startAt": "0:53",
+        "audioDuration": 8
+      },
+      {
+        "word": "GONE",
+        "startX": 8,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This song's title (x3)",
+        "audioUrl": 87078720,
+        "soundcloudUrl": "https://soundcloud.com/polydorpress/gone-gone-gone-phillip",
+        "startAt": "0:44",
+        "audioDuration": 10
+      },
+      {
+        "word": "SUIT&TIE",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title (formal attire)",
+        "audioUrl": 256093133,
+        "soundcloudUrl": "https://soundcloud.com/justintimberlake/suit-tie",
+        "startAt": "0:14",
+        "audioDuration": 9
+      },
+      {
+        "word": "HARLEM",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First word in song title (a NY neighborhood)",
+        "audioUrl": 35273963,
+        "soundcloudUrl": "https://soundcloud.com/baauer/harlem-shake",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "FUN",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Band name",
+        "audioUrl": 255967514,
+        "soundcloudUrl": "https://soundcloud.com/funofficial/some-nights",
+        "startAt": "1:02",
+        "audioDuration": 10
+      },
+      {
+        "word": "FOXSAY",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What does the ____",
+        "audioUrl": 254638475,
+        "soundcloudUrl": "https://soundcloud.com/ylvis-official/the-fox-what-does-the-fox-say",
+        "startAt": "0:06",
+        "audioDuration": 10
+      },
+      {
+        "word": "BOTTOM",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Where did this artist \"start from\"?",
+        "audioUrl": 257461649,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-started-from-the-2",
+        "startAt": "0:41",
+        "audioDuration": 8.5
       }
     ],
     "starting_characters": [
@@ -33179,104 +33179,104 @@
       "height": 10
     },
     "words": [
-    {
-      "word": "MONACO",
-      "startX": 3,
-      "startY": 1,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "Song title (also a sovereign city-state)",
-      "audioUrl": 1639721172,
-      "soundcloudUrl": "https://soundcloud.com/badbunny15/bad-bunny-monaco",
-      "startAt": "0:20",
-      "audioDuration": 6
-    },
-    {
-      "word": "BEACH",
-      "startX": 0,
-      "startY": 3,
-      "direction": "across",
-      "color": "#00FFFF",
-      "textClue": "____ House (artist name)",
-      "audioUrl": 256022570,
-      "soundcloudUrl": "https://soundcloud.com/beachhouse/space-song",
-      "startAt": "0:50",
-      "audioDuration": 10
-    },
-    {
-      "word": "PURPLERAIN",
-      "startX": 2,
-      "startY": 6,
-      "direction": "across",
-      "color": "#FE9C9C",
-      "textClue": "Song title",
-      "audioUrl": 422523141,
-      "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/purple-rain",
-      "startAt": "0:17",
-      "audioDuration": 15
-    },
-    {
-      "word": "EASY",
-      "startX": 6,
-      "startY": 8,
-      "direction": "across",
-      "color": "#28D66A",
-      "textClue": "Loving Is ____ (Song title)",
-      "audioUrl": 716513638,
-      "soundcloudUrl": "https://soundcloud.com/rexorangecounty/loving-is-easy-feat-benny",
-      "startAt": "0:40",
-      "audioDuration": 10
-    },
-    {
-      "word": "PUFF",
-      "startX": 2,
-      "startY": 6,
-      "direction": "down",
-      "color": "#FFCEFD",
-      "textClue": "What is the dragon's name?",
-      "audioUrl": 29309357,
-      "soundcloudUrl": "https://soundcloud.com/david-tamulevich/puff-the-magic-dragon",
-      "startAt": "0:18",
-      "audioDuration": 10
-    },
-    {
-      "word": "NOAHCYRUS",
-      "startX": 4,
-      "startY": 0,
-      "direction": "down",
-      "color": "#FF5B5E",
-      "textClue": "Artist name (youngest of a family of famous musicians)",
-      "audioUrl": 656371052,
-      "soundcloudUrl": "https://soundcloud.com/noahcyrusofficial/july",
-      "startAt": "0:53",
-      "audioDuration": 13
-    },
-    {
-      "word": "LANADELREY",
-      "startX": 6,
-      "startY": 0,
-      "direction": "down",
-      "color": "#568EFF",
-      "textClue": "Artist name",
-      "audioUrl": 1517325979,
-      "soundcloudUrl": "https://soundcloud.com/lana-del-rey/say-yes-to-heaven",
-      "startAt": "0:48",
-      "audioDuration": 8
-    },
-    {
-      "word": "DOMINIC",
-      "startX": 10,
-      "startY": 1,
-      "direction": "down",
-      "color": "#FFB34B",
-      "textClue": "Artist first name",
-      "audioUrl": 513979875,
-      "soundcloudUrl": "https://soundcloud.com/dominicfike/babydoll",
-      "startAt": "0:09",
-      "audioDuration": 10
-    }
-  ]
-},
+      {
+        "word": "MONACO",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a sovereign city-state)",
+        "audioUrl": 1639721172,
+        "soundcloudUrl": "https://soundcloud.com/badbunny15/bad-bunny-monaco",
+        "startAt": "0:20",
+        "audioDuration": 6
+      },
+      {
+        "word": "BEACH",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "____ House (artist name)",
+        "audioUrl": 256022570,
+        "soundcloudUrl": "https://soundcloud.com/beachhouse/space-song",
+        "startAt": "0:50",
+        "audioDuration": 10
+      },
+      {
+        "word": "PURPLERAIN",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 422523141,
+        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/purple-rain",
+        "startAt": "0:17",
+        "audioDuration": 15
+      },
+      {
+        "word": "EASY",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Loving Is ____ (Song title)",
+        "audioUrl": 716513638,
+        "soundcloudUrl": "https://soundcloud.com/rexorangecounty/loving-is-easy-feat-benny",
+        "startAt": "0:40",
+        "audioDuration": 10
+      },
+      {
+        "word": "PUFF",
+        "startX": 2,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "What is the dragon's name?",
+        "audioUrl": 29309357,
+        "soundcloudUrl": "https://soundcloud.com/david-tamulevich/puff-the-magic-dragon",
+        "startAt": "0:18",
+        "audioDuration": 10
+      },
+      {
+        "word": "NOAHCYRUS",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name (youngest of a family of famous musicians)",
+        "audioUrl": 656371052,
+        "soundcloudUrl": "https://soundcloud.com/noahcyrusofficial/july",
+        "startAt": "0:53",
+        "audioDuration": 13
+      },
+      {
+        "word": "LANADELREY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": 1517325979,
+        "soundcloudUrl": "https://soundcloud.com/lana-del-rey/say-yes-to-heaven",
+        "startAt": "0:48",
+        "audioDuration": 8
+      },
+      {
+        "word": "DOMINIC",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "audioUrl": 513979875,
+        "soundcloudUrl": "https://soundcloud.com/dominicfike/babydoll",
+        "startAt": "0:09",
+        "audioDuration": 10
+      }
+    ]
+  },
   "2026-02-28": {
     "title": "Rainy Day Music (by tdesmond08)",
     "version": "1.0.0",
@@ -33584,116 +33584,116 @@
       "height": 10
     },
     "words": [
-    {
-      "word": "RHCP",
-      "startX": 2,
-      "startY": 1,
-      "direction": "across",
-      "color": "#FE9C9C",
-      "textClue": "Initials of band name",
-      "audioUrl": "273203062",
-      "startAt": "0:08",
-      "audioDuration": 12,
-      "soundcloudUrl": "https://soundcloud.com/red-hot-chili-peppers-official/scar-tissue"
-    },
-    {
-      "word": "NWA",
-      "startX": 7,
-      "startY": 3,
-      "direction": "across",
-      "color": "#28D66A",
-      "textClue": "Group name (1D was a member)",
-      "audioUrl": "311620524",
-      "startAt": "0:26",
-      "audioDuration": 15,
-      "soundcloudUrl": "https://soundcloud.com/hiphop-classics1/nwa-express-yourself-1988"
-    },
-    {
-      "word": "TEQUILA",
-      "startX": 1,
-      "startY": 4,
-      "direction": "across",
-      "color": "#FFCEFD",
-      "textClue": "This song only has one word",
-      "audioUrl": "341053224",
-      "startAt": "0:19",
-      "audioDuration": 7,
-      "soundcloudUrl": "https://soundcloud.com/the-champs/tequila-29"
-    },
-    {
-      "word": "MADONNA",
-      "startX": 1,
-      "startY": 6,
-      "direction": "across",
-      "color": "#FF5B5E",
-      "textClue": "Artist name",
-      "audioUrl": "214807066",
-      "startAt": "0:22",
-      "audioDuration": 15,
-      "soundcloudUrl": "https://soundcloud.com/madonna/la-isla-bonita"
-    },
-    {
-      "word": "YOUNG",
-      "startX": 7,
-      "startY": 7,
-      "direction": "across",
-      "color": "#568EFF",
-      "textClue": "Artist last name (9A shares her first name)",
-      "audioUrl": "1828822362",
-      "startAt": "1:03",
-      "audioDuration": 10,
-      "soundcloudUrl": "https://soundcloud.com/lolayoung-music/messy"
-    },
-    {
-      "word": "LOLA",
-      "startX": 1,
-      "startY": 8,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "Song title",
-      "audioUrl": "918669007",
-      "startAt": "0:10",
-      "audioDuration": 17,
-      "soundcloudUrl": "https://soundcloud.com/thekinks/lola-2020-stereo-remaster"
-    },
-    {
-      "word": "DRDRE",
-      "startX": 2,
-      "startY": 0,
-      "direction": "down",
-      "color": "#00FFFF",
-      "textClue": "Artist name",
-      "audioUrl": "252644777",
-      "startAt": "0:15",
-      "audioDuration": 12,
-      "soundcloudUrl": "https://soundcloud.com/dr-dre-music/whats-the-difference-1"
-    },
-    {
-      "word": "AURORA",
-      "startX": 4,
-      "startY": 3,
-      "direction": "down",
-      "color": "#FE9C9C",
-      "textClue": "Artist name",
-      "audioUrl": "190236801",
-      "startAt": "0:51",
-      "audioDuration": 14,
-      "soundcloudUrl": "https://soundcloud.com/auroraaksnes/runawaysingle"
-    },
-    {
-      "word": "RUNAWAY",
-      "startX": 7,
-      "startY": 1,
-      "direction": "down",
-      "color": "#28D66A",
-      "textClue": "Song title",
-      "audioUrl": "870507259",
-      "startAt": "1:24",
-      "audioDuration": 16,
-      "soundcloudUrl": "https://soundcloud.com/kanyemixes/kanye-west-runawaylost-in-the-worldpower-mbdtf-mix"
-    }
-  ]
-},
+      {
+        "word": "RHCP",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Initials of band name",
+        "audioUrl": "273203062",
+        "startAt": "0:08",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/red-hot-chili-peppers-official/scar-tissue"
+      },
+      {
+        "word": "NWA",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Group name (1D was a member)",
+        "audioUrl": "311620524",
+        "startAt": "0:26",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/hiphop-classics1/nwa-express-yourself-1988"
+      },
+      {
+        "word": "TEQUILA",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "This song only has one word",
+        "audioUrl": "341053224",
+        "startAt": "0:19",
+        "audioDuration": 7,
+        "soundcloudUrl": "https://soundcloud.com/the-champs/tequila-29"
+      },
+      {
+        "word": "MADONNA",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": "214807066",
+        "startAt": "0:22",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/madonna/la-isla-bonita"
+      },
+      {
+        "word": "YOUNG",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist last name (9A shares her first name)",
+        "audioUrl": "1828822362",
+        "startAt": "1:03",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/lolayoung-music/messy"
+      },
+      {
+        "word": "LOLA",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "918669007",
+        "startAt": "0:10",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/thekinks/lola-2020-stereo-remaster"
+      },
+      {
+        "word": "DRDRE",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": "252644777",
+        "startAt": "0:15",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/dr-dre-music/whats-the-difference-1"
+      },
+      {
+        "word": "AURORA",
+        "startX": 4,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "190236801",
+        "startAt": "0:51",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/auroraaksnes/runawaysingle"
+      },
+      {
+        "word": "RUNAWAY",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "870507259",
+        "startAt": "1:24",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/kanyemixes/kanye-west-runawaylost-in-the-worldpower-mbdtf-mix"
+      }
+    ]
+  },
   "2026-03-03": {
     "version": "1.0.0",
     "title": "Iconic Piano Intros III",
@@ -34237,11 +34237,166 @@
         "startY": 3,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "Artist name (mother to X Æ A-12)",
+        "textClue": "Artist name (mother to X \u00c6 A-12)",
         "audioUrl": 25742560,
         "soundcloudUrl": "https://soundcloud.com/arbutus-records/grimes-oblivion",
         "startAt": "0:23",
         "audioDuration": 10
+      }
+    ]
+  },
+  "2026-03-08": {
+    "version": "1.0.0",
+    "title": "Hits of 2008 (by wado)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "LOW",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "271224235",
+        "startAt": "0:17",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain"
+      },
+      {
+        "word": "SPEARS",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artists last name",
+        "audioUrl": "257043803",
+        "startAt": "0:10",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/britneyspears/piece-of-me"
+      },
+      {
+        "word": "CHERRY",
+        "startX": 6,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The flavour of chapstick mentioned in the songs chorus.",
+        "audioUrl": "256250237",
+        "startAt": "0:32",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/katyperry/i-kissed-a-girl"
+      },
+      {
+        "word": "SUPERMAN",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The name of the superhero frequently mentioned in the song",
+        "audioUrl": "310108610",
+        "startAt": "0:14",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/souljaboymusic/crank-that-soulja-boy-1"
+      },
+      {
+        "word": "NOAIR",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song Tile",
+        "audioUrl": "254135788",
+        "startAt": "0:10",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/jordinsparksofficial/no-air"
+      },
+      {
+        "word": "MIA",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artists Name",
+        "audioUrl": "6466553",
+        "startAt": "0:10",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/diplo/m-i-a-paper-planes"
+      },
+      {
+        "word": "CLUMSY",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "253183050",
+        "startAt": "0:15",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/fergie-music/clumsy-album-version"
+      },
+      {
+        "word": "SHAKEIT",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "253511122",
+        "startAt": "0:06",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/metro-station/shake-it"
+      },
+      {
+        "word": "ONE",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word of song title",
+        "audioUrl": "254135674",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/jordinsparksofficial/one-step-at-a-time"
+      },
+      {
+        "word": "RIHANNA",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artists Name",
+        "audioUrl": "255769494",
+        "startAt": "0:48",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/rihanna/disturbia"
+      },
+      {
+        "word": "FOUR",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "How many minutes was this song about?",
+        "audioUrl": "256165458",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/madonna/4-minutes-feat-justin-1"
+      },
+      {
+        "word": "PINK",
+        "startX": 10,
+        "startY": 6,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artists Name",
+        "audioUrl": "257052047",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/official-p-nk/so-what-1"
       }
     ]
   }
