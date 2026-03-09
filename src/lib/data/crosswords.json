@@ -34418,8 +34418,8 @@
         "textClue": "Song title",
         "audioUrl": 232329335,
         "soundcloudUrl": "https://soundcloud.com/vanhalenofficial/van-halen-jump",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "1:12",
+        "audioDuration": 9
       },
       {
         "word": "WALLEN",
@@ -34430,8 +34430,8 @@
         "textClue": "Last name of the artist featured on this track",
         "audioUrl": 1817793996,
         "soundcloudUrl": "https://soundcloud.com/postmalone/post-malone-i-had-some-help",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "1:37",
+        "audioDuration": 7
       },
       {
         "word": "AZALEA",
@@ -34442,8 +34442,8 @@
         "textClue": "Second part of artist name (shares a name with XX)",
         "audioUrl": 255793175,
         "soundcloudUrl": "https://soundcloud.com/iggy-azalea-official/fancy",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:08",
+        "audioDuration": 7
       },
       {
         "word": "TWENTYONE",
@@ -34454,8 +34454,8 @@
         "textClue": "Number in this band's name",
         "audioUrl": 509422077,
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/chlorine?in=twentyonepilots%2Fsets%2Ftrench-4",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:16",
+        "audioDuration": 9
       },
       {
         "word": "JOJI",
@@ -34466,8 +34466,8 @@
         "textClue": "Artist name",
         "audioUrl": 497347761,
         "soundcloudUrl": "https://soundcloud.com/jojiofficial/slow-dancing-in-the-dark",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:43",
+        "audioDuration": 10
       },
       {
         "word": "MEGAN",
@@ -34478,8 +34478,8 @@
         "textClue": "Artist first name",
         "audioUrl": 1399350778,
         "soundcloudUrl": "https://soundcloud.com/meganmoroneyofficial/tennessee-orange",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "1:30",
+        "audioDuration": 12
       },
       {
         "word": "POP",
@@ -34490,8 +34490,8 @@
         "textClue": "Second part of artist name (shares a name with XX)",
         "audioUrl": 251493462,
         "soundcloudUrl": "https://soundcloud.com/iggypopofficial/the-passenger-1",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:18",
+        "audioDuration": 10
       },
       {
         "word": "BLUESKY",
@@ -34499,11 +34499,23 @@
         "startY": 2,
         "direction": "down",
         "color": "#FFB34B",
-        "textClue": "The second word in this song's title (also the name of a social media company)",
+        "textClue": "Part of this song's title (also a social media company)",
         "audioUrl": 253507627,
         "soundcloudUrl": "https://soundcloud.com/electric-light-orchestra/mr-blue-sky-2",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:13",
+        "audioDuration": 8
+      },
+      {
+        "word": "SUNSHINE",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "\"Ain't no ____\"",
+        "audioUrl": 253615025,
+        "soundcloudUrl": "https://soundcloud.com/bill-withers-official/aint-no-sunshine",
+        "startAt": "0:16",
+        "audioDuration": 10
       }
     ]
   }
