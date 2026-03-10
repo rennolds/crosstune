@@ -152,7 +152,7 @@
 </script>
 
 <nav
-  class="bg-white dark:text-white dark:bg-black dark:border-black-800 border-gray-200 fixed top-0 left-0 right-0 z-50 md:top-0"
+  class="bg-white dark:text-white dark:bg-black dark:border-black-800 border-gray-200 fixed top-0 left-0 right-0 z-50"
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-12">
@@ -432,13 +432,14 @@
     padding-top: 3rem;
   }
 
-  @media (max-width: 768px) {
-    :global(body) {
-      padding-top: 3rem;
-    }
-
+  /* On desktop, push nav below the ad banner */
+  @media (min-width: 768px) {
     nav {
       top: 50px;
+    }
+
+    :global(body) {
+      padding-top: calc(3rem + 50px);
     }
   }
 </style>
