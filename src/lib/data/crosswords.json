@@ -34518,5 +34518,124 @@
         "audioDuration": 10
       }
     ]
+  },
+  "2026-03-10": {
+    "version": "1.0.0",
+    "title": "Good things come in threes (part II)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DONTSTOP",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "First two words of this song/album title",
+        "audioUrl": 253594762,
+        "soundcloudUrl": "https://soundcloud.com/journey-official/dont-stop-believin-3",
+        "startAt": "0:16",
+        "audioDuration": 9
+      },
+      {
+        "word": "COCOABUTTER",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First two words of this song's title (great on your skin)",
+        "audioUrl": 90243752,
+        "soundcloudUrl": "https://soundcloud.com/chancetherapper/cocoa-butter-kisses-ft-vic",
+        "startAt": "1:31",
+        "audioDuration": 7
+      },
+      {
+        "word": "TURN",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This song's title is what word thrice repeated?",
+        "audioUrl": 258458277,
+        "soundcloudUrl": "https://soundcloud.com/thebyrds/turn-turn-turn-to-everything-1",
+        "startAt": "0:06",
+        "audioDuration": 10
+      },
+      {
+        "word": "THREE",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "____ Dog Night",
+        "audioUrl": 252317174,
+        "soundcloudUrl": "https://soundcloud.com/three-dog-night/joy-to-the-world-album-version",
+        "startAt": "0:05",
+        "audioDuration": 15
+      },
+      {
+        "word": "FALLOUT",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First two words in this band's name",
+        "audioUrl": 12039982,
+        "soundcloudUrl": "https://soundcloud.com/falloutboy/04-sugar-were-goin-down",
+        "startAt": "1:01",
+        "audioDuration": 7
+      },
+      {
+        "word": "NOT",
+        "startX": 4,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word in this song's title",
+        "audioUrl": 1814709189,
+        "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/not-like-us",
+        "startAt": "1:06.5",
+        "audioDuration": 11.5
+      },
+      {
+        "word": "GUNS",
+        "startX": 6,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word in this band's name",
+        "audioUrl": 253592525,
+        "soundcloudUrl": "https://soundcloud.com/guns-n-roses-official/welcome-to-the-jungle",
+        "startAt": "0:38",
+        "audioDuration": 8
+      },
+      {
+        "word": "SWEETHOME",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First two words in this song's title",
+        "audioUrl": 255825214,
+        "soundcloudUrl": "https://soundcloud.com/lynyrdskynyrd/sweet-home-alabama-3",
+        "startAt": "0:16",
+        "audioDuration": 8
+      },
+      {
+        "word": "BORN",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word in this song/album title",
+        "audioUrl": 257037374,
+        "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-to-run-1",
+        "startAt": "0:14",
+        "audioDuration": 11
+      }
+    ]
   }
 }
