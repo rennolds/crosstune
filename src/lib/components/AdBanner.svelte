@@ -169,12 +169,7 @@
 </div>
 
 <style>
-  /* Adjust global padding to account for the ad banner on desktop */
-  :global(body) {
-    @media (min-width: 768px) {
-      padding-top: 50px !important;
-    }
-  }
+  /* No body padding needed — the banner is hidden on all screens currently */
 
   /* Hard-contain the ad container — prevent any child from overflowing */
   #ad-container {
@@ -204,11 +199,9 @@
     overflow: hidden !important;
   }
 
-  /* Hide ads on mobile — desktop-only format */
-  @media (max-width: 767px) {
-    #ad-container {
-      display: none;
-    }
+  /* Top banner is a mobile-only format — hide on all screens since mobile ads are disabled */
+  #ad-container {
+    display: none;
   }
 
 </style>

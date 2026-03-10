@@ -139,7 +139,7 @@
 
   {#if isOpen}
     <div
-      class="slide-menu fixed top-0 md:mt-[98px] md:pt-[10px] mt-12 bg-gray-200 dark:bg-[#303030] overflow-auto
+      class="slide-menu fixed top-0 md:mt-6 mt-12 bg-gray-200 dark:bg-[#303030] overflow-auto
             w-full shadow-lg h-full left-0"
       style="z-index: 50;"
     >

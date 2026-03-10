@@ -431,15 +431,4 @@
   :global(body) {
     padding-top: 3rem;
   }
-
-  /* On desktop, push nav below the ad banner */
-  @media (min-width: 768px) {
-    nav {
-      top: 50px;
-    }
-
-    :global(body) {
-      padding-top: calc(3rem + 50px);
-    }
-  }
 </style>
