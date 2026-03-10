@@ -2127,6 +2127,7 @@
             <!-- Play/Pause Button -->
             <button
               onclick={() => playClue(activeClue)}
+              onmousedown={(e) => e.preventDefault()}
               class="flex items-center justify-center"
               disabled={!widgetReadyStatus[
                 `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
