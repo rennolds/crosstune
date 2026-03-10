@@ -34523,6 +34523,10 @@
     "version": "1.0.0",
     "title": "Good Things Come In Threes II",
     "theme": "black",
+    "linked_puzzles": [
+    "2025-09-19",
+    "2025-12-19"
+    ],
     "size": {
       "width": 12,
       "height": 10
