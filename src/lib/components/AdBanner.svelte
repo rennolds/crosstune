@@ -78,9 +78,6 @@
   $effect(() => {
     if (browser) {
       if (!rampComponentLoaded) {
-        // Do not initialize Ramp on mobile
-        if (window.innerWidth < 768) return;
-
         if (!PUB_ID || !WEBSITE_ID) {
           console.log("Missing Publisher Id and Website Id");
           return;
@@ -129,9 +126,9 @@
 </div>
 
 <style>
-  /* Adjust global padding to account for the ad banner on desktop */
+  /* Adjust global padding to account for the ad banner on mobile */
   :global(body) {
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       padding-top: 50px !important;
     }
   }
@@ -164,8 +161,8 @@
     overflow: hidden !important;
   }
 
-  /* Hide ads on mobile — desktop-only format */
-  @media (max-width: 767px) {
+  /* Hide ads on desktop — mobile-only format */
+  @media (min-width: 768px) {
     #ad-container {
       display: none;
     }
