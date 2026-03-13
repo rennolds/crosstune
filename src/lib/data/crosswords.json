@@ -34903,5 +34903,136 @@
         "audioDuration": 8
       }
     ]
+  },
+  "2026-03-13": {
+    "version": "1.0.0",
+    "title": "Abbreviated II",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DNA",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 317617213,
+        "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/dna",
+        "startAt": "0:00",
+        "audioDuration": 3.7
+      },
+      {
+        "word": "BTS",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Group name",
+        "audioUrl": 342899770,
+        "soundcloudUrl": "https://soundcloud.com/officialbts/bts-dna-1",
+        "startAt": "1:38",
+        "audioDuration": 11
+      },
+      {
+        "word": "YMCA",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 252987097,
+        "soundcloudUrl": "https://soundcloud.com/village-people/y-m-c-a-1",
+        "startAt": "0:18",
+        "audioDuration": 6
+      },
+      {
+        "word": "TLC",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Group name",
+        "audioUrl": 254119671,
+        "soundcloudUrl": "https://soundcloud.com/tlcofficial/no-scrubs-2",
+        "startAt": "0:20",
+        "audioDuration": 6.5
+      },
+      {
+        "word": "PIMP",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 255894149,
+        "soundcloudUrl": "https://soundcloud.com/50_cent/p-i-m-p-snoop-dogg-remix",
+        "startAt": "0:00",
+        "audioDuration": 11
+      },
+      {
+        "word": "DMX",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": 259102835,
+        "soundcloudUrl": "https://soundcloud.com/dmx-music/ruff-ryders-anthem",
+        "startAt": "0:13",
+        "audioDuration": 11
+      },
+      {
+        "word": "WMYB",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Initials of song title",
+        "audioUrl": 256071623,
+        "soundcloudUrl": "https://soundcloud.com/onedirectionmusic/what-makes-you-beautiful-2",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "ABBA",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Group",
+        "audioUrl": 253122524,
+        "soundcloudUrl": "https://soundcloud.com/abba-official/take-a-chance-on-me-1",
+        "startAt": "0:16",
+        "audioDuration": 9
+      },
+      {
+        "word": "TTPD",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Initials of album title",
+        "audioUrl": 1803422997,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/fortnight-feat-post-malone",
+        "startAt": "0:42",
+        "audioDuration": 7
+      },
+      {
+        "word": "NSYNC",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Group name (last letter of each member's name)",
+        "audioUrl": 263191600,
+        "soundcloudUrl": "https://soundcloud.com/n-sync-official/i-want-you-back-radio-edit",
+        "startAt": "0:11.5",
+        "audioDuration": 6.5
+      }
+    ]
   }
 }
