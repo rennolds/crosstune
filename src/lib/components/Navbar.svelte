@@ -431,14 +431,4 @@
   :global(body) {
     padding-top: 3rem;
   }
-
-  @media (max-width: 768px) {
-    :global(body) {
-      padding-top: 3rem;
-    }
-
-    nav {
-      top: 50px;
-    }
-  }
 </style>
