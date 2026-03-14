@@ -118,9 +118,6 @@
   $effect(() => {
     if (browser) {
       if (!rampComponentLoaded) {
-        // Disable ads on mobile
-        if (window.innerWidth < 768) return;
-
         if (!PUB_ID || !WEBSITE_ID) {
           console.log("Missing Publisher Id and Website Id");
           return;
@@ -169,7 +166,12 @@
 </div>
 
 <style>
-  /* No body padding needed — the banner is hidden on all screens currently */
+  /* Adjust global padding to account for the ad banner on mobile */
+  :global(body) {
+    @media (max-width: 768px) {
+      padding-top: 50px !important;
+    }
+  }
 
   /* Hard-contain the ad container — prevent any child from overflowing */
   #ad-container {
@@ -199,9 +201,11 @@
     overflow: hidden !important;
   }
 
-  /* Top banner is a mobile-only format — hide on all screens since mobile ads are disabled */
-  #ad-container {
-    display: none;
+  /* Hide ads on desktop — mobile-only format */
+  @media (min-width: 768px) {
+    #ad-container {
+      display: none;
+    }
   }
 
 </style>
