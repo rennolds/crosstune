@@ -35275,5 +35275,124 @@
         "audioDuration": 8
       }
     ]
+  },
+  "2026-03-16": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BOB",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "271220247",
+        "startAt": "0:39",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/bobatl/magic-feat-rivers-cuomo"
+      },
+      {
+        "word": "WHISKEY",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name (also a type of alcoholic spirit)",
+        "audioUrl": "312792117",
+        "startAt": "0:37",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/whiskey-myers/broken-window-serenade-2"
+      },
+      {
+        "word": "ZEDD",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": "260999187",
+        "startAt": "0:56",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/zedd/stay-the-night-featuring-1"
+      },
+      {
+        "word": "MAPS",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "287451697",
+        "startAt": "0:15",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://soundcloud.com/maroon-5/maps"
+      },
+      {
+        "word": "MUSIC",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Make your own what?",
+        "audioUrl": "1112193214",
+        "startAt": "0:33",
+        "audioDuration": 5.5,
+        "soundcloudUrl": "https://soundcloud.com/themagictimetravelers/make-your-own-kind-of-music"
+      },
+      {
+        "word": "WID",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Initials of song title",
+        "audioUrl": "1266029497",
+        "startAt": "1:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/what-ive-done-1"
+      },
+      {
+        "word": "DTMF",
+        "startX": 4,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title (I should have taken more photos...)",
+        "audioUrl": "2001688439",
+        "startAt": "0:48",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/badbunny15/dtmf"
+      },
+      {
+        "word": "FOLSOM",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Prison name",
+        "audioUrl": "326293297",
+        "startAt": "0:06",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/johnnycash/folsom-prison-blues-38"
+      },
+      {
+        "word": "RESPECT",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "What does she want?",
+        "audioUrl": "255802771",
+        "startAt": "0:08",
+        "audioDuration": 9,
+        "soundcloudUrl": "https://soundcloud.com/arethafranklin/respect-1"
+      }
+    ]
   }
 }
