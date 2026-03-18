@@ -35572,7 +35572,7 @@
         "audioDuration": 12
       },
       {
-        "word": "NAZX",
+        "word": "NASX",
         "startX": 5,
         "startY": 8,
         "direction": "across",
@@ -35594,18 +35594,6 @@
         "soundcloudUrl": "https://soundcloud.com/bob-marley-the-wailers/three-little-birds-album",
         "startAt": "0:25",
         "audioDuration": 13
-      },
-      {
-        "word": "YATCHY",
-        "startX": 3,
-        "startY": 3,
-        "direction": "down",
-        "color": "#FF5B5E",
-        "textClue": "Lil who?",
-        "audioUrl": 1356822547,
-        "soundcloudUrl": "https://soundcloud.com/770rd/poland-lil-yachtyprod-f1lthy",
-        "startAt": "0:05",
-        "audioDuration": 7
       },
       {
         "word": "REDWAGON",
