@@ -35596,6 +35596,18 @@
         "audioDuration": 13
       },
       {
+        "word": "YACHTY",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Lil who?",
+        "audioUrl": 1356822547,
+        "soundcloudUrl": "https://soundcloud.com/770rd/poland-lil-yachtyprod-f1lthy",
+        "startAt": "0:05",
+        "audioDuration": 7
+      },
+      {
         "word": "REDWAGON",
         "startX": 5,
         "startY": 1,
