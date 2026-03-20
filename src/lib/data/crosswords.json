@@ -35811,5 +35811,148 @@
         "soundcloudUrl": "https://soundcloud.com/bipbip83/axel-f"
       }
     ]
+  },
+  "2026-03-20": {
+    "version": "1.0.0",
+    "title": "Life Lesson (by bowiez)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ITSMY",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "First two words in the title of this 2000 song",
+        "audioUrl": "252909038",
+        "soundcloudUrl": "https://soundcloud.com/bonjovi/its-my-life",
+        "startAt": "1:57",
+        "audioDuration": 12.5
+      },
+      {
+        "word": "LARGER",
+        "startX": 2,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word in the title of this 1999 song",
+        "audioUrl": "432272880",
+        "soundcloudUrl": "https://soundcloud.com/the-cheerleader/larger-than-life",
+        "startAt": "0:47",
+        "audioDuration": 9
+      },
+      {
+        "word": "SAVE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Third word in the title of this 2006 song",
+        "audioUrl": "307075969",
+        "soundcloudUrl": "https://soundcloud.com/m4cite/how-to-save-a-life-the-fray",
+        "startAt": "0:44",
+        "audioDuration": 11
+      },
+      {
+        "word": "KNOCK",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Second word in the title of this 1998 song",
+        "audioUrl": "269473333",
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/hard-knock-life-ghetto",
+        "startAt": "0:07",
+        "audioDuration": 10
+      },
+      {
+        "word": "CHARMED",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Half of the hyphenated word in the title of this 1997 song",
+        "audioUrl": "205003955",
+        "soundcloudUrl": "https://soundcloud.com/thirdeyeblind/semi-charmed-life",
+        "startAt": "1:44.5",
+        "audioDuration": 9.5
+      },
+      {
+        "word": "SPICE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word in the title of this 1997 song",
+        "audioUrl": "253632547",
+        "soundcloudUrl": "https://soundcloud.com/spice-girls-official/spice-up-your-life",
+        "startAt": "0:39",
+        "audioDuration": 8
+      },
+      {
+        "word": "LIVE",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word in the title of this 2008 song",
+        "audioUrl": "256066705",
+        "soundcloudUrl": "https://soundcloud.com/tiofficial/live-your-life-feat-rihanna-1",
+        "startAt": "2:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "STORY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word in the title of this 2013 song",
+        "audioUrl": "124365265",
+        "soundcloudUrl": "https://soundcloud.com/inti-baker/one-direction-3",
+        "startAt": "1:07",
+        "audioDuration": 12
+      },
+      {
+        "word": "TIME",
+        "startX": 4,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word in the (alternate title) of this 1997 song",
+        "audioUrl": "256240489",
+        "soundcloudUrl": "https://soundcloud.com/greenday/good-riddance-time-of-your-2",
+        "startAt": "1:12.2",
+        "audioDuration": 10
+      },
+      {
+        "word": "BRING",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word in the title of this 2003 song",
+        "audioUrl": "1621290525",
+        "soundcloudUrl": "https://soundcloud.com/evanescence/bring-me-to-life-remastered",
+        "startAt": "1:48",
+        "audioDuration": 10
+      },
+      {
+        "word": "CEST",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word in the title of this 1998 song (hint: in French)",
+        "audioUrl": 439913250,
+        "soundcloudUrl": "https://soundcloud.com/the-cheerleader/cest-la-vie",
+        "startAt": "0:52",
+        "audioDuration": 8
+      }
+    ]
   }
 }
