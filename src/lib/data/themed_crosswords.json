@@ -4443,5 +4443,138 @@
         "soundcloudUrl": "https://soundcloud.com/2pac/california-love-original"
       }
     ]
+  },
+  "38": {
+    "title": "Guitar Hero Classics",
+    "author": "Anonymous",
+    "date_available": "2026-03-22",
+    "theme": "black",
+    "thumbnail": "https://i.ytimg.com/vi/cHRfbiwdheg/maxresdefault.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "EVENFLOW",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "253243500",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/pearl-jam-official/even-flow"
+      },
+      {
+        "word": "DRAGONFORCE",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band Name",
+        "audioUrl": "86979624",
+        "startAt": "0:21",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/alfredo-guzman-navarro/dragonforce-through-the-fire"
+      },
+      {
+        "word": "IRONMAN",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "196149088",
+        "startAt": "0:35",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/blacksabbath/iron-man"
+      },
+      {
+        "word": "CALIFORNIA",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "2nd Word of Song Title",
+        "audioUrl": "231849488",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/eaglesofficial/eagles-hotel-california"
+      },
+      {
+        "word": "DREAM",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First Word of Song Title",
+        "audioUrl": "530870898",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/aerosmith/dream-on-6"
+      },
+      {
+        "word": "METALLICA",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Band Name",
+        "audioUrl": "783020866",
+        "startAt": "1:44",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/one-remastered"
+      },
+      {
+        "word": "LINKIN",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First Word of Band Name",
+        "audioUrl": "1266029521",
+        "startAt": "0:03",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/bleed-it-out-1"
+      },
+      {
+        "word": "RAINING",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "_______ Blood",
+        "audioUrl": "154333378",
+        "startAt": "2:51",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/mashreef-ahamed/slayer-reign-in-blood-remaster-2014"
+      },
+      {
+        "word": "DOVER",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Cliffs of _____",
+        "audioUrl": "86902242",
+        "startAt": "0:20",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/alfredo-guzman-navarro/cliffs-of-dover-eric-johnson"
+      },
+      {
+        "word": "FAT",
+        "startX": 10,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First Word of Song Title",
+        "audioUrl": "256148209",
+        "startAt": "0:09",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/sum41/fat-lip-album-version"
+      }
+    ]
   }
 }
