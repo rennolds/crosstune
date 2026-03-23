@@ -36160,5 +36160,124 @@
         "audioDuration": 8
       }
     ]
+  },
+    "2026-03-23": {
+    "title": "Drop the G",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "FALLIN",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "DJ got us ____",
+        "audioUrl": "256122842",
+        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/dj-got-us-fallin-in-love",
+        "startAt": "0:08",
+        "audioDuration": 6
+      },
+      {
+        "word": "LIVIN",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "audioUrl": 16737972,
+        "soundcloudUrl": "https://soundcloud.com/poprocks-1/livin-on-a-prayer-bon-jovi",
+        "startAt": "1:20",
+        "audioDuration": 7
+      },
+      {
+        "word": "KNOCKIN",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First word of song title",
+        "audioUrl": 253540194,
+        "soundcloudUrl": "https://soundcloud.com/guns-n-roses-official/knockin-on-heavens-door-2",
+        "startAt": "0:38",
+        "audioDuration": 20
+      },
+      {
+        "word": "POPPIN",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What's ____",
+        "audioUrl": "745339945",
+        "soundcloudUrl": "https://soundcloud.com/jackharlow/whats-poppin",
+        "startAt": "1:39",
+        "audioDuration": 8
+      },
+      {
+        "word": "ROLLIN",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "269760695",
+        "soundcloudUrl": "https://soundcloud.com/exxlywarsirq/limp-bizkit-rollin-original",
+        "startAt": "0:25",
+        "audioDuration": 6
+      },
+      {
+        "word": "WAVIN",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word of song title",
+        "audioUrl": "252890285",
+        "soundcloudUrl": "https://soundcloud.com/knaan-official/wavin-flag-coca-cola-r-2",
+        "startAt": "0:08",
+        "audioDuration": 12
+      },
+      {
+        "word": "BLOWIN",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of song title",
+        "audioUrl": "256269230",
+        "soundcloudUrl": "https://soundcloud.com/bobdylan/blowin-in-the-wind-1",
+        "startAt": "0:02",
+        "audioDuration": 10
+      },
+      {
+        "word": "ROCKIN",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word of song title",
+        "audioUrl": "398410761",
+        "soundcloudUrl": "https://soundcloud.com/bobby-day-official/rockin-robin-19",
+        "startAt": "0:05",
+        "audioDuration": 12
+      },
+      {
+        "word": "BEGGIN",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "1099939945",
+        "soundcloudUrl": "https://soundcloud.com/thisismaneskin/beggin-1",
+        "startAt": "0:16",
+        "audioDuration": 13
+      }
+    ]
   }
 }
