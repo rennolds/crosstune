@@ -36505,5 +36505,128 @@
         "audioDuration": 6.5
       }
     ]
+  },
+    "2026-03-26": {
+    "title": "First Name Frenzy II",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "linked_puzzles": [
+      "2025-10-17"
+    ],
+    "size": {
+    "words": [
+      {
+        "word": "DELILAH",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Name in song title",
+        "audioUrl": "283122057",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/plain-white-ts-official/hey-there-delilah-2"
+      },
+      {
+        "word": "JUNO",
+        "startX": 8,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1901886333",
+        "startAt": "0:38",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/juno"
+      },
+      {
+        "word": "ELEANOR",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "First name in song title",
+        "audioUrl": "435126858",
+        "startAt": "0:06",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/kaden-gencarelle-98629184/the-beatles-eleanor-rigby"
+      },
+      {
+        "word": "ELVIS",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "audioUrl": "259005647",
+        "startAt": "0:06",
+        "audioDuration": 12,
+        "soundcloudUrl": "https://soundcloud.com/elvissonymusic/burning-love-8"
+      },
+      {
+        "word": "HALLEY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Name in song title (also a famous comet)",
+        "audioUrl": "1096503619",
+        "startAt": "1:03",
+        "audioDuration": 14,
+        "soundcloudUrl": "https://soundcloud.com/billieeilish/halleys-comet"
+      },
+      {
+        "word": "BILLIE",
+        "startX": 3,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Name in song title",
+        "audioUrl": "278508712",
+        "startAt": "0:19",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/mjimmortal/billie-jean-single-version"
+      },
+      {
+        "word": "OLIVIA",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "257052802",
+        "startAt": "0:08",
+        "audioDuration": 8,
+        "soundcloudUrl": "https://soundcloud.com/onedirectionmusic/olivia"
+      },
+      {
+        "word": "MARJORIE",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title (Taylor Swift's grandmother's name if that helps...)",
+        "audioUrl": "945469651",
+        "startAt": "0:08",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/marjorie"
+      },
+      {
+        "word": "SCOTTY",
+        "startX": 11,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "He doesn't know.",
+        "audioUrl": "624054492",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "soundcloudUrl": "https://soundcloud.com/user-688708444/scotty-doesnt-know"
+      }
+    ]
   }
 }
