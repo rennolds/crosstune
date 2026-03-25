@@ -36398,5 +36398,112 @@
         "audioDuration": 10
       }
     ]
+  },
+    "2026-03-25": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "SHAGGY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "artist name (also a memeber of the mystery gang)",
+        "audioUrl": 13505233,
+        "soundcloudUrl": "https://soundcloud.com/direalshaggy/boombastic",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "JANET",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "artist first name (has a very famous older brother)",
+        "audioUrl": 266091718,
+        "soundcloudUrl": "https://soundcloud.com/janetjackson/together-again",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "ARIANA",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "artist first name",
+        "audioUrl": 1715270643,
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-yes-and",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "GOTITONME",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "title of this pop smoke song",
+        "audioUrl": 850506460,
+        "soundcloudUrl": "https://soundcloud.com/biggavelipro/got-it-on-me",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "THEWORLD",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "what did he used to rule?",
+        "audioUrl": 255770309,
+        "soundcloudUrl": "https://soundcloud.com/coldplay/viva-la-vida",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "WISH",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "what will she trade her soul for?",
+        "audioUrl": 37600755,
+        "soundcloudUrl": "https://soundcloud.com/interscope/carly-rae-jepsen-call-me-maybe",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "HANSZIMMER",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "this song features a famous ....",
+        "audioUrl": 2287081631,
+        "soundcloudUrl": "https://soundcloud.com/raye/click-clack-symphony-feat-hans",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "TOWN",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "What are we painting red?",
+        "audioUrl": 1576853254,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/paint-the-town-red",
+        "startAt": "0:00",
+        "audioDuration": 6
+      }
+    ]
   }
 }
