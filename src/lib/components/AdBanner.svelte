@@ -118,6 +118,9 @@
   $effect(() => {
     if (browser) {
       if (!rampComponentLoaded) {
+        // Disable ads on mobile
+        if (window.innerWidth < 768) return;
+
         if (!PUB_ID || !WEBSITE_ID) {
           console.log("Missing Publisher Id and Website Id");
           return;
@@ -196,5 +199,9 @@
     overflow: hidden !important;
   }
 
+  /* Top banner is a mobile-only format — hide on all screens since mobile ads are disabled */
+  #ad-container {
+    display: none;
+  }
 
 </style>
