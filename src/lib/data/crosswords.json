@@ -36627,5 +36627,136 @@
         "soundcloudUrl": "https://soundcloud.com/user-688708444/scotty-doesnt-know"
       }
     ]
+  },
+    "2026-03-27": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "ONECALL",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "How far away is he?",
+        "audioUrl": 220171836,
+        "soundcloudUrl": "https://soundcloud.com/charlieputh/one-call-away",
+        "startAt": "0:04.6",
+        "audioDuration": 11
+      },
+      {
+        "word": "BOB",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "audioUrl": 98982164,
+        "soundcloudUrl": "https://soundcloud.com/wizwax/bob-seger-night-moves-american",
+        "startAt": "1:00",
+        "audioDuration": 12
+      },
+      {
+        "word": "DEAN",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "audioUrl": 461700600,
+        "soundcloudUrl": "https://soundcloud.com/deanlewisofficial/be-alright",
+        "startAt": "0:34",
+        "audioDuration": 10
+      },
+      {
+        "word": "GYM",
+        "startX": 9,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "This artist's favorite class in school",
+        "audioUrl": 17086720,
+        "soundcloudUrl": "https://soundcloud.com/decaydancerecords/gym-class-heroes-stereo-hearts",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "FIREFLIES",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 46352948,
+        "soundcloudUrl": "https://soundcloud.com/owlcityofficial/fireflies",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "DENVER",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist's last (stage) name (His real name is Henry Deutschendorf)",
+        "audioUrl": 344663239,
+        "soundcloudUrl": "https://soundcloud.com/john-denver-official/take-me-home-country-roads-12",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "CANONIND",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Composition title",
+        "audioUrl": 701415352,
+        "soundcloudUrl": "https://soundcloud.com/bennymartinpianist/canon-in-d-piano-cello",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "BLACKBEAR",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name (also a species of bear)",
+        "audioUrl": 666509483,
+        "soundcloudUrl": "https://soundcloud.com/beartrapsound/hot-girl-bummer",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "BUBBLY",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 252466782,
+        "soundcloudUrl": "https://soundcloud.com/colbie-caillat-official/bubbly-album-version",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "BIGSEAN",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": 98301888,
+        "soundcloudUrl": "https://soundcloud.com/bigsean-1/beware",
+        "startAt": "0:00",
+        "audioDuration": 6
+      }
+    ]
   }
 }
