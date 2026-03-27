@@ -36682,7 +36682,7 @@
         "textClue": "This artist's favorite class in school",
         "audioUrl": 17086720,
         "soundcloudUrl": "https://soundcloud.com/decaydancerecords/gym-class-heroes-stereo-hearts",
-        "startAt": "0:00",
+        "startAt": "0:52.5",
         "audioDuration": 10
       },
       {
@@ -36703,11 +36703,11 @@
         "startY": 0,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "Artist's last (stage) name (His real name is Henry Deutschendorf)",
+        "textClue": "Artist's last (stage) name (his real name was Henry Deutschendorf)",
         "audioUrl": 344663239,
         "soundcloudUrl": "https://soundcloud.com/john-denver-official/take-me-home-country-roads-12",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:06",
+        "audioDuration": 11
       },
       {
         "word": "CANONIND",
@@ -36718,8 +36718,8 @@
         "textClue": "Composition title",
         "audioUrl": 701415352,
         "soundcloudUrl": "https://soundcloud.com/bennymartinpianist/canon-in-d-piano-cello",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:54",
+        "audioDuration": 12
       },
       {
         "word": "BLACKBEAR",
@@ -36730,8 +36730,8 @@
         "textClue": "Artist name (also a species of bear)",
         "audioUrl": 666509483,
         "soundcloudUrl": "https://soundcloud.com/beartrapsound/hot-girl-bummer",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:09",
+        "audioDuration": 7.3
       },
       {
         "word": "BUBBLY",
@@ -36742,8 +36742,8 @@
         "textClue": "Song title",
         "audioUrl": 252466782,
         "soundcloudUrl": "https://soundcloud.com/colbie-caillat-official/bubbly-album-version",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:14",
+        "audioDuration": 12
       },
       {
         "word": "BIGSEAN",
@@ -36754,8 +36754,8 @@
         "textClue": "Artist name",
         "audioUrl": 98301888,
         "soundcloudUrl": "https://soundcloud.com/bigsean-1/beware",
-        "startAt": "0:00",
-        "audioDuration": 6
+        "startAt": "0:19",
+        "audioDuration": 10
       }
     ]
   }
