@@ -36758,5 +36758,100 @@
         "audioDuration": 10
       }
     ]
+  },
+    "2026-03-28": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "TIGHTROPE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title (Funambulists walk on these)",
+        "audioUrl": 35782289,
+        "soundcloudUrl": "https://soundcloud.com/walk-the-moon/tightrope",
+        "startAt": "0:20",
+        "audioDuration": 8
+      },
+      {
+        "word": "LIONMAN",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Little ___ ____ [Song title]",
+        "audioUrl": 271455488,
+        "soundcloudUrl": "https://soundcloud.com/mumfordandsons/little-lion-man-1",
+        "startAt": "1:21",
+        "audioDuration": 9
+      },
+      {
+        "word": "ABRACADABRA",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title (or a magic incantation)",
+        "audioUrl": 2024565124,
+        "soundcloudUrl": "https://soundcloud.com/ladygaga/abracadabra",
+        "startAt": "0:14",
+        "audioDuration": 12
+      },
+      {
+        "word": "RINGOFFIRE",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 326291074,
+        "soundcloudUrl": "https://soundcloud.com/johnnycash/ring-of-fire-12",
+        "startAt": "0:17",
+        "audioDuration": 12
+      },
+      {
+        "word": "CIRCUS",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Title track",
+        "audioUrl": 257043782,
+        "soundcloudUrl": "https://soundcloud.com/britneyspears/circus",
+        "startAt": "0:16",
+        "audioDuration": 12
+      },
+      {
+        "word": "ZAC",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name (known for his acting)",
+        "audioUrl": 516543381,
+        "soundcloudUrl": "https://soundcloud.com/atlanticrecords/zac-efron-zendaya-rewrite-the-stars",
+        "startAt": "0:34",
+        "audioDuration": 11
+      },
+      {
+        "word": "GLADIATORS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "\"Entry of the ____\", is the title of this military chromatic march.",
+        "audioUrl": 245956704,
+        "soundcloudUrl": "https://soundcloud.com/tetrasound/fucik-entry-of-the-gladiators",
+        "startAt": "0:11",
+        "audioDuration": 10
+      }
+    ]
   }
 }
