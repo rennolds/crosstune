@@ -4576,5 +4576,138 @@
         "soundcloudUrl": "https://soundcloud.com/sum41/fat-lip-album-version"
       }
     ]
+  },
+  "39": {
+    "title": "Beatlemania",
+    "author": "reagen",
+    "date_available": "2026-03-29",
+    "theme": "black",
+    "thumbnail": "https://i8.amplience.net/i/naras/the-beatles_MI0003995354-MN0000754032",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SHELOVESYOU",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "She said ___ ___ ___",
+        "audioUrl": "220460967",
+        "startAt": "0:13",
+        "audioDuration": 13,
+        "soundcloudUrl": "https://on.soundcloud.com/VylrajC5ew2sF86QSn"
+      },
+      {
+        "word": "HEYJUDE",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "1459951630",
+        "startAt": "0:03",
+        "audioDuration": 20,
+        "soundcloudUrl": "https://on.soundcloud.com/ZMtzZ9xa4uaX1Pw7Xy"
+      },
+      {
+        "word": "ELEANORRIGBY",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Who picks up the rice in the church?",
+        "audioUrl": "435126858",
+        "startAt": "0:16",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://on.soundcloud.com/DF4YzQpPisWt4jJkC0"
+      },
+      {
+        "word": "YESTER",
+        "startX": 4,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Part of this song's title (archaic adjective meaning prior)",
+        "audioUrl": "1459966162",
+        "startAt": "0:13",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://on.soundcloud.com/4jCNvwXhRcmwKxhl5Z"
+      },
+      {
+        "word": "ROBERT",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Doctor whose nickname may be Bob",
+        "audioUrl": "319320256",
+        "startAt": "0:19",
+        "audioDuration": 11,
+        "soundcloudUrl": "https://on.soundcloud.com/MAMnqze4XOvx74siB7"
+      },
+      {
+        "word": "SGTPEPPER",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Whose Lonely Hearts Club Band is it?",
+        "audioUrl": "248502332",
+        "startAt": "0:22",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://on.soundcloud.com/i1WGknSmDusuVKr7NZ"
+      },
+      {
+        "word": "LETITBE",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "160935074",
+        "startAt": "0:00",
+        "audioDuration": 21,
+        "soundcloudUrl": "https://on.soundcloud.com/SnuVR36AuZBxJw9ZM8"
+      },
+      {
+        "word": "OFHONEY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "A Taste ___ ___",
+        "audioUrl": "98464328",
+        "startAt": "0:13",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://on.soundcloud.com/Kz1cJPyRHm7fudPaHE"
+      },
+      {
+        "word": "YOULIKEME",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "___ ___ ___ Too Much",
+        "audioUrl": "855938905",
+        "startAt": "0:00",
+        "audioDuration": 25,
+        "soundcloudUrl": "https://on.soundcloud.com/D65vVS4YlLa0Pqzq5Q"
+      },
+      {
+        "word": "YELLOW",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "What color is the submarine?",
+        "audioUrl": "185886102",
+        "startAt": "0:54",
+        "audioDuration": 16,
+        "soundcloudUrl": "https://on.soundcloud.com/2artudQsbXwLA0Ng56"
+      }
+    ]
   }
 }
