@@ -37127,5 +37127,112 @@
         "audioDuration": 10
       }
     ]
+  },
+    "2026-03-31": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "pink",
+    "words": [
+      {
+        "word": "JACK",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Shaboozey's whiskey of choice",
+        "audioUrl": 1792895020,
+        "soundcloudUrl": "https://soundcloud.com/shaboozey/shaboozey-a-bar-song-tipsy",
+        "startAt": "0:36",
+        "audioDuration": 8
+      },
+      {
+        "word": "LUCID",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "audioUrl": 328259811,
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/lucid-dreams-forget-me",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "SNOOPDOGG",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": 263377199,
+        "soundcloudUrl": "https://soundcloud.com/radwane-judoka/snoop-dogg-drop-it-like-its-hot",
+        "startAt": "0:16",
+        "audioDuration": 8
+      },
+      {
+        "word": "TEXAS",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of song title",
+        "audioUrl": 1744355502,
+        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-texas-hold-em",
+        "startAt": "0:16",
+        "audioDuration": 9
+      },
+      {
+        "word": "AUSTIN",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title (where will her ex still be in 40 years?)",
+        "audioUrl": 1779265662,
+        "soundcloudUrl": "https://soundcloud.com/dasha-sc-music/austin",
+        "startAt": "0:50",
+        "audioDuration": 8.2
+      },
+      {
+        "word": "ALBATROSS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "I'm an ____ (a large seabird)",
+        "audioUrl": 196274034,
+        "soundcloudUrl": "https://soundcloud.com/pepes-rules-snake-sound/im-an-albatroz",
+        "startAt": "0:34",
+        "audioDuration": 4.2
+      },
+      {
+        "word": "HOUSTON",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "audioUrl": 253799714,
+        "soundcloudUrl": "https://soundcloud.com/whitneyhouston/i-wanna-dance-with-somebody-1",
+        "startAt": "1:11",
+        "audioDuration": 9
+      },
+      {
+        "word": "RADIO",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "What was stolen in this song?",
+        "audioUrl": 271221685,
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/car-radio",
+        "startAt": "0:14",
+        "audioDuration": 8
+      }
+    ]
   }
 }
