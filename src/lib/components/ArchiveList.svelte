@@ -5,7 +5,11 @@
 
   let { crosswords, onSelectDate } = $props();
 
-  let currentDate = $state(new Date());
+  const _initDate = new Date();
+  if (_initDate.getDate() === 1) {
+    _initDate.setMonth(_initDate.getMonth() - 1);
+  }
+  let currentDate = $state(_initDate);
   let selectedDate = $state(null);
   let solvedPuzzles = $state(getSolvedPuzzles());
   let isDark = $derived(getIsDarkMode());
