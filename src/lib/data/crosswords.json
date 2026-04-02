@@ -37353,5 +37353,196 @@
         "audioDuration": 8
       }
     ]
+  },
+    "2026-04-02": {
+    "title": "A diversified portfolio",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "BRITNEY",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "256024569",
+        "startAt": "0:00",
+        "audioDuration": 17,
+        "soundcloudUrl": "https://soundcloud.com/britneyspears/baby-one-more-time"
+      },
+      {
+        "word": "SEXYBACK",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "256093147",
+        "startAt": "0:18",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/justintimberlake/sexyback-2"
+      },
+      {
+        "word": "ED",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "audioUrl": "310108203",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/edsheeran/perfect"
+      },
+      {
+        "word": "PARADISE",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "First word of song title",
+        "audioUrl": "253592789",
+        "startAt": "0:07",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/guns-n-roses-official/paradise-city"
+      },
+      {
+        "word": "COLDPLAY",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "audioUrl": "255770536",
+        "startAt": "1:40",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/coldplay/a-sky-full-of-stars"
+      },
+      {
+        "word": "FIRE",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Last word of song title",
+        "audioUrl": "257053998",
+        "startAt": "0:17",
+        "audioDuration": 10,
+        "soundcloudUrl": "https://soundcloud.com/billyjoel/we-didnt-start-the-fire"
+      },
+      {
+        "word": "FAST",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "audioUrl": "1470097684",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/lukecombs/fast-car"
+      },
+      {
+        "word": "BRUCE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name (He's Born to Run!)",
+        "audioUrl": "257037374",
+        "startAt": "0:11",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-to-run-1"
+      },
+      {
+        "word": "CCR",
+        "startX": 2,
+        "startY": 7,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist name (abbreviation)",
+        "audioUrl": "253572147",
+        "startAt": "0:05",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/creedence-clearwater-revival/have-you-ever-seen-the-rain-2"
+      },
+      {
+        "word": "IRIS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "220647780",
+        "startAt": "0:00",
+        "audioDuration": 3,
+        "soundcloudUrl": "https://soundcloud.com/thegoogoodolls/iris-1"
+      },
+      {
+        "word": "PILL",
+        "startX": 4,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "What did Mike Posner take in Ibiza? (Fourth word of song title)",
+        "audioUrl": "202661078",
+        "startAt": "0:02",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/mikeposner/i-took-a-pill-in-ibiza"
+      },
+      {
+        "word": "NASX",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Lil ___ ___ (artist name)",
+        "audioUrl": "1014672238",
+        "startAt": "0:05",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/secret-service-862007284/montero-call-me-by-your-name"
+      },
+      {
+        "word": "BEATLES",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The ____ (Artist name)",
+        "audioUrl": "325144218",
+        "startAt": "0:12",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/chiarajazmyn/the-beatles-strawberry-fields-forever"
+      },
+      {
+        "word": "VA",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Last word of this Santana song title",
+        "audioUrl": "254171265",
+        "startAt": "0:13",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/santana-official/oye-como-va-2"
+      },
+      {
+        "word": "KISS",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "A ___ From a Rose",
+        "audioUrl": "427297782",
+        "startAt": "0:37",
+        "audioDuration": 15,
+        "soundcloudUrl": "https://soundcloud.com/ne-heartbreak/seal-a-kiss-from-a-rose"
+      }
+    ]
   }
 }
