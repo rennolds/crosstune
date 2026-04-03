@@ -37496,5 +37496,124 @@
         "audioDuration": 15
       }
     ]
+  },
+    "2026-04-03": {
+    "version": "1.0.0",
+    "title": "🧍‍♀️+ 🧍‍♂️ (by emandb)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MATERIAL",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "____ Girl [song title]",
+        "audioUrl": "214807077",
+        "soundcloudUrl": "https://m.soundcloud.com/madonna/material-girl",
+        "startAt": "0:28",
+        "audioDuration": 10
+      },
+      {
+        "word": "AMERICAN",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "____ Boy [song title]",
+        "audioUrl": "341881983",
+        "soundcloudUrl": "https://m.soundcloud.com/estelleofficial/american-boy-feat-kanye-west",
+        "startAt": "0:15",
+        "audioDuration": 10
+      },
+      {
+        "word": "STARBOY",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song Title",
+        "audioUrl": "284056452",
+        "soundcloudUrl": "https://m.soundcloud.com/theweeknd/starboy-1?in=theweeknd%2Fsets%2Fstarboy-4",
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "UPTOWN",
+        "startX": 6,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "____ Girl [song title]",
+        "audioUrl": "256262940",
+        "soundcloudUrl": "https://m.soundcloud.com/billyjoel/uptown-girl",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "GIRLS",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "They run the world?",
+        "audioUrl": "13964439",
+        "soundcloudUrl": "https://m.soundcloud.com/beyonce/runtheworldgirls",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "HEYHEY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "____ Girl ____ Boy [song title]",
+        "audioUrl": "252567281",
+        "soundcloudUrl": "https://m.soundcloud.com/thechemicalbrothers/hey-boy-hey-girl",
+        "startAt": "0:07.5",
+        "audioDuration": 11.5
+      },
+      {
+        "word": "BIG",
+        "startX": 4,
+        "startY": 7,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What kind of girls?",
+        "audioUrl": 10676644,
+        "soundcloudUrl": "https://soundcloud.com/interscope/10-big-girls-dont-cry-1m-30s",
+        "startAt": "0:44.5",
+        "audioDuration": 8.5
+      },
+      {
+        "word": "LIKEYOU",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Mama said there would be boys ___ ___\"",
+        "audioUrl": 375818936,
+        "soundcloudUrl": "https://soundcloud.com/annaclendening-music/boys-like-you",
+        "startAt": "0:03",
+        "audioDuration": 14
+      },
+      {
+        "word": "INRED",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Girl ___ ___ [artist name]",
+        "audioUrl": "292549863",
+        "soundcloudUrl": "https://m.soundcloud.com/lyfsuxx/we-fell-in-love-in-buddyville?in=ylorzn%2Fsets%2Fn",
+        "startAt": "0:48",
+        "audioDuration": 10
+      }
+    ]
   }
 }
