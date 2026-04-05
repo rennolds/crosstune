@@ -16,6 +16,7 @@
   // Import the fixed SlideMenu component
   import SlideMenu from "./SlideMenu.svelte";
   import RevealMenu from "./RevealMenu.svelte";
+  import FeedbackModal from "./FeedbackModal.svelte";
 
   let userProfile = $state(null);
 
@@ -66,6 +67,7 @@
   } = $props();
 
   let isMenuOpen = $state(false);
+  let feedbackOpen = $state(false);
   let isRevealMenuOpen = $state(false);
   let isHelpOverlayOpen = $state(false);
 
@@ -425,7 +427,11 @@
   </div>
 {/if}
 
-<SlideMenu isOpen={isMenuOpen} onClose={() => (isMenuOpen = false)} />
+<SlideMenu isOpen={isMenuOpen} onClose={() => (isMenuOpen = false)} onFeedback={() => (feedbackOpen = true)} />
+
+{#if feedbackOpen}
+  <FeedbackModal onClose={() => (feedbackOpen = false)} />
+{/if}
 
 <style>
   :global(body) {

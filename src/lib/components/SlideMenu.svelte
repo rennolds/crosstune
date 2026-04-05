@@ -3,7 +3,7 @@
   import { fly } from "svelte/transition";
   import { browser } from "$app/environment";
 
-  let { isOpen, onClose } = $props();
+  let { isOpen, onClose, onFeedback = () => {} } = $props();
   let isMobileDevice = $state(false);
 
   const dispatch = createEventDispatcher();
@@ -197,6 +197,12 @@
               on:click={handleFollowUs}
             >
               Follow Us
+            </div>
+            <div
+              class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
+              on:click={() => { onFeedback(); onClose(); }}
+            >
+              Feedback
             </div>
             <div
               class="menu-item cursor-pointer text-black dark:text-white text-lg py-1 hover:text-gray-400"
