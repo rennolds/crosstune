@@ -37734,5 +37734,124 @@
         "audioDuration": 10
       }
     ]
+  },
+    "2026-04-05": {
+    "version": "1.0.0",
+    "title": "One-Hit Wonders (by 4n0nym0u5)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "TAKEONME",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "195410552",
+        "soundcloudUrl": "https://m.soundcloud.com/a-ha/take-on-me",
+        "startAt": "0:51",
+        "audioDuration": 10
+      },
+      {
+        "word": "MELON",
+        "startX": 5,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Fruit in Band Name",
+        "audioUrl": "56426054",
+        "soundcloudUrl": "https://m.soundcloud.com/chava-perez/no-rain-blind-melon",
+        "startAt": "2:36",
+        "audioDuration": 11
+      },
+      {
+        "word": "BLACK",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Color Mentioned in Song Title",
+        "audioUrl": "1853919441",
+        "soundcloudUrl": "https://m.soundcloud.com/los-bravos/black-is-black-remastered-2024",
+        "startAt": "0:33",
+        "audioDuration": 11
+      },
+      {
+        "word": "CLOSINGTIME",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song Title",
+        "audioUrl": "252410819",
+        "soundcloudUrl": "https://m.soundcloud.com/semisonic-official/closing-time",
+        "startAt": "0:00",
+        "audioDuration": 11
+      },
+      {
+        "word": "CANNONBALL",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "563483634",
+        "soundcloudUrl": "https://m.soundcloud.com/thebreeders/cannonball",
+        "startAt": "0:18",
+        "audioDuration": 10
+      },
+      {
+        "word": "BETTY",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Name in Song Title",
+        "audioUrl": "253556167",
+        "soundcloudUrl": "https://m.soundcloud.com/ram-jam-official/black-betty-3",
+        "startAt": "0:18",
+        "audioDuration": 10
+      },
+      {
+        "word": "MILES",
+        "startX": 6,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "A Thousand ____",
+        "audioUrl": "255837979",
+        "soundcloudUrl": "https://m.soundcloud.com/vanessacarlton/a-thousand-miles",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "TOMMY",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist First Name",
+        "audioUrl": "1897960566",
+        "soundcloudUrl": "https://m.soundcloud.com/tommytutoneofficial/867-5309-jenny-rerecorded",
+        "startAt": "0:42",
+        "audioDuration": 14
+      },
+      {
+        "word": "BLUE",
+        "startX": 10,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Color Mentioned in Song Title",
+        "audioUrl": "472437327",
+        "soundcloudUrl": "https://m.soundcloud.com/user-823188761/eiffel-65-blue-da-ba-dee",
+        "startAt": "1:09",
+        "audioDuration": 10
+      }
+    ]
   }
 }
