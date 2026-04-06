@@ -118,7 +118,7 @@
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedDate}
     <!-- In archive puzzle mode -->
-    <div class="flex-1 pt-20 md:pt-0 lg:mr-35">
+    <div class="flex-1 pt-12 md:pt-0 lg:mr-35">
       {#key selectedDate}
         <CrosswordGrid1
           {puzzle}
