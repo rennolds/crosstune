@@ -37841,5 +37841,184 @@
         "audioDuration": 10
       }
     ]
+  },
+    "2026-04-06": {
+    "version": "1.0.0",
+    "title": "bebby’s puzzle",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BABYGOTBACK",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "song title",
+        "audioUrl": "253004722",
+        "soundcloudUrl": "https://on.soundcloud.com/Q7gMtc7kpbwD1sYiEa",
+        "startAt": "0:12",
+        "audioDuration": 10
+      },
+      {
+        "word": "WHITE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "(song title) ___ lines",
+        "audioUrl": "73115583",
+        "soundcloudUrl": "https://on.soundcloud.com/0lMX4ATmMtdkNIKuDY",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "TIK",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "(song title) ___ TOK",
+        "audioUrl": "278861165",
+        "soundcloudUrl": "https://on.soundcloud.com/jOTmWXU0xav3MxaI0C",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "SO",
+        "startX": 10,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "(song title) say it ain’t __",
+        "audioUrl": "256246110",
+        "soundcloudUrl": "https://on.soundcloud.com/ReaTYmrcPPPZgVO5cI",
+        "startAt": "0:44",
+        "audioDuration": 15
+      },
+      {
+        "word": "GIRLS",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "(song titles) big ___ don’t cry",
+        "audioUrl": "255841740",
+        "soundcloudUrl": "https://on.soundcloud.com/lIJDYQsM74o2VedcS9",
+        "startAt": "0:19",
+        "audioDuration": 3
+      },
+      {
+        "word": "DRIVE",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "(song title) ___ ME crazy! (Lil Yachty)",
+        "audioUrl": "1433305249",
+        "soundcloudUrl": "https://on.soundcloud.com/sD6q0WQwavhzIsNO0r",
+        "startAt": "0:32",
+        "audioDuration": 30
+      },
+      {
+        "word": "YOUNG",
+        "startX": 6,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "(song title) ___ folks",
+        "audioUrl": "256100967",
+        "soundcloudUrl": "https://on.soundcloud.com/6z1vUvZV1Si7PnxRgt",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "BOWLING",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "(artists name) ____ for soup",
+        "audioUrl": "252588088",
+        "soundcloudUrl": "https://on.soundcloud.com/lTnSXkaWu3irFxXUUw",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "BLIND",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "(song title) she would rather go WHAT?!",
+        "audioUrl": "255873808",
+        "soundcloudUrl": "https://on.soundcloud.com/mtZcVDcixxHUtQtjDa",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "LOVE",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "(song title) story",
+        "audioUrl": "252454381",
+        "soundcloudUrl": "https://on.soundcloud.com/rY8Gbn1gU2PCYyVVKQ",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "TALKDIRTY",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "(song title)",
+        "audioUrl": "256050744",
+        "soundcloudUrl": "https://on.soundcloud.com/RhUzRrj5aW2WYec5NI",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "ARCTIC",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "(artist name) _____ monkeys",
+        "audioUrl": "255984107",
+        "soundcloudUrl": "https://on.soundcloud.com/Ix07oiqRwPFrtG2AwI",
+        "startAt": "0:10",
+        "audioDuration": 15
+      },
+      {
+        "word": "SAND",
+        "startX": 9,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "(song title) Mr ____ man",
+        "audioUrl": "375179735",
+        "soundcloudUrl": "https://on.soundcloud.com/rqFBgU3AscGFCRKGM6",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "KICKS",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "(song title) teenage ___",
+        "audioUrl": "284863105",
+        "soundcloudUrl": "https://on.soundcloud.com/9UYdRgDBoErQ00PQJ4",
+        "startAt": "0:00",
+        "audioDuration": 6
+      }
+    ]
   }
 }
