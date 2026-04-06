@@ -434,7 +434,26 @@
 {/if}
 
 <style>
-  :global(body) {
-    padding-top: 3rem;
+  /* On mobile, navbar sits below the ad banner (50px) */
+  @media (max-width: 768px) {
+    nav {
+      top: 50px !important;
+    }
+
+    /* AdBanner adds 50px padding, we need additional 48px for navbar = 98px total */
+    :global(body) {
+      padding-top: calc(50px + 3rem) !important;
+    }
+  }
+
+  /* On desktop, navbar at top with normal padding, no ad banner */
+  @media (min-width: 769px) {
+    nav {
+      top: 0;
+    }
+
+    :global(body) {
+      padding-top: 3rem;
+    }
   }
 </style>
