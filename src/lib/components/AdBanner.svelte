@@ -25,14 +25,8 @@
   });
 
   $effect(() => {
-    // Ramp loading logic - only runs on mobile and when props are available
-    if (
-      browser &&
-      isMobileDevice &&
-      PUB_ID &&
-      WEBSITE_ID &&
-      !rampComponentLoaded
-    ) {
+    // Ramp loading logic - runs on both mobile and desktop, but banner only shows on mobile
+    if (browser && PUB_ID && WEBSITE_ID && !rampComponentLoaded) {
       console.log("Loading Ramp ad...");
       window.ramp = window.ramp || {};
       window.ramp.que = window.ramp.que || [];
@@ -46,12 +40,11 @@
         rampComponentLoaded = true;
         window.ramp.que.push(() => {
           window.ramp.addTag("standard_iab_head1");
-          window.ramp.displayUnits(); // Display ads immediately after loading and adding the tag
-          lastPathname = $page.url.pathname; // Initialize lastPathname after first load
+          window.ramp.displayUnits();
+          lastPathname = $page.url.pathname;
         });
       };
 
-      // Optional: Add cleanup for the script tag if the component unmounts before loading finishes
       return () => {
         const existingScript = document.querySelector(
           `script[src="${configScript.src}"]`
@@ -59,13 +52,7 @@
         if (existingScript) {
           document.body.removeChild(existingScript);
         }
-        // Potentially clear Ramp queue or state if necessary
       };
-    } else if (!isMobileDevice && rampComponentLoaded) {
-      // Optional: Cleanup if switching from mobile to desktop after ad loaded
-      console.log("Device is no longer mobile, potentially unload Ramp.");
-      // Add any necessary Ramp cleanup logic here if needed
-      rampComponentLoaded = false; // Reset state
     }
   });
 
