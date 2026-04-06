@@ -440,9 +440,9 @@
       top: 50px !important;
     }
 
-    /* Add padding for ad banner plus some breathing room */
+    /* Add padding for ad banner plus breathing room */
     :global(body) {
-      padding-top: calc(50px + 1.5rem) !important;
+      padding-top: calc(50px + 2rem) !important;
     }
   }
 
