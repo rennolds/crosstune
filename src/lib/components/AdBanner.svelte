@@ -39,8 +39,8 @@
       configScript.onload = () => {
         rampComponentLoaded = true;
         window.ramp.que.push(() => {
+          window.ramp.spaNewPage();
           window.ramp.addTag("standard_iab_head1");
-          window.ramp.displayUnits();
           lastPathname = $page.url.pathname;
         });
       };
@@ -76,29 +76,45 @@
   });
 </script>
 
-{#if isMobileDevice}
-  <div
-    class="h-[50px] w-full bg-white dark:bg-black fixed top-0 left-0 right-0 z-[100] flex items-center justify-center"
-  >
-    <!-- Ramp ad unit container -->
-    <div data-pw-mobi="standard_iab_head1" id="standard_iab_head1"></div>
-  </div>
-{/if}
+<!-- Always render div for Ramp to find, visibility controlled by CSS -->
+<div
+  id="ad-container"
+  class="bg-white dark:bg-black flex items-center justify-center"
+>
+  <!-- Ramp ad unit container -->
+  <div data-pw-mobi="standard_iab_head1" id="standard_iab_head1"></div>
+</div>
 
 <style>
-  /* Adjust global padding to account for the ad banner on mobile */
-  :global(body) {
-    @media (max-width: 768px) {
+  /* Mobile: fixed banner at top */
+  @media (max-width: 768px) {
+    #ad-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      z-index: 100;
+    }
+
+    :global(body) {
       padding-top: 50px !important;
     }
   }
 
-  /* Ensure the ad container itself doesn't add extra spacing */
+  /* Desktop: hide the banner, but keep element in DOM for Ramp */
+  @media (min-width: 769px) {
+    #ad-container {
+      display: none;
+    }
+  }
+
   #standard_iab_head1 {
-    display: flex; /* Use flex to help center content if needed */
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; /* Fill the parent container */
+    height: 100%;
   }
 </style>
