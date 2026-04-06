@@ -440,9 +440,9 @@
       top: 50px !important;
     }
 
-    /* AdBanner adds 50px padding, we need additional 48px for navbar = 98px total */
+    /* Only add padding for ad banner, navbar is fixed so doesn't need padding */
     :global(body) {
-      padding-top: calc(50px + 3rem) !important;
+      padding-top: 50px !important;
     }
   }
 
