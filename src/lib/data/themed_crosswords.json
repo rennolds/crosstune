@@ -4709,5 +4709,126 @@
         "soundcloudUrl": "https://on.soundcloud.com/2artudQsbXwLA0Ng56"
       }
     ]
+  },
+  "40": {
+    "title": "Twenty One Pilots",
+    "author": "lau713",
+    "date_available": "2026-04-05",
+    "theme": "black",
+    "thumbnail": "https://yt3.googleusercontent.com/uF3nEJZcQIu_EhgOhnZZn9KnbgNOJN8QU88imE0vM4Wp1WzcqmN5xtmOWkK6WbKAUkswkr1XjoWeFTY=w2880-h1200-p-l90-rj",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BLURRYFACE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "\"My name's ____\"",
+        "audioUrl": 271221937,
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/stressed-out",
+        "startAt": "0:20",
+        "audioDuration": 8.6
+      },
+      {
+        "word": "OUTSIDE",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title sans \"the\"",
+        "audioUrl": "1051763578",
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/the-outside?in=twentyonepilots%2Fsets%2Fscaled-and-icy-1",
+        "startAt": "1:53",
+        "audioDuration": 6
+      },
+      {
+        "word": "FACE",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"my taste in music is your ____\"",
+        "audioUrl": "256133530",
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/tear-in-my-heart",
+        "startAt": "0:08",
+        "audioDuration": 15
+      },
+      {
+        "word": "CLANCY",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Album title this song appears on",
+        "audioUrl": "1827993162",
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/routines-in-the-night",
+        "startAt": "0:39",
+        "audioDuration": 8
+      },
+      {
+        "word": "PROOF",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Last word of the song title (hint: intro track of their debut album)",
+        "audioUrl": "491974728",
+        "soundcloudUrl": "https://soundcloud.com/spazz-out-621957899/implicit-demand-for-proof",
+        "startAt": "1:43",
+        "audioDuration": 10
+      },
+      {
+        "word": "AIR",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word of song title",
+        "audioUrl": "491974548",
+        "soundcloudUrl": "https://soundcloud.com/spazz-out-621957899/air-catcher",
+        "startAt": "2:40",
+        "audioDuration": 8
+      },
+      {
+        "word": "TREES",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "271220994",
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/trees",
+        "startAt": "0:50",
+        "audioDuration": 10
+      },
+      {
+        "word": "TAXICAB",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (Hint: often yellow, but black in London...)",
+        "audioUrl": "491974455",
+        "soundcloudUrl": "https://soundcloud.com/spazz-out-621957899/taxi-cab",
+        "startAt": "1:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "LEGEND",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "509422020",
+        "soundcloudUrl": "https://soundcloud.com/twentyonepilots/legend",
+        "startAt": "0:56",
+        "audioDuration": 10
+      }
+    ]
   }
 }
