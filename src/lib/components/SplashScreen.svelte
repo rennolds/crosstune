@@ -178,23 +178,16 @@
     </button>
 
     <!-- Announcement / CTA -->
-    <!-- <div class="mt-6 md:mt-8 w-full px-4">
+    <div class="mt-6 md:mt-8 w-full px-4">
       <div
-        class="max-w-md mx-auto bg-orange-500 text-white rounded-xl p-3 md:p-4 shadow"
+        class="max-w-md mx-auto bg-orange-500 text-white rounded-xl p-3 md:p-4 shadow text-center"
       >
         <p class="text-xs md:text-sm leading-relaxed">
-          In the past week we've received over 1,000 user created puzzles and we
-          can't possibly feature them all. They deserve to be played! Create
-          Puzzle has been rebranded so you can create shareable puzzles for your
-          friends! <a
-            href="/create"
-            class="underline font-semibold hover:text-orange-100 transition-colors"
-            >try it now.</a
-          > user board gallery coming soon!
+          Hey, try out our newest game Spotle Movies!
         </p>
         <p class="mt-2 text-xs md:text-sm">- Tommy & Paul</p>
       </div>
-    </div> -->
+    </div>
   </div>
 
   <!-- Spacer for mobile -->
