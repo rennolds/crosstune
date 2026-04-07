@@ -1,6 +1,7 @@
 <script>
   import { getEastCoastDate } from "$lib/utils/storage";
   import crosswords from "$lib/data/crosswords.json";
+  import { trackMovieClick } from "$lib/trackMovieClick.js";
 
   let { onPlay } = $props();
   let isMobileDevice = $state(false);
@@ -182,6 +183,7 @@
       <p class="text-sm md:text-base text-black! dark:text-white!">
         Hey! Try out our newest game <a
           href="https://spotle.movie/"
+          onclick={() => trackMovieClick('crosstune_splash')}
           class="text-blue-400 underline hover:text-blue-300 transition-colors"
           >Spotle Movies</a
         >
