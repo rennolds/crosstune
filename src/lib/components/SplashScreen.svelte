@@ -181,7 +181,7 @@
     <div class="mt-6 md:mt-8 text-center">
       <p class="text-sm md:text-base text-black! dark:text-white!">
         Hey! Try out our newest game <a
-          href="https://spotlemovies.io"
+          href="https://spotle.movie/"
           class="text-blue-400 underline hover:text-blue-300 transition-colors"
           >Spotle Movies</a
         >
