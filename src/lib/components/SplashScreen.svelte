@@ -178,14 +178,15 @@
     </button>
 
     <!-- Announcement / CTA -->
-    <div class="mt-6 md:mt-8">
-      <p class="text-sm md:text-base">
-        Try our newest game, <a
+    <div class="mt-6 md:mt-8 text-center">
+      <p class="text-sm md:text-base text-white">
+        Hey, try out our newest game <a
           href="https://spotlemovies.io"
-          class="text-blue-500 underline hover:text-blue-600 transition-colors"
+          class="text-blue-400 underline hover:text-blue-300 transition-colors"
           >Spotle Movies</a
         >!
       </p>
+      <p class="text-sm md:text-base text-white mt-1">- Tommy &amp; Paul</p>
     </div>
   </div>
 
