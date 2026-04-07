@@ -177,6 +177,16 @@
       Start
     </button>
 
+    <!-- Spotle Movies Promo -->
+    <a
+      href="https://spotle.movie"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-4 text-xs uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black/70 dark:hover:text-white/70 transition-colors"
+    >
+      Play Spotle Movies
+    </a>
+
     <!-- Announcement / CTA -->
     <!-- <div class="mt-6 md:mt-8 w-full px-4">
       <div
