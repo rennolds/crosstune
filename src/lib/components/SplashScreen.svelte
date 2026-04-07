@@ -184,7 +184,7 @@
           href="https://spotlemovies.io"
           class="text-blue-400 underline hover:text-blue-300 transition-colors"
           >Spotle Movies</a
-        >!
+        >
       </p>
       <p class="text-sm md:text-base text-black! dark:text-white! mt-1">- Tommy &amp; Paul</p>
     </div>
