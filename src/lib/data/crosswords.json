@@ -37996,5 +37996,148 @@
         "audioDuration": 11
       }
     ]
+  },
+    "2026-04-07": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DUALIPA",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 325519648,
+        "soundcloudUrl": "https://soundcloud.com/dualipa/new-rules-1",
+        "startAt": "0:08",
+        "audioDuration": 9
+      },
+      {
+        "word": "REAL",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "The type of love he wants",
+        "audioUrl": 264837667,
+        "soundcloudUrl": "https://soundcloud.com/fatherjohnmisty/real-love-baby",
+        "startAt": "0:09",
+        "audioDuration": 11
+      },
+      {
+        "word": "PATEK",
+        "startX": 7,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The watch brand in this song's title",
+        "audioUrl": 501298839,
+        "soundcloudUrl": "https://soundcloud.com/liluzivert/new-patek",
+        "startAt": "0:43",
+        "audioDuration": 10
+      },
+      {
+        "word": "ONEDANCE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 258021633,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-one-dance",
+        "startAt": "0:02",
+        "audioDuration": 8
+      },
+      {
+        "word": "BOX",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title sans \"the\"",
+        "audioUrl": 723315721,
+        "soundcloudUrl": "https://soundcloud.com/roddyricch/the-box",
+        "startAt": "0:11",
+        "audioDuration": 6
+      },
+      {
+        "word": "LARSSON",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": 256767921,
+        "soundcloudUrl": "https://soundcloud.com/zaralarssonofficial/lush-life",
+        "startAt": "0:48",
+        "audioDuration": 7
+      },
+      {
+        "word": "JAMIEFOXX",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Feature artist name",
+        "audioUrl": 255766438,
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/gold-digger-album-version-1",
+        "startAt": "0:08.5",
+        "audioDuration": 13.5
+      },
+      {
+        "word": "MALIBU",
+        "startX": 4,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a coastal city in California) ",
+        "audioUrl": 1320667369,
+        "soundcloudUrl": "https://soundcloud.com/mileycyrus-music/malibu",
+        "startAt": "0:13",
+        "audioDuration": 12
+      },
+      {
+        "word": "HAPPIER",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 486671055,
+        "soundcloudUrl": "https://soundcloud.com/marshmellomusic/happier-ft-bastille",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "LITTLE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "____ Talks (song title)",
+        "audioUrl": 288867791,
+        "soundcloudUrl": "https://soundcloud.com/ofmonstersandmen/little-talks-2",
+        "startAt": "0:46",
+        "audioDuration": 12
+      },
+      {
+        "word": "TALKS",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Everybody ____ (song title)",
+        "audioUrl": 36735760,
+        "soundcloudUrl": "https://soundcloud.com/prodbychirswattz/everybody-talks",
+        "startAt": "0:19",
+        "audioDuration": 7
+      }
+    ]
   }
 }
