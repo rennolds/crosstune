@@ -38139,5 +38139,124 @@
         "audioDuration": 7
       }
     ]
+  },
+    "2026-04-08": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "YOU",
+        "startX": 2,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "\"I can't write one song thats not about ____\"",
+        "audioUrl": 611590632,
+        "soundcloudUrl": "https://soundcloud.com/officialshawnmendes/if-i-cant-have-you",
+        "startAt": "0:00",
+        "audioDuration": 6.6
+      },
+      {
+        "word": "QUEEN",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "audioUrl": 252515196,
+        "soundcloudUrl": "https://soundcloud.com/queen-69312/another-one-bites-the-dust-4",
+        "startAt": "0:15",
+        "audioDuration": 10
+      },
+      {
+        "word": "2PAC",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": 252535822,
+        "soundcloudUrl": "https://soundcloud.com/2pac/hail-mary-album-version",
+        "startAt": "0:00",
+        "audioDuration": 8
+      },
+      {
+        "word": "SENATORSSON",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"I ain't no ___ ___\" (RFK Jr. for example) ",
+        "audioUrl": 253572245,
+        "soundcloudUrl": "https://soundcloud.com/creedence-clearwater-revival/fortunate-son-1",
+        "startAt": "0:32",
+        "audioDuration": 5
+      },
+      {
+        "word": "U2",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "audioUrl": 256319892,
+        "soundcloudUrl": "https://soundcloud.com/u2/with-or-without-you-1",
+        "startAt": "1:19.5",
+        "audioDuration": 10
+      },
+      {
+        "word": "DOJACAT",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist name",
+        "audioUrl": 708018538,
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/streets",
+        "startAt": "0:39",
+        "audioDuration": 7.5
+      },
+      {
+        "word": "RHCP",
+        "startX": 6,
+        "startY": 6,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Initials of band name",
+        "audioUrl": 273203104,
+        "soundcloudUrl": "https://soundcloud.com/red-hot-chili-peppers-official/californication",
+        "startAt": "1:59",
+        "audioDuration": 11
+      },
+      {
+        "word": "JEANS",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "New ____ (song/group name)",
+        "audioUrl": 1558139311,
+        "soundcloudUrl": "https://soundcloud.com/newjeans-music/new-jeans",
+        "startAt": "0:36",
+        "audioDuration": 7
+      },
+      {
+        "word": "JUNGKOOK",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "audioUrl": 1696080951,
+        "soundcloudUrl": "https://soundcloud.com/muhammad-hassan-766019970/jungkook-standing-next-to-you",
+        "startAt": "0:58",
+        "audioDuration": 13
+      }
+    ]
   }
 }
