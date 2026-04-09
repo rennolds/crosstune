@@ -38317,7 +38317,7 @@
         "audioDuration": 14
       },
       {
-        "word": "HOIZER",
+        "word": "HOZIER",
         "startX": 4,
         "startY": 6,
         "direction": "across",
@@ -38363,18 +38363,6 @@
         "soundcloudUrl": "https://soundcloud.com/thewaltersband/i-love-you-so-1",
         "startAt": "0:44",
         "audioDuration": 12
-      },
-      {
-        "word": "OZUNA",
-        "startX": 7,
-        "startY": 5,
-        "direction": "down",
-        "color": "#00FFFF",
-        "textClue": "Artist name",
-        "audioUrl": 709418773,
-        "soundcloudUrl": "https://soundcloud.com/ozunapr/se-preparo",
-        "startAt": "0:24",
-        "audioDuration": 8
       },
       {
         "word": "CAESAR",
