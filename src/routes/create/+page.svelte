@@ -3,6 +3,8 @@
   import { getUser } from "$lib/stores/auth.svelte.js";
   import { onMount } from "svelte";
 
+  let { data } = $props();
+
   let gridData = $state(
     Array(10)
       .fill()
@@ -69,15 +71,22 @@
       // Detect mobile for share behavior
       isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-      // Check for admin mode via URL parameter
+      // Check for admin mode via URL parameter or puzzle ID
       const urlParams = new URLSearchParams(window.location.search);
-      isAdminMode = urlParams.get("admin") === "true";
+      isAdminMode = urlParams.get("admin") === "true" || !!urlParams.get("id");
     }
   });
 
   const STORAGE_KEY = "crosstune_create_puzzle_state";
 
   onMount(() => {
+    // If puzzle data was loaded from DB via ?id= param, auto-populate
+    if (data?.puzzleData) {
+      const puzzleJson = JSON.stringify(data.puzzleData);
+      parseJsonAndPopulate(puzzleJson);
+      return; // Skip localStorage restore
+    }
+
     const savedState = localStorage.getItem(STORAGE_KEY);
     if (savedState) {
       try {
@@ -620,6 +629,8 @@
           startAt,
           audioDuration,
           soundcloudUrl: jsonSoundcloudUrl,
+          song_title: jsonSongTitle,
+          artist_name: jsonArtistName,
         } = word;
 
         // Populate the grid
@@ -659,6 +670,8 @@
           col: startX,
           clue: textClue || "",
           soundcloudUrl: soundcloudUrl,
+          song_title: jsonSongTitle || "",
+          artist_name: jsonArtistName || "",
         });
 
         // Set validation status (assume valid with trackId)
@@ -830,7 +843,7 @@
           audioDuration: 6,
         };
 
-        return {
+        const wordData = {
           word: word.word,
           startX: word.col,
           startY: word.row,
@@ -842,6 +855,11 @@
           startAt: timing.startAt,
           audioDuration: timing.audioDuration,
         };
+
+        if (word.artist_name) wordData.artist_name = word.artist_name;
+        if (word.song_title) wordData.song_title = word.song_title;
+
+        return wordData;
       });
 
       const puzzleJSON = {
@@ -1197,6 +1215,70 @@
                     bind:value={detectedWords[index].clue}
                   />
                 </div>
+
+                <!-- Admin-only Song Title & Artist Name Fields -->
+                {#if isAdminMode}
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        for="song-title-{index}"
+                        class="flex items-center text-sm font-semibold text-orange-700 dark:text-orange-300 mb-3"
+                      >
+                        <svg
+                          class="w-4 h-4 mr-2 text-orange-500 dark:text-orange-400"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                          ></path>
+                        </svg>
+                        Song Title
+                      </label>
+                      <input
+                        id="song-title-{index}"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="e.g. Toxicity"
+                        class="w-full px-4 py-3 border-2 border-orange-300 dark:border-orange-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                        bind:value={detectedWords[index].song_title}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="artist-name-{index}"
+                        class="flex items-center text-sm font-semibold text-orange-700 dark:text-orange-300 mb-3"
+                      >
+                        <svg
+                          class="w-4 h-4 mr-2 text-orange-500 dark:text-orange-400"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          ></path>
+                        </svg>
+                        Artist Name
+                      </label>
+                      <input
+                        id="artist-name-{index}"
+                        type="text"
+                        autocomplete="off"
+                        placeholder="e.g. System of a Down"
+                        class="w-full px-4 py-3 border-2 border-orange-300 dark:border-orange-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                        bind:value={detectedWords[index].artist_name}
+                      />
+                    </div>
+                  </div>
+                {/if}
 
                 <!-- SoundCloud URL Field -->
                 <div>

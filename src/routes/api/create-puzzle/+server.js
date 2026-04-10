@@ -34,7 +34,7 @@ export async function POST({ request, locals }) {
       if (!valid) {
         throw { status: 400, index, reasons };
       }
-      validatedWords.push({
+      const validatedWord = {
         word: word.word,
         startX: word.col,
         startY: word.row,
@@ -45,7 +45,10 @@ export async function POST({ request, locals }) {
         startAt: word.startAt || '0:00',
         audioDuration: word.audioDuration || 6,
         soundcloudUrl: word.soundcloudUrl || ''
-      });
+      };
+      if (word.song_title) validatedWord.song_title = word.song_title;
+      if (word.artist_name) validatedWord.artist_name = word.artist_name;
+      validatedWords.push(validatedWord);
     }
 
     const crosswordData = {
