@@ -41727,24 +41727,24 @@
         "audioDuration": 10
       },
       {
-        "word": "MAROON",
+        "word": "MAROON5",
         "startX": 2,
         "startY": 1,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "Band name without the number",
+        "textClue": "Band name",
         "audioUrl": 256187789,
         "soundcloudUrl": "https://soundcloud.com/maroon-5/she-will-be-loved-1",
         "startAt": "0:09",
         "audioDuration": 10
       },
       {
-        "word": "SAD",
+        "word": "SAD!",
         "startX": 4,
         "startY": 0,
         "direction": "down",
         "color": "#568EFF",
-        "textClue": "Song title",
+        "textClue": "Song title (include special character)",
         "audioUrl": 543819150,
         "soundcloudUrl": "https://soundcloud.com/jahseh-onfroy/sad",
         "startAt": "0:22.5",
