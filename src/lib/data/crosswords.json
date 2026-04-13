@@ -41946,7 +41946,9 @@
         "audioUrl": 319393353,
         "soundcloudUrl": "https://soundcloud.com/the-temptations/my-girl-3",
         "startAt": "0:26.5",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "The Temptations",
+        "song_title": "My Girl"
       },
       {
         "word": "HUMBLE",
@@ -41958,79 +41960,121 @@
         "audioUrl": 315137496,
         "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/humble",
         "startAt": "0:00",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "artist_name": "Kendrick Lamar",
+        "song_title": "HUMBLE."
+      },
+      {
+        "word": "LEON",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Kings of ____ [artist name]",
+        "audioUrl": 257057105,
+        "soundcloudUrl": "https://soundcloud.com/kingsofleon/use-somebody",
+        "startAt": "0:09",
+        "audioDuration": 10,
+        "artist_name": "Kings of Leon",
+        "song_title": "Use Somebody"
       },
       {
         "word": "SCRIPT",
         "startX": 5,
         "startY": 6,
         "direction": "across",
-        "color": "#FE9C9C",
-        "textClue": "Artist name sans the",
+        "color": "#28D66A",
+        "textClue": "Artist name sans 'the'",
         "audioUrl": 301336054,
         "soundcloudUrl": "https://soundcloud.com/cloud-strife-449643615/the-script-breakeven",
         "startAt": "1:05",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "artist_name": "The Script",
+        "song_title": "Breakeven"
       },
       {
         "word": "SWEATER",
         "startX": 0,
         "startY": 9,
         "direction": "across",
-        "color": "#28D66A",
+        "color": "#FFCEFD",
         "textClue": "What kind of weather?",
         "audioUrl": 55492059,
         "soundcloudUrl": "https://soundcloud.com/theneighbourhood/sweater-weather-1",
         "startAt": "0:05",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "artist_name": "The Neighbourhood",
+        "song_title": "Sweater Weather"
       },
       {
         "word": "LEWIS",
         "startX": 0,
         "startY": 5,
         "direction": "down",
-        "color": "#FFCEFD",
+        "color": "#FF5B5E",
         "textClue": "Artist first name",
         "audioUrl": 526155132,
         "soundcloudUrl": "https://soundcloud.com/lewiscapaldi/someone-you-loved-1",
         "startAt": "0:24",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Lewis Capaldi",
+        "song_title": "Someone You Loved"
       },
       {
         "word": "COFFEE",
         "startX": 2,
         "startY": 4,
         "direction": "down",
-        "color": "#FF5B5E",
+        "color": "#568EFF",
         "textClue": "\"____ for your head\"",
         "audioUrl": 572735187,
         "soundcloudUrl": "https://soundcloud.com/powfu/death-bed-prod-otterpop",
         "startAt": "0:00",
-        "audioDuration": 5.4
+        "audioDuration": 5.4,
+        "artist_name": "Powfu",
+        "song_title": "death bed (coffee for your head)"
       },
       {
         "word": "BRIGHTSIDE",
         "startX": 5,
         "startY": 0,
         "direction": "down",
-        "color": "#568EFF",
+        "color": "#FFB34B",
         "textClue": "Mr. who?",
         "audioUrl": 210955821,
         "soundcloudUrl": "https://soundcloud.com/tealoversunite/mr-brightside",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "artist_name": "The Killers",
+        "song_title": "Mr. Brightside"
+      },
+      {
+        "word": "BRIDGE",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "What did she crash into?",
+        "audioUrl": 118311514,
+        "soundcloudUrl": "https://soundcloud.com/fueled_by_ramen/girls-volume-1-i-love-it-feat",
+        "startAt": "0:07",
+        "audioDuration": 6,
+        "artist_name": "Icona Pop",
+        "song_title": "I Love It"
       },
       {
         "word": "DRDRE",
         "startX": 10,
         "startY": 0,
         "direction": "down",
-        "color": "#FFB34B",
+        "color": "#FE9C9C",
         "textClue": "Artist name",
         "audioUrl": 930405682,
         "soundcloudUrl": "https://soundcloud.com/deejaym-magn/dr-dre-still-d-r-e-remix-ft",
         "startAt": "0:18",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "artist_name": "Dr. Dre",
+        "song_title": "Still D.R.E."
       }
     ]
   }
