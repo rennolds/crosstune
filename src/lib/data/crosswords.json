@@ -42077,5 +42077,128 @@
         "song_title": "Still D.R.E."
       }
     ]
+  },
+    "2026-04-14": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SAILOR",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "\"Love you like a ____\"",
+        "audioUrl": 1881229641,
+        "soundcloudUrl": "https://soundcloud.com/kelly-cavanagh-930071897/sailor-song-slowed-gigi-perez",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Gigi Perez",
+        "song_title": "Sailor Song"
+      },
+      {
+        "word": "BOSTON",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 263556492,
+        "soundcloudUrl": "https://soundcloud.com/augustanaofficial/boston-album-version",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Augustana",
+        "song_title": "Boston"
+      },
+      {
+        "word": "HYPNOTIZE",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 257080271,
+        "soundcloudUrl": "https://soundcloud.com/notoriousbig/hypnotize-2014-remastered",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "The Notorious B.I.G.",
+        "song_title": "Hypnotize"
+      },
+      {
+        "word": "GODZILLA",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 745079605,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/godzilla-feat-juice-wrld",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Eminem",
+        "song_title": "Godzilla"
+      },
+      {
+        "word": "KATEBUSH",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "audioUrl": 254527393,
+        "soundcloudUrl": "https://soundcloud.com/kate-bush-official/running-up-that-hill-a-deal",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Kate Bush",
+        "song_title": "Running Up That Hill"
+      },
+      {
+        "word": "BROWN",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Color in this song title",
+        "audioUrl": 992480563,
+        "soundcloudUrl": "https://soundcloud.com/vanmorrisonofficial/brown-eyed-girl-12174645",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Van Morrison",
+        "song_title": "Brown Eyed Girl"
+      },
+      {
+        "word": "METALLICA",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Band name",
+        "audioUrl": 755973217,
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/master-of-puppets-remastered?in=officialmetallica%2Fsets%2Fmaster-of-puppets-remastered",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Metallica",
+        "song_title": "Master of Puppets"
+      },
+      {
+        "word": "NICKEL",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The element in this band's name",
+        "audioUrl": 214807157,
+        "soundcloudUrl": "https://soundcloud.com/nickelback/how-you-remind-me",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Nickelback",
+        "song_title": "How You Remind Me"
+      }
+    ]
   }
 }
