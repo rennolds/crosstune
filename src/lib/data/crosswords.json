@@ -42271,16 +42271,16 @@
         "audioDuration": 13
       },
       {
-        "word": "TWENTYONE",
-        "startX": 0,
-        "startY": 0,
-        "direction": "down",
-        "color": "#FF5B5E",
-        "textClue": "The number before this Atlanta artist's name",
-        "audioUrl": "903082897",
-        "soundcloudUrl": "https://soundcloud.com/21savage/runnin",
-        "startAt": "0:15",
-        "audioDuration": 15
+      "word": "TWENTYONE",
+      "startX": 0,
+      "startY": 0,
+      "direction": "down",
+      "color": "#FF5B5E",
+      "textClue": "The number in this song's title (a type of salute)",
+      "audioUrl": 256240207,
+      "soundcloudUrl": "https://soundcloud.com/greenday/21-guns-1",
+      "startAt": "0:17",
+      "audioDuration": 12
       },
       {
         "word": "TEN",
