@@ -42203,7 +42203,7 @@
   },
     "2026-04-15": {
     "version": "1.0.0",
-    "title": "2 + 2 = 5 (by Chris B_E)",
+    "title": "2 + 2 = 5 (by chris b-e)",
     "theme": "black",
     "size": {
       "width": 12,
@@ -42220,7 +42220,7 @@
         "audioUrl": "258954403",
         "soundcloudUrl": "https://soundcloud.com/nirvana/smells-like-teen-spirit-1",
         "startAt": "2:19",
-        "audioDuration": 16
+        "audioDuration": 10
       },
       {
         "word": "SIXSEVEN",
@@ -42240,7 +42240,7 @@
         "startY": 4,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "The only good song on Red (views are expressly Chris B-E's and not reflected by Flatwhite Studios).",
+        "textClue": "Song title",
         "audioUrl": "252454199",
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/22-1",
         "startAt": "0:04",
@@ -42252,23 +42252,23 @@
         "startY": 6,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "How old was she in this song?",
+        "textClue": "How old was the dancing queen?",
         "audioUrl": "253187333",
         "soundcloudUrl": "https://soundcloud.com/abba-official/dancing-queen-1",
         "startAt": "0:19",
         "audioDuration": 9
       },
       {
-        "word": "3OH3",
-        "startX": 7,
+        "word": "ZERO",
+        "startX": 5,
         "startY": 8,
         "direction": "across",
         "color": "#FFCEFD",
-        "textClue": "The band behind this song (sans special character) (also Denver's area code phonetically) ",
-        "audioUrl": "254429500",
-        "soundcloudUrl": "https://soundcloud.com/3oh3-official/richman",
-        "startAt": "0:38",
-        "audioDuration": 14
+        "textClue": "Hercules started here",
+        "audioUrl": 112950952,
+        "soundcloudUrl": "https://soundcloud.com/dimitrichichua/hercules-zero-to-hero",
+        "startAt": "0:11",
+        "audioDuration": 13
       },
       {
         "word": "TWENTYONE",
@@ -42276,10 +42276,22 @@
         "startY": 0,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "The number before this \"Ferocious\" Atlanta artist",
+        "textClue": "The number before this Atlanta artist's name",
         "audioUrl": "903082897",
         "soundcloudUrl": "https://soundcloud.com/21savage/runnin",
         "startAt": "0:15",
+        "audioDuration": 15
+      },
+      {
+        "word": "TEN",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Biggie Smalls has how many commandments?",
+        "audioUrl": 257084039,
+        "soundcloudUrl": "https://soundcloud.com/notoriousbig/ten-crack-commandments-3",
+        "startAt": "0:25",
         "audioDuration": 15
       },
       {
@@ -42287,8 +42299,8 @@
         "startX": 4,
         "startY": 0,
         "direction": "down",
-        "color": "#568EFF",
-        "textClue": "Laufey wrote a letter to her ____ year old self",
+        "color": "#FFB34B",
+        "textClue": "Laufey wrote a letter to her ____ year-old self",
         "audioUrl": "1533980797",
         "soundcloudUrl": "https://soundcloud.com/laufeylin/letter-to-my-13-year-old-self",
         "startAt": "0:53",
@@ -42299,24 +42311,36 @@
         "startX": 8,
         "startY": 6,
         "direction": "down",
-        "color": "#FFB34B",
-        "textClue": "An amount of chains",
-        "audioUrl": "638561658",
-        "soundcloudUrl": "https://soundcloud.com/user-834611184/kanye-west-mercy-ft-big-sean-pusha-t-2-chainz",
-        "startAt": "9:56",
-        "audioDuration": 15
+        "color": "#00FFFF",
+        "textClue": "How many chainz?",
+        "audioUrl": 256019618,
+        "soundcloudUrl": "https://soundcloud.com/2chainz/no-lie-album-version-edited",
+        "startAt": "0:24",
+        "audioDuration": 8
       },
       {
         "word": "NINE",
         "startX": 10,
         "startY": 0,
         "direction": "down",
-        "color": "#00FFFF",
+        "color": "#FE9C9C",
         "textClue": "The first word in this band's name",
         "audioUrl": "47363336",
         "soundcloudUrl": "https://soundcloud.com/sosmanagement/nine-inch-nails-closer",
         "startAt": "0:58",
         "audioDuration": 28
+      },
+      {
+        "word": "ONE",
+        "startX": 11,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word of this song's title",
+        "audioUrl": 258021633,
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-one-dance",
+        "startAt": "0:02",
+        "audioDuration": 7
       }
     ]
   },
