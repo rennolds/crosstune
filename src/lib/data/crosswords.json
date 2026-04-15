@@ -42200,5 +42200,303 @@
         "song_title": "How You Remind Me"
       }
     ]
+  },
+    "2026-04-15": {
+    "version": "1.0.0",
+    "title": "2 + 2 = 5 (by chris_b_e)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "TWENTYSEVEN",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "\"Club\" including Joplin, Winehouse, Hendrix, and this band's lead singer",
+        "audioUrl": "258954403",
+        "soundcloudUrl": "https://soundcloud.com/nirvana/smells-like-teen-spirit-1",
+        "startAt": "2:19",
+        "audioDuration": 16
+      },
+      {
+        "word": "SIXSEVEN",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "The amount of feet in the Wayne song; or, the meme that spawned from this Skrilla song.",
+        "audioUrl": "2027997536",
+        "soundcloudUrl": "https://soundcloud.com/skrilla-music/doot-doot",
+        "startAt": "0:14",
+        "audioDuration": 14
+      },
+      {
+        "word": "TWENTYTWO",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The only good song on Red (views expressed by Chris B-E and not by Flatwhite Studios).",
+        "audioUrl": "252454199",
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/22-1",
+        "startAt": "0:04",
+        "audioDuration": 10
+      },
+      {
+        "word": "SEVENTEEN",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"Aw man, it's Norwegian supergroup ABBA!\" \"She was __, Scott\"; or, 3rd-gen KPop group.",
+        "audioUrl": "253187333",
+        "soundcloudUrl": "https://soundcloud.com/abba-official/dancing-queen-1",
+        "startAt": "0:19",
+        "audioDuration": 9
+      },
+      {
+        "word": "3OH3",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Denver's area code: phonetically, the band behind this song (minus the exclamation).",
+        "audioUrl": "254429500",
+        "soundcloudUrl": "https://soundcloud.com/3oh3-official/richman",
+        "startAt": "0:38",
+        "audioDuration": 14
+      },
+      {
+        "word": "TWENTYONE",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "The number before the \"Flyers\" band and this \"Ferocious\" Atlanta man (synonyms in quotes).",
+        "audioUrl": "903082897",
+        "soundcloudUrl": "https://soundcloud.com/21savage/runnin",
+        "startAt": "0:15",
+        "audioDuration": 15
+      },
+      {
+        "word": "THIRTEEN",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "The age that Laufey wrote her \"Letter to My __ Year Old Self\" to.",
+        "audioUrl": "1533980797",
+        "soundcloudUrl": "https://soundcloud.com/laufeylin/letter-to-my-13-year-old-self",
+        "startAt": "0:53",
+        "audioDuration": 21
+      },
+      {
+        "word": "TWO",
+        "startX": 8,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The amount of phones Gates has; or, the Doors in the Cinema Club; or, this person's chain amount.",
+        "audioUrl": "638561658",
+        "soundcloudUrl": "https://soundcloud.com/user-834611184/kanye-west-mercy-ft-big-sean-pusha-t-2-chainz",
+        "startAt": "9:56",
+        "audioDuration": 15
+      },
+      {
+        "word": "NINE",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "__ x 11 = Jay's Problems; or, the first word in this band's name.",
+        "audioUrl": "47363336",
+        "soundcloudUrl": "https://soundcloud.com/sosmanagement/nine-inch-nails-closer",
+        "startAt": "0:58",
+        "audioDuration": 28
+      }
+    ]
+  },
+    "2026-04-16": {
+    "version": "1.0.0",
+    "title": "(by ejg)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "CARDIB",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist's name",
+        "audioUrl": "425635065",
+        "soundcloudUrl": "https://soundcloud.com/iamcardib/i-like-it",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "BRUCE",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist's first name",
+        "audioUrl": "257037321",
+        "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-in-the-u-s-a",
+        "startAt": "0:15",
+        "audioDuration": 10
+      },
+      {
+        "word": "HAPPY",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "1564584115",
+        "soundcloudUrl": "https://soundcloud.com/3312w617/pharrell-williams-happy-from-despicable-me-2-soundtrack",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "PAY",
+        "startX": 8,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"Can you ___ my bills?\"",
+        "audioUrl": "253514972",
+        "soundcloudUrl": "https://soundcloud.com/destinys-child-official/bills-bills-bills",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "CREEP",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1080978001",
+        "soundcloudUrl": "https://soundcloud.com/deathismercy/radio-head-creep",
+        "startAt": "2:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "ETTA",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist's first name",
+        "audioUrl": "279589081",
+        "soundcloudUrl": "https://soundcloud.com/ettajamesofficial/at-last-2",
+        "startAt": "0:19",
+        "audioDuration": 10
+      },
+      {
+        "word": "LOW",
+        "startX": 3,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "271224235",
+        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "MIND",
+        "startX": 7,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Where is My ____ [song title]",
+        "audioUrl": "511252770",
+        "soundcloudUrl": "https://soundcloud.com/pixiesmusic/where-is-my-mind",
+        "startAt": "0:15",
+        "audioDuration": 10
+      },
+      {
+        "word": "SHORT",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Long Story _____ [song title]",
+        "audioUrl": "945469300",
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/long-story-short",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "AL",
+        "startX": 3,
+        "startY": 8,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "What can you call him?",
+        "audioUrl": "270208274",
+        "soundcloudUrl": "https://soundcloud.com/paulsimon/you-can-call-me-al",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "CARRY",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "\"_____ me home tonight\"",
+        "audioUrl": "231862397",
+        "soundcloudUrl": "https://soundcloud.com/funofficial/fun-we-are-young-feat-janelle",
+        "startAt": "0:50",
+        "audioDuration": 10
+      },
+      {
+        "word": "MEN",
+        "startX": 6,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "What is it raining?",
+        "audioUrl": "253510230",
+        "soundcloudUrl": "https://soundcloud.com/the-weather-girls/its-raining-men-2",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "DIETPEPSI",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "1892454861",
+        "soundcloudUrl": "https://soundcloud.com/addisonraemusic/diet-pepsi",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "ABOUTYOU",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "1361262079",
+        "soundcloudUrl": "https://soundcloud.com/the1975/about-you",
+        "startAt": "1:00",
+        "audioDuration": 10
+      }
+    ]
   }
 }
