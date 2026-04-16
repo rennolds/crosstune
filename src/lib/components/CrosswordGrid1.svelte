@@ -1038,7 +1038,7 @@
       showOverlay = true;
 
       // This part remains unchanged for daily puzzles
-      markPuzzleAsSolved(getEastCoastDate());
+      markPuzzleAsSolved(puzzleInfo.dateKey);
     } else if (!hasShownIncorrectMessage) {
       // Puzzle is filled but incorrect
       setIsCorrect(false);
@@ -1632,7 +1632,7 @@
         if (isArchiveMode && selectedDate) {
           markPuzzleAsSolved(selectedDate);
         } else {
-          markPuzzleAsSolved(getEastCoastDate());
+          markPuzzleAsSolved(puzzleInfo.dateKey);
         }
       } else {
         // Filled but incorrect
