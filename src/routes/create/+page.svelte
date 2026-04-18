@@ -138,6 +138,7 @@
 
   function handleCellInput(event, row, col) {
     const value = event.target.value.toUpperCase().slice(-1); // Take the last character typed
+    event.target.value = value; // Force DOM to show uppercase immediately
     gridData[row][col] = value;
 
     // Move to next cell after input based on direction
