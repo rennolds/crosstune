@@ -42796,5 +42796,172 @@
         "audioDuration": 6
       }
     ]
+  },
+    "2026-04-19": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ANIMALS",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "271226216",
+        "soundcloudUrl": "https://soundcloud.com/maroon-5/animals",
+        "startAt": "2:43",
+        "audioDuration": 2
+      },
+      {
+        "word": "TAKEITEASY",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song Title",
+        "audioUrl": "231849475",
+        "soundcloudUrl": "https://soundcloud.com/eaglesofficial/eagles-take-it-easy",
+        "startAt": "0:16",
+        "audioDuration": 6
+      },
+      {
+        "word": "THIS",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First Word of Song Title",
+        "audioUrl": "143264424",
+        "soundcloudUrl": "https://soundcloud.com/steve-engel-3/maroon-5-this-love",
+        "startAt": "2:49",
+        "audioDuration": 3
+      },
+      {
+        "word": "MOM",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Second Word of Song Title",
+        "audioUrl": "313416343",
+        "soundcloudUrl": "https://soundcloud.com/bowling-for-soup/stacys-mom",
+        "startAt": "0:35",
+        "audioDuration": 9
+      },
+      {
+        "word": "KISSMEMORE",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song Title",
+        "audioUrl": "1272070240",
+        "soundcloudUrl": "https://soundcloud.com/kallop-22/doja-cat-kiss-me-more-ft-sza",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "TIKTOK",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song Title",
+        "audioUrl": "278861165",
+        "soundcloudUrl": "https://soundcloud.com/2vvelve/keha",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "USA",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Second Word of Song Title",
+        "audioUrl": "1120650568",
+        "soundcloudUrl": "https://soundcloud.com/hykeemcarter/trademark-usa",
+        "startAt": "0:34",
+        "audioDuration": 11
+      },
+      {
+        "word": "KIDS",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song Title",
+        "audioUrl": "257762804",
+        "soundcloudUrl": "https://soundcloud.com/whoismgmt/kids-1",
+        "startAt": "0:00",
+        "audioDuration": 3
+      },
+      {
+        "word": "AFTER",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First Word of Song Title",
+        "audioUrl": "774714985",
+        "soundcloudUrl": "https://soundcloud.com/dontoliver/after-party",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "DIGITS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "What is the name of this song comprised of? (You also can ask a girl for these)",
+        "audioUrl": "256193702",
+        "soundcloudUrl": "https://soundcloud.com/harlem_fetty/679-feat-monty-1",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "ABBA",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Band Name",
+        "audioUrl": "652346984",
+        "soundcloudUrl": "https://soundcloud.com/user-371650973/dancing-queen",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "SUMMER",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Feels Like ______",
+        "audioUrl": "655212824",
+        "soundcloudUrl": "https://soundcloud.com/samueljack-music/feels-like-summer-2",
+        "startAt": "0:30",
+        "audioDuration": 18
+      },
+      {
+        "word": "STAY",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song Title",
+        "audioUrl": "308997360",
+        "soundcloudUrl": "https://soundcloud.com/zedd/stay",
+        "startAt": "0:00",
+        "audioDuration": 10
+      }
+    ]
   }
 }
