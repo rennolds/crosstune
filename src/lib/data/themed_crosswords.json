@@ -5011,5 +5011,158 @@
         "audioDuration": 10
       }
     ]
+  },
+  "42": {
+    "title": "Warped Tour Golden Era",
+    "author": "Paul Pursifull",
+    "date_available": "2026-04-19",
+    "theme": "black",
+    "thumbnail": "https://punkworldviews.com/wp-content/uploads/2024/10/VWTFeat.jpg",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "FACEDOWN",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 252519521,
+        "soundcloudUrl": "https://soundcloud.com/the-red-jumpsuit-apparatus/face-down-album-version",
+        "startAt": "0:15",
+        "audioDuration": 10,
+        "artist_name": "The Red Jumpsuit Apparatus",
+        "song_title": "Face Down"
+      },
+      {
+        "word": "SUNDAY",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "The weekday in this band's name",
+        "audioUrl": 220650072,
+        "soundcloudUrl": "https://soundcloud.com/takingbacksunday/makedamnsure-1",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Taking Back Sunday",
+        "song_title": "MakeDamnSure"
+      },
+      {
+        "word": "FALLOUTBOY",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "audioUrl": 12039982,
+        "soundcloudUrl": "https://soundcloud.com/falloutboy/04-sugar-were-goin-down",
+        "startAt": "0:25",
+        "audioDuration": 10,
+        "artist_name": "Fall Out Boy",
+        "song_title": "Sugar, We're Goin Down"
+      },
+      {
+        "word": "JULIET",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The female name in this song's title",
+        "audioUrl": 252642450,
+        "soundcloudUrl": "https://soundcloud.com/we-the-kings-official/check-yes-juliet-album-version",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "We The Kings",
+        "song_title": "Check Yes, Juliet"
+      },
+      {
+        "word": "MARIA",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "The female name in this song's title",
+        "audioUrl": 4720038,
+        "soundcloudUrl": "https://soundcloud.com/hopelessrecords/dear-maria-count-me-in",
+        "startAt": "0:06",
+        "audioDuration": 8,
+        "artist_name": "All Time Low",
+        "song_title": "Dear Maria, Count Me In"
+      },
+      {
+        "word": "NFG",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Initials of this band",
+        "audioUrl": 259128663,
+        "soundcloudUrl": "https://soundcloud.com/new-found-glory-official/my-friends-over-you-live-from",
+        "startAt": "0:00",
+        "audioDuration": 25,
+        "artist_name": "New Found Glory",
+        "song_title": "My Friends Over You"
+      },
+      {
+        "word": "CHARLOTTE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "The female name in this band's title",
+        "audioUrl": 252519729,
+        "soundcloudUrl": "https://soundcloud.com/good-charlotte-official/the-anthem",
+        "startAt": "0:15",
+        "audioDuration": 11,
+        "artist_name": "Good Charlotte",
+        "song_title": "The Anthem"
+      },
+      {
+        "word": "PATD",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Initials of this band",
+        "audioUrl": 12841530,
+        "soundcloudUrl": "https://soundcloud.com/panicatthedisco/i-write-sins-not-tragedies",
+        "startAt": "0:09",
+        "audioDuration": 10,
+        "artist_name": "Panic! At The Disco",
+        "song_title": "I Write Sins Not Tragedies"
+      },
+      {
+        "word": "OCEAN",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "What street does the singer reminisce about?",
+        "audioUrl": 252556512,
+        "soundcloudUrl": "https://soundcloud.com/yellowcard-official/ocean-avenue",
+        "startAt": "0:08.5",
+        "audioDuration": 10.5,
+        "artist_name": "Yellowcard",
+        "song_title": "Ocean Avenue"
+      },
+      {
+        "word": "OHIO",
+        "startX": 10,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "What state is for lovers?",
+        "audioUrl": 651352145,
+        "soundcloudUrl": "https://soundcloud.com/hawthorneheights/ohio-is-for-lovers-1",
+        "startAt": "0:11",
+        "audioDuration": 6,
+        "artist_name": "Hawthorne Heights",
+        "song_title": "Ohio Is For Lovers"
+      }
+    ]
   }
 }
