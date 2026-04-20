@@ -42947,5 +42947,196 @@
         "song_title": "Call Me Maybe"
       }
     ]
+  },
+    "2026-04-20": {
+    "version": "1.0.0",
+    "title": "(by ejg)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DOECHII",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist's name",
+        "audioUrl": "1902541839",
+        "soundcloudUrl": "https://soundcloud.com/iam-doechii/denial-is-a-river",
+        "startAt": "1:06",
+        "audioDuration": 10
+      },
+      {
+        "word": "GOODE",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Johnny B. _____",
+        "audioUrl": "392458596",
+        "soundcloudUrl": "https://soundcloud.com/chuck-berry-official/johnny-b-goode-46",
+        "startAt": "0:17",
+        "audioDuration": 10
+      },
+      {
+        "word": "CHER",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist's name",
+        "audioUrl": "1636601835",
+        "soundcloudUrl": "https://soundcloud.com/cher-scmusic/believe",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "SEEK",
+        "startX": 8,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Hide and ____",
+        "audioUrl": "289791693",
+        "soundcloudUrl": "https://soundcloud.com/imogenheap/hide-and-seek",
+        "startAt": "2:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "CARPENTER",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist's last name",
+        "audioUrl": "2033604668",
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/busy-woman",
+        "startAt": "1:08",
+        "audioDuration": 10
+      },
+      {
+        "word": "PRIDE",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "317617222",
+        "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/pride",
+        "startAt": "0:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "ELLIE",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Artist's first name",
+        "audioUrl": "278706701",
+        "soundcloudUrl": "https://soundcloud.com/elliegoulding/lights-single-version",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "THECARS",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Band name",
+        "audioUrl": "260852506",
+        "soundcloudUrl": "https://soundcloud.com/thecarsofficial/drive-2",
+        "startAt": "1:10",
+        "audioDuration": 10
+      },
+      {
+        "word": "ENTER",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "audioUrl": "788079790",
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/enter-sandman-1",
+        "startAt": "0:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "RED",
+        "startX": 3,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Album this song is on",
+        "audioUrl": "252454199",
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/22-1",
+        "startAt": "0:05",
+        "audioDuration": 10
+      },
+      {
+        "word": "GREEN",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word of band name",
+        "audioUrl": "256240578",
+        "soundcloudUrl": "https://soundcloud.com/greenday/basket-case",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "INTO",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "First word of song title",
+        "audioUrl": "261531030",
+        "soundcloudUrl": "https://soundcloud.com/arianagrande/into-you",
+        "startAt": "0:15",
+        "audioDuration": 10
+      },
+      {
+        "word": "SEAL",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Animal-named artist",
+        "audioUrl": "256122555",
+        "soundcloudUrl": "https://soundcloud.com/seal/kiss-from-a-rose-1",
+        "startAt": "0:20",
+        "audioDuration": 10
+      },
+      {
+        "word": "BIEBER",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist's last name",
+        "audioUrl": "1647163917",
+        "soundcloudUrl": "https://soundcloud.com/songsthatarentonscbackup/justin-bieber-beauty-and-a-beat-feat-nicki-minaj",
+        "startAt": "1:00",
+        "audioDuration": 10
+      },
+      {
+        "word": "SPEAK",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Don't _____",
+        "audioUrl": "256153877",
+        "soundcloudUrl": "https://soundcloud.com/nodoubt/dont-speak",
+        "startAt": "0:05",
+        "audioDuration": 10
+      }
+    ]
   }
 }
