@@ -41657,7 +41657,7 @@
       }
     ]
   },
-    "2026-04-11": {
+  "2026-04-11": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -41676,7 +41676,9 @@
         "audioUrl": 1529368726,
         "soundcloudUrl": "https://soundcloud.com/teddyswims/lose-control",
         "startAt": "0:39",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "artist_name": "Teddy Swims",
+        "song_title": "Lose Control"
       },
       {
         "word": "ACDC",
@@ -41688,7 +41690,9 @@
         "audioUrl": 256074947,
         "soundcloudUrl": "https://soundcloud.com/acdcofficial/highway-to-hell",
         "startAt": "0:15",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "artist_name": "AC/DC",
+        "song_title": "Highway to Hell"
       },
       {
         "word": "ANOTHERLOVE",
@@ -41700,7 +41704,9 @@
         "audioUrl": 2247304250,
         "soundcloudUrl": "https://soundcloud.com/stickysystem/another-love-tom-odell",
         "startAt": "0:50",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Tom Odell",
+        "song_title": "Another Love"
       },
       {
         "word": "TIGER",
@@ -41712,7 +41718,9 @@
         "audioUrl": 73115584,
         "soundcloudUrl": "https://soundcloud.com/cleopatra-recs/eye-of-the-tiger",
         "startAt": "0:07",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Survivor",
+        "song_title": "Eye of the Tiger"
       },
       {
         "word": "INDACLUB",
@@ -41724,7 +41732,9 @@
         "audioUrl": 255893901,
         "soundcloudUrl": "https://soundcloud.com/50_cent/in-da-club",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "50 Cent",
+        "song_title": "In Da Club"
       },
       {
         "word": "MAROON5",
@@ -41736,7 +41746,9 @@
         "audioUrl": 256187789,
         "soundcloudUrl": "https://soundcloud.com/maroon-5/she-will-be-loved-1",
         "startAt": "0:09",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Maroon 5",
+        "song_title": "She Will Be Loved"
       },
       {
         "word": "SAD!",
@@ -41748,7 +41760,9 @@
         "audioUrl": 543819150,
         "soundcloudUrl": "https://soundcloud.com/jahseh-onfroy/sad",
         "startAt": "0:22.5",
-        "audioDuration": 8.5
+        "audioDuration": 8.5,
+        "artist_name": "XXXTentacion",
+        "song_title": "SAD!"
       },
       {
         "word": "EAST",
@@ -41760,7 +41774,9 @@
         "audioUrl": 255766434,
         "soundcloudUrl": "https://soundcloud.com/kanyewest/through-the-wire-album-version",
         "startAt": "0:05",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "artist_name": "Kanye West",
+        "song_title": "Through the Wire"
       },
       {
         "word": "EASYONME",
@@ -41772,11 +41788,13 @@
         "audioUrl": 1142001742,
         "soundcloudUrl": "https://soundcloud.com/adelemusic/easy-on-me",
         "startAt": "0:12",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "artist_name": "Adele",
+        "song_title": "Easy On Me"
       }
     ]
   },
-    "2026-04-12": {
+  "2026-04-12": {
     "version": "1.0.0",
     "title": "The Five Senses (by ejg)",
     "theme": "black",
@@ -41927,7 +41945,7 @@
       }
     ]
   },
-    "2026-04-13": {
+  "2026-04-13": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -42078,7 +42096,7 @@
       }
     ]
   },
-    "2026-04-14": {
+  "2026-04-14": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -42201,7 +42219,7 @@
       }
     ]
   },
-    "2026-04-15": {
+  "2026-04-15": {
     "version": "1.0.0",
     "title": "2 + 2 = 5 (by chris b-e)",
     "theme": "black",
@@ -42220,7 +42238,9 @@
         "audioUrl": "258954403",
         "soundcloudUrl": "https://soundcloud.com/nirvana/smells-like-teen-spirit-1",
         "startAt": "2:19",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Nirvana",
+        "song_title": "Smells Like Teen Spirit"
       },
       {
         "word": "SIXSEVEN",
@@ -42232,7 +42252,9 @@
         "audioUrl": "2027997536",
         "soundcloudUrl": "https://soundcloud.com/skrilla-music/doot-doot",
         "startAt": "0:14",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "artist_name": "Skrilla",
+        "song_title": "Doot Doot"
       },
       {
         "word": "TWENTYTWO",
@@ -42244,7 +42266,9 @@
         "audioUrl": "252454199",
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/22-1",
         "startAt": "0:04",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Taylor Swift",
+        "song_title": "22"
       },
       {
         "word": "SEVENTEEN",
@@ -42256,7 +42280,9 @@
         "audioUrl": "253187333",
         "soundcloudUrl": "https://soundcloud.com/abba-official/dancing-queen-1",
         "startAt": "0:19",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "artist_name": "ABBA",
+        "song_title": "Dancing Queen"
       },
       {
         "word": "ZERO",
@@ -42268,19 +42294,23 @@
         "audioUrl": 112950952,
         "soundcloudUrl": "https://soundcloud.com/dimitrichichua/hercules-zero-to-hero",
         "startAt": "0:11",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "artist_name": "Hercules (Soundtrack)",
+        "song_title": "Zero to Hero"
       },
       {
-      "word": "TWENTYONE",
-      "startX": 0,
-      "startY": 0,
-      "direction": "down",
-      "color": "#FF5B5E",
-      "textClue": "The number in this song's title (a type of salute)",
-      "audioUrl": 256240207,
-      "soundcloudUrl": "https://soundcloud.com/greenday/21-guns-1",
-      "startAt": "0:17",
-      "audioDuration": 12
+        "word": "TWENTYONE",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "The number in this song's title (a type of salute)",
+        "audioUrl": 256240207,
+        "soundcloudUrl": "https://soundcloud.com/greenday/21-guns-1",
+        "startAt": "0:17",
+        "audioDuration": 12,
+        "artist_name": "Green Day",
+        "song_title": "21 Guns"
       },
       {
         "word": "TEN",
@@ -42292,7 +42322,9 @@
         "audioUrl": 257084039,
         "soundcloudUrl": "https://soundcloud.com/notoriousbig/ten-crack-commandments-3",
         "startAt": "0:25",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "artist_name": "The Notorious B.I.G.",
+        "song_title": "Ten Crack Commandments"
       },
       {
         "word": "THIRTEEN",
@@ -42304,7 +42336,9 @@
         "audioUrl": "1533980797",
         "soundcloudUrl": "https://soundcloud.com/laufeylin/letter-to-my-13-year-old-self",
         "startAt": "0:53",
-        "audioDuration": 21
+        "audioDuration": 21,
+        "artist_name": "Laufey",
+        "song_title": "Letter to My 13 Year Old Self"
       },
       {
         "word": "TWO",
@@ -42316,7 +42350,9 @@
         "audioUrl": 256019618,
         "soundcloudUrl": "https://soundcloud.com/2chainz/no-lie-album-version-edited",
         "startAt": "0:24",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "artist_name": "2 Chainz",
+        "song_title": "No Lie"
       },
       {
         "word": "NINE",
@@ -42328,7 +42364,9 @@
         "audioUrl": "47363336",
         "soundcloudUrl": "https://soundcloud.com/sosmanagement/nine-inch-nails-closer",
         "startAt": "0:58",
-        "audioDuration": 28
+        "audioDuration": 28,
+        "artist_name": "Nine Inch Nails",
+        "song_title": "Closer"
       },
       {
         "word": "ONE",
@@ -42340,11 +42378,13 @@
         "audioUrl": 258021633,
         "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-one-dance",
         "startAt": "0:02",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "artist_name": "Drake",
+        "song_title": "One Dance"
       }
     ]
   },
-    "2026-04-16": {
+  "2026-04-16": {
     "version": "1.0.0",
     "title": "(by ejg)",
     "theme": "green",
@@ -42363,7 +42403,9 @@
         "audioUrl": "425635065",
         "soundcloudUrl": "https://soundcloud.com/iamcardib/i-like-it",
         "startAt": "1:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Cardi B",
+        "song_title": "I Like It"
       },
       {
         "word": "BRUCE",
@@ -42375,7 +42417,9 @@
         "audioUrl": "257037321",
         "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-in-the-u-s-a",
         "startAt": "0:15",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Bruce Springsteen",
+        "song_title": "Born in the U.S.A."
       },
       {
         "word": "HAPPY",
@@ -42387,7 +42431,9 @@
         "audioUrl": "1564584115",
         "soundcloudUrl": "https://soundcloud.com/3312w617/pharrell-williams-happy-from-despicable-me-2-soundtrack",
         "startAt": "1:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Pharrell Williams",
+        "song_title": "Happy"
       },
       {
         "word": "PAY",
@@ -42399,7 +42445,9 @@
         "audioUrl": "253514972",
         "soundcloudUrl": "https://soundcloud.com/destinys-child-official/bills-bills-bills",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Destiny's Child",
+        "song_title": "Bills, Bills, Bills"
       },
       {
         "word": "CREEP",
@@ -42411,7 +42459,9 @@
         "audioUrl": "1080978001",
         "soundcloudUrl": "https://soundcloud.com/deathismercy/radio-head-creep",
         "startAt": "2:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Radiohead",
+        "song_title": "Creep"
       },
       {
         "word": "ETTA",
@@ -42423,7 +42473,9 @@
         "audioUrl": "279589081",
         "soundcloudUrl": "https://soundcloud.com/ettajamesofficial/at-last-2",
         "startAt": "0:19",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Etta James",
+        "song_title": "At Last"
       },
       {
         "word": "LOW",
@@ -42435,7 +42487,9 @@
         "audioUrl": "271224235",
         "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Flo Rida",
+        "song_title": "Low"
       },
       {
         "word": "MIND",
@@ -42447,7 +42501,9 @@
         "audioUrl": "511252770",
         "soundcloudUrl": "https://soundcloud.com/pixiesmusic/where-is-my-mind",
         "startAt": "0:15",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Pixies",
+        "song_title": "Where Is My Mind?"
       },
       {
         "word": "SHORT",
@@ -42459,7 +42515,9 @@
         "audioUrl": "945469300",
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/long-story-short",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Taylor Swift",
+        "song_title": "Long Story Short"
       },
       {
         "word": "AL",
@@ -42471,7 +42529,9 @@
         "audioUrl": "270208274",
         "soundcloudUrl": "https://soundcloud.com/paulsimon/you-can-call-me-al",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Paul Simon",
+        "song_title": "You Can Call Me Al"
       },
       {
         "word": "CARRY",
@@ -42483,7 +42543,9 @@
         "audioUrl": "231862397",
         "soundcloudUrl": "https://soundcloud.com/funofficial/fun-we-are-young-feat-janelle",
         "startAt": "0:50",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "fun.",
+        "song_title": "We Are Young"
       },
       {
         "word": "MEN",
@@ -42495,7 +42557,9 @@
         "audioUrl": "253510230",
         "soundcloudUrl": "https://soundcloud.com/the-weather-girls/its-raining-men-2",
         "startAt": "0:20",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "The Weather Girls",
+        "song_title": "It's Raining Men"
       },
       {
         "word": "DIETPEPSI",
@@ -42507,7 +42571,9 @@
         "audioUrl": "1892454861",
         "soundcloudUrl": "https://soundcloud.com/addisonraemusic/diet-pepsi",
         "startAt": "0:20",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Addison Rae",
+        "song_title": "Diet Pepsi"
       },
       {
         "word": "ABOUTYOU",
@@ -42519,11 +42585,13 @@
         "audioUrl": "1361262079",
         "soundcloudUrl": "https://soundcloud.com/the1975/about-you",
         "startAt": "1:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "The 1975",
+        "song_title": "About You"
       }
     ]
   },
-    "2026-04-17": {
+  "2026-04-17": {
     "version": "1.0.0",
     "title": "(by lola_likes_music)",
     "theme": "green",
@@ -42542,7 +42610,9 @@
         "audioUrl": "2152811826",
         "soundcloudUrl": "https://on.soundcloud.com/G9kpYsoZnbQgJrVUKB",
         "startAt": "0:04",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "artist_name": "Rachel Platten",
+        "song_title": "Fight Song"
       },
       {
         "word": "BLUE",
@@ -42554,7 +42624,9 @@
         "audioUrl": "1331168002",
         "soundcloudUrl": "https://on.soundcloud.com/Wu6VRtIZS9FVvkkPpz",
         "startAt": "0:02",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "artist_name": "Billie Eilish",
+        "song_title": "blue"
       },
       {
         "word": "GOOD4U",
@@ -42566,7 +42638,9 @@
         "audioUrl": "1048163956",
         "soundcloudUrl": "https://on.soundcloud.com/hvTgDAQHuIagC4UeHS",
         "startAt": "0:40",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Olivia Rodrigo",
+        "song_title": "good 4 u"
       },
       {
         "word": "HEATHER",
@@ -42578,7 +42652,9 @@
         "audioUrl": "775304593",
         "soundcloudUrl": "https://on.soundcloud.com/WMeQei8fdV39bPPvmx",
         "startAt": "0:24",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "artist_name": "Conan Gray",
+        "song_title": "Heather"
       },
       {
         "word": "SHE",
@@ -42590,7 +42666,9 @@
         "audioUrl": "256187971",
         "soundcloudUrl": "https://on.soundcloud.com/lcmW4wzpJvnPmog3XA",
         "startAt": "0:00",
-        "audioDuration": 30
+        "audioDuration": 30,
+        "artist_name": "Maroon 5",
+        "song_title": "She Will Be Loved"
       },
       {
         "word": "NIGHT",
@@ -42602,7 +42680,9 @@
         "audioUrl": "257052856",
         "soundcloudUrl": "https://on.soundcloud.com/yBT7qVdlWfsYjMtvGC",
         "startAt": "0:07",
-        "audioDuration": 23
+        "audioDuration": 23,
+        "artist_name": "One Direction",
+        "song_title": "Night Changes"
       },
       {
         "word": "ZARA",
@@ -42614,7 +42694,9 @@
         "audioUrl": "512489511",
         "soundcloudUrl": "https://on.soundcloud.com/upxfGDkPp8wDwyhDT5",
         "startAt": "0:09",
-        "audioDuration": 25.23
+        "audioDuration": 25.23,
+        "artist_name": "Zara Larsson",
+        "song_title": "Lush Life"
       },
       {
         "word": "HEAT",
@@ -42626,7 +42708,9 @@
         "audioUrl": "828639601",
         "soundcloudUrl": "https://on.soundcloud.com/hUoGoJU8mbpl4DU8kn",
         "startAt": "0:41",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "artist_name": "Glass Animals",
+        "song_title": "Heat Waves"
       },
       {
         "word": "CHAIN",
@@ -42638,7 +42722,9 @@
         "audioUrl": "254399470",
         "soundcloudUrl": "https://on.soundcloud.com/MsJYFzOLFQziUL7E3m",
         "startAt": "0:00",
-        "audioDuration": 30
+        "audioDuration": 30,
+        "artist_name": "Fleetwood Mac",
+        "song_title": "The Chain"
       },
       {
         "word": "FERGIE",
@@ -42650,7 +42736,9 @@
         "audioUrl": "10676644",
         "soundcloudUrl": "https://on.soundcloud.com/LC98ZI0x3B8dIRFRu1",
         "startAt": "0:47",
-        "audioDuration": 30
+        "audioDuration": 30,
+        "artist_name": "Fergie",
+        "song_title": "Glamorous"
       },
       {
         "word": "YOU",
@@ -42662,7 +42750,9 @@
         "audioUrl": "256044840",
         "soundcloudUrl": "https://on.soundcloud.com/g60MhbS4u4n5p57wS7",
         "startAt": "0:13",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "artist_name": "Bruno Mars",
+        "song_title": "Marry You"
       },
       {
         "word": "USHER",
@@ -42674,11 +42764,13 @@
         "audioUrl": "256122842",
         "soundcloudUrl": "https://on.soundcloud.com/psUY4lGxeJ8HlLXKJo",
         "startAt": "0:00",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "artist_name": "Usher",
+        "song_title": "Yeah!"
       }
     ]
   },
-    "2026-04-18": {
+  "2026-04-18": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -42697,7 +42789,9 @@
         "audioUrl": 257461404,
         "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-the-motto-album-version",
         "startAt": "0:19",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "artist_name": "Drake",
+        "song_title": "The Motto"
       },
       {
         "word": "YUKON",
@@ -42709,7 +42803,9 @@
         "audioUrl": 2128193169,
         "soundcloudUrl": "https://soundcloud.com/justinbieber/yukon",
         "startAt": "0:24",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "artist_name": "Justin Bieber",
+        "song_title": "Yukon"
       },
       {
         "word": "MOCKINGBIRD",
@@ -42721,7 +42817,9 @@
         "audioUrl": 256256837,
         "soundcloudUrl": "https://soundcloud.com/eminemofficial/mockingbird",
         "startAt": "1:31.5",
-        "audioDuration": 10.5
+        "audioDuration": 10.5,
+        "artist_name": "Eminem",
+        "song_title": "Mockingbird"
       },
       {
         "word": "SON",
@@ -42733,7 +42831,9 @@
         "audioUrl": 2160827448,
         "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/nobodys-son",
         "startAt": "0:10",
-        "audioDuration": 16
+        "audioDuration": 16,
+        "artist_name": "Sabrina Carpenter",
+        "song_title": "Nobody's Son"
       },
       {
         "word": "JACKSON",
@@ -42745,7 +42845,9 @@
         "audioUrl": 253539612,
         "soundcloudUrl": "https://soundcloud.com/jackson-5-official/whos-lovin-you-2",
         "startAt": "0:14",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "artist_name": "The Jackson 5",
+        "song_title": "Who's Lovin' You"
       },
       {
         "word": "NAKED",
@@ -42757,7 +42859,9 @@
         "audioUrl": 214692485,
         "soundcloudUrl": "https://soundcloud.com/barenaked-ladies/one-week",
         "startAt": "0:15",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "artist_name": "Barenaked Ladies",
+        "song_title": "One Week"
       },
       {
         "word": "ORDINARY",
@@ -42769,7 +42873,9 @@
         "audioUrl": 2022404597,
         "soundcloudUrl": "https://soundcloud.com/alexwaarren/ordinary",
         "startAt": "0:31.8",
-        "audioDuration": 9.2
+        "audioDuration": 9.2,
+        "artist_name": "Alex Warren",
+        "song_title": "Ordinary"
       },
       {
         "word": "GOOSEBUMPS",
@@ -42781,7 +42887,9 @@
         "audioUrl": 349869847,
         "soundcloudUrl": "https://soundcloud.com/cslav34/rthytjty",
         "startAt": "0:37",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Travis Scott",
+        "song_title": "goosebumps"
       },
       {
         "word": "AMERICAN",
@@ -42793,11 +42901,13 @@
         "audioUrl": 26318705,
         "soundcloudUrl": "https://soundcloud.com/interscope/the-all-american-rejects-dirty",
         "startAt": "0:00",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "artist_name": "The All-American Rejects",
+        "song_title": "Dirty Little Secret"
       }
     ]
   },
-    "2026-04-19": {
+  "2026-04-19": {
     "version": "1.0.0",
     "title": "Surfin' the radio in 2012",
     "theme": "pink",
@@ -42948,7 +43058,7 @@
       }
     ]
   },
-    "2026-04-20": {
+  "2026-04-20": {
     "version": "1.0.0",
     "title": "(by ejg)",
     "theme": "green",
@@ -42967,7 +43077,9 @@
         "audioUrl": "1902541839",
         "soundcloudUrl": "https://soundcloud.com/iam-doechii/denial-is-a-river",
         "startAt": "1:06",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Doechii",
+        "song_title": "Denial Is a River"
       },
       {
         "word": "GOODE",
@@ -42979,7 +43091,9 @@
         "audioUrl": "392458596",
         "soundcloudUrl": "https://soundcloud.com/chuck-berry-official/johnny-b-goode-46",
         "startAt": "0:17",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Chuck Berry",
+        "song_title": "Johnny B. Goode"
       },
       {
         "word": "CHER",
@@ -42991,7 +43105,9 @@
         "audioUrl": "1636601835",
         "soundcloudUrl": "https://soundcloud.com/cher-scmusic/believe",
         "startAt": "1:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Cher",
+        "song_title": "Believe"
       },
       {
         "word": "SEEK",
@@ -43003,7 +43119,9 @@
         "audioUrl": "289791693",
         "soundcloudUrl": "https://soundcloud.com/imogenheap/hide-and-seek",
         "startAt": "2:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Imogen Heap",
+        "song_title": "Hide and Seek"
       },
       {
         "word": "CARPENTER",
@@ -43015,7 +43133,9 @@
         "audioUrl": "2033604668",
         "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/busy-woman",
         "startAt": "1:08",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Sabrina Carpenter",
+        "song_title": "Busy Woman"
       },
       {
         "word": "PRIDE",
@@ -43027,7 +43147,9 @@
         "audioUrl": "317617222",
         "soundcloudUrl": "https://soundcloud.com/kendrick-lamar-music/pride",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Kendrick Lamar",
+        "song_title": "PRIDE."
       },
       {
         "word": "ELLIE",
@@ -43039,7 +43161,9 @@
         "audioUrl": 641819847,
         "soundcloudUrl": "https://soundcloud.com/elliegoulding/hate-me",
         "startAt": "1:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Ellie Goulding",
+        "song_title": "Hate Me"
       },
       {
         "word": "THECARS",
@@ -43051,7 +43175,9 @@
         "audioUrl": "260852506",
         "soundcloudUrl": "https://soundcloud.com/thecarsofficial/drive-2",
         "startAt": "1:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "The Cars",
+        "song_title": "Drive"
       },
       {
         "word": "ENTER",
@@ -43063,7 +43189,9 @@
         "audioUrl": "788079790",
         "soundcloudUrl": "https://soundcloud.com/officialmetallica/enter-sandman-1",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Metallica",
+        "song_title": "Enter Sandman"
       },
       {
         "word": "RED",
@@ -43075,7 +43203,9 @@
         "audioUrl": "252454199",
         "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/22-1",
         "startAt": "0:05",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Taylor Swift",
+        "song_title": "22"
       },
       {
         "word": "GREEN",
@@ -43087,7 +43217,9 @@
         "audioUrl": "256240578",
         "soundcloudUrl": "https://soundcloud.com/greenday/basket-case",
         "startAt": "1:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Green Day",
+        "song_title": "Basket Case"
       },
       {
         "word": "INTO",
@@ -43099,7 +43231,9 @@
         "audioUrl": "261531030",
         "soundcloudUrl": "https://soundcloud.com/arianagrande/into-you",
         "startAt": "0:15",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Ariana Grande",
+        "song_title": "Into You"
       },
       {
         "word": "SEAL",
@@ -43111,7 +43245,9 @@
         "audioUrl": "256122555",
         "soundcloudUrl": "https://soundcloud.com/seal/kiss-from-a-rose-1",
         "startAt": "0:20",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Seal",
+        "song_title": "Kiss from a Rose"
       },
       {
         "word": "BIEBER",
@@ -43123,7 +43259,9 @@
         "audioUrl": "1647163917",
         "soundcloudUrl": "https://soundcloud.com/songsthatarentonscbackup/justin-bieber-beauty-and-a-beat-feat-nicki-minaj",
         "startAt": "1:02",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "artist_name": "Justin Bieber",
+        "song_title": "Beauty and a Beat"
       },
       {
         "word": "SPEAK",
@@ -43135,11 +43273,13 @@
         "audioUrl": "256153877",
         "soundcloudUrl": "https://soundcloud.com/nodoubt/dont-speak",
         "startAt": "0:05",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "No Doubt",
+        "song_title": "Don't Speak"
       }
     ]
   },
-    "2026-04-21": {
+  "2026-04-21": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -43158,7 +43298,9 @@
         "audioUrl": 1768722903,
         "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-supernatural",
         "startAt": "0:36",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Ariana Grande",
+        "song_title": "Supernatural"
       },
       {
         "word": "BLONDE",
@@ -43170,7 +43312,9 @@
         "audioUrl": 342393211,
         "soundcloudUrl": "https://soundcloud.com/blonded/pink-white?in=blonded%2Fsets%2Fblonde-159",
         "startAt": "0:00",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "artist_name": "Frank Ocean",
+        "song_title": "Pink + White"
       },
       {
         "word": "BAZZI",
@@ -43182,7 +43326,9 @@
         "audioUrl": "346585632",
         "soundcloudUrl": "https://m.soundcloud.com/bazziworldwide/mine-3",
         "startAt": "0:34",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "artist_name": "Bazzi",
+        "song_title": "Mine"
       },
       {
         "word": "THRIFT",
@@ -43194,7 +43340,9 @@
         "audioUrl": 256220503,
         "soundcloudUrl": "https://soundcloud.com/macklemore/thrift-shop-feat-wanz",
         "startAt": "0:27",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "artist_name": "Macklemore & Ryan Lewis",
+        "song_title": "Thrift Shop"
       },
       {
         "word": "TWAIN",
@@ -43206,7 +43354,9 @@
         "audioUrl": "256231887",
         "soundcloudUrl": "https://m.soundcloud.com/shania-twain-music/youre-still-the-one",
         "startAt": "1:03",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "artist_name": "Shania Twain",
+        "song_title": "You're Still the One"
       },
       {
         "word": "EVERYTIME",
@@ -43218,7 +43368,9 @@
         "audioUrl": 919269181,
         "soundcloudUrl": "https://soundcloud.com/cascada/everytime-we-touch",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "artist_name": "Cascada",
+        "song_title": "Everytime We Touch"
       },
       {
         "word": "SCIENTIST",
@@ -43230,7 +43382,9 @@
         "audioUrl": 255770516,
         "soundcloudUrl": "https://soundcloud.com/coldplay/the-scientist",
         "startAt": "1:33",
-        "audioDuration": 20
+        "audioDuration": 20,
+        "artist_name": "Coldplay",
+        "song_title": "The Scientist"
       },
       {
         "word": "KEHLANI",
@@ -43242,7 +43396,9 @@
         "audioUrl": "2111082048",
         "soundcloudUrl": "https://m.soundcloud.com/kehlanimusic/folded",
         "startAt": "0:36",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "artist_name": "Kehlani",
+        "song_title": "Folded"
       },
       {
         "word": "FINE",
@@ -43254,7 +43410,9 @@
         "audioUrl": "255769477",
         "soundcloudUrl": "https://m.soundcloud.com/rihanna/s-m-album-version",
         "startAt": "0:29",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "artist_name": "Rihanna",
+        "song_title": "S&M"
       },
       {
         "word": "THEBEST",
@@ -43266,7 +43424,9 @@
         "audioUrl": "254057154",
         "soundcloudUrl": "https://m.soundcloud.com/tina-turner-official/the-best",
         "startAt": "0:09",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "artist_name": "Tina Turner",
+        "song_title": "The Best"
       },
       {
         "word": "SZA",
@@ -43278,7 +43438,9 @@
         "audioUrl": "655178204",
         "soundcloudUrl": "https://m.soundcloud.com/szababy2/prom",
         "startAt": "0:15",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "artist_name": "SZA",
+        "song_title": "Prom"
       },
       {
         "word": "ALICIA",
@@ -43290,7 +43452,9 @@
         "audioUrl": 256056339,
         "soundcloudUrl": "https://soundcloud.com/aliciakeys/no-one-1",
         "startAt": "0:10",
-        "audioDuration": 19
+        "audioDuration": 19,
+        "artist_name": "Alicia Keys",
+        "song_title": "No One"
       }
     ]
   }
