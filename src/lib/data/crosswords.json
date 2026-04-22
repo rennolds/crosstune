@@ -43460,7 +43460,7 @@
   },
     "2026-04-22": {
     "version": "1.0.0",
-    "title": "Classical Gas",
+    "title": "Crossword in C Minor",
     "theme": "black",
     "size": {
       "width": 12,
@@ -43497,7 +43497,7 @@
         "startY": 6,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Bitter Sweet ____ [song title] (hint: XX had 9 of these)",
+        "textClue": "Bitter Sweet ____ [song title] (hint: 3D had 9 of these)",
         "audioUrl": 338354275,
         "soundcloudUrl": "https://soundcloud.com/the-verve-official/bitter-sweet-symphony-1",
         "startAt": "0:39",
