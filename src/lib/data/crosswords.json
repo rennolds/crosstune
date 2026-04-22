@@ -43576,5 +43576,142 @@
         "audioDuration": 20
       }
     ]
+  },
+    "2026-04-23": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MONKEY",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Dance ____ [song title]",
+        "audioUrl": 632659404,
+        "soundcloudUrl": "https://soundcloud.com/tonesandi-music/dance-monkey",
+        "startAt": "0:49",
+        "audioDuration": 9,
+        "artist_name": "Tones and I",
+        "song_title": "Dance Monkey"
+      },
+      {
+        "word": "EARRINGS",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title (a type of jewelry)",
+        "audioUrl": 1790055544,
+        "soundcloudUrl": "https://soundcloud.com/malcolmtodd-sc/earrings",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Malcom Todd",
+        "song_title": "Earrings"
+      },
+      {
+        "word": "ROLLING",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The adjective in this band's name",
+        "audioUrl": 317705231,
+        "soundcloudUrl": "https://soundcloud.com/cafedelantaarn/the-rolling-stones-paint-it-black-official-lyric-video",
+        "startAt": "0:58",
+        "audioDuration": 11,
+        "artist_name": "The Rolling Stones",
+        "song_title": "Paint It Black"
+      },
+      {
+        "word": "SK8ER",
+        "startX": 7,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of this song's title",
+        "audioUrl": 256037743,
+        "soundcloudUrl": "https://soundcloud.com/avrillavigne/sk8er-boi-1",
+        "startAt": "0:12",
+        "audioDuration": 10,
+        "artist_name": "Avril Lavigne",
+        "song_title": "Sk8er Boi"
+      },
+      {
+        "word": "PHOTO",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title, abbreviated",
+        "audioUrl": 213950659,
+        "soundcloudUrl": "https://soundcloud.com/edsheeran/photograph",
+        "startAt": "1:30",
+        "audioDuration": 10,
+        "artist_name": "Ed Sheeran",
+        "song_title": "Photograph"
+      },
+      {
+        "word": "DYNAMITE",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 1454538880,
+        "soundcloudUrl": "https://soundcloud.com/user-486142475/dynamite",
+        "startAt": "0:42",
+        "audioDuration": 10,
+        "artist_name": "BTS",
+        "song_title": "Dynamite"
+      },
+      {
+        "word": "DRUGS",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Same ____ [song title]",
+        "audioUrl": 266129780,
+        "soundcloudUrl": "https://soundcloud.com/chancetherapper/same-drugs",
+        "startAt": "0:38",
+        "audioDuration": 10,
+        "artist_name": "Chance The Rapper",
+        "song_title": "Same Drugs"
+      },
+      {
+        "word": "BLINK182",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Band name",
+        "audioUrl": 256119432,
+        "soundcloudUrl": "https://soundcloud.com/blink-182/all-the-small-things",
+        "startAt": "0:10",
+        "audioDuration": 11,
+        "artist_name": "Blink-182",
+        "song_title": "All The Small Things"
+      },
+      {
+        "word": "STARS",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "What \"will we be counting\" in this song?",
+        "audioUrl": 81286632,
+        "soundcloudUrl": "https://soundcloud.com/interscope/onerepublic-counting-stars",
+        "startAt": "0:54.5",
+        "audioDuration": 8.5,
+        "artist_name": "OneRepublic",
+        "song_title": "Counting Stars"
+      }
+    ]
   }
 }
