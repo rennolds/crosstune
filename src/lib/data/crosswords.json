@@ -43457,5 +43457,128 @@
         "song_title": "No One"
       }
     ]
+  },
+    "2026-04-22": {
+    "title": "",
+    "version": "1.0.0",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "theme": "black",
+    "words": [
+      {
+        "word": "STARSHIPS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": "285001139",
+        "startAt": "0:05",
+        "audioDuration": 10.25,
+        "soundcloudUrl": "https://soundcloud.com/nickiminaj/starships-1",
+        "artist_name": "Nicki Minaj",
+        "song_title": "Starships"
+      },
+      {
+        "word": "NAMEIS",
+        "startX": 4,
+        "startY": 2,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Hi, my ____",
+        "audioUrl": "256256880",
+        "startAt": "0:13",
+        "audioDuration": 12.9,
+        "soundcloudUrl": "https://soundcloud.com/eminemofficial/my-name-is-1",
+        "artist_name": "Eminem",
+        "song_title": "My Name Is"
+      },
+      {
+        "word": "LOSECONTROL",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": "1529368726",
+        "startAt": "0:41",
+        "audioDuration": 12.5,
+        "soundcloudUrl": "https://soundcloud.com/teddyswims/lose-control",
+        "artist_name": "Teddy Swims",
+        "song_title": "Lose Control"
+      },
+      {
+        "word": "SHAKEIT",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "253511122",
+        "startAt": "0:13",
+        "audioDuration": 12.5,
+        "soundcloudUrl": "https://soundcloud.com/metro-station/shake-it",
+        "artist_name": "Metro Station",
+        "song_title": "Shake It"
+      },
+      {
+        "word": "PHIL",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "audioUrl": "421374102",
+        "startAt": "1:32",
+        "audioDuration": 14.5,
+        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/phil-collins-easy-lover-1984",
+        "artist_name": "Phil Collins",
+        "song_title": "Easy Lover"
+      },
+      {
+        "word": "TENNESSEE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Chappell Roan is leaving ____",
+        "audioUrl": "790026607",
+        "startAt": "0:09",
+        "audioDuration": 18.5,
+        "soundcloudUrl": "https://soundcloud.com/chappellroan/pink-pony-club",
+        "artist_name": "Chappell Roan",
+        "song_title": "Pink Pony Club"
+      },
+      {
+        "word": "TAME",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First part of this artist name",
+        "audioUrl": "759895474",
+        "startAt": "0:54",
+        "audioDuration": 20.5,
+        "soundcloudUrl": "https://soundcloud.com/tame-impala/borderline-1",
+        "artist_name": "Tame Impala",
+        "song_title": "Borderline"
+      },
+      {
+        "word": "HOOK",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title, or another word for chorus",
+        "audioUrl": "253597812",
+        "startAt": "0:09",
+        "audioDuration": 15.5,
+        "soundcloudUrl": "https://soundcloud.com/blues-traveler/hook-2",
+        "artist_name": "Blues Traveler",
+        "song_title": "Hook"
+      }
+    ]
   }
 }
