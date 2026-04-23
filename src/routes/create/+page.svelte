@@ -310,6 +310,8 @@
           ...w,
           clue: prev.clue || "",
           soundcloudUrl: prev.soundcloudUrl || "",
+          song_title: prev.song_title || "",
+          artist_name: prev.artist_name || "",
         };
       }
       return w;
