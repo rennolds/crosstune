@@ -44099,5 +44099,182 @@
         "song_title": "Young, Wild and Free"
       }
     ]
+  },
+    "2026-04-26": {
+    "version": "1.0.0",
+    "title": "(by catriona)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "B-52S",
+        "startX": 5,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Band name (also a subsonic strategic bomber)",
+        "audioUrl": "38105201",
+        "soundcloudUrl": "https://soundcloud.com/elis-dayane/b52s-love-shack-1",
+        "startAt": "1:04",
+        "audioDuration": 15,
+        "artist_name": "The B-52s",
+        "song_title": "Love Shack"
+      },
+      {
+        "word": "AAR",
+        "startX": 9,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Initials of this band's name",
+        "audioUrl": 26322812,
+        "soundcloudUrl": "https://soundcloud.com/interscope/the-all-american-rejects-gives",
+        "startAt": "1:07",
+        "audioDuration": 9,
+        "artist_name": "All American Rejects",
+        "song_title": "Gives You Hell"
+      },
+      {
+        "word": "BLONDIE",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "audioUrl": "2195514579",
+        "soundcloudUrl": "https://soundcloud.com/blondie85701/one-way-or-another",
+        "startAt": "0:23",
+        "audioDuration": 15,
+        "artist_name": "Blondie",
+        "song_title": "One Way or Another"
+      },
+      {
+        "word": "PYT",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "161107532",
+        "soundcloudUrl": "https://soundcloud.com/union-kitchen/p-y-t-michael-jackson",
+        "startAt": "0:44",
+        "audioDuration": 10,
+        "artist_name": "Michael Jackson",
+        "song_title": "PYT"
+      },
+      {
+        "word": "SAM",
+        "startX": 9,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "audioUrl": "253876259",
+        "soundcloudUrl": "https://soundcloud.com/samsmithworld/stay-with-me-2",
+        "startAt": "0:28",
+        "audioDuration": 15,
+        "artist_name": "Sam Smith",
+        "song_title": "Stay With Me"
+      },
+      {
+        "word": "DEAN",
+        "startX": 8,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "audioUrl": "2176241616",
+        "soundcloudUrl": "https://soundcloud.com/oliviaadean/so-easy-to-fall-in-love",
+        "startAt": "0:39",
+        "audioDuration": 15
+      },
+      {
+        "word": "BONJOVI",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Band name (also the phonetic spelling of the lead singers last name)",
+        "audioUrl": "112596695",
+        "soundcloudUrl": "https://soundcloud.com/pablito-herrera-1/you-give-love-a-bad-name",
+        "startAt": "1:07",
+        "audioDuration": 15,
+        "artist_name": "Bon Jovi",
+        "song_title": "You Give Love A Bad Name"
+      },
+      {
+        "word": "BONO",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The famous stage name of this band's lead singer",
+        "audioUrl": 42239116,
+        "soundcloudUrl": "https://soundcloud.com/marrucino/i-still-havent-found-what-im",
+        "startAt": "1:02",
+        "audioDuration": 6,
+        "artist_name": "U2",
+        "song_title": "I Still Haven't Found What I'm Looking For"
+      },
+      {
+        "word": "DIPLO",
+        "startX": 5,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "DJ name (also founder of electronic group Major Lazer)",
+        "audioUrl": 665261066,
+        "soundcloudUrl": "https://soundcloud.com/diplo/diplo-feat-morgan-wallen",
+        "startAt": "0:33",
+        "audioDuration": 8,
+        "artist_name": "Diplo",
+        "song_title": "Heartless"
+      },
+      {
+        "word": "50CENT",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "audioUrl": "255894166",
+        "soundcloudUrl": "https://soundcloud.com/50_cent/21-questions",
+        "startAt": "0:48",
+        "audioDuration": 18,
+        "artist_name": "50 Cent",
+        "song_title": "21 Questions"
+      },
+      {
+        "word": "STATESIDE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": "2183725759",
+        "soundcloudUrl": "https://soundcloud.com/pinkpantheress/stateside-zara-larsson",
+        "startAt": "0:01",
+        "audioDuration": 15,
+        "artist_name": "PinkPantheress",
+        "song_title": "Stateside"
+      },
+      {
+        "word": "CREAM",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "audioUrl": "254542320",
+        "soundcloudUrl": "https://soundcloud.com/cream-official/sunshine-of-your-love-1",
+        "startAt": "0:08",
+        "audioDuration": 15,
+        "artist_name": "CREAM",
+        "song_title": "Sunshine Of Your Love"
+      }
+    ]
   }
 }
