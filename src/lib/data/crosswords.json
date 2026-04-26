@@ -44275,6 +44275,14 @@
         "artist_name": "CREAM",
         "song_title": "Sunshine Of Your Love"
       }
+    ],
+    "starting_characters": [
+      {
+        "characters": "-",
+        "startX": 6,
+        "startY": 0,
+        "direction": "across"
+      }
     ]
   }
 }
