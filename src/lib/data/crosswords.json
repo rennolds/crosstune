@@ -44284,5 +44284,112 @@
         "direction": "across"
       }
     ]
+  },
+    "2026-04-27": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BENSONBOONE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "audioUrl": 2082667131,
+        "soundcloudUrl": "https://soundcloud.com/bensonboone/mystical-magical?in=bensonboone%2Fsets%2Famerican-heart-6",
+        "startAt": "0:52",
+        "audioDuration": 8
+      },
+      {
+        "word": "HARRY",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "audioUrl": 1242349246,
+        "soundcloudUrl": "https://soundcloud.com/harrystyles/as-it-was",
+        "startAt": "0:13",
+        "audioDuration": 8
+      },
+      {
+        "word": "NUMB",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 255824765,
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/numb",
+        "startAt": "0:11",
+        "audioDuration": 8
+      },
+      {
+        "word": "SEEYOUAGAIN",
+        "startX": 0,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 255837274,
+        "soundcloudUrl": "https://soundcloud.com/wizkhalifa/see-you-again-feat-charlie",
+        "startAt": "0:09",
+        "audioDuration": 8
+      },
+      {
+        "word": "BUSINESS",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Misery ____ [song title]",
+        "audioUrl": 256142117,
+        "soundcloudUrl": "https://soundcloud.com/paramore/misery-business-1",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "STARBOY",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 284056452,
+        "soundcloudUrl": "https://soundcloud.com/theweeknd/starboy-1",
+        "startAt": "0:47",
+        "audioDuration": 8
+      },
+      {
+        "word": "BOYS",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "\"No broke ____\"",
+        "audioUrl": 2108907732,
+        "soundcloudUrl": "https://soundcloud.com/discolines/noobrokeboys",
+        "startAt": "0:00",
+        "audioDuration": 6
+      },
+      {
+        "word": "SMOOTH",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "First word of this song's title",
+        "audioUrl": 308950076,
+        "soundcloudUrl": "https://soundcloud.com/umarkx/michael-jackson-smooth-criminal",
+        "startAt": "1:01",
+        "audioDuration": 7
+      }
+    ]
   }
 }
