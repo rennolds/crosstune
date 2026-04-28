@@ -19,6 +19,7 @@
     getUnavailableWidgets,
     setTimerRunning,
     areAllWidgetsReady,
+    clearWidgetState,
   } from "$lib/stores/game.svelte.js";
 
   import { getIsDarkMode } from "$lib/stores/theme.svelte.js";
@@ -108,6 +109,12 @@
     mediaQuery.addEventListener("change", handler);
 
     return () => mediaQuery.removeEventListener("change", handler);
+  });
+
+  // Clear stale widget state from any previous puzzle so ready/unavailable status
+  // doesn't bleed across puzzle sessions (module-level state persists across mounts).
+  $effect(() => {
+    clearWidgetState();
   });
 
   // Get today's puzzle or fall back to the first available puzzle
@@ -1419,8 +1426,17 @@
       }
       console.log("got widget");
 
-      // If this clue is already playing, pause it and exit
-      if (playingClue === clue && isPlaying && currentAudio) {
+      // If this clue is already playing, pause it and exit.
+      // Use value comparison because activeClue is recreated as a new object on
+      // every findActiveClue() call, so reference equality always fails.
+      if (
+        isPlaying &&
+        currentAudio &&
+        playingClue &&
+        playingClue.startX === clue.startX &&
+        playingClue.startY === clue.startY &&
+        playingClue.direction === clue.direction
+      ) {
         currentAudio.pause();
         isPlaying = false;
         playingClue = null;
@@ -1452,56 +1468,58 @@
       await audio.play();
 
       // === Check if playback actually started ===
-      // Sometimes geoblocked tracks fail silently without errors/events
-      // Check if the widget is immediately paused after attempting play
-      audio.isPaused((paused) => {
-        if (paused) {
-          console.warn(
-            `Widget ${widgetId} reported paused immediately after play(). Marking as unavailable.`
-          );
-          markWidgetAsUnavailable(widgetId);
+      // Delay the isPaused check to give the SoundCloud player time to process
+      // the play() command. Checking immediately creates a race: play() is async
+      // (postMessage to iframe) so isPaused can return true before the player
+      // has started, then play() processes later causing orphaned audio.
+      setTimeout(() => {
+        // If user navigated away or stopped audio in the meantime, skip.
+        if (audio !== currentAudio || audio._playSessionId !== playSessionId) return;
 
-          // Reset playback state
-          isPlaying = false;
-          playingClue = null;
-          currentAudio = null; // Ensure we don't hold reference to failed audio
-          // No need to call pause() here as it's already paused
-        } else {
-          // Playback seems to have started, proceed with timeout logic
-          // console.log(`Widget ${widgetId} playback initiated successfully.`); // Removed success log
-
-          // Determine timeout duration
-          let timeoutDuration;
-          if (
-            clue.audioDuration &&
-            typeof clue.audioDuration === "number" &&
-            clue.audioDuration > 0
-          ) {
-            // Use duration from JSON (assuming it's in seconds)
-            timeoutDuration = clue.audioDuration * 1000;
-            console.log(
-              `Using custom duration ${clue.audioDuration}s = ${timeoutDuration}ms`
+        audio.isPaused((paused) => {
+          if (paused) {
+            console.warn(
+              `Widget ${widgetId} reported paused after play(). Marking as unavailable.`
             );
-          } else {
-            // Default duration logic
-            timeoutDuration = 6500;
-            console.log(`Using default ${timeoutDuration}ms timeout for audio`);
-          }
+            // Explicitly pause to stop any playback that started after our check was sent.
+            audio.pause();
+            markWidgetAsUnavailable(widgetId);
 
-          setTimeout(() => {
-            // Only pause if this is still the current audio AND from the same play session
+            isPlaying = false;
+            playingClue = null;
+            currentAudio = null;
+          } else {
+            // Determine timeout duration
+            let timeoutDuration;
             if (
-              audio === currentAudio &&
-              audio._playSessionId === playSessionId
+              clue.audioDuration &&
+              typeof clue.audioDuration === "number" &&
+              clue.audioDuration > 0
             ) {
-              audio.pause();
-              isPlaying = false;
-              playingClue = null;
-              currentAudio = null;
+              timeoutDuration = clue.audioDuration * 1000;
+              console.log(
+                `Using custom duration ${clue.audioDuration}s = ${timeoutDuration}ms`
+              );
+            } else {
+              timeoutDuration = 6500;
+              console.log(`Using default ${timeoutDuration}ms timeout for audio`);
             }
-          }, timeoutDuration); // Use the calculated duration
-        }
-      });
+
+            setTimeout(() => {
+              // Only pause if this is still the current audio AND from the same play session
+              if (
+                audio === currentAudio &&
+                audio._playSessionId === playSessionId
+              ) {
+                audio.pause();
+                isPlaying = false;
+                playingClue = null;
+                currentAudio = null;
+              }
+            }, timeoutDuration);
+          }
+        });
+      }, 300);
       // === End playback check ===
     } catch (error) {
       console.error(`Error playing widget ${widgetId}:`, error);
@@ -2136,7 +2154,7 @@
                   `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
                 )}
             >
-              {#if isPlaying && playingClue === activeClue}
+              {#if isPlaying && playingClue && activeClue && playingClue.startX === activeClue.startX && playingClue.startY === activeClue.startY && playingClue.direction === activeClue.direction}
                 <!-- Pause icon -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
