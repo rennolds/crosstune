@@ -44407,5 +44407,112 @@
         "song_title": "Smooth Criminal"
       }
     ]
+  },
+    "2026-04-28": {
+    "version": "1.0.0",
+    "title": "Where there's a Will...",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "WILLIAMS",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Composers Last Name",
+        "audioUrl": "945826426",
+        "soundcloudUrl": "https://soundcloud.com/mjason-1234/star-wars-main-theme-john-williams-orchestral-mockup",
+        "startAt": "0:00",
+        "audioDuration": 19
+      },
+      {
+        "word": "WILLSMITH",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artists Full Name (Slaps Comedians)",
+        "audioUrl": "623817615",
+        "soundcloudUrl": "https://soundcloud.com/will-smith-official/prince-ali",
+        "startAt": "0:55",
+        "audioDuration": 16
+      },
+      {
+        "word": "WILLIE",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artists First Name (Cast in The Dukes of Hazard Remake)",
+        "audioUrl": "393636",
+        "soundcloudUrl": "https://soundcloud.com/aatw/bring-it-on-down-to-my-house?in=aatw%2Fsets%2Fwillie-the-wheel",
+        "startAt": "0:19",
+        "audioDuration": 10
+      },
+      {
+        "word": "PHARELL",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artists First Name",
+        "audioUrl": "88127575",
+        "soundcloudUrl": "https://soundcloud.com/leo-ryan/daft-punk-ft-pharell-williams",
+        "startAt": "0:30",
+        "audioDuration": 10
+      },
+      {
+        "word": "WITHERS",
+        "startX": 5,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artists Last Name",
+        "audioUrl": "1834440387",
+        "soundcloudUrl": "https://soundcloud.com/bill-withers-official/aint-no-sunshine-6",
+        "startAt": "0:00",
+        "audioDuration": 15
+      },
+      {
+        "word": "WILL.I.AM",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist Name... Separated (..)",
+        "audioUrl": "87278483",
+        "soundcloudUrl": "https://soundcloud.com/michelbep/that_power_feat_justin_bieber",
+        "startAt": "1:08",
+        "audioDuration": 9
+      },
+      {
+        "word": "WILLOW",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist's First Name (Daughter of Row 3, Col 1)",
+        "audioUrl": "6047056",
+        "soundcloudUrl": "https://soundcloud.com/willowsmith/whip-my-hair",
+        "startAt": "0:00",
+        "audioDuration": 7
+      },
+      {
+        "word": "HAYLEY",
+        "startX": 8,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Lead Singers First Name",
+        "audioUrl": "2151496653",
+        "soundcloudUrl": "https://soundcloud.com/hayleywilliamsmusic/parachute",
+        "startAt": "0:40",
+        "audioDuration": 10
+      }
+    ]
   }
 }
