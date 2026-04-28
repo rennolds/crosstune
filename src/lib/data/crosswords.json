@@ -44460,18 +44460,6 @@
         "song_title": "Bring It On Down To My House"
       },
       {
-        "word": "PHARELL",
-        "startX": 0,
-        "startY": 7,
-        "direction": "across",
-        "color": "#28D66A",
-        "textClue": "Featured artist's first name",
-        "audioUrl": "88127575",
-        "soundcloudUrl": "https://soundcloud.com/leo-ryan/daft-punk-ft-pharell-williams",
-        "startAt": "0:30",
-        "audioDuration": 10
-      },
-      {
         "word": "WITHERS",
         "startX": 5,
         "startY": 9,
