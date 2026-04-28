@@ -44527,6 +44527,20 @@
         "artist_name": "Hayley Williams",
         "song_title": "Parachute"
       }
+    ],
+    "starting_characters": [
+      {
+        "characters": ".",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down"
+      },
+      {
+        "characters": ".",
+        "startX": 2,
+        "startY": 6,
+        "direction": "down"
+      }
     ]
   }
 }
