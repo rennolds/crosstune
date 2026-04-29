@@ -2,6 +2,7 @@
   import "../app.css";
   import { setUser, setLoading } from "$lib/stores/auth.svelte.js";
   import AdBanner from "$lib/components/AdBanner.svelte";
+  import BrowserCompatibilityNotice from "$lib/components/BrowserCompatibilityNotice.svelte";
   import { onMount } from 'svelte';
   import { invalidate } from '$app/navigation';
   import { supabase } from '$lib/supabaseClient';
@@ -37,4 +38,5 @@
 </script>
 
 <AdBanner PUB_ID={PUBLISHER_ID} WEBSITE_ID={WEBSITE_ID} />
+<BrowserCompatibilityNotice />
 {@render children()}
