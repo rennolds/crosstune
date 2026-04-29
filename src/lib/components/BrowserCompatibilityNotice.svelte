@@ -33,7 +33,7 @@
     aria-labelledby="audio-notice-title"
   >
     <div
-      class="bg-white dark:bg-[#202020] dark:text-white rounded-lg shadow-xl max-w-md w-full p-6 border border-gray-200 dark:border-gray-700"
+      class="bg-white dark:bg-[#202020] dark:text-white rounded-lg shadow-xl max-w-lg w-full p-6 border border-gray-200 dark:border-gray-700"
     >
       <h2 id="audio-notice-title" class="text-lg font-semibold mb-3">
         Heads up
