@@ -5,16 +5,12 @@
   let isOpen = $state(false);
 
   function isAffectedBrowser() {
-    if (typeof navigator === 'undefined' || typeof window === 'undefined') return false;
+    if (typeof navigator === 'undefined') return false;
     const ua = navigator.userAgent || '';
-    if (/Android|iPhone|iPad|iPod|Mobi/i.test(ua)) return false;
-    if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) return false;
-    // Firefox on Mac plays the affected tracks fine, so suppress the modal there.
-    const isMac = /Macintosh|Mac OS X/i.test(ua);
-    const isFirefox = /Firefox\//.test(ua) && !/Seamonkey\//.test(ua);
-    if (isMac && isFirefox) return false;
-    const isChromium = /Chrome\/|Edg\//.test(ua);
-    if (!isChromium) return false;
+    // Conservative suppression: only confirmed-working iPhones skip the
+    // notice. Everyone else (Android, iPad, Mac Safari/Firefox, Chromium
+    // desktop, etc.) sees it while the issue is active.
+    if (/iPhone/.test(ua)) return false;
     return true;
   }
 
