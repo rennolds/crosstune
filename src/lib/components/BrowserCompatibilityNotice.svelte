@@ -2,8 +2,6 @@
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
 
-  const STORAGE_KEY = 'crosstune_audio_notice_dismissed';
-
   let isOpen = $state(false);
 
   function isAffectedBrowser() {
@@ -11,26 +9,21 @@
     const ua = navigator.userAgent || '';
     if (/Android|iPhone|iPad|iPod|Mobi/i.test(ua)) return false;
     if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) return false;
+    // Firefox on Mac plays the affected tracks fine, so suppress the modal there.
+    const isMac = /Macintosh|Mac OS X/i.test(ua);
+    const isFirefox = /Firefox\//.test(ua) && !/Seamonkey\//.test(ua);
+    if (isMac && isFirefox) return false;
     const isChromium = /Chrome\/|Edg\//.test(ua);
     if (!isChromium) return false;
-    if (/OPR\//.test(ua)) return true;
     return true;
   }
 
   function dismiss() {
     isOpen = false;
-    try {
-      localStorage.setItem(STORAGE_KEY, '1');
-    } catch {}
   }
 
   onMount(() => {
     if (!browser) return;
-    let alreadyDismissed = false;
-    try {
-      alreadyDismissed = localStorage.getItem(STORAGE_KEY) === '1';
-    } catch {}
-    if (alreadyDismissed) return;
     if (!isAffectedBrowser()) return;
     isOpen = true;
   });
@@ -52,9 +45,9 @@
       <div class="text-sm text-gray-700 dark:text-gray-300 space-y-3 mb-5">
         <p>
           A recent change to audio streaming in web browsers has made most
-          audio clues unavailable unless playing on iPhone or Safari on Mac.
-          We're aware of it and hope to find a fix that restores all audio
-          for all devices and browsers.
+          audio clues unavailable unless playing on iPhone, Safari on Mac, or
+          Firefox on Mac. We're aware of it and hope to find a fix that
+          restores all audio for all devices and browsers.
         </p>
         <p>
           If a clue's audio can't play, the answer will be automatically
