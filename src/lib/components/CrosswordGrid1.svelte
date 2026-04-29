@@ -1459,6 +1459,28 @@
           console.warn(
             `Widget ${widgetId} reported paused immediately after play(). Marking as unavailable.`
           );
+          try {
+            audio.getCurrentSound((sound) => {
+              console.warn(`[SC-DIAG] ${widgetId} unavailable. Track meta:`, {
+                id: sound?.id,
+                title: sound?.title,
+                permalink_url: sound?.permalink_url,
+                streamable: sound?.streamable,
+                policy: sound?.policy,
+                monetization_model: sound?.monetization_model,
+                embeddable_by: sound?.embeddable_by,
+                public: sound?.public,
+                sharing: sound?.sharing,
+                state: sound?.state,
+                kind: sound?.kind,
+                user: sound?.user
+                  ? { id: sound.user.id, username: sound.user.username }
+                  : null,
+              });
+            });
+          } catch (diagErr) {
+            console.warn(`[SC-DIAG] ${widgetId} getCurrentSound threw:`, diagErr);
+          }
           markWidgetAsUnavailable(widgetId);
 
           // Reset playback state

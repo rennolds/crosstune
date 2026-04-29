@@ -27,10 +27,34 @@
               };
 
               const onError = (error) => {
+                let errPayload;
+                try {
+                  errPayload = JSON.stringify(
+                    error,
+                    Object.getOwnPropertyNames(error || {})
+                  );
+                } catch {
+                  errPayload = String(error);
+                }
                 console.warn(
-                  `Widget ${widgetId} error (may be just source maps):`,
+                  `[SC-DIAG] Widget ${widgetId} ERROR event payload:`,
+                  errPayload,
                   error
                 );
+                try {
+                  widget.getCurrentSound((sound) => {
+                    console.warn(`[SC-DIAG] ${widgetId} on ERROR, track meta:`, {
+                      id: sound?.id,
+                      title: sound?.title,
+                      streamable: sound?.streamable,
+                      policy: sound?.policy,
+                      monetization_model: sound?.monetization_model,
+                      embeddable_by: sound?.embeddable_by,
+                      public: sound?.public,
+                      sharing: sound?.sharing,
+                    });
+                  });
+                } catch {}
                 // Don't mark as unavailable for source map errors
                 // Check if widget is functional after a delay
                 setTimeout(() => {
