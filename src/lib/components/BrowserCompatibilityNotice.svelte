@@ -51,10 +51,10 @@
       </h2>
       <div class="text-sm text-gray-700 dark:text-gray-300 space-y-3 mb-5">
         <p>
-          A recent change to audio streaming in web browsers has caused audio
-          issues for many clues for desktop users on Chrome and Edge. Safari
-          is unaffected. We're aware of it and hope to find a fix that
-          restores all audio for all devices and browsers.
+          A recent change to audio streaming in web browsers has made many
+          audio clues unavailable for non-iOS desktop users, non-iOS mobile
+          devices, and non-Safari browsers on Mac. We're aware of it and hope
+          to find a fix that restores all audio for all devices and browsers.
         </p>
         <p>
           If a clue's audio can't play, the answer will be automatically
