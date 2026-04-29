@@ -47,9 +47,8 @@
         </p>
         <p>
           If a clue's audio can't play, the answer will be automatically
-          revealed. Please use a mobile device for best experience. Sorry for
-          the inconvenience, we hope to get your favorite (and the only) music
-          crossword back asap.
+          revealed. Sorry for the inconvenience, we hope to get your favorite
+          (and the only) music crossword back asap.
         </p>
         <p class="text-gray-500 dark:text-gray-400">
           Thanks for your patience and for playing crosstunes!<br />
