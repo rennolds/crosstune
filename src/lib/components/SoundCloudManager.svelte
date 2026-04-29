@@ -8,18 +8,12 @@
 
   $effect(() => {
     if (typeof window === "undefined") return;
-
-    let destroyed = false;
-    const pendingRafs = [];
-    const pendingTimeouts = [];
-
     function initializeWidgets() {
       console.log("Initializing SoundCloud Widgets for current words...");
 
       words.forEach((word) => {
         const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
-        const rafId = requestAnimationFrame(() => {
-          if (destroyed) return;
+        requestAnimationFrame(() => {
           const iframe = document.getElementById(widgetId);
 
           if (iframe) {
@@ -27,10 +21,8 @@
               const widget = SC.Widget(iframe);
 
               const onReady = () => {
-                if (!destroyed) {
-                  console.log(`Widget ${widgetId} is ready`);
-                  markWidgetAsReady(widgetId);
-                }
+                console.log(`Widget ${widgetId} is ready`);
+                markWidgetAsReady(widgetId);
                 widget.unbind(SC.Widget.Events.READY, onReady);
               };
 
@@ -39,42 +31,43 @@
                   `Widget ${widgetId} error (may be just source maps):`,
                   error
                 );
-                widget.unbind(SC.Widget.Events.ERROR, onError);
-                const t = setTimeout(() => {
-                  if (destroyed) return;
+                // Don't mark as unavailable for source map errors
+                // Check if widget is functional after a delay
+                setTimeout(() => {
                   try {
                     widget.isPaused((paused) => {
-                      if (destroyed) return;
                       if (paused !== undefined) {
+                        // Widget is responding, mark as ready
                         console.log(
                           `Widget ${widgetId} is functional despite errors`
                         );
                         markWidgetAsReady(widgetId);
                       } else {
+                        // Widget is not responding, mark as unavailable
                         markWidgetAsUnavailable(widgetId);
                       }
                     });
                   } catch (e) {
+                    // If isPaused fails, try one more check
                     try {
-                      widget.play();
-                      widget.pause();
+                      widget.play(); // This will fail if widget is not functional
+                      widget.pause(); // Immediately pause
                       markWidgetAsReady(widgetId);
                     } catch (e2) {
                       markWidgetAsUnavailable(widgetId);
                     }
                   }
-                }, 3000);
-                pendingTimeouts.push(t);
+                }, 3000); // Give it 3 seconds to settle
+                widget.unbind(SC.Widget.Events.ERROR, onError);
               };
 
               widget.bind(SC.Widget.Events.READY, onReady);
               widget.bind(SC.Widget.Events.ERROR, onError);
 
-              const t = setTimeout(() => {
-                if (destroyed) return;
+              // Also set a fallback timer to mark as ready if no events fire
+              setTimeout(() => {
                 try {
                   widget.isPaused((paused) => {
-                    if (destroyed) return;
                     if (paused !== undefined) {
                       console.log(
                         `Widget ${widgetId} marked as ready via fallback`
@@ -83,20 +76,22 @@
                     }
                   });
                 } catch (e) {
+                  // Final fallback - just mark as ready and see if it works
                   console.log(
                     `Widget ${widgetId} final fallback - marking as ready`
                   );
                   markWidgetAsReady(widgetId);
                 }
               }, 5000);
-              pendingTimeouts.push(t);
             } catch (e) {
               console.error(`Error creating SC.Widget for ${widgetId}:`, e);
-              if (!destroyed) markWidgetAsUnavailable(widgetId);
+              markWidgetAsUnavailable(widgetId);
             }
+          } else {
+            // This might happen briefly during transitions, usually not an error
+            // console.warn(`Iframe ${widgetId} not found during initialization.`);
           }
         });
-        pendingRafs.push(rafId);
       });
     }
 
@@ -109,9 +104,6 @@
     }
 
     return () => {
-      destroyed = true;
-      pendingRafs.forEach((id) => cancelAnimationFrame(id));
-      pendingTimeouts.forEach((id) => clearTimeout(id));
       if (typeof window !== "undefined") {
         if (window.onSCWidgetApiReady === initializeWidgets) {
           window.onSCWidgetApiReady = undefined;

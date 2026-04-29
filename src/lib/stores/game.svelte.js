@@ -68,11 +68,6 @@ export function setUnavailableWidgets(widgetSet) {
   unavailableWidgets = widgetSet;
 }
 
-export function clearWidgetState() {
-  readyWidgets.clear();
-  unavailableWidgets = new Set();
-}
-
 export function getUnavailableWidgets() {
   return unavailableWidgets;
 }
