@@ -1396,92 +1396,6 @@
 
   let playingClue = $state(null);
 
-  // SoundCloud's embed widget can't decrypt the cbc/ctr-encrypted-hls
-  // transcodings major-label tracks now ship with on Chromium browsers, so when
-  // the widget reports paused right after play() we resolve the unencrypted
-  // progressive MP3 stream URL via /api/resolve-stream and play it through a
-  // plain HTMLAudioElement instead. Falls back to marking unavailable only if
-  // the track has no progressive transcoding or the resolve fails.
-  async function tryProgressiveFallback(clue, widgetId, scWidget, playSessionId) {
-    let streamUrl;
-    try {
-      const resp = await fetch(
-        `/api/resolve-stream?url=${encodeURIComponent(clue.soundcloudUrl)}`
-      );
-      if (!resp.ok) {
-        const body = await resp.json().catch(() => ({}));
-        throw new Error(`resolve-stream ${resp.status}: ${body.error || 'unknown'}`);
-      }
-      const data = await resp.json();
-      streamUrl = data.streamUrl;
-      if (!streamUrl) throw new Error('no streamUrl in response');
-    } catch (e) {
-      console.warn(`[SC-FALLBACK] ${widgetId} fallback resolve failed:`, e);
-      markWidgetAsUnavailable(widgetId);
-      if (currentAudio === scWidget) {
-        isPlaying = false;
-        playingClue = null;
-        currentAudio = null;
-      }
-      return;
-    }
-
-    if (currentAudio !== scWidget || scWidget._playSessionId !== playSessionId) {
-      return;
-    }
-
-    const fallback = new Audio(streamUrl);
-    fallback._playSessionId = playSessionId;
-    fallback.preload = 'auto';
-    const startSec = convertTimestampToMs(clue.startAt) / 1000;
-
-    const onError = () => {
-      console.warn(`[SC-FALLBACK] ${widgetId} HTMLAudio error:`, fallback.error);
-      markWidgetAsUnavailable(widgetId);
-      if (currentAudio === fallback) {
-        isPlaying = false;
-        playingClue = null;
-        currentAudio = null;
-      }
-    };
-    fallback.addEventListener('error', onError);
-
-    const startPlayback = () => {
-      if (currentAudio !== fallback || fallback._playSessionId !== playSessionId) return;
-      try {
-        fallback.currentTime = startSec;
-      } catch {}
-      const playPromise = fallback.play();
-      if (playPromise && typeof playPromise.catch === 'function') {
-        playPromise.catch((err) => {
-          console.warn(`[SC-FALLBACK] ${widgetId} HTMLAudio play() rejected:`, err);
-          onError();
-        });
-      }
-      const timeoutMs =
-        clue.audioDuration && typeof clue.audioDuration === 'number' && clue.audioDuration > 0
-          ? clue.audioDuration * 1000
-          : 6500;
-      setTimeout(() => {
-        if (currentAudio === fallback && fallback._playSessionId === playSessionId) {
-          fallback.pause();
-          isPlaying = false;
-          playingClue = null;
-          currentAudio = null;
-        }
-      }, timeoutMs);
-    };
-
-    if (fallback.readyState >= 1) {
-      startPlayback();
-    } else {
-      fallback.addEventListener('loadedmetadata', startPlayback, { once: true });
-    }
-
-    currentAudio = fallback;
-    console.log(`[SC-FALLBACK] ${widgetId} playing progressive stream`);
-  }
-
   async function playClue(clue) {
     const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
     try {
@@ -1543,12 +1457,37 @@
       audio.isPaused((paused) => {
         if (paused) {
           console.warn(
-            `Widget ${widgetId} reported paused immediately after play(). Trying progressive fallback...`
+            `Widget ${widgetId} reported paused immediately after play(). Marking as unavailable.`
           );
           try {
-            audio.pause();
-          } catch {}
-          tryProgressiveFallback(clue, widgetId, audio, playSessionId);
+            audio.getCurrentSound((sound) => {
+              console.warn(`[SC-DIAG] ${widgetId} unavailable. Track meta:`, {
+                id: sound?.id,
+                title: sound?.title,
+                permalink_url: sound?.permalink_url,
+                streamable: sound?.streamable,
+                policy: sound?.policy,
+                monetization_model: sound?.monetization_model,
+                embeddable_by: sound?.embeddable_by,
+                public: sound?.public,
+                sharing: sound?.sharing,
+                state: sound?.state,
+                kind: sound?.kind,
+                user: sound?.user
+                  ? { id: sound.user.id, username: sound.user.username }
+                  : null,
+              });
+            });
+          } catch (diagErr) {
+            console.warn(`[SC-DIAG] ${widgetId} getCurrentSound threw:`, diagErr);
+          }
+          markWidgetAsUnavailable(widgetId);
+
+          // Reset playback state
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null; // Ensure we don't hold reference to failed audio
+          // No need to call pause() here as it's already paused
         } else {
           // Playback seems to have started, proceed with timeout logic
           // console.log(`Widget ${widgetId} playback initiated successfully.`); // Removed success log
