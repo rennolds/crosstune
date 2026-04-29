@@ -51,21 +51,19 @@
       </h2>
       <div class="text-sm text-gray-700 dark:text-gray-300 space-y-3 mb-5">
         <p>
-          A recent change to how some songs are streamed has caused playback
-          issues for certain clues on Chrome and Edge desktop. We're aware of
-          it and looking into a fix.
+          A recent change has caused audio issues for many clues for desktop
+          users on Chrome and Edge. Safari is unaffected. We're aware of it
+          and hope to find a fix that restores all audio for all devices and
+          browsers.
         </p>
         <p>
-          If a clue's audio won't play, the answer will reveal automatically so
-          you can keep solving. For the full audio experience right now, Safari
-          or your phone work great.
-        </p>
-        <p>
-          We're hoping to land on a solution that restores audio across all
-          browsers and devices.
+          If a clue's audio can't play, the answer will be automatically
+          revealed. Please use a mobile device for best experience. Sorry for
+          the inconvenience, we hope to get your favorite (and the only) music
+          crossword back asap.
         </p>
         <p class="text-gray-500 dark:text-gray-400">
-          Thanks for your patience!<br />
+          Thanks for your patience and for playing crosstunes!<br />
           — fw games (a.k.a. tommy &amp; paul)
         </p>
       </div>
