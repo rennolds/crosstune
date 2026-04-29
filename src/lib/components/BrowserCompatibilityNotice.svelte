@@ -47,7 +47,7 @@
       class="bg-white dark:bg-[#202020] dark:text-white rounded-lg shadow-xl max-w-md w-full p-6 border border-gray-200 dark:border-gray-700"
     >
       <h2 id="audio-notice-title" class="text-lg font-semibold mb-3">
-        Heads up about song playback
+        Heads up
       </h2>
       <div class="text-sm text-gray-700 dark:text-gray-300 space-y-3 mb-5">
         <p>
@@ -60,7 +60,14 @@
           you can keep solving. For the full audio experience right now, Safari
           or your phone work great.
         </p>
-        <p class="text-gray-500 dark:text-gray-400">Thanks for your patience!</p>
+        <p>
+          We're hoping to land on a solution that restores audio across all
+          browsers and devices.
+        </p>
+        <p class="text-gray-500 dark:text-gray-400">
+          Thanks for your patience!<br />
+          — fw games (a.k.a. tommy &amp; paul)
+        </p>
       </div>
       <div class="flex justify-end">
         <button
