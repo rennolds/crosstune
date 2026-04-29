@@ -117,14 +117,6 @@
     clearWidgetState();
   });
 
-  // Stop any playing audio when component unmounts to prevent cross-session audio bleed
-  // (e.g. navigating from an archive puzzle to today's puzzle while audio is playing).
-  $effect(() => {
-    return () => {
-      stopAudio();
-    };
-  });
-
   // Get today's puzzle or fall back to the first available puzzle
   function getTodaysPuzzleInfo() {
     const todayDate = getEastCoastDate();

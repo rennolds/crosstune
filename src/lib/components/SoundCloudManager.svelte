@@ -110,21 +110,6 @@
 
     return () => {
       destroyed = true;
-      // Pause all widgets before iframes are removed — belt-and-suspenders for Safari/iOS
-      // where iframe removal alone doesn't reliably stop playback.
-      if (typeof window !== "undefined" && window.SC && window.SC.Widget) {
-        words.forEach((word) => {
-          const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
-          const iframe = document.getElementById(widgetId);
-          if (iframe) {
-            try {
-              SC.Widget(iframe).pause();
-            } catch (e) {
-              // ignore — widget may already be torn down
-            }
-          }
-        });
-      }
       pendingRafs.forEach((id) => cancelAnimationFrame(id));
       pendingTimeouts.forEach((id) => clearTimeout(id));
       if (typeof window !== "undefined") {
