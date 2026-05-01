@@ -1403,6 +1403,13 @@
 
   let playingClue = $state(null);
 
+  function isSameClue(a, b) {
+    if (!a || !b) return false;
+    return a.startX === b.startX && a.startY === b.startY && a.direction === b.direction;
+  }
+
+  let isPlayingActiveClue = $derived(isPlaying && isSameClue(playingClue, activeClue));
+
   async function playClue(clue) {
     const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
     try {
@@ -1418,7 +1425,7 @@
       }
 
       // If this clue is already playing, pause it and exit
-      if (playingClue === clue && isPlaying && currentAudio) {
+      if (isSameClue(playingClue, clue) && isPlaying && currentAudio) {
         currentAudio.pause();
         isPlaying = false;
         playingClue = null;
@@ -2248,7 +2255,7 @@
                   `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
                 )}
             >
-              {#if isPlaying && playingClue === activeClue}
+              {#if isPlayingActiveClue}
                 <!-- Pause icon -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
