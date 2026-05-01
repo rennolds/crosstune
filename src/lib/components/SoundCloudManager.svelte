@@ -11,7 +11,7 @@
     function initializeWidgets() {
       console.log("Initializing SoundCloud Widgets for current words...");
 
-      words.forEach((word) => {
+      words.filter((w) => !w.itunesId).forEach((word) => {
         const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
         requestAnimationFrame(() => {
           const iframe = document.getElementById(widgetId);
@@ -137,7 +137,7 @@
   });
 </script>
 
-{#each words as word}
+{#each words.filter((w) => !w.itunesId) as word}
   <iframe
     id="{word.startX}:{word.startY}:{word.direction}"
     class="hidden"

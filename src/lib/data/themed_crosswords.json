@@ -21,7 +21,10 @@
         "textClue": "Song title",
         "audioUrl": "253540427",
         "startAt": "0:05",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "ABC",
+        "artist_name": "Jackson 5",
+        "itunesId": 1440912109
       },
       {
         "word": "FEELINGGOOD",
@@ -32,7 +35,10 @@
         "textClue": "Song title",
         "audioUrl": "528265470",
         "startAt": "0:46",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Nina Simone - Feeling Good",
+        "artist_name": "Safena 10",
+        "itunesId": 1445668114
       },
       {
         "word": "STOP",
@@ -43,7 +49,10 @@
         "textClue": "Title word of this song!",
         "audioUrl": "287323439",
         "startAt": "0:03",
-        "audioDuration": 7.5
+        "audioDuration": 7.5,
+        "song_title": "Stop! In The Name Of Love",
+        "artist_name": "The Supremes",
+        "itunesId": 1440739750
       },
       {
         "word": "ROSS",
@@ -54,7 +63,10 @@
         "textClue": "Artist last name",
         "audioUrl": "254149925",
         "startAt": "0:18",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Upside Down",
+        "artist_name": "Diana Ross",
+        "itunesId": 1452791458
       },
       {
         "word": "RESPECT",
@@ -65,7 +77,10 @@
         "textClue": "Song title",
         "audioUrl": "477107679",
         "startAt": "0:09",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Respect",
+        "artist_name": "Aretha Franklin",
+        "itunesId": 937107838
       },
       {
         "word": "MARVIN",
@@ -76,7 +91,10 @@
         "textClue": "Artist first name (The Prince of Soul)",
         "audioUrl": "253483570",
         "startAt": "0:20",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "What's Going On",
+        "artist_name": "Marvin Gaye",
+        "itunesId": 1538081594
       },
       {
         "word": "MYGIRL",
@@ -87,7 +105,10 @@
         "textClue": "Song title",
         "audioUrl": "319393353",
         "startAt": "0:09",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "My Girl",
+        "artist_name": "The Temptations",
+        "itunesId": 1423301921
       },
       {
         "word": "GROUND",
@@ -98,7 +119,10 @@
         "textClue": "Higher ____",
         "audioUrl": "355774706",
         "startAt": "0:30",
-        "audioDuration": 6.5
+        "audioDuration": 6.5,
+        "song_title": "Higher Ground",
+        "artist_name": "STEVIE WONDER",
+        "itunesId": 1440807404
       }
     ]
   },
@@ -124,7 +148,10 @@
         "textClue": "Artist name",
         "audioUrl": "4720038",
         "startAt": "0:00.8",
-        "audioDuration": 10.5
+        "audioDuration": 10.5,
+        "song_title": "All Time Low - Dear Maria, Count Me In",
+        "artist_name": "Hopeless Records",
+        "itunesId": 503740092
       },
       {
         "word": "NOBODY",
@@ -135,7 +162,10 @@
         "textClue": "Who came to Sum 41's house party?",
         "audioUrl": "256148157",
         "startAt": "0:09",
-        "audioDuration": 19.2
+        "audioDuration": 19.2,
+        "song_title": "Fat Lip",
+        "artist_name": "Sum 41",
+        "itunesId": 1440659999
       },
       {
         "word": "RATIONALITY",
@@ -146,7 +176,10 @@
         "textClue": "A quality that pairs well with poise",
         "audioUrl": "12841530",
         "startAt": "0:19",
-        "audioDuration": 13.85
+        "audioDuration": 13.85,
+        "song_title": "I Write Sins Not Tragedies",
+        "artist_name": "Panic! At The Disco",
+        "itunesId": 1672249098
       },
       {
         "word": "HEAD",
@@ -157,7 +190,10 @@
         "textClue": "A body part in the chorus",
         "audioUrl": "256119442",
         "startAt": "1:18",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "I Miss You",
+        "artist_name": "blink-182",
+        "itunesId": 1440846785
       },
       {
         "word": "IPROMISE",
@@ -168,7 +204,10 @@
         "textClue": "I'm Not Okay (_____)",
         "audioUrl": "256032560",
         "startAt": "0:26",
-        "audioDuration": 12.2
+        "audioDuration": 12.2,
+        "song_title": "I'm Not Okay (I Promise)",
+        "artist_name": "My Chemical Romance",
+        "itunesId": 811747398
       },
       {
         "word": "AAR",
@@ -179,7 +218,10 @@
         "textClue": "Artist name, as an acronym",
         "audioUrl": "26318705",
         "startAt": "0:14",
-        "audioDuration": 15.5
+        "audioDuration": 15.5,
+        "song_title": "The All-American Rejects - Dirty Little Secret",
+        "artist_name": "Interscope Records",
+        "itunesId": 1444093053
       },
       {
         "word": "HAYLEY",
@@ -190,7 +232,10 @@
         "textClue": "Leader singer of this band",
         "audioUrl": "214807501",
         "startAt": "0:44",
-        "audioDuration": 15.75
+        "audioDuration": 15.75,
+        "song_title": "crushcrushcrush",
+        "artist_name": "Paramore",
+        "itunesId": 604804767
       },
       {
         "word": "ENEMY",
@@ -201,7 +246,10 @@
         "textClue": "The last word of this song title",
         "audioUrl": "263253117",
         "startAt": "0:14",
-        "audioDuration": 13.5
+        "audioDuration": 13.5,
+        "song_title": "My Own Worst Enemy",
+        "artist_name": "Lit",
+        "itunesId": 258611995
       }
     ]
   },
@@ -227,7 +275,10 @@
         "textClue": "Composer first name",
         "audioUrl": "259075258",
         "startAt": "0:11",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "You'll Be In My Heart (From \"Tarzan\"/Soundtrack Version)",
+        "artist_name": "Phil Collins",
+        "itunesId": 1437333914
       },
       {
         "word": "HAKUNAMATATA",
@@ -238,7 +289,10 @@
         "textClue": "Song title",
         "audioUrl": "253142770",
         "startAt": "0:12",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Hakuna Matata",
+        "artist_name": "Ernie Sabella",
+        "itunesId": 1378473893
       },
       {
         "word": "SIMBA",
@@ -249,7 +303,10 @@
         "textClue": "Character who sings this song",
         "audioUrl": "255052117",
         "startAt": "0:23",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "I Just Can't Wait to Be King",
+        "artist_name": "Jason Weaver",
+        "itunesId": 1442812968
       },
       {
         "word": "POCAHONTAS",
@@ -260,7 +317,10 @@
         "textClue": "Character who sings this song",
         "audioUrl": "253616414",
         "startAt": "0:20",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Colors of the Wind",
+        "artist_name": "Judy Kuhn",
+        "itunesId": 1442941902
       },
       {
         "word": "HERCULES",
@@ -271,7 +331,10 @@
         "textClue": "Movie title",
         "audioUrl": "112950952",
         "startAt": "0:33",
-        "audioDuration": 6.5
+        "audioDuration": 6.5,
+        "song_title": "Hercules - Zero To Hero",
+        "artist_name": "Dimitri Chichua",
+        "itunesId": 1481741431
       },
       {
         "word": "ALADDIN",
@@ -282,7 +345,10 @@
         "textClue": "Movie title",
         "audioUrl": "131273234",
         "startAt": "0:16",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Arabian Nights - Aladdin",
+        "artist_name": "Mac Tussey",
+        "itunesId": 219174222
       },
       {
         "word": "TANGLED",
@@ -293,7 +359,10 @@
         "textClue": "Movie title",
         "audioUrl": "253167413",
         "startAt": "0:18",
-        "audioDuration": 6.5
+        "audioDuration": 6.5,
+        "song_title": "When Will My Life Begin? (From \"Tangled\" / Soundtrack Version)",
+        "artist_name": "Mandy Moore",
+        "itunesId": 1440639066
       },
       {
         "word": "LETITGO",
@@ -304,7 +373,10 @@
         "textClue": "This is the German language version of what song?",
         "audioUrl": "267246892",
         "startAt": "2:53.5",
-        "audioDuration": 5
+        "audioDuration": 5,
+        "song_title": "Let It Go - Sing Along - Song  DIE EISKÖNIGIN - VÖLLIG UNVERFROREN - Music  Frozen - Disney",
+        "artist_name": "fröschli",
+        "itunesId": 1440639625
       }
     ]
   },
@@ -329,7 +401,10 @@
         "textClue": "Last two words of this song title",
         "audioUrl": "255884736",
         "startAt": "0:14.5",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Feel So Close (Radio Edit)",
+        "artist_name": "Calvin Harris",
+        "itunesId": 1713469225
       },
       {
         "word": "LEANON",
@@ -340,7 +415,10 @@
         "textClue": "Song title",
         "audioUrl": "193781466",
         "startAt": "0:49.5",
-        "audioDuration": 17
+        "audioDuration": 17,
+        "song_title": "Major Lazer & DJ Snake - Lean On (feat. MØ)",
+        "artist_name": "Major Lazer",
+        "itunesId": 1759267930
       },
       {
         "word": "TITANIUM",
@@ -351,7 +429,10 @@
         "textClue": "Song title",
         "audioUrl": "216540875",
         "startAt": "0:45",
-        "audioDuration": 32
+        "audioDuration": 32,
+        "song_title": "Titanium (feat. Sia)",
+        "artist_name": "David Guetta",
+        "itunesId": 693224822
       },
       {
         "word": "STAY",
@@ -362,7 +443,10 @@
         "textClue": "Song title",
         "audioUrl": "308997360",
         "startAt": "1:05",
-        "audioDuration": 18
+        "audioDuration": 18,
+        "song_title": "Stay",
+        "artist_name": "Zedd",
+        "itunesId": 1445043157
       },
       {
         "word": "HOPELESS",
@@ -373,7 +457,10 @@
         "textClue": "The kind of place in this song",
         "audioUrl": "23907786",
         "startAt": "1:03",
-        "audioDuration": 23
+        "audioDuration": 23,
+        "song_title": "We Found Love (Album Version)",
+        "artist_name": "Rihanna",
+        "itunesId": 1440758945
       },
       {
         "word": "CLARITY",
@@ -384,7 +471,10 @@
         "textClue": "Song title",
         "audioUrl": "260999200",
         "startAt": "0:06",
-        "audioDuration": 24
+        "audioDuration": 24,
+        "song_title": "Clarity (feat. Foxes)",
+        "artist_name": "Zedd",
+        "itunesId": 1440818495
       },
       {
         "word": "ROSE",
@@ -395,7 +485,10 @@
         "textClue": "This song title but singular (also a flower)",
         "audioUrl": "258097961",
         "startAt": "1:13.5",
-        "audioDuration": 24
+        "audioDuration": 24,
+        "song_title": "Roses",
+        "artist_name": "The Chainsmokers",
+        "itunesId": 1050203620
       },
       {
         "word": "BIEBER",
@@ -406,7 +499,10 @@
         "textClue": "Last name of the featured artist",
         "audioUrl": "193270658",
         "startAt": "1:04",
-        "audioDuration": 18.5
+        "audioDuration": 18.5,
+        "song_title": "Where Are Ü Now (with Justin Bieber)",
+        "artist_name": "Jack Ü",
+        "itunesId": 971262282
       },
       {
         "word": "LEVELS",
@@ -417,7 +513,10 @@
         "textClue": "Song title",
         "audioUrl": "284331783",
         "startAt": "0:00",
-        "audioDuration": 22
+        "audioDuration": 22,
+        "song_title": "Levels (Radio Edit)",
+        "artist_name": "AviciiOfficial",
+        "itunesId": 1440787347
       }
     ]
   },
@@ -431,7 +530,7 @@
       "height": 10
     },
     "thumbnail": "https://inews.co.uk/wp-content/uploads/2023/07/SEI_163599621.jpg?crop=0px%2C274px%2C1701px%2C963px&resize=1200%2C675",
-    "author": "Carley Wall \ud83d\udc9b",
+    "author": "Carley Wall 💛",
     "theme": "pink",
     "words": [
       {
@@ -443,7 +542,10 @@
         "textClue": "Song title (Vol.6)",
         "audioUrl": "726434296",
         "startAt": "0:15",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Sunflower, Vol. 6",
+        "artist_name": "Harry Styles",
+        "itunesId": 1485802979
       },
       {
         "word": "HALLWAY",
@@ -454,7 +556,10 @@
         "textClue": "What's the meeting spot?",
         "audioUrl": "321986930",
         "startAt": "0:18",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Meet Me in the Hallway",
+        "artist_name": "Harry Styles",
+        "itunesId": 1226034389
       },
       {
         "word": "DRIVING",
@@ -465,7 +570,10 @@
         "textClue": "Just keep doing what?",
         "audioUrl": "1270786312",
         "startAt": "0:04",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Keep Driving",
+        "artist_name": "Harry Styles",
+        "itunesId": 1615585099
       },
       {
         "word": "ADORE",
@@ -476,7 +584,10 @@
         "textClue": "First word of song title",
         "audioUrl": "723511579",
         "startAt": "0:08",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "Adore You",
+        "artist_name": "Harry Styles",
+        "itunesId": 1485802970
       },
       {
         "word": "CREATURE",
@@ -487,7 +598,10 @@
         "textClue": "Sweet ____",
         "audioUrl": "320532224",
         "startAt": "0:13",
-        "audioDuration": 8.5
+        "audioDuration": 8.5,
+        "song_title": "Sweet Creature",
+        "artist_name": "Harry Styles",
+        "itunesId": 1226034796
       },
       {
         "word": "SUSHI",
@@ -498,7 +612,10 @@
         "textClue": "What kind of restaurant is mentioned in this song?",
         "audioUrl": "1270785514",
         "startAt": "0:12",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Music For a Sushi Restaurant",
+        "artist_name": "Harry Styles",
+        "itunesId": 1615585001
       },
       {
         "word": "FALLING",
@@ -509,7 +626,10 @@
         "textClue": "Song title",
         "audioUrl": "726433606",
         "startAt": "0:04",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Falling",
+        "artist_name": "Harry Styles",
+        "itunesId": 1485802975
       },
       {
         "word": "MATILDA",
@@ -520,7 +640,10 @@
         "textClue": "Song title (and a 1996 movie)",
         "audioUrl": "1270786291",
         "startAt": "0:13",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Matilda",
+        "artist_name": "Harry Styles",
+        "itunesId": 1615585012
       }
     ]
   },
@@ -546,7 +669,10 @@
         "textClue": "Actor who plays the character singing this song",
         "audioUrl": "261139609",
         "startAt": "0:01",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Teenage Dream (feat. Darren Criss)",
+        "artist_name": "gleethemusic",
+        "itunesId": 555824551
       },
       {
         "word": "NAYA",
@@ -557,7 +683,10 @@
         "textClue": "First name of the actor who plays the character singing",
         "audioUrl": "261138935",
         "startAt": "0:16",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Back To Black",
+        "artist_name": "gleethemusic",
+        "itunesId": 555825243
       },
       {
         "word": "SURVIVOR",
@@ -568,7 +697,10 @@
         "textClue": "Song title",
         "audioUrl": "261139140",
         "startAt": "0:18",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Survivor / I Will Survive (Cover of Destiny's Child and Gloria Gaynor)",
+        "artist_name": "gleethemusic",
+        "itunesId": 1443818368
       },
       {
         "word": "SANTANA",
@@ -579,7 +711,10 @@
         "textClue": "First name of the character singing this song",
         "audioUrl": "1159250605",
         "startAt": "0:27",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Glee Cast - Valerie",
+        "artist_name": "Elle Blanco",
+        "itunesId": 401927025
       },
       {
         "word": "FORGETYOU",
@@ -590,7 +725,10 @@
         "textClue": "Song title",
         "audioUrl": "261139387",
         "startAt": "0:05",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Forget You (Cover of CeeLo Green) [feat. Gwyneth Paltrow]",
+        "artist_name": "gleethemusic",
+        "itunesId": 1736033715
       },
       {
         "word": "CAST",
@@ -601,7 +739,10 @@
         "textClue": "This song is performed by the ____",
         "audioUrl": "261139631",
         "startAt": "0:17",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "I Lived (Glee Cast Version)",
+        "artist_name": "gleethemusic",
+        "itunesId": 974799853
       },
       {
         "word": "IDINA",
@@ -612,7 +753,10 @@
         "textClue": "First name of the actress who played Rachel Berry's mom",
         "audioUrl": "261139681",
         "startAt": "0:12",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "I Dreamed A Dream (Glee Cast Version) [feat. Idina Menzel]",
+        "artist_name": "gleethemusic",
+        "itunesId": 369239331
       },
       {
         "word": "SPEARS",
@@ -623,7 +767,10 @@
         "textClue": "Last name of the original artist of this song",
         "audioUrl": "261138946",
         "startAt": "0:06",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Toxic",
+        "artist_name": "gleethemusic",
+        "itunesId": 836824625
       }
     ]
   },
@@ -650,7 +797,10 @@
         "audioUrl": "252454144",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/everything-has-changed"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/everything-has-changed",
+        "song_title": "Everything Has Changed (feat. Ed Sheeran)",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440935577
       },
       {
         "word": "LWYMMD",
@@ -662,7 +812,10 @@
         "audioUrl": "339400425",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/look-what-you-made-me-do"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/look-what-you-made-me-do",
+        "song_title": "Look What You Made Me Do",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440934255
       },
       {
         "word": "KARMA",
@@ -674,7 +827,10 @@
         "audioUrl": "1367286613",
         "startAt": "0:06",
         "audioDuration": 10.75,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/karma"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/karma",
+        "song_title": "Karma",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1649435543
       },
       {
         "word": "FEARLESS",
@@ -686,7 +842,10 @@
         "audioUrl": "252454402",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/fearless"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/fearless",
+        "song_title": "Fearless",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440924805
       },
       {
         "word": "WILDEST",
@@ -698,7 +857,10 @@
         "audioUrl": "327237476",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/wildest-dreams"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/wildest-dreams",
+        "song_title": "Wildest Dreams",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440936036
       },
       {
         "word": "BETTY",
@@ -710,7 +872,10 @@
         "audioUrl": "863079313",
         "startAt": "0:02",
         "audioDuration": 17,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/betty"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/betty",
+        "song_title": "betty",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1524793921
       },
       {
         "word": "MAN",
@@ -722,7 +887,10 @@
         "audioUrl": "669538220",
         "startAt": "0:00",
         "audioDuration": 4.25,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/the-man"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/the-man",
+        "song_title": "The Man",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1468058176
       },
       {
         "word": "JOHN",
@@ -734,7 +902,10 @@
         "audioUrl": "252454456",
         "startAt": "0:00",
         "audioDuration": 7,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/dear-john"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/dear-john",
+        "song_title": "Dear John",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1690840371
       },
       {
         "word": "WELL",
@@ -746,7 +917,10 @@
         "audioUrl": "252454576",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/all-too-well"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/all-too-well",
+        "song_title": "All Too Well",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1590368456
       },
       {
         "word": "TEARDROPS",
@@ -758,7 +932,10 @@
         "audioUrl": "252454520",
         "startAt": "0:04",
         "audioDuration": 16.2,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/teardrops-on-my-guitar-radio"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/teardrops-on-my-guitar-radio",
+        "song_title": "Teardrops On My Guitar (Radio Single Remix)",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440913993
       },
       {
         "word": "HEART",
@@ -770,7 +947,10 @@
         "audioUrl": "1803423213",
         "startAt": "0:06.75",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/i-can-do-it-with-a-broken"
+        "soundcloudUrl": "https://soundcloud.com/taylorswiftofficial/i-can-do-it-with-a-broken",
+        "song_title": "I Can Do It With a Broken Heart",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1736268405
       }
     ]
   },
@@ -797,7 +977,10 @@
         "audioUrl": "255766393",
         "startAt": "0:12",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/kanyewest/homecoming"
+        "soundcloudUrl": "https://soundcloud.com/kanyewest/homecoming",
+        "song_title": "Homecoming (feat. Chris Martin)",
+        "artist_name": "Kanye West",
+        "itunesId": 1451904360
       },
       {
         "word": "LOSANGELES",
@@ -809,7 +992,10 @@
         "audioUrl": "642883782",
         "startAt": "1:57",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/xixdemonios/travis-scott-90210-432-hz"
+        "soundcloudUrl": "https://soundcloud.com/xixdemonios/travis-scott-90210-432-hz",
+        "song_title": "Travis Scott - 90210 (432 Hz)",
+        "artist_name": "xixdemonios",
+        "itunesId": 662324539
       },
       {
         "word": "TOKYO",
@@ -821,7 +1007,10 @@
         "audioUrl": "253603961",
         "startAt": "0:00",
         "audioDuration": 12,
-        "soundcloudUrl": "https://soundcloud.com/teriyaki-boyz/tokyo-drift-fast-furious-from"
+        "soundcloudUrl": "https://soundcloud.com/teriyaki-boyz/tokyo-drift-fast-furious-from",
+        "song_title": "Tokyo Drift (Fast & Furious) (From \"The Fast And The Furious: Tokyo Drift\" Soundtrack)",
+        "artist_name": "Teriyaki Boyz",
+        "itunesId": 1434529339
       },
       {
         "word": "TORONTO",
@@ -833,7 +1022,10 @@
         "audioUrl": "257461521",
         "startAt": "1:00",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-headlines"
+        "soundcloudUrl": "https://soundcloud.com/octobersveryown/drake-headlines",
+        "song_title": "Headlines (Explicit Version)",
+        "artist_name": "octobersveryown",
+        "itunesId": 1440745890
       },
       {
         "word": "LONDON",
@@ -845,7 +1037,10 @@
         "audioUrl": "625403232",
         "startAt": "0:31",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/youngthugworld/the-london"
+        "soundcloudUrl": "https://soundcloud.com/youngthugworld/the-london",
+        "song_title": "The London (ft. J. Cole & Travis Scott)",
+        "artist_name": "Young Thug",
+        "itunesId": 1477895708
       },
       {
         "word": "ATLANTA",
@@ -857,7 +1052,10 @@
         "audioUrl": "253850882",
         "startAt": "0:18",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/outkast-music/atliens-1"
+        "soundcloudUrl": "https://soundcloud.com/outkast-music/atliens-1",
+        "song_title": "ATLiens",
+        "artist_name": "Outkast",
+        "itunesId": 298566420
       },
       {
         "word": "NEWYORK",
@@ -869,7 +1067,10 @@
         "audioUrl": "279766910",
         "startAt": "0:12",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/jay-z-official/empire-state-of-mind-1"
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/empire-state-of-mind-1",
+        "song_title": "Empire State Of Mind (feat. Alicia Keys)",
+        "artist_name": "JAŸ-Z",
+        "itunesId": 1440777015
       },
       {
         "word": "PARIS",
@@ -881,7 +1082,10 @@
         "audioUrl": "1184136907",
         "startAt": "6:16",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/kanyemixes/kanye-west-jay-zno-church-in-the-wildnas-in-parisotis"
+        "soundcloudUrl": "https://soundcloud.com/kanyemixes/kanye-west-jay-zno-church-in-the-wildnas-in-parisotis",
+        "song_title": "Kanye West & Jay Z No Church In The Wild/N**as In Paris/Otis WTT Mix",
+        "artist_name": "Kanye Mix",
+        "itunesId": 1440848093
       }
     ]
   },
@@ -907,7 +1111,10 @@
         "audioUrl": "253507018",
         "startAt": "0:03",
         "audioDuration": 21,
-        "soundcloudUrl": "https://soundcloud.com/modest-mouse-official/float-on"
+        "soundcloudUrl": "https://soundcloud.com/modest-mouse-official/float-on",
+        "song_title": "Float On",
+        "artist_name": "Modest Mouse",
+        "itunesId": 190780833
       },
       {
         "word": "DONTYOU",
@@ -919,7 +1126,10 @@
         "audioUrl": "256203235",
         "startAt": "0:00",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/simple-minds-official/dont-you-forget-about-me-1"
+        "soundcloudUrl": "https://soundcloud.com/simple-minds-official/dont-you-forget-about-me-1",
+        "song_title": "Don't You (Forget About Me)",
+        "artist_name": "Simple Minds Official",
+        "itunesId": 715894474
       },
       {
         "word": "ITSOVER",
@@ -931,7 +1141,10 @@
         "audioUrl": "420858726",
         "startAt": "2:30",
         "audioDuration": 24,
-        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/dont-dream-its-over-1"
+        "soundcloudUrl": "https://soundcloud.com/top-of-the-pops-80s/dont-dream-its-over-1",
+        "song_title": "Crowded House - Don't Dream It's Over (1986)",
+        "artist_name": "TOTPs 80's",
+        "itunesId": 1444120440
       },
       {
         "word": "FOLKS",
@@ -943,7 +1156,10 @@
         "audioUrl": "256100967",
         "startAt": "0:00",
         "audioDuration": 20,
-        "soundcloudUrl": "https://soundcloud.com/peterbjornjohn/young-folks"
+        "soundcloudUrl": "https://soundcloud.com/peterbjornjohn/young-folks",
+        "song_title": "Young Folks",
+        "artist_name": "PeterBjornJohn",
+        "itunesId": 1442990320
       },
       {
         "word": "DOGDAYS",
@@ -955,7 +1171,10 @@
         "audioUrl": "251381111",
         "startAt": "3:03",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/florence-the-machine/dog-days-are-over"
+        "soundcloudUrl": "https://soundcloud.com/florence-the-machine/dog-days-are-over",
+        "song_title": "Dog Days Are Over",
+        "artist_name": "Florence + The Machine",
+        "itunesId": 1470593922
       },
       {
         "word": "PIXIES",
@@ -967,7 +1186,10 @@
         "audioUrl": "511252770",
         "startAt": "0:13",
         "audioDuration": 14,
-        "soundcloudUrl": "https://soundcloud.com/pixiesmusic/where-is-my-mind"
+        "soundcloudUrl": "https://soundcloud.com/pixiesmusic/where-is-my-mind",
+        "song_title": "Where Is My Mind?",
+        "artist_name": "PIXIES",
+        "itunesId": 1540673399
       },
       {
         "word": "FUN",
@@ -979,7 +1201,10 @@
         "audioUrl": "231862397",
         "startAt": "0:00",
         "audioDuration": 25,
-        "soundcloudUrl": "https://soundcloud.com/funofficial/fun-we-are-young-feat-janelle"
+        "soundcloudUrl": "https://soundcloud.com/funofficial/fun-we-are-young-feat-janelle",
+        "song_title": "We Are Young (feat. Janelle Monáe)",
+        "artist_name": "Fun.",
+        "itunesId": 601186062
       },
       {
         "word": "TONGUETIED",
@@ -991,7 +1216,10 @@
         "audioUrl": "271221781",
         "startAt": "0:37",
         "audioDuration": 23,
-        "soundcloudUrl": "https://soundcloud.com/grouplove/tongue-tied"
+        "soundcloudUrl": "https://soundcloud.com/grouplove/tongue-tied",
+        "song_title": "Tongue Tied",
+        "artist_name": "Grouplove",
+        "itunesId": 469867732
       },
       {
         "word": "HEROES",
@@ -1003,7 +1231,10 @@
         "audioUrl": "342965056",
         "startAt": "0:09",
         "audioDuration": 17,
-        "soundcloudUrl": "https://soundcloud.com/davidbowieofficial/heroes-2017-remastered-version"
+        "soundcloudUrl": "https://soundcloud.com/davidbowieofficial/heroes-2017-remastered-version",
+        "song_title": "\"Heroes\" (2017 Remaster)",
+        "artist_name": "DavidBowieOfficial",
+        "itunesId": 1347894092
       },
       {
         "word": "SMITHS",
@@ -1015,7 +1246,10 @@
         "audioUrl": "195692771",
         "startAt": "1:02",
         "audioDuration": 20,
-        "soundcloudUrl": "https://soundcloud.com/thesmiths/there-is-a-light-that-never-goes-out"
+        "soundcloudUrl": "https://soundcloud.com/thesmiths/there-is-a-light-that-never-goes-out",
+        "song_title": "There Is a Light That Never Goes Out (2008 Remaster)",
+        "artist_name": "The Smiths",
+        "itunesId": 1257810949
       }
     ]
   },
@@ -1041,7 +1275,10 @@
         "audioUrl": "256397243",
         "startAt": "0:00",
         "audioDuration": 21,
-        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/yeah"
+        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/yeah",
+        "song_title": "Yeah! (feat. Lil Jon & Ludacris)",
+        "artist_name": "Usher",
+        "itunesId": 386153478
       },
       {
         "word": "GETLOW",
@@ -1053,7 +1290,10 @@
         "audioUrl": "318930349",
         "startAt": "0:00",
         "audioDuration": 22,
-        "soundcloudUrl": "https://soundcloud.com/lil_jon/get-low"
+        "soundcloudUrl": "https://soundcloud.com/lil_jon/get-low",
+        "song_title": "Get Low (feat. Ying Yang Twins)",
+        "artist_name": "LIL JON",
+        "itunesId": 311288439
       },
       {
         "word": "TAILFEATHER",
@@ -1065,7 +1305,10 @@
         "audioUrl": "252917670",
         "startAt": "0:11",
         "audioDuration": 16,
-        "soundcloudUrl": "https://soundcloud.com/murphy-lee-official/shake-ya-tailfeather-radio-1"
+        "soundcloudUrl": "https://soundcloud.com/murphy-lee-official/shake-ya-tailfeather-radio-1",
+        "song_title": "Shake Ya Tailfeather (Radio Edit) [feat. Nelly & P. Diddy]",
+        "artist_name": "Murphy Lee",
+        "itunesId": 1443880794
       },
       {
         "word": "HUMPS",
@@ -1077,7 +1320,10 @@
         "audioUrl": "253579468",
         "startAt": "0:00",
         "audioDuration": 27,
-        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/my-humps-album-version"
+        "soundcloudUrl": "https://soundcloud.com/black-eyed-peas-official/my-humps-album-version",
+        "song_title": "My Humps",
+        "artist_name": "Black Eyed Peas",
+        "itunesId": 1440632597
       },
       {
         "word": "PIMP",
@@ -1089,7 +1335,10 @@
         "audioUrl": "255894098",
         "startAt": "0:00",
         "audioDuration": 14,
-        "soundcloudUrl": "https://soundcloud.com/50_cent/p-i-m-p-1"
+        "soundcloudUrl": "https://soundcloud.com/50_cent/p-i-m-p-1",
+        "song_title": "P.I.M.P.",
+        "artist_name": "50 Cent",
+        "itunesId": 1440842046
       },
       {
         "word": "LOLLIPOP",
@@ -1101,7 +1350,10 @@
         "audioUrl": "360856238",
         "startAt": "0:00",
         "audioDuration": 16,
-        "soundcloudUrl": "https://soundcloud.com/nickolas-muzzi/lil-wayne-lollipop"
+        "soundcloudUrl": "https://soundcloud.com/nickolas-muzzi/lil-wayne-lollipop",
+        "song_title": "Lil Wayne - Lollipop",
+        "artist_name": "Nickolas Muzzi",
+        "itunesId": 1440737349
       },
       {
         "word": "LOW",
@@ -1113,7 +1365,10 @@
         "audioUrl": "1827317058",
         "startAt": "0:14",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain-1"
+        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain-1",
+        "song_title": "Low (feat. T-Pain)",
+        "artist_name": "Flo Rida",
+        "itunesId": 272171635
       },
       {
         "word": "DRANK",
@@ -1125,7 +1380,10 @@
         "audioUrl": "257063740",
         "startAt": "0:01",
         "audioDuration": 28,
-        "soundcloudUrl": "https://soundcloud.com/t-pain/buy-u-a-drank-shawty-snappin"
+        "soundcloudUrl": "https://soundcloud.com/t-pain/buy-u-a-drank-shawty-snappin",
+        "song_title": "Buy U a Drank (Shawty Snappin') [feat. Yung Joc]",
+        "artist_name": "T-Pain",
+        "itunesId": 1556722419
       },
       {
         "word": "SHAKE",
@@ -1137,7 +1395,10 @@
         "audioUrl": "283999696",
         "startAt": "0:00",
         "audioDuration": 20,
-        "soundcloudUrl": "https://soundcloud.com/iamkelis/milkshake-3"
+        "soundcloudUrl": "https://soundcloud.com/iamkelis/milkshake-3",
+        "song_title": "Milkshake",
+        "artist_name": "kelis",
+        "itunesId": 275018555
       },
       {
         "word": "YOURBODY",
@@ -1149,7 +1410,10 @@
         "audioUrl": "256093123",
         "startAt": "0:00",
         "audioDuration": 27,
-        "soundcloudUrl": "https://soundcloud.com/justintimberlake/rock-your-body"
+        "soundcloudUrl": "https://soundcloud.com/justintimberlake/rock-your-body",
+        "song_title": "Rock Your Body",
+        "artist_name": "Justin Timberlake",
+        "itunesId": 252606598
       }
     ]
   },
@@ -1175,7 +1439,10 @@
         "audioUrl": "254956317",
         "startAt": "0:18",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/the-kingsmen-official/louie-louie"
+        "soundcloudUrl": "https://soundcloud.com/the-kingsmen-official/louie-louie",
+        "song_title": "Louie Louie",
+        "artist_name": "The Kingsmen",
+        "itunesId": 121695005
       },
       {
         "word": "WAKA",
@@ -1187,7 +1454,10 @@
         "audioUrl": "256275102",
         "startAt": "0:00",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/shakira/waka-waka-this-time-for"
+        "soundcloudUrl": "https://soundcloud.com/shakira/waka-waka-this-time-for",
+        "song_title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (Single) [feat. Freshlyground]",
+        "artist_name": "Shakira",
+        "itunesId": 371784883
       },
       {
         "word": "TONIGHT",
@@ -1199,7 +1469,10 @@
         "audioUrl": "254132243",
         "startAt": "0:02",
         "audioDuration": 12,
-        "soundcloudUrl": "https://soundcloud.com/hotchelleraeofficial/tonight-tonight"
+        "soundcloudUrl": "https://soundcloud.com/hotchelleraeofficial/tonight-tonight",
+        "song_title": "Tonight Tonight",
+        "artist_name": "Hot Chelle Rae",
+        "itunesId": 473422500
       },
       {
         "word": "DURAN",
@@ -1211,7 +1484,10 @@
         "audioUrl": "256055639",
         "startAt": "0:09",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/duranduran/hungry-like-the-wolf-2009"
+        "soundcloudUrl": "https://soundcloud.com/duranduran/hungry-like-the-wolf-2009",
+        "song_title": "Hungry Like the Wolf (2009 Remaster)",
+        "artist_name": "Duran Duran",
+        "itunesId": 1717830066
       },
       {
         "word": "REBEL",
@@ -1223,7 +1499,10 @@
         "audioUrl": "262448807",
         "startAt": "0:08",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/davidbowieofficial/rebel-rebel-2016-remastered"
+        "soundcloudUrl": "https://soundcloud.com/davidbowieofficial/rebel-rebel-2016-remastered",
+        "song_title": "Rebel Rebel (2016 Remaster)",
+        "artist_name": "DavidBowieOfficial",
+        "itunesId": 1195108771
       },
       {
         "word": "TALK",
@@ -1235,7 +1514,10 @@
         "audioUrl": "225617976",
         "startAt": "1:43",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/cesar-rocha-60888289/talk-talk-its-my-life-12-extended"
+        "soundcloudUrl": "https://soundcloud.com/cesar-rocha-60888289/talk-talk-its-my-life-12-extended",
+        "song_title": "Talk Talk - It's My Life (12 Extended)",
+        "artist_name": "Cesar Rocha",
+        "itunesId": 1739080348
       },
       {
         "word": "MISTER",
@@ -1247,7 +1529,10 @@
         "audioUrl": "252616444",
         "startAt": "0:19",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/mr-mister-official/broken-wings-4"
+        "soundcloudUrl": "https://soundcloud.com/mr-mister-official/broken-wings-4",
+        "song_title": "Broken Wings",
+        "artist_name": "Mr. Mister",
+        "itunesId": 303089712
       },
       {
         "word": "BANG",
@@ -1259,7 +1544,10 @@
         "audioUrl": "309401672",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/jessiejofficial/bang-bang"
+        "soundcloudUrl": "https://soundcloud.com/jessiejofficial/bang-bang",
+        "song_title": "Bang Bang",
+        "artist_name": "JESSIE J",
+        "itunesId": 1541967574
       },
       {
         "word": "HONEY",
@@ -1271,7 +1559,10 @@
         "audioUrl": "253123285",
         "startAt": "0:20",
         "audioDuration": 9,
-        "soundcloudUrl": "https://soundcloud.com/abba-official/honey-honey"
+        "soundcloudUrl": "https://soundcloud.com/abba-official/honey-honey",
+        "song_title": "Honey, Honey",
+        "artist_name": "Abba",
+        "itunesId": 1440862274
       },
       {
         "word": "TALK",
@@ -1283,7 +1574,10 @@
         "audioUrl": "1839769311",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/charlixcx/talk-talk"
+        "soundcloudUrl": "https://soundcloud.com/charlixcx/talk-talk",
+        "song_title": "Talk talk",
+        "artist_name": "charlixcx",
+        "itunesId": 1739080348
       }
     ]
   },
@@ -1309,7 +1603,10 @@
         "audioUrl": "262038358",
         "startAt": "0:14",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/drkartoshka/national-anthem-of-scotland-flower-of-scotland-bagpipes"
+        "soundcloudUrl": "https://soundcloud.com/drkartoshka/national-anthem-of-scotland-flower-of-scotland-bagpipes",
+        "song_title": "National Anthem Of Scotland- Flower Of Scotland - Bagpipes",
+        "artist_name": "DrKartoshka",
+        "itunesId": 442952167
       },
       {
         "word": "TAKEMEOUT",
@@ -1321,7 +1618,10 @@
         "audioUrl": "255861762",
         "startAt": "1:13",
         "audioDuration": 16,
-        "soundcloudUrl": "https://soundcloud.com/franzferdinand/take-me-out"
+        "soundcloudUrl": "https://soundcloud.com/franzferdinand/take-me-out",
+        "song_title": "Take Me Out",
+        "artist_name": "Franz Ferdinand",
+        "itunesId": 315844084
       },
       {
         "word": "HARRIS",
@@ -1333,7 +1633,10 @@
         "audioUrl": "143553285",
         "startAt": "0:40",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/calvinharris/calvin-harris-summer-extended"
+        "soundcloudUrl": "https://soundcloud.com/calvinharris/calvin-harris-summer-extended",
+        "song_title": "Calvin Harris - Summer (Extended)",
+        "artist_name": "Calvin Harris",
+        "itunesId": 888369241
       },
       {
         "word": "BRAVE",
@@ -1345,7 +1648,10 @@
         "audioUrl": "252603150",
         "startAt": "0:28",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/julie-fowlis-official/touch-the-sky"
+        "soundcloudUrl": "https://soundcloud.com/julie-fowlis-official/touch-the-sky",
+        "song_title": "Touch The Sky (From \"Brave\"/Soundtrack)",
+        "artist_name": "Julie Fowlis",
+        "itunesId": 1557975371
       },
       {
         "word": "BAGPIPES",
@@ -1357,7 +1663,10 @@
         "audioUrl": "227692150",
         "startAt": "0:17",
         "audioDuration": 12,
-        "soundcloudUrl": "https://soundcloud.com/2013yearold/eminem-bagpipes-from-baghdad"
+        "soundcloudUrl": "https://soundcloud.com/2013yearold/eminem-bagpipes-from-baghdad",
+        "song_title": "Eminem - Bagpipes from Baghdad",
+        "artist_name": "ǫᴜɪɢɢ",
+        "itunesId": 1440774466
       },
       {
         "word": "CALEDONIA",
@@ -1369,7 +1678,10 @@
         "audioUrl": "944303872",
         "startAt": "0:46",
         "audioDuration": 16,
-        "soundcloudUrl": "https://soundcloud.com/dougiemaclean/caledonia"
+        "soundcloudUrl": "https://soundcloud.com/dougiemaclean/caledonia",
+        "song_title": "Caledonia",
+        "artist_name": "Dougie MacLean",
+        "itunesId": 442662167
       },
       {
         "word": "MILES",
@@ -1381,7 +1693,10 @@
         "audioUrl": "245263267",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/tobias-vv-1/the-proclaimers-im-gonna-be-500-miles"
+        "soundcloudUrl": "https://soundcloud.com/tobias-vv-1/the-proclaimers-im-gonna-be-500-miles",
+        "song_title": "The Proclaimers - I'm Gonna Be (500 Miles)",
+        "artist_name": "Tobi",
+        "itunesId": 693789044
       },
       {
         "word": "LEWIS",
@@ -1393,7 +1708,10 @@
         "audioUrl": "526155132",
         "startAt": "0:16",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/lewiscapaldi/someone-you-loved-1"
+        "soundcloudUrl": "https://soundcloud.com/lewiscapaldi/someone-you-loved-1",
+        "song_title": "Someone You Loved",
+        "artist_name": "Lewis Capaldi",
+        "itunesId": 1452619054
       }
     ]
   },
@@ -1419,7 +1737,10 @@
         "audioUrl": "256526914",
         "startAt": "0:02",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/dance-for-you"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/dance-for-you",
+        "song_title": "Dance for You",
+        "artist_name": "Beyoncé",
+        "itunesId": 626205222
       },
       {
         "word": "YES",
@@ -1431,7 +1752,10 @@
         "audioUrl": "256526885",
         "startAt": "0:20",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/yes-album-version"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/yes-album-version",
+        "song_title": "Yes (Album Version)",
+        "artist_name": "Beyoncé",
+        "itunesId": 201276553
       },
       {
         "word": "MOVE",
@@ -1443,7 +1767,10 @@
         "audioUrl": "1313215570",
         "startAt": "1:46",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-move"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-move",
+        "song_title": "MOVE (feat. Grace Jones & Tems)",
+        "artist_name": "Beyoncé",
+        "itunesId": 1630005861
       },
       {
         "word": "LADIES",
@@ -1455,7 +1782,10 @@
         "audioUrl": "256526486",
         "startAt": "0:26",
         "audioDuration": 3,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/single-ladies-put-a-ring-on-3"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/single-ladies-put-a-ring-on-3",
+        "song_title": "Single Ladies (Put a Ring on It)",
+        "artist_name": "Beyoncé",
+        "itunesId": 296016899
       },
       {
         "word": "AMEN",
@@ -1467,7 +1797,10 @@
         "audioUrl": "1786306170",
         "startAt": "0:00",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-amen"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-amen",
+        "song_title": "AMEN",
+        "artist_name": "Beyoncé",
+        "itunesId": 1738364008
       },
       {
         "word": "LEMONADE",
@@ -1475,11 +1808,14 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "Album Title (Beyonc\u00e9's sixth album)",
+        "textClue": "Album Title (Beyoncé's sixth album)",
         "audioUrl": "610075443",
         "startAt": "0:00",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/pray-you-catch-me?in=beyonce%2Fsets%2Flemonade-59"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/pray-you-catch-me?in=beyonce%2Fsets%2Flemonade-59",
+        "song_title": "Pray You Catch Me",
+        "artist_name": "Beyoncé",
+        "itunesId": 1460430565
       },
       {
         "word": "SORRY",
@@ -1491,7 +1827,10 @@
         "audioUrl": "610075500",
         "startAt": "0:00",
         "audioDuration": 3,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/sorry-1"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/sorry-1",
+        "song_title": "Sorry",
+        "artist_name": "Beyoncé",
+        "itunesId": 1460430677
       },
       {
         "word": "BLUE",
@@ -1499,11 +1838,14 @@
         "startY": 6,
         "direction": "down",
         "color": "#28D66A",
-        "textClue": "Song title (also the name of Beyonc\u00e9\u2019s first child)",
+        "textClue": "Song title (also the name of Beyoncé’s first child)",
         "audioUrl": "256526600",
         "startAt": "0:20",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/blue"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/blue",
+        "song_title": "Blue (feat. Blue Ivy)",
+        "artist_name": "Beyoncé",
+        "itunesId": 780519989
       },
       {
         "word": "BDAY",
@@ -1511,11 +1853,14 @@
         "startY": 6,
         "direction": "down",
         "color": "#FFCEFD",
-        "textClue": "Album Title (Beyonc\u00e9's second album)",
+        "textClue": "Album Title (Beyoncé's second album)",
         "audioUrl": "256526592",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/kitty-kat-album-version"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/kitty-kat-album-version",
+        "song_title": "Kitty Kat (Album Version)",
+        "artist_name": "Beyoncé",
+        "itunesId": 1459930601
       },
       {
         "word": "PUREHONEY",
@@ -1527,7 +1872,10 @@
         "audioUrl": "1313215990",
         "startAt": "3:28",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-pure-honey"
+        "soundcloudUrl": "https://soundcloud.com/beyonce/beyonce-pure-honey",
+        "song_title": "PURE/HONEY",
+        "artist_name": "Beyoncé",
+        "itunesId": 1630006146
       }
     ]
   },
@@ -1553,7 +1901,10 @@
         "audioUrl": "759895474",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/tame-impala/borderline-1"
+        "soundcloudUrl": "https://soundcloud.com/tame-impala/borderline-1",
+        "song_title": "Borderline",
+        "artist_name": "Tame Impala",
+        "itunesId": 1497230972
       },
       {
         "word": "KILLERS",
@@ -1565,7 +1916,10 @@
         "audioUrl": "515862549",
         "startAt": "0:04",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/cedric-dos-santos/the-killers-when-you-were-young-cover"
+        "soundcloudUrl": "https://soundcloud.com/cedric-dos-santos/the-killers-when-you-were-young-cover",
+        "song_title": "The Killers - When You Were Young (cover)",
+        "artist_name": "Sarka",
+        "itunesId": 1440891180
       },
       {
         "word": "JUST",
@@ -1577,7 +1931,10 @@
         "audioUrl": "265069222",
         "startAt": "0:09",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/radiohead/just"
+        "soundcloudUrl": "https://soundcloud.com/radiohead/just",
+        "song_title": "Just",
+        "artist_name": "Radiohead",
+        "itunesId": 1097862901
       },
       {
         "word": "BEVERLY",
@@ -1589,7 +1946,10 @@
         "audioUrl": "256245884",
         "startAt": "0:08",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/weezer/beverly-hills"
+        "soundcloudUrl": "https://soundcloud.com/weezer/beverly-hills",
+        "song_title": "Beverly Hills",
+        "artist_name": "Weezer",
+        "itunesId": 1440865427
       },
       {
         "word": "CLOCKS",
@@ -1601,7 +1961,10 @@
         "audioUrl": "183302450",
         "startAt": "0:10",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/mac-levine/clocks-coldplay"
+        "soundcloudUrl": "https://soundcloud.com/mac-levine/clocks-coldplay",
+        "song_title": "Clocks - Coldplay",
+        "artist_name": "Mac Levine",
+        "itunesId": 1122776156
       },
       {
         "word": "BODY",
@@ -1613,7 +1976,10 @@
         "audioUrl": "1353803509",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/arcticmonkeys/body-paint"
+        "soundcloudUrl": "https://soundcloud.com/arcticmonkeys/body-paint",
+        "song_title": "Body Paint",
+        "artist_name": "ArcticMonkeys",
+        "itunesId": 1639369025
       },
       {
         "word": "VIDA",
@@ -1625,7 +1991,10 @@
         "audioUrl": "513971754",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/user-956334953/coldplay-viva-la-vida"
+        "soundcloudUrl": "https://soundcloud.com/user-956334953/coldplay-viva-la-vida",
+        "song_title": "Coldplay - Viva La Vida",
+        "artist_name": "coldplay songs",
+        "itunesId": 1122773680
       },
       {
         "word": "ELECTRIC",
@@ -1637,7 +2006,10 @@
         "audioUrl": "327323388",
         "startAt": "0:07",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/e123-omega/mgmt-electric-feel-mp3-1"
+        "soundcloudUrl": "https://soundcloud.com/e123-omega/mgmt-electric-feel-mp3-1",
+        "song_title": "MGMT - Electric Feel.mp3",
+        "artist_name": "e123 Omega",
+        "itunesId": 1687386390
       },
       {
         "word": "STAY",
@@ -1649,7 +2021,10 @@
         "audioUrl": "99275769",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/u2/zooropa-stay-faraway-so-close-preview"
+        "soundcloudUrl": "https://soundcloud.com/u2/zooropa-stay-faraway-so-close-preview",
+        "song_title": "Stay (Faraway, So Close!)",
+        "artist_name": "U 2",
+        "itunesId": 1512593452
       },
       {
         "word": "JACK",
@@ -1661,7 +2036,10 @@
         "audioUrl": "271224293",
         "startAt": "0:08",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/jackjohnsonmusic/better-together-3"
+        "soundcloudUrl": "https://soundcloud.com/jackjohnsonmusic/better-together-3",
+        "song_title": "Better Together",
+        "artist_name": "jackjohnsonmusic",
+        "itunesId": 1440768696
       },
       {
         "word": "STROKES",
@@ -1673,7 +2051,10 @@
         "audioUrl": "1449644119",
         "startAt": "0:23",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/thestrokes/last-nite-rough-trade-version"
+        "soundcloudUrl": "https://soundcloud.com/thestrokes/last-nite-rough-trade-version",
+        "song_title": "Last Nite (Rough Trade Version - The Modern Age B-Side)",
+        "artist_name": "The Strokes",
+        "itunesId": 1663033143
       }
     ]
   },
@@ -1699,7 +2080,10 @@
         "audioUrl": "665718947",
         "startAt": "0:10",
         "audioDuration": 9,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/juicy-1"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/juicy-1",
+        "song_title": "Juicy",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1453882731
       },
       {
         "word": "CANDY",
@@ -1711,7 +2095,10 @@
         "audioUrl": "414863073",
         "startAt": "1:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/candy"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/candy",
+        "song_title": "Candy",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1453882722
       },
       {
         "word": "SAYSO",
@@ -1723,7 +2110,10 @@
         "audioUrl": "708018586",
         "startAt": "0:18",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/say-so"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/say-so",
+        "song_title": "Say So",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1486465101
       },
       {
         "word": "WOMAN",
@@ -1735,7 +2125,10 @@
         "audioUrl": "1073025025",
         "startAt": "0:19",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/woman"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/woman",
+        "song_title": "Woman",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1571169048
       },
       {
         "word": "PARACHUTE",
@@ -1747,7 +2140,10 @@
         "audioUrl": "2149809222",
         "startAt": "0:00",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/jealous-type"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/jealous-type",
+        "song_title": "Jealous Type",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1834042905
       },
       {
         "word": "AMALA",
@@ -1759,7 +2155,10 @@
         "audioUrl": "407291313",
         "startAt": "0:22",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/go-to-town"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/go-to-town",
+        "song_title": "Go To Town",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1453882525
       },
       {
         "word": "KISSMEMORE",
@@ -1771,7 +2170,10 @@
         "audioUrl": "1023919816",
         "startAt": "0:06",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/kiss-me-more-feat-sza"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/kiss-me-more-feat-sza",
+        "song_title": "Kiss Me More (feat. SZA)",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1577637152
       },
       {
         "word": "COW",
@@ -1783,7 +2185,10 @@
         "audioUrl": "502316700",
         "startAt": "1:59",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/userunkown00/doja-cat-moo-bitch-im-a-cow"
+        "soundcloudUrl": "https://soundcloud.com/userunkown00/doja-cat-moo-bitch-im-a-cow",
+        "song_title": "Doja Cat - Moo",
+        "artist_name": "Baby Gurl",
+        "itunesId": 1434470231
       },
       {
         "word": "PTTR",
@@ -1795,7 +2200,10 @@
         "audioUrl": "1576853254",
         "startAt": "0:13",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/paint-the-town-red"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/paint-the-town-red",
+        "song_title": "Paint The Town Red",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1699831061
       }
     ]
   },
@@ -1821,7 +2229,10 @@
         "audioUrl": "253188547",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/thewho/baba-oriley-original-album"
+        "soundcloudUrl": "https://soundcloud.com/thewho/baba-oriley-original-album",
+        "song_title": "Baba O'Riley",
+        "artist_name": "The Who",
+        "itunesId": 1440815872
       },
       {
         "word": "UNUSUAL",
@@ -1833,7 +2244,10 @@
         "audioUrl": "259084586",
         "startAt": "0:00",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/tom-jones-official/its-not-unusual-2nd-studio-1"
+        "soundcloudUrl": "https://soundcloud.com/tom-jones-official/its-not-unusual-2nd-studio-1",
+        "song_title": "It's Not Unusual",
+        "artist_name": "Tom Jones",
+        "itunesId": 1434895938
       },
       {
         "word": "BEATLES",
@@ -1845,7 +2259,10 @@
         "audioUrl": "220461019",
         "startAt": "0:00",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/the-early-beatles/help"
+        "soundcloudUrl": "https://soundcloud.com/the-early-beatles/help",
+        "song_title": "Help!",
+        "artist_name": "The.Early Beatles",
+        "itunesId": 1441164536
       },
       {
         "word": "CREAM",
@@ -1857,7 +2274,10 @@
         "audioUrl": "254542320",
         "startAt": "0:11",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/cream-official/sunshine-of-your-love-1"
+        "soundcloudUrl": "https://soundcloud.com/cream-official/sunshine-of-your-love-1",
+        "song_title": "Sunshine Of Your Love",
+        "artist_name": "Cream",
+        "itunesId": 1440817744
       },
       {
         "word": "KINKS",
@@ -1869,7 +2289,10 @@
         "audioUrl": "252919412",
         "startAt": "0:05",
         "audioDuration": 9,
-        "soundcloudUrl": "https://soundcloud.com/thekinks/you-really-got-me"
+        "soundcloudUrl": "https://soundcloud.com/thekinks/you-really-got-me",
+        "song_title": "You Really Got Me",
+        "artist_name": "The Kinks",
+        "itunesId": 1622186745
       },
       {
         "word": "TRS",
@@ -1881,7 +2304,10 @@
         "audioUrl": "255762164",
         "startAt": "0:20",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/rolling-stones-official/sympathy-for-the-devil"
+        "soundcloudUrl": "https://soundcloud.com/rolling-stones-official/sympathy-for-the-devil",
+        "song_title": "Sympathy For The Devil",
+        "artist_name": "The Rolling Stones",
+        "itunesId": 1500643398
       },
       {
         "word": "BLACK",
@@ -1893,7 +2319,10 @@
         "audioUrl": "255762722",
         "startAt": "0:05",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/rolling-stones-official/paint-it-black-1"
+        "soundcloudUrl": "https://soundcloud.com/rolling-stones-official/paint-it-black-1",
+        "song_title": "Paint It, Black",
+        "artist_name": "The Rolling Stones",
+        "itunesId": 1440745782
       },
       {
         "word": "WILDTHING",
@@ -1905,7 +2334,10 @@
         "audioUrl": "253186248",
         "startAt": "0:00",
         "audioDuration": 9,
-        "soundcloudUrl": "https://soundcloud.com/the-troggs/wild-thing-3"
+        "soundcloudUrl": "https://soundcloud.com/the-troggs/wild-thing-3",
+        "song_title": "Wild Thing",
+        "artist_name": "The Troggs",
+        "itunesId": 1475182476
       },
       {
         "word": "ZOMBIES",
@@ -1917,7 +2349,10 @@
         "audioUrl": "259051535",
         "startAt": "0:04",
         "audioDuration": 12,
-        "soundcloudUrl": "https://soundcloud.com/the-zombies-official/time-of-the-season"
+        "soundcloudUrl": "https://soundcloud.com/the-zombies-official/time-of-the-season",
+        "song_title": "Time of the Season (Mono Version)",
+        "artist_name": "The Zombies",
+        "itunesId": 1719885026
       }
     ]
   },
@@ -1943,7 +2378,10 @@
         "audioUrl": "66301726",
         "startAt": "0:00",
         "audioDuration": 19,
-        "soundcloudUrl": "https://soundcloud.com/klausbadelt/8m67v5-6-18?in=esmail-ayman-tamim%2Fsets%2Fpirates-of-the-caribbean"
+        "soundcloudUrl": "https://soundcloud.com/klausbadelt/8m67v5-6-18?in=esmail-ayman-tamim%2Fsets%2Fpirates-of-the-caribbean",
+        "song_title": "Pirates of the Caribbean: Curse of the Black Pearl - He's a Pirate",
+        "artist_name": "Klaus Badelt",
+        "itunesId": 1423242457
       },
       {
         "word": "HALO",
@@ -1955,7 +2393,10 @@
         "audioUrl": "80736171",
         "startAt": "0:12.5",
         "audioDuration": 22.5,
-        "soundcloudUrl": "https://soundcloud.com/alexctba/halo-theme"
+        "soundcloudUrl": "https://soundcloud.com/alexctba/halo-theme",
+        "song_title": "Halo - Theme",
+        "artist_name": "Alexctba",
+        "itunesId": 1784508835
       },
       {
         "word": "THRONES",
@@ -1967,7 +2408,10 @@
         "audioUrl": "144848972",
         "startAt": "0:00",
         "audioDuration": 25,
-        "soundcloudUrl": "https://soundcloud.com/game-of-thrones-songs/opening-theme-game-of-thrones"
+        "soundcloudUrl": "https://soundcloud.com/game-of-thrones-songs/opening-theme-game-of-thrones",
+        "song_title": "Opening Theme - Game of Thrones",
+        "artist_name": "Game of Thrones Songs",
+        "itunesId": 1440800348
       },
       {
         "word": "AVATAR",
@@ -1979,7 +2423,10 @@
         "audioUrl": "173438373",
         "startAt": "0:04",
         "audioDuration": 24,
-        "soundcloudUrl": "https://soundcloud.com/kaleb-sikora-1/the-avatars-love"
+        "soundcloudUrl": "https://soundcloud.com/kaleb-sikora-1/the-avatars-love",
+        "song_title": "The Avatar's Love",
+        "artist_name": "Kaleb Sikora 1",
+        "itunesId": 1515469884
       },
       {
         "word": "LOTR",
@@ -1991,7 +2438,10 @@
         "audioUrl": "76616758",
         "startAt": "0:18",
         "audioDuration": 19,
-        "soundcloudUrl": "https://soundcloud.com/hadeer-hassan/concerning-hobbits-howard"
+        "soundcloudUrl": "https://soundcloud.com/hadeer-hassan/concerning-hobbits-howard",
+        "song_title": "Concerning Hobbits - Howard Shore",
+        "artist_name": "Hadeer Hassan",
+        "itunesId": 323714096
       },
       {
         "word": "GHIBLI",
@@ -2003,7 +2453,10 @@
         "audioUrl": "756428086",
         "startAt": "0:00",
         "audioDuration": 17,
-        "soundcloudUrl": "https://soundcloud.com/joe-hisaishi-official/merry-go-round-from-howls"
+        "soundcloudUrl": "https://soundcloud.com/joe-hisaishi-official/merry-go-round-from-howls",
+        "song_title": "Merry-Go-Round of Life (from 'Howl's Moving Castle')",
+        "artist_name": "Joe Hisaishi",
+        "itunesId": 1498699387
       },
       {
         "word": "POTTER",
@@ -2015,7 +2468,10 @@
         "audioUrl": "1242020578",
         "startAt": "1:35",
         "audioDuration": 19,
-        "soundcloudUrl": "https://soundcloud.com/johnwilliams-official/hedwigs-theme-theme-from-harry"
+        "soundcloudUrl": "https://soundcloud.com/johnwilliams-official/hedwigs-theme-theme-from-harry",
+        "song_title": "Hedwig's Theme (Theme from Harry Potter)",
+        "artist_name": "John Williams",
+        "itunesId": 1616652625
       },
       {
         "word": "DARTHMAUL",
@@ -2027,7 +2483,10 @@
         "audioUrl": "1128043075",
         "startAt": "0:00",
         "audioDuration": 21,
-        "soundcloudUrl": "https://soundcloud.com/johnwilliams-official/duel-of-the-fates"
+        "soundcloudUrl": "https://soundcloud.com/johnwilliams-official/duel-of-the-fates",
+        "song_title": "Duel of the Fates (From \"Star Wars: The Phantom Menace\"/Score)",
+        "artist_name": "John Williams",
+        "itunesId": 1375814326
       },
       {
         "word": "DUNE",
@@ -2039,7 +2498,10 @@
         "audioUrl": "1740916821",
         "startAt": "0:44",
         "audioDuration": 19,
-        "soundcloudUrl": "https://soundcloud.com/hans-zimmer-official/worm-ride"
+        "soundcloudUrl": "https://soundcloud.com/hans-zimmer-official/worm-ride",
+        "song_title": "Worm Ride",
+        "artist_name": "Hans Zimmer",
+        "itunesId": 1732116841
       }
     ]
   },
@@ -2065,7 +2527,10 @@
         "audioUrl": "257053998",
         "startAt": "0:06",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/billyjoel/we-didnt-start-the-fire"
+        "soundcloudUrl": "https://soundcloud.com/billyjoel/we-didnt-start-the-fire",
+        "song_title": "We Didn't Start the Fire",
+        "artist_name": "Billy Joel",
+        "itunesId": 158816462
       },
       {
         "word": "RUN",
@@ -2077,7 +2542,10 @@
         "audioUrl": "257037374",
         "startAt": "0:12",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-to-run-1"
+        "soundcloudUrl": "https://soundcloud.com/brucespringsteen/born-to-run-1",
+        "song_title": "Born to Run",
+        "artist_name": "Bruce Springsteen",
+        "itunesId": 1045058681
       },
       {
         "word": "SEPTEMBER",
@@ -2089,7 +2557,10 @@
         "audioUrl": "256031283",
         "startAt": "0:11",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/earthwindandfire/september-from-the-best-of"
+        "soundcloudUrl": "https://soundcloud.com/earthwindandfire/september-from-the-best-of",
+        "song_title": "September",
+        "artist_name": "Earth, Wind & Fire",
+        "itunesId": 1456623340
       },
       {
         "word": "YUSUF",
@@ -2101,7 +2572,10 @@
         "audioUrl": "336094125",
         "startAt": "0:05",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/yusufcatstevens/wild-world"
+        "soundcloudUrl": "https://soundcloud.com/yusufcatstevens/wild-world",
+        "song_title": "Wild World",
+        "artist_name": "YusufCatStevens",
+        "itunesId": 1535560798
       },
       {
         "word": "SEGER",
@@ -2113,7 +2587,10 @@
         "audioUrl": "151375397",
         "startAt": "0:09",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/dreammind/old-time-rock-and-roll"
+        "soundcloudUrl": "https://soundcloud.com/dreammind/old-time-rock-and-roll",
+        "song_title": "Old Time Rock And Roll",
+        "artist_name": "dreammind",
+        "itunesId": 1759150679
       },
       {
         "word": "JOLENE",
@@ -2125,7 +2602,10 @@
         "audioUrl": "328182539",
         "startAt": "0:14",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/dollyparton/jolene-album-version"
+        "soundcloudUrl": "https://soundcloud.com/dollyparton/jolene-album-version",
+        "song_title": "Jolene",
+        "artist_name": "Dolly Parton",
+        "itunesId": 1062400330
       },
       {
         "word": "TMHCR",
@@ -2137,7 +2617,10 @@
         "audioUrl": "344663239",
         "startAt": "0:06",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/john-denver-official/take-me-home-country-roads-12"
+        "soundcloudUrl": "https://soundcloud.com/john-denver-official/take-me-home-country-roads-12",
+        "song_title": "Take Me Home, Country Roads",
+        "artist_name": "John Denver",
+        "itunesId": 1617388079
       },
       {
         "word": "BARRACUDA",
@@ -2149,7 +2632,10 @@
         "audioUrl": "254237094",
         "startAt": "0:13",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/heartofficial/barracuda-2"
+        "soundcloudUrl": "https://soundcloud.com/heartofficial/barracuda-2",
+        "song_title": "Barracuda",
+        "artist_name": "Heart",
+        "itunesId": 193520079
       },
       {
         "word": "FUNKY",
@@ -2161,7 +2647,10 @@
         "audioUrl": "253507498",
         "startAt": "0:16",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/wild-cherry-official/play-that-funky-music"
+        "soundcloudUrl": "https://soundcloud.com/wild-cherry-official/play-that-funky-music",
+        "song_title": "Play That Funky Music",
+        "artist_name": "Wild Cherry",
+        "itunesId": 198226129
       }
     ]
   },
@@ -2187,7 +2676,10 @@
         "audioUrl": "216540873",
         "startAt": "0:00",
         "audioDuration": 23.2,
-        "soundcloudUrl": "https://soundcloud.com/davidguetta/where-them-girls-at"
+        "soundcloudUrl": "https://soundcloud.com/davidguetta/where-them-girls-at",
+        "song_title": "Where Them Girls At (feat. Nicki Minaj & Flo Rida)",
+        "artist_name": "David Guetta",
+        "itunesId": 693224810
       },
       {
         "word": "BOB",
@@ -2199,7 +2691,10 @@
         "audioUrl": "215772350",
         "startAt": "0:00",
         "audioDuration": 20.4,
-        "soundcloudUrl": "https://soundcloud.com/bobatl/bob-headband-feat-2-chainz"
+        "soundcloudUrl": "https://soundcloud.com/bobatl/bob-headband-feat-2-chainz",
+        "song_title": "B.o.B - HeadBand (feat. 2 Chainz)",
+        "artist_name": "B.o.B",
+        "itunesId": 737022989
       },
       {
         "word": "FIREBALL",
@@ -2211,7 +2706,10 @@
         "audioUrl": "197650018",
         "startAt": "0:18",
         "audioDuration": 13.2,
-        "soundcloudUrl": "https://soundcloud.com/gerard-puig-3/pitbull-john-ryan-fireball"
+        "soundcloudUrl": "https://soundcloud.com/gerard-puig-3/pitbull-john-ryan-fireball",
+        "song_title": "Pitbull, John Ryan - Fireball",
+        "artist_name": "Gjert",
+        "itunesId": 933984097
       },
       {
         "word": "HAPPINESS",
@@ -2223,7 +2721,10 @@
         "audioUrl": "18853020",
         "startAt": "1:14",
         "audioDuration": 23.5,
-        "soundcloudUrl": "https://soundcloud.com/steveaoki/kid-cudi-pursuit-of-happiness"
+        "soundcloudUrl": "https://soundcloud.com/steveaoki/kid-cudi-pursuit-of-happiness",
+        "song_title": "Kid Cudi - Pursuit of Happiness (Steve Aoki Remix)",
+        "artist_name": "Steve Aoki",
+        "itunesId": 1686201397
       },
       {
         "word": "CLOSER",
@@ -2235,7 +2736,10 @@
         "audioUrl": "274720380",
         "startAt": "0:09",
         "audioDuration": 19,
-        "soundcloudUrl": "https://soundcloud.com/thechainsmokers/closer"
+        "soundcloudUrl": "https://soundcloud.com/thechainsmokers/closer",
+        "song_title": "Closer (feat. Halsey)",
+        "artist_name": "The Chainsmokers",
+        "itunesId": 1170699703
       },
       {
         "word": "MOBAMBA",
@@ -2246,7 +2750,10 @@
         "textClue": "The frat party national anthem",
         "audioUrl": "328456146",
         "startAt": "0:03.5",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "sheck wes - mo bamba (prod. 16yrold & take a daytrip)",
+        "artist_name": "16yrold",
+        "itunesId": 1438063138
       },
       {
         "word": "JORDAN",
@@ -2258,7 +2765,10 @@
         "audioUrl": "445847721",
         "startAt": "0:19",
         "audioDuration": 21.3,
-        "soundcloudUrl": "https://soundcloud.com/mutant32/jordan-belfort"
+        "soundcloudUrl": "https://soundcloud.com/mutant32/jordan-belfort",
+        "song_title": "Jordan Belfort",
+        "artist_name": "mutant32",
+        "itunesId": 1032879006
       },
       {
         "word": "NOHANDS",
@@ -2270,7 +2780,10 @@
         "audioUrl": "38497323",
         "startAt": "1:15.14",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/wakaflockaflame/no-hands"
+        "soundcloudUrl": "https://soundcloud.com/wakaflockaflame/no-hands",
+        "song_title": "No Hands (feat. Roscoe Dash & Wale)",
+        "artist_name": "Waka Flocka Flame",
+        "itunesId": 389062076
       }
     ]
   },
@@ -2295,7 +2808,10 @@
         "textClue": "Song title",
         "audioUrl": "169388245",
         "startAt": "2:42",
-        "audioDuration": 16
+        "audioDuration": 16,
+        "song_title": "Madonna - Borderline",
+        "artist_name": "Dave Shacter-Michaels",
+        "itunesId": 80815626
       },
       {
         "word": "DANCE",
@@ -2306,7 +2822,10 @@
         "textClue": "What does she want to do?",
         "audioUrl": "253799714",
         "startAt": "2:03",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "I Wanna Dance with Somebody (Who Loves Me)",
+        "artist_name": "WHITNEY HOUSTON",
+        "itunesId": 1334780224
       },
       {
         "word": "GOGO",
@@ -2317,7 +2836,10 @@
         "textClue": "\"before you ____\"",
         "audioUrl": "300437872",
         "startAt": "0:30",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Wham! - Wake Me Up Before You Go - Go",
+        "artist_name": "Roberto Carvalho",
+        "itunesId": 477441973
       },
       {
         "word": "ANNIE",
@@ -2328,7 +2850,10 @@
         "textClue": "Who does Michael ask if they're okay?",
         "audioUrl": "308950076",
         "startAt": "2:30",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Michael Jackson - Smooth Criminal",
+        "artist_name": "UmarkX",
+        "itunesId": 159294551
       },
       {
         "word": "JUMP",
@@ -2339,7 +2864,10 @@
         "textClue": "\"Go ahead and ____\"",
         "audioUrl": "232329335",
         "startAt": "0:00",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Jump",
+        "artist_name": "Van Halen",
+        "itunesId": 976832495
       },
       {
         "word": "EGYPTIAN",
@@ -2350,7 +2878,10 @@
         "textClue": "\"Walk like an ____\"",
         "audioUrl": "420966381",
         "startAt": "0:00",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "The Bangles - Walk Like An Egyptian",
+        "artist_name": "TOTPs 80's",
+        "itunesId": 200008030
       },
       {
         "word": "DAVIDBOWIE",
@@ -2361,7 +2892,10 @@
         "textClue": "Artist name",
         "audioUrl": "46361966",
         "startAt": "0:52",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Starman (2012 Remaster)",
+        "artist_name": "DavidBowieOfficial",
+        "itunesId": 1039797280
       },
       {
         "word": "RUNNING",
@@ -2372,7 +2906,10 @@
         "textClue": "The verb in this song's title",
         "audioUrl": "254527393",
         "startAt": "0:42",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Running Up That Hill (A Deal With God)",
+        "artist_name": "Kate Bush",
+        "itunesId": 1675560578
       },
       {
         "word": "DIANA",
@@ -2383,7 +2920,10 @@
         "textClue": "Artist first name",
         "audioUrl": 254149925,
         "startAt": "0:08",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "Upside Down",
+        "artist_name": "Diana Ross",
+        "itunesId": 1452791458
       },
       {
         "word": "GIVEYOUUP",
@@ -2394,7 +2934,10 @@
         "textClue": "\"Never gonna ____\"",
         "audioUrl": "1242868615",
         "startAt": "0:00",
-        "audioDuration": 2
+        "audioDuration": 2,
+        "song_title": "Never Gonna Give You Up",
+        "artist_name": "Rick Astley",
+        "itunesId": 1773293184
       }
     ]
   },
@@ -2419,7 +2962,10 @@
         "textClue": "Most-streamed album by a female artist [Album title]",
         "audioUrl": 1048163956,
         "startAt": "0:05",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "good 4 u",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1560735551
       },
       {
         "word": "TTPD",
@@ -2430,7 +2976,10 @@
         "textClue": "Most-streamed album in a single day [Album Acronym]",
         "audioUrl": 1803423306,
         "startAt": "2:05",
-        "audioDuration": 7.5
+        "audioDuration": 7.5,
+        "song_title": "But Daddy I Love Him",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1736268392
       },
       {
         "word": "ESPRESSO",
@@ -2441,7 +2990,10 @@
         "textClue": "Most-streamed song by a female artist [Song title]",
         "audioUrl": 1799087761,
         "startAt": "0:09",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Espresso",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1740212434
       },
       {
         "word": "ARIJIT",
@@ -2452,7 +3004,10 @@
         "textClue": "Most followed artist on Spotify [First name]",
         "audioUrl": 819450262,
         "startAt": "0:16",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Pachtaoge (From \"Jaani Ve\") [feat. B Praak]",
+        "artist_name": "Arijit Singh",
+        "itunesId": 1566016015
       },
       {
         "word": "QUEEN",
@@ -2463,7 +3018,10 @@
         "textClue": "Most-streamed rock artist [Artist name]",
         "audioUrl": 252515196,
         "startAt": "0:42",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Another One Bites The Dust (Remastered 2011)",
+        "artist_name": "Queen",
+        "itunesId": 1702759924
       },
       {
         "word": "APT",
@@ -2474,7 +3032,10 @@
         "textClue": "2nd-fastest song to reach 1B streams [Song title]",
         "audioUrl": 1937452967,
         "startAt": "0:10",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "APT.",
+        "artist_name": "ROSÉ",
+        "itunesId": 1779454433
       },
       {
         "word": "SWIFT",
@@ -2485,7 +3046,10 @@
         "textClue": "Most streamed artist all time [Artist last name]",
         "audioUrl": 1367286193,
         "startAt": "0:44",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Anti-Hero",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1649434293
       },
       {
         "word": "OPHELIA",
@@ -2496,7 +3060,10 @@
         "textClue": "Most-streamed (non-seasonal) song in a single day [Song title, last word]",
         "audioUrl": 2181406707,
         "startAt": "0:38",
-        "audioDuration": 10.5
+        "audioDuration": 10.5,
+        "song_title": "The Fate of Ophelia",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1833328840
       },
       {
         "word": "FLOWERS",
@@ -2507,7 +3074,10 @@
         "textClue": "Fastest song to reach 1B streams [Song title]",
         "audioUrl": 1423132066,
         "startAt": "0:21",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Miley Cyrus - Flowers (Acoustic)",
+        "artist_name": "SoundPost",
+        "itunesId": 1702906535
       },
       {
         "word": "SEVEN",
@@ -2518,7 +3088,10 @@
         "textClue": "Most-streamed debut track by any artist [Song title]",
         "audioUrl": 1657245045,
         "startAt": "0:43",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "BTS Jungkook & Latto - Seven (Clean Ver.)",
+        "artist_name": "hhjs3nse",
+        "itunesId": 1709555102
       }
     ]
   },
@@ -2544,7 +3117,10 @@
         "audioUrl": "1901884191",
         "startAt": "1:43",
         "audioDuration": 16.5,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/slim-pickins?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/slim-pickins?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1",
+        "song_title": "Slim Pickins",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1750307371
       },
       {
         "word": "PLEASE",
@@ -2556,7 +3132,10 @@
         "audioUrl": "1840545771",
         "startAt": "0:00",
         "audioDuration": 6.4,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-please?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-please?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1",
+        "song_title": "Please Please Please",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1750307080
       },
       {
         "word": "NONSENSE",
@@ -2568,7 +3147,10 @@
         "audioUrl": "1301637733",
         "startAt": "2:20",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/nonsense"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/nonsense",
+        "song_title": "Nonsense",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1631586891
       },
       {
         "word": "HOT",
@@ -2580,7 +3162,10 @@
         "audioUrl": "2161676655",
         "startAt": "23:28",
         "audioDuration": 10.6,
-        "soundcloudUrl": "https://soundcloud.com/tell-fer/sabrina-carpenter-mans-best"
+        "soundcloudUrl": "https://soundcloud.com/tell-fer/sabrina-carpenter-mans-best",
+        "song_title": "Sabrina Carpenter - Man’s Best Friend (Album)",
+        "artist_name": "Tell Fer",
+        "itunesId": 1819861167
       },
       {
         "word": "FLOOR",
@@ -2592,7 +3177,10 @@
         "audioUrl": "2161676655",
         "startAt": "32:13",
         "audioDuration": 7.8,
-        "soundcloudUrl": "https://soundcloud.com/tell-fer/sabrina-carpenter-mans-best"
+        "soundcloudUrl": "https://soundcloud.com/tell-fer/sabrina-carpenter-mans-best",
+        "song_title": "Sabrina Carpenter - Man’s Best Friend (Album)",
+        "artist_name": "Tell Fer",
+        "itunesId": 1819861170
       },
       {
         "word": "EICS",
@@ -2604,7 +3192,10 @@
         "audioUrl": "1301633866",
         "startAt": "0:43",
         "audioDuration": 12.4,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/tornado-warnings"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/tornado-warnings",
+        "song_title": "Tornado Warnings",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1676555533
       },
       {
         "word": "MINUTES",
@@ -2616,7 +3207,10 @@
         "audioUrl": "2033600068",
         "startAt": "0:00",
         "audioDuration": 13.5,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/15-minutes?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/15-minutes?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1",
+        "song_title": "15 Minutes",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1795513277
       },
       {
         "word": "ESPRESSO",
@@ -2628,7 +3222,10 @@
         "audioUrl": "1799087761",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-espresso?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/sabrina-carpenter-espresso?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1",
+        "song_title": "Espresso",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1740212434
       },
       {
         "word": "MANCHILD",
@@ -2640,7 +3237,10 @@
         "audioUrl": "2108590512",
         "startAt": "0:32.5",
         "audioDuration": 8.5,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/manchild"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/manchild",
+        "song_title": "Manchild",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1818103445
       },
       {
         "word": "BEDCHEM",
@@ -2652,7 +3252,10 @@
         "audioUrl": "1901887812",
         "startAt": "1:01",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/bed-chem?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1"
+        "soundcloudUrl": "https://soundcloud.com/sabrinacarpenter/bed-chem?in=sabrinacarpenter%2Fsets%2Fshort-n-sweet-deluxe-1",
+        "song_title": "Bed Chem",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1750307088
       }
     ]
   },
@@ -2677,7 +3280,10 @@
         "audioUrl": "255893901",
         "startAt": "0:00",
         "audioDuration": 6.2,
-        "soundcloudUrl": "https://soundcloud.com/50_cent/in-da-club"
+        "soundcloudUrl": "https://soundcloud.com/50_cent/in-da-club",
+        "song_title": "In Da Club",
+        "artist_name": "50 Cent",
+        "itunesId": 1440841857
       },
       {
         "word": "FIREBURNING",
@@ -2689,7 +3295,10 @@
         "audioUrl": "309809494",
         "startAt": "0:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/seankingston/fire-burning-album-version"
+        "soundcloudUrl": "https://soundcloud.com/seankingston/fire-burning-album-version",
+        "song_title": "Fire Burning",
+        "artist_name": "Sean Kingston",
+        "itunesId": 312051360
       },
       {
         "word": "LOW",
@@ -2701,7 +3310,10 @@
         "audioUrl": "271224235",
         "startAt": "0:12",
         "audioDuration": 20,
-        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain"
+        "soundcloudUrl": "https://soundcloud.com/official_flo/low-feat-t-pain",
+        "song_title": "Low (feat T-Pain)",
+        "artist_name": "Flo Rida",
+        "itunesId": 272171635
       },
       {
         "word": "DOJA",
@@ -2713,7 +3325,10 @@
         "audioUrl": "1073025196",
         "startAt": "0:00",
         "audioDuration": 17.25,
-        "soundcloudUrl": "https://soundcloud.com/amalaofficial/get-into-it-yuh"
+        "soundcloudUrl": "https://soundcloud.com/amalaofficial/get-into-it-yuh",
+        "song_title": "Get Into It (Yuh)",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1577636701
       },
       {
         "word": "DECIDE",
@@ -2725,7 +3340,10 @@
         "audioUrl": "461627763",
         "startAt": "0:00",
         "audioDuration": 10.4,
-        "soundcloudUrl": "https://soundcloud.com/seankingston/eenie-meenie-radio-version"
+        "soundcloudUrl": "https://soundcloud.com/seankingston/eenie-meenie-radio-version",
+        "song_title": "Eenie Meenie (Radio Version)",
+        "artist_name": "Sean Kingston",
+        "itunesId": 1499872000
       },
       {
         "word": "MISTLETOE",
@@ -2737,7 +3355,10 @@
         "audioUrl": "737719336",
         "startAt": "0:57",
         "audioDuration": 17.5,
-        "soundcloudUrl": "https://soundcloud.com/justinbieber/mistletoe"
+        "soundcloudUrl": "https://soundcloud.com/justinbieber/mistletoe",
+        "song_title": "Mistletoe",
+        "artist_name": "Justin Bieber",
+        "itunesId": 1440640717
       },
       {
         "word": "JUICYJ",
@@ -2749,7 +3370,10 @@
         "audioUrl": "170339902",
         "startAt": "0:07",
         "audioDuration": 13.8,
-        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/usher-i-dont-mind-feat-juicy-j"
+        "soundcloudUrl": "https://soundcloud.com/usher-raymond-music/usher-i-dont-mind-feat-juicy-j",
+        "song_title": "I Don't Mind (feat. Juicy J)",
+        "artist_name": "Usher",
+        "itunesId": 944304852
       },
       {
         "word": "BAR",
@@ -2761,7 +3385,10 @@
         "audioUrl": "257063829",
         "startAt": "0:17",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/t-pain/bartender-main-version"
+        "soundcloudUrl": "https://soundcloud.com/t-pain/bartender-main-version",
+        "song_title": "Bartender (feat. Akon)",
+        "artist_name": "T-Pain",
+        "itunesId": 1556722108
       },
       {
         "word": "IPOD",
@@ -2773,7 +3400,10 @@
         "audioUrl": "256078245",
         "startAt": "0:50",
         "audioDuration": 10.8,
-        "soundcloudUrl": "https://soundcloud.com/iyazliveofficial/replay"
+        "soundcloudUrl": "https://soundcloud.com/iyazliveofficial/replay",
+        "song_title": "Replay",
+        "artist_name": "Iyaz",
+        "itunesId": 326644034
       },
       {
         "word": "WOW",
@@ -2785,7 +3415,10 @@
         "audioUrl": "590222589",
         "startAt": "0:12",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/postmalone/wow-remix-feat-roddy-ricch"
+        "soundcloudUrl": "https://soundcloud.com/postmalone/wow-remix-feat-roddy-ricch",
+        "song_title": "Wow. (Remix) [feat. Roddy Ricch & Tyga]",
+        "artist_name": "Post Malone",
+        "itunesId": 1456309803
       }
     ]
   },
@@ -2810,7 +3443,10 @@
         "audioUrl": "292644115",
         "startAt": "2:07",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/user-529140083/pink-floyd-comfortably-numb"
+        "soundcloudUrl": "https://soundcloud.com/user-529140083/pink-floyd-comfortably-numb",
+        "song_title": "Pink Floyd - Comfortably Numb",
+        "artist_name": "User 529140083",
+        "itunesId": 1065976170
       },
       {
         "word": "GOODE",
@@ -2822,7 +3458,10 @@
         "audioUrl": "392458596",
         "startAt": "1:31",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/chuck-berry-official/johnny-b-goode-46"
+        "soundcloudUrl": "https://soundcloud.com/chuck-berry-official/johnny-b-goode-46",
+        "song_title": "Johnny B. Goode",
+        "artist_name": "Chuck Berry",
+        "itunesId": 1425230917
       },
       {
         "word": "HEAVEN",
@@ -2834,7 +3473,10 @@
         "audioUrl": "220716911",
         "startAt": "5:54",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/cxrana/led-zeppelin-stairway-to-heaven"
+        "soundcloudUrl": "https://soundcloud.com/cxrana/led-zeppelin-stairway-to-heaven",
+        "song_title": "Led Zeppelin - Stairway To Heaven",
+        "artist_name": "Cx Rana",
+        "itunesId": 902620521
       },
       {
         "word": "RHAPSODY",
@@ -2846,7 +3488,10 @@
         "audioUrl": "253166273",
         "startAt": "2:37",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/queen-69312/bohemian-rhapsody-remastered-1"
+        "soundcloudUrl": "https://soundcloud.com/queen-69312/bohemian-rhapsody-remastered-1",
+        "song_title": "Bohemian Rhapsody (Remastered 2011)",
+        "artist_name": "Queen",
+        "itunesId": 1434899948
       },
       {
         "word": "FREEBIRD",
@@ -2858,7 +3503,10 @@
         "audioUrl": "55541152",
         "startAt": "4:55",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/sammael1985/lynyrd-skynyrd-free-bird"
+        "soundcloudUrl": "https://soundcloud.com/sammael1985/lynyrd-skynyrd-free-bird",
+        "song_title": "Lynyrd Skynyrd - Free Bird",
+        "artist_name": "Sammael1985",
+        "itunesId": 1445734235
       },
       {
         "word": "PUPPETS",
@@ -2870,7 +3518,10 @@
         "audioUrl": "755973217",
         "startAt": "5:43",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/officialmetallica/master-of-puppets-remastered"
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/master-of-puppets-remastered",
+        "song_title": "Master of Puppets (Remastered)",
+        "artist_name": "Metallica",
+        "itunesId": 1275600554
       },
       {
         "word": "THECHAIN",
@@ -2882,7 +3533,10 @@
         "audioUrl": "1908112457",
         "startAt": "5:04",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/viktoria-panchenko-204335031/silence-sound-effect_a5eqh4ll"
+        "soundcloudUrl": "https://soundcloud.com/viktoria-panchenko-204335031/silence-sound-effect_a5eqh4ll",
+        "song_title": "Fleetwood Mac - The Chain",
+        "artist_name": "ronoro",
+        "itunesId": 651880159
       },
       {
         "word": "YOURLOVE",
@@ -2894,7 +3548,10 @@
         "audioUrl": "125714060",
         "startAt": "2:04",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/barak_lanciano/cream-sunshine-of-your-love"
+        "soundcloudUrl": "https://soundcloud.com/barak_lanciano/cream-sunshine-of-your-love",
+        "song_title": "Cream - Sunshine of your love",
+        "artist_name": "Barak Lanciano",
+        "itunesId": 1440817744
       },
       {
         "word": "BEAT",
@@ -2906,7 +3563,10 @@
         "audioUrl": "1928867318",
         "startAt": "2:50",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/darion-lopez-38557354/beat-it-michael-jackson"
+        "soundcloudUrl": "https://soundcloud.com/darion-lopez-38557354/beat-it-michael-jackson",
+        "song_title": "Beat It - Michael Jackson",
+        "artist_name": "WillYouStillLoveMeWhenYourDead - Michael Jackson",
+        "itunesId": 1883770179
       }
     ]
   },
@@ -2931,7 +3591,10 @@
         "audioUrl": "432427398",
         "soundcloudUrl": "https://soundcloud.com/arianagrande/no-tears-left-to-cry",
         "startAt": "0:00",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "no tears left to cry",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1399204228
       },
       {
         "word": "ETERNAL",
@@ -2943,7 +3606,10 @@
         "audioUrl": "1768729722",
         "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-eternal-sunshine",
         "startAt": "0:00",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "eternal sunshine",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1800579959
       },
       {
         "word": "POV",
@@ -2955,7 +3621,10 @@
         "audioUrl": "919105429",
         "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-pov",
         "startAt": "0:23",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "pov",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1537486848
       },
       {
         "word": "NASTY",
@@ -2967,7 +3636,10 @@
         "audioUrl": "919106869",
         "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-nasty",
         "startAt": "0:16",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "nasty",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1537477058
       },
       {
         "word": "MYHAIR",
@@ -2979,7 +3651,10 @@
         "audioUrl": 919106629,
         "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-my-hair",
         "startAt": "0:10",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "my hair",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1537476959
       },
       {
         "word": "THIRTY",
@@ -2991,7 +3666,10 @@
         "audioUrl": "919104553",
         "soundcloudUrl": "https://soundcloud.com/arianagrande/ariana-grande-six-thirty",
         "startAt": "0:14",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "six thirty",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1537476949
       },
       {
         "word": "REM",
@@ -3003,7 +3681,10 @@
         "audioUrl": "616330317",
         "soundcloudUrl": "https://soundcloud.com/silentwolfmusic/ariana-grande-rem",
         "startAt": "0:37",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Ariana Grande - R.E.M.",
+        "artist_name": "Silent Wolf Music",
+        "itunesId": 1399203657
       },
       {
         "word": "RAIN",
@@ -3015,7 +3696,10 @@
         "audioUrl": 486816183,
         "soundcloudUrl": "https://soundcloud.com/arianagrande/raindrops-an-angel-cried",
         "startAt": "0:08",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "raindrops (an angel cried)",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1399202556
       },
       {
         "word": "GLINDA",
@@ -3027,7 +3711,10 @@
         "audioUrl": "1964055863",
         "soundcloudUrl": "https://soundcloud.com/wickedmoviecast/popular",
         "startAt": "1:06",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Popular",
+        "artist_name": "Wicked Movie Cast",
+        "itunesId": 1785016385
       },
       {
         "word": "PETE",
@@ -3039,7 +3726,10 @@
         "audioUrl": "641156541",
         "soundcloudUrl": "https://soundcloud.com/user-958673303/pete-davidson-live-in-london-ariana-grande",
         "startAt": "0:07",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "pete davidson (live in london) - ariana grande ♡",
+        "artist_name": "palaceofmy",
+        "itunesId": 1399202963
       }
     ]
   },
@@ -3064,7 +3754,10 @@
         "audioUrl": 324527624,
         "soundcloudUrl": "https://soundcloud.com/lukecombs/when-it-rains-it-pours",
         "startAt": "0:14",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "When It Rains It Pours",
+        "artist_name": "Luke Combs",
+        "itunesId": 1228888143
       },
       {
         "word": "BROOKS",
@@ -3076,7 +3769,10 @@
         "audioUrl": 1198228636,
         "soundcloudUrl": "https://soundcloud.com/user-860294120/garth-brooks-friends-in-low",
         "startAt": "0:46",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Garth Brooks - Friends In Low Places",
+        "artist_name": "Revolutionary Country",
+        "itunesId": 1759901224
       },
       {
         "word": "STRAIT",
@@ -3088,7 +3784,10 @@
         "audioUrl": 256203010,
         "soundcloudUrl": "https://soundcloud.com/george-strait-music/check-yes-or-no-album-version",
         "startAt": "0:43",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Check Yes Or No",
+        "artist_name": "George Strait Music",
+        "itunesId": 1440806197
       },
       {
         "word": "WILLIAMS",
@@ -3100,7 +3799,10 @@
         "audioUrl": 368428397,
         "soundcloudUrl": "https://soundcloud.com/hank-williams-official/hey-good-lookin-23",
         "startAt": "0:07",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "Hey, Good Lookin'",
+        "artist_name": "Hank Williams",
+        "itunesId": 1440673045
       },
       {
         "word": "HAGGARD",
@@ -3112,7 +3814,10 @@
         "audioUrl": 287253119,
         "soundcloudUrl": "https://soundcloud.com/merle-haggard-official/mama-tried-3",
         "startAt": "0:50",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Mama Tried",
+        "artist_name": "Merle Haggard",
+        "itunesId": 724522536
       },
       {
         "word": "JACKSON",
@@ -3124,7 +3829,10 @@
         "audioUrl": 254074573,
         "soundcloudUrl": "https://soundcloud.com/alanjacksonofficial/chattahoochee",
         "startAt": "0:14",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Chattahoochee",
+        "artist_name": "Alan Jackson",
+        "itunesId": 258626629
       },
       {
         "word": "CHESNEY",
@@ -3136,7 +3844,10 @@
         "audioUrl": 522695301,
         "soundcloudUrl": "https://soundcloud.com/kenny_chesney/american-kids",
         "startAt": "0:16",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "American Kids",
+        "artist_name": "Kenny Chesney",
+        "itunesId": 904056331
       },
       {
         "word": "MCGRAW",
@@ -3148,7 +3859,10 @@
         "audioUrl": 1173607246,
         "soundcloudUrl": "https://soundcloud.com/timmcgrawofficial/tim-mcgraw-something-like-1",
         "startAt": "0:40",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Something Like That",
+        "artist_name": "Tim McGraw",
+        "itunesId": 80604985
       },
       {
         "word": "WILLIAMS",
@@ -3160,7 +3874,10 @@
         "audioUrl": 736117876,
         "soundcloudUrl": "https://soundcloud.com/don-williams-official/tulsa-time-5",
         "startAt": "0:47",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Tulsa Time",
+        "artist_name": "Don Williams",
+        "itunesId": 1440673045
       },
       {
         "word": "ROGERS",
@@ -3172,7 +3889,10 @@
         "audioUrl": 1473504976,
         "soundcloudUrl": "https://soundcloud.com/royrogers-music/happy-trails",
         "startAt": "0:08",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Happy Trails",
+        "artist_name": "Roy Rogers",
+        "itunesId": 1622800316
       },
       {
         "word": "STAPLETON",
@@ -3184,7 +3904,10 @@
         "audioUrl": 924198421,
         "soundcloudUrl": "https://soundcloud.com/chris-stapleton-music/you-should-probably-leave",
         "startAt": "0:31",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "You Should Probably Leave",
+        "artist_name": "Chris Stapleton",
+        "itunesId": 1528423169
       }
     ]
   },
@@ -3209,7 +3932,10 @@
         "audioUrl": "971135476",
         "startAt": "0:23",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/user-758819682/nas-ny-state-of-mind-432hz"
+        "soundcloudUrl": "https://soundcloud.com/user-758819682/nas-ny-state-of-mind-432hz",
+        "song_title": "Nas - NY State Of Mind (432hz)",
+        "artist_name": "Astray777",
+        "itunesId": 662324539
       },
       {
         "word": "SALTNPEPA",
@@ -3221,7 +3947,10 @@
         "audioUrl": "253183119",
         "startAt": "0:58",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/salt-n-pepa-official/shoop"
+        "soundcloudUrl": "https://soundcloud.com/salt-n-pepa-official/shoop",
+        "song_title": "Shoop",
+        "artist_name": "Salt-N-Pepa",
+        "itunesId": 732709945
       },
       {
         "word": "CRACK",
@@ -3233,7 +3962,10 @@
         "audioUrl": "257084039",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/notoriousbig/ten-crack-commandments-3"
+        "soundcloudUrl": "https://soundcloud.com/notoriousbig/ten-crack-commandments-3",
+        "song_title": "Ten Crack Commandments (2007 Remaster)",
+        "artist_name": "Notorious B.I.G.",
+        "itunesId": 216666859
       },
       {
         "word": "HITEMUP",
@@ -3245,7 +3977,10 @@
         "audioUrl": "1492798312",
         "startAt": "0:56",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/2pac/hit-em-up-feat-outlawz"
+        "soundcloudUrl": "https://soundcloud.com/2pac/hit-em-up-feat-outlawz",
+        "song_title": "Hit Em Up (feat. Outlawz)",
+        "artist_name": "2Pac",
+        "itunesId": 1440764354
       },
       {
         "word": "HOTSTEPPER",
@@ -3257,7 +3992,10 @@
         "audioUrl": "239233507",
         "startAt": "0:22",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/mahmoudmoo/here-comes-the-hotstepper"
+        "soundcloudUrl": "https://soundcloud.com/mahmoudmoo/here-comes-the-hotstepper",
+        "song_title": "Here Comes The  Hotstepper",
+        "artist_name": "mahmoudmoo",
+        "itunesId": 872609088
       },
       {
         "word": "PLAYER",
@@ -3269,7 +4007,10 @@
         "audioUrl": "1657541865",
         "startAt": "1:16",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/toddchilds/big-punisher-feat-joe-still"
+        "soundcloudUrl": "https://soundcloud.com/toddchilds/big-punisher-feat-joe-still",
+        "itunesId": 1441805033,
+        "song_title": "Still Not a Player",
+        "artist_name": "Big Punisher"
       },
       {
         "word": "ANNIE",
@@ -3281,7 +4022,10 @@
         "audioUrl": "269473333",
         "startAt": "0:07",
         "audioDuration": 20,
-        "soundcloudUrl": "https://soundcloud.com/jay-z-official/hard-knock-life-ghetto"
+        "soundcloudUrl": "https://soundcloud.com/jay-z-official/hard-knock-life-ghetto",
+        "song_title": "Hard Knock Life (Ghetto Anthem)",
+        "artist_name": "JAŸ-Z",
+        "itunesId": 1440913399
       },
       {
         "word": "REGULATE",
@@ -3293,7 +4037,10 @@
         "audioUrl": "1495672249",
         "startAt": "0:50",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/warrengeezy/regulate-feat-nate-dogg"
+        "soundcloudUrl": "https://soundcloud.com/warrengeezy/regulate-feat-nate-dogg",
+        "song_title": "Regulate (feat. Nate Dogg)",
+        "artist_name": "WARREN G",
+        "itunesId": 1452811341
       },
       {
         "word": "MACK",
@@ -3305,7 +4052,10 @@
         "audioUrl": "256126172",
         "startAt": "0:21",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/markmorrisonmusic/return-of-the-mack-c-j-street"
+        "soundcloudUrl": "https://soundcloud.com/markmorrisonmusic/return-of-the-mack-c-j-street",
+        "song_title": "Return of the Mack",
+        "artist_name": "Mark Morrison",
+        "itunesId": 81902612
       }
     ]
   },
@@ -3330,7 +4080,10 @@
         "audioUrl": "256044826",
         "startAt": "0:00",
         "audioDuration": 22,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/somewhere-in-brooklyn"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/somewhere-in-brooklyn",
+        "song_title": "Somewhere in Brooklyn",
+        "artist_name": "brunomars",
+        "itunesId": 576670471
       },
       {
         "word": "MAN",
@@ -3342,7 +4095,10 @@
         "audioUrl": "1298158699",
         "startAt": "0:00",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/poop-poop-828317186/bruno-mars-when-i-was-your-man"
+        "soundcloudUrl": "https://soundcloud.com/poop-poop-828317186/bruno-mars-when-i-was-your-man",
+        "song_title": "Bruno Mars - When I Was Your Man",
+        "artist_name": "YFW Crunch",
+        "itunesId": 573962555
       },
       {
         "word": "COUNT",
@@ -3354,7 +4110,10 @@
         "audioUrl": "256044831",
         "startAt": "0:00",
         "audioDuration": 20,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/count-on-me"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/count-on-me",
+        "song_title": "Count on Me",
+        "artist_name": "brunomars",
+        "itunesId": 576655102
       },
       {
         "word": "WILD",
@@ -3366,7 +4125,10 @@
         "audioUrl": "242706733",
         "startAt": "0:00",
         "audioDuration": 16,
-        "soundcloudUrl": "https://soundcloud.com/ignacio-montero-villar/young-wild-and-free-ft-bruno"
+        "soundcloudUrl": "https://soundcloud.com/ignacio-montero-villar/young-wild-and-free-ft-bruno",
+        "song_title": "Young Wild And Free Ft Bruno Mars (snoop Dogg Ampamp Wiz Khalifa) [Mp3g.lu].mp3",
+        "artist_name": "Ignacio Montero Villar",
+        "itunesId": 480436634
       },
       {
         "word": "ITWILLRAIN",
@@ -3378,7 +4140,10 @@
         "audioUrl": "343448894",
         "startAt": "0:00",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/itzjay-55816819/it-will-rain"
+        "soundcloudUrl": "https://soundcloud.com/itzjay-55816819/it-will-rain",
+        "song_title": "It Will Rain",
+        "artist_name": "Bruno Mars",
+        "itunesId": 467967161
       },
       {
         "word": "BLUE",
@@ -3390,7 +4155,10 @@
         "audioUrl": "271222066",
         "startAt": "0:12",
         "audioDuration": 25,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/liquor-store-blues-feat-damian"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/liquor-store-blues-feat-damian",
+        "song_title": "Liquor Store Blues (feat. Damian Marley)",
+        "artist_name": "brunomars",
+        "itunesId": 576655101
       },
       {
         "word": "WHATILIKE",
@@ -3402,7 +4170,10 @@
         "audioUrl": "293231242",
         "startAt": "0:00",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/thats-what-i-like"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/thats-what-i-like",
+        "song_title": "That's What I Like",
+        "artist_name": "brunomars",
+        "itunesId": 1779096874
       },
       {
         "word": "RUN",
@@ -3414,7 +4185,10 @@
         "audioUrl": "328200343",
         "startAt": "0:00",
         "audioDuration": 18,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/runaway-baby"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/runaway-baby",
+        "song_title": "Runaway Baby",
+        "artist_name": "brunomars",
+        "itunesId": 576670461
       },
       {
         "word": "GIRLS",
@@ -3426,7 +4200,10 @@
         "audioUrl": "276935481",
         "startAt": "0:00",
         "audioDuration": 29,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/young-girls"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/young-girls",
+        "song_title": "Young Girls",
+        "artist_name": "brunomars",
+        "itunesId": 581806433
       },
       {
         "word": "ONYOU",
@@ -3438,7 +4215,10 @@
         "audioUrl": "214127881",
         "startAt": "0:04",
         "audioDuration": 9,
-        "soundcloudUrl": "https://soundcloud.com/bobatl/nothin-on-you-feat-bruno-mars"
+        "soundcloudUrl": "https://soundcloud.com/bobatl/nothin-on-you-feat-bruno-mars",
+        "song_title": "B.o.B - Nothin' On You (feat. Bruno Mars)",
+        "artist_name": "B.o.B",
+        "itunesId": 368017283
       },
       {
         "word": "LAZY",
@@ -3450,7 +4230,10 @@
         "audioUrl": "271221757",
         "startAt": "0:00",
         "audioDuration": 6,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/the-lazy-song"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/the-lazy-song",
+        "song_title": "The Lazy Song",
+        "artist_name": "brunomars",
+        "itunesId": 576655098
       },
       {
         "word": "WINDOW",
@@ -3462,7 +4245,10 @@
         "audioUrl": "1154295199",
         "startAt": "0:24",
         "audioDuration": 12,
-        "soundcloudUrl": "https://soundcloud.com/brunomars/bruno-mars-anderson-paak-4"
+        "soundcloudUrl": "https://soundcloud.com/brunomars/bruno-mars-anderson-paak-4",
+        "song_title": "Smokin Out The Window",
+        "artist_name": "brunomars",
+        "itunesId": 1611638138
       }
     ]
   },
@@ -3487,7 +4273,10 @@
         "audioUrl": "252603150",
         "startAt": "0:29",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/julie-fowlis-official/touch-the-sky"
+        "soundcloudUrl": "https://soundcloud.com/julie-fowlis-official/touch-the-sky",
+        "song_title": "Touch The Sky (From \"Brave\"/Soundtrack)",
+        "artist_name": "Julie Fowlis",
+        "itunesId": 1557975371
       },
       {
         "word": "DWAYNE",
@@ -3499,7 +4288,10 @@
         "audioUrl": "293546331",
         "startAt": "0:35",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/dwaynejohnsonofficial/youre-welcome"
+        "soundcloudUrl": "https://soundcloud.com/dwaynejohnsonofficial/youre-welcome",
+        "song_title": "You're Welcome (From \"Moana\"/Soundtrack Version)",
+        "artist_name": "Dwayne Johnson",
+        "itunesId": 1570496576
       },
       {
         "word": "SUPER",
@@ -3511,7 +4303,10 @@
         "audioUrl": "267396495",
         "startAt": "0:17",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/dick-van-dyke-official/supercalifragilisticexpialidoc"
+        "soundcloudUrl": "https://soundcloud.com/dick-van-dyke-official/supercalifragilisticexpialidoc",
+        "song_title": "Supercalifragilisticexpialidocious (From \"Mary Poppins\" Soundtrack)",
+        "artist_name": "Dick Van Dyke",
+        "itunesId": 1440670275
       },
       {
         "word": "JUNGLEBOOK",
@@ -3523,7 +4318,10 @@
         "audioUrl": "267387954",
         "startAt": "0:41",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/bruce-reitherman/the-bare-necessities"
+        "soundcloudUrl": "https://soundcloud.com/bruce-reitherman/the-bare-necessities",
+        "song_title": "The Bare Necessities",
+        "artist_name": "Bruce Reitherman",
+        "itunesId": 1440780188
       },
       {
         "word": "ARIEL",
@@ -3535,7 +4333,10 @@
         "audioUrl": "1500047809",
         "startAt": "2:23",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/halle_bailey/part-of-your-world-from-the"
+        "soundcloudUrl": "https://soundcloud.com/halle_bailey/part-of-your-world-from-the",
+        "song_title": "Part of Your World (From \"The Little Mermaid\")",
+        "artist_name": "Halle",
+        "itunesId": 1698224675
       },
       {
         "word": "MULAN",
@@ -3547,7 +4348,10 @@
         "audioUrl": "267471136",
         "startAt": "0:16",
         "audioDuration": 9,
-        "soundcloudUrl": "https://soundcloud.com/donny-osmond-official/ill-make-a-man-out-of-you?in=jerry-goldsmith-official%2Fsets%2Fmulan-original-soundtrack"
+        "soundcloudUrl": "https://soundcloud.com/donny-osmond-official/ill-make-a-man-out-of-you?in=jerry-goldsmith-official%2Fsets%2Fmulan-original-soundtrack",
+        "song_title": "I'll Make a Man Out of You",
+        "artist_name": "Donny Osmond",
+        "itunesId": 1440662805
       },
       {
         "word": "BEOURGUEST",
@@ -3559,7 +4363,10 @@
         "audioUrl": "107304909",
         "startAt": "0:25.6",
         "audioDuration": 15.4,
-        "soundcloudUrl": "https://soundcloud.com/blessing-peter-1/be-our-guest"
+        "soundcloudUrl": "https://soundcloud.com/blessing-peter-1/be-our-guest",
+        "song_title": "be our guest",
+        "artist_name": "blessing peter 1",
+        "itunesId": 1440618901
       },
       {
         "word": "PETERPAN",
@@ -3571,7 +4378,10 @@
         "audioUrl": "267457730",
         "startAt": "0:08",
         "audioDuration": 14,
-        "soundcloudUrl": "https://soundcloud.com/jack-lawrence-official/never-smile-at-a-crocodile"
+        "soundcloudUrl": "https://soundcloud.com/jack-lawrence-official/never-smile-at-a-crocodile",
+        "song_title": "Never Smile at a Crocodile",
+        "artist_name": "Jack Lawrence",
+        "itunesId": 1440652817
       },
       {
         "word": "LILO",
@@ -3583,7 +4393,10 @@
         "audioUrl": "2091738387",
         "startAt": "0:23",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/iamtongi/hawaiian-roller-coaster-ride"
+        "soundcloudUrl": "https://soundcloud.com/iamtongi/hawaiian-roller-coaster-ride",
+        "song_title": "Hawaiian Roller Coaster Ride (From \"Lilo & Stitch\")",
+        "artist_name": "Iam Tongi",
+        "itunesId": 1812749916
       }
     ]
   },
@@ -3607,7 +4420,10 @@
         "audioUrl": 251380719,
         "soundcloudUrl": "https://soundcloud.com/gwen-stefani/hollaback-girl-album-version-1",
         "startAt": "0:04.2",
-        "audioDuration": 18.9
+        "audioDuration": 18.9,
+        "song_title": "Hollaback Girl",
+        "artist_name": "Gwen Stefani",
+        "itunesId": 1491226770
       },
       {
         "word": "SAYMYNAME",
@@ -3619,7 +4435,10 @@
         "audioUrl": 253510334,
         "soundcloudUrl": "https://soundcloud.com/destinys-child-official/say-my-name",
         "startAt": "0:00",
-        "audioDuration": 15.8
+        "audioDuration": 15.8,
+        "song_title": "Say My Name",
+        "artist_name": "Destiny's Child",
+        "itunesId": 266809802
       },
       {
         "word": "TOXIC",
@@ -3631,7 +4450,10 @@
         "audioUrl": 256024558,
         "soundcloudUrl": "https://soundcloud.com/britneyspears/toxic",
         "startAt": "0:14",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "Toxic",
+        "artist_name": "Britney Spears",
+        "itunesId": 251948354
       },
       {
         "word": "GENIE",
@@ -3643,7 +4465,10 @@
         "audioUrl": 1288279645,
         "soundcloudUrl": "https://soundcloud.com/2bflr1azmcun/genie-in-a-bottle-christina",
         "startAt": "0:49",
-        "audioDuration": 12.7
+        "audioDuration": 12.7,
+        "song_title": "Genie in a bottle [] Christina Aguilera [] little slowed",
+        "artist_name": "𝑆𝑜𝑚𝑒𝑜𝑛𝑒 𝑟𝑎𝑛𝑑𝑜𝑚",
+        "itunesId": 1308542773
       },
       {
         "word": "MYLOVE",
@@ -3655,7 +4480,10 @@
         "audioUrl": 256093076,
         "soundcloudUrl": "https://soundcloud.com/justintimberlake/my-love-clean",
         "startAt": "0:00",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "My Love (feat. T.I.)",
+        "artist_name": "Justin Timberlake",
+        "itunesId": 400946439
       },
       {
         "word": "SUNSHINE",
@@ -3667,7 +4495,10 @@
         "audioUrl": 254118117,
         "soundcloudUrl": "https://soundcloud.com/natashabedingfieldofficial/pocketful-of-sunshine-1",
         "startAt": "0:05",
-        "audioDuration": 20
+        "audioDuration": 20,
+        "song_title": "Pocketful of Sunshine",
+        "artist_name": "Natasha Bedingfield",
+        "itunesId": 1429194116
       },
       {
         "word": "TIMBALAND",
@@ -3679,7 +4510,10 @@
         "audioUrl": 253184404,
         "soundcloudUrl": "https://soundcloud.com/nellyfurtado/promiscuous-album-version",
         "startAt": "1:39",
-        "audioDuration": 26
+        "audioDuration": 26,
+        "song_title": "Promiscuous (feat. Timbaland)",
+        "artist_name": "Nelly Furtado",
+        "itunesId": 1442463848
       },
       {
         "word": "MUSTANG",
@@ -3691,7 +4525,10 @@
         "audioUrl": 253183202,
         "soundcloudUrl": "https://soundcloud.com/fergie-music/glamorous",
         "startAt": "0:15",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "Glamorous (feat. Ludacris)",
+        "artist_name": "Fergie",
+        "itunesId": 1443820713
       }
     ]
   },
@@ -3715,7 +4552,10 @@
         "audioUrl": 292554088,
         "soundcloudUrl": "https://soundcloud.com/majorlazer/major-lazer-cold-water-feat-justin-bieber-modon-omar-remix",
         "startAt": "0:32",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Major Lazer - Cold Water (Feat. Justin Bieber & MØ)[Don Omar Remix]",
+        "artist_name": "Major Lazer",
+        "itunesId": 1694800239
       },
       {
         "word": "HERE",
@@ -3727,7 +4567,10 @@
         "audioUrl": 313996248,
         "soundcloudUrl": "https://soundcloud.com/alessiacara/here",
         "startAt": "0:16",
-        "audioDuration": 9.5
+        "audioDuration": 9.5,
+        "song_title": "Here",
+        "artist_name": "Alessia Cara",
+        "itunesId": 1440845747
       },
       {
         "word": "PERFECT",
@@ -3739,7 +4582,10 @@
         "audioUrl": 257052799,
         "soundcloudUrl": "https://soundcloud.com/onedirectionmusic/perfect",
         "startAt": "0:14",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "Perfect",
+        "artist_name": "One Direction",
+        "itunesId": 1040171617
       },
       {
         "word": "ALASKA",
@@ -3751,7 +4597,10 @@
         "audioUrl": 268943589,
         "soundcloudUrl": "https://soundcloud.com/maggierogers/alaska",
         "startAt": "0:08",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Alaska",
+        "artist_name": "Maggie Rogers",
+        "itunesId": 1437448492
       },
       {
         "word": "PANDA",
@@ -3763,7 +4612,10 @@
         "audioUrl": 237603952,
         "soundcloudUrl": "https://soundcloud.com/lifeofdesiigner/desiigner-panda",
         "startAt": "0:39",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Desiigner- \"Panda\" (Prod. By: Menace)",
+        "artist_name": "LifeOfDesiigner",
+        "itunesId": 1445318759
       },
       {
         "word": "7YEARS",
@@ -3775,7 +4627,10 @@
         "audioUrl": 231325606,
         "soundcloudUrl": "https://soundcloud.com/lukasgraham/7-years",
         "startAt": "0:18",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "7 Years",
+        "artist_name": "Lukas Graham",
+        "itunesId": 1081573445
       },
       {
         "word": "WFH",
@@ -3787,7 +4642,10 @@
         "audioUrl": 262603156,
         "soundcloudUrl": "https://soundcloud.com/fifthharmony/work-from-home",
         "startAt": "0:17",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Work from Home (feat. Ty Dolla $ign)",
+        "artist_name": "FifthHarmony",
+        "itunesId": 1107095575
       },
       {
         "word": "RIDE",
@@ -3799,7 +4657,10 @@
         "audioUrl": 256133594,
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/ride",
         "startAt": "0:38.5",
-        "audioDuration": 10.5
+        "audioDuration": 10.5,
+        "song_title": "Ride",
+        "artist_name": "twentyonepilots",
+        "itunesId": 974485805
       },
       {
         "word": "FUTURE",
@@ -3811,7 +4672,10 @@
         "audioUrl": 1010646661,
         "soundcloudUrl": "https://soundcloud.com/mybodyisacage/jumpman",
         "startAt": "1:04",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Drake, Future - Jumpman",
+        "artist_name": "mybodyisacage",
+        "itunesId": 1440848846
       }
     ]
   },
@@ -3835,7 +4699,10 @@
         "audioUrl": "58460326",
         "startAt": "0:49",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/matorian13/swedish-house-mafia-feat-john"
+        "soundcloudUrl": "https://soundcloud.com/matorian13/swedish-house-mafia-feat-john",
+        "song_title": "Swedish House Mafia Feat. John Martin - Don't You Worry Child",
+        "artist_name": "Matorian",
+        "itunesId": 716018389
       },
       {
         "word": "DAVID",
@@ -3847,7 +4714,10 @@
         "audioUrl": "32908947",
         "startAt": "0:15",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/david-guetta-10/david-guetta-ft-kelly-rowland"
+        "soundcloudUrl": "https://soundcloud.com/david-guetta-10/david-guetta-ft-kelly-rowland",
+        "song_title": "David Guetta FT. Kelly Rowland - When Love Takes Over",
+        "artist_name": "David Guetta 3",
+        "itunesId": 693246521
       },
       {
         "word": "ATB",
@@ -3859,7 +4729,10 @@
         "audioUrl": "63922709",
         "startAt": "0:29",
         "audioDuration": 28,
-        "soundcloudUrl": "https://soundcloud.com/rocky-chauhan-2/atb-9pm-till-i-come-sequential"
+        "soundcloudUrl": "https://soundcloud.com/rocky-chauhan-2/atb-9pm-till-i-come-sequential",
+        "song_title": "ATB - 9pm (Till I Come) (Sequential One 1999 Remix) - Various Artists.mp3",
+        "artist_name": "Rocky Chauhan 2",
+        "itunesId": 313655061
       },
       {
         "word": "SKRILLEX",
@@ -3871,7 +4744,10 @@
         "audioUrl": "21792166",
         "startAt": "0:20",
         "audioDuration": 28,
-        "soundcloudUrl": "https://soundcloud.com/skrillex/scary-monsters-and-nice"
+        "soundcloudUrl": "https://soundcloud.com/skrillex/scary-monsters-and-nice",
+        "song_title": "SCARY MONSTERS AND NICE SPRITES",
+        "artist_name": "Skrillex",
+        "itunesId": 409001935
       },
       {
         "word": "AOKI",
@@ -3883,7 +4759,10 @@
         "audioUrl": "297272406",
         "startAt": "0:50",
         "audioDuration": 29,
-        "soundcloudUrl": "https://soundcloud.com/steveaoki/steve-aoki-louis-tomlinson-just-hold-on"
+        "soundcloudUrl": "https://soundcloud.com/steveaoki/steve-aoki-louis-tomlinson-just-hold-on",
+        "song_title": "Steve Aoki & Louis Tomlinson - Just Hold On",
+        "artist_name": "Steve Aoki",
+        "itunesId": 1183936529
       },
       {
         "word": "PUNK",
@@ -3895,7 +4774,10 @@
         "audioUrl": "254111819",
         "startAt": "0:38",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/daftpunkofficialmusic/television-rules-the-nation"
+        "soundcloudUrl": "https://soundcloud.com/daftpunkofficialmusic/television-rules-the-nation",
+        "song_title": "Television Rules the Nation / Crescendolls",
+        "artist_name": "Daft Punk",
+        "itunesId": 717067864
       },
       {
         "word": "TIESTO",
@@ -3907,7 +4789,10 @@
         "audioUrl": "1394984266",
         "startAt": "0:30",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/tiesto/lay-low"
+        "soundcloudUrl": "https://soundcloud.com/tiesto/lay-low",
+        "song_title": "Lay Low",
+        "artist_name": "Tiësto",
+        "itunesId": 1657740901
       },
       {
         "word": "AVICII",
@@ -3919,7 +4804,10 @@
         "audioUrl": "602800461",
         "startAt": "0:24",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/aviciiofficial/sos-feat-aloe-blacc"
+        "soundcloudUrl": "https://soundcloud.com/aviciiofficial/sos-feat-aloe-blacc",
+        "song_title": "SOS (feat. Aloe Blacc)",
+        "artist_name": "AviciiOfficial",
+        "itunesId": 1457882148
       },
       {
         "word": "CALVIN",
@@ -3931,7 +4819,10 @@
         "audioUrl": "80789028",
         "startAt": "0:49",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/ultrarecords/calvin-harris-ft-florence"
+        "soundcloudUrl": "https://soundcloud.com/ultrarecords/calvin-harris-ft-florence",
+        "song_title": "Calvin Harris ft. Florence Welch - Sweet Nothing",
+        "artist_name": "Ultra Records",
+        "itunesId": 1713469232
       },
       {
         "word": "GARRIX",
@@ -3943,7 +4834,10 @@
         "audioUrl": "98081145",
         "startAt": "1:30",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/martingarrix/martin-garrix-animals-original"
+        "soundcloudUrl": "https://soundcloud.com/martingarrix/martin-garrix-animals-original",
+        "song_title": "Martin Garrix - Animals (Original Mix) OUT NOW!",
+        "artist_name": "Martin Garrix",
+        "itunesId": 1670593167
       },
       {
         "word": "DEADMAU5",
@@ -3955,7 +4849,10 @@
         "audioUrl": "254013795",
         "startAt": "0:30",
         "audioDuration": 30,
-        "soundcloudUrl": "https://soundcloud.com/deadmau5/ghosts-n-stuff-1"
+        "soundcloudUrl": "https://soundcloud.com/deadmau5/ghosts-n-stuff-1",
+        "song_title": "Ghosts 'n' Stuff (feat. Rob Swire)",
+        "artist_name": "deadmau5",
+        "itunesId": 1826175057
       }
     ]
   },
@@ -3980,7 +4877,10 @@
         "audioUrl": "253819621",
         "startAt": "0:19",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/making-love-out-of-nothing"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/making-love-out-of-nothing",
+        "song_title": "Making Love Out of Nothing At All",
+        "artist_name": "Air Supply",
+        "itunesId": 303178223
       },
       {
         "word": "WITHOUTYOU",
@@ -3992,7 +4892,10 @@
         "audioUrl": "253820112",
         "startAt": "0:06",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/without-you"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/without-you",
+        "song_title": "Without You",
+        "artist_name": "Air Supply",
+        "itunesId": 358063372
       },
       {
         "word": "NIGHTS",
@@ -4004,7 +4907,10 @@
         "audioUrl": "253819510",
         "startAt": "0:12",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/even-the-nights-are-better-1"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/even-the-nights-are-better-1",
+        "song_title": "Even the Nights Are Better",
+        "artist_name": "Air Supply",
+        "itunesId": 303178217
       },
       {
         "word": "LOVE",
@@ -4016,7 +4922,10 @@
         "audioUrl": "325717131",
         "startAt": "1:30.6",
         "audioDuration": 8.4,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/all-out-of-love-live-1"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/all-out-of-love-live-1",
+        "song_title": "All Out Of Love (Live)",
+        "artist_name": "Air Supply",
+        "itunesId": 913765102
       },
       {
         "word": "GOODBYE",
@@ -4028,7 +4937,10 @@
         "audioUrl": "253819985",
         "startAt": "0:14",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/goodbye"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/goodbye",
+        "song_title": "Goodbye",
+        "artist_name": "Air Supply",
+        "itunesId": 357821816
       },
       {
         "word": "LOST",
@@ -4040,7 +4952,10 @@
         "audioUrl": "325717131",
         "startAt": "1:16",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/all-out-of-love-live-1"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/all-out-of-love-live-1",
+        "song_title": "All Out Of Love (Live)",
+        "artist_name": "Air Supply",
+        "itunesId": 913765102
       },
       {
         "word": "HEREIAM",
@@ -4052,7 +4967,10 @@
         "audioUrl": "253819630",
         "startAt": "0:13",
         "audioDuration": 12,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/here-i-am-just-when-i-thought"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/here-i-am-just-when-i-thought",
+        "song_title": "Here I Am",
+        "artist_name": "Air Supply",
+        "itunesId": 898136769
       },
       {
         "word": "LOSTINLOVE",
@@ -4064,7 +4982,10 @@
         "audioUrl": "253820182",
         "startAt": "0:15",
         "audioDuration": 14,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/lost-in-love"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/lost-in-love",
+        "song_title": "Lost In Love",
+        "artist_name": "Air Supply",
+        "itunesId": 913765101
       },
       {
         "word": "RUSSELL",
@@ -4076,7 +4997,10 @@
         "audioUrl": "253819535",
         "startAt": "0:11",
         "audioDuration": 11,
-        "soundcloudUrl": "https://soundcloud.com/air-supply-official/every-woman-in-the-world-1"
+        "soundcloudUrl": "https://soundcloud.com/air-supply-official/every-woman-in-the-world-1",
+        "song_title": "Every Woman In The World",
+        "artist_name": "Air Supply",
+        "itunesId": 303178197
       }
     ]
   },
@@ -4102,7 +5026,10 @@
         "audioUrl": 254001921,
         "soundcloudUrl": "https://soundcloud.com/incubusofficial/drive",
         "startAt": "0:10",
-        "audioDuration": 19
+        "audioDuration": 19,
+        "song_title": "Drive",
+        "artist_name": "Incubus",
+        "itunesId": 187454421
       },
       {
         "word": "FARM",
@@ -4114,7 +5041,10 @@
         "audioUrl": 73200685,
         "soundcloudUrl": "https://soundcloud.com/cleopatra-recs/alien-ant-farm-smooth-criminal",
         "startAt": "0:34.5",
-        "audioDuration": 19.3
+        "audioDuration": 19.3,
+        "song_title": "Alien Ant Farm - Smooth Criminal",
+        "artist_name": "Cleopatra Records",
+        "itunesId": 1440762729
       },
       {
         "word": "CREED",
@@ -4126,7 +5056,10 @@
         "audioUrl": 232662509,
         "soundcloudUrl": "https://soundcloud.com/creedofficial/one-last-breath-radio-version",
         "startAt": "2:01",
-        "audioDuration": 16
+        "audioDuration": 16,
+        "song_title": "One Last Breath",
+        "artist_name": "CreedOfficial",
+        "itunesId": 1440718237
       },
       {
         "word": "LIPS",
@@ -4138,7 +5071,10 @@
         "audioUrl": 259124364,
         "soundcloudUrl": "https://soundcloud.com/hinder-official/lips-of-an-angel",
         "startAt": "0:07",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "Lips Of An Angel",
+        "artist_name": "Hinder",
+        "itunesId": 1440763711
       },
       {
         "word": "SUFFOCATION",
@@ -4150,7 +5086,10 @@
         "audioUrl": 256141460,
         "soundcloudUrl": "https://soundcloud.com/paparoach/last-resort",
         "startAt": "0:00",
-        "audioDuration": 5
+        "audioDuration": 5,
+        "song_title": "Last Resort",
+        "artist_name": "Papa Roach",
+        "itunesId": 1450006105
       },
       {
         "word": "PARALYZER",
@@ -4162,7 +5101,10 @@
         "audioUrl": 6221233,
         "soundcloudUrl": "https://soundcloud.com/fingereleven/paralyzer",
         "startAt": "0:51",
-        "audioDuration": 17.7
+        "audioDuration": 17.7,
+        "song_title": "Paralyzer",
+        "artist_name": "Finger Eleven",
+        "itunesId": 1440767124
       },
       {
         "word": "LAUGH",
@@ -4174,7 +5116,10 @@
         "audioUrl": 256079866,
         "soundcloudUrl": "https://soundcloud.com/nickelback/photograph",
         "startAt": "0:14",
-        "audioDuration": 14.2
+        "audioDuration": 14.2,
+        "song_title": "Photograph",
+        "artist_name": "Nickelback",
+        "itunesId": 214403497
       },
       {
         "word": "EVERLONG",
@@ -4186,7 +5131,10 @@
         "audioUrl": 150438358,
         "soundcloudUrl": "https://soundcloud.com/foofighters/everlong",
         "startAt": "0:29",
-        "audioDuration": 25.2
+        "audioDuration": 25.2,
+        "song_title": "Everlong",
+        "artist_name": "Foo Fighters",
+        "itunesId": 362133505
       },
       {
         "word": "JANE",
@@ -4198,7 +5146,10 @@
         "audioUrl": 280289761,
         "soundcloudUrl": "https://soundcloud.com/andres-kamilo-garcia-alfonso/the-diary-of-jane",
         "startAt": "0:49",
-        "audioDuration": 21.6
+        "audioDuration": 21.6,
+        "song_title": "The Diary of Jane",
+        "artist_name": "Andres Kamilo Alfonso",
+        "itunesId": 1440872262
       },
       {
         "word": "KRYPTONITE",
@@ -4210,7 +5161,10 @@
         "audioUrl": 256191738,
         "soundcloudUrl": "https://soundcloud.com/3doorsdown/kryptonite-1",
         "startAt": "0:15",
-        "audioDuration": 19
+        "audioDuration": 19,
+        "song_title": "Kryptonite",
+        "artist_name": "3doorsdown",
+        "itunesId": 1452011941
       }
     ]
   },
@@ -4235,7 +5189,10 @@
         "audioUrl": 715653085,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/all-i-want-from-high-school",
         "startAt": "1:09",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "All I Want (From \"High School Musical: The Musical: The Series\")",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1576278366
       },
       {
         "word": "SOCIOPATH",
@@ -4247,7 +5204,10 @@
         "audioUrl": 1048163956,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/good-4-u-1",
         "startAt": "2:21",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "good 4 u",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1560735551
       },
       {
         "word": "LACY",
@@ -4259,7 +5219,10 @@
         "audioUrl": 1610726607,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/lacy",
         "startAt": "0:00",
-        "audioDuration": 19
+        "audioDuration": 19,
+        "song_title": "lacy",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1694768032
       },
       {
         "word": "BILLYJOEL",
@@ -4271,7 +5234,10 @@
         "audioUrl": 1020528670,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/deja-vu",
         "startAt": "2:45",
-        "audioDuration": 17.9
+        "audioDuration": 17.9,
+        "song_title": "deja vu",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1560735847
       },
       {
         "word": "JEALOUSY",
@@ -4283,7 +5249,10 @@
         "audioUrl": 1052170396,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/jealousy-jealousy",
         "startAt": "0:04",
-        "audioDuration": 24
+        "audioDuration": 24,
+        "song_title": "jealousy, jealousy",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1560735861
       },
       {
         "word": "SEXYKIND",
@@ -4295,7 +5264,10 @@
         "audioUrl": 1610783793,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/all-american-bitch",
         "startAt": "2:11.5",
-        "audioDuration": 11.9
+        "audioDuration": 11.9,
+        "song_title": "all-american bitch",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1736995139
       },
       {
         "word": "VAMPIRE",
@@ -4307,7 +5279,10 @@
         "audioUrl": 1553375155,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/vampire",
         "startAt": "0:41",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "vampire",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1694386830
       },
       {
         "word": "TRAITOR",
@@ -4319,7 +5294,10 @@
         "audioUrl": 1052170909,
         "soundcloudUrl": "https://soundcloud.com/oliviarodrigo/traitor",
         "startAt": "0:00",
-        "audioDuration": 19
+        "audioDuration": 19,
+        "song_title": "traitor",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1560735421
       }
     ]
   },
@@ -4344,7 +5322,10 @@
         "audioUrl": "283975503",
         "startAt": "1:05",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/oasisofficial/dont-look-back-in-anger-1"
+        "soundcloudUrl": "https://soundcloud.com/oasisofficial/dont-look-back-in-anger-1",
+        "song_title": "Don't Look Back in Anger",
+        "artist_name": "Oasis",
+        "itunesId": 1517520396
       },
       {
         "word": "KARMAPOLICE",
@@ -4356,7 +5337,10 @@
         "audioUrl": "1668429972",
         "startAt": "3:22",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/therether3/karma-police-radiohead-original"
+        "soundcloudUrl": "https://soundcloud.com/therether3/karma-police-radiohead-original",
+        "song_title": "Karma Police - Radiohead (1997)",
+        "artist_name": "killingtime",
+        "itunesId": 1097861836
       },
       {
         "word": "ONEMORE",
@@ -4368,7 +5352,10 @@
         "audioUrl": "1091842186",
         "startAt": "0:05",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/user-355111339/hit-me-baby-one-more-time"
+        "soundcloudUrl": "https://soundcloud.com/user-355111339/hit-me-baby-one-more-time",
+        "song_title": "hit me baby one more time",
+        "artist_name": "kabuwhy",
+        "itunesId": 273143820
       },
       {
         "word": "READYORNOT",
@@ -4380,7 +5367,10 @@
         "audioUrl": "253506498",
         "startAt": "0:15",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/fugees/ready-or-not"
+        "soundcloudUrl": "https://soundcloud.com/fugees/ready-or-not",
+        "song_title": "Ready or Not",
+        "artist_name": "Fugees",
+        "itunesId": 1054461705
       },
       {
         "word": "ALWAYS",
@@ -4392,7 +5382,10 @@
         "audioUrl": "252909438",
         "startAt": "01:01",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/bonjovi/always-1"
+        "soundcloudUrl": "https://soundcloud.com/bonjovi/always-1",
+        "song_title": "Always",
+        "artist_name": "Bon Jovi",
+        "itunesId": 1423285054
       },
       {
         "word": "KISS",
@@ -4404,7 +5397,10 @@
         "audioUrl": "254614865",
         "startAt": "2:22",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/sixpence-none-the-richer-official/kiss-me-1"
+        "soundcloudUrl": "https://soundcloud.com/sixpence-none-the-richer-official/kiss-me-1",
+        "song_title": "Kiss Me",
+        "artist_name": "Sixpence None The Richer",
+        "itunesId": 1163449957
       },
       {
         "word": "BRIDGE",
@@ -4416,7 +5412,10 @@
         "audioUrl": "273203268",
         "startAt": "2:29",
         "audioDuration": 11.3,
-        "soundcloudUrl": "https://soundcloud.com/red-hot-chili-peppers-official/under-the-bridge"
+        "soundcloudUrl": "https://soundcloud.com/red-hot-chili-peppers-official/under-the-bridge",
+        "song_title": "Under the Bridge",
+        "artist_name": "Red Hot Chili Peppers",
+        "itunesId": 948460560
       },
       {
         "word": "LOVEFOOL",
@@ -4428,7 +5427,10 @@
         "audioUrl": "1186770703",
         "startAt": "3:59",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/sam-galaxy-94913966/lovefool-the-cardigans"
+        "soundcloudUrl": "https://soundcloud.com/sam-galaxy-94913966/lovefool-the-cardigans",
+        "song_title": "Lovefool - The Cardigans",
+        "artist_name": "Sam Galaxy",
+        "itunesId": 1450141548
       },
       {
         "word": "CALIFORNIA",
@@ -4440,7 +5442,10 @@
         "audioUrl": "252531665",
         "startAt": "0:03",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/2pac/california-love-original"
+        "soundcloudUrl": "https://soundcloud.com/2pac/california-love-original",
+        "song_title": "California Love (Original Version) [feat. Roger Troutman & Dr. Dre]",
+        "artist_name": "2Pac",
+        "itunesId": 1440764598
       }
     ]
   },
@@ -4465,7 +5470,10 @@
         "audioUrl": "253243500",
         "startAt": "0:10",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/pearl-jam-official/even-flow"
+        "soundcloudUrl": "https://soundcloud.com/pearl-jam-official/even-flow",
+        "song_title": "Even Flow",
+        "artist_name": "Pearl Jam",
+        "itunesId": 425465318
       },
       {
         "word": "DRAGONFORCE",
@@ -4477,7 +5485,10 @@
         "audioUrl": "86979624",
         "startAt": "0:21",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/alfredo-guzman-navarro/dragonforce-through-the-fire"
+        "soundcloudUrl": "https://soundcloud.com/alfredo-guzman-navarro/dragonforce-through-the-fire",
+        "song_title": "DragonForce - Through the Fire and Flames",
+        "artist_name": "Alfredo Guzman Navarro",
+        "itunesId": 1679612971
       },
       {
         "word": "IRONMAN",
@@ -4489,7 +5500,10 @@
         "audioUrl": "196149088",
         "startAt": "0:35",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/blacksabbath/iron-man"
+        "soundcloudUrl": "https://soundcloud.com/blacksabbath/iron-man",
+        "song_title": "Iron Man (2012 - Remaster)",
+        "artist_name": "Black Sabbath",
+        "itunesId": 785232524
       },
       {
         "word": "CALIFORNIA",
@@ -4501,7 +5515,10 @@
         "audioUrl": "231849488",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/eaglesofficial/eagles-hotel-california"
+        "soundcloudUrl": "https://soundcloud.com/eaglesofficial/eagles-hotel-california",
+        "song_title": "Hotel California (2013 Remaster)",
+        "artist_name": "Eagles",
+        "itunesId": 1729270889
       },
       {
         "word": "DREAM",
@@ -4513,7 +5530,10 @@
         "audioUrl": "530870898",
         "startAt": "0:00",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/aerosmith/dream-on-6"
+        "soundcloudUrl": "https://soundcloud.com/aerosmith/dream-on-6",
+        "song_title": "Dream On",
+        "artist_name": "aerosmith",
+        "itunesId": 1658644941
       },
       {
         "word": "METALLICA",
@@ -4525,7 +5545,10 @@
         "audioUrl": "783020866",
         "startAt": "1:44",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/officialmetallica/one-remastered"
+        "soundcloudUrl": "https://soundcloud.com/officialmetallica/one-remastered",
+        "song_title": "One (Remastered)",
+        "artist_name": "Metallica",
+        "itunesId": 1434424172
       },
       {
         "word": "LINKIN",
@@ -4537,7 +5560,10 @@
         "audioUrl": "1266029521",
         "startAt": "0:03",
         "audioDuration": 13,
-        "soundcloudUrl": "https://soundcloud.com/linkinpark/bleed-it-out-1"
+        "soundcloudUrl": "https://soundcloud.com/linkinpark/bleed-it-out-1",
+        "song_title": "Bleed It Out",
+        "artist_name": "LINKIN PARK",
+        "itunesId": 590427308
       },
       {
         "word": "RAINING",
@@ -4549,7 +5575,10 @@
         "audioUrl": "154333378",
         "startAt": "2:51",
         "audioDuration": 10,
-        "soundcloudUrl": "https://soundcloud.com/mashreef-ahamed/slayer-reign-in-blood-remaster-2014"
+        "soundcloudUrl": "https://soundcloud.com/mashreef-ahamed/slayer-reign-in-blood-remaster-2014",
+        "song_title": "Slayer - RAINING BLOOD (Studio X50 remaster)",
+        "artist_name": "Mashreef Ahamed",
+        "itunesId": 1440821048
       },
       {
         "word": "DOVER",
@@ -4561,7 +5590,10 @@
         "audioUrl": "86902242",
         "startAt": "0:20",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/alfredo-guzman-navarro/cliffs-of-dover-eric-johnson"
+        "soundcloudUrl": "https://soundcloud.com/alfredo-guzman-navarro/cliffs-of-dover-eric-johnson",
+        "song_title": "Cliffs of Dover - Eric Johnson",
+        "artist_name": "Alfredo Guzman Navarro",
+        "itunesId": 724497085
       },
       {
         "word": "FAT",
@@ -4573,7 +5605,10 @@
         "audioUrl": "256148209",
         "startAt": "0:09",
         "audioDuration": 15,
-        "soundcloudUrl": "https://soundcloud.com/sum41/fat-lip-album-version"
+        "soundcloudUrl": "https://soundcloud.com/sum41/fat-lip-album-version",
+        "song_title": "Fat Lip",
+        "artist_name": "Sum 41",
+        "itunesId": 1440659999
       }
     ]
   },
@@ -4598,7 +5633,10 @@
         "audioUrl": "220460967",
         "startAt": "0:13",
         "audioDuration": 13,
-        "soundcloudUrl": "https://on.soundcloud.com/VylrajC5ew2sF86QSn"
+        "soundcloudUrl": "https://on.soundcloud.com/VylrajC5ew2sF86QSn",
+        "song_title": "She Loves You",
+        "artist_name": "The.Early Beatles",
+        "itunesId": 1441133611
       },
       {
         "word": "HEYJUDE",
@@ -4610,7 +5648,10 @@
         "audioUrl": "1459951630",
         "startAt": "0:03",
         "audioDuration": 20,
-        "soundcloudUrl": "https://on.soundcloud.com/ZMtzZ9xa4uaX1Pw7Xy"
+        "soundcloudUrl": "https://on.soundcloud.com/ZMtzZ9xa4uaX1Pw7Xy",
+        "song_title": "Hey Jude",
+        "artist_name": "Bengerman",
+        "itunesId": 809132650
       },
       {
         "word": "ELEANORRIGBY",
@@ -4622,7 +5663,10 @@
         "audioUrl": "435126858",
         "startAt": "0:16",
         "audioDuration": 17,
-        "soundcloudUrl": "https://on.soundcloud.com/DF4YzQpPisWt4jJkC0"
+        "soundcloudUrl": "https://on.soundcloud.com/DF4YzQpPisWt4jJkC0",
+        "song_title": "The Beatles - Eleanor Rigby",
+        "artist_name": "Bowl Of Chowda",
+        "itunesId": 1440833905
       },
       {
         "word": "YESTER",
@@ -4634,7 +5678,10 @@
         "audioUrl": "1459966162",
         "startAt": "0:13",
         "audioDuration": 10,
-        "soundcloudUrl": "https://on.soundcloud.com/4jCNvwXhRcmwKxhl5Z"
+        "soundcloudUrl": "https://on.soundcloud.com/4jCNvwXhRcmwKxhl5Z",
+        "song_title": "Yesterday",
+        "artist_name": "Bengerman",
+        "itunesId": 1441164805
       },
       {
         "word": "ROBERT",
@@ -4646,7 +5693,10 @@
         "audioUrl": "319320256",
         "startAt": "0:19",
         "audioDuration": 11,
-        "soundcloudUrl": "https://on.soundcloud.com/MAMnqze4XOvx74siB7"
+        "soundcloudUrl": "https://on.soundcloud.com/MAMnqze4XOvx74siB7",
+        "song_title": "Doctor Robert (Beatles - Cover Version)",
+        "artist_name": "PhilC",
+        "itunesId": 1441165143
       },
       {
         "word": "SGTPEPPER",
@@ -4658,7 +5708,10 @@
         "audioUrl": "248502332",
         "startAt": "0:22",
         "audioDuration": 10,
-        "soundcloudUrl": "https://on.soundcloud.com/i1WGknSmDusuVKr7NZ"
+        "soundcloudUrl": "https://on.soundcloud.com/i1WGknSmDusuVKr7NZ",
+        "song_title": "THE BEATLES SGT PEPPER 1969 *MINT-* MISPRINT NO SOLD IN UK STEREO FINAL VINYL LP eBay full play test",
+        "artist_name": "eBay:Jordan19957",
+        "itunesId": 1573250534
       },
       {
         "word": "LETITBE",
@@ -4670,7 +5723,10 @@
         "audioUrl": "160935074",
         "startAt": "0:00",
         "audioDuration": 21,
-        "soundcloudUrl": "https://on.soundcloud.com/SnuVR36AuZBxJw9ZM8"
+        "soundcloudUrl": "https://on.soundcloud.com/SnuVR36AuZBxJw9ZM8",
+        "song_title": "Let It Be",
+        "artist_name": "The Love Beatles",
+        "itunesId": 1441164738
       },
       {
         "word": "OFHONEY",
@@ -4682,7 +5738,10 @@
         "audioUrl": "98464328",
         "startAt": "0:13",
         "audioDuration": 15,
-        "soundcloudUrl": "https://on.soundcloud.com/Kz1cJPyRHm7fudPaHE"
+        "soundcloudUrl": "https://on.soundcloud.com/Kz1cJPyRHm7fudPaHE",
+        "song_title": "A taste of honey",
+        "artist_name": "zoombeatles",
+        "itunesId": 1441165134
       },
       {
         "word": "YOULIKEME",
@@ -4694,7 +5753,10 @@
         "audioUrl": "855938905",
         "startAt": "0:00",
         "audioDuration": 25,
-        "soundcloudUrl": "https://on.soundcloud.com/D65vVS4YlLa0Pqzq5Q"
+        "soundcloudUrl": "https://on.soundcloud.com/D65vVS4YlLa0Pqzq5Q",
+        "song_title": "You Like Me Too Much - Beatles",
+        "artist_name": "ChrisHansen33",
+        "itunesId": 1441164798
       },
       {
         "word": "YELLOW",
@@ -4706,7 +5768,10 @@
         "audioUrl": "185886102",
         "startAt": "0:54",
         "audioDuration": 16,
-        "soundcloudUrl": "https://on.soundcloud.com/2artudQsbXwLA0Ng56"
+        "soundcloudUrl": "https://on.soundcloud.com/2artudQsbXwLA0Ng56",
+        "song_title": "Yellow Submarine",
+        "artist_name": "The Beatles Revisited",
+        "itunesId": 1441164526
       }
     ]
   },
@@ -4731,7 +5796,10 @@
         "audioUrl": 271221937,
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/stressed-out",
         "startAt": "0:20",
-        "audioDuration": 8.6
+        "audioDuration": 8.6,
+        "song_title": "Stressed Out",
+        "artist_name": "twentyonepilots",
+        "itunesId": 974485474
       },
       {
         "word": "OUTSIDE",
@@ -4743,7 +5811,10 @@
         "audioUrl": "1051763578",
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/the-outside?in=twentyonepilots%2Fsets%2Fscaled-and-icy-1",
         "startAt": "1:53",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "The Outside",
+        "artist_name": "twentyonepilots",
+        "itunesId": 1561837009
       },
       {
         "word": "FACE",
@@ -4755,7 +5826,10 @@
         "audioUrl": "256133530",
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/tear-in-my-heart",
         "startAt": "0:08",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Tear in My Heart",
+        "artist_name": "twentyonepilots",
+        "itunesId": 974485807
       },
       {
         "word": "CLANCY",
@@ -4767,7 +5841,10 @@
         "audioUrl": "1827993162",
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/routines-in-the-night",
         "startAt": "0:39",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Routines In The Night",
+        "artist_name": "twentyonepilots",
+        "itunesId": 1733371042
       },
       {
         "word": "PROOF",
@@ -4779,7 +5856,10 @@
         "audioUrl": "491974728",
         "soundcloudUrl": "https://soundcloud.com/spazz-out-621957899/implicit-demand-for-proof",
         "startAt": "1:43",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Implicit Demand For Proof",
+        "artist_name": "Twenty One Pilots",
+        "itunesId": 1784341971
       },
       {
         "word": "AIR",
@@ -4791,7 +5871,10 @@
         "audioUrl": "491974548",
         "soundcloudUrl": "https://soundcloud.com/spazz-out-621957899/air-catcher",
         "startAt": "2:40",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Air Catcher",
+        "artist_name": "Twenty One Pilots",
+        "itunesId": 1784341980
       },
       {
         "word": "TREES",
@@ -4803,7 +5886,10 @@
         "audioUrl": "271220994",
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/trees",
         "startAt": "0:50",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Trees",
+        "artist_name": "twentyonepilots",
+        "itunesId": 585128677
       },
       {
         "word": "TAXICAB",
@@ -4815,7 +5901,10 @@
         "audioUrl": "491974455",
         "soundcloudUrl": "https://soundcloud.com/spazz-out-621957899/taxi-cab",
         "startAt": "1:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Taxi Cab",
+        "artist_name": "Twenty One Pilots",
+        "itunesId": 1784341983
       },
       {
         "word": "LEGEND",
@@ -4827,7 +5916,10 @@
         "audioUrl": "509422020",
         "soundcloudUrl": "https://soundcloud.com/twentyonepilots/legend",
         "startAt": "0:56",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Legend",
+        "artist_name": "twentyonepilots",
+        "itunesId": 1422828467
       }
     ]
   },
@@ -4852,7 +5944,10 @@
         "audioUrl": "935319133",
         "soundcloudUrl": "https://soundcloud.com/enhypen-music/given-taken",
         "startAt": "1:50",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Given-Taken",
+        "artist_name": "ENHYPEN",
+        "itunesId": 1541011625
       },
       {
         "word": "DNA",
@@ -4864,7 +5959,10 @@
         "audioUrl": "2096744094",
         "soundcloudUrl": "https://soundcloud.com/bts65828/dna-1",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "DNA",
+        "artist_name": "BTS",
+        "itunesId": 1598730623
       },
       {
         "word": "KISS",
@@ -4876,7 +5974,10 @@
         "audioUrl": "1316372986",
         "soundcloudUrl": "https://soundcloud.com/tribe-scmusic/kiss",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "KISS",
+        "artist_name": "TRI.BE",
+        "itunesId": 1637029090
       },
       {
         "word": "OMG",
@@ -4888,7 +5989,10 @@
         "audioUrl": "1414684012",
         "soundcloudUrl": "https://soundcloud.com/newjeans-music/omg",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "OMG",
+        "artist_name": "NewJeans",
+        "itunesId": 1659513445
       },
       {
         "word": "SILENTCRY",
@@ -4900,7 +6004,10 @@
         "audioUrl": "1209289279",
         "soundcloudUrl": "https://soundcloud.com/stray_kids/silent-cry",
         "startAt": "0:10",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Silent Cry",
+        "artist_name": "Stray Kids",
+        "itunesId": 1608256165
       },
       {
         "word": "IAM",
@@ -4912,7 +6019,10 @@
         "audioUrl": "1489095391",
         "soundcloudUrl": "https://soundcloud.com/ive_official/i-am",
         "startAt": "0:37",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "I AM",
+        "artist_name": "IVE",
+        "itunesId": 1680047366
       },
       {
         "word": "OO",
@@ -4924,7 +6034,10 @@
         "audioUrl": "1220575915",
         "soundcloudUrl": "https://soundcloud.com/revanchistz/nmixx-oo-re-nmixx?in=toto-kim0901%2Fsets%2Fnmix",
         "startAt": "0:34",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "NMIXX (엔믹스) - O.O 「RE - (N)MIXX」",
+        "artist_name": "Revanchist",
+        "itunesId": 1689323448
       },
       {
         "word": "BOUNCY",
@@ -4936,7 +6049,10 @@
         "audioUrl": "1543126855",
         "soundcloudUrl": "https://soundcloud.com/rv-valvex/bouncy-1",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Bouncy",
+        "artist_name": "tiktok: lookout622",
+        "itunesId": 1828091870
       },
       {
         "word": "IMAB",
@@ -4948,7 +6064,10 @@
         "audioUrl": "1165832551",
         "soundcloudUrl": "https://soundcloud.com/lisalady-yedek/hwasa-im-a-b-im-a",
         "startAt": "0:48",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Hwasa - I'm a B (I'm a 빛)",
+        "artist_name": "kpop songs",
+        "itunesId": 1596198152
       },
       {
         "word": "GASHINA",
@@ -4960,7 +6079,10 @@
         "audioUrl": "604257927",
         "soundcloudUrl": "https://soundcloud.com/satanvelvet/gashina-sunmi",
         "startAt": "0:40",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Gashina",
+        "artist_name": "ゆず",
+        "itunesId": 1273937462
       },
       {
         "word": "MANIAC",
@@ -4972,7 +6094,10 @@
         "audioUrl": "1989935415",
         "soundcloudUrl": "https://soundcloud.com/viviz-sc/maniac",
         "startAt": "2:40",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "MANIAC",
+        "artist_name": "VIVIZ",
+        "itunesId": 1785777139
       },
       {
         "word": "CROWN",
@@ -4984,7 +6109,10 @@
         "audioUrl": "584944605",
         "soundcloudUrl": "https://soundcloud.com/txt_bighit/txt-crown-1",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "TXT - CROWN",
+        "artist_name": "𝙉𝙟𝙤𝙧𝙙⛈",
+        "itunesId": 1553524111
       },
       {
         "word": "LIKEY",
@@ -4996,7 +6124,10 @@
         "audioUrl": "349240611",
         "soundcloudUrl": "https://soundcloud.com/twice-57013/likey",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "LIKEY",
+        "artist_name": "TWICE",
+        "itunesId": 1555405145
       },
       {
         "word": "SHUTDOWN",
@@ -5008,7 +6139,10 @@
         "audioUrl": "1344905599",
         "soundcloudUrl": "https://soundcloud.com/blackpinkofficial/shut-down",
         "startAt": "0:15",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Shut Down",
+        "artist_name": "BLACKPINK",
+        "itunesId": 1644431999
       }
     ]
   },
@@ -5035,7 +6169,8 @@
         "startAt": "0:15",
         "audioDuration": 10,
         "artist_name": "The Red Jumpsuit Apparatus",
-        "song_title": "Face Down"
+        "song_title": "Face Down",
+        "itunesId": 806224710
       },
       {
         "word": "SUNDAY",
@@ -5049,7 +6184,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "Taking Back Sunday",
-        "song_title": "MakeDamnSure"
+        "song_title": "MakeDamnSure",
+        "itunesId": 1566010507
       },
       {
         "word": "FALLOUTBOY",
@@ -5063,7 +6199,8 @@
         "startAt": "0:25",
         "audioDuration": 10,
         "artist_name": "Fall Out Boy",
-        "song_title": "Sugar, We're Goin Down"
+        "song_title": "Sugar, We're Goin Down",
+        "itunesId": 1440725537
       },
       {
         "word": "JULIET",
@@ -5077,7 +6214,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "artist_name": "We The Kings",
-        "song_title": "Check Yes, Juliet"
+        "song_title": "Check Yes, Juliet",
+        "itunesId": 1437557562
       },
       {
         "word": "MARIA",
@@ -5091,7 +6229,8 @@
         "startAt": "0:06",
         "audioDuration": 8,
         "artist_name": "All Time Low",
-        "song_title": "Dear Maria, Count Me In"
+        "song_title": "Dear Maria, Count Me In",
+        "itunesId": 502522511
       },
       {
         "word": "NFG",
@@ -5105,7 +6244,8 @@
         "startAt": "0:00",
         "audioDuration": 25,
         "artist_name": "New Found Glory",
-        "song_title": "My Friends Over You"
+        "song_title": "My Friends Over You",
+        "itunesId": 1473976144
       },
       {
         "word": "CHARLOTTE",
@@ -5119,7 +6259,8 @@
         "startAt": "0:15",
         "audioDuration": 11,
         "artist_name": "Good Charlotte",
-        "song_title": "The Anthem"
+        "song_title": "The Anthem",
+        "itunesId": 288051950
       },
       {
         "word": "PATD",
@@ -5133,7 +6274,8 @@
         "startAt": "0:09",
         "audioDuration": 10,
         "artist_name": "Panic! At The Disco",
-        "song_title": "I Write Sins Not Tragedies"
+        "song_title": "I Write Sins Not Tragedies",
+        "itunesId": 1672249098
       },
       {
         "word": "OCEAN",
@@ -5147,7 +6289,8 @@
         "startAt": "0:08.5",
         "audioDuration": 10.5,
         "artist_name": "Yellowcard",
-        "song_title": "Ocean Avenue"
+        "song_title": "Ocean Avenue",
+        "itunesId": 725822641
       },
       {
         "word": "OHIO",
@@ -5161,7 +6304,8 @@
         "startAt": "0:11",
         "audioDuration": 6,
         "artist_name": "Hawthorne Heights",
-        "song_title": "Ohio Is For Lovers"
+        "song_title": "Ohio Is For Lovers",
+        "itunesId": 1558606028
       }
     ]
   },
@@ -5176,140 +6320,173 @@
       "height": 10
     },
     "words": [
-    {
-      "word": "NOTENOUGH",
-      "startX": 0,
-      "startY": 0,
-      "direction": "across",
-      "color": "#FFB34B",
-      "textClue": "Song title",
-      "audioUrl": "1175290492",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/not-enough",
-      "startAt": "0:032",
-      "audioDuration": 15
-    },
-    {
-      "word": "AAD",
-      "startX": 8,
-      "startY": 1,
-      "direction": "across",
-      "color": "#00FFFF",
-      "textClue": "Initials of this song's title",
-      "audioUrl": "524046369",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/armed-dangerous",
-      "startAt": "0:11",
-      "audioDuration": 13
-    },
-    {
-      "word": "EMPTY",
-      "startX": 0,
-      "startY": 3,
-      "direction": "across",
-      "color": "#FE9C9C",
-      "textClue": "\"I feel so ____\"",
-      "audioUrl": "586692870",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/empty",
-      "startAt": "0:22",
-      "audioDuration": 12
-    },
-    {
-      "word": "LEGENDS",
-      "startX": 5,
-      "startY": 5,
-      "direction": "across",
-      "color": "#28D66A",
-      "textClue": "Song title (Rip X and Peep)",
-      "audioUrl": "460710552",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/juice-wrld-legends",
-      "startAt": "0:24",
-      "audioDuration": 11
-    },
-    {
-      "word": "AGATS",
-      "startX": 2,
-      "startY": 8,
-      "direction": "across",
-      "color": "#FFCEFD",
-      "textClue": "Initials of this song's title",
-      "audioUrl": "373180994",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/all-girls-are-same-999-prod-nick-mira",
-      "startAt": "1:10",
-      "audioDuration": 10
-    },
-    {
-      "word": "OUTMYWAY",
-      "startX": 1,
-      "startY": 0,
-      "direction": "down",
-      "color": "#FF5B5E",
-      "textClue": "Song title",
-      "audioUrl": "586695726",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/out-my-way",
-      "startAt": "0:25",
-      "audioDuration": 15
-    },
-    {
-      "word": "STAYHIGH",
-      "startX": 3,
-      "startY": 2,
-      "direction": "down",
-      "color": "#568EFF",
-      "textClue": "Song title",
-      "audioUrl": "855250990",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/stay-high",
-      "startAt": "0:24",
-      "audioDuration": 11
-    },
-    {
-      "word": "HIDE",
-      "startX": 6,
-      "startY": 2,
-      "direction": "down",
-      "color": "#FFB34B",
-      "textClue": "Song title (from Spider-man: Into the spider-verse sound track)",
-      "audioUrl": 540999561,
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/hide-feat-seezyn",
-      "startAt": "0:17",
-      "audioDuration": 13
-    },
-    {
-      "word": "HATEME",
-      "startX": 8,
-      "startY": 0,
-      "direction": "down",
-      "color": "#00FFFF",
-      "textClue": "Song title",
-      "audioUrl": "641819847",
-      "soundcloudUrl": "https://soundcloud.com/elliegoulding/hate-me",
-      "startAt": "1:05",
-      "audioDuration": 10
-    },
-    {
-      "word": "NEVER",
-      "startX": 9,
-      "startY": 5,
-      "direction": "down",
-      "color": "#FE9C9C",
-      "textClue": "When does the party end?",
-      "audioUrl": 1969679419,
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/the-party-never-ends",
-      "startAt": "0:42",
-      "audioDuration": 13
-    },
-    {
-      "word": "WISHING",
-      "startX": 11,
-      "startY": 3,
-      "direction": "down",
-      "color": "#28D66A",
-      "textClue": "First word of song title",
-      "audioUrl": "855251083",
-      "soundcloudUrl": "https://soundcloud.com/uiceheidd/wishing-well",
-      "startAt": "0:12",
-      "audioDuration": 16
-    }
-  ]
-},
+      {
+        "word": "NOTENOUGH",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": "1175290492",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/not-enough",
+        "startAt": "0:032",
+        "audioDuration": 15,
+        "song_title": "Not Enough",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1614380986
+      },
+      {
+        "word": "AAD",
+        "startX": 8,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Initials of this song's title",
+        "audioUrl": "524046369",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/armed-dangerous",
+        "startAt": "0:11",
+        "audioDuration": 13,
+        "song_title": "Armed And Dangerous",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1441184408
+      },
+      {
+        "word": "EMPTY",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"I feel so ____\"",
+        "audioUrl": "586692870",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/empty",
+        "startAt": "0:22",
+        "audioDuration": 12,
+        "song_title": "Empty",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1454440906
+      },
+      {
+        "word": "LEGENDS",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title (Rip X and Peep)",
+        "audioUrl": "460710552",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/juice-wrld-legends",
+        "startAt": "0:24",
+        "audioDuration": 11,
+        "song_title": "juice wrld - legends :(",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1401799886
+      },
+      {
+        "word": "AGATS",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Initials of this song's title",
+        "audioUrl": "373180994",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/all-girls-are-same-999-prod-nick-mira",
+        "startAt": "1:10",
+        "audioDuration": 10,
+        "song_title": "All Girls Are The Same",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1407165116
+      },
+      {
+        "word": "OUTMYWAY",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": "586695726",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/out-my-way",
+        "startAt": "0:25",
+        "audioDuration": 15,
+        "song_title": "Out My Way",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1454441249
+      },
+      {
+        "word": "STAYHIGH",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": "855250990",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/stay-high",
+        "startAt": "0:24",
+        "audioDuration": 11,
+        "song_title": "Stay High",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1523387057
+      },
+      {
+        "word": "HIDE",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (from Spider-man: Into the spider-verse sound track)",
+        "audioUrl": 540999561,
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/hide-feat-seezyn",
+        "startAt": "0:17",
+        "audioDuration": 13,
+        "song_title": "Hide (feat. Seezyn)",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1547297509
+      },
+      {
+        "word": "HATEME",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": "641819847",
+        "soundcloudUrl": "https://soundcloud.com/elliegoulding/hate-me",
+        "startAt": "1:05",
+        "audioDuration": 10,
+        "song_title": "Hate Me",
+        "artist_name": "Ellie Goulding",
+        "itunesId": 1469522003
+      },
+      {
+        "word": "NEVER",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "When does the party end?",
+        "audioUrl": 1969679419,
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/the-party-never-ends",
+        "startAt": "0:42",
+        "audioDuration": 13,
+        "song_title": "The Party Never Ends",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1781129435
+      },
+      {
+        "word": "WISHING",
+        "startX": 11,
+        "startY": 3,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First word of song title",
+        "audioUrl": "855251083",
+        "soundcloudUrl": "https://soundcloud.com/uiceheidd/wishing-well",
+        "startAt": "0:12",
+        "audioDuration": 16,
+        "song_title": "Wishing Well",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1526575743
+      }
+    ]
+  },
   "44": {
     "title": "It was never a phase! Part II",
     "author": "dannypadilla",
@@ -5331,7 +6508,10 @@
         "audioUrl": "252556512",
         "soundcloudUrl": "https://soundcloud.com/yellowcard-official/ocean-avenue",
         "startAt": "0:14",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Ocean Avenue",
+        "artist_name": "Yellowcard",
+        "itunesId": 725822641
       },
       {
         "word": "1985",
@@ -5343,7 +6523,10 @@
         "audioUrl": 252588647,
         "soundcloudUrl": "https://soundcloud.com/bowling-for-soup/1985-1",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "1985",
+        "artist_name": "Bowling For Soup",
+        "itunesId": 271371090
       },
       {
         "word": "GODDAMNDOOR",
@@ -5355,7 +6538,10 @@
         "audioUrl": "12841530",
         "soundcloudUrl": "https://soundcloud.com/panicatthedisco/i-write-sins-not-tragedies",
         "startAt": "0:25",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "I Write Sins Not Tragedies",
+        "artist_name": "Panic! At The Disco",
+        "itunesId": 1672249098
       },
       {
         "word": "TAKES",
@@ -5367,7 +6553,10 @@
         "audioUrl": "256030899",
         "soundcloudUrl": "https://soundcloud.com/jimmyeatworld/the-middle",
         "startAt": "0:11",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "The Middle",
+        "artist_name": "Jimmy Eat World",
+        "itunesId": 1450030115
       },
       {
         "word": "THIS",
@@ -5379,7 +6568,10 @@
         "audioUrl": "256119494",
         "soundcloudUrl": "https://soundcloud.com/blink-182/feeling-this-album-version",
         "startAt": "0:03",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Feeling This",
+        "artist_name": "blink-182",
+        "itunesId": 1440846779
       },
       {
         "word": "GOOD",
@@ -5391,7 +6583,10 @@
         "audioUrl": "252519729",
         "soundcloudUrl": "https://soundcloud.com/good-charlotte-official/the-anthem",
         "startAt": "0:04",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "The Anthem",
+        "artist_name": "Good Charlotte",
+        "itunesId": 288051950
       },
       {
         "word": "KINGS",
@@ -5403,7 +6598,10 @@
         "audioUrl": "252642450",
         "soundcloudUrl": "https://soundcloud.com/we-the-kings-official/check-yes-juliet-album-version",
         "startAt": "0:17",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Check Yes, Juliet",
+        "artist_name": "We The Kings",
+        "itunesId": 1437557562
       },
       {
         "word": "YOUGET",
@@ -5415,7 +6613,10 @@
         "audioUrl": "214807514",
         "soundcloudUrl": "https://soundcloud.com/paramore/thats-what-you-get",
         "startAt": "0:22",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "That's What You Get",
+        "artist_name": "Paramore",
+        "itunesId": 604804761
       },
       {
         "word": "ADDICTED",
@@ -5427,7 +6628,10 @@
         "audioUrl": "271220494",
         "soundcloudUrl": "https://soundcloud.com/simpleplanband/addicted-2",
         "startAt": "0:10",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Addicted",
+        "artist_name": "Simple Plan",
+        "itunesId": 1355149522
       },
       {
         "word": "MARIA",
@@ -5439,7 +6643,10 @@
         "audioUrl": "4720038",
         "soundcloudUrl": "https://soundcloud.com/hopelessrecords/dear-maria-count-me-in",
         "startAt": "0:49",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "All Time Low - Dear Maria, Count Me In",
+        "artist_name": "Hopeless Records",
+        "itunesId": 503740092
       },
       {
         "word": "DOWN",
@@ -5451,7 +6658,10 @@
         "audioUrl": "12039982",
         "soundcloudUrl": "https://soundcloud.com/falloutboy/04-sugar-were-goin-down",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Sugar, We're Goin Down",
+        "artist_name": "Fall Out Boy",
+        "itunesId": 1440725537
       },
       {
         "word": "41",
@@ -5463,7 +6673,10 @@
         "audioUrl": "256148157",
         "soundcloudUrl": "https://soundcloud.com/sum41/fat-lip",
         "startAt": "0:09",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Fat Lip",
+        "artist_name": "Sum 41",
+        "itunesId": 1440659999
       },
       {
         "word": "OKAY",
@@ -5475,7 +6688,10 @@
         "audioUrl": "256032560",
         "soundcloudUrl": "https://soundcloud.com/my-chemical-romance/im-not-okay-i-promise-1",
         "startAt": "0:26",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "I'm Not Okay (I Promise)",
+        "artist_name": "My Chemical Romance",
+        "itunesId": 811747398
       },
       {
         "word": "SK8ER",
@@ -5487,7 +6703,10 @@
         "audioUrl": "256037743",
         "soundcloudUrl": "https://soundcloud.com/avrillavigne/sk8er-boi-1",
         "startAt": "0:00",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Sk8er Boi",
+        "artist_name": "Avril Lavigne",
+        "itunesId": 315025826
       },
       {
         "word": "ENDS",
@@ -5499,7 +6718,10 @@
         "audioUrl": "256240460",
         "soundcloudUrl": "https://soundcloud.com/greenday/wake-me-up-when-september-3",
         "startAt": "1:36",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Wake Me up When September Ends",
+        "artist_name": "Green Day",
+        "itunesId": 1161539483
       }
     ]
   }
