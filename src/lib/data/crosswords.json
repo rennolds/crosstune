@@ -44977,5 +44977,128 @@
         "audioDuration": 12
       }
     ]
+  },
+    "2026-05-02": {
+    "version": "1.0.0",
+    "title": "8-Bit Bangers",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "GODSPLAN",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 446439789,
+        "soundcloudUrl": "https://soundcloud.com/user-292188532/gods-plan-8-bit-tribute-to-drake-8-bit-universe",
+        "startAt": "0:24",
+        "audioDuration": 15,
+        "artist_name": "Drake",
+        "song_title": "God's Plan"
+      },
+      {
+        "word": "BADGUY",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "audioUrl": 694038709,
+        "soundcloudUrl": "https://soundcloud.com/user-596109938/billie-eilish-bad-guy-8-bit-chiptune-coverremix",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Billie Eilish",
+        "song_title": "Bad Guy"
+      },
+      {
+        "word": "SUGAR",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "audioUrl": 1230339034,
+        "soundcloudUrl": "https://soundcloud.com/embrace-monke-979983685/sugar-maroon-5-in-8bit",
+        "startAt": "0:18",
+        "audioDuration": 15,
+        "artist_name": "Maroon 5",
+        "song_title": "Sugar"
+      },
+      {
+        "word": "RIPTIDE",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "audioUrl": 161724116,
+        "soundcloudUrl": "https://soundcloud.com/mcdak-1/vance-joy-riptide-8bit",
+        "startAt": "0:14",
+        "audioDuration": 15,
+        "artist_name": "Vance Joy",
+        "song_title": "Riptide"
+      },
+      {
+        "word": "SHAPEOFYOU",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "audioUrl": 346875939,
+        "soundcloudUrl": "https://soundcloud.com/user-707463898/shapeofyou-ed-sheeran-8-bit-by-me",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Ed Sheeran",
+        "song_title": "Shape of You"
+      },
+      {
+        "word": "ROYALS",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "audioUrl": 119134762,
+        "soundcloudUrl": "https://soundcloud.com/thekiffness/lorde-royals-the-kiffness-8bit",
+        "startAt": "0:10",
+        "audioDuration": 15,
+        "artist_name": "Lorde",
+        "song_title": "Royals"
+      },
+      {
+        "word": "YELLOW",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "audioUrl": 151312775,
+        "soundcloudUrl": "https://soundcloud.com/cinnacinna/coldplay-yellow-feltsticksfavorites-8-bit",
+        "startAt": "0:10",
+        "audioDuration": 15,
+        "artist_name": "Coldplay",
+        "song_title": "Yellow"
+      },
+      {
+        "word": "DEMONS",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "audioUrl": 273809698,
+        "soundcloudUrl": "https://soundcloud.com/burryleak/imagine-dragons-demons-8bit-cover",
+        "startAt": "0:37",
+        "audioDuration": 15,
+        "artist_name": "Imagine Dragons",
+        "song_title": "Demons"
+      }
+    ]
   }
 }
