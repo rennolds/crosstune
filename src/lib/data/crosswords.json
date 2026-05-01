@@ -17,7 +17,10 @@
         "textClue": "Artist first name",
         "audioUrl": "499321992",
         "startAt": "0:20",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "9 to 5",
+        "artist_name": "Dolly Parton",
+        "itunesId": 282883590
       },
       {
         "word": "SUNFLOWER",
@@ -28,7 +31,10 @@
         "textClue": "Song title",
         "audioUrl": "516180894",
         "startAt": "0:00",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Sunflower (Spider-Man: Into the Spider-Verse)",
+        "artist_name": "Post Malone",
+        "itunesId": 1445949267
       },
       {
         "word": "POSTMALONE",
@@ -38,7 +44,10 @@
         "color": "#FE9C9C",
         "textClue": "This Artist's name was made via a \"rap name generator\"",
         "audioUrl": "189525707",
-        "startAt": "0:30"
+        "startAt": "0:30",
+        "song_title": "White Iverson",
+        "artist_name": "Post Malone",
+        "itunesId": 1440888729
       },
       {
         "word": "HAPPY",
@@ -48,7 +57,10 @@
         "color": "#28D66A",
         "textClue": "This emotion took the radio by storm in 2014",
         "audioUrl": "253047448",
-        "startAt": "0:22"
+        "startAt": "0:22",
+        "song_title": "Happy (Live)",
+        "artist_name": "Pharrell Williams",
+        "itunesId": 915102924
       },
       {
         "word": "NONSENSE",
@@ -59,7 +71,10 @@
         "textClue": "Song title",
         "audioUrl": "1301637733",
         "startAt": "0:41",
-        "audioDuration": 2
+        "audioDuration": 2,
+        "song_title": "Nonsense",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1631586891
       },
       {
         "word": "LANY",
@@ -69,7 +84,10 @@
         "color": "#FF5B5E",
         "textClue": "This band’s name is an abbreviation of their two hometowns",
         "audioUrl": "506276196",
-        "startAt": "0:13"
+        "startAt": "0:13",
+        "song_title": "Malibu Nights",
+        "artist_name": "LANY",
+        "itunesId": 1435482378
       },
       {
         "word": "CASE",
@@ -80,7 +98,10 @@
         "textClue": "Song title, second word",
         "audioUrl": "256240578",
         "startAt": "0:00",
-        "audioDuration": 5
+        "audioDuration": 5,
+        "song_title": "Basket Case",
+        "artist_name": "Green Day",
+        "itunesId": 1160082180
       },
       {
         "word": "SOCLOSE",
@@ -90,7 +111,10 @@
         "color": "#FFB34B",
         "textClue": "Feel ____ ____",
         "audioUrl": "255884736",
-        "startAt": "0:08"
+        "startAt": "0:08",
+        "song_title": "Feel So Close (Radio Edit)",
+        "artist_name": "Calvin Harris",
+        "itunesId": 1713469225
       }
     ]
   },
@@ -111,7 +135,10 @@
         "textClue": "Song Title",
         "audioUrl": "256526897",
         "startAt": "0:20",
-        "audioDuration": 3
+        "audioDuration": 3,
+        "song_title": "Crazy In Love (feat. JAY-Z)",
+        "artist_name": "Beyoncé",
+        "itunesId": 201274644
       },
       {
         "word": "MAMA",
@@ -122,7 +149,10 @@
         "textClue": "Who this song is addressed to",
         "audioUrl": "790026607",
         "startAt": "0:29",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Pink Pony Club",
+        "artist_name": "Chappell Roan",
+        "itunesId": 1675173768
       },
       {
         "word": "DEJA",
@@ -132,7 +162,10 @@
         "color": "#FFCEFD",
         "textClue": "First word of song title",
         "audioUrl": "1020528670",
-        "startAt": "0:20"
+        "startAt": "0:20",
+        "song_title": "deja vu",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1560735847
       },
       {
         "word": "TWENTYTHREE",
@@ -142,7 +175,10 @@
         "color": "#FF5B5E",
         "textClue": "The age referenced in this song",
         "audioUrl": "256119422",
-        "startAt": "0:12"
+        "startAt": "0:12",
+        "song_title": "What's My Age Again?",
+        "artist_name": "blink-182",
+        "itunesId": 1444118643
       },
       {
         "word": "TATE",
@@ -152,7 +188,10 @@
         "color": "#568EFF",
         "textClue": "Artist first name",
         "audioUrl": "798660295",
-        "startAt": "0:20"
+        "startAt": "0:20",
+        "song_title": "you broke me first",
+        "artist_name": "Tate McRae",
+        "itunesId": 1534661489
       },
       {
         "word": "ZOMBIE",
@@ -162,7 +201,10 @@
         "color": "#FFB34B",
         "textClue": "Song Title",
         "audioUrl": "253192824",
-        "startAt": "0:23"
+        "startAt": "0:23",
+        "song_title": "Zombie",
+        "artist_name": "The Cranberries",
+        "itunesId": 1438592078
       },
       {
         "word": "MBDTF",
@@ -172,7 +214,10 @@
         "color": "#00FFFF",
         "textClue": "Album name, as an acronym ",
         "audioUrl": "1647152475",
-        "startAt": "2:01"
+        "startAt": "2:01",
+        "song_title": "Kanye West - Runaway (feat. Pusha T)",
+        "artist_name": "Songs That Aren't On Sc",
+        "itunesId": 1440742918
       },
       {
         "word": "LORDE",
@@ -183,7 +228,10 @@
         "textClue": "Artist Name",
         "audioUrl": "324330553",
         "startAt": "1:37",
-        "audioDuration": 3
+        "audioDuration": 3,
+        "song_title": "Perfect Places",
+        "artist_name": "LordeMusic",
+        "itunesId": 1429663179
       }
     ]
   },
@@ -205,7 +253,10 @@
         "textClue": "Song title, no punctuation",
         "audioUrl": "255769477",
         "startAt": "0:11",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "S&M",
+        "artist_name": "Rihanna",
+        "itunesId": 1445311857
       },
       {
         "word": "COLDPLAY",
@@ -215,7 +266,10 @@
         "color": "#28D66A",
         "textClue": "Artist name",
         "audioUrl": "255770469",
-        "startAt": "0:55"
+        "startAt": "0:55",
+        "song_title": "Paradise",
+        "artist_name": "coldplayofficial",
+        "itunesId": 726373148
       },
       {
         "word": "FIREWORK",
@@ -226,7 +280,10 @@
         "textClue": "Song title",
         "audioUrl": "256250253",
         "startAt": "0:00",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Firework",
+        "artist_name": "KatyPerry",
+        "itunesId": 716192625
       },
       {
         "word": "MAROON",
@@ -237,7 +294,10 @@
         "textClue": "Color in this artist's name",
         "audioUrl": "19505822",
         "startAt": "0:00",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Moves Like Jagger (Studio Recording From \"The Voice\" Performance) [feat. Christina Aguilera]",
+        "artist_name": "Maroon 5",
+        "itunesId": 1440859510
       },
       {
         "word": "WEEK",
@@ -248,7 +308,10 @@
         "textClue": "It's been a really really messed up ____",
         "audioUrl": "254132243",
         "startAt": "0:12",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Tonight Tonight",
+        "artist_name": "Hot Chelle Rae",
+        "itunesId": 473422500
       },
       {
         "word": "DECEMBER",
@@ -259,7 +322,10 @@
         "textClue": "Title word in this 2011 T-Swift hit",
         "audioUrl": "1558082704",
         "startAt": "0:54",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Back To December (Taylor's Version)",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1690840121
       },
       {
         "word": "SUPERBASS",
@@ -270,7 +336,10 @@
         "textClue": "Song title",
         "audioUrl": "255821207",
         "startAt": "0:41",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Super Bass",
+        "artist_name": "Nicki Minaj",
+        "itunesId": 1440910489
       },
       {
         "word": "GRENADE",
@@ -280,7 +349,10 @@
         "color": "#FE9C9C",
         "textClue": "Song title",
         "audioUrl": "271221115",
-        "startAt": "0:03"
+        "startAt": "0:03",
+        "song_title": "Grenade",
+        "artist_name": "brunomars",
+        "itunesId": 416696997
       }
     ]
   },
@@ -301,7 +373,10 @@
         "color": "#FE9C9C",
         "textClue": "Taylor's debut song, named after a country music star",
         "audioUrl": "1698337647",
-        "startAt": "1:58"
+        "startAt": "1:58",
+        "song_title": "Taylor Swift - Tim McGraw",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440913928
       },
       {
         "word": "LEDZEPPELIN",
@@ -312,7 +387,10 @@
         "textClue": "Artist name",
         "audioUrl": "256217785",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Good Times Bad Times (Remaster)",
+        "artist_name": "Led Zeppelin",
+        "itunesId": 580708940
       },
       {
         "word": "1D",
@@ -323,7 +401,10 @@
         "textClue": "Shorthand for this artist's name",
         "audioUrl": "256071623",
         "startAt": "0:00",
-        "audioDuration": 2
+        "audioDuration": 2,
+        "song_title": "What Makes You Beautiful",
+        "artist_name": "One Direction",
+        "itunesId": 481400053
       },
       {
         "word": "WIRE",
@@ -334,7 +415,10 @@
         "textClue": "Kanye spits through the ____",
         "audioUrl": "255766458",
         "startAt": "0:09",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Through The Wire",
+        "artist_name": "Kanye West",
+        "itunesId": 1437467903
       },
       {
         "word": "LILNASX",
@@ -345,7 +429,10 @@
         "textClue": "Artist name",
         "audioUrl": "539018871",
         "startAt": "0:00",
-        "audioDuration": 3.5
+        "audioDuration": 3.5,
+        "song_title": "Old Town Road (I Got The Horses In The Back) [Prod. YoungKio]",
+        "artist_name": "Lil Nas X",
+        "itunesId": 1468166468
       },
       {
         "word": "SPEARS",
@@ -356,7 +443,10 @@
         "textClue": "Artist last name",
         "audioUrl": "254294909",
         "startAt": "0:02",
-        "audioDuration": 2.5
+        "audioDuration": 2.5,
+        "song_title": "Britney Spears - Baby One More Time",
+        "artist_name": "UltraTBP_Y",
+        "itunesId": 273143820
       },
       {
         "word": "CREEP",
@@ -366,7 +456,10 @@
         "color": "#FFB34B",
         "textClue": "Title of this artist's debut song",
         "audioUrl": "265069081",
-        "startAt": "0:19"
+        "startAt": "0:19",
+        "song_title": "Creep",
+        "artist_name": "Radiohead",
+        "itunesId": 1679849823
       },
       {
         "word": "ROYALS",
@@ -376,7 +469,10 @@
         "color": "#00FFFF",
         "textClue": "Song title of this kiwi artist's debut",
         "audioUrl": "262770503",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Royals",
+        "artist_name": "LordeMusic",
+        "itunesId": 1594982922
       }
     ]
   },
@@ -397,7 +493,10 @@
         "color": "#FE9C9C",
         "textClue": "Adam Levine spent all of his ______",
         "audioUrl": "256187803",
-        "startAt": "0:17"
+        "startAt": "0:17",
+        "song_title": "Payphone (feat. Wiz Khalifa)",
+        "artist_name": "Maroon 5",
+        "itunesId": 1422675690
       },
       {
         "word": "AHA",
@@ -408,7 +507,10 @@
         "textClue": "Name of the one-hit-wonder behind this track",
         "audioUrl": "195410552",
         "startAt": "0:01",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Take on Me",
+        "artist_name": "a-ha",
+        "itunesId": 380907765
       },
       {
         "word": "DREAMS",
@@ -419,7 +521,10 @@
         "textClue": "Song title",
         "audioUrl": "254399326",
         "startAt": "0:17",
-        "audioDuration": 4.5
+        "audioDuration": 4.5,
+        "song_title": "Dreams (2002 Remaster)",
+        "artist_name": "Fleetwood Mac",
+        "itunesId": 651880154
       },
       {
         "word": "APARTMENT",
@@ -430,7 +535,10 @@
         "textClue": "The English translation of this k-pop song title",
         "audioUrl": "1937452967",
         "startAt": "0:41",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "APT.",
+        "artist_name": "ROSÉ",
+        "itunesId": 1779454433
       },
       {
         "word": "ASITWAS",
@@ -441,7 +549,10 @@
         "textClue": "Song title",
         "audioUrl": "1242349246",
         "startAt": "0:03",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "As It Was",
+        "artist_name": "Harry Styles",
+        "itunesId": 1615585008
       },
       {
         "word": "CARDI",
@@ -452,7 +563,10 @@
         "textClue": "Artist name",
         "audioUrl": "425539524",
         "startAt": "0:55",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Best Life (feat. Chance The Rapper)",
+        "artist_name": "Cardi B",
+        "itunesId": 1368105801
       },
       {
         "word": "DNA",
@@ -463,7 +577,10 @@
         "textClue": "Song title",
         "audioUrl": "317617213",
         "startAt": "0:00",
-        "audioDuration": 2
+        "audioDuration": 2,
+        "song_title": "DNA.",
+        "artist_name": "Kendrick Lamar",
+        "itunesId": 1440881990
       },
       {
         "word": "LEVELS",
@@ -474,7 +591,10 @@
         "textClue": "Name of the EDM hit that sampled this snippet",
         "audioUrl": "703064593",
         "startAt": "0:00",
-        "audioDuration": 10.25
+        "audioDuration": 10.25,
+        "song_title": "Something's Got a Hold on Me",
+        "artist_name": "Etta James",
+        "itunesId": 1434911536
       },
       {
         "word": "MGMT",
@@ -485,7 +605,10 @@
         "textClue": "Artist name",
         "audioUrl": "9022953",
         "startAt": "0:08",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Kids",
+        "artist_name": "whoismgmt",
+        "itunesId": 264720124
       },
       {
         "word": "IDEA",
@@ -496,7 +619,10 @@
         "textClue": "Bad ____",
         "audioUrl": "1589588819",
         "startAt": "0:01",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "bad idea right?",
+        "artist_name": "Olivia Rodrigo",
+        "itunesId": 1736995097
       }
     ]
   },
@@ -517,7 +643,10 @@
         "color": "#FE9C9C",
         "textClue": "City referenced in this track",
         "audioUrl": "253594762",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Don't Stop Believin' (2022 Remaster)",
+        "artist_name": "Journey",
+        "itunesId": 1640102584
       },
       {
         "word": "LEANONME",
@@ -528,7 +657,10 @@
         "textClue": "Song title",
         "audioUrl": "253615270",
         "startAt": "0:00",
-        "audioDuration": 12.5
+        "audioDuration": 12.5,
+        "song_title": "Lean on Me",
+        "artist_name": "Bill Withers",
+        "itunesId": 391725484
       },
       {
         "word": "ADELE",
@@ -539,7 +671,10 @@
         "textClue": "Artist name",
         "audioUrl": "48491737",
         "startAt": "0:02",
-        "audioDuration": 8.5
+        "audioDuration": 8.5,
+        "song_title": "Someone Like You - Adele",
+        "artist_name": "proclubmusic",
+        "itunesId": 1544491998
       },
       {
         "word": "DRE",
@@ -550,7 +685,10 @@
         "textClue": "Who?",
         "audioUrl": "252644276",
         "startAt": "0:00",
-        "audioDuration": 11.5
+        "audioDuration": 11.5,
+        "song_title": "Still D.R.E. (Instrumental)",
+        "artist_name": "Dr. Dre",
+        "itunesId": 1440869007
       },
       {
         "word": "THEFRAY",
@@ -561,7 +699,10 @@
         "textClue": "Artist name",
         "audioUrl": "871517044",
         "startAt": "0:00",
-        "audioDuration": 7.6
+        "audioDuration": 7.6,
+        "song_title": "How to Save a Life",
+        "artist_name": "The  Fray",
+        "itunesId": 821031488
       },
       {
         "word": "MILES",
@@ -572,7 +713,10 @@
         "textClue": "Song title, last word",
         "audioUrl": "255837979",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "A Thousand Miles",
+        "artist_name": "Vanessa Carlton",
+        "itunesId": 1440865959
       },
       {
         "word": "COLDPLAY",
@@ -583,7 +727,10 @@
         "textClue": "Artist name",
         "audioUrl": "255770515",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Clocks",
+        "artist_name": "coldplayofficial",
+        "itunesId": 1122776156
       },
       {
         "word": "MCR",
@@ -594,7 +741,10 @@
         "textClue": "Artist name, as an acronym ",
         "audioUrl": "213950831",
         "startAt": "0:00",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Welcome to the Black Parade",
+        "artist_name": "My Chemical Romance",
+        "itunesId": 209388682
       },
       {
         "word": "LETITBE",
@@ -605,7 +755,10 @@
         "textClue": "Song title",
         "audioUrl": "1678616073",
         "startAt": "0:00",
-        "audioDuration": 12.5
+        "audioDuration": 12.5,
+        "song_title": "Let It Be (Remastered)",
+        "artist_name": "The Silver Beatles",
+        "itunesId": 1719698643
       }
     ]
   },
@@ -625,7 +778,10 @@
         "color": "#FE9C9C",
         "textClue": "Song Title",
         "audioUrl": "278509072",
-        "startAt": "0:22"
+        "startAt": "0:22",
+        "song_title": "P.Y.T. (Pretty Young Thing)",
+        "artist_name": "Michael Jackson",
+        "itunesId": 273048791
       },
       {
         "word": "TORNADO",
@@ -636,7 +792,10 @@
         "textClue": "Inclement weather featured in this track",
         "audioUrl": "1939462034",
         "startAt": "1:10",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Frank Ocean - Thinkin Bout You (skip to 1 minute)",
+        "artist_name": "#23",
+        "itunesId": 1440766128
       },
       {
         "word": "ANTIHERO",
@@ -647,7 +806,10 @@
         "textClue": "Song Title",
         "audioUrl": "1367286193",
         "startAt": "0:00",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Anti-Hero",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1649434293
       },
       {
         "word": "NASTY",
@@ -658,7 +820,10 @@
         "textClue": "An adjective Megan Thee Stallion uses to describe herself on this track",
         "audioUrl": "771495430",
         "startAt": "0:16",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Savage",
+        "artist_name": "Megan Thee Stallion",
+        "itunesId": 1501739781
       },
       {
         "word": "GODSPLAN",
@@ -668,7 +833,10 @@
         "color": "#568EFF",
         "textClue": "Song Title",
         "audioUrl": "386265671",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "God's Plan",
+        "artist_name": "octobersveryown",
+        "itunesId": 1406109863
       },
       {
         "word": "ABBA",
@@ -679,7 +847,10 @@
         "textClue": "Artist Name",
         "audioUrl": "253187333",
         "startAt": "0:10",
-        "audioDuration": 7.5
+        "audioDuration": 7.5,
+        "song_title": "Dancing Queen",
+        "artist_name": "Abba",
+        "itunesId": 1422648513
       },
       {
         "word": "ALIBIS",
@@ -690,7 +861,10 @@
         "textClue": "A legal term used in this song, plural",
         "audioUrl": "273792918",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Mr. Brightside",
+        "artist_name": "The Killers",
+        "itunesId": 1440891171
       },
       {
         "word": "PHASE",
@@ -701,7 +875,10 @@
         "textClue": "It was never a _____",
         "audioUrl": "4720038",
         "startAt": "0:01",
-        "audioDuration": 10.6
+        "audioDuration": 10.6,
+        "song_title": "All Time Low - Dear Maria, Count Me In",
+        "artist_name": "Hopeless Records",
+        "itunesId": 503740092
       }
     ]
   },
@@ -722,7 +899,10 @@
         "textClue": "Car in this song title",
         "audioUrl": "342393216",
         "startAt": "0:00",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "White Ferrari",
+        "artist_name": "blonded",
+        "itunesId": 1703155635
       },
       {
         "word": "CHEVY",
@@ -733,7 +913,10 @@
         "textClue": "Car driven in this track",
         "audioUrl": "259092783",
         "startAt": "0:00",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "American Pie",
+        "artist_name": "Don McLean",
+        "itunesId": 1440834619
       },
       {
         "word": "RASCALFLATTS",
@@ -744,7 +927,10 @@
         "textClue": "Artist name",
         "audioUrl": "261467493",
         "startAt": "0:00",
-        "audioDuration": 12.5
+        "audioDuration": 12.5,
+        "song_title": "Life Is A Highway (2008 Remaster)",
+        "artist_name": "Rascal Flatts",
+        "itunesId": 1587969918
       },
       {
         "word": "SIDETOSIDE",
@@ -755,7 +941,10 @@
         "textClue": "The way this boy has Ariana walkin'",
         "audioUrl": "264414421",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Side To Side (feat. Nicki Minaj)",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1440835649
       },
       {
         "word": "CLASSIC",
@@ -766,7 +955,10 @@
         "textClue": "Song title",
         "audioUrl": "256300174",
         "startAt": "0:20",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Classic",
+        "artist_name": "MKTO",
+        "itunesId": 853842868
       },
       {
         "word": "FLOAT",
@@ -777,7 +969,10 @@
         "textClue": "Verb in this song title",
         "audioUrl": "253507018",
         "startAt": "0:20",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Float On",
+        "artist_name": "Modest Mouse",
+        "itunesId": 190780833
       },
       {
         "word": "WIZKHALIFA",
@@ -788,7 +983,10 @@
         "textClue": "Artist name",
         "audioUrl": "271220773",
         "startAt": "0:24",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Black and Yellow",
+        "artist_name": "Wiz Khalifa",
+        "itunesId": 423672423
       },
       {
         "word": "CRUISE",
@@ -799,7 +997,10 @@
         "textClue": "Song title",
         "audioUrl": "253006705",
         "startAt": "0:00",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Cruise",
+        "artist_name": "Florida Georgia Line",
+        "itunesId": 1440812204
       }
     ]
   },
@@ -821,7 +1022,10 @@
         "textClue": "Song title",
         "audioUrl": "274720380",
         "startAt": "0:20",
-        "audioDuration": 8.5
+        "audioDuration": 8.5,
+        "song_title": "Closer (feat. Halsey)",
+        "artist_name": "The Chainsmokers",
+        "itunesId": 1170699703
       },
       {
         "word": "THECURE",
@@ -832,7 +1036,10 @@
         "textClue": "THE Artist name",
         "audioUrl": "255775859",
         "startAt": "0:20",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Boys Don't Cry",
+        "artist_name": "The Cure",
+        "itunesId": 1288102522
       },
       {
         "word": "APPLE",
@@ -843,7 +1050,10 @@
         "textClue": "Song title",
         "audioUrl": "1839750924",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Apple",
+        "artist_name": "charlixcx",
+        "itunesId": 1773518385
       },
       {
         "word": "FLOWERS",
@@ -853,7 +1063,10 @@
         "color": "#568EFF",
         "textClue": "Song title",
         "audioUrl": "1422809359",
-        "startAt": "0:18"
+        "startAt": "0:18",
+        "song_title": "Flowers",
+        "artist_name": "Miley Cyrus",
+        "itunesId": 1674691586
       },
       {
         "word": "THRIFTSHOP",
@@ -863,7 +1076,10 @@
         "color": "#FFB34B",
         "textClue": "Song title",
         "audioUrl": "555682944",
-        "startAt": "0:25"
+        "startAt": "0:25",
+        "song_title": "Thrift Shop (feat. Wanz)",
+        "artist_name": "Macklemore",
+        "itunesId": 560097550
       },
       {
         "word": "WONDERWALL",
@@ -874,7 +1090,10 @@
         "textClue": "Song title",
         "audioUrl": "283975388",
         "startAt": "0:00",
-        "audioDuration": 7.5
+        "audioDuration": 7.5,
+        "song_title": "Wonderwall (Remastered)",
+        "artist_name": "Oasis",
+        "itunesId": 1525933490
       },
       {
         "word": "SEAN",
@@ -885,7 +1104,10 @@
         "textClue": "Artist name",
         "audioUrl": "98301888",
         "startAt": "0:21",
-        "audioDuration": 7.25
+        "audioDuration": 7.25,
+        "song_title": "Beware (feat. Lil Wayne & Jhené Aiko)",
+        "artist_name": "Big Sean",
+        "itunesId": 1440822099
       },
       {
         "word": "HILLS",
@@ -896,7 +1118,10 @@
         "textClue": "Plural noun in this song title",
         "audioUrl": "253876746",
         "startAt": "0:07",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "The Hills",
+        "artist_name": "The Weeknd",
+        "itunesId": 1440826383
       },
       {
         "word": "PLEASE",
@@ -906,7 +1131,10 @@
         "color": "#568EFF",
         "textClue": "Word in this song title",
         "audioUrl": "1840545771",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Please Please Please",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1750307080
       }
     ]
   },
@@ -928,7 +1156,10 @@
         "textClue": "Song title",
         "audioUrl": "74958037",
         "startAt": "0:48",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Riptide",
+        "artist_name": "Vance  Joy",
+        "itunesId": 1022164261
       },
       {
         "word": "SIA",
@@ -938,7 +1169,10 @@
         "color": "#28D66A",
         "textClue": "Artist name",
         "audioUrl": "258025366",
-        "startAt": "0:11"
+        "startAt": "0:11",
+        "song_title": "Elastic Heart",
+        "artist_name": "Sia",
+        "itunesId": 882945393
       },
       {
         "word": "IMPALA",
@@ -948,7 +1182,10 @@
         "color": "#FFCEFD",
         "textClue": "Part of artist name (or an African mammal)",
         "audioUrl": "256241332",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "The Less I Know The Better",
+        "artist_name": "Tame Impala",
+        "itunesId": 1440838488
       },
       {
         "word": "DOWNUNDER",
@@ -958,7 +1195,10 @@
         "color": "#FF5B5E",
         "textClue": "Song title",
         "audioUrl": "253631171",
-        "startAt": "0:10"
+        "startAt": "0:10",
+        "song_title": "Down Under",
+        "artist_name": "Men At Work",
+        "itunesId": 282960968
       },
       {
         "word": "STAY",
@@ -968,7 +1208,10 @@
         "color": "#FFB34B",
         "textClue": "Song title",
         "audioUrl": "1082723470",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Stay (with Justin Bieber)",
+        "artist_name": "The Kid LAROI.",
+        "itunesId": 1574378625
       },
       {
         "word": "ACDC",
@@ -978,7 +1221,10 @@
         "color": "#00FFFF",
         "textClue": "Band name",
         "audioUrl": "256075003",
-        "startAt": "0:19"
+        "startAt": "0:19",
+        "song_title": "Thunderstruck",
+        "artist_name": "AC/DC",
+        "itunesId": 575998661
       },
       {
         "word": "AMNESIA",
@@ -988,7 +1234,10 @@
         "color": "#FE9C9C",
         "textClue": "Song title, also a medical condition",
         "audioUrl": "256195315",
-        "startAt": "1:08"
+        "startAt": "1:08",
+        "song_title": "Amnesia",
+        "artist_name": "5SOS",
+        "itunesId": 824496782
       },
       {
         "word": "HELL",
@@ -998,7 +1247,10 @@
         "color": "#28D66A",
         "textClue": "Destination in this song",
         "audioUrl": "256074947",
-        "startAt": "0:18"
+        "startAt": "0:18",
+        "song_title": "Highway to Hell",
+        "artist_name": "AC/DC",
+        "itunesId": 574044008
       },
       {
         "word": "TROYE",
@@ -1008,7 +1260,10 @@
         "color": "#FFCEFD",
         "textClue": "Artist first name",
         "audioUrl": "1564144813",
-        "startAt": "0:53"
+        "startAt": "0:53",
+        "song_title": "Rush",
+        "artist_name": "Troye Sivan",
+        "itunesId": 1694860254
       }
     ]
   },
@@ -1029,7 +1284,10 @@
         "textClue": "Artist first name",
         "audioUrl": "256044840",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Marry You",
+        "artist_name": "brunomars",
+        "itunesId": 1841435441
       },
       {
         "word": "MRSROBINSON",
@@ -1040,7 +1298,10 @@
         "textClue": "Song title, includes a surname",
         "audioUrl": "252859304",
         "startAt": "0:20",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Mrs. Robinson (From \"The Graduate\" Soundtrack)",
+        "artist_name": "Simon & Garfunkel",
+        "itunesId": 1463652181
       },
       {
         "word": "DILEMMA",
@@ -1051,7 +1312,10 @@
         "textClue": "Song title, also a synoynm of quandary",
         "audioUrl": "255960748",
         "startAt": "0:15",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "Dilemma (feat. Kelly Rowland)",
+        "artist_name": "Nelly Official",
+        "itunesId": 1634735552
       },
       {
         "word": "FUTURE",
@@ -1061,7 +1325,10 @@
         "color": "#FF5B5E",
         "textClue": "Artist name",
         "audioUrl": "307949010",
-        "startAt": "0:05"
+        "startAt": "0:05",
+        "song_title": "Mask Off",
+        "artist_name": "Future",
+        "itunesId": 1253106277
       },
       {
         "word": "ATARI",
@@ -1072,7 +1339,10 @@
         "textClue": "Gaming console referenced in this track",
         "audioUrl": "328201666",
         "startAt": "0:07",
-        "audioDuration": 8.5
+        "audioDuration": 8.5,
+        "song_title": "Forget You",
+        "artist_name": "CeeLo",
+        "itunesId": 400135918
       },
       {
         "word": "BORED",
@@ -1082,7 +1352,10 @@
         "color": "#FFB34B",
         "textClue": "If Ariana Grande is ____, hide your boyfriend",
         "audioUrl": "571670148",
-        "startAt": "0:20"
+        "startAt": "0:20",
+        "song_title": "break up with your girlfriend, i'm bored",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1450330687
       },
       {
         "word": "SQUABBLEUP",
@@ -1093,7 +1366,10 @@
         "textClue": "Song title",
         "audioUrl": "1964742195",
         "startAt": "0:16",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "squabble up",
+        "artist_name": "Kendrick Lamar",
+        "itunesId": 1781270321
       },
       {
         "word": "SABRINA",
@@ -1104,7 +1380,10 @@
         "textClue": "Artist first name",
         "audioUrl": "2033604668",
         "startAt": "0:00",
-        "audioDuration": 4.65
+        "audioDuration": 4.65,
+        "song_title": "Busy Woman",
+        "artist_name": "Sabrina Carpenter",
+        "itunesId": 1795513518
       }
     ]
   },
@@ -1125,7 +1404,10 @@
         "textClue": "Woke up here",
         "audioUrl": "256250221",
         "startAt": "0:47",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Waking Up In Vegas",
+        "artist_name": "KatyPerry",
+        "itunesId": 715891624
       },
       {
         "word": "MIAMI",
@@ -1136,7 +1418,10 @@
         "textClue": "Will Smith's big hit about this city",
         "audioUrl": "253509520",
         "startAt": "0:06",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Miami",
+        "artist_name": "Will Smith",
+        "itunesId": 206201782
       },
       {
         "word": "BUDAPEST",
@@ -1147,7 +1432,10 @@
         "textClue": "Song title (also the capital of Hungry)",
         "audioUrl": "255796418",
         "startAt": "0:10",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Budapest",
+        "artist_name": "George Ezra",
+        "itunesId": 947999963
       },
       {
         "word": "NYC",
@@ -1158,7 +1446,10 @@
         "textClue": "City mentioned in this track",
         "audioUrl": "283122057",
         "startAt": "0:28",
-        "audioDuration": 5
+        "audioDuration": 5,
+        "song_title": "Hey There Delilah",
+        "artist_name": "Plain White T's",
+        "itunesId": 1442825350
       },
       {
         "word": "HOUSTON",
@@ -1169,7 +1460,10 @@
         "textClue": "___atlantavegas",
         "audioUrl": "2036616900",
         "startAt": "1:30",
-        "audioDuration": 8.5
+        "audioDuration": 8.5,
+        "song_title": "Houstatlantavegas",
+        "artist_name": "‎",
+        "itunesId": 1452017780
       },
       {
         "word": "VIENNA",
@@ -1180,7 +1474,10 @@
         "textClue": "Billy Joel says this city waits for you",
         "audioUrl": "257053810",
         "startAt": "0:16",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Vienna",
+        "artist_name": "Billy Joel",
+        "itunesId": 158618071
       },
       {
         "word": "BEVERLY",
@@ -1191,7 +1488,10 @@
         "textClue": "Part of this song title",
         "audioUrl": "256245884",
         "startAt": "0:13",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Beverly Hills",
+        "artist_name": "Weezer",
+        "itunesId": 1440865427
       },
       {
         "word": "TOKYO",
@@ -1202,7 +1502,10 @@
         "textClue": "From the fast and furious 3 soundtrack",
         "audioUrl": "392085942",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Teriyaki Boyz - Tokyo Drift",
+        "artist_name": "Fast and Furious 3 Soundtrack",
+        "itunesId": 1611417234
       }
     ]
   },
@@ -1223,7 +1526,10 @@
         "textClue": "Song title of this DaBaby track",
         "audioUrl": "687495670",
         "startAt": "0:32",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "BOP",
+        "artist_name": "Baby Jesus (DaBaby)",
+        "itunesId": 1480805090
       },
       {
         "word": "REDBONE",
@@ -1234,7 +1540,10 @@
         "textClue": "Song title",
         "audioUrl": "291270561",
         "startAt": "0:26",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Redbone",
+        "artist_name": "Childish Gambino",
+        "itunesId": 1771719595
       },
       {
         "word": "DESPACITO",
@@ -1245,7 +1554,10 @@
         "textClue": "Song title (slowly in Spanish)",
         "audioUrl": "301157784",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Despacito",
+        "artist_name": "Luis Fonsi",
+        "itunesId": 1447401620
       },
       {
         "word": "LEMONADE",
@@ -1256,7 +1568,10 @@
         "textClue": "Beyonce album that won 2 grammys ",
         "audioUrl": "610075410",
         "startAt": "0:19",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Formation",
+        "artist_name": "Beyoncé",
+        "itunesId": 1460430757
       },
       {
         "word": "STING",
@@ -1267,7 +1582,10 @@
         "textClue": "This 80's British superstar",
         "audioUrl": "252663420",
         "startAt": "0:18",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Fields Of Gold",
+        "artist_name": "Sting",
+        "itunesId": 1415203732
       },
       {
         "word": "RADIO",
@@ -1278,7 +1596,10 @@
         "textClue": "What someone stole in this song...",
         "audioUrl": "271221685",
         "startAt": "0:15",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Car Radio",
+        "artist_name": "twentyonepilots",
+        "itunesId": 585128671
       },
       {
         "word": "STYLE",
@@ -1289,7 +1610,10 @@
         "textClue": "Song title",
         "audioUrl": "327237475",
         "startAt": "0:19",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Style",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440933520
       },
       {
         "word": "ANIMALS",
@@ -1300,7 +1624,10 @@
         "textClue": "Song title",
         "audioUrl": "166300331",
         "startAt": "0:00",
-        "audioDuration": 5
+        "audioDuration": 5,
+        "song_title": "Maroon 5 - Animals",
+        "artist_name": "Interscope Records",
+        "itunesId": 1440855552
       },
       {
         "word": "SNOOPDOGG",
@@ -1311,7 +1638,10 @@
         "textClue": "Artist name",
         "audioUrl": "1496998453",
         "startAt": "0:33",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Gin and Juice",
+        "artist_name": "Snoop Dogg",
+        "itunesId": 1676306185
       }
     ]
   },
@@ -1331,7 +1661,10 @@
         "color": "#FE9C9C",
         "textClue": "Shorthand name for this group",
         "audioUrl": "256119442",
-        "startAt": "1:18"
+        "startAt": "1:18",
+        "song_title": "I Miss You",
+        "artist_name": "blink-182",
+        "itunesId": 1440846785
       },
       {
         "word": "CONTROVERSY",
@@ -1342,7 +1675,10 @@
         "textClue": "Eminem says we need some of this",
         "audioUrl": "256257257",
         "startAt": "0:22",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Without Me",
+        "artist_name": "Eminem",
+        "itunesId": 1440821643
       },
       {
         "word": "DOJA",
@@ -1353,7 +1689,10 @@
         "textClue": "Part of artist name",
         "audioUrl": "708018244",
         "startAt": "1:50",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Cyber Sex",
+        "artist_name": "DOJA CAT",
+        "itunesId": 1486263167
       },
       {
         "word": "YEAH",
@@ -1363,7 +1702,10 @@
         "color": "#FF5B5E",
         "textClue": "Song title",
         "audioUrl": "256397243",
-        "startAt": "0:01"
+        "startAt": "0:01",
+        "song_title": "Yeah! (feat. Lil Jon & Ludacris)",
+        "artist_name": "Usher",
+        "itunesId": 386153478
       },
       {
         "word": "BILLIE",
@@ -1374,7 +1716,10 @@
         "textClue": "Artist first name",
         "audioUrl": "1096504597",
         "startAt": "2:50",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Happier Than Ever",
+        "artist_name": "Billie Eilish",
+        "itunesId": 1564531202
       },
       {
         "word": "POKERFACE",
@@ -1385,7 +1730,10 @@
         "textClue": "Song title",
         "audioUrl": "255905673",
         "startAt": "0:07",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Poker Face",
+        "artist_name": "ladygaga",
+        "itunesId": 1440818665
       },
       {
         "word": "MRBLUESKY",
@@ -1396,7 +1744,10 @@
         "textClue": "Song title",
         "audioUrl": "253507627",
         "startAt": "0:14",
-        "audioDuration": 13.5
+        "audioDuration": 13.5,
+        "song_title": "Mr. Blue Sky",
+        "artist_name": "Electric Light Orchestra (ELO)",
+        "itunesId": 1054525017
       },
       {
         "word": "CASH",
@@ -1406,7 +1757,10 @@
         "color": "#FE9C9C",
         "textClue": "Artist last name",
         "audioUrl": "326293297",
-        "startAt": "0:20"
+        "startAt": "0:20",
+        "song_title": "Folsom Prison Blues",
+        "artist_name": "Johnny Cash",
+        "itunesId": 1290122979
       }
     ]
   },
@@ -1427,7 +1781,10 @@
         "textClue": "Name of the hit song that sampled this snippet",
         "audioUrl": "289791693",
         "startAt": "2:44",
-        "audioDuration": 19
+        "audioDuration": 19,
+        "song_title": "Hide and Seek",
+        "artist_name": "imogenheap",
+        "itunesId": 1785686649
       },
       {
         "word": "JACK",
@@ -1438,7 +1795,10 @@
         "textClue": "Shaboozey's whiskey of choice",
         "audioUrl": "1792895020",
         "startAt": "0:36",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "A Bar Song (Tipsy)",
+        "artist_name": "Shaboozey",
+        "itunesId": 1737085899
       },
       {
         "word": "BULLETPROOF",
@@ -1448,7 +1808,10 @@
         "color": "#FFCEFD",
         "textClue": "Song title",
         "audioUrl": "271217302",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Bulletproof",
+        "artist_name": "La Roux Official",
+        "itunesId": 1440747711
       },
       {
         "word": "HARRY",
@@ -1459,7 +1822,10 @@
         "textClue": "Artist first name",
         "audioUrl": "321986923",
         "startAt": "0:15",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Kiwi",
+        "artist_name": "Harry Styles",
+        "itunesId": 1226034810
       },
       {
         "word": "WHO",
@@ -1470,7 +1836,10 @@
         "textClue": "Part of artist name",
         "audioUrl": "1564537654",
         "startAt": "0:45",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Baba O'Riley (Remastered 2022)",
+        "artist_name": "The Who",
+        "itunesId": 1698563960
       },
       {
         "word": "HAYLEY",
@@ -1481,7 +1850,10 @@
         "textClue": "First name of this lead singer",
         "audioUrl": "196448540",
         "startAt": "2:41",
-        "audioDuration": 13.5
+        "audioDuration": 13.5,
+        "song_title": "All I Wanted - Paramore",
+        "artist_name": "Jose Nando",
+        "itunesId": 604800424
       },
       {
         "word": "HOTTOGO",
@@ -1491,7 +1863,10 @@
         "color": "#00FFFF",
         "textClue": "Song title",
         "audioUrl": "1582588575",
-        "startAt": "0:04"
+        "startAt": "0:04",
+        "song_title": "HOT TO GO!",
+        "artist_name": "Chappell Roan",
+        "itunesId": 1707413105
       },
       {
         "word": "SHAKIRA",
@@ -1502,7 +1877,10 @@
         "textClue": "Artist name",
         "audioUrl": "256275102",
         "startAt": "0:16",
-        "audioDuration": 14.5
+        "audioDuration": 14.5,
+        "song_title": "Waka Waka (This Time for Africa) [The Official 2010 FIFA World Cup (TM) Song] (Single) [feat. Freshlyground]",
+        "artist_name": "Shakira",
+        "itunesId": 371784883
       }
     ]
   },
@@ -1522,7 +1900,10 @@
         "color": "#FE9C9C",
         "textClue": "Missing element in this artist name",
         "audioUrl": "255771229",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Boogie Wonderland",
+        "artist_name": "Earth, Wind & Fire",
+        "itunesId": 437633947
       },
       {
         "word": "WORK",
@@ -1532,7 +1913,10 @@
         "color": "#28D66A",
         "textClue": "Song title",
         "audioUrl": "255769417",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Work (feat. Drake)",
+        "artist_name": "Rihanna",
+        "itunesId": 1440934019
       },
       {
         "word": "LUCIDDREAMS",
@@ -1543,7 +1927,10 @@
         "textClue": "Song title",
         "audioUrl": "328259811",
         "startAt": "0:07",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Lucid Dreams",
+        "artist_name": "Juice WRLD",
+        "itunesId": 1571797456
       },
       {
         "word": "BLANKET",
@@ -1553,7 +1940,10 @@
         "color": "#FF5B5E",
         "textClue": "A sentimental item for a child",
         "audioUrl": "10676644",
-        "startAt": "0:47"
+        "startAt": "0:47",
+        "song_title": "Fergie - Big Girls Don't Cry",
+        "artist_name": "Interscope Records",
+        "itunesId": 1440659919
       },
       {
         "word": "CIRCLES",
@@ -1563,7 +1953,10 @@
         "color": "#568EFF",
         "textClue": "Song title",
         "audioUrl": "672849185",
-        "startAt": "0:17"
+        "startAt": "0:17",
+        "song_title": "Circles",
+        "artist_name": "Post Malone",
+        "itunesId": 1477880561
       },
       {
         "word": "CAR",
@@ -1573,7 +1966,10 @@
         "color": "#FFB34B",
         "textClue": "Noun in this song title",
         "audioUrl": "232328622",
-        "startAt": "0:24"
+        "startAt": "0:24",
+        "song_title": "Fast Car",
+        "artist_name": "Tracy Chapman",
+        "itunesId": 79565507
       },
       {
         "word": "BROWNEYED",
@@ -1584,7 +1980,10 @@
         "textClue": "Descriptor in this song title",
         "audioUrl": "992480563",
         "startAt": "0:20",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Brown Eyed Girl",
+        "artist_name": "Official Van Morrison",
+        "itunesId": 1828716610
       },
       {
         "word": "STROKES",
@@ -1595,7 +1994,10 @@
         "textClue": "Artist name, drop \"the\"",
         "audioUrl": "671124935",
         "startAt": "0:18",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Someday",
+        "artist_name": "The Strokes",
+        "itunesId": 266376993
       }
     ]
   },
@@ -1615,7 +2017,10 @@
         "color": "#FE9C9C",
         "textClue": "Artist name, also an acronym",
         "audioUrl": "254119635",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "No Scrubs",
+        "artist_name": "TLC",
+        "itunesId": 298575248
       },
       {
         "word": "CHARMED",
@@ -1625,7 +2030,10 @@
         "color": "#28D66A",
         "textClue": "Word in this song title",
         "audioUrl": "205003955",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "Semi-Charmed Life (2006 Remaster)",
+        "artist_name": "Third Eye Blind",
+        "itunesId": 6763280937
       },
       {
         "word": "HOUSTON",
@@ -1635,7 +2043,10 @@
         "color": "#FFCEFD",
         "textClue": "Artist last name",
         "audioUrl": "253799714",
-        "startAt": "0:32"
+        "startAt": "0:32",
+        "song_title": "I Wanna Dance with Somebody (Who Loves Me)",
+        "artist_name": "WHITNEY HOUSTON",
+        "itunesId": 1334780224
       },
       {
         "word": "AFRICA",
@@ -1645,7 +2056,10 @@
         "color": "#FF5B5E",
         "textClue": "Song title",
         "audioUrl": "253091084",
-        "startAt": "0:10"
+        "startAt": "0:10",
+        "song_title": "Africa",
+        "artist_name": "Toto",
+        "itunesId": 185717604
       },
       {
         "word": "POSITIONS",
@@ -1655,7 +2069,10 @@
         "color": "#568EFF",
         "textClue": "Song title",
         "audioUrl": "916465010",
-        "startAt": "2:40"
+        "startAt": "2:40",
+        "song_title": "positions",
+        "artist_name": "Ariana Grande",
+        "itunesId": 1553953912
       },
       {
         "word": "YELLOW",
@@ -1665,7 +2082,10 @@
         "color": "#FFB34B",
         "textClue": "Song title",
         "audioUrl": "255770358",
-        "startAt": "0:11"
+        "startAt": "0:11",
+        "song_title": "Yellow",
+        "artist_name": "coldplayofficial",
+        "itunesId": 1122782283
       },
       {
         "word": "WANNAKNOW",
@@ -1675,7 +2095,10 @@
         "color": "#00FFFF",
         "textClue": "Do I?",
         "audioUrl": "255984215",
-        "startAt": "0:17"
+        "startAt": "0:17",
+        "song_title": "Do I Wanna Know?",
+        "artist_name": "ArcticMonkeys",
+        "itunesId": 675833167
       },
       {
         "word": "PLANES",
@@ -1686,7 +2109,10 @@
         "textClue": "Plural noun in song title",
         "audioUrl": "34767310",
         "startAt": "0:55",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "M.I.A. - Paper Planes",
+        "artist_name": "Interscope Records",
+        "itunesId": 296393515
       }
     ]
   },
@@ -1707,7 +2133,10 @@
         "textClue": "Part of song title",
         "audioUrl": "214807077",
         "startAt": "0:25",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Material Girl",
+        "artist_name": "Madonna",
+        "itunesId": 80815209
       },
       {
         "word": "DAFTPUNK",
@@ -1717,7 +2146,10 @@
         "color": "#28D66A",
         "textClue": "Artist name",
         "audioUrl": "199428706",
-        "startAt": "0:31"
+        "startAt": "0:31",
+        "song_title": "One More Time",
+        "artist_name": "Daft Punk",
+        "itunesId": 697195462
       },
       {
         "word": "INDACLUB",
@@ -1728,7 +2160,10 @@
         "textClue": "Song title",
         "audioUrl": "255893901",
         "startAt": "0:00",
-        "audioDuration": 14
+        "audioDuration": 14,
+        "song_title": "In Da Club",
+        "artist_name": "50 Cent",
+        "itunesId": 1440841857
       },
       {
         "word": "DIETPEPSI",
@@ -1739,7 +2174,10 @@
         "textClue": "Song title, also a beverage",
         "audioUrl": "1892454861",
         "startAt": "0:30",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Diet Pepsi",
+        "artist_name": "Addison Rae",
+        "itunesId": 1760428041
       },
       {
         "word": "CANDY",
@@ -1750,7 +2188,10 @@
         "textClue": "Snack in this song title",
         "audioUrl": "347257536",
         "startAt": "0:19",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Candy Paint",
+        "artist_name": "Post Malone",
+        "itunesId": 1373517329
       },
       {
         "word": "IRONMAIDEN",
@@ -1761,7 +2202,10 @@
         "textClue": "Favorite band of the character in this song",
         "audioUrl": "252921297",
         "startAt": "0:18",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "song_title": "Teenage Dirtbag",
+        "artist_name": "Wheatus",
+        "itunesId": 298160976
       },
       {
         "word": "BYE",
@@ -1783,7 +2227,10 @@
         "textClue": "Song title",
         "audioUrl": "271224235",
         "startAt": "0:00",
-        "audioDuration": 9
+        "audioDuration": 9,
+        "song_title": "Low (feat T-Pain)",
+        "artist_name": "Flo Rida",
+        "itunesId": 272171635
       }
     ]
   },
@@ -1804,7 +2251,10 @@
         "color": "#FE9C9C",
         "textClue": "This artist is the lead man of NWA (unique spelling)",
         "audioUrl": "231226434",
-        "startAt": "1:03"
+        "startAt": "1:03",
+        "song_title": "Eazy E - Boys In The Hood N.W.A",
+        "artist_name": "Ashi Zigelboim",
+        "itunesId": 1440839388
       },
       {
         "word": "ANGEL",
@@ -1814,7 +2264,10 @@
         "color": "#28D66A",
         "textClue": "Shaggy refers to his girl as an _____",
         "audioUrl": "64508438",
-        "startAt": "1:02"
+        "startAt": "1:02",
+        "song_title": "Shaggy - Angel [Yar Edit 2012] - 85",
+        "artist_name": "Dj Yar",
+        "itunesId": 1440745528
       },
       {
         "word": "JACKSON",
@@ -1824,7 +2277,10 @@
         "color": "#FFCEFD",
         "textClue": "Artist last name (King of Pop)",
         "audioUrl": "278508940",
-        "startAt": "0:01"
+        "startAt": "0:01",
+        "song_title": "Chicago",
+        "artist_name": "Michael Jackson",
+        "itunesId": 850697800
       },
       {
         "word": "BRITNEY",
@@ -1834,7 +2290,10 @@
         "color": "#FF5B5E",
         "textClue": "Artist first name (Princess of Pop)",
         "audioUrl": "27020927",
-        "startAt": "0:27"
+        "startAt": "0:27",
+        "song_title": "I Wanna Go",
+        "artist_name": "Britney Spears",
+        "itunesId": 581775117
       },
       {
         "word": "ROCK",
@@ -1844,7 +2303,10 @@
         "color": "#568EFF",
         "textClue": "Queen promises he will do this",
         "audioUrl": "252514440",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "We Will Rock You (Remastered 2011)",
+        "artist_name": "Queen",
+        "itunesId": 1702759392
       },
       {
         "word": "BROWN",
@@ -1854,7 +2316,10 @@
         "color": "#FFB34B",
         "textClue": "Artist last name (Godfather of Soul)",
         "audioUrl": "255779264",
-        "startAt": "0:00"
+        "startAt": "0:00",
+        "song_title": "I Got You (1964 Smash Version)",
+        "artist_name": "James Brown",
+        "itunesId": 1702760725
       },
       {
         "word": "ELLA",
@@ -1864,7 +2329,10 @@
         "color": "#00FFFF",
         "textClue": "Artist first name (the First Lady of Song)",
         "audioUrl": "38221541",
-        "startAt": "0:14"
+        "startAt": "0:14",
+        "song_title": "Ella Fitzgerald Louis Armstrong - Dream A Little Dream Of Me",
+        "artist_name": "yael wolfenson",
+        "itunesId": 1359341569
       },
       {
         "word": "KING",
@@ -1874,7 +2342,10 @@
         "color": "#FE9C9C",
         "textClue": "What rock music moniker does this artist have",
         "audioUrl": "326749273",
-        "startAt": "0:15"
+        "startAt": "0:15",
+        "song_title": "Jailhouse Rock",
+        "artist_name": "Elvis Presley",
+        "itunesId": 217634327
       }
     ]
   },
@@ -1896,7 +2367,10 @@
         "textClue": "Song title",
         "audioUrl": "253507018",
         "startAt": "0:30",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Float On",
+        "artist_name": "Modest Mouse",
+        "itunesId": 190780833
       },
       {
         "word": "MEN",
@@ -1907,7 +2381,10 @@
         "textClue": "What it's raining in this track",
         "audioUrl": "22900515",
         "startAt": "0:38",
-        "audioDuration": 9.7
+        "audioDuration": 9.7,
+        "song_title": "It's Raining Men",
+        "artist_name": "Fanbridge Henry",
+        "itunesId": 1442897218
       },
       {
         "word": "SNOWPATROL",
@@ -1918,7 +2395,10 @@
         "textClue": "Artist name",
         "audioUrl": "256206578",
         "startAt": "0:07",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "song_title": "Chasing Cars",
+        "artist_name": "Snow Patrol",
+        "itunesId": 1440758864
       },
       {
         "word": "ICESPICE",
@@ -1929,7 +2409,10 @@
         "textClue": "The featured artist rapping in this song",
         "audioUrl": "1523007382",
         "startAt": "1:04",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "Karma (feat. Ice Spice)",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1689132081
       },
       {
         "word": "SURFIN",
@@ -1940,7 +2423,10 @@
         "textClue": "_ U.S.A",
         "audioUrl": "251831721",
         "startAt": "0:30",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Surfin' U.S.A. (Stereo)",
+        "artist_name": "The Beach Boys",
+        "itunesId": 1443213810
       },
       {
         "word": "OCEANEYES",
@@ -1951,7 +2437,10 @@
         "textClue": "Song title",
         "audioUrl": "233719633",
         "startAt": "0:26",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Ocean Eyes",
+        "artist_name": "Billie Eilish",
+        "itunesId": 1440899467
       },
       {
         "word": "RAIN",
@@ -1962,7 +2451,10 @@
         "textClue": "Last word of this song title",
         "audioUrl": "254407931",
         "startAt": "0:07",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Set Fire to the Rain",
+        "artist_name": "Adele",
+        "itunesId": 1544491988
       },
       {
         "word": "TEARDROPS",
@@ -1973,7 +2465,10 @@
         "textClue": "First word of this song title",
         "audioUrl": "252454728",
         "startAt": "0:18",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Teardrops on My Guitar (Pop Version)",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1440914018
       },
       {
         "word": "POOL",
@@ -1984,7 +2479,10 @@
         "textClue": "Kendrick dives into one of these",
         "audioUrl": "252603088",
         "startAt": "0:52",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Swimming Pools (Drank) (Extended Version)",
+        "artist_name": "Kendrick Lamar",
+        "itunesId": 1440818980
       }
     ]
   },
@@ -2006,7 +2504,10 @@
         "textClue": "Song title",
         "audioUrl": "253540427",
         "startAt": "0:00",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "ABC",
+        "artist_name": "Jackson 5",
+        "itunesId": 1440912109
       },
       {
         "word": "ALRIGHT",
@@ -2017,7 +2518,10 @@
         "textClue": "Song title",
         "audioUrl": "252603573",
         "startAt": "0:00",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Alright",
+        "artist_name": "Kendrick Lamar",
+        "itunesId": 1440871886
       },
       {
         "word": "ADELE",
@@ -2028,7 +2532,10 @@
         "textClue": "Artist name",
         "audioUrl": "254407925",
         "startAt": "0:05",
-        "audioDuration": 4
+        "audioDuration": 4,
+        "song_title": "Rolling in the Deep",
+        "artist_name": "Adele",
+        "itunesId": 1544491233
       },
       {
         "word": "ALLSTAR",
@@ -2039,7 +2546,10 @@
         "textClue": "Song title",
         "audioUrl": "253185930",
         "startAt": "0:00",
-        "audioDuration": 8
+        "audioDuration": 8,
+        "song_title": "All Star",
+        "artist_name": "Smash Mouth",
+        "itunesId": 1440915693
       },
       {
         "word": "AVRIL",
@@ -2050,7 +2560,10 @@
         "textClue": "Artist first name",
         "audioUrl": "256272271",
         "startAt": "0:24",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Complicated",
+        "artist_name": "Avril Lavigne",
+        "itunesId": 315025823
       },
       {
         "word": "AMERICAN",
@@ -2061,7 +2574,10 @@
         "textClue": "First word of this song title",
         "audioUrl": "1893660072",
         "startAt": "0:31",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "American Idiot",
+        "artist_name": "Green Day",
+        "itunesId": 207192732
       },
       {
         "word": "ALL",
@@ -2072,7 +2588,10 @@
         "textClue": "First word of this song title",
         "audioUrl": "113662676",
         "startAt": "0:08",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "All Of Me",
+        "artist_name": "johnlegend",
+        "itunesId": 1441844542
       },
       {
         "word": "ATEAM",
@@ -2083,7 +2602,10 @@
         "textClue": "(this song always played first on your ipod shuffle)",
         "audioUrl": "45108181",
         "startAt": "0:33",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "song_title": "Ed Sheeran - The A Team",
+        "artist_name": "Warner Music Brasil",
+        "itunesId": 448213995
       }
     ]
   },
@@ -41678,7 +42200,8 @@
         "startAt": "0:39",
         "audioDuration": 11,
         "artist_name": "Teddy Swims",
-        "song_title": "Lose Control"
+        "song_title": "Lose Control",
+        "itunesId": 1691699836
       },
       {
         "word": "ACDC",
@@ -41692,7 +42215,8 @@
         "startAt": "0:15",
         "audioDuration": 8,
         "artist_name": "AC/DC",
-        "song_title": "Highway to Hell"
+        "song_title": "Highway to Hell",
+        "itunesId": 574044008
       },
       {
         "word": "ANOTHERLOVE",
@@ -41706,7 +42230,8 @@
         "startAt": "0:50",
         "audioDuration": 10,
         "artist_name": "Tom Odell",
-        "song_title": "Another Love"
+        "song_title": "Another Love",
+        "itunesId": 687868140
       },
       {
         "word": "TIGER",
@@ -41720,7 +42245,8 @@
         "startAt": "0:07",
         "audioDuration": 10,
         "artist_name": "Survivor",
-        "song_title": "Eye of the Tiger"
+        "song_title": "Eye of the Tiger",
+        "itunesId": 254685026
       },
       {
         "word": "INDACLUB",
@@ -41734,7 +42260,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "50 Cent",
-        "song_title": "In Da Club"
+        "song_title": "In Da Club",
+        "itunesId": 1440841857
       },
       {
         "word": "MAROON5",
@@ -41748,7 +42275,8 @@
         "startAt": "0:09",
         "audioDuration": 10,
         "artist_name": "Maroon 5",
-        "song_title": "She Will Be Loved"
+        "song_title": "She Will Be Loved",
+        "itunesId": 1440851722
       },
       {
         "word": "SAD!",
@@ -41762,7 +42290,8 @@
         "startAt": "0:22.5",
         "audioDuration": 8.5,
         "artist_name": "XXXTentacion",
-        "song_title": "SAD!"
+        "song_title": "SAD!",
+        "itunesId": 1359293318
       },
       {
         "word": "EAST",
@@ -41776,7 +42305,8 @@
         "startAt": "0:05",
         "audioDuration": 13,
         "artist_name": "Kanye West",
-        "song_title": "Through the Wire"
+        "song_title": "Through the Wire",
+        "itunesId": 1412873613
       },
       {
         "word": "EASYONME",
@@ -41790,7 +42320,8 @@
         "startAt": "0:12",
         "audioDuration": 13,
         "artist_name": "Adele",
-        "song_title": "Easy On Me"
+        "song_title": "Easy On Me",
+        "itunesId": 1590036021
       }
     ]
   },
@@ -41815,7 +42346,8 @@
         "startAt": "0:12",
         "audioDuration": 16,
         "artist_name": "KT Tunstall",
-        "song_title": "Suddenly I See"
+        "song_title": "Suddenly I See",
+        "itunesId": 724693357
       },
       {
         "word": "TASTE",
@@ -41829,7 +42361,8 @@
         "startAt": "0:31",
         "audioDuration": 13,
         "artist_name": " Natasha Bedingfield",
-        "song_title": "Unwritten"
+        "song_title": "Unwritten",
+        "itunesId": 430514893
       },
       {
         "word": "GRAPEVINE",
@@ -41843,7 +42376,8 @@
         "startAt": "1:10",
         "audioDuration": 10,
         "artist_name": "Marvin Gaye",
-        "song_title": "I Heard It Through the Grapevine"
+        "song_title": "I Heard It Through the Grapevine",
+        "itunesId": 1444106658
       },
       {
         "word": "NIRVANA",
@@ -41857,7 +42391,8 @@
         "startAt": "0:30",
         "audioDuration": 10,
         "artist_name": "Nirvana",
-        "song_title": "Smells Like Teen Spirit"
+        "song_title": "Smells Like Teen Spirit",
+        "itunesId": 1440783625
       },
       {
         "word": "SWIFT",
@@ -41871,7 +42406,8 @@
         "startAt": "1:00",
         "audioDuration": 6,
         "artist_name": "Taylor Swift",
-        "song_title": "I Can See You"
+        "song_title": "I Can See You",
+        "itunesId": 1690841071
       },
       {
         "word": "RAIN",
@@ -41885,7 +42421,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Creedence Clearwater Revival",
-        "song_title": "Have You Ever Seen The Rain"
+        "song_title": "Have You Ever Seen The Rain",
+        "itunesId": 1564334427
       },
       {
         "word": "ELTON",
@@ -41899,7 +42436,8 @@
         "startAt": "0:48",
         "audioDuration": 10,
         "artist_name": "Elton John",
-        "song_title": "Can You Feel the Love Tonight"
+        "song_title": "Can You Feel the Love Tonight",
+        "itunesId": 1445733073
       },
       {
         "word": "SABRINA",
@@ -41913,7 +42451,8 @@
         "startAt": "0:30",
         "audioDuration": 10,
         "artist_name": "Sabrina Carpenter",
-        "song_title": "Taste"
+        "song_title": "Taste",
+        "itunesId": 1750307079
       },
       {
         "word": "THEBOY",
@@ -41927,7 +42466,8 @@
         "startAt": "1:00",
         "audioDuration": 12,
         "artist_name": "Deniece Williams",
-        "song_title": "Let's Hear It For The Boy"
+        "song_title": "Let's Hear It For The Boy",
+        "itunesId": 170529718
       },
       {
         "word": "EVERYTIME",
@@ -41941,7 +42481,8 @@
         "startAt": "0:15",
         "audioDuration": 15,
         "artist_name": "Cascada",
-        "song_title": "Everytime We Touch "
+        "song_title": "Everytime We Touch ",
+        "itunesId": 355161005
       }
     ]
   },
@@ -41966,7 +42507,8 @@
         "startAt": "0:26.5",
         "audioDuration": 10,
         "artist_name": "The Temptations",
-        "song_title": "My Girl"
+        "song_title": "My Girl",
+        "itunesId": 1423301921
       },
       {
         "word": "HUMBLE",
@@ -41980,7 +42522,8 @@
         "startAt": "0:00",
         "audioDuration": 7,
         "artist_name": "Kendrick Lamar",
-        "song_title": "HUMBLE."
+        "song_title": "HUMBLE.",
+        "itunesId": 1440882165
       },
       {
         "word": "LEON",
@@ -41994,7 +42537,8 @@
         "startAt": "0:09",
         "audioDuration": 10,
         "artist_name": "Kings of Leon",
-        "song_title": "Use Somebody"
+        "song_title": "Use Somebody",
+        "itunesId": 290303018
       },
       {
         "word": "SCRIPT",
@@ -42008,7 +42552,8 @@
         "startAt": "1:05",
         "audioDuration": 12,
         "artist_name": "The Script",
-        "song_title": "Breakeven"
+        "song_title": "Breakeven",
+        "itunesId": 1055488629
       },
       {
         "word": "SWEATER",
@@ -42022,7 +42567,8 @@
         "startAt": "0:05",
         "audioDuration": 9,
         "artist_name": "The Neighbourhood",
-        "song_title": "Sweater Weather"
+        "song_title": "Sweater Weather",
+        "itunesId": 635016640
       },
       {
         "word": "LEWIS",
@@ -42036,7 +42582,8 @@
         "startAt": "0:24",
         "audioDuration": 10,
         "artist_name": "Lewis Capaldi",
-        "song_title": "Someone You Loved"
+        "song_title": "Someone You Loved",
+        "itunesId": 1452619054
       },
       {
         "word": "COFFEE",
@@ -42050,7 +42597,8 @@
         "startAt": "0:00",
         "audioDuration": 5.4,
         "artist_name": "Powfu",
-        "song_title": "death bed (coffee for your head)"
+        "song_title": "death bed (coffee for your head)",
+        "itunesId": 1498128769
       },
       {
         "word": "BRIGHTSIDE",
@@ -42064,7 +42612,8 @@
         "startAt": "0:00",
         "audioDuration": 8,
         "artist_name": "The Killers",
-        "song_title": "Mr. Brightside"
+        "song_title": "Mr. Brightside",
+        "itunesId": 1440891171
       },
       {
         "word": "BRIDGE",
@@ -42078,7 +42627,8 @@
         "startAt": "0:07",
         "audioDuration": 6,
         "artist_name": "Icona Pop",
-        "song_title": "I Love It"
+        "song_title": "I Love It",
+        "itunesId": 821408859
       },
       {
         "word": "DRDRE",
@@ -42092,7 +42642,8 @@
         "startAt": "0:18",
         "audioDuration": 12,
         "artist_name": "Dr. Dre",
-        "song_title": "Still D.R.E."
+        "song_title": "Still D.R.E.",
+        "itunesId": 1440782870
       }
     ]
   },
@@ -42117,7 +42668,8 @@
         "startAt": "1:02",
         "audioDuration": 7,
         "artist_name": "Gigi Perez",
-        "song_title": "Sailor Song"
+        "song_title": "Sailor Song",
+        "itunesId": 1770187510
       },
       {
         "word": "BOSTON",
@@ -42131,7 +42683,8 @@
         "startAt": "0:50",
         "audioDuration": 10,
         "artist_name": "Boston",
-        "song_title": "More Than a Feeling"
+        "song_title": "More Than a Feeling",
+        "itunesId": 913902137
       },
       {
         "word": "HYPNOTIZE",
@@ -42145,7 +42698,8 @@
         "startAt": "0:00",
         "audioDuration": 8,
         "artist_name": "The Notorious B.I.G.",
-        "song_title": "Hypnotize"
+        "song_title": "Hypnotize",
+        "itunesId": 217613319
       },
       {
         "word": "GODZILLA",
@@ -42159,7 +42713,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "Eminem",
-        "song_title": "Godzilla"
+        "song_title": "Godzilla",
+        "itunesId": 1495267448
       },
       {
         "word": "KATEBUSH",
@@ -42173,7 +42728,8 @@
         "startAt": "0:22",
         "audioDuration": 9,
         "artist_name": "Kate Bush",
-        "song_title": "Running Up That Hill"
+        "song_title": "Running Up That Hill",
+        "itunesId": 1675560578
       },
       {
         "word": "BROWN",
@@ -42187,7 +42743,8 @@
         "startAt": "0:13",
         "audioDuration": 13,
         "artist_name": "Van Morrison",
-        "song_title": "Brown Eyed Girl"
+        "song_title": "Brown Eyed Girl",
+        "itunesId": 1838782096
       },
       {
         "word": "METALLICA",
@@ -42201,7 +42758,8 @@
         "startAt": "1:43",
         "audioDuration": 8,
         "artist_name": "Metallica",
-        "song_title": "Master of Puppets"
+        "song_title": "Master of Puppets",
+        "itunesId": 1275819878
       },
       {
         "word": "NICKEL",
@@ -42215,7 +42773,8 @@
         "startAt": "0:23",
         "audioDuration": 11,
         "artist_name": "Nickelback",
-        "song_title": "How You Remind Me"
+        "song_title": "How You Remind Me",
+        "itunesId": 214475478
       }
     ]
   },
@@ -42240,7 +42799,8 @@
         "startAt": "2:19",
         "audioDuration": 10,
         "artist_name": "Nirvana",
-        "song_title": "Smells Like Teen Spirit"
+        "song_title": "Smells Like Teen Spirit",
+        "itunesId": 1440783625
       },
       {
         "word": "SIXSEVEN",
@@ -42254,7 +42814,8 @@
         "startAt": "0:14",
         "audioDuration": 14,
         "artist_name": "Skrilla",
-        "song_title": "Doot Doot"
+        "song_title": "Doot Doot",
+        "itunesId": 1794830403
       },
       {
         "word": "TWENTYTWO",
@@ -42268,7 +42829,8 @@
         "startAt": "0:04",
         "audioDuration": 10,
         "artist_name": "Taylor Swift",
-        "song_title": "22"
+        "song_title": "22",
+        "itunesId": 1440935562
       },
       {
         "word": "SEVENTEEN",
@@ -42282,7 +42844,8 @@
         "startAt": "0:19",
         "audioDuration": 9,
         "artist_name": "ABBA",
-        "song_title": "Dancing Queen"
+        "song_title": "Dancing Queen",
+        "itunesId": 1422648513
       },
       {
         "word": "ZERO",
@@ -42296,7 +42859,8 @@
         "startAt": "0:11",
         "audioDuration": 13,
         "artist_name": "Hercules (Soundtrack)",
-        "song_title": "Zero to Hero"
+        "song_title": "Zero to Hero",
+        "itunesId": 1708455729
       },
       {
         "word": "TWENTYONE",
@@ -42310,7 +42874,8 @@
         "startAt": "0:17",
         "audioDuration": 12,
         "artist_name": "Green Day",
-        "song_title": "21 Guns"
+        "song_title": "21 Guns",
+        "itunesId": 315611467
       },
       {
         "word": "TEN",
@@ -42324,7 +42889,8 @@
         "startAt": "0:25",
         "audioDuration": 15,
         "artist_name": "The Notorious B.I.G.",
-        "song_title": "Ten Crack Commandments"
+        "song_title": "Ten Crack Commandments",
+        "itunesId": 906888520
       },
       {
         "word": "THIRTEEN",
@@ -42338,7 +42904,8 @@
         "startAt": "0:53",
         "audioDuration": 21,
         "artist_name": "Laufey",
-        "song_title": "Letter to My 13 Year Old Self"
+        "song_title": "Letter to My 13 Year Old Self",
+        "itunesId": 1690609512
       },
       {
         "word": "TWO",
@@ -42352,7 +42919,8 @@
         "startAt": "0:24",
         "audioDuration": 8,
         "artist_name": "2 Chainz",
-        "song_title": "No Lie"
+        "song_title": "No Lie",
+        "itunesId": 1440811128
       },
       {
         "word": "NINE",
@@ -42366,7 +42934,8 @@
         "startAt": "0:58",
         "audioDuration": 28,
         "artist_name": "Nine Inch Nails",
-        "song_title": "Closer"
+        "song_title": "Closer",
+        "itunesId": 1440837621
       },
       {
         "word": "ONE",
@@ -42380,7 +42949,8 @@
         "startAt": "0:02",
         "audioDuration": 7,
         "artist_name": "Drake",
-        "song_title": "One Dance"
+        "song_title": "One Dance",
+        "itunesId": 1440841384
       }
     ]
   },
@@ -42405,7 +42975,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "Cardi B",
-        "song_title": "I Like It"
+        "song_title": "I Like It",
+        "itunesId": 1424201577
       },
       {
         "word": "BRUCE",
@@ -42419,7 +42990,8 @@
         "startAt": "0:15",
         "audioDuration": 10,
         "artist_name": "Bruce Springsteen",
-        "song_title": "Born in the U.S.A."
+        "song_title": "Born in the U.S.A.",
+        "itunesId": 203708455
       },
       {
         "word": "HAPPY",
@@ -42433,7 +43005,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "Pharrell Williams",
-        "song_title": "Happy"
+        "song_title": "Happy",
+        "itunesId": 915102924
       },
       {
         "word": "PAY",
@@ -42447,7 +43020,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Destiny's Child",
-        "song_title": "Bills, Bills, Bills"
+        "song_title": "Bills, Bills, Bills",
+        "itunesId": 400040827
       },
       {
         "word": "CREEP",
@@ -42461,7 +43035,8 @@
         "startAt": "2:00",
         "audioDuration": 10,
         "artist_name": "Radiohead",
-        "song_title": "Creep"
+        "song_title": "Creep",
+        "itunesId": 1679849823
       },
       {
         "word": "ETTA",
@@ -42475,7 +43050,8 @@
         "startAt": "0:19",
         "audioDuration": 10,
         "artist_name": "Etta James",
-        "song_title": "At Last"
+        "song_title": "At Last",
+        "itunesId": 1440839443
       },
       {
         "word": "LOW",
@@ -42489,7 +43065,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Flo Rida",
-        "song_title": "Low"
+        "song_title": "Low",
+        "itunesId": 275496141
       },
       {
         "word": "MIND",
@@ -42503,7 +43080,8 @@
         "startAt": "0:15",
         "audioDuration": 10,
         "artist_name": "Pixies",
-        "song_title": "Where Is My Mind?"
+        "song_title": "Where Is My Mind?",
+        "itunesId": 1540673399
       },
       {
         "word": "SHORT",
@@ -42517,7 +43095,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Taylor Swift",
-        "song_title": "Long Story Short"
+        "song_title": "Long Story Short",
+        "itunesId": 1544268358
       },
       {
         "word": "AL",
@@ -42531,7 +43110,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Paul Simon",
-        "song_title": "You Can Call Me Al"
+        "song_title": "You Can Call Me Al",
+        "itunesId": 380625785
       },
       {
         "word": "CARRY",
@@ -42545,7 +43125,8 @@
         "startAt": "0:50",
         "audioDuration": 10,
         "artist_name": "fun.",
-        "song_title": "We Are Young"
+        "song_title": "We Are Young",
+        "itunesId": 486040195
       },
       {
         "word": "MEN",
@@ -42559,7 +43140,8 @@
         "startAt": "0:20",
         "audioDuration": 10,
         "artist_name": "The Weather Girls",
-        "song_title": "It's Raining Men"
+        "song_title": "It's Raining Men",
+        "itunesId": 1005688002
       },
       {
         "word": "DIETPEPSI",
@@ -42573,7 +43155,8 @@
         "startAt": "0:20",
         "audioDuration": 10,
         "artist_name": "Addison Rae",
-        "song_title": "Diet Pepsi"
+        "song_title": "Diet Pepsi",
+        "itunesId": 1760428041
       },
       {
         "word": "ABOUTYOU",
@@ -42587,7 +43170,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "The 1975",
-        "song_title": "About You"
+        "song_title": "About You",
+        "itunesId": 1850019038
       }
     ]
   },
@@ -42612,7 +43196,8 @@
         "startAt": "0:04",
         "audioDuration": 12,
         "artist_name": "Rachel Platten",
-        "song_title": "Fight Song"
+        "song_title": "Fight Song",
+        "itunesId": 1061182684
       },
       {
         "word": "BLUE",
@@ -42626,7 +43211,8 @@
         "startAt": "0:02",
         "audioDuration": 12,
         "artist_name": "Billie Eilish",
-        "song_title": "blue"
+        "song_title": "blue",
+        "itunesId": 1739659278
       },
       {
         "word": "GOOD4U",
@@ -42640,7 +43226,8 @@
         "startAt": "0:40",
         "audioDuration": 10,
         "artist_name": "Olivia Rodrigo",
-        "song_title": "good 4 u"
+        "song_title": "good 4 u",
+        "itunesId": 1560735551
       },
       {
         "word": "HEATHER",
@@ -42654,7 +43241,8 @@
         "startAt": "0:24",
         "audioDuration": 13,
         "artist_name": "Conan Gray",
-        "song_title": "Heather"
+        "song_title": "Heather",
+        "itunesId": 1491987867
       },
       {
         "word": "SHE",
@@ -42668,7 +43256,8 @@
         "startAt": "0:00",
         "audioDuration": 30,
         "artist_name": "Maroon 5",
-        "song_title": "She Will Be Loved"
+        "song_title": "She Will Be Loved",
+        "itunesId": 1440851722
       },
       {
         "word": "NIGHT",
@@ -42682,7 +43271,8 @@
         "startAt": "0:07",
         "audioDuration": 23,
         "artist_name": "One Direction",
-        "song_title": "Night Changes"
+        "song_title": "Night Changes",
+        "itunesId": 1524680849
       },
       {
         "word": "ZARA",
@@ -42696,7 +43286,8 @@
         "startAt": "0:09",
         "audioDuration": 25.23,
         "artist_name": "Zara Larsson",
-        "song_title": "Lush Life"
+        "song_title": "Lush Life",
+        "itunesId": 1201058113
       },
       {
         "word": "HEAT",
@@ -42710,7 +43301,8 @@
         "startAt": "0:41",
         "audioDuration": 6,
         "artist_name": "Glass Animals",
-        "song_title": "Heat Waves"
+        "song_title": "Heat Waves",
+        "itunesId": 1508562516
       },
       {
         "word": "CHAIN",
@@ -42724,7 +43316,8 @@
         "startAt": "0:00",
         "audioDuration": 30,
         "artist_name": "Fleetwood Mac",
-        "song_title": "The Chain"
+        "song_title": "The Chain",
+        "itunesId": 651880159
       },
       {
         "word": "FERGIE",
@@ -42738,7 +43331,8 @@
         "startAt": "0:47",
         "audioDuration": 30,
         "artist_name": "Fergie",
-        "song_title": "Glamorous"
+        "song_title": "Glamorous",
+        "itunesId": 1442882896
       },
       {
         "word": "YOU",
@@ -42752,7 +43346,8 @@
         "startAt": "0:13",
         "audioDuration": 9,
         "artist_name": "Bruno Mars",
-        "song_title": "Marry You"
+        "song_title": "Marry You",
+        "itunesId": 576670463
       },
       {
         "word": "USHER",
@@ -42766,7 +43361,8 @@
         "startAt": "0:00",
         "audioDuration": 15,
         "artist_name": "Usher",
-        "song_title": "Yeah!"
+        "song_title": "Yeah!",
+        "itunesId": 386153478
       }
     ]
   },
@@ -42791,7 +43387,8 @@
         "startAt": "0:19",
         "audioDuration": 7,
         "artist_name": "Drake",
-        "song_title": "The Motto"
+        "song_title": "The Motto",
+        "itunesId": 1444202051
       },
       {
         "word": "YUKON",
@@ -42805,7 +43402,8 @@
         "startAt": "0:24",
         "audioDuration": 13,
         "artist_name": "Justin Bieber",
-        "song_title": "Yukon"
+        "song_title": "Yukon",
+        "itunesId": 1825994651
       },
       {
         "word": "MOCKINGBIRD",
@@ -42819,7 +43417,8 @@
         "startAt": "1:31.5",
         "audioDuration": 10.5,
         "artist_name": "Eminem",
-        "song_title": "Mockingbird"
+        "song_title": "Mockingbird",
+        "itunesId": 1452852850
       },
       {
         "word": "SON",
@@ -42833,7 +43432,8 @@
         "startAt": "0:10",
         "audioDuration": 16,
         "artist_name": "Sabrina Carpenter",
-        "song_title": "Nobody's Son"
+        "song_title": "Nobody's Son",
+        "itunesId": 1862550849
       },
       {
         "word": "JACKSON",
@@ -42847,7 +43447,8 @@
         "startAt": "0:14",
         "audioDuration": 14,
         "artist_name": "The Jackson 5",
-        "song_title": "Who's Lovin' You"
+        "song_title": "Who's Lovin' You",
+        "itunesId": 1883770161
       },
       {
         "word": "NAKED",
@@ -42861,7 +43462,8 @@
         "startAt": "0:15",
         "audioDuration": 11,
         "artist_name": "Barenaked Ladies",
-        "song_title": "One Week"
+        "song_title": "One Week",
+        "itunesId": 297419042
       },
       {
         "word": "ORDINARY",
@@ -42875,7 +43477,8 @@
         "startAt": "0:31.8",
         "audioDuration": 9.2,
         "artist_name": "Alex Warren",
-        "song_title": "Ordinary"
+        "song_title": "Ordinary",
+        "itunesId": 1793663645
       },
       {
         "word": "GOOSEBUMPS",
@@ -42889,7 +43492,8 @@
         "startAt": "0:37",
         "audioDuration": 10,
         "artist_name": "Travis Scott",
-        "song_title": "goosebumps"
+        "song_title": "goosebumps",
+        "itunesId": 1151481750
       },
       {
         "word": "AMERICAN",
@@ -42903,7 +43507,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "artist_name": "The All-American Rejects",
-        "song_title": "Dirty Little Secret"
+        "song_title": "Dirty Little Secret",
+        "itunesId": 1440717422
       }
     ]
   },
@@ -42928,7 +43533,8 @@
         "startAt": "0:30",
         "audioDuration": 15,
         "artist_name": "Maroon 5",
-        "song_title": "Payphone"
+        "song_title": "Payphone",
+        "itunesId": 1570612189
       },
       {
         "word": "LIGHTS",
@@ -42942,7 +43548,8 @@
         "startAt": "0:39",
         "audioDuration": 8,
         "artist_name": "Ellie Goulding",
-        "song_title": "Lights"
+        "song_title": "Lights",
+        "itunesId": 1446018500
       },
       {
         "word": "WILDONES",
@@ -42956,7 +43563,8 @@
         "startAt": "0:00",
         "audioDuration": 7,
         "artist_name": "Flo Rida",
-        "song_title": "Wild Ones"
+        "song_title": "Wild Ones",
+        "itunesId": 1632444649
       },
       {
         "word": "PSY",
@@ -42970,7 +43578,8 @@
         "startAt": "0:11.5",
         "audioDuration": 6.5,
         "artist_name": "PSY",
-        "song_title": "Gangnam Style"
+        "song_title": "Gangnam Style",
+        "itunesId": 1445144527
       },
       {
         "word": "KATY",
@@ -42984,7 +43593,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "artist_name": "Katy Perry",
-        "song_title": "Wide Awake"
+        "song_title": "Wide Awake",
+        "itunesId": 716085504
       },
       {
         "word": "LMFAO",
@@ -42998,7 +43608,8 @@
         "startAt": "0:22",
         "audioDuration": 8,
         "artist_name": "LMFAO",
-        "song_title": "Sexy And I Know It"
+        "song_title": "Sexy And I Know It",
+        "itunesId": 1440636628
       },
       {
         "word": "JAGGER",
@@ -43012,7 +43623,8 @@
         "startAt": "0:00",
         "audioDuration": 7,
         "artist_name": "Maroon 5",
-        "song_title": "Moves Like Jagger"
+        "song_title": "Moves Like Jagger",
+        "itunesId": 1440859510
       },
       {
         "word": "STIUTK",
@@ -43026,7 +43638,8 @@
         "startAt": "1:32",
         "audioDuration": 15,
         "artist_name": "Gotye",
-        "song_title": "Somebody That I Used To Know"
+        "song_title": "Somebody That I Used To Know",
+        "itunesId": 1440754487
       },
       {
         "word": "YOU",
@@ -43040,7 +43653,8 @@
         "startAt": "0:19",
         "audioDuration": 8,
         "artist_name": "Luke Bryan",
-        "song_title": "Drunk On You"
+        "song_title": "Drunk On You",
+        "itunesId": 1617201889
       },
       {
         "word": "JEPSEN",
@@ -43054,7 +43668,8 @@
         "startAt": "1:02",
         "audioDuration": 6.5,
         "artist_name": "Carly Rae Jepsen",
-        "song_title": "Call Me Maybe"
+        "song_title": "Call Me Maybe",
+        "itunesId": 1440874008
       }
     ]
   },
@@ -43079,7 +43694,8 @@
         "startAt": "1:06",
         "audioDuration": 10,
         "artist_name": "Doechii",
-        "song_title": "Denial Is a River"
+        "song_title": "Denial Is a River",
+        "itunesId": 1763934447
       },
       {
         "word": "GOODE",
@@ -43093,7 +43709,8 @@
         "startAt": "0:17",
         "audioDuration": 10,
         "artist_name": "Chuck Berry",
-        "song_title": "Johnny B. Goode"
+        "song_title": "Johnny B. Goode",
+        "itunesId": 1425230917
       },
       {
         "word": "CHER",
@@ -43107,7 +43724,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "Cher",
-        "song_title": "Believe"
+        "song_title": "Believe",
+        "itunesId": 73273491
       },
       {
         "word": "SEEK",
@@ -43121,7 +43739,8 @@
         "startAt": "2:00",
         "audioDuration": 10,
         "artist_name": "Imogen Heap",
-        "song_title": "Hide and Seek"
+        "song_title": "Hide and Seek",
+        "itunesId": 1785686649
       },
       {
         "word": "CARPENTER",
@@ -43135,7 +43754,8 @@
         "startAt": "1:08",
         "audioDuration": 10,
         "artist_name": "Sabrina Carpenter",
-        "song_title": "Busy Woman"
+        "song_title": "Busy Woman",
+        "itunesId": 1795513518
       },
       {
         "word": "PRIDE",
@@ -43149,7 +43769,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Kendrick Lamar",
-        "song_title": "PRIDE."
+        "song_title": "PRIDE.",
+        "itunesId": 1440882161
       },
       {
         "word": "ELLIE",
@@ -43163,7 +43784,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "Ellie Goulding",
-        "song_title": "Hate Me"
+        "song_title": "Hate Me",
+        "itunesId": 1469522003
       },
       {
         "word": "THECARS",
@@ -43177,7 +43799,8 @@
         "startAt": "1:10",
         "audioDuration": 10,
         "artist_name": "The Cars",
-        "song_title": "Drive"
+        "song_title": "Drive",
+        "itunesId": 1088531479
       },
       {
         "word": "ENTER",
@@ -43191,7 +43814,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "Metallica",
-        "song_title": "Enter Sandman"
+        "song_title": "Enter Sandman",
+        "itunesId": 1572051818
       },
       {
         "word": "RED",
@@ -43205,7 +43829,8 @@
         "startAt": "0:05",
         "audioDuration": 10,
         "artist_name": "Taylor Swift",
-        "song_title": "22"
+        "song_title": "22",
+        "itunesId": 1440935562
       },
       {
         "word": "GREEN",
@@ -43219,7 +43844,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "Green Day",
-        "song_title": "Basket Case"
+        "song_title": "Basket Case",
+        "itunesId": 1160082180
       },
       {
         "word": "INTO",
@@ -43233,7 +43859,8 @@
         "startAt": "0:15",
         "audioDuration": 10,
         "artist_name": "Ariana Grande",
-        "song_title": "Into You"
+        "song_title": "Into You",
+        "itunesId": 1545270163
       },
       {
         "word": "SEAL",
@@ -43247,7 +43874,8 @@
         "startAt": "0:20",
         "audioDuration": 10,
         "artist_name": "Seal",
-        "song_title": "Kiss from a Rose"
+        "song_title": "Kiss from a Rose",
+        "itunesId": 30475379
       },
       {
         "word": "BIEBER",
@@ -43261,7 +43889,8 @@
         "startAt": "1:02",
         "audioDuration": 6,
         "artist_name": "Justin Bieber",
-        "song_title": "Beauty and a Beat"
+        "song_title": "Beauty and a Beat",
+        "itunesId": 1440650961
       },
       {
         "word": "SPEAK",
@@ -43275,7 +43904,8 @@
         "startAt": "0:05",
         "audioDuration": 10,
         "artist_name": "No Doubt",
-        "song_title": "Don't Speak"
+        "song_title": "Don't Speak",
+        "itunesId": 1440845557
       }
     ]
   },
@@ -43300,7 +43930,8 @@
         "startAt": "0:36",
         "audioDuration": 10,
         "artist_name": "Ariana Grande",
-        "song_title": "Supernatural"
+        "song_title": "Supernatural",
+        "itunesId": 1725877965
       },
       {
         "word": "BLONDE",
@@ -43314,7 +43945,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "artist_name": "Frank Ocean",
-        "song_title": "Pink + White"
+        "song_title": "Pink + White",
+        "itunesId": 1146195714
       },
       {
         "word": "BAZZI",
@@ -43328,7 +43960,8 @@
         "startAt": "0:34",
         "audioDuration": 15,
         "artist_name": "Bazzi",
-        "song_title": "Mine"
+        "song_title": "Mine",
+        "itunesId": 1369439270
       },
       {
         "word": "THRIFT",
@@ -43342,7 +43975,8 @@
         "startAt": "0:27",
         "audioDuration": 8,
         "artist_name": "Macklemore & Ryan Lewis",
-        "song_title": "Thrift Shop"
+        "song_title": "Thrift Shop",
+        "itunesId": 560097715
       },
       {
         "word": "TWAIN",
@@ -43356,7 +43990,8 @@
         "startAt": "1:03",
         "audioDuration": 14,
         "artist_name": "Shania Twain",
-        "song_title": "You're Still the One"
+        "song_title": "You're Still the One",
+        "itunesId": 1445669197
       },
       {
         "word": "EVERYTIME",
@@ -43370,7 +44005,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "Cascada",
-        "song_title": "Everytime We Touch"
+        "song_title": "Everytime We Touch",
+        "itunesId": 355161005
       },
       {
         "word": "SCIENTIST",
@@ -43384,7 +44020,8 @@
         "startAt": "1:33",
         "audioDuration": 20,
         "artist_name": "Coldplay",
-        "song_title": "The Scientist"
+        "song_title": "The Scientist",
+        "itunesId": 1122776155
       },
       {
         "word": "KEHLANI",
@@ -43398,7 +44035,8 @@
         "startAt": "0:36",
         "audioDuration": 14,
         "artist_name": "Kehlani",
-        "song_title": "Folded"
+        "song_title": "Folded",
+        "itunesId": 1885055409
       },
       {
         "word": "FINE",
@@ -43412,7 +44050,8 @@
         "startAt": "0:29",
         "audioDuration": 11,
         "artist_name": "Rihanna",
-        "song_title": "S&M"
+        "song_title": "S&M",
+        "itunesId": 1445311857
       },
       {
         "word": "THEBEST",
@@ -43426,7 +44065,8 @@
         "startAt": "0:09",
         "audioDuration": 15,
         "artist_name": "Tina Turner",
-        "song_title": "The Best"
+        "song_title": "The Best",
+        "itunesId": 697409668
       },
       {
         "word": "SZA",
@@ -43440,7 +44080,8 @@
         "startAt": "0:15",
         "audioDuration": 14,
         "artist_name": "SZA",
-        "song_title": "Prom"
+        "song_title": "Prom",
+        "itunesId": 1239976606
       },
       {
         "word": "ALICIA",
@@ -43454,11 +44095,12 @@
         "startAt": "0:10",
         "audioDuration": 19,
         "artist_name": "Alicia Keys",
-        "song_title": "No One"
+        "song_title": "No One",
+        "itunesId": 294461792
       }
     ]
   },
-    "2026-04-22": {
+  "2026-04-22": {
     "version": "1.0.0",
     "title": "Crossword in C Minor",
     "theme": "black",
@@ -43477,7 +44119,9 @@
         "audioUrl": 115551475,
         "soundcloudUrl": "https://soundcloud.com/syd708/tchaikovsky-piano-concerto-no",
         "startAt": "1:01",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Tchaikovsky   Piano Concerto No 1, B Flat Minor, Op 23 Open   Best Of Classical Music",
+        "artist_name": "Syd708"
       },
       {
         "word": "CHOPIN",
@@ -43489,7 +44133,10 @@
         "audioUrl": 2000937739,
         "soundcloudUrl": "https://soundcloud.com/chopin-official/chopin-the-lost-nocturne",
         "startAt": "0:03",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Chopin - The Lost Nocturne",
+        "artist_name": "Chopin",
+        "itunesId": 1797315595
       },
       {
         "word": "SYMPHONY",
@@ -43501,7 +44148,10 @@
         "audioUrl": 338354275,
         "soundcloudUrl": "https://soundcloud.com/the-verve-official/bitter-sweet-symphony-1",
         "startAt": "0:39",
-        "audioDuration": 6
+        "audioDuration": 6,
+        "song_title": "Bitter Sweet Symphony (Remastered 2016)",
+        "artist_name": "The Verve",
+        "itunesId": 1788430736
       },
       {
         "word": "MOZART",
@@ -43513,7 +44163,10 @@
         "audioUrl": 215868715,
         "soundcloudUrl": "https://soundcloud.com/mozart/serenade-no13-in-g-major-k-525-eine-kleine-nachtmusik-i-allegro",
         "startAt": "0:00",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Serenade No.13 in G Major, K. 525 \"Eine Kleine Nachtmusik\" I. Allegro",
+        "artist_name": "Mozart",
+        "itunesId": 1452537423
       },
       {
         "word": "MAESTRO",
@@ -43525,7 +44178,9 @@
         "audioUrl": 168764357,
         "soundcloudUrl": "https://soundcloud.com/behruz-iskenderov/beethoven-symphony-no7-herbert-von-karajan",
         "startAt": "2:07",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "Beethoven Symphony No.7 (Herbert Von Karajan)",
+        "artist_name": "Bahruz Isgandarov"
       },
       {
         "word": "FORTE",
@@ -43537,7 +44192,10 @@
         "audioUrl": 233010376,
         "soundcloudUrl": "https://soundcloud.com/rev_ioux/tchaikovsky-1812-overture-full-with-cannons",
         "startAt": "12:04",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "song_title": "Tchaikovsky - 1812 Overture (Full With Cannons)",
+        "artist_name": "Brev Rioux",
+        "itunesId": 83364720
       },
       {
         "word": "BACH",
@@ -43549,7 +44207,10 @@
         "audioUrl": 240745945,
         "soundcloudUrl": "https://soundcloud.com/epiphanic-serendipity/toccata-and-fugue-in-d-minor-bwv-565-bach",
         "startAt": "0:00",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "Toccata and Fugue in D Minor, BWV 565 - Bach",
+        "artist_name": "Classical Radio",
+        "itunesId": 960539779
       },
       {
         "word": "CRESCENDO",
@@ -43561,7 +44222,9 @@
         "audioUrl": 13522752,
         "soundcloudUrl": "https://soundcloud.com/valeriwall/maurice-ravel-bolero",
         "startAt": "13:12",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "song_title": "MAURICE RAVEL ~ Bolero",
+        "artist_name": "valeri-wall"
       },
       {
         "word": "LUDWIG",
@@ -43573,11 +44236,13 @@
         "audioUrl": 238464353,
         "soundcloudUrl": "https://soundcloud.com/epiphanic-serendipity/symphony-no-5-beethoven",
         "startAt": "0:00",
-        "audioDuration": 20
+        "audioDuration": 20,
+        "song_title": "Symphony No. 5 - Beethoven",
+        "artist_name": "Classical Radio"
       }
     ]
   },
-    "2026-04-23": {
+  "2026-04-23": {
     "version": "1.0.0",
     "title": "",
     "theme": "pink",
@@ -43598,7 +44263,8 @@
         "startAt": "0:49",
         "audioDuration": 9,
         "artist_name": "Tones and I",
-        "song_title": "Dance Monkey"
+        "song_title": "Dance Monkey",
+        "itunesId": 1475930045
       },
       {
         "word": "EARRINGS",
@@ -43612,7 +44278,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "Malcom Todd",
-        "song_title": "Earrings"
+        "song_title": "Earrings",
+        "itunesId": 1738257931
       },
       {
         "word": "ROLLING",
@@ -43626,7 +44293,8 @@
         "startAt": "0:58",
         "audioDuration": 11,
         "artist_name": "The Rolling Stones",
-        "song_title": "Paint It Black"
+        "song_title": "Paint It Black",
+        "itunesId": 1440745782
       },
       {
         "word": "SK8ER",
@@ -43640,7 +44308,8 @@
         "startAt": "0:12",
         "audioDuration": 10,
         "artist_name": "Avril Lavigne",
-        "song_title": "Sk8er Boi"
+        "song_title": "Sk8er Boi",
+        "itunesId": 315025826
       },
       {
         "word": "PHOTO",
@@ -43654,7 +44323,8 @@
         "startAt": "1:30",
         "audioDuration": 10,
         "artist_name": "Ed Sheeran",
-        "song_title": "Photograph"
+        "song_title": "Photograph",
+        "itunesId": 1050204626
       },
       {
         "word": "DYNAMITE",
@@ -43668,7 +44338,8 @@
         "startAt": "0:42",
         "audioDuration": 10,
         "artist_name": "BTS",
-        "song_title": "Dynamite"
+        "song_title": "Dynamite",
+        "itunesId": 1597024424
       },
       {
         "word": "DRUGS",
@@ -43682,7 +44353,8 @@
         "startAt": "0:38",
         "audioDuration": 10,
         "artist_name": "Chance The Rapper",
-        "song_title": "Same Drugs"
+        "song_title": "Same Drugs",
+        "itunesId": 1113239812
       },
       {
         "word": "BLINK182",
@@ -43696,7 +44368,8 @@
         "startAt": "0:10",
         "audioDuration": 11,
         "artist_name": "Blink-182",
-        "song_title": "All The Small Things"
+        "song_title": "All The Small Things",
+        "itunesId": 1440840510
       },
       {
         "word": "STARS",
@@ -43710,11 +44383,12 @@
         "startAt": "0:54.5",
         "audioDuration": 8.5,
         "artist_name": "OneRepublic",
-        "song_title": "Counting Stars"
+        "song_title": "Counting Stars",
+        "itunesId": 1471704175
       }
     ]
   },
-    "2026-04-24": {
+  "2026-04-24": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -43735,7 +44409,8 @@
         "startAt": "0:12",
         "audioDuration": 8,
         "artist_name": "Jason Mraz",
-        "song_title": "I'm Yours"
+        "song_title": "I'm Yours",
+        "itunesId": 277635828
       },
       {
         "word": "ZOMBIE",
@@ -43749,7 +44424,8 @@
         "startAt": "1:35",
         "audioDuration": 12,
         "artist_name": "The Cranberries",
-        "song_title": "Zombie"
+        "song_title": "Zombie",
+        "itunesId": 1438592078
       },
       {
         "word": "TINYDESK",
@@ -43763,7 +44439,8 @@
         "startAt": "1:13",
         "audioDuration": 17,
         "artist_name": "T-Pain",
-        "song_title": "Buy U A Drank"
+        "song_title": "Buy U A Drank",
+        "itunesId": 1721451352
       },
       {
         "word": "STAY",
@@ -43777,7 +44454,8 @@
         "startAt": "0:10",
         "audioDuration": 8,
         "artist_name": "The Kid LAROI",
-        "song_title": "Stay"
+        "song_title": "Stay",
+        "itunesId": 1574968888
       },
       {
         "word": "EVERLONG",
@@ -43791,7 +44469,8 @@
         "startAt": "1:32",
         "audioDuration": 12,
         "artist_name": "Foo Fighters",
-        "song_title": "Everlong"
+        "song_title": "Everlong",
+        "itunesId": 362133505
       },
       {
         "word": "HCTS",
@@ -43805,7 +44484,8 @@
         "startAt": "0:09",
         "audioDuration": 7,
         "artist_name": "The Beatles",
-        "song_title": "Here Comes the Sun"
+        "song_title": "Here Comes the Sun",
+        "itunesId": 1441164589
       },
       {
         "word": "STANDBYME",
@@ -43819,7 +44499,8 @@
         "startAt": "0:15",
         "audioDuration": 16,
         "artist_name": "Ben E. King",
-        "song_title": "Stand By Me"
+        "song_title": "Stand By Me",
+        "itunesId": 738196409
       },
       {
         "word": "ROCKSTARS",
@@ -43833,7 +44514,8 @@
         "startAt": "0:54",
         "audioDuration": 8.5,
         "artist_name": "Nickelback",
-        "song_title": "Rockstar"
+        "song_title": "Rockstar",
+        "itunesId": 214403648
       },
       {
         "word": "HIPS",
@@ -43847,11 +44529,12 @@
         "startAt": "0:00",
         "audioDuration": 19,
         "artist_name": "Shakira",
-        "song_title": "Hips Don't Lie"
+        "song_title": "Hips Don't Lie",
+        "itunesId": 1817217063
       }
     ]
   },
-    "2026-04-25": {
+  "2026-04-25": {
     "version": "1.0.0",
     "title": "(by ejg)",
     "theme": "green",
@@ -43872,7 +44555,8 @@
         "startAt": "0:16",
         "audioDuration": 13,
         "artist_name": "Frank Ocean",
-        "song_title": "Lost"
+        "song_title": "Lost",
+        "itunesId": 1440766784
       },
       {
         "word": "PLEASE",
@@ -43886,7 +44570,8 @@
         "startAt": "0:15",
         "audioDuration": 10,
         "artist_name": "Sabrina Carpenter",
-        "song_title": "Please Please Please"
+        "song_title": "Please Please Please",
+        "itunesId": 1750307080
       },
       {
         "word": "JHENE",
@@ -43900,7 +44585,8 @@
         "startAt": "3:34",
         "audioDuration": 10,
         "artist_name": "Big Sean",
-        "song_title": "Beware"
+        "song_title": "Beware",
+        "itunesId": 1440822099
       },
       {
         "word": "YOU",
@@ -43914,7 +44600,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "artist_name": "Alanis Morissette",
-        "song_title": "You Oughta Know"
+        "song_title": "You Oughta Know",
+        "itunesId": 1715762421
       },
       {
         "word": "ROLE",
@@ -43928,7 +44615,8 @@
         "startAt": "0:47",
         "audioDuration": 10,
         "artist_name": "Role Model",
-        "song_title": "Sally, When The Wine Runs Out"
+        "song_title": "Sally, When The Wine Runs Out",
+        "itunesId": 1793693771
       },
       {
         "word": "MYSTERY",
@@ -43942,7 +44630,8 @@
         "startAt": "1:00",
         "audioDuration": 10,
         "artist_name": "Madonna",
-        "song_title": "Like a Prayer"
+        "song_title": "Like a Prayer",
+        "itunesId": 83445997
       },
       {
         "word": "BILLY",
@@ -43956,7 +44645,8 @@
         "startAt": "0:07",
         "audioDuration": 10,
         "artist_name": "Billy Joel",
-        "song_title": "Uptown"
+        "song_title": "Uptown",
+        "itunesId": 259814810
       },
       {
         "word": "JASON",
@@ -43970,7 +44660,8 @@
         "startAt": "0:07",
         "audioDuration": 10,
         "artist_name": "Jason Derulo",
-        "song_title": "In My Head"
+        "song_title": "In My Head",
+        "itunesId": 353554374
       },
       {
         "word": "LAMBERT",
@@ -43984,7 +44675,8 @@
         "startAt": "2:00",
         "audioDuration": 10,
         "artist_name": "Adam Lambert",
-        "song_title": "Ghost Town"
+        "song_title": "Ghost Town",
+        "itunesId": 984746114
       },
       {
         "word": "LADY",
@@ -43998,7 +44690,8 @@
         "startAt": "0:18.5",
         "audioDuration": 10,
         "artist_name": "Lady Gaga",
-        "song_title": "Bloody Mary"
+        "song_title": "Bloody Mary",
+        "itunesId": 1440857734
       },
       {
         "word": "ALL",
@@ -44012,7 +44705,8 @@
         "startAt": "2:10",
         "audioDuration": 8,
         "artist_name": "John Legend",
-        "song_title": "All Of Me"
+        "song_title": "All Of Me",
+        "itunesId": 1441844542
       },
       {
         "word": "JUSTIN",
@@ -44026,7 +44720,8 @@
         "startAt": "0:17",
         "audioDuration": 10,
         "artist_name": "Justin Bieber",
-        "song_title": "One Time"
+        "song_title": "One Time",
+        "itunesId": 1440616468
       },
       {
         "word": "LOVE",
@@ -44040,7 +44735,8 @@
         "startAt": "0:19",
         "audioDuration": 10,
         "artist_name": "Keyshia Cole",
-        "song_title": "Love"
+        "song_title": "Love",
+        "itunesId": 1440667557
       },
       {
         "word": "MY",
@@ -44054,7 +44750,8 @@
         "startAt": "0:18",
         "audioDuration": 10,
         "artist_name": "Frank Sinatra",
-        "song_title": "My Way"
+        "song_title": "My Way",
+        "itunesId": 1475517693
       },
       {
         "word": "PERRY",
@@ -44068,7 +44765,8 @@
         "startAt": "0:04",
         "audioDuration": 9,
         "artist_name": "Katy Perry",
-        "song_title": "Roar"
+        "song_title": "Roar",
+        "itunesId": 1440818897
       },
       {
         "word": "PAVEMENTS",
@@ -44082,7 +44780,8 @@
         "startAt": "0:05",
         "audioDuration": 15,
         "artist_name": "Adele",
-        "song_title": "Chasing Pavements"
+        "song_title": "Chasing Pavements",
+        "itunesId": 1545376345
       },
       {
         "word": "YOUNG",
@@ -44096,11 +44795,12 @@
         "startAt": "0:11.2",
         "audioDuration": 9.8,
         "artist_name": "Wiz Khalifa",
-        "song_title": "Young, Wild and Free"
+        "song_title": "Young, Wild and Free",
+        "itunesId": 480436634
       }
     ]
   },
-    "2026-04-26": {
+  "2026-04-26": {
     "version": "1.0.0",
     "title": "(by catriona)",
     "theme": "black",
@@ -44121,7 +44821,8 @@
         "startAt": "1:04",
         "audioDuration": 15,
         "artist_name": "The B-52s",
-        "song_title": "Love Shack"
+        "song_title": "Love Shack",
+        "itunesId": 373209396
       },
       {
         "word": "AAR",
@@ -44135,7 +44836,8 @@
         "startAt": "1:07",
         "audioDuration": 9,
         "artist_name": "All American Rejects",
-        "song_title": "Gives You Hell"
+        "song_title": "Gives You Hell",
+        "itunesId": 1440770575
       },
       {
         "word": "BLONDIE",
@@ -44149,7 +44851,8 @@
         "startAt": "0:23",
         "audioDuration": 15,
         "artist_name": "Blondie",
-        "song_title": "One Way or Another"
+        "song_title": "One Way or Another",
+        "itunesId": 1440929996
       },
       {
         "word": "PYT",
@@ -44163,7 +44866,8 @@
         "startAt": "0:44",
         "audioDuration": 10,
         "artist_name": "Michael Jackson",
-        "song_title": "PYT"
+        "song_title": "PYT",
+        "itunesId": 159294296
       },
       {
         "word": "SAM",
@@ -44177,7 +44881,8 @@
         "startAt": "0:28",
         "audioDuration": 15,
         "artist_name": "Sam Smith",
-        "song_title": "Stay With Me"
+        "song_title": "Stay With Me",
+        "itunesId": 1440814425
       },
       {
         "word": "DEAN",
@@ -44189,7 +44894,10 @@
         "audioUrl": "2176241616",
         "soundcloudUrl": "https://soundcloud.com/oliviaadean/so-easy-to-fall-in-love",
         "startAt": "0:39",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "song_title": "So Easy (To Fall In Love)",
+        "artist_name": "Olivia Dean",
+        "itunesId": 1817609507
       },
       {
         "word": "BONJOVI",
@@ -44203,7 +44911,8 @@
         "startAt": "1:07",
         "audioDuration": 15,
         "artist_name": "Bon Jovi",
-        "song_title": "You Give Love A Bad Name"
+        "song_title": "You Give Love A Bad Name",
+        "itunesId": 1422954999
       },
       {
         "word": "BONO",
@@ -44217,7 +44926,8 @@
         "startAt": "1:02",
         "audioDuration": 6,
         "artist_name": "U2",
-        "song_title": "I Still Haven't Found What I'm Looking For"
+        "song_title": "I Still Haven't Found What I'm Looking For",
+        "itunesId": 1442950019
       },
       {
         "word": "DIPLO",
@@ -44231,7 +44941,8 @@
         "startAt": "0:33",
         "audioDuration": 8,
         "artist_name": "Diplo",
-        "song_title": "Heartless"
+        "song_title": "Heartless",
+        "itunesId": 1507815383
       },
       {
         "word": "50CENT",
@@ -44245,7 +44956,8 @@
         "startAt": "0:48",
         "audioDuration": 18,
         "artist_name": "50 Cent",
-        "song_title": "21 Questions"
+        "song_title": "21 Questions",
+        "itunesId": 1440842350
       },
       {
         "word": "STATESIDE",
@@ -44259,7 +44971,8 @@
         "startAt": "0:01",
         "audioDuration": 15,
         "artist_name": "PinkPantheress",
-        "song_title": "Stateside"
+        "song_title": "Stateside",
+        "itunesId": 1806614783
       },
       {
         "word": "CREAM",
@@ -44273,7 +44986,8 @@
         "startAt": "0:08",
         "audioDuration": 15,
         "artist_name": "CREAM",
-        "song_title": "Sunshine Of Your Love"
+        "song_title": "Sunshine Of Your Love",
+        "itunesId": 1440817744
       }
     ],
     "starting_characters": [
@@ -44285,7 +44999,7 @@
       }
     ]
   },
-    "2026-04-27": {
+  "2026-04-27": {
     "version": "1.0.0",
     "title": "",
     "theme": "black",
@@ -44306,7 +45020,8 @@
         "startAt": "0:52",
         "audioDuration": 8,
         "artist_name": "Benson Boone",
-        "song_title": "Mystical Magical"
+        "song_title": "Mystical Magical",
+        "itunesId": 1807490820
       },
       {
         "word": "HARRY",
@@ -44320,7 +45035,8 @@
         "startAt": "0:13",
         "audioDuration": 8,
         "artist_name": "Harry Styles",
-        "song_title": "As It Was"
+        "song_title": "As It Was",
+        "itunesId": 1615585008
       },
       {
         "word": "NUMB",
@@ -44334,7 +45050,8 @@
         "startAt": "0:11",
         "audioDuration": 8,
         "artist_name": "Linkin Park",
-        "song_title": "Numb"
+        "song_title": "Numb",
+        "itunesId": 590423552
       },
       {
         "word": "SEEYOUAGAIN",
@@ -44348,7 +45065,8 @@
         "startAt": "0:09",
         "audioDuration": 8,
         "artist_name": "Wiz Khalifa",
-        "song_title": "See You Again"
+        "song_title": "See You Again",
+        "itunesId": 966411602
       },
       {
         "word": "BUSINESS",
@@ -44362,7 +45080,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "artist_name": "Paramore",
-        "song_title": "Misery Business"
+        "song_title": "Misery Business",
+        "itunesId": 604863246
       },
       {
         "word": "STARBOY",
@@ -44376,7 +45095,8 @@
         "startAt": "0:47",
         "audioDuration": 8,
         "artist_name": "The Weeknd",
-        "song_title": "Starboy"
+        "song_title": "Starboy",
+        "itunesId": 1440870375
       },
       {
         "word": "BOYS",
@@ -44390,7 +45110,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "artist_name": "Tinashe",
-        "song_title": "No Broke Boys"
+        "song_title": "No Broke Boys",
+        "itunesId": 1844681708
       },
       {
         "word": "SMOOTH",
@@ -44404,11 +45125,12 @@
         "startAt": "1:01",
         "audioDuration": 7,
         "artist_name": "Michael Jackson",
-        "song_title": "Smooth Criminal"
+        "song_title": "Smooth Criminal",
+        "itunesId": 159294551
       }
     ]
   },
-    "2026-04-28": {
+  "2026-04-28": {
     "version": "1.0.0",
     "title": "Where there's a Will...(by jaykzfx)",
     "theme": "green",
@@ -44429,7 +45151,8 @@
         "startAt": "0:02",
         "audioDuration": 10,
         "artist_name": "John Williams",
-        "song_title": "Star Wars Main Theme"
+        "song_title": "Star Wars Main Theme",
+        "itunesId": 1375815594
       },
       {
         "word": "WILLSMITH",
@@ -44443,7 +45166,8 @@
         "startAt": "0:55",
         "audioDuration": 16,
         "artist_name": "Will Smith",
-        "song_title": "Prince Ali"
+        "song_title": "Prince Ali",
+        "itunesId": 1462702462
       },
       {
         "word": "WILLIE",
@@ -44457,7 +45181,8 @@
         "startAt": "0:19",
         "audioDuration": 10,
         "artist_name": "Willie Nelson",
-        "song_title": "Bring It On Down To My House"
+        "song_title": "Bring It On Down To My House",
+        "itunesId": 1218465251
       },
       {
         "word": "WITHERS",
@@ -44471,7 +45196,8 @@
         "startAt": "0:42",
         "audioDuration": 10,
         "artist_name": "Bill Withers",
-        "song_title": "Just the Two of Us"
+        "song_title": "Just the Two of Us",
+        "itunesId": 391725517
       },
       {
         "word": "WILL.I.AM",
@@ -44485,7 +45211,8 @@
         "startAt": "1:24",
         "audioDuration": 10,
         "artist_name": "will.i.am",
-        "song_title": "Scream & Shout"
+        "song_title": "Scream & Shout",
+        "itunesId": 1442823431
       },
       {
         "word": "WILLOW",
@@ -44499,7 +45226,8 @@
         "startAt": "0:00",
         "audioDuration": 8,
         "artist_name": "Willow",
-        "song_title": "Whip My Hair"
+        "song_title": "Whip My Hair",
+        "itunesId": 1436333142
       },
       {
         "word": "HAYLEY",
@@ -44513,7 +45241,8 @@
         "startAt": "1:21",
         "audioDuration": 10,
         "artist_name": "Hayley Williams",
-        "song_title": "Parachute"
+        "song_title": "Parachute",
+        "itunesId": 1850012505
       }
     ],
     "starting_characters": [
@@ -44531,7 +45260,7 @@
       }
     ]
   },
-    "2026-04-29": {
+  "2026-04-29": {
     "version": "1.0.1",
     "title": "",
     "theme": "black",
@@ -44552,7 +45281,8 @@
         "startAt": "0:54",
         "audioDuration": 13,
         "artist_name": "Selena Gomez",
-        "song_title": "Lose You To Love Me"
+        "song_title": "Lose You To Love Me",
+        "itunesId": 1484383177
       },
       {
         "word": "SEEB",
@@ -44566,7 +45296,8 @@
         "startAt": "0:00",
         "audioDuration": 8,
         "artist_name": "Mike Posner",
-        "song_title": "I Took A Pill In Ibiza"
+        "song_title": "I Took A Pill In Ibiza",
+        "itunesId": 1442858494
       },
       {
         "word": "ONEKISS",
@@ -44580,7 +45311,8 @@
         "startAt": "0:03",
         "audioDuration": 7,
         "artist_name": "Calvin Harris",
-        "song_title": "One Kiss"
+        "song_title": "One Kiss",
+        "itunesId": 1364709436
       },
       {
         "word": "WONDERWALL",
@@ -44594,7 +45326,8 @@
         "startAt": "0:20",
         "audioDuration": 7,
         "artist_name": "Oasis",
-        "song_title": "Wonderwall"
+        "song_title": "Wonderwall",
+        "itunesId": 1517447333
       },
       {
         "word": "PAVED",
@@ -44608,7 +45341,8 @@
         "startAt": "0:21",
         "audioDuration": 6.5,
         "artist_name": "Counting Crows",
-        "song_title": "Big Yellow Taxi"
+        "song_title": "Big Yellow Taxi",
+        "itunesId": 1492312808
       },
       {
         "word": "BEYONCE",
@@ -44622,7 +45356,8 @@
         "startAt": "0:53",
         "audioDuration": 9,
         "artist_name": "Beyoncé",
-        "song_title": "CUFF IT"
+        "song_title": "CUFF IT",
+        "itunesId": 1636790292
       },
       {
         "word": "BOHEMIAN",
@@ -44636,7 +45371,8 @@
         "startAt": "0:53",
         "audioDuration": 10,
         "artist_name": "Queen",
-        "song_title": "Bohemian Rhapsody"
+        "song_title": "Bohemian Rhapsody",
+        "itunesId": 1440650711
       },
       {
         "word": "ROSE",
@@ -44650,7 +45386,8 @@
         "startAt": "0:15",
         "audioDuration": 13,
         "artist_name": "Rosé",
-        "song_title": "APT."
+        "song_title": "APT.",
+        "itunesId": 1771105935
       },
       {
         "word": "KHALID",
@@ -44664,11 +45401,12 @@
         "startAt": "0:12",
         "audioDuration": 6,
         "artist_name": "Khalid",
-        "song_title": "Location"
+        "song_title": "Location",
+        "itunesId": 1200868875
       }
     ]
   },
-    "2026-04-30": {
+  "2026-04-30": {
     "version": "1.0.0",
     "title": "(by markie_munoz)",
     "theme": "black",
@@ -44689,7 +45427,8 @@
         "startAt": "0:00",
         "audioDuration": 16,
         "artist_name": "Bruno Mars",
-        "song_title": "Just The Way You Are"
+        "song_title": "Just The Way You Are",
+        "itunesId": 576655095
       },
       {
         "word": "DNA",
@@ -44703,7 +45442,8 @@
         "startAt": "0:00",
         "audioDuration": 8,
         "artist_name": "Kendrick Lamar",
-        "song_title": "DNA."
+        "song_title": "DNA.",
+        "itunesId": 1440881990
       },
       {
         "word": "VIVA",
@@ -44717,7 +45457,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "artist_name": "Coldplay",
-        "song_title": "Viva La Vida"
+        "song_title": "Viva La Vida",
+        "itunesId": 1122773680
       },
       {
         "word": "THREE",
@@ -44731,7 +45472,8 @@
         "startAt": "0:05",
         "audioDuration": 11,
         "artist_name": "Bob Marley",
-        "song_title": "Three Little Birds"
+        "song_title": "Three Little Birds",
+        "itunesId": 1469575900
       },
       {
         "word": "LOSE",
@@ -44745,7 +45487,8 @@
         "startAt": "1:25",
         "audioDuration": 15,
         "artist_name": "Eminem",
-        "song_title": "Lose Yourself"
+        "song_title": "Lose Yourself",
+        "itunesId": 1440903439
       },
       {
         "word": "COLUMBIA",
@@ -44759,7 +45502,8 @@
         "startAt": "0:13",
         "audioDuration": 10,
         "artist_name": "Quevedo",
-        "song_title": "Columbia"
+        "song_title": "Columbia",
+        "itunesId": 1794418219
       },
       {
         "word": "DANCE",
@@ -44773,7 +45517,8 @@
         "startAt": "0:03",
         "audioDuration": 13,
         "artist_name": "Drake",
-        "song_title": "One Dance"
+        "song_title": "One Dance",
+        "itunesId": 1440841384
       },
       {
         "word": "JUST",
@@ -44787,7 +45532,8 @@
         "startAt": "0:15",
         "audioDuration": 20,
         "artist_name": "Lady Gaga",
-        "song_title": "Just Dance"
+        "song_title": "Just Dance",
+        "itunesId": 1440818653
       },
       {
         "word": "WEAREYOUNG",
@@ -44801,7 +45547,8 @@
         "startAt": "0:40",
         "audioDuration": 20,
         "artist_name": "Fun.",
-        "song_title": "We Are Young"
+        "song_title": "We Are Young",
+        "itunesId": 486040195
       },
       {
         "word": "ADVENTURE",
@@ -44815,7 +45562,8 @@
         "startAt": "0:48",
         "audioDuration": 12,
         "artist_name": "Coldplay",
-        "song_title": "Adventure Of A Lifetime"
+        "song_title": "Adventure Of A Lifetime",
+        "itunesId": 1053934846
       },
       {
         "word": "DEVIL",
@@ -44829,7 +45577,8 @@
         "startAt": "0:05",
         "audioDuration": 11,
         "artist_name": "Kanye West",
-        "song_title": "Devil In A New Dress"
+        "song_title": "Devil In A New Dress",
+        "itunesId": 1443160697
       },
       {
         "word": "SIA",
@@ -44843,11 +45592,12 @@
         "startAt": "0:09",
         "audioDuration": 11,
         "artist_name": "Sia",
-        "song_title": "Unstoppable"
+        "song_title": "Unstoppable",
+        "itunesId": 1055074639
       }
     ]
   },
-    "2026-05-01": {
+  "2026-05-01": {
     "version": "1.0.0",
     "title": "What's her name? (byck337)",
     "theme": "green",
@@ -44866,7 +45616,8 @@
         "audioUrl": "257052802",
         "soundcloudUrl": "https://soundcloud.com/onedirectionmusic/olivia",
         "startAt": "0:08",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "itunesId": 1040171623
       },
       {
         "word": "STACY",
@@ -44878,7 +45629,8 @@
         "audioUrl": 38332197,
         "soundcloudUrl": "https://soundcloud.com/mike-hunt-2/stacys-mom",
         "startAt": "0:54",
-        "audioDuration": 13
+        "audioDuration": 13,
+        "itunesId": 712721787
       },
       {
         "word": "JUNO",
@@ -44890,7 +45642,8 @@
         "audioUrl": "1995820603",
         "soundcloudUrl": "https://soundcloud.com/zoelle-ng/taste-espresso-juno-sabrina-carpenter-tiny-desk-concert",
         "startAt": "6:24",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "itunesId": 1752215160
       },
       {
         "word": "ISABELLE",
@@ -44902,7 +45655,8 @@
         "audioUrl": "978692665",
         "soundcloudUrl": "https://soundcloud.com/zachhood/isabelle",
         "startAt": "0:07",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "itunesId": 1847971863
       },
       {
         "word": "CHEYENNE",
@@ -44914,7 +45668,8 @@
         "audioUrl": "920937262",
         "soundcloudUrl": "https://soundcloud.com/gavin-taulo-461412660/jason-derulo-cheyenne-slowed-down",
         "startAt": "0:59",
-        "audioDuration": 30
+        "audioDuration": 30,
+        "itunesId": 982388024
       },
       {
         "word": "JESSIE",
@@ -44926,7 +45681,8 @@
         "audioUrl": 1632999636,
         "soundcloudUrl": "https://soundcloud.com/jelly-roll-official/wild-ones?in=stildmusicejhonner01%2Fsets%2Fwild-ones-feat-jelly-roll-1",
         "startAt": "0:19",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "itunesId": 1727004103
       },
       {
         "word": "SOFIA",
@@ -44938,7 +45694,8 @@
         "audioUrl": "656502170",
         "soundcloudUrl": "https://soundcloud.com/ccottrill/sofia",
         "startAt": "0:16",
-        "audioDuration": 16
+        "audioDuration": 16,
+        "itunesId": 1821547087
       },
       {
         "word": "SARAH",
@@ -44950,7 +45707,8 @@
         "audioUrl": "28547335",
         "soundcloudUrl": "https://soundcloud.com/samthinkzulost/panic-at-the-disco-sarah",
         "startAt": "0:27",
-        "audioDuration": 30
+        "audioDuration": 30,
+        "itunesId": 424480134
       },
       {
         "word": "ASHE",
@@ -44962,7 +45720,8 @@
         "audioUrl": 764567134,
         "soundcloudUrl": "https://soundcloud.com/kitkatlvr/ashe-moral-of-the-story",
         "startAt": "0:51",
-        "audioDuration": 15
+        "audioDuration": 15,
+        "itunesId": 1520827564
       },
       {
         "word": "EILEEN",
@@ -44974,7 +45733,8 @@
         "audioUrl": "62542293",
         "soundcloudUrl": "https://soundcloud.com/theliongoasroar/dexys-midnight-runners-come-on",
         "startAt": "1:06",
-        "audioDuration": 12
+        "audioDuration": 12,
+        "itunesId": 1490914106
       }
     ]
   },

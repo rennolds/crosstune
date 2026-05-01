@@ -41,11 +41,12 @@ export async function POST({ request, locals }) {
         direction: word.direction.toLowerCase(),
         color: colorPalette[index % colorPalette.length],
         textClue: sanitizeClue(value),
-        audioUrl: word.trackId?.toString() || '',
+        audioUrl: Number.isInteger(word.itunesId) && word.itunesId > 0 ? String(word.itunesId) : word.trackId?.toString() || '',
         startAt: word.startAt || '0:00',
         audioDuration: word.audioDuration || 6,
         soundcloudUrl: word.soundcloudUrl || ''
       };
+      if (Number.isInteger(word.itunesId) && word.itunesId > 0) validatedWord.itunesId = word.itunesId;
       if (word.song_title) validatedWord.song_title = word.song_title;
       if (word.artist_name) validatedWord.artist_name = word.artist_name;
       validatedWords.push(validatedWord);

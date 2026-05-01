@@ -1,5 +1,5 @@
 <script>
-  import { untrack } from "svelte";
+  import { untrack, onDestroy } from "svelte";
   import crosswords from "$lib/data/crosswords.json";
   import ResultOverlay from "./ResultOverlay.svelte";
   import SoundCloudManager from "./SoundCloudManager.svelte";
@@ -13,6 +13,7 @@
     setSeconds,
     resetTimer,
     isWidgetReady,
+    markWidgetAsReady,
     markWidgetAsUnavailable,
     isWidgetUnavailable,
     setUnavailableWidgets,
@@ -76,6 +77,10 @@
       // Check all clues
       [...acrossClues, ...downClues].forEach((clue) => {
         const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
+
+        // Deezer words have no SC widget — mark them ready immediately
+        if (clue.itunesId) markWidgetAsReady(widgetId);
+
         const isReady = isWidgetReady(widgetId);
 
         // Only update if there's a change to avoid unnecessary rerenders
@@ -287,6 +292,7 @@
   // Audio player state
   let currentAudio = $state(null);
   let isPlaying = $state(false);
+  let _appleMusicRequestId = 0;
 
   // Generate word numbers and organize clues
   let wordNumbers = $state(new Map());
@@ -401,6 +407,7 @@
       number,
       word: word.word,
       audioUrl: word.audioUrl,
+      itunesId: word.itunesId,
       startAt: word.startAt,
       audioDuration: word.audioDuration,
       textClue: word.textClue,
@@ -1396,6 +1403,13 @@
 
   let playingClue = $state(null);
 
+  function isSameClue(a, b) {
+    if (!a || !b) return false;
+    return a.startX === b.startX && a.startY === b.startY && a.direction === b.direction;
+  }
+
+  let isPlayingActiveClue = $derived(isPlaying && isSameClue(playingClue, activeClue));
+
   async function playClue(clue) {
     const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
     try {
@@ -1410,17 +1424,8 @@
         return;
       }
 
-      // Find the iframe for this specific word
-      const iframe = document.getElementById(widgetId);
-
-      if (!iframe) {
-        console.error(`No SoundCloud widget found for coordinates ${widgetId}`);
-        return;
-      }
-      console.log("got widget");
-
       // If this clue is already playing, pause it and exit
-      if (playingClue === clue && isPlaying && currentAudio) {
+      if (isSameClue(playingClue, clue) && isPlaying && currentAudio) {
         currentAudio.pause();
         isPlaying = false;
         playingClue = null;
@@ -1440,6 +1445,96 @@
       // Set these states for the new audio
       isPlaying = true;
       playingClue = clue;
+
+      // === Apple Music path ===
+      if (clue.itunesId) {
+        const requestId = ++_appleMusicRequestId;
+
+        let resp;
+        try {
+          resp = await fetch(`/api/apple-music-preview?id=${clue.itunesId}`);
+        } catch (e) {
+          console.warn(`Apple Music preview fetch failed for ${widgetId}:`, e);
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+          return;
+        }
+
+        if (requestId !== _appleMusicRequestId) return;
+
+        if (!resp.ok) {
+          if (resp.status === 404) markWidgetAsUnavailable(widgetId);
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+          return;
+        }
+
+        let previewUrl;
+        try {
+          ({ previewUrl } = await resp.json());
+        } catch (e) {
+          console.warn(`Apple Music preview JSON parse failed for ${widgetId}:`, e);
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+          return;
+        }
+
+        if (requestId !== _appleMusicRequestId) return;
+
+        currentAudio?.pause();
+        const audioEl = new Audio(previewUrl);
+        currentAudio = audioEl;
+        const playSessionId = Date.now();
+        audioEl._playSessionId = playSessionId;
+        const startSecs = convertTimestampToMs(clue.startAt || '0:00') / 1000;
+        const duration = clue.audioDuration || 6;
+        audioEl.currentTime = (startSecs + duration <= 30) ? startSecs : 0;
+
+        try {
+          await audioEl.play();
+        } catch (e) {
+          console.warn(`Apple Music play() failed for ${widgetId}:`, e);
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+          return;
+        }
+
+        if (requestId !== _appleMusicRequestId) {
+          audioEl.pause();
+          return;
+        }
+
+        const timeoutDuration =
+          clue.audioDuration && clue.audioDuration > 0
+            ? clue.audioDuration * 1000
+            : 6500;
+
+        setTimeout(() => {
+          if (audioEl === currentAudio && audioEl._playSessionId === playSessionId) {
+            audioEl.pause();
+            isPlaying = false;
+            playingClue = null;
+            currentAudio = null;
+          }
+        }, timeoutDuration);
+
+        return;
+      }
+      // === End Apple Music path ===
+
+      // Find the SC iframe for this word
+      const iframe = document.getElementById(widgetId);
+      if (!iframe) {
+        console.error(`No SoundCloud widget found for coordinates ${widgetId}`);
+        isPlaying = false;
+        playingClue = null;
+        return;
+      }
+      console.log("got widget");
 
       const audio = SC.Widget(iframe);
       currentAudio = audio;
@@ -1553,6 +1648,8 @@
     isPlaying = false;
     playingClue = null;
   }
+
+  onDestroy(() => stopAudio());
 
   // Function to log puzzle completion to database
   async function logPuzzleCompletion(puzzleId) {
@@ -2158,7 +2255,7 @@
                   `${activeClue.startX}:${activeClue.startY}:${activeClue.direction}`
                 )}
             >
-              {#if isPlaying && playingClue === activeClue}
+              {#if isPlayingActiveClue}
                 <!-- Pause icon -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -2257,6 +2354,23 @@
             </button>
           </div>
         </div>
+        {#if activeClue.itunesId}
+          <div class="flex justify-start mt-1.5 pl-2">
+            <a
+              href="https://music.apple.com/us/song/{activeClue.itunesId}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <span>Preview brought to you by</span>
+              <span class="font-medium" style="color: #FC3C44">Apple Music</span>
+              <span>- listen now (spoilers)</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        {/if}
       </div>
     {/if}
   </div>
