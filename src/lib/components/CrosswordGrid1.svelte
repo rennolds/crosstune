@@ -2362,7 +2362,7 @@
               rel="noopener noreferrer"
               class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <span>Preview brought to you by</span>
+              <span>Clue snippet from</span>
               <span class="font-medium" style="color: #FC3C44">Apple Music</span>
               <span>- listen now (spoilers)</span>
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
