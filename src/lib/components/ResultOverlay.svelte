@@ -432,7 +432,7 @@
         <div class="flex items-baseline justify-between mb-4">
           <p class="text-[10px] tracking-[0.14em] uppercase text-white/40 font-medium">Songs in this puzzle</p>
           {#if hasAppleMusicTracks}
-            <p class="text-[10px] text-white/30">Previews via <span style="color: #FC3C44">Apple Music</span></p>
+            <p class="text-[10px] text-white/30">Clue snippets from <span style="color: #FC3C44">Apple Music</span></p>
           {/if}
         </div>
 
@@ -493,7 +493,7 @@
         </div>
 
         {#if hasSoundCloudTracks}
-          <p class="text-[10px] text-white/25 mt-4">Audio by SoundCloud</p>
+          <p class="text-[10px] text-white/25 mt-4">Clue snippets from SoundCloud</p>
         {/if}
       </div>
       <!-- END: Song Credits Section -->
