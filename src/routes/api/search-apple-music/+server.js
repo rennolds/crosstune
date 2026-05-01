@@ -1,10 +1,51 @@
 import { json } from '@sveltejs/kit';
 import { generateMusicKitToken } from '$lib/utils/musickit.server.js';
 
-export async function GET({ url }) {
+// Query-response cache: avoids redundant Apple API calls for the same search term.
+// Keyed by normalized query string. TTL: 5 min.
+const queryCache = new Map();
+const CACHE_TTL_MS = 5 * 60 * 1000;
+
+// Per-IP rate limiting: 20 req/min. Best-effort (per worker instance).
+const ipCounts = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = ipCounts.get(ip);
+  if (!entry || now - entry.start > 60_000) {
+    ipCounts.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  entry.count++;
+  return entry.count > 20;
+}
+
+function getClientIp(request) {
+  return (
+    request.headers.get('cf-connecting-ip') ||
+    request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+    'unknown'
+  );
+}
+
+export async function GET({ url, request }) {
   const q = url.searchParams.get('q');
   if (!q || !q.trim()) {
     return json({ error: 'Missing query' }, { status: 400 });
+  }
+
+  if (isRateLimited(getClientIp(request))) {
+    return json({ error: 'Too many requests' }, { status: 429 });
+  }
+
+  const normalizedQ = q.trim().toLowerCase();
+
+  // Serve from cache if fresh
+  const cached = queryCache.get(normalizedQ);
+  if (cached && Date.now() - cached.cachedAt < CACHE_TTL_MS) {
+    return json(cached.data, {
+      headers: { 'Cache-Control': 'public, max-age=300' },
+    });
   }
 
   let token;
@@ -18,7 +59,7 @@ export async function GET({ url }) {
   let data;
   try {
     const resp = await fetch(
-      `https://api.music.apple.com/v1/catalog/us/search?term=${encodeURIComponent(q.trim())}&types=songs&limit=5`,
+      `https://api.music.apple.com/v1/catalog/us/search?term=${encodeURIComponent(normalizedQ)}&types=songs&limit=5`,
       {
         headers: { Authorization: `Bearer ${token}` },
         signal: AbortSignal.timeout(8000),
@@ -44,7 +85,10 @@ export async function GET({ url }) {
       : null,
   }));
 
-  return json({ results }, {
+  const payload = { results };
+  queryCache.set(normalizedQ, { data: payload, cachedAt: Date.now() });
+
+  return json(payload, {
     headers: { 'Cache-Control': 'public, max-age=300' },
   });
 }

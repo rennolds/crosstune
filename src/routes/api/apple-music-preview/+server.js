@@ -7,10 +7,36 @@ import { generateMusicKitToken } from '$lib/utils/musickit.server.js';
 const trackCache = new Map();
 const CACHE_TTL_MS = 30 * 60 * 1000;
 
-export async function GET({ url }) {
+// Per-IP rate limiting: 60 req/min. Best-effort (per worker instance).
+const ipCounts = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const entry = ipCounts.get(ip);
+  if (!entry || now - entry.start > 60_000) {
+    ipCounts.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  entry.count++;
+  return entry.count > 60;
+}
+
+function getClientIp(request) {
+  return (
+    request.headers.get('cf-connecting-ip') ||
+    request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+    'unknown'
+  );
+}
+
+export async function GET({ url, request }) {
   const id = url.searchParams.get('id');
   if (!id || !/^\d+$/.test(id)) {
     return json({ error: 'Invalid or missing Apple Music track id' }, { status: 400 });
+  }
+
+  if (isRateLimited(getClientIp(request))) {
+    return json({ error: 'Too many requests' }, { status: 429 });
   }
 
   // Serve from cache if fresh
@@ -36,7 +62,7 @@ export async function GET({ url }) {
       signal: AbortSignal.timeout(8000),
     });
     if (!resp.ok) {
-      return json({ error: `Apple Music API returned ${resp.status}` }, { status: 502 });
+      return json({ error: `Apple Music API returned ${resp.status}` }, { status: resp.status === 404 ? 404 : 502 });
     }
     data = await resp.json();
   } catch (e) {

@@ -1,5 +1,5 @@
 <script>
-  import { untrack } from "svelte";
+  import { untrack, onDestroy } from "svelte";
   import crosswords from "$lib/data/crosswords.json";
   import ResultOverlay from "./ResultOverlay.svelte";
   import SoundCloudManager from "./SoundCloudManager.svelte";
@@ -292,6 +292,7 @@
   // Audio player state
   let currentAudio = $state(null);
   let isPlaying = $state(false);
+  let _appleMusicRequestId = 0;
 
   // Generate word numbers and organize clues
   let wordNumbers = $state(new Map());
@@ -1438,22 +1439,45 @@
       isPlaying = true;
       playingClue = clue;
 
-      // === Deezer path ===
+      // === Apple Music path ===
       if (clue.itunesId) {
-        let previewUrl;
+        const requestId = ++_appleMusicRequestId;
+
+        let resp;
         try {
-          const resp = await fetch(`/api/apple-music-preview?id=${clue.itunesId}`);
-          if (!resp.ok) throw new Error(`deezer-preview ${resp.status}`);
-          ({ previewUrl } = await resp.json());
+          resp = await fetch(`/api/apple-music-preview?id=${clue.itunesId}`);
         } catch (e) {
-          console.error(`Failed to fetch Deezer preview for ${widgetId}:`, e);
-          markWidgetAsUnavailable(widgetId);
+          console.warn(`Apple Music preview fetch failed for ${widgetId}:`, e);
           isPlaying = false;
           playingClue = null;
           currentAudio = null;
           return;
         }
 
+        if (requestId !== _appleMusicRequestId) return;
+
+        if (!resp.ok) {
+          if (resp.status === 404) markWidgetAsUnavailable(widgetId);
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+          return;
+        }
+
+        let previewUrl;
+        try {
+          ({ previewUrl } = await resp.json());
+        } catch (e) {
+          console.warn(`Apple Music preview JSON parse failed for ${widgetId}:`, e);
+          isPlaying = false;
+          playingClue = null;
+          currentAudio = null;
+          return;
+        }
+
+        if (requestId !== _appleMusicRequestId) return;
+
+        currentAudio?.pause();
         const audioEl = new Audio(previewUrl);
         currentAudio = audioEl;
         const playSessionId = Date.now();
@@ -1465,11 +1489,15 @@
         try {
           await audioEl.play();
         } catch (e) {
-          console.error(`Deezer audio play() failed for ${widgetId}:`, e);
-          markWidgetAsUnavailable(widgetId);
+          console.warn(`Apple Music play() failed for ${widgetId}:`, e);
           isPlaying = false;
           playingClue = null;
           currentAudio = null;
+          return;
+        }
+
+        if (requestId !== _appleMusicRequestId) {
+          audioEl.pause();
           return;
         }
 
@@ -1489,7 +1517,7 @@
 
         return;
       }
-      // === End Deezer path ===
+      // === End Apple Music path ===
 
       // Find the SC iframe for this word
       const iframe = document.getElementById(widgetId);
@@ -1613,6 +1641,8 @@
     isPlaying = false;
     playingClue = null;
   }
+
+  onDestroy(() => stopAudio());
 
   // Function to log puzzle completion to database
   async function logPuzzleCompletion(puzzleId) {

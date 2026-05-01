@@ -52,7 +52,7 @@
     const iframe = document.getElementById(widgetId);
 
     if (!iframe) {
-      trackMetadata[word.audioUrl] = { title: "Unknown Track", artist: "Unknown Artist" };
+      trackMetadata[word.audioUrl] = { title: null, artist: null };
       return;
     }
 
@@ -67,12 +67,12 @@
                 artist: sound.user.username,
               };
             } else {
-              trackMetadata[word.audioUrl] = { title: "Unknown Track", artist: "Unknown Artist" };
+              trackMetadata[word.audioUrl] = { title: null, artist: null };
             }
           });
         });
       } catch (error) {
-        trackMetadata[word.audioUrl] = { title: "Unknown Track", artist: "Unknown Artist" };
+        trackMetadata[word.audioUrl] = { title: null, artist: null };
       }
     }, 1000);
   }
@@ -84,13 +84,13 @@
       if (!resp.ok) throw new Error(`${resp.status}`);
       const data = await resp.json();
       trackMetadata[`itunes-${word.itunesId}`] = {
-        title: data.title || "Unknown Track",
-        artist: data.artist || "Unknown Artist",
+        title: data.title || null,
+        artist: data.artist || null,
         previewUrl: data.previewUrl || null,
         artworkUrl: data.artworkUrl || null,
       };
     } catch {
-      trackMetadata[`itunes-${word.itunesId}`] = { title: "Unknown Track", artist: "Unknown Artist", previewUrl: null, artworkUrl: null };
+      trackMetadata[`itunes-${word.itunesId}`] = { title: null, artist: null, previewUrl: null, artworkUrl: null };
     }
   }
 
