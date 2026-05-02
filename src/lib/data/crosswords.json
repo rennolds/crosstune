@@ -45754,12 +45754,12 @@
         "direction": "across",
         "color": "#FFB34B",
         "textClue": "Song title",
-        "audioUrl": 446439789,
-        "soundcloudUrl": "https://soundcloud.com/user-292188532/gods-plan-8-bit-tribute-to-drake-8-bit-universe",
-        "startAt": "0:24",
+        "itunesId": "1383008349",
+        "audioUrl": "1383008349",
+        "startAt": "0:02",
         "audioDuration": 15,
-        "artist_name": "Drake",
-        "song_title": "God's Plan"
+        "artist_name": "8 Bit Universe",
+        "song_title": "God's Plan (8 Bit Version)"
       },
       {
         "word": "BADGUY",
@@ -45768,12 +45768,12 @@
         "direction": "across",
         "color": "#00FFFF",
         "textClue": "Song title",
-        "audioUrl": 694038709,
-        "soundcloudUrl": "https://soundcloud.com/user-596109938/billie-eilish-bad-guy-8-bit-chiptune-coverremix",
+        "itunesId": "1477262611",
+        "audioUrl": "1477262611",
         "startAt": "0:00",
         "audioDuration": 15,
-        "artist_name": "Billie Eilish",
-        "song_title": "Bad Guy"
+        "artist_name": "8 Bit Universe",
+        "song_title": "Bad Guy (8 Bit Version)"
       },
       {
         "word": "SUGAR",
@@ -45782,26 +45782,26 @@
         "direction": "across",
         "color": "#FE9C9C",
         "textClue": "Song title",
-        "audioUrl": 1230339034,
-        "soundcloudUrl": "https://soundcloud.com/embrace-monke-979983685/sugar-maroon-5-in-8bit",
-        "startAt": "0:18",
+        "itunesId": "1520346916",
+        "audioUrl": "1520346916",
+        "startAt": "0:00",
         "audioDuration": 15,
-        "artist_name": "Maroon 5",
-        "song_title": "Sugar"
+        "artist_name": "8-Bit Arcade",
+        "song_title": "Sugar (8-Bit Computer Game Version)"
       },
       {
-        "word": "RIPTIDE",
-        "startX": 2,
+        "word": "ALLSTAR",
+        "startX": 1,
         "startY": 2,
         "direction": "down",
         "color": "#28D66A",
         "textClue": "Song title",
-        "audioUrl": 161724116,
-        "soundcloudUrl": "https://soundcloud.com/mcdak-1/vance-joy-riptide-8bit",
-        "startAt": "0:14",
+        "itunesId": "1387705398",
+        "audioUrl": "1387705398",
+        "startAt": "0:00",
         "audioDuration": 15,
-        "artist_name": "Vance Joy",
-        "song_title": "Riptide"
+        "artist_name": "8-Bit Misfits",
+        "song_title": "All Star"
       },
       {
         "word": "SHAPEOFYOU",
@@ -45810,12 +45810,12 @@
         "direction": "down",
         "color": "#FFCEFD",
         "textClue": "Song title",
-        "audioUrl": 346875939,
-        "soundcloudUrl": "https://soundcloud.com/user-707463898/shapeofyou-ed-sheeran-8-bit-by-me",
+        "itunesId": "1196796209",
+        "audioUrl": "1196796209",
         "startAt": "0:00",
         "audioDuration": 15,
-        "artist_name": "Ed Sheeran",
-        "song_title": "Shape of You"
+        "artist_name": "8 Bit Universe",
+        "song_title": "Shape of You (8 Bit Version)"
       },
       {
         "word": "ROYALS",
@@ -45824,12 +45824,12 @@
         "direction": "down",
         "color": "#FF5B5E",
         "textClue": "Song title",
-        "audioUrl": 119134762,
-        "soundcloudUrl": "https://soundcloud.com/thekiffness/lorde-royals-the-kiffness-8bit",
-        "startAt": "0:10",
+        "itunesId": "868000841",
+        "audioUrl": "868000841",
+        "startAt": "0:02",
         "audioDuration": 15,
-        "artist_name": "Lorde",
-        "song_title": "Royals"
+        "artist_name": "8-Bit Universe",
+        "song_title": "Royals (8-Bit Version)"
       },
       {
         "word": "YELLOW",
@@ -45838,12 +45838,12 @@
         "direction": "down",
         "color": "#568EFF",
         "textClue": "Song title",
-        "audioUrl": 151312775,
-        "soundcloudUrl": "https://soundcloud.com/cinnacinna/coldplay-yellow-feltsticksfavorites-8-bit",
-        "startAt": "0:10",
+        "itunesId": "1505928758",
+        "audioUrl": "1505928758",
+        "startAt": "0:00",
         "audioDuration": 15,
-        "artist_name": "Coldplay",
-        "song_title": "Yellow"
+        "artist_name": "8-Bit Arcade",
+        "song_title": "Yellow (8-Bit Computer Game Version)"
       },
       {
         "word": "DEMONS",
@@ -45852,11 +45852,11 @@
         "direction": "down",
         "color": "#FFB34B",
         "textClue": "Song title",
-        "audioUrl": 273809698,
-        "soundcloudUrl": "https://soundcloud.com/burryleak/imagine-dragons-demons-8bit-cover",
-        "startAt": "0:37",
+        "itunesId": "1291659016",
+        "audioUrl": "1291659016",
+        "startAt": "0:00",
         "audioDuration": 15,
-        "artist_name": "Imagine Dragons",
+        "artist_name": "8-Bit Misfits",
         "song_title": "Demons"
       }
     ]
