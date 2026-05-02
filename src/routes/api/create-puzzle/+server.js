@@ -34,6 +34,8 @@ export async function POST({ request, locals }) {
       if (!valid) {
         throw { status: 400, index, reasons };
       }
+      const itunesId = parseInt(word.itunesId, 10);
+      const hasItunesId = Number.isFinite(itunesId) && itunesId > 0;
       const validatedWord = {
         word: word.word,
         startX: word.col,
@@ -41,12 +43,12 @@ export async function POST({ request, locals }) {
         direction: word.direction.toLowerCase(),
         color: colorPalette[index % colorPalette.length],
         textClue: sanitizeClue(value),
-        audioUrl: Number.isInteger(word.itunesId) && word.itunesId > 0 ? String(word.itunesId) : word.trackId?.toString() || '',
+        audioUrl: hasItunesId ? String(itunesId) : word.trackId?.toString() || '',
         startAt: word.startAt || '0:00',
         audioDuration: word.audioDuration || 6,
         soundcloudUrl: word.soundcloudUrl || ''
       };
-      if (Number.isInteger(word.itunesId) && word.itunesId > 0) validatedWord.itunesId = word.itunesId;
+      if (hasItunesId) validatedWord.itunesId = itunesId;
       if (word.song_title) validatedWord.song_title = word.song_title;
       if (word.artist_name) validatedWord.artist_name = word.artist_name;
       validatedWords.push(validatedWord);
