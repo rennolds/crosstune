@@ -46181,8 +46181,8 @@
         "textClue": "Song title",
         "itunesId": "922876189",
         "audioUrl": "922876189",
-        "startAt": "0:04.2",
-        "audioDuration": 6,
+        "startAt": "",
+        "audioDuration": 8,
         "artist_name": "Calvin Harris",
         "song_title": "Summer"
       },
@@ -46193,12 +46193,12 @@
         "direction": "across",
         "color": "#00FFFF",
         "textClue": "Artist name",
-        "itunesId": "1469442499",
-        "audioUrl": "1469442499",
-        "startAt": "0:00",
-        "audioDuration": 6,
+        "itunesId": "1486925302",
+        "audioUrl": "1486925302",
+        "startAt": "0:15.5",
+        "audioDuration": 14,
         "artist_name": "BENEE",
-        "song_title": "Glitter"
+        "song_title": "Supalonely (feat. Gus Dapperton)"
       },
       {
         "word": "MARIACHI",
@@ -46206,11 +46206,11 @@
         "startY": 6,
         "direction": "across",
         "color": "#FE9C9C",
-        "textClue": "Regional Mexican music genre",
+        "textClue": "This is *what* genre of regional Mexican music?",
         "itunesId": "1522788452",
         "audioUrl": "1522788452",
         "startAt": "0:00",
-        "audioDuration": 6,
+        "audioDuration": 15,
         "artist_name": "Antonio Banderas & Los Lobos",
         "song_title": "Canción del Mariachi (Ilia Topuria \"El Matador\" Anthem)"
       },
@@ -46223,8 +46223,8 @@
         "textClue": "Song title",
         "itunesId": "118142371",
         "audioUrl": "118142371",
-        "startAt": "0:00",
-        "audioDuration": 6,
+        "startAt": "0:06.6",
+        "audioDuration": 10,
         "artist_name": "Ritchie Valens",
         "song_title": "La Bamba"
       },
@@ -46234,13 +46234,13 @@
         "startY": 3,
         "direction": "down",
         "color": "#FFCEFD",
-        "textClue": "First name of one half of this hip hop duo",
-        "itunesId": "255836745",
-        "audioUrl": "255836745",
-        "startAt": "0:00",
-        "audioDuration": 6,
-        "artist_name": "OutKast",
-        "song_title": "Ms. Jackson"
+        "textClue": "The first name of half of this group",
+        "itunesId": "1774796999",
+        "audioUrl": "1774796999",
+        "startAt": "0:11",
+        "audioDuration": 15,
+        "artist_name": "Outkast",
+        "song_title": "Hey Ya!"
       },
       {
         "word": "SELENA",
@@ -46248,11 +46248,11 @@
         "startY": 1,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "Artist first name",
+        "textClue": "Artist name",
         "itunesId": "714819477",
         "audioUrl": "714819477",
-        "startAt": "0:00",
-        "audioDuration": 6,
+        "startAt": "0:07",
+        "audioDuration": 13,
         "artist_name": "Selena",
         "song_title": "Como la Flor"
       },
@@ -46266,7 +46266,7 @@
         "itunesId": "320084033",
         "audioUrl": "320084033",
         "startAt": "0:00",
-        "audioDuration": 6,
+        "audioDuration": 11,
         "artist_name": "James Taylor",
         "song_title": "Mexico"
       },
@@ -46280,7 +46280,7 @@
         "itunesId": "1771719595",
         "audioUrl": "1771719595",
         "startAt": "0:00",
-        "audioDuration": 6,
+        "audioDuration": 10,
         "artist_name": "Childish Gambino",
         "song_title": "Redbone"
       }
