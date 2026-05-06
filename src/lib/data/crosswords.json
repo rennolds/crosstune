@@ -46422,5 +46422,128 @@
         "song_title": "TiK ToK"
       }
     ]
+  },
+    "2026-05-07": {
+    "version": "1.0.0",
+    "title": "❌💿🧩 5️⃣",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MASKOFF",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "👺📴",
+        "itunesId": "1253125872",
+        "audioUrl": "1253125872",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Future",
+        "song_title": "Mask Off"
+      },
+      {
+        "word": "ATTENTION",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "🚨🦺‼️",
+        "itunesId": "1293229677",
+        "audioUrl": "1293229677",
+        "startAt": "0:20.5",
+        "audioDuration": 9.5,
+        "artist_name": "Charlie Puth",
+        "song_title": "Attention"
+      },
+      {
+        "word": "DARKHORSE",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "🌃🐎",
+        "itunesId": "1440819170",
+        "audioUrl": "1440819170",
+        "startAt": "0:03",
+        "audioDuration": 10,
+        "artist_name": "Katy Perry",
+        "song_title": "Dark Horse (feat. Juicy J)"
+      },
+      {
+        "word": "POMPEII",
+        "startX": 4,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "🌋🏛️🏺",
+        "itunesId": "1440858321",
+        "audioUrl": "1440858321",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Bastille",
+        "song_title": "Pompeii"
+      },
+      {
+        "word": "EALGES",
+        "startX": 1,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "🦅🦅🦅",
+        "itunesId": "635770202",
+        "audioUrl": "635770202",
+        "startAt": "0:07",
+        "audioDuration": 10,
+        "artist_name": "Eagles",
+        "song_title": "Hotel California"
+      },
+      {
+        "word": "SNOOZE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "⏰🛌💤",
+        "itunesId": "1657869492",
+        "audioUrl": "1657869492",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "SZA",
+        "song_title": "Snooze"
+      },
+      {
+        "word": "SICKOMODE",
+        "startX": 8,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "🤢🅾️📳",
+        "itunesId": "1421242781",
+        "audioUrl": "1421242781",
+        "startAt": "0:12.5",
+        "audioDuration": 10,
+        "artist_name": "Travis Scott",
+        "song_title": "SICKO MODE"
+      },
+      {
+        "word": "STITCHES",
+        "startX": 11,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "🪡🧵🩹",
+        "itunesId": "1440843848",
+        "audioUrl": "1440843848",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Shawn Mendes",
+        "song_title": "Stitches"
+      }
+    ]
   }
 }
