@@ -294,6 +294,46 @@
   let isPlaying = $state(false);
   let _appleMusicRequestId = 0;
 
+  // Volume state — initialized from localStorage, persisted on change
+  const VOLUME_KEY = 'crosstune_volume';
+  let volume = $state(
+    typeof window !== 'undefined'
+      ? (() => {
+          const stored = localStorage.getItem(VOLUME_KEY);
+          if (stored !== null) {
+            const parsed = parseInt(stored, 10);
+            if (!isNaN(parsed)) return Math.min(100, Math.max(0, parsed));
+          }
+          return 80;
+        })()
+      : 80
+  );
+  let _prevVolume = $state(80);
+
+  $effect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(VOLUME_KEY, String(volume));
+    }
+  });
+
+  $effect(() => {
+    if (!currentAudio) return;
+    if (currentAudio instanceof Audio) {
+      currentAudio.volume = volume / 100;
+    } else if (typeof currentAudio.setVolume === 'function') {
+      currentAudio.setVolume(volume);
+    }
+  });
+
+  function toggleMute() {
+    if (volume > 0) {
+      _prevVolume = volume;
+      volume = 0;
+    } else {
+      volume = _prevVolume || 80;
+    }
+  }
+
   // Generate word numbers and organize clues
   let wordNumbers = $state(new Map());
   let currentNumber = 1;
@@ -1486,6 +1526,7 @@
 
         currentAudio?.pause();
         const audioEl = new Audio(previewUrl);
+        audioEl.volume = volume / 100;
         currentAudio = audioEl;
         const playSessionId = Date.now();
         audioEl._playSessionId = playSessionId;
@@ -1537,6 +1578,7 @@
       console.log("got widget");
 
       const audio = SC.Widget(iframe);
+      audio.setVolume(volume);
       currentAudio = audio;
 
       // Create a unique identifier for this play session
@@ -2352,6 +2394,39 @@
                 <rect x="10" y="7.24" width="2" height="9.52" />
               </svg>
             </button>
+
+            <!-- Volume Control -->
+            <div class="flex items-center gap-2 ml-2 pl-3 border-l border-gray-200">
+              <button
+                class="p-1 flex-shrink-0 hover:opacity-60 transition-opacity"
+                onclick={toggleMute}
+                aria-label={volume === 0 ? 'Unmute' : 'Mute'}
+              >
+                {#if volume === 0}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                  </svg>
+                {:else if volume < 50}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"/>
+                  </svg>
+                {:else}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                  </svg>
+                {/if}
+              </button>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                bind:value={volume}
+                class="volume-slider w-20 cursor-pointer"
+                style="--pct: {volume}%"
+                aria-label="Volume"
+              />
+            </div>
           </div>
         </div>
         {#if activeClue.itunesId}
@@ -2495,6 +2570,36 @@
   .cursor-text {
     cursor: text;
   }
+
+  /* Volume slider */
+  .volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: linear-gradient(to right, #000 var(--pct, 80%), #d1d5db var(--pct, 80%));
+    border-radius: 9999px;
+    outline: none;
+  }
+
+  .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+  }
+
+  .volume-slider::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+    border: none;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+  }
+
 
   :global(*) {
     -webkit-touch-callout: none;

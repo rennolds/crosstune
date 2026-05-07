@@ -1,9 +1,13 @@
 <script>
   import Navbar from "$lib/components/Navbar.svelte";
-  import { getUser } from "$lib/stores/auth.svelte.js";
+  import ConfirmationDialog from "$lib/components/ConfirmationDialog.svelte";
+  import { getUser, getLoading } from "$lib/stores/auth.svelte.js";
+  import { supabase } from "$lib/supabaseClient";
   import { onMount } from "svelte";
 
   let { data } = $props();
+
+  let editPuzzleId = $state(data.puzzleId || null);
 
   let gridData = $state(
     Array(10)
@@ -45,6 +49,93 @@
     creditUser: true,
     submitForReview: false,
   });
+  // Hub state (splash screen for returning creators)
+  let userPuzzles = $state([]);
+  let puzzlesLoading = $state(true);
+  let deleteTargetId = $state(null);
+  let deleting = $state(false);
+  let savedDraftTitle = $state(null); // non-null = there's an in-progress draft to resume
+
+  async function fetchUserPuzzles() {
+    const user = getUser();
+    if (!user) return;
+    puzzlesLoading = true;
+    try {
+      const { data: rows } = await supabase
+        .from('crosstune_puzzles')
+        .select('id, puzzle_json, created_at')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+      if (rows) {
+        userPuzzles = rows.map((row) => {
+          let title = '(Untitled)';
+          try {
+            const json = typeof row.puzzle_json === 'string' ? JSON.parse(row.puzzle_json) : row.puzzle_json;
+            title = json.title || '(Untitled)';
+          } catch {}
+          return { id: row.id, title, created_at: row.created_at, puzzle_json: row.puzzle_json };
+        });
+      }
+    } finally {
+      puzzlesLoading = false;
+    }
+  }
+
+  async function deletePuzzle() {
+    if (!deleteTargetId) return;
+    deleting = true;
+    try {
+      const res = await fetch(`/api/puzzles/${deleteTargetId}`, { method: 'DELETE' });
+      if (res.ok) {
+        userPuzzles = userPuzzles.filter((p) => p.id !== deleteTargetId);
+        deleteTargetId = null;
+      }
+    } finally {
+      deleting = false;
+    }
+  }
+
+  function handleEditPuzzle(puzzle) {
+    editPuzzleId = puzzle.id;
+    parseJsonAndPopulate(puzzle.puzzle_json);
+    showWordForms = false; // land on grid, not word forms
+  }
+
+  function handleBackToHub() {
+    showSplash = true;
+    showWordForms = false;
+    editPuzzleId = null;
+    // Recheck if there's still draft content to surface the banner correctly
+    const hasContent = detectedWords.length > 0 || gridData.some(r => r.some(c => c !== ''));
+    if (hasContent && !savedDraftTitle) {
+      savedDraftTitle = finalDetails.boardTitle || 'Untitled puzzle';
+    }
+    scrollToTop();
+  }
+
+  function continueDraft() {
+    savedDraftTitle = null;
+    showSplash = false;
+    showWordForms = false; // grid view
+    scrollToTop();
+  }
+
+  function dismissDraft() {
+    localStorage.removeItem(STORAGE_KEY);
+    savedDraftTitle = null;
+    editPuzzleId = null;
+    gridData = Array(10).fill().map(() => Array(12).fill(''));
+    detectedWords = [];
+    soundcloudValidation = {};
+    widgetTiming = {};
+    finalDetails = { boardTitle: '', creditUser: true, submitForReview: false };
+  }
+
+  function formatPuzzleDate(dateString) {
+    if (!dateString) return '';
+    return new Date(dateString).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
   let wordCountWarning = $state("");
   let showWarning = $state(false);
 
@@ -75,18 +166,29 @@
 
       // Check for admin mode via URL parameter or puzzle ID
       const urlParams = new URLSearchParams(window.location.search);
-      isAdminMode = urlParams.get("admin") === "true" || !!urlParams.get("id");
+      isAdminMode = urlParams.get("admin") === "true";
     }
   });
 
   const STORAGE_KEY = "crosstune_create_puzzle_state";
+
+  $effect(() => {
+    if (getLoading()) return; // auth not ready yet
+    const user = getUser();
+    if (user) {
+      fetchUserPuzzles();
+    } else {
+      puzzlesLoading = false;
+    }
+  });
 
   onMount(() => {
     // If puzzle data was loaded from DB via ?id= param, auto-populate
     if (data?.puzzleData) {
       const puzzleJson = JSON.stringify(data.puzzleData);
       parseJsonAndPopulate(puzzleJson);
-      return; // Skip localStorage restore
+      showWordForms = false; // land on grid
+      return;
     }
 
     const savedState = localStorage.getItem(STORAGE_KEY);
@@ -95,8 +197,7 @@
         const parsed = JSON.parse(savedState);
         gridData = parsed.gridData || gridData;
         detectedWords = parsed.detectedWords || detectedWords;
-        soundcloudValidation =
-          parsed.soundcloudValidation || soundcloudValidation;
+        soundcloudValidation = parsed.soundcloudValidation || soundcloudValidation;
         widgetTiming = parsed.widgetTiming || widgetTiming;
         if (parsed.finalDetails) {
           finalDetails = {
@@ -105,11 +206,16 @@
             submitForReview: parsed.finalDetails.submitForReview ?? false,
           };
         }
-        showSplash = parsed.showSplash ?? showSplash;
-        showWordForms = parsed.showWordForms ?? showWordForms;
-
-        // Ensure valid view state
-        if (showWordForms) showSplash = false;
+        // Restore edit context
+        if (parsed.editPuzzleId) {
+          editPuzzleId = parsed.editPuzzleId;
+        }
+        // Never auto-navigate away from splash — detect draft and let user choose
+        const hasContent = parsed.detectedWords?.length > 0 ||
+          parsed.gridData?.some(r => r.some(c => c !== ''));
+        if (hasContent) {
+          savedDraftTitle = parsed.finalDetails?.boardTitle || 'Untitled puzzle';
+        }
       } catch (e) {
         console.error("Failed to load puzzle state", e);
       }
@@ -127,8 +233,7 @@
         soundcloudValidation,
         widgetTiming,
         finalDetails,
-        showSplash,
-        showWordForms,
+        editPuzzleId,
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
     }
@@ -594,7 +699,7 @@
         } else {
           validation[`word-${idx}`] = {
             status: "legacy",
-            message: "Legacy track — search Apple Music to replace",
+            message: "Crosstune no longer uses SoundCloud. Search Apple Music to replace this track.",
             itunesId: null,
           };
         }
@@ -818,6 +923,14 @@
     {#if !showSplash && !showWordForms && !showSuccessScreen}
       <!-- Instructions for Grid Page -->
       <div class="text-center mb-6">
+        {#if userPuzzles.length > 0 || editPuzzleId}
+          <button
+            onclick={handleBackToHub}
+            class="text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors mb-3 block mx-auto"
+          >
+            ← Back to your puzzles
+          </button>
+        {/if}
         <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
           press ENTER to toggle direction while typing.
         </p>
@@ -914,8 +1027,8 @@
           </div>
         {/if}
 
-        <!-- Desktop button - shown at bottom -->
-        <div class="text-center mt-6 hidden md:block pb-24">
+        <!-- Desktop button -->
+        <div class="text-center mt-6 hidden md:block pb-8">
           <button
             class="rounded-xs px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-gray-900 dark:hover:bg-gray-300 transition-colors"
             onclick={handleStartCreating}
@@ -923,6 +1036,84 @@
             Start Creating
           </button>
         </div>
+
+        <!-- Continue editing card -->
+        {#if savedDraftTitle}
+          <div class="px-6 pb-6">
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-700 shadow-sm">
+              <!-- Mini grid preview -->
+              <button onclick={continueDraft} class="flex-shrink-0" aria-label="Continue editing">
+                <div class="grid gap-px p-1 rounded bg-gray-100 dark:bg-gray-800" style="grid-template-columns: repeat(12, 5px);">
+                  {#each gridData as row}
+                    {#each row as cell}
+                      <div style="width:5px;height:5px;border-radius:1px;background:{cell ? 'currentColor' : 'transparent'};outline:1px solid #d1d5db;" class="text-black dark:text-white"></div>
+                    {/each}
+                  {/each}
+                </div>
+              </button>
+              <!-- Label -->
+              <button onclick={continueDraft} class="flex-1 text-left min-w-0 group">
+                <span class="text-xs text-gray-500 dark:text-gray-400 block mb-0.5">Continue editing</span>
+                <span class="font-medium text-black dark:text-white group-hover:text-orange-500 transition-colors">
+                  {finalDetails.boardTitle || 'Untitled puzzle'}
+                </span>
+                {#if detectedWords.length > 0}
+                  <span class="text-xs text-gray-400 dark:text-gray-500 block mt-0.5">{detectedWords.length} word{detectedWords.length !== 1 ? 's' : ''}</span>
+                {/if}
+              </button>
+              <!-- Dismiss -->
+              <button
+                onclick={dismissDraft}
+                class="flex-shrink-0 p-1.5 rounded-lg text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Dismiss draft"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        {/if}
+
+        <!-- Your Puzzles: only shown for authenticated users who have puzzles -->
+        {#if !puzzlesLoading && userPuzzles.length > 0}
+          <div class="px-6 pb-16">
+            <h3 class="text-lg font-bold mb-3 text-black dark:text-white">Your Puzzles</h3>
+            <div class="space-y-2">
+              {#each userPuzzles as puzzle}
+                <div class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800 shadow-sm">
+                  <a href="/puzzles/{puzzle.id}" class="flex-1 min-w-0 mr-3 group">
+                    <span class="font-medium text-black dark:text-white group-hover:text-orange-500 transition-colors block truncate">
+                      {puzzle.title}
+                    </span>
+                    <span class="text-sm text-gray-400 dark:text-gray-500">{formatPuzzleDate(puzzle.created_at)}</span>
+                  </a>
+                  <div class="flex items-center gap-1 flex-shrink-0">
+                    <button
+                      onclick={() => handleEditPuzzle(puzzle)}
+                      class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                      aria-label="Edit puzzle"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                      </svg>
+                    </button>
+                    <button
+                      onclick={() => (deleteTargetId = puzzle.id)}
+                      class="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-gray-400 hover:text-red-500 transition-colors"
+                      aria-label="Delete puzzle"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              {/each}
+            </div>
+          </div>
+        {/if}
+
       </div>
     {:else if !showWordForms && !showSuccessScreen}
       <!-- Grid Creation Step -->
@@ -1192,7 +1383,7 @@
                       class="flex items-center justify-between p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-700 rounded-lg mb-2"
                     >
                       <p class="text-xs text-amber-700 dark:text-amber-300">
-                        Legacy SoundCloud track — search Apple Music to replace it
+                        Crosstune no longer uses SoundCloud. Search Apple Music to replace this track.
                       </p>
                     </div>
                     <div class="relative">
@@ -1478,6 +1669,14 @@
         <div
           class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 mt-12 pt-8 pb-24 border-t border-gray-200 dark:border-gray-700"
         >
+          {#if userPuzzles.length > 0 || editPuzzleId}
+            <button
+              class="w-full sm:w-auto px-4 py-3 text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors font-medium"
+              onclick={handleBackToHub}
+            >
+              ← Back to your puzzles
+            </button>
+          {/if}
           <button
             class="w-full sm:w-auto px-8 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-[#404040] text-gray-700 dark:text-gray-300 font-semibold transition-all duration-200 hover:border-gray-400 dark:hover:border-gray-500"
             onclick={() => {
@@ -1535,8 +1734,13 @@
                   };
                 });
 
-                const response = await fetch("/api/create-puzzle", {
-                  method: "POST",
+                const apiUrl = editPuzzleId
+                  ? `/api/puzzles/${editPuzzleId}`
+                  : '/api/create-puzzle';
+                const apiMethod = editPuzzleId ? 'PATCH' : 'POST';
+
+                const response = await fetch(apiUrl, {
+                  method: apiMethod,
                   headers: {
                     "Content-Type": "application/json",
                   },
@@ -1555,23 +1759,25 @@
                   localStorage.removeItem(STORAGE_KEY);
                   scrollToTop();
                 } else {
-                  wordCountWarning =
-                    "Failed to create puzzle. Please try again.";
+                  wordCountWarning = editPuzzleId
+                    ? "Failed to save changes. Please try again."
+                    : "Failed to create puzzle. Please try again.";
                   showWarning = true;
                   button.disabled = false;
-                  button.textContent = "Create & Get Share Link";
+                  button.textContent = editPuzzleId ? "Save Changes" : "Create & Get Share Link";
                 }
               } catch (error) {
                 console.error("Create error:", error);
-                wordCountWarning =
-                  "Error creating puzzle. Please check your connection and try again.";
+                wordCountWarning = editPuzzleId
+                  ? "Error saving changes. Please check your connection and try again."
+                  : "Error creating puzzle. Please check your connection and try again.";
                 showWarning = true;
                 button.disabled = false;
-                button.textContent = "Create & Get Share Link";
+                button.textContent = editPuzzleId ? "Save Changes" : "Create & Get Share Link";
               }
             }}
           >
-            {getUser() ? "Create & Get Share Link" : "Login to Create"}
+            {editPuzzleId ? "Save Changes" : (getUser() ? "Create & Get Share Link" : "Login to Create")}
           </button>
         </div>
       </div>
@@ -1579,7 +1785,7 @@
       <!-- Post-Creation Share & Submit Screen -->
       <div class="max-w-3xl mx-auto">
         <div class="p-8 pb-6">
-          <h2 class="text-2xl font-bold mb-4">Voilà, here is your creation.</h2>
+          <h2 class="text-2xl font-bold mb-4">{editPuzzleId ? 'Your puzzle has been updated.' : 'Voilà, here is your creation.'}</h2>
           <div class="max-w-2xl mx-auto">
 
             <div
@@ -1664,6 +1870,16 @@
     {/if}
   </div>
 </main>
+
+<ConfirmationDialog
+  isOpen={deleteTargetId !== null}
+  title="Delete puzzle?"
+  message="This will permanently delete the puzzle. Anyone with the share link will no longer be able to play it."
+  confirmText={deleting ? "Deleting…" : "Delete"}
+  cancelText="Cancel"
+  onConfirm={deletePuzzle}
+  onCancel={() => (deleteTargetId = null)}
+/>
 
 <!-- Word Count Warning -->
 {#if showWarning}

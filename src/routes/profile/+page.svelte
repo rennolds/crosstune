@@ -4,6 +4,7 @@
   import { getUser } from "$lib/stores/auth.svelte.js";
   import { goto } from "$app/navigation";
   import Navbar from "$lib/components/Navbar.svelte";
+  import ConfirmationDialog from "$lib/components/ConfirmationDialog.svelte";
 
   let user = $derived(getUser());
   let puzzles = $state([]);
@@ -165,6 +166,34 @@
       console.error("Error fetching puzzles:", e);
     } finally {
       loading = false;
+    }
+  }
+
+  let deleteTargetId = $state(null);
+  let deleteError = $state("");
+  let deleting = $state(false);
+
+  function startDelete(id) {
+    deleteTargetId = id;
+    deleteError = "";
+  }
+
+  async function confirmDelete() {
+    if (!deleteTargetId) return;
+    deleting = true;
+    deleteError = "";
+    try {
+      const res = await fetch(`/api/puzzles/${deleteTargetId}`, { method: 'DELETE' });
+      if (res.ok) {
+        puzzles = puzzles.filter((p) => p.id !== deleteTargetId);
+        deleteTargetId = null;
+      } else {
+        deleteError = "Failed to delete puzzle. Please try again.";
+      }
+    } catch {
+      deleteError = "Something went wrong. Please try again.";
+    } finally {
+      deleting = false;
     }
   }
 
@@ -375,37 +404,53 @@
         {:else}
           <div class="space-y-3">
             {#each puzzles as puzzle}
-              <a
-                href={`/puzzles/${puzzle.id}`}
-                class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800 hover:border-orange-500 dark:hover:border-orange-500 transition-all group shadow-sm"
+              <div
+                class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-black border border-gray-100 dark:border-gray-800 transition-all shadow-sm"
               >
-                <span
-                  class="font-medium text-black dark:text-white group-hover:text-orange-500 transition-colors"
+                <a
+                  href={`/puzzles/${puzzle.id}`}
+                  class="flex-1 min-w-0 mr-3 group"
                 >
-                  {puzzle.title}
-                </span>
-                <div class="flex items-center space-x-3">
+                  <span
+                    class="font-medium text-black dark:text-white group-hover:text-orange-500 transition-colors block truncate"
+                  >
+                    {puzzle.title}
+                  </span>
                   <span class="text-sm text-gray-400 dark:text-gray-500">
                     {formatDate(puzzle.created_at)}
                   </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 text-gray-400 group-hover:text-orange-500 transition-colors"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
+                </a>
+                <div class="flex items-center gap-1 flex-shrink-0">
+                  <a
+                    href={`/create?id=${puzzle.id}`}
+                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+                    title="Edit puzzle"
+                    aria-label="Edit puzzle"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                    </svg>
+                  </a>
+                  <button
+                    onclick={() => startDelete(puzzle.id)}
+                    class="p-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-gray-400 hover:text-red-500 transition-colors"
+                    title="Delete puzzle"
+                    aria-label="Delete puzzle"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
                 </div>
-              </a>
+              </div>
             {/each}
           </div>
         {/if}
       </div>
+
+      {#if deleteError}
+        <p class="mt-3 text-sm text-red-500">{deleteError}</p>
+      {/if}
 
       <div
         class="mt-8 pt-6 border-t border-gray-300 dark:border-gray-700 flex justify-center"
@@ -433,6 +478,16 @@
       </div>
   </div>
 </main>
+
+<ConfirmationDialog
+  isOpen={deleteTargetId !== null}
+  title="Delete puzzle?"
+  message="This will permanently delete the puzzle. Anyone with the share link will no longer be able to play it."
+  confirmText={deleting ? "Deleting…" : "Delete"}
+  cancelText="Cancel"
+  onConfirm={confirmDelete}
+  onCancel={() => { deleteTargetId = null; deleteError = ""; }}
+/>
 
 <style>
   /* Mobile-specific styles to match other pages */
