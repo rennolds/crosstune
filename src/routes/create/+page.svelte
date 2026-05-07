@@ -54,11 +54,14 @@
   let puzzlesLoading = $state(true);
   let deleteTargetId = $state(null);
   let deleting = $state(false);
-  let savedDraftTitle = $state(null); // non-null = there's an in-progress draft to resume
+  let deleteError = $state('');
+  let hasSavedDraft = $state(false);
+  let puzzlesFetched = $state(false); // guard against spurious re-fetches on token refresh
 
   async function fetchUserPuzzles() {
     const user = getUser();
-    if (!user) return;
+    if (!user || puzzlesFetched) return;
+    puzzlesFetched = true;
     puzzlesLoading = true;
     try {
       const { data: rows } = await supabase
@@ -84,18 +87,26 @@
   async function deletePuzzle() {
     if (!deleteTargetId) return;
     deleting = true;
+    deleteError = '';
     try {
       const res = await fetch(`/api/puzzles/${deleteTargetId}`, { method: 'DELETE' });
       if (res.ok) {
         userPuzzles = userPuzzles.filter((p) => p.id !== deleteTargetId);
         deleteTargetId = null;
+      } else {
+        deleteError = 'Failed to delete puzzle. Please try again.';
       }
+    } catch {
+      deleteError = 'Something went wrong. Please try again.';
     } finally {
       deleting = false;
     }
   }
 
   function handleEditPuzzle(puzzle) {
+    // Clear any unrelated new-puzzle draft before loading the edit session
+    localStorage.removeItem(STORAGE_KEY);
+    hasSavedDraft = false;
     editPuzzleId = puzzle.id;
     parseJsonAndPopulate(puzzle.puzzle_json);
     showWordForms = false; // land on grid, not word forms
@@ -104,17 +115,14 @@
   function handleBackToHub() {
     showSplash = true;
     showWordForms = false;
-    editPuzzleId = null;
-    // Recheck if there's still draft content to surface the banner correctly
+    // Keep editPuzzleId — preserves "Save Changes" if they go back then resume
     const hasContent = detectedWords.length > 0 || gridData.some(r => r.some(c => c !== ''));
-    if (hasContent && !savedDraftTitle) {
-      savedDraftTitle = finalDetails.boardTitle || 'Untitled puzzle';
-    }
+    if (hasContent && !hasSavedDraft) hasSavedDraft = true;
     scrollToTop();
   }
 
   function continueDraft() {
-    savedDraftTitle = null;
+    hasSavedDraft = false;
     showSplash = false;
     showWordForms = false; // grid view
     scrollToTop();
@@ -122,7 +130,7 @@
 
   function dismissDraft() {
     localStorage.removeItem(STORAGE_KEY);
-    savedDraftTitle = null;
+    hasSavedDraft = false;
     editPuzzleId = null;
     gridData = Array(10).fill().map(() => Array(12).fill(''));
     detectedWords = [];
@@ -213,9 +221,7 @@
         // Never auto-navigate away from splash — detect draft and let user choose
         const hasContent = parsed.detectedWords?.length > 0 ||
           parsed.gridData?.some(r => r.some(c => c !== ''));
-        if (hasContent) {
-          savedDraftTitle = parsed.finalDetails?.boardTitle || 'Untitled puzzle';
-        }
+        if (hasContent) hasSavedDraft = true;
       } catch (e) {
         console.error("Failed to load puzzle state", e);
       }
@@ -1038,7 +1044,7 @@
         </div>
 
         <!-- Continue editing card -->
-        {#if savedDraftTitle}
+        {#if hasSavedDraft}
           <div class="px-6 pb-6">
             <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-700 shadow-sm">
               <!-- Mini grid preview -->
@@ -1874,11 +1880,11 @@
 <ConfirmationDialog
   isOpen={deleteTargetId !== null}
   title="Delete puzzle?"
-  message="This will permanently delete the puzzle. Anyone with the share link will no longer be able to play it."
+  message={deleteError || "This will permanently delete the puzzle. Anyone with the share link will no longer be able to play it."}
   confirmText={deleting ? "Deleting…" : "Delete"}
   cancelText="Cancel"
   onConfirm={deletePuzzle}
-  onCancel={() => (deleteTargetId = null)}
+  onCancel={() => { deleteTargetId = null; deleteError = ''; }}
 />
 
 <!-- Word Count Warning -->

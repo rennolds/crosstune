@@ -1449,6 +1449,13 @@
   }
 
   let isPlayingActiveClue = $derived(isPlaying && isSameClue(playingClue, activeClue));
+  let clueTextSize = $derived.by(() => {
+    const len = activeClue?.textClue?.length ?? 0;
+    if (len > 95) return 'text-xs';
+    if (len > 70) return 'text-sm';
+    if (len > 45) return 'text-lg';
+    return 'text-xl';
+  });
 
   async function playClue(clue) {
     const widgetId = `${clue.startX}:${clue.startY}:${clue.direction}`;
@@ -2237,13 +2244,13 @@
     {#if !isMobileDevice && activeClue}
       <div class="hidden md:block w-full mx-auto mt-4 mb-24">
         <div
-          class="flex items-center justify-between h-13 rounded-md shadow-lg"
+          class="flex items-center justify-between h-13 overflow-hidden rounded-md shadow-lg"
           style="background-color: {isDark ? '#f3f3f3' || 'white' : 'white'}"
         >
           <!-- Left Section with clue info -->
-          <div class="flex items-center flex-1 pl-4">
+          <div class="flex items-center flex-1 pl-4 min-w-0 h-full overflow-hidden">
             <div
-              class="flex items-center justify-center rounded px-3 py-1"
+              class="flex items-center justify-center rounded px-3 py-1 flex-shrink-0"
               style="background-color: {activeClue.color};"
             >
               <span class="text-xl font-semibold">
@@ -2252,14 +2259,16 @@
                   .toUpperCase()}
               </span>
             </div>
-            <span class="text-xl text-black ml-3">{activeClue.textClue}</span>
+            <span class="{clueTextSize} text-black ml-3 leading-tight">{activeClue.textClue}</span>
           </div>
 
           <!-- Right Section with controls -->
-          <div class="flex items-center gap-4 pr-4">
+          <div class="flex items-center pr-4 flex-shrink-0">
+            <!-- Transport controls - tighter grouping -->
+            <div class="flex items-center gap-4 mr-0">
             <!-- Skip Previous Button -->
             <button
-              class="p-2"
+              class="p-1"
               onclick={() => {
                 if (isPlaying) stopAudio();
                 const prevClue = findNextWord(activeClue);
@@ -2369,7 +2378,7 @@
 
             <!-- Skip Next Button -->
             <button
-              class="p-2"
+              class="pl-1 py-1"
               onclick={() => {
                 if (isPlaying) stopAudio();
                 const nextClue = findNextWord(activeClue);
@@ -2395,8 +2404,10 @@
               </svg>
             </button>
 
-            <!-- Volume Control -->
-            <div class="flex items-center gap-2 ml-2 pl-3 border-l border-gray-200">
+            </div><!-- end transport group -->
+
+            <!-- Volume Control — pl-3 matches mr-3 above for symmetric | spacing -->
+            <div class="flex items-center gap-2 pl-3 border-l border-gray-200">
               <button
                 class="p-1 flex-shrink-0 hover:opacity-60 transition-opacity"
                 onclick={toggleMute}

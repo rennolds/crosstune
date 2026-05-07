@@ -72,10 +72,14 @@ export async function PATCH({ request, params, locals }) {
       words: validatedWords
     };
 
+    const creditUser = submissionData.details?.creditUser !== false;
+    const creditName = creditUser ? (check.user?.user_metadata?.username || 'anon') : 'anon';
+
     const { data: updated, error: updateError } = await locals.supabase
       .from('crosstune_puzzles')
-      .update({ puzzle_json: JSON.stringify(crosswordData) })
+      .update({ puzzle_json: JSON.stringify(crosswordData), credit_name: creditName })
       .eq('id', params.id)
+      .eq('user_id', check.user.id)
       .select('id');
 
     if (updateError) throw updateError;
@@ -105,6 +109,7 @@ export async function DELETE({ params, locals }) {
     .from('crosstune_puzzles')
     .delete()
     .eq('id', params.id)
+    .eq('user_id', check.user.id)
     .select('id');
 
   if (deleteError) {
