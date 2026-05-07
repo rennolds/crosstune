@@ -16,6 +16,8 @@
   );
   let selectedCell = $state({ row: -1, col: -1 });
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
+  let prefillMode = $state(false);
+  let prefilledCells = $state(new Set()); // keys: "row,col"
   let showSplash = $state(true);
   let showWordForms = $state(false);
   let showSuccessScreen = $state(false);
@@ -134,6 +136,8 @@
     editPuzzleId = null;
     gridData = Array(10).fill().map(() => Array(12).fill(''));
     detectedWords = [];
+    prefilledCells = new Set();
+    prefillMode = false;
     soundcloudValidation = {};
     widgetTiming = {};
     finalDetails = { boardTitle: '', creditUser: true, submitForReview: false };
@@ -218,6 +222,9 @@
         if (parsed.editPuzzleId) {
           editPuzzleId = parsed.editPuzzleId;
         }
+        if (Array.isArray(parsed.prefilledCells)) {
+          prefilledCells = new Set(parsed.prefilledCells);
+        }
         // Never auto-navigate away from splash — detect draft and let user choose
         const hasContent = parsed.detectedWords?.length > 0 ||
           parsed.gridData?.some(r => r.some(c => c !== ''));
@@ -240,6 +247,7 @@
         widgetTiming,
         finalDetails,
         editPuzzleId,
+        prefilledCells: [...prefilledCells],
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
     }
@@ -283,6 +291,17 @@
 
   function toggleDirection() {
     direction = direction === "ACROSS" ? "DOWN" : "ACROSS";
+  }
+
+  function togglePrefilledCell(row, col) {
+    const key = `${row},${col}`;
+    const isMarked = prefilledCells.has(key);
+    // Don't allow marking empty cells (but allow unmarking if cleared after marking)
+    if (!isMarked && !gridData[row][col]) return;
+    const next = new Set(prefilledCells);
+    if (isMarked) next.delete(key);
+    else next.add(key);
+    prefilledCells = next;
   }
 
   function detectWords() {
@@ -724,6 +743,22 @@
       soundcloudValidation = validation;
       widgetTiming = timing;
 
+      // Restore starting_characters → prefilledCells
+      const cells = new Set();
+      if (Array.isArray(parsed.starting_characters)) {
+        parsed.starting_characters.forEach((entry) => {
+          const { characters, startX, startY, direction: dir } = entry;
+          [...(characters || "")].forEach((_char, i) => {
+            const row = dir === "across" ? startY : startY + i;
+            const col = dir === "across" ? startX + i : startX;
+            if (row >= 0 && row < 10 && col >= 0 && col < 12) {
+              cells.add(`${row},${col}`);
+            }
+          });
+        });
+      }
+      prefilledCells = cells;
+
       console.log("detectedWords after JSON parse:", detectedWords);
 
       // Populate board title if present
@@ -891,6 +926,15 @@
         return wordData;
       });
 
+      const startingCharactersJson = [...prefilledCells]
+        .map((key) => {
+          const [row, col] = key.split(",").map(Number);
+          const char = gridData[row]?.[col] || "";
+          if (!char) return null;
+          return { characters: char, startX: col, startY: row, direction: "across" };
+        })
+        .filter(Boolean);
+
       const puzzleJSON = {
         version: "1.0.0",
         title: finalDetails.boardTitle || "Untitled Puzzle",
@@ -900,6 +944,7 @@
           height: 10,
         },
         words: wordsWithTrackIds,
+        ...(startingCharactersJson.length ? { starting_characters: startingCharactersJson } : {}),
       };
 
       // Convert to pretty JSON
@@ -1136,12 +1181,22 @@
                   autocomplete="off"
                   autocapitalize="off"
                   spellcheck="false"
-                  class:bg-blue-100={selectedCell.row === rowIndex &&
+                  class:bg-blue-100={!prefillMode && selectedCell.row === rowIndex &&
                     selectedCell.col === colIndex}
+                  class:cursor-pointer={prefillMode}
                   value={cell}
                   data-row={rowIndex}
                   data-col={colIndex}
-                  onclick={() => handleCellClick(rowIndex, colIndex)}
+                  readonly={prefillMode}
+                  onmousedown={(event) => {
+                    if (prefillMode) {
+                      event.preventDefault();
+                      togglePrefilledCell(rowIndex, colIndex);
+                    }
+                  }}
+                  onclick={() => {
+                    if (!prefillMode) handleCellClick(rowIndex, colIndex);
+                  }}
                   onfocus={(event) =>
                     handleCellFocus(event, rowIndex, colIndex)}
                   oninput={(event) =>
@@ -1150,15 +1205,18 @@
                     handleKeyDown(event, rowIndex, colIndex)}
                   maxlength="1"
                 />
+                {#if prefilledCells.has(`${rowIndex},${colIndex}`)}
+                  <div class="absolute inset-0 bg-gray-300 dark:bg-gray-600 opacity-40 pointer-events-none"></div>
+                {/if}
               </div>
             {/each}
           {/each}
         </div>
       </div>
 
-      <!-- Direction Toggle below grid -->
+      <!-- Direction Toggle + Starting Characters toggle below grid -->
       <div class="text-center mt-4 mb-4">
-        <div class="flex items-center justify-center space-x-4">
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
           <div class="flex items-center space-x-3">
             <span class="text-sm font-medium text-black dark:text-white"
               >across</span
@@ -1184,7 +1242,26 @@
               >down</span
             >
           </div>
+          <button
+            type="button"
+            class="text-sm font-medium px-4 py-1.5 rounded-full border transition-colors"
+            class:bg-orange-400={prefillMode}
+            class:text-white={prefillMode}
+            class:border-orange-400={prefillMode}
+            class:text-black={!prefillMode}
+            class:dark:text-white={!prefillMode}
+            class:border-gray-300={!prefillMode}
+            class:dark:border-gray-600={!prefillMode}
+            onclick={() => (prefillMode = !prefillMode)}
+          >
+            {prefillMode ? "Done marking" : "Mark starting characters"}
+          </button>
         </div>
+        {#if prefillMode}
+          <p class="text-xs text-gray-600 dark:text-gray-400 mt-3">
+            Click cells to mark them as a starting character. Players will start with them revealed.
+          </p>
+        {/if}
       </div>
 
       <div class="mt-4 pb-24">
@@ -1200,6 +1277,8 @@
               showSplash = true;
               showWordForms = false;
               detectedWords = [];
+              prefilledCells = new Set();
+              prefillMode = false;
               jsonInput = ""; // Clear admin JSON input
               jsonError = ""; // Clear admin JSON error
               finalDetails = {
@@ -1745,6 +1824,15 @@
                   : '/api/create-puzzle';
                 const apiMethod = editPuzzleId ? 'PATCH' : 'POST';
 
+                const startingCharacters = [...prefilledCells]
+                  .map((key) => {
+                    const [row, col] = key.split(",").map(Number);
+                    const char = gridData[row]?.[col] || "";
+                    if (!char) return null;
+                    return { characters: char, startX: col, startY: row, direction: "across" };
+                  })
+                  .filter(Boolean);
+
                 const response = await fetch(apiUrl, {
                   method: apiMethod,
                   headers: {
@@ -1754,6 +1842,7 @@
                     grid: gridData,
                     words: wordsWithTrackIds,
                     details: finalDetails,
+                    starting_characters: startingCharacters,
                   }),
                 });
 

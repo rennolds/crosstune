@@ -54,6 +54,22 @@ export async function POST({ request, locals }) {
       validatedWords.push(validatedWord);
     }
 
+    const startingCharacters = Array.isArray(submissionData.starting_characters)
+      ? submissionData.starting_characters
+          .map((entry) => {
+            if (!entry || typeof entry !== 'object') return null;
+            const characters = typeof entry.characters === 'string' ? entry.characters : '';
+            const startX = Number(entry.startX);
+            const startY = Number(entry.startY);
+            const dir = entry.direction === 'down' ? 'down' : 'across';
+            if (!characters) return null;
+            if (!Number.isInteger(startX) || startX < 0 || startX >= 12) return null;
+            if (!Number.isInteger(startY) || startY < 0 || startY >= 10) return null;
+            return { characters, startX, startY, direction: dir };
+          })
+          .filter(Boolean)
+      : [];
+
     const crosswordData = {
       title: sanitizeTitle(submissionData.details?.boardTitle || ""),
       version: "1.0.0",
@@ -62,7 +78,8 @@ export async function POST({ request, locals }) {
         height: 10,
       },
       theme: "black",
-      words: validatedWords
+      words: validatedWords,
+      ...(startingCharacters.length ? { starting_characters: startingCharacters } : {}),
     };
 
     const generateId = () =>
