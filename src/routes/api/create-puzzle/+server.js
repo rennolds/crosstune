@@ -70,6 +70,11 @@ export async function POST({ request, locals }) {
           .filter(Boolean)
       : [];
 
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+    const linkedPuzzles = Array.isArray(submissionData.linked_puzzles)
+      ? [...new Set(submissionData.linked_puzzles.filter((d) => typeof d === 'string' && dateRegex.test(d)))]
+      : [];
+
     const crosswordData = {
       title: sanitizeTitle(submissionData.details?.boardTitle || ""),
       version: "1.0.0",
@@ -80,6 +85,7 @@ export async function POST({ request, locals }) {
       theme: "black",
       words: validatedWords,
       ...(startingCharacters.length ? { starting_characters: startingCharacters } : {}),
+      ...(linkedPuzzles.length ? { linked_puzzles: linkedPuzzles } : {}),
     };
 
     const generateId = () =>

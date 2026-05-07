@@ -3,6 +3,7 @@
   import ConfirmationDialog from "$lib/components/ConfirmationDialog.svelte";
   import { getUser, getLoading } from "$lib/stores/auth.svelte.js";
   import { supabase } from "$lib/supabaseClient";
+  import crosswords from "$lib/data/crosswords.json";
   import { onMount } from "svelte";
 
   let { data } = $props();
@@ -18,6 +19,8 @@
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
   let prefillMode = $state(false);
   let prefilledCells = $state(new Set()); // keys: "row,col"
+  let linkedPuzzles = $state([]); // admin-only: array of "YYYY-MM-DD" date strings
+  let linkedPuzzleInput = $state("");
   let showSplash = $state(true);
   let showWordForms = $state(false);
   let showSuccessScreen = $state(false);
@@ -138,6 +141,8 @@
     detectedWords = [];
     prefilledCells = new Set();
     prefillMode = false;
+    linkedPuzzles = [];
+    linkedPuzzleInput = "";
     soundcloudValidation = {};
     widgetTiming = {};
     finalDetails = { boardTitle: '', creditUser: true, submitForReview: false };
@@ -225,6 +230,9 @@
         if (Array.isArray(parsed.prefilledCells)) {
           prefilledCells = new Set(parsed.prefilledCells);
         }
+        if (Array.isArray(parsed.linkedPuzzles)) {
+          linkedPuzzles = parsed.linkedPuzzles.filter((d) => DATE_REGEX.test(d));
+        }
         // Never auto-navigate away from splash — detect draft and let user choose
         const hasContent = parsed.detectedWords?.length > 0 ||
           parsed.gridData?.some(r => r.some(c => c !== ''));
@@ -248,6 +256,7 @@
         finalDetails,
         editPuzzleId,
         prefilledCells: [...prefilledCells],
+        linkedPuzzles,
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
     }
@@ -302,6 +311,27 @@
     if (isMarked) next.delete(key);
     else next.add(key);
     prefilledCells = next;
+  }
+
+  const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
+
+  function lookupArchiveTitle(date) {
+    return crosswords?.[date]?.title || null;
+  }
+
+  function addLinkedPuzzle() {
+    const date = linkedPuzzleInput.trim();
+    if (!DATE_REGEX.test(date)) return;
+    if (linkedPuzzles.includes(date)) {
+      linkedPuzzleInput = "";
+      return;
+    }
+    linkedPuzzles = [...linkedPuzzles, date];
+    linkedPuzzleInput = "";
+  }
+
+  function removeLinkedPuzzle(date) {
+    linkedPuzzles = linkedPuzzles.filter((d) => d !== date);
   }
 
   function detectWords() {
@@ -759,6 +789,11 @@
       }
       prefilledCells = cells;
 
+      // Restore linked_puzzles
+      linkedPuzzles = Array.isArray(parsed.linked_puzzles)
+        ? parsed.linked_puzzles.filter((d) => DATE_REGEX.test(d))
+        : [];
+
       console.log("detectedWords after JSON parse:", detectedWords);
 
       // Populate board title if present
@@ -945,6 +980,7 @@
         },
         words: wordsWithTrackIds,
         ...(startingCharactersJson.length ? { starting_characters: startingCharactersJson } : {}),
+        ...(linkedPuzzles.length ? { linked_puzzles: [...linkedPuzzles] } : {}),
       };
 
       // Convert to pretty JSON
@@ -1279,6 +1315,8 @@
               detectedWords = [];
               prefilledCells = new Set();
               prefillMode = false;
+              linkedPuzzles = [];
+              linkedPuzzleInput = "";
               jsonInput = ""; // Clear admin JSON input
               jsonError = ""; // Clear admin JSON error
               finalDetails = {
@@ -1749,6 +1787,80 @@
               </div>
             </label>
           </div>
+
+          {#if isAdminMode}
+            <!-- Similar Puzzles (admin) -->
+            <div
+              class="bg-orange-50 dark:bg-orange-950/20 p-4 rounded-lg border border-orange-200 dark:border-orange-900/40"
+            >
+              <div class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1">
+                Similar puzzles <span class="text-xs text-orange-600 dark:text-orange-400">(admin)</span>
+              </div>
+              <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">
+                Link this puzzle to other archive puzzles by date. Players will see them on the result screen.
+              </p>
+
+              {#if linkedPuzzles.length > 0}
+                <ul class="space-y-2 mb-3">
+                  {#each linkedPuzzles as date}
+                    <li class="flex items-center justify-between bg-white dark:bg-gray-800 px-3 py-2 rounded border border-gray-200 dark:border-gray-700">
+                      <div class="text-sm">
+                        <span class="font-mono text-gray-900 dark:text-gray-100">{date}</span>
+                        {#if lookupArchiveTitle(date)}
+                          <span class="text-gray-500 dark:text-gray-400 ml-2">— {lookupArchiveTitle(date)}</span>
+                        {:else}
+                          <span class="text-rose-500 ml-2">(no archive entry)</span>
+                        {/if}
+                      </div>
+                      <button
+                        type="button"
+                        class="text-xs text-rose-500 hover:text-rose-600"
+                        onclick={() => removeLinkedPuzzle(date)}
+                        aria-label="Remove linked puzzle"
+                      >
+                        Remove
+                      </button>
+                    </li>
+                  {/each}
+                </ul>
+              {/if}
+
+              <div class="flex gap-2">
+                <input
+                  type="text"
+                  list="archive-dates"
+                  bind:value={linkedPuzzleInput}
+                  placeholder="YYYY-MM-DD"
+                  class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  onkeydown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      addLinkedPuzzle();
+                    }
+                  }}
+                />
+                <button
+                  type="button"
+                  class="px-4 py-2 text-sm font-medium bg-orange-500 hover:bg-orange-600 text-white rounded transition-colors disabled:opacity-50"
+                  disabled={!DATE_REGEX.test(linkedPuzzleInput.trim())}
+                  onclick={addLinkedPuzzle}
+                >
+                  Add
+                </button>
+              </div>
+              {#if linkedPuzzleInput && DATE_REGEX.test(linkedPuzzleInput.trim()) && lookupArchiveTitle(linkedPuzzleInput.trim())}
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                  → {lookupArchiveTitle(linkedPuzzleInput.trim())}
+                </p>
+              {/if}
+
+              <datalist id="archive-dates">
+                {#each Object.keys(crosswords).sort().reverse() as date}
+                  <option value={date} label={crosswords[date]?.title || ""}></option>
+                {/each}
+              </datalist>
+            </div>
+          {/if}
         </div>
 
         <div
@@ -1843,6 +1955,7 @@
                     words: wordsWithTrackIds,
                     details: finalDetails,
                     starting_characters: startingCharacters,
+                    linked_puzzles: isAdminMode ? linkedPuzzles : [],
                   }),
                 });
 
