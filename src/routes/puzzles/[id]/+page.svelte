@@ -62,20 +62,18 @@
 />
 
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
-  <div class="flex-1 pt-20 md:pt-0 lg:mr-35">
-    <div class="w-full md:max-w-3xl mx-auto mt-2 px-2">
+  <div class="flex-1 pt-14 md:pt-0 lg:mr-35">
+    <div class="w-full md:max-w-3xl mx-auto px-2">
       <h1
-        class="text-base md:text-xl font-bold text-black dark:text-white mb-1 text-left ml-2 md:ml-0"
+        class="text-sm md:text-xl font-bold text-black dark:text-white text-left ml-2 md:ml-0 leading-tight"
       >
         {puzzle?.title}
+        {#if credit_name && credit_name !== 'anon'}
+          <span class="text-[10px] md:text-sm font-normal text-gray-600 dark:text-gray-300 ml-1">
+            by {credit_name}
+          </span>
+        {/if}
       </h1>
-      {#if credit_name && credit_name !== 'anon'}
-        <p
-          class="text-xs md:text-sm text-gray-600 dark:text-gray-300 mb-2 text-center md:text-left"
-        >
-          by {credit_name}
-        </p>
-      {/if}
     </div>
     {#if GridComponent}
       <svelte:component

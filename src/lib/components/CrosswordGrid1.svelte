@@ -2514,22 +2514,23 @@
       align-items: center; /* Center vertically now */
       justify-content: center;
       overflow: hidden; /* Prevent the grid overflowing this container */
+      /* Reserve room for the fixed MobileControls (clue bar + virtual keyboard)
+         so the grid never extends behind it. */
+      padding-bottom: var(--mobile-controls-h, 230px);
     }
 
     /* Grid aspect-ratio wrapper sizing */
     .w-full.relative[style*="aspect-ratio"] {
       /* Default mobile sizing - prioritize width */
       max-width: 95vw; /* Use viewport width unit */
-      max-height: 90vh; /* Use viewport height unit, allow generous height */
-      /* The inline aspect-ratio style combined with max constraints will size it */
+      /* Cap height so square/tall grids size down to fit on phones. */
+      max-height: calc(100dvh - var(--mobile-controls-h, 230px) - 110px);
     }
 
     /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
     @media (max-aspect-ratio: 9/16) {
       .w-full.relative[style*="aspect-ratio"] {
         max-width: 96vw; /* Allow slightly more width */
-        /* Let aspect-ratio dictate height based on width */
-        max-height: none; /* Remove max-height constraint */
       }
       /* Cell-relative font: scales with grid container width / cell count.
          Calibrated so 12-wide grid matches the prior 3.5vw clamp. */
@@ -2549,7 +2550,6 @@
     @media (min-aspect-ratio: 9/17) {
       .w-full.relative[style*="aspect-ratio"] {
         max-width: 94vw;
-        max-height: 85vh; /* Can be more constrained vertically */
       }
       .cell-input {
         font-size: clamp(
