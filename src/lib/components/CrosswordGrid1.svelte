@@ -1985,8 +1985,8 @@
       <div class="flex-1 w-full">
         <!-- Grid container -->
         <div
-          class="w-full relative"
-          style="aspect-ratio: {size.width}/{size.height};"
+          class="w-full relative crossword-grid-container"
+          style="aspect-ratio: {size.width}/{size.height}; container-type: inline-size; --cell-w: calc(100cqi / {size.width});"
         >
           <VinylRecord theme={puzzle.theme || "black"} {isPlaying} />
 
@@ -2016,7 +2016,7 @@
                   {#if cell !== null}
                     {#if wordNumbers.has(`${x},${y}`)}
                       <span
-                        class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none"
+                        class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none cell-word-number"
                         style="color: {isDark ? 'black' : 'black'};"
                       >
                         {wordNumbers.get(`${x},${y}`)}
@@ -2034,7 +2034,7 @@
                         maxlength="1"
                         data-x={x}
                         data-y={y}
-                        class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
+                        class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl cell-input"
                         class:cursor-text={!isMobileDevice}
                         class:revealed={revealedCells.has(`${x},${y}`)}
                         class:starting={startingCells.has(`${x},${y}`)}
@@ -2531,17 +2531,17 @@
         /* Let aspect-ratio dictate height based on width */
         max-height: none; /* Remove max-height constraint */
       }
-      /* Adjust font size for tall, narrow screens if needed */
-      input {
+      /* Cell-relative font: scales with grid container width / cell count.
+         Calibrated so 12-wide grid matches the prior 3.5vw clamp. */
+      .cell-input {
         font-size: clamp(
-          0.8rem,
-          3.5vw,
+          10px,
+          calc(var(--cell-w) * 0.5),
           1rem
-        ) !important; /* Responsive font size based on width */
+        ) !important;
       }
-      .absolute.text-\[12px\] {
-        /* Word numbers */
-        font-size: clamp(8px, 2.5vw, 11px) !important;
+      .cell-word-number {
+        font-size: clamp(7px, calc(var(--cell-w) * 0.36), 11px) !important;
       }
     }
 
@@ -2551,16 +2551,15 @@
         max-width: 94vw;
         max-height: 85vh; /* Can be more constrained vertically */
       }
-      input {
+      .cell-input {
         font-size: clamp(
-          0.875rem,
-          4vw,
+          11px,
+          calc(var(--cell-w) * 0.55),
           1.1rem
-        ) !important; /* Slightly larger font potentially */
+        ) !important;
       }
-      .absolute.text-\[12px\] {
-        /* Word numbers */
-        font-size: clamp(9px, 2.8vw, 12px) !important;
+      .cell-word-number {
+        font-size: clamp(8px, calc(var(--cell-w) * 0.4), 12px) !important;
       }
     }
 
@@ -2575,6 +2574,16 @@
 
     :global(.slide-menu-open) {
       pointer-events: none;
+    }
+  }
+
+  /* Desktop: cap font at text-xl so 12-wide stays identical, but shrink for bigger grids. */
+  @media (min-width: 769px) {
+    .cell-input {
+      font-size: clamp(13px, calc(var(--cell-w) * 0.55), 1.25rem) !important;
+    }
+    .cell-word-number {
+      font-size: clamp(9px, calc(var(--cell-w) * 0.4), 12px) !important;
     }
   }
 
