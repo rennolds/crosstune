@@ -61,9 +61,9 @@
   onRevealPuzzle={handleRevealPuzzle}
 />
 
-<main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
-  <div class="flex-1 pt-14 md:pt-0 lg:mr-35">
-    <div class="w-full md:max-w-3xl mx-auto px-2">
+<main class="h-[100dvh] overflow-hidden flex flex-col md:min-h-screen md:h-auto md:overflow-visible bg-gray-200 dark:bg-[#303030]">
+  <div class="flex-1 min-h-0 flex flex-col pt-12 md:pt-0 lg:mr-35">
+    <div class="w-full md:max-w-3xl mx-auto px-2 flex-shrink-0">
       <h1
         class="text-sm md:text-xl font-bold text-black dark:text-white text-left ml-2 md:ml-0 leading-tight"
       >
@@ -75,14 +75,16 @@
         {/if}
       </h1>
     </div>
-    {#if GridComponent}
-      <svelte:component
-        this={GridComponent}
-        {puzzle}
-        isArchiveMode={true}
-        hideHeader={true}
-        onSetRevealFunctions={setRevealFunctions}
-      />
-    {/if}
+    <div class="flex-1 min-h-0">
+      {#if GridComponent}
+        <svelte:component
+          this={GridComponent}
+          {puzzle}
+          isArchiveMode={true}
+          hideHeader={true}
+          onSetRevealFunctions={setRevealFunctions}
+        />
+      {/if}
+    </div>
   </div>
 </main>
