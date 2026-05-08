@@ -65,26 +65,33 @@
   class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35"
 >
   <!-- Mobile: fixed full-viewport grid with explicit rows.
-       48px reserved for navbar overlay, auto for title, 1fr for the
-       crossword play area, then 230px reserved for the fixed
-       MobileControls (clue bar + virtual keyboard). -->
+       48px reserved for navbar overlay, auto for the (optional) title,
+       1fr for the crossword play area, then 230px reserved for the fixed
+       MobileControls (clue bar + virtual keyboard).
+       The title row collapses to 0 when there's nothing to show. -->
   <div
     class="md:hidden fixed inset-0 grid"
     style="grid-template-rows: 48px auto 1fr var(--mobile-controls-h, 230px);"
   >
     <!-- Row 1: navbar overlay reserve (empty) -->
     <div></div>
-    <!-- Row 2: title + credit -->
-    <div class="px-3">
-      <h1 class="text-sm font-bold text-black dark:text-white leading-tight">
-        {puzzle?.title}
-        {#if credit_name && credit_name !== 'anon'}
-          <span class="text-[10px] font-normal text-gray-600 dark:text-gray-300 ml-1">
-            by {credit_name}
-          </span>
-        {/if}
-      </h1>
-    </div>
+    <!-- Row 2: title + credit, only when there's actual content -->
+    {#if puzzle?.title || (credit_name && credit_name !== 'anon')}
+      <div class="px-3 py-1 min-w-0">
+        <p class="text-xs leading-tight text-black dark:text-white truncate">
+          {#if puzzle?.title}
+            <span class="font-bold">{puzzle.title}</span>
+          {/if}
+          {#if credit_name && credit_name !== 'anon'}
+            <span class="text-[11px] font-normal text-gray-600 dark:text-gray-300">
+              {puzzle?.title ? '· ' : ''}by {credit_name}
+            </span>
+          {/if}
+        </p>
+      </div>
+    {:else}
+      <div></div>
+    {/if}
     <!-- Row 3: grid play area -->
     <div class="min-h-0 overflow-hidden">
       {#if GridComponent}
