@@ -103,9 +103,28 @@
   words={selectedPuzzle?.words || []}
 />
 
-<main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
+<main class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35">
   {#if selectedPuzzle}
-    <div class="flex-1 pt-20 md:pt-0 lg:mr-35">
+    <!-- Mobile: fixed full-viewport grid -->
+    <div
+      class="md:hidden fixed inset-0 grid"
+      style="grid-template-rows: 48px 1fr var(--mobile-controls-h, 230px);"
+    >
+      <div></div>
+      <div class="min-h-0 overflow-hidden">
+        <CrosswordGrid1
+          puzzle={selectedPuzzle}
+          isArchiveMode={true}
+          isThemedMode={true}
+          {selectedId}
+          onSetRevealFunctions={handleRevealFunctions}
+          onNavigateBack={navigateToThemedBoards}
+        />
+      </div>
+    </div>
+
+    <!-- Desktop: original flow -->
+    <div class="hidden md:block pt-0">
       <CrosswordGrid1
         puzzle={selectedPuzzle}
         isArchiveMode={true}

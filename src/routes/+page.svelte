@@ -44,9 +44,24 @@
   <SplashScreen onPlay={handlePlay} />
 {:else}
   <main
-    class="min-h-screen flex flex-col md:pt-0 pt-12 bg-gray-200 dark:bg-[#303030]"
+    class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35"
   >
-    <div class="flex-1 pt-0 md:pt-0 lg:mr-35">
+    <!-- Mobile: fixed full-viewport grid: 48px navbar reserve, 1fr play area, 230px controls reserve. -->
+    <div
+      class="md:hidden fixed inset-0 grid"
+      style="grid-template-rows: 48px 1fr var(--mobile-controls-h, 230px);"
+    >
+      <div></div>
+      <div class="min-h-0 overflow-hidden">
+        <CrosswordGrid1
+          onSetRevealFunctions={handleRevealFunctions}
+          onWords={handleWords}
+        />
+      </div>
+    </div>
+
+    <!-- Desktop: original flow -->
+    <div class="hidden md:block">
       <CrosswordGrid1
         onSetRevealFunctions={handleRevealFunctions}
         onWords={handleWords}

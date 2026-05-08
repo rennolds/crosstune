@@ -2503,25 +2503,25 @@
        outer wrapper is flex-col h-full, the dark grid container is flex-1 min-h-0.
        No additional CSS needed here. */
 
-    /* The flex container holding the grid */
+    /* The flex container holding the grid.
+       The page-level grid layout (in /puzzles/[id]/+page.svelte and
+       /+page.svelte) reserves the visible play area, so this wrapper just
+       fills its parent and centers the crossword. */
     .flex-1.w-full {
-      flex: 1 1 auto; /* Grow and shrink to fill available vertical space */
-      min-height: 0; /* Allow shrinking within flex column */
-      display: flex; /* Center the grid inside */
-      align-items: center; /* Center vertically now */
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      overflow: hidden; /* Prevent the grid overflowing this container */
-      /* Reserve room for the fixed MobileControls (clue bar + virtual keyboard)
-         so the grid never extends behind it. */
-      padding-bottom: var(--mobile-controls-h, 230px);
+      overflow: hidden;
     }
 
-    /* Grid aspect-ratio wrapper sizing */
+    /* Grid aspect-ratio wrapper sizing.
+       max-height: 100% lets the grid shrink to fit the play area when the
+       grid is square/tall on small phones. */
     .w-full.relative[style*="aspect-ratio"] {
-      /* Default mobile sizing - prioritize width */
-      max-width: 95vw; /* Use viewport width unit */
-      /* Cap height so square/tall grids size down to fit on phones. */
-      max-height: calc(100dvh - var(--mobile-controls-h, 230px) - 110px);
+      max-width: 95vw;
+      max-height: 100%;
     }
 
     /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */

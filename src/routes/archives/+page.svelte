@@ -115,10 +115,28 @@
   words={puzzle?.words || []}
 />
 
-<main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
+<main class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35">
   {#if selectedDate}
-    <!-- In archive puzzle mode -->
-    <div class="flex-1 pt-12 md:pt-0 lg:mr-35">
+    <!-- Mobile: fixed full-viewport grid -->
+    <div
+      class="md:hidden fixed inset-0 grid"
+      style="grid-template-rows: 48px 1fr var(--mobile-controls-h, 230px);"
+    >
+      <div></div>
+      <div class="min-h-0 overflow-hidden">
+        {#key selectedDate}
+          <CrosswordGrid1
+            {puzzle}
+            isArchiveMode={true}
+            {selectedDate}
+            onSetRevealFunctions={handleRevealFunctions}
+          />
+        {/key}
+      </div>
+    </div>
+
+    <!-- Desktop: original flow -->
+    <div class="hidden md:block flex-1 pt-0 lg:mr-35">
       {#key selectedDate}
         <CrosswordGrid1
           {puzzle}

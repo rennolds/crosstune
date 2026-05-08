@@ -61,21 +61,32 @@
   onRevealPuzzle={handleRevealPuzzle}
 />
 
-<main class="h-[100dvh] overflow-hidden flex flex-col md:min-h-screen md:h-auto md:overflow-visible bg-gray-200 dark:bg-[#303030]">
-  <div class="flex-1 min-h-0 flex flex-col pt-12 md:pt-0 lg:mr-35">
-    <div class="w-full md:max-w-3xl mx-auto px-2 flex-shrink-0">
-      <h1
-        class="text-sm md:text-xl font-bold text-black dark:text-white text-left ml-2 md:ml-0 leading-tight"
-      >
+<main
+  class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35"
+>
+  <!-- Mobile: fixed full-viewport grid with explicit rows.
+       48px reserved for navbar overlay, auto for title, 1fr for the
+       crossword play area, then 230px reserved for the fixed
+       MobileControls (clue bar + virtual keyboard). -->
+  <div
+    class="md:hidden fixed inset-0 grid"
+    style="grid-template-rows: 48px auto 1fr var(--mobile-controls-h, 230px);"
+  >
+    <!-- Row 1: navbar overlay reserve (empty) -->
+    <div></div>
+    <!-- Row 2: title + credit -->
+    <div class="px-3">
+      <h1 class="text-sm font-bold text-black dark:text-white leading-tight">
         {puzzle?.title}
         {#if credit_name && credit_name !== 'anon'}
-          <span class="text-[10px] md:text-sm font-normal text-gray-600 dark:text-gray-300 ml-1">
+          <span class="text-[10px] font-normal text-gray-600 dark:text-gray-300 ml-1">
             by {credit_name}
           </span>
         {/if}
       </h1>
     </div>
-    <div class="flex-1 min-h-0">
+    <!-- Row 3: grid play area -->
+    <div class="min-h-0 overflow-hidden">
       {#if GridComponent}
         <svelte:component
           this={GridComponent}
@@ -86,5 +97,31 @@
         />
       {/if}
     </div>
+    <!-- Row 4: MobileControls overlay reserve (empty; controls render fixed) -->
+  </div>
+
+  <!-- Desktop: original flow -->
+  <div class="hidden md:block pt-0">
+    <div class="w-full md:max-w-3xl mx-auto px-2">
+      <h1
+        class="text-xl font-bold text-black dark:text-white text-left leading-tight"
+      >
+        {puzzle?.title}
+        {#if credit_name && credit_name !== 'anon'}
+          <span class="text-sm font-normal text-gray-600 dark:text-gray-300 ml-1">
+            by {credit_name}
+          </span>
+        {/if}
+      </h1>
+    </div>
+    {#if GridComponent}
+      <svelte:component
+        this={GridComponent}
+        {puzzle}
+        isArchiveMode={true}
+        hideHeader={true}
+        onSetRevealFunctions={setRevealFunctions}
+      />
+    {/if}
   </div>
 </main>
