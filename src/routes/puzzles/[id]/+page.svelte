@@ -75,23 +75,20 @@
   >
     <!-- Row 1: navbar overlay reserve (empty) -->
     <div></div>
-    <!-- Row 2: title + credit, only when there's actual content -->
-    {#if puzzle?.title || (credit_name && credit_name !== 'anon')}
-      <div class="px-3 py-1 min-w-0">
-        <p class="text-xs leading-tight text-black dark:text-white truncate">
-          {#if puzzle?.title}
-            <span class="font-bold">{puzzle.title}</span>
-          {/if}
-          {#if credit_name && credit_name !== 'anon'}
-            <span class="text-[11px] font-normal text-gray-600 dark:text-gray-300">
-              {puzzle?.title ? '· ' : ''}by {credit_name}
-            </span>
-          {/if}
-        </p>
-      </div>
-    {:else}
-      <div></div>
-    {/if}
+    <!-- Row 2: title + credit. Always rendered with the same padding so
+         the play area below has consistent breathing room from the navbar. -->
+    <div class="px-3 py-2 min-w-0">
+      <p class="text-xs leading-tight text-black dark:text-white truncate">
+        {#if puzzle?.title}
+          <span class="font-bold">{puzzle.title}</span>
+        {/if}
+        {#if credit_name && credit_name !== 'anon'}
+          <span class="text-[11px] font-normal text-gray-600 dark:text-gray-300">
+            {puzzle?.title ? '· ' : ''}by {credit_name}
+          </span>
+        {/if}
+      </p>
+    </div>
     <!-- Row 3: grid play area -->
     <div class="min-h-0 overflow-hidden">
       {#if GridComponent}
