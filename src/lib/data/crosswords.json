@@ -46545,5 +46545,100 @@
         "song_title": "Stitches"
       }
     ]
+  },
+    "2026-05-08": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BOSTON",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Where is she riding back to?",
+        "itunesId": "1884403093",
+        "audioUrl": "1884403093",
+        "startAt": "0:05.2",
+        "audioDuration": 10,
+        "artist_name": "STELLA LEFTY",
+        "song_title": "Boston"
+      },
+      {
+        "word": "BRYAN",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "itunesId": "1620419734",
+        "audioUrl": "1620419734",
+        "startAt": "0:09.5",
+        "audioDuration": 10,
+        "artist_name": "Zach Bryan",
+        "song_title": "Something in the Orange"
+      },
+      {
+        "word": "DROPDEAD",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "1889992113",
+        "audioUrl": "1889992113",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "artist_name": "Olivia Rodrigo",
+        "song_title": "drop dead"
+      },
+      {
+        "word": "SCOTT",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "itunesId": "1428795504",
+        "audioUrl": "1428795504",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "artist_name": "Calum Scott",
+        "song_title": "Dancing On My Own"
+      },
+      {
+        "word": "OTHERSIDE",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": "948446133",
+        "audioUrl": "948446133",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Red Hot Chili Peppers",
+        "song_title": "Otherside"
+      },
+      {
+        "word": "TAYLOR",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "itunesId": "1440934255",
+        "audioUrl": "1440934255",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Taylor Swift",
+        "song_title": "Look What You Made Me Do"
+      }
+    ]
   }
 }
