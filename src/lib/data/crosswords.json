@@ -46638,6 +46638,34 @@
         "audioDuration": 10,
         "artist_name": "Taylor Swift",
         "song_title": "Look What You Made Me Do"
+      },
+      {
+        "word": "BUBLE",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "itunesId": "670069305",
+        "audioUrl": "670069305",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Michael Bublé",
+        "song_title": "Everything"
+      },
+      {
+        "word": "LOVED",
+        "startX": 10,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Could you be ____\"",
+        "itunesId": "1740845888",
+        "audioUrl": "1740845888",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Bob Marley & The Wailers",
+        "song_title": "Could You Be Loved"
       }
     ]
   }
