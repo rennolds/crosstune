@@ -91,7 +91,6 @@
 </script>
 
 <Navbar
-  themedTitle={selectedPuzzle?.title || "Themed Puzzle"}
   isThemedMode={true}
   onRevealSquare={revealSquare}
   onRevealWord={revealWord}
@@ -105,12 +104,21 @@
 
 <main class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35">
   {#if selectedPuzzle}
-    <!-- Mobile: fixed full-viewport grid -->
+    <!-- Mobile: fixed full-viewport grid with optional title row -->
     <div
       class="md:hidden fixed inset-0 grid"
-      style="grid-template-rows: 48px 1fr var(--mobile-controls-h, 230px);"
+      style="grid-template-rows: 48px auto 1fr var(--mobile-controls-h, 230px);"
     >
       <div></div>
+      {#if selectedPuzzle?.title}
+        <div class="px-3 py-1 min-w-0">
+          <p class="text-xs leading-tight text-black dark:text-white truncate">
+            <span class="font-bold">{selectedPuzzle.title}</span>
+          </p>
+        </div>
+      {:else}
+        <div></div>
+      {/if}
       <div class="min-h-0 overflow-hidden">
         <CrosswordGrid1
           puzzle={selectedPuzzle}
