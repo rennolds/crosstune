@@ -11,7 +11,7 @@
   let editPuzzleId = $state(data.puzzleId || null);
 
   const MIN_GRID_DIM = 4;
-  const MAX_GRID_DIM = 16;
+  const MAX_GRID_DIM = 15;
   const DEFAULT_WIDTH = 12;
   const DEFAULT_HEIGHT = 10;
 
@@ -1097,7 +1097,7 @@
               />
             </div>
             <div class="flex items-center gap-1">
-              {#each [[12,10],[14,12],[16,16]] as [w, h]}
+              {#each [[12,10],[13,13],[15,15]] as [w, h]}
                 <button
                   type="button"
                   class="text-xs px-2 py-1 rounded border transition-colors"
