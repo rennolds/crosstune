@@ -117,14 +117,13 @@
 
 <main class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35">
   {#if selectedDate}
-    <!-- Mobile: fixed full-viewport grid with optional title row -->
+    <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
     <div
-      class="md:hidden fixed inset-0 grid"
-      style="grid-template-rows: 48px auto 1fr var(--mobile-controls-h, 230px);"
+      class="md:hidden fixed left-0 right-0 grid"
+      style="top: 48px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
     >
-      <div></div>
       <div class="px-3 py-2 min-w-0">
-        <p class="text-xs leading-tight text-black dark:text-white truncate">
+        <p class="text-sm leading-tight text-black dark:text-white truncate">
           {#if puzzle?.title}
             <span class="font-bold">{puzzle.title}</span>
           {/if}

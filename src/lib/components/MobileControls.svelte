@@ -133,10 +133,28 @@
   let keyHeightClass = $derived(
     windowWidth < 375 ? "h-9" : windowWidth < 410 ? "h-11" : "h-13"
   );
+
+  // Measure our actual rendered height and expose it to the page layout
+  // via --mobile-controls-h. This is what /+page.svelte and friends use to
+  // size the play area, so the grid sits exactly above the controls.
+  let controlsEl;
+  $effect(() => {
+    if (typeof window === "undefined" || !controlsEl) return;
+    const setVar = () => {
+      const h = controlsEl.offsetHeight;
+      if (h > 0) {
+        document.documentElement.style.setProperty("--mobile-controls-h", `${h}px`);
+      }
+    };
+    setVar();
+    const ro = new ResizeObserver(setVar);
+    ro.observe(controlsEl);
+    return () => ro.disconnect();
+  });
 </script>
 
 <!-- Combined container, fixed to bottom -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-30 flex flex-col">
+<div bind:this={controlsEl} class="md:hidden fixed bottom-0 left-0 right-0 z-30 flex flex-col">
   <!-- Clue Section (modified from MobileClue.svelte) -->
   {#if clue}
     <div

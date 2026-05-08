@@ -64,32 +64,28 @@
 <main
   class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35"
 >
-  <!-- Mobile: fixed full-viewport grid with explicit rows.
-       48px reserved for navbar overlay, auto for the (optional) title,
-       1fr for the crossword play area, then 230px reserved for the fixed
-       MobileControls (clue bar + virtual keyboard).
-       The title row collapses to 0 when there's nothing to show. -->
+  <!-- Mobile: fixed wrapper that starts below the navbar (top:48px) and
+       ends at the bottom of the viewport, divided into three rows:
+       title (auto), play area (1fr), controls reserve. -->
   <div
-    class="md:hidden fixed inset-0 grid"
-    style="grid-template-rows: 48px auto 1fr var(--mobile-controls-h, 230px);"
+    class="md:hidden fixed left-0 right-0 grid"
+    style="top: 48px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
   >
-    <!-- Row 1: navbar overlay reserve (empty) -->
-    <div></div>
-    <!-- Row 2: title + credit. Always rendered with the same padding so
-         the play area below has consistent breathing room from the navbar. -->
+    <!-- Title + credit. Always rendered so the play area has consistent
+         breathing room from the navbar. -->
     <div class="px-3 py-2 min-w-0">
-      <p class="text-xs leading-tight text-black dark:text-white truncate">
+      <p class="text-sm leading-tight text-black dark:text-white truncate">
         {#if puzzle?.title}
           <span class="font-bold">{puzzle.title}</span>
         {/if}
         {#if credit_name && credit_name !== 'anon'}
-          <span class="text-[11px] font-normal text-gray-600 dark:text-gray-300">
-            {puzzle?.title ? '· ' : ''}by {credit_name}
+          <span class="text-xs font-normal text-gray-600 dark:text-gray-300">
+            {puzzle?.title ? ' · ' : ''}by {credit_name}
           </span>
         {/if}
       </p>
     </div>
-    <!-- Row 3: grid play area -->
+    <!-- Grid play area -->
     <div class="min-h-0 overflow-hidden">
       {#if GridComponent}
         <svelte:component
@@ -101,7 +97,7 @@
         />
       {/if}
     </div>
-    <!-- Row 4: MobileControls overlay reserve (empty; controls render fixed) -->
+    <!-- MobileControls overlay reserve (empty; controls render fixed) -->
   </div>
 
   <!-- Desktop: original flow -->
