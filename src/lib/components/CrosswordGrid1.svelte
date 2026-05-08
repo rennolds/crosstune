@@ -1960,7 +1960,7 @@
     </div>
   </div>
 {:else}
-  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
+  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2 h-full md:h-auto flex flex-col md:block">
     <!-- Date/title container aligned with crossword -->
     {#if !hideHeader}
       <div
@@ -1978,7 +1978,7 @@
     {/if}
 
     <div
-      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
+      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0 flex-1 min-h-0 md:flex-none"
       style="background-color: {isDark ? '#303030' : 'bg-gray-200'}"
     >
       <!-- Crossword grid container -->
@@ -2499,12 +2499,9 @@
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile and ensure sound player visibility */
   @media (max-width: 768px) {
-    /* Main component wrapper on mobile */
-    .dark.flex.flex-col {
-      height: 100%; /* Fill parent provided by +page.svelte's flex-1 div */
-      display: flex;
-      flex-direction: column;
-    }
+    /* Mobile layout is driven by Tailwind flex utilities applied inline:
+       outer wrapper is flex-col h-full, the dark grid container is flex-1 min-h-0.
+       No additional CSS needed here. */
 
     /* The flex container holding the grid */
     .flex-1.w-full {
