@@ -2517,11 +2517,12 @@
     }
 
     /* Grid aspect-ratio wrapper sizing.
-       max-height: 100% lets the grid shrink to fit the play area when the
-       grid is square/tall on small phones. */
+       Reserve a small buffer below max-height so square/tall grids never
+       butt up against the navbar or controls — even on small phones where
+       the play area is barely larger than 95vw. */
     .w-full.relative[style*="aspect-ratio"] {
       max-width: 95vw;
-      max-height: 100%;
+      max-height: calc(100% - 24px);
     }
 
     /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
