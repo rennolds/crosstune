@@ -46942,5 +46942,128 @@
         "song_title": "i like the way you kiss me"
       }
     ]
+  },
+    "2026-05-11": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "purple",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ROSES",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1050203620",
+        "audioUrl": "1050203620",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "The Chainsmokers",
+        "song_title": "Roses (feat. ROZES)"
+      },
+      {
+        "word": "ADELE",
+        "startX": 6,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "1544491998",
+        "audioUrl": "1544491998",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Adele",
+        "song_title": "Someone Like You"
+      },
+      {
+        "word": "CHEERLEADER",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "1033360497",
+        "audioUrl": "1033360497",
+        "startAt": "0:16.1",
+        "audioDuration": 12.9,
+        "artist_name": "Omi",
+        "song_title": "Cheerleader (Felix Jaehn Remix) [Radio Edit]"
+      },
+      {
+        "word": "IMWITHYOU",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"I like me better when ____\"",
+        "itunesId": "1771702162",
+        "audioUrl": "1771702162",
+        "startAt": "0:00",
+        "audioDuration": 4,
+        "artist_name": "Lauv",
+        "song_title": "I Like Me Better"
+      },
+      {
+        "word": "COLDHEART",
+        "startX": 1,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": "1578986673",
+        "audioUrl": "1578986673",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Elton John & Dua Lipa",
+        "song_title": "Cold Heart (PNAU Remix)"
+      },
+      {
+        "word": "MENDES",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "itunesId": "1440892573",
+        "audioUrl": "1440892573",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Shawn Mendes",
+        "song_title": "There's Nothing Holdin' Me Back"
+      },
+      {
+        "word": "SPAGHETTI",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What did mom make for dinner?",
+        "itunesId": "1444221569",
+        "audioUrl": "1444221569",
+        "startAt": "0:17",
+        "audioDuration": 10,
+        "artist_name": "Eminem",
+        "song_title": "Lose Yourself"
+      },
+      {
+        "word": "BEWARE",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1440822099",
+        "audioUrl": "1440822099",
+        "startAt": "0:19",
+        "audioDuration": 11,
+        "artist_name": "Big Sean",
+        "song_title": "Beware (feat. Lil Wayne & Jhene Aiko)"
+      }
+    ]
   }
 }
