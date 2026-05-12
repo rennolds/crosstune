@@ -47065,5 +47065,142 @@
         "song_title": "Beware (feat. Lil Wayne & Jhene Aiko)"
       }
     ]
+  },
+    "2026-05-12": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BANANAS",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "The letters spelled out in this song's chorus",
+        "itunesId": "1452870043",
+        "audioUrl": "1452870043",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "artist_name": "Gwen Stefani",
+        "song_title": "Hollaback Girl"
+      },
+      {
+        "word": "HUSBAND",
+        "startX": 5,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "\"Where is my ____?\"",
+        "itunesId": "1838737598",
+        "audioUrl": "1838737598",
+        "startAt": "0:19",
+        "audioDuration": 10,
+        "artist_name": "RAYE",
+        "song_title": "WHERE IS MY HUSBAND!"
+      },
+      {
+        "word": "MURDER",
+        "startX": 3,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What is on his mind?",
+        "itunesId": "1443671380",
+        "audioUrl": "1443671380",
+        "startAt": "0:07",
+        "audioDuration": 10,
+        "artist_name": "YNW Melly",
+        "song_title": "Mischief on My Mind"
+      },
+      {
+        "word": "HOTTOGO",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The letters spelled out in this song's chorus",
+        "itunesId": "1698723221",
+        "audioUrl": "1698723221",
+        "startAt": "0:15.5",
+        "audioDuration": 9.5,
+        "artist_name": "Chappell Roan",
+        "song_title": "HOT TO GO!"
+      },
+      {
+        "word": "WANNABE",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": "1573849255",
+        "audioUrl": "1573849255",
+        "startAt": "0:10",
+        "audioDuration": 8.5,
+        "artist_name": "Spice Girls",
+        "song_title": "Wannabe"
+      },
+      {
+        "word": "MARS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "The planet in this band's name",
+        "itunesId": "1440839332",
+        "audioUrl": "1440839332",
+        "startAt": "0:02",
+        "audioDuration": 10,
+        "artist_name": "Thirty Seconds to Mars",
+        "song_title": "The Kill (Bury Me)"
+      },
+      {
+        "word": "JACKHARLOW",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "itunesId": "1502760065",
+        "audioUrl": "1502760065",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Jack Harlow",
+        "song_title": "WHATS POPPIN"
+      },
+      {
+        "word": "RESPECT",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The letters spelled out in this song's chorus",
+        "itunesId": "878000348",
+        "audioUrl": "878000348",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Aretha Franklin",
+        "song_title": "Respect"
+      },
+      {
+        "word": "CINNAMON",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of song title (also found in your spice cabinet)",
+        "itunesId": "1474669074",
+        "audioUrl": "1474669074",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Lana Del Rey",
+        "song_title": "Cinnamon Girl"
+      }
+    ]
   }
 }
