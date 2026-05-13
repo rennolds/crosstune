@@ -47339,5 +47339,181 @@
         "song_title": "Sucker"
       }
     ]
+  },
+    "2026-05-14": {
+    "version": "1.0.0",
+    "title": "Extra special character (by scott!e)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DAN+SHAY",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Duo name",
+        "itunesId": "1481229017",
+        "audioUrl": "1481229017",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Dan + Shay & Justin Bieber",
+        "song_title": "10,000 Hours"
+      },
+      {
+        "word": "ALT-J",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "itunesId": "558262504",
+        "audioUrl": "558262504",
+        "startAt": "0:20",
+        "audioDuration": 8,
+        "artist_name": "alt-J",
+        "song_title": "Breezeblocks"
+      },
+      {
+        "word": "FUN.",
+        "startX": 6,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "itunesId": "486040194",
+        "audioUrl": "486040194",
+        "startAt": "0:06.5",
+        "audioDuration": 8,
+        "artist_name": "Fun.",
+        "song_title": "Some Nights"
+      },
+      {
+        "word": "A$APROCKY",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist name",
+        "itunesId": "1442956431",
+        "audioUrl": "1442956431",
+        "startAt": "0:06",
+        "audioDuration": 15,
+        "artist_name": "A$AP Rocky",
+        "song_title": "Sundress"
+      },
+      {
+        "word": "AC/DC",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "itunesId": "574051407",
+        "audioUrl": "574051407",
+        "startAt": "0:08",
+        "audioDuration": 13,
+        "artist_name": "AC/DC",
+        "song_title": "Thunderstruck"
+      },
+      {
+        "word": "HALL&OATES",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Shorthand for this duo",
+        "itunesId": "273750239",
+        "audioUrl": "273750239",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Daryl Hall & John Oates",
+        "song_title": "Rich Girl"
+      },
+      {
+        "word": "3OH!3",
+        "startX": 5,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Duo name",
+        "itunesId": "281750089",
+        "audioUrl": "281750089",
+        "startAt": "0:22",
+        "audioDuration": 8,
+        "artist_name": "3OH!3",
+        "song_title": "Don't Trust Me"
+      },
+      {
+        "word": "*NSYNC",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Band name",
+        "itunesId": "303171383",
+        "audioUrl": "303171383",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "artist_name": "*NSYNC",
+        "song_title": "It's Gonna Be Me"
+      }
+    ],
+    "starting_characters": [
+      {
+        "characters": "/",
+        "startX": 9,
+        "startY": 8,
+        "direction": "across"
+      },
+      {
+        "characters": "!",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across"
+      },
+      {
+        "characters": "*",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across"
+      },
+      {
+        "characters": "-",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across"
+      },
+      {
+        "characters": "+",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across"
+      },
+      {
+        "characters": "$",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across"
+      },
+      {
+        "characters": "&",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across"
+      },
+      {
+        "characters": ".",
+        "startX": 9,
+        "startY": 4,
+        "direction": "across"
+      }
+    ],
+    "linked_puzzles": [
+      "2026-02-05"
+    ]
   }
 }
