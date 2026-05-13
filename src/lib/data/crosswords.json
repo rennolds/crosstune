@@ -47202,5 +47202,142 @@
         "song_title": "Cinnamon Girl"
       }
     ]
+  },
+    "2026-05-13": {
+    "version": "1.0.0",
+    "title": "(by La_Croix_Lover)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ABRAMS",
+        "startX": 3,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "itunesId": "1773474483",
+        "audioUrl": "1773474483",
+        "startAt": "0:19",
+        "audioDuration": 10,
+        "artist_name": "Gracie Abrams",
+        "song_title": "That’s So True"
+      },
+      {
+        "word": "GREYGOOSE",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Liquor brand mentioned in this song",
+        "itunesId": "1594982922",
+        "audioUrl": "1594982922",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "artist_name": "Lorde",
+        "song_title": "Royals"
+      },
+      {
+        "word": "OCTOBER",
+        "startX": 4,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"We fell in love in ____\"",
+        "itunesId": "1441416638",
+        "audioUrl": "1441416638",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "artist_name": "girl in red",
+        "song_title": "We Fell in Love in October"
+      },
+      {
+        "word": "HERMES",
+        "startX": 4,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "French fashion brand mentioned in this song",
+        "itunesId": "1440892415",
+        "audioUrl": "1440892415",
+        "startAt": "0:15",
+        "audioDuration": 15,
+        "artist_name": "Drake",
+        "song_title": "Gyalchester"
+      },
+      {
+        "word": "METALLICA",
+        "startX": 3,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Band name",
+        "itunesId": "1275819878",
+        "audioUrl": "1275819878",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Metallica",
+        "song_title": "Master of Puppets"
+      },
+      {
+        "word": "BEEGEES",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Band name",
+        "itunesId": "1442259185",
+        "audioUrl": "1442259185",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Bee Gees",
+        "song_title": "Stayin' Alive"
+      },
+      {
+        "word": "CHEATS",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "\"...before he ____\"",
+        "itunesId": "214696369",
+        "audioUrl": "214696369",
+        "startAt": "0:04.5",
+        "audioDuration": 9.2,
+        "artist_name": "Carrie Underwood",
+        "song_title": "Before He Cheats"
+      },
+      {
+        "word": "MOSCOWMULE",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a cocktail)",
+        "itunesId": "1622045625",
+        "audioUrl": "1622045625",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Bad Bunny",
+        "song_title": "Moscow Mule"
+      },
+      {
+        "word": "JONAS",
+        "startX": 11,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Surname shared by this band's members",
+        "itunesId": "1461478389",
+        "audioUrl": "1461478389",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Jonas Brothers",
+        "song_title": "Sucker"
+      }
+    ]
   }
 }
