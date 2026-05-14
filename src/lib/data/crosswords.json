@@ -47515,5 +47515,156 @@
     "linked_puzzles": [
       "2026-02-05"
     ]
+  },
+    "2026-05-16": {
+    "version": "1.0.0",
+    "title": "Happy national mimosa day, I guess",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SCORPION",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Album title (also a zodiac sign)",
+        "itunesId": "1418213269",
+        "audioUrl": "1418213269",
+        "startAt": "0:18",
+        "audioDuration": 8,
+        "artist_name": "Drake",
+        "song_title": "God's Plan"
+      },
+      {
+        "word": "CAT",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Animal in this artist's name",
+        "itunesId": "1571169280",
+        "audioUrl": "1571169280",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Doja Cat & The Weeknd",
+        "song_title": "You Right"
+      },
+      {
+        "word": "DEMI",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "itunesId": "1440620921",
+        "audioUrl": "1440620921",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Demi Lovato",
+        "song_title": "Heart Attack"
+      },
+      {
+        "word": "ORANGEJUICE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": "1644777298",
+        "audioUrl": "1644777298",
+        "startAt": "0:15.5",
+        "audioDuration": 8,
+        "artist_name": "Noah Kahan",
+        "song_title": "Orange Juice"
+      },
+      {
+        "word": "GEMINI",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"You can't fool a ____\"",
+        "itunesId": "1631909584",
+        "audioUrl": "1631909584",
+        "startAt": "0:14",
+        "audioDuration": 14,
+        "artist_name": "Steve Lacy",
+        "song_title": "Bad Habit"
+      },
+      {
+        "word": "DOG",
+        "startX": 0,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Animal in this artist's name",
+        "itunesId": "1442848628",
+        "audioUrl": "1442848628",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Snoop Dogg",
+        "song_title": "Beautiful (feat. Pharrell Williams & Uncle Charlie Wilson)"
+      },
+      {
+        "word": "CHAMPAGNE",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of this song's title",
+        "itunesId": "1525933850",
+        "audioUrl": "1525933850",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Oasis",
+        "song_title": "Champagne Supernova (Remastered)"
+      },
+      {
+        "word": "DOSES",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Goes well with mimosas",
+        "itunesId": "850542079",
+        "audioUrl": "850542079",
+        "startAt": "0:01",
+        "audioDuration": 15,
+        "artist_name": "Cherub",
+        "song_title": "Doses & Mimosas"
+      },
+      {
+        "word": "MIGUEL",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "439618071",
+        "audioUrl": "439618071",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Miguel",
+        "song_title": "Sure Thing"
+      },
+      {
+        "word": "LOVELY",
+        "startX": 10,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "1369380479",
+        "audioUrl": "1369380479",
+        "startAt": "0:16",
+        "audioDuration": 12,
+        "artist_name": "Billie Eilish & Khalid",
+        "song_title": "lovely"
+      }
+    ]
   }
 }
