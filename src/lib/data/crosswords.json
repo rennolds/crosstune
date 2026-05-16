@@ -8727,8 +8727,9 @@
         "audioUrl": "328456146",
         "startAt": "0:03.5",
         "audioDuration": 8,
-        "song_title": "sheck wes - mo bamba (prod. 16yrold & take a daytrip)",
-        "artist_name": "16yrold"
+        "song_title": "Mo Bamba",
+        "artist_name": "Sheck Wes",
+        "itunesId": 1438063138
       },
       {
         "word": "CCR",
@@ -8793,8 +8794,9 @@
         "audioUrl": "422881566",
         "startAt": "1:14.5",
         "audioDuration": 4,
-        "song_title": "Foliage - Time After Time (Cyndi Lauper)",
-        "artist_name": "❀ Foliage ❀"
+        "song_title": "Time After Time",
+        "artist_name": "Cyndi Lauper",
+        "itunesId": 400603695
       },
       {
         "word": "LISTEN",
@@ -8929,8 +8931,9 @@
         "audioUrl": "16737972",
         "startAt": "0:35",
         "audioDuration": 8,
-        "song_title": "Livin On A Prayer - Bon Jovi",
-        "artist_name": "poprockssf"
+        "song_title": "Livin' On a Prayer",
+        "artist_name": "Bon Jovi",
+        "itunesId": 1440677665
       },
       {
         "word": "COMEONOVER",
@@ -9023,8 +9026,9 @@
         "audioUrl": "6244263",
         "startAt": "0:37",
         "audioDuration": 7,
-        "song_title": "Boys Like Girls - The Great Escape",
-        "artist_name": "DjSuigetsu"
+        "song_title": "The Great Escape",
+        "artist_name": "BOYS LIKE GIRLS",
+        "itunesId": 276649797
       },
       {
         "word": "AUSTIN",
@@ -9064,8 +9068,9 @@
         "audioUrl": "10676649",
         "startAt": "0:25.5",
         "audioDuration": 7,
-        "song_title": "Fergie feat. will.i.am - Fergalicious",
-        "artist_name": "Interscope Records"
+        "song_title": "Fergalicious (Feat. Will.I.Am)",
+        "artist_name": "Fergie",
+        "itunesId": 1443820288
       },
       {
         "word": "SALTNPEPA",
@@ -9158,8 +9163,9 @@
         "audioUrl": "24639409",
         "startAt": "0:00",
         "audioDuration": 11,
-        "song_title": "Eminem - Love The Way You Lie",
-        "artist_name": "Nathan Sollinger"
+        "song_title": "Love the Way You Lie, Pt. II (feat. Eminem)",
+        "artist_name": "Rihanna",
+        "itunesId": 1440808468
       },
       {
         "word": "MAGIC",
@@ -9241,8 +9247,9 @@
         "audioUrl": "255960902",
         "startAt": "0:17",
         "audioDuration": 11.5,
-        "song_title": "Just A Dream",
-        "artist_name": "Nelly Official"
+        "song_title": "Just a Dream",
+        "artist_name": "Nelly",
+        "itunesId": 1445283464
       }
     ]
   },
@@ -9463,8 +9470,9 @@
         "audioUrl": "1668429972",
         "startAt": "2:54",
         "audioDuration": 16,
-        "song_title": "Karma Police - Radiohead (1997)",
-        "artist_name": "killingtime"
+        "song_title": "Karma Police",
+        "artist_name": "Radiohead",
+        "itunesId": 1097861836
       },
       {
         "word": "STICK",
@@ -9515,8 +9523,9 @@
         "audioUrl": "256124541",
         "startAt": "0:07",
         "audioDuration": 18,
-        "song_title": "Song 2",
-        "artist_name": "Blur Official"
+        "song_title": "Song 2 (2012 Remaster)",
+        "artist_name": "Blur",
+        "itunesId": 726416473
       },
       {
         "word": "TIFFANYS",
@@ -9693,8 +9702,9 @@
         "audioUrl": "40398334",
         "startAt": "0:30",
         "audioDuration": 14,
-        "song_title": "3OH!3 - DON'T TRUST ME (WANT)",
-        "artist_name": "Photo Finish"
+        "song_title": "Don't Trust Me",
+        "artist_name": "3OH!3",
+        "itunesId": 281750089
       },
       {
         "word": "DANGEROUS",
@@ -9896,8 +9906,9 @@
         "audioUrl": "537910335",
         "startAt": "1:17",
         "audioDuration": 6.5,
-        "song_title": "Mark Ronson - Nothing Breaks Like A heart Ft Miley Cyrus",
-        "artist_name": "World Latin Star"
+        "song_title": "Nothing Breaks Like a Heart (feat. Miley Cyrus)",
+        "artist_name": "Mark Ronson",
+        "itunesId": 1459276883
       },
       {
         "word": "KAROLG",
@@ -10087,7 +10098,10 @@
         "textClue": "Artist last name",
         "audioUrl": "1652881803",
         "startAt": "0:20",
-        "audioDuration": 7.5
+        "audioDuration": 7.5,
+        "itunesId": 1440766128,
+        "song_title": "Thinkin Bout You",
+        "artist_name": "Frank Ocean"
       },
       {
         "word": "KEEP",
@@ -10166,8 +10180,9 @@
         "audioUrl": "390425673",
         "startAt": "0:33",
         "audioDuration": 10,
-        "song_title": "Seasons of Love (Rent)",
-        "artist_name": "10toBroadway"
+        "song_title": "Seasons of Love",
+        "artist_name": "Rosario Dawson, Taye Diggs, Idina Menzel, Jesse L. Martin, Adam Pascal, Tracie Thoms, Anthony Rapp & Wilson Jermaine Heredia",
+        "itunesId": 80446140
       },
       {
         "word": "WICKED",
@@ -10260,8 +10275,9 @@
         "audioUrl": "40398334",
         "startAt": "0:16",
         "audioDuration": 7.5,
-        "song_title": "3OH!3 - DON'T TRUST ME (WANT)",
-        "artist_name": "Photo Finish"
+        "song_title": "Don't Trust Me",
+        "artist_name": "3OH!3",
+        "itunesId": 328884524
       },
       {
         "word": "ETHEL",
@@ -10329,8 +10345,9 @@
         "audioUrl": "125057414",
         "startAt": "0:50",
         "audioDuration": 7,
-        "song_title": "Bastile- Pompeii",
-        "artist_name": "Arittra Barua"
+        "song_title": "Pompeii",
+        "artist_name": "Bastille",
+        "itunesId": 1440858321
       },
       {
         "word": "HARLEM",
@@ -10409,8 +10426,9 @@
         "audioUrl": "161011641",
         "startAt": "0:45",
         "audioDuration": 7.5,
-        "song_title": "Mama's Broken Heart by Miranda Lambert",
-        "artist_name": "kristenwendt"
+        "song_title": "Mama's Broken Heart",
+        "artist_name": "Miranda Lambert",
+        "itunesId": 466581404
       },
       {
         "word": "BRIDGE",
@@ -10450,8 +10468,9 @@
         "audioUrl": "105679983",
         "startAt": "1:20",
         "audioDuration": 7.5,
-        "song_title": "Audioslave - Like a stone",
-        "artist_name": "Bezz Records"
+        "song_title": "Like a Stone",
+        "artist_name": "Audioslave",
+        "itunesId": 208294873
       },
       {
         "word": "SHELTON",
@@ -10625,8 +10644,9 @@
         "audioUrl": "178328397",
         "startAt": "1:21",
         "audioDuration": 14.4,
-        "song_title": "The Killers- -Jenny Was A Friend Of Mine-",
-        "artist_name": "trentonmcdowell"
+        "song_title": "Jenny Was a Friend of Mine",
+        "artist_name": "The Killers",
+        "itunesId": 1526194191
       },
       {
         "word": "KIDS",
@@ -10694,8 +10714,9 @@
         "audioUrl": "479762340",
         "startAt": "0:31",
         "audioDuration": 9,
-        "song_title": "TLC - Waterfalls (Original)",
-        "artist_name": "The Cheerleader"
+        "song_title": "Waterfalls",
+        "artist_name": "TLC",
+        "itunesId": 270246724
       },
       {
         "word": "BLACK",
@@ -10707,8 +10728,9 @@
         "audioUrl": "317705231",
         "startAt": "0:24",
         "audioDuration": 12,
-        "song_title": "The Rolling Stones - Paint It Black (ORIGINAL)",
-        "artist_name": "DJ Lantern"
+        "song_title": "Paint It, Black",
+        "artist_name": "The Rolling Stones",
+        "itunesId": 1440745782
       }
     ]
   },
@@ -10745,8 +10767,9 @@
         "audioUrl": "79631463",
         "startAt": "2:00",
         "audioDuration": 5.75,
-        "song_title": "Night Moves-Bob Seger",
-        "artist_name": "Bustermcm"
+        "song_title": "Night Moves",
+        "artist_name": "Bob Seger & The Silver Bullet Band",
+        "itunesId": 1440877549
       },
       {
         "word": "SAMSMITH",
@@ -10772,8 +10795,9 @@
         "audioUrl": "7731970",
         "startAt": "0:31",
         "audioDuration": 7.5,
-        "song_title": "30 Seconds To Mars - The Kill Kit0",
-        "artist_name": "KitO"
+        "song_title": "The Kill (Bury Me)",
+        "artist_name": "Thirty Seconds to Mars",
+        "itunesId": 1440839332
       },
       {
         "word": "DEVIL",
@@ -11263,8 +11287,9 @@
         "audioUrl": "202631934",
         "startAt": "1:08",
         "audioDuration": 12,
-        "song_title": "Wiz Khalifa - See You Again ft. Charlie Puth Furious 7 Soundtrack",
-        "artist_name": "Kurniawan Effendy"
+        "song_title": "See You Again (feat. Charlie Puth)",
+        "artist_name": "Wiz Khalifa",
+        "itunesId": 966410435
       },
       {
         "word": "PUTH",
@@ -11385,8 +11410,9 @@
         "audioUrl": "261139150",
         "startAt": "0:20",
         "audioDuration": 8,
-        "song_title": "Don't Stop Believin' (Cover of Journey)",
-        "artist_name": "gleethemusic"
+        "song_title": "Don't Stop Believin'",
+        "artist_name": "Glee Cast",
+        "itunesId": 347886835
       },
       {
         "word": "SUMMER",
@@ -11398,8 +11424,9 @@
         "audioUrl": "35092035",
         "startAt": "0:42",
         "audioDuration": 7,
-        "song_title": "Lana Del Rey - Summertime Sadness",
-        "artist_name": "Interscope Records"
+        "song_title": "Summertime Sadness",
+        "artist_name": "Lana Del Rey",
+        "itunesId": 1442452725
       },
       {
         "word": "YOURS",
@@ -11425,8 +11452,9 @@
         "audioUrl": "1519743742",
         "startAt": "1:00",
         "audioDuration": 6.5,
-        "song_title": "Lean On Me - Bill Withers",
-        "artist_name": "Cooked Up Classics"
+        "song_title": "Lean On Me",
+        "artist_name": "Bill Withers",
+        "itunesId": 391725484
       },
       {
         "word": "TIGER",
@@ -11698,8 +11726,9 @@
         "audioUrl": "311864150",
         "startAt": "0:10",
         "audioDuration": 8,
-        "song_title": "Future - Mask Off",
-        "artist_name": "DJDizzyDe"
+        "song_title": "Mask Off",
+        "artist_name": "Future",
+        "itunesId": 1253125872
       }
     ]
   },
@@ -11792,8 +11821,9 @@
         "audioUrl": "61619141",
         "startAt": "0:20",
         "audioDuration": 7.5,
-        "song_title": "HERE COMES THE SUN",
-        "artist_name": "BEATLE Juice"
+        "song_title": "Here Comes the Sun (2019 Mix)",
+        "artist_name": "The Beatles",
+        "itunesId": 1474833934
       },
       {
         "word": "RED",
@@ -11872,8 +11902,9 @@
         "audioUrl": "175527966",
         "startAt": "0:46.25",
         "audioDuration": 31,
-        "song_title": "Someone New - Hozier",
-        "artist_name": "Moنica يوسف"
+        "song_title": "Someone New",
+        "artist_name": "Hozier",
+        "itunesId": 900672613
       },
       {
         "word": "HAVANA",
@@ -11941,8 +11972,9 @@
         "audioUrl": "91322573",
         "startAt": "0:13",
         "audioDuration": 22,
-        "song_title": "Bruno Mars - Treasure",
-        "artist_name": "Atlantic Records"
+        "song_title": "Treasure",
+        "artist_name": "Bruno Mars",
+        "itunesId": 581806439
       }
     ]
   },
@@ -12239,8 +12271,9 @@
         "audioUrl": "7907397",
         "startAt": "0:42.5",
         "audioDuration": 6.5,
-        "song_title": "Neon Trees - Animal",
-        "artist_name": "Hellsinger"
+        "song_title": "Animal",
+        "artist_name": "Neon Trees",
+        "itunesId": 1440754846
       },
       {
         "word": "RICHGIRL",
@@ -12333,8 +12366,9 @@
         "audioUrl": "29837743",
         "startAt": "0:00",
         "audioDuration": 7,
-        "song_title": "The Old Hockey Night in Canada Theme (Complete Song)",
-        "artist_name": "kathryn2"
+        "song_title": "Hockey Night In Canada © 2023 (Hbp)",
+        "artist_name": "AJO AND THE HUNGRY BOYS",
+        "itunesId": 1674824233
       },
       {
         "word": "SORRY",
@@ -12346,8 +12380,9 @@
         "audioUrl": "263728011",
         "startAt": "0:05",
         "audioDuration": 6,
-        "song_title": "Justin Bieber - Sorry",
-        "artist_name": "Hadar mexer"
+        "song_title": "Sorry",
+        "artist_name": "Justin Bieber",
+        "itunesId": 1440826320
       },
       {
         "word": "NICKELBACK",
@@ -12373,8 +12408,9 @@
         "audioUrl": "37600755",
         "startAt": "0:02",
         "audioDuration": 6,
-        "song_title": "Carly Rae Jepsen - Call Me Maybe",
-        "artist_name": "Interscope Records"
+        "song_title": "Call Me Maybe",
+        "artist_name": "Carly Rae Jepsen",
+        "itunesId": 1440874008
       },
       {
         "word": "SHAWN",
@@ -12481,8 +12517,9 @@
         "audioUrl": "16850898",
         "startAt": "0:33.2",
         "audioDuration": 10.8,
-        "song_title": "LMFAO - Party Rock Anthem",
-        "artist_name": "Interscope Records"
+        "song_title": "Party Rock Anthem (feat. Lauren Bennett & GoonRock)",
+        "artist_name": "LMFAO",
+        "itunesId": 1440636627
       },
       {
         "word": "TIMBERLAKE",
@@ -12508,8 +12545,9 @@
         "audioUrl": "176749202",
         "startAt": "0:27",
         "audioDuration": 14,
-        "song_title": "MAGIC! - Rude",
-        "artist_name": "Musicamollina"
+        "song_title": "Rude",
+        "artist_name": "MAGIC!",
+        "itunesId": 881629103
       },
       {
         "word": "FIXYOU",
@@ -12672,8 +12710,9 @@
         "audioUrl": "146558571",
         "startAt": "0:54",
         "audioDuration": 12,
-        "song_title": "The Joker - Steve Miller Band - [www Flvto Com]",
-        "artist_name": "Almantas Rastenis"
+        "song_title": "The Joker",
+        "artist_name": "Steve Miller Band",
+        "itunesId": 1452276975
       },
       {
         "word": "CANDY",
@@ -12861,8 +12900,9 @@
         "audioUrl": "199941967",
         "startAt": "0:20",
         "audioDuration": 8,
-        "song_title": "Brioncé - Countdown",
-        "artist_name": "Brioncé"
+        "song_title": "Countdown",
+        "artist_name": "Beyoncé",
+        "itunesId": 626205219
       },
       {
         "word": "DREAMON",
@@ -12916,8 +12956,9 @@
         "audioUrl": "823932871",
         "startAt": "1:10",
         "audioDuration": 14,
-        "song_title": "Banarama - Venus ( JAMES ROD Rework )FREE DOWNLOAD ON BANDCAMP",
-        "artist_name": "JAMES ROD"
+        "song_title": "Venus",
+        "artist_name": "Bananarama",
+        "itunesId": 1299157681
       },
       {
         "word": "SNOW",
@@ -13214,8 +13255,9 @@
         "audioUrl": "19756456",
         "startAt": "0:21.5",
         "audioDuration": 8,
-        "song_title": "Miguel - Sure Thing",
-        "artist_name": "Tati Ruthlezz"
+        "song_title": "Sure Thing",
+        "artist_name": "Miguel",
+        "itunesId": 439618071
       },
       {
         "word": "GOOD",
@@ -13269,8 +13311,9 @@
         "audioUrl": "320254874",
         "startAt": "0:10",
         "audioDuration": 18,
-        "song_title": "George Thorogood & The Destroyers - Bad To The Bone (ORIGINAL)",
-        "artist_name": "DJ Lantern"
+        "song_title": "Bad to the Bone",
+        "artist_name": "George Thorogood & The Destroyers",
+        "itunesId": 1476772799
       },
       {
         "word": "PSY",
@@ -13419,8 +13462,9 @@
         "audioUrl": "2028935000",
         "startAt": "0:38",
         "audioDuration": 19,
-        "song_title": "Lady Gaga, Bruno Mars - Die with a smile (tik tok remix)",
-        "artist_name": "Slimt62"
+        "song_title": "Die With A Smile",
+        "artist_name": "Lady Gaga & Bruno Mars",
+        "itunesId": 1762656732
       }
     ]
   },
@@ -13471,8 +13515,9 @@
         "audioUrl": "427879689",
         "startAt": "0:50",
         "audioDuration": 9.3,
-        "song_title": "Robbie Williams - Angels (Original)",
-        "artist_name": "The Cheerleader"
+        "song_title": "Angels",
+        "artist_name": "Robbie Williams",
+        "itunesId": 727506102
       },
       {
         "word": "LOVE",
@@ -13634,7 +13679,10 @@
         "textClue": "Last name of the featured artist rapping on this verse",
         "audioUrl": "1220153869",
         "startAt": "5:47.5",
-        "audioDuration": 18.4
+        "audioDuration": 18.4,
+        "itunesId": 1440742916,
+        "song_title": "Devil In a New Dress (feat. Rick Ross)",
+        "artist_name": "Kanye West"
       },
       {
         "word": "LILWAYNE",
@@ -14138,8 +14186,9 @@
         "audioUrl": "904106608",
         "startAt": "1:22",
         "audioDuration": 14.5,
-        "song_title": "OutKast- Ms. Jackson Original",
-        "artist_name": "lh1100"
+        "song_title": "Ms. Jackson",
+        "artist_name": "Outkast",
+        "itunesId": 255836745
       },
       {
         "word": "GENIE",
@@ -14534,8 +14583,9 @@
         "audioUrl": "6466553",
         "startAt": "0:09",
         "audioDuration": 12,
-        "song_title": "M I A - Paper Planes",
-        "artist_name": "Diplo"
+        "song_title": "Paper Planes",
+        "artist_name": "M.I.A.",
+        "itunesId": 296393515
       },
       {
         "word": "TITANIUM",
@@ -14600,8 +14650,9 @@
         "audioUrl": "73115504",
         "startAt": "0:07",
         "audioDuration": 15,
-        "song_title": "Bonnie Tyler - Total Eclipse of the Heart",
-        "artist_name": "Cleopatra Records"
+        "song_title": "Total Eclipse of the Heart",
+        "artist_name": "Bonnie Tyler",
+        "itunesId": 1504111288
       },
       {
         "word": "SAYSO",
@@ -14736,8 +14787,9 @@
         "audioUrl": "695062681",
         "startAt": "1:21.5",
         "audioDuration": 10,
-        "song_title": "She Wolf - Shakira",
-        "artist_name": "kenny"
+        "song_title": "She Wolf",
+        "artist_name": "Shakira",
+        "itunesId": 340234622
       },
       {
         "word": "HEARTLESS",
@@ -14764,7 +14816,8 @@
         "startAt": "0:00",
         "audioDuration": 15,
         "song_title": "Fireflies",
-        "artist_name": "OwlCityOfficial"
+        "artist_name": "Owl City",
+        "itunesId": 1440783289
       },
       {
         "word": "HELL",
@@ -14776,8 +14829,9 @@
         "audioUrl": "26322812",
         "startAt": "0:14",
         "audioDuration": 15,
-        "song_title": "The All-American Rejects - Gives You Hell",
-        "artist_name": "Interscope Records"
+        "song_title": "Gives You Hell",
+        "artist_name": "The All-American Rejects",
+        "itunesId": 1440770575
       },
       {
         "word": "POKERFACE",
@@ -14842,8 +14896,9 @@
         "audioUrl": "57626150",
         "startAt": "0:28",
         "audioDuration": 16,
-        "song_title": "Friday - Rebecca Black",
-        "artist_name": "recl4im"
+        "song_title": "Friday",
+        "artist_name": "Rebecca Black",
+        "itunesId": 1650021644
       },
       {
         "word": "ROLEX",
@@ -14978,8 +15033,9 @@
         "audioUrl": "1758839448",
         "startAt": "02:00",
         "audioDuration": 15,
-        "song_title": "Eminem - Stan ft. Dido (original)",
-        "artist_name": "♤Dxrkwolf♡"
+        "song_title": "Stan (feat. Dido)",
+        "artist_name": "Eminem",
+        "itunesId": 1445727312
       },
       {
         "word": "WHEELS",
@@ -15100,8 +15156,9 @@
         "audioUrl": "323290925",
         "startAt": "0:17",
         "audioDuration": 9,
-        "song_title": "Frank Sinatra - Fly Me To The Moon",
-        "artist_name": "umtbsygt"
+        "song_title": "Fly Me to the Moon",
+        "artist_name": "Frank Sinatra",
+        "itunesId": 1443167444
       },
       {
         "word": "STARWARS",
@@ -15113,8 +15170,9 @@
         "audioUrl": "178106130",
         "startAt": "0:00",
         "audioDuration": 6.5,
-        "song_title": "Star Wars - Main Theme",
-        "artist_name": "Awaken Dreamer"
+        "song_title": "Star Wars (Main Theme)",
+        "artist_name": "John Williams & London Symphony Orchestra",
+        "itunesId": 1375815594
       },
       {
         "word": "GRAVITY",
@@ -15207,8 +15265,9 @@
         "audioUrl": "1320393613",
         "startAt": "0:04.2",
         "audioDuration": 5.8,
-        "song_title": "im n luv with a stripper",
-        "artist_name": "rukocien"
+        "song_title": "I'm N Luv (Wit a Stripper) [feat. Mike Jones]",
+        "artist_name": "T-Pain",
+        "itunesId": 309342896
       },
       {
         "word": "HOTNCOLD",
@@ -15315,8 +15374,9 @@
         "audioUrl": "230249894",
         "startAt": "0:45",
         "audioDuration": 10,
-        "song_title": "Celine Dion - I'm alive",
-        "artist_name": "Rula Rula"
+        "song_title": "I'm Alive",
+        "artist_name": "Céline Dion",
+        "itunesId": 1481512978
       },
       {
         "word": "STAR",
@@ -15328,8 +15388,9 @@
         "audioUrl": "468592998",
         "startAt": "1:33",
         "audioDuration": 10,
-        "song_title": "All Star - Smash Mouth",
-        "artist_name": "wannaplayblues"
+        "song_title": "All Star",
+        "artist_name": "Smash Mouth",
+        "itunesId": 1440719249
       },
       {
         "word": "GIRL",
@@ -15341,8 +15402,9 @@
         "audioUrl": "2019781453",
         "startAt": "7:01",
         "audioDuration": 10,
-        "song_title": "Aqua: Barbie Girl",
-        "artist_name": "max 2023"
+        "song_title": "Barbie Girl",
+        "artist_name": "Aqua",
+        "itunesId": 1443758761
       },
       {
         "word": "INNOCENT",
@@ -15354,8 +15416,9 @@
         "audioUrl": "142212875",
         "startAt": "0:50",
         "audioDuration": 10,
-        "song_title": "Oops!...I Did It Again (Britney- Piece Of Me) STUDIO VERSION",
-        "artist_name": "Andras"
+        "song_title": "Oops!…I Did It Again",
+        "artist_name": "Britney Spears",
+        "itunesId": 267954487
       },
       {
         "word": "CARDIGANS",
@@ -15367,8 +15430,9 @@
         "audioUrl": "605156331",
         "startAt": "1:26",
         "audioDuration": 10,
-        "song_title": "Lovefool - The Cardigans",
-        "artist_name": "mars"
+        "song_title": "Lovefool",
+        "artist_name": "The Cardigans",
+        "itunesId": 1450141548
       },
       {
         "word": "DIGGITY",
@@ -15380,8 +15444,9 @@
         "audioUrl": "73200686",
         "startAt": "1:32",
         "audioDuration": 10,
-        "song_title": "Blackstreet - No Diggity",
-        "artist_name": "Cleopatra Records"
+        "song_title": "No Diggity (Re-Recorded)",
+        "artist_name": "Blackstreet",
+        "itunesId": 397445960
       },
       {
         "word": "NSYNC",
@@ -15392,7 +15457,10 @@
         "textClue": "Group name",
         "audioUrl": "425246451",
         "startAt": "0:41",
-        "audioDuration": 10
+        "audioDuration": 10,
+        "itunesId": 303171368,
+        "song_title": "Bye Bye Bye",
+        "artist_name": "*NSYNC"
       },
       {
         "word": "US",
@@ -15404,8 +15472,9 @@
         "audioUrl": "370193120",
         "startAt": "0:52",
         "audioDuration": 10,
-        "song_title": "They Don't Care About Us [Áudio Oficial]",
-        "artist_name": "Michael Jackson"
+        "song_title": "They Don't Care About Us",
+        "artist_name": "Michael Jackson",
+        "itunesId": 310505569
       },
       {
         "word": "TORN",
@@ -15417,8 +15486,9 @@
         "audioUrl": "212034334",
         "startAt": "1:28",
         "audioDuration": 10,
-        "song_title": "Natalie Imbruglia - Torn",
-        "artist_name": "franriv"
+        "song_title": "Torn",
+        "artist_name": "Natalie Imbruglia",
+        "itunesId": 943232495
       },
       {
         "word": "TLC",
@@ -15483,8 +15553,9 @@
         "audioUrl": "61971021",
         "startAt": "1:06",
         "audioDuration": 6.5,
-        "song_title": "Zedd - Clarity (ft. Foxes)",
-        "artist_name": "Interscope Records"
+        "song_title": "Clarity (feat. Foxes)",
+        "artist_name": "Zedd",
+        "itunesId": 1440861976
       },
       {
         "word": "MANCHILD",
@@ -15633,8 +15704,9 @@
         "audioUrl": "3750567",
         "startAt": "1:25",
         "audioDuration": 15,
-        "song_title": "Usa For Africa - We Are the World",
-        "artist_name": "djady87"
+        "song_title": "We Are the World",
+        "artist_name": "U.S.A. for Africa",
+        "itunesId": 41737859
       },
       {
         "word": "HUMBLE",
@@ -15674,8 +15746,9 @@
         "audioUrl": "1177191082",
         "startAt": "0:54",
         "audioDuration": 16,
-        "song_title": "All Too Well(10 Minute Version)",
-        "artist_name": "Natalie Shields"
+        "song_title": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)",
+        "artist_name": "Taylor Swift",
+        "itunesId": 1595423411
       },
       {
         "word": "CASH",
@@ -15700,7 +15773,10 @@
         "textClue": "Song title",
         "audioUrl": "1564584115",
         "startAt": "0:00",
-        "audioDuration": 7
+        "audioDuration": 7,
+        "itunesId": 863835363,
+        "song_title": "Happy (From \"Despicable Me 2\")",
+        "artist_name": "Pharrell Williams"
       }
     ]
   },
@@ -15751,8 +15827,9 @@
         "audioUrl": "422881566",
         "startAt": "1:04",
         "audioDuration": 7,
-        "song_title": "Foliage - Time After Time (Cyndi Lauper)",
-        "artist_name": "❀ Foliage ❀"
+        "song_title": "Time After Time",
+        "artist_name": "Cyndi Lauper",
+        "itunesId": 400603695
       },
       {
         "word": "BROOKLYN",
@@ -15995,7 +16072,10 @@
         "textClue": "Abbreviated movie title featuring this track",
         "audioUrl": "1564584115",
         "startAt": "0:00",
-        "audioDuration": 5
+        "audioDuration": 5,
+        "itunesId": 863835363,
+        "song_title": "Happy (From \"Despicable Me 2\")",
+        "artist_name": "Pharrell Williams"
       },
       {
         "word": "ITTSV",
@@ -16021,8 +16101,9 @@
         "audioUrl": "1576930806",
         "startAt": "0:00",
         "audioDuration": 6,
-        "song_title": "LIZZO - Pink (Bad Day) [From Barbie The Album]",
-        "artist_name": "Atlantic Records"
+        "song_title": "Pink",
+        "artist_name": "Lizzo",
+        "itunesId": 1689238908
       },
       {
         "word": "NTTD",
@@ -16034,8 +16115,9 @@
         "audioUrl": "905595541",
         "startAt": "2:40",
         "audioDuration": 24,
-        "song_title": "Billie Eilish - No Time To Die",
-        "artist_name": "andriyew"
+        "song_title": "No Time To Die",
+        "artist_name": "Billie Eilish",
+        "itunesId": 1498647654
       },
       {
         "word": "WICKED",
@@ -16701,8 +16783,9 @@
         "startAt": "0:06",
         "audioDuration": 17,
         "soundcloudUrl": "https://soundcloud.com/deccoooo/brazil-1",
-        "artist_name": "Sting",
-        "song_title": "Brazil"
+        "artist_name": "Declan McKenna",
+        "song_title": "Brazil",
+        "itunesId": 1208110313
       },
       {
         "word": "EASTWOOD",
@@ -17628,7 +17711,8 @@
         "audioDuration": 15,
         "soundcloudUrl": "https://soundcloud.com/brunomars/finesse",
         "artist_name": "Bruno Mars",
-        "song_title": "Finesse (Back to That '90s Phase)"
+        "song_title": "Finesse",
+        "itunesId": 1161504065
       },
       {
         "word": "HOME",
@@ -17742,8 +17826,9 @@
         "startAt": "0:00",
         "audioDuration": 17,
         "soundcloudUrl": "",
-        "song_title": "Piano Sonata No.11 in A major, K. 331- III. Rondò Alla Turca",
-        "artist_name": "Mozart"
+        "song_title": "Piano Sonata No. 11 in A Major, K. 331: Rondo \"Alla turca\"",
+        "artist_name": "Finghin Collins",
+        "itunesId": 494863853
       },
       {
         "word": "NODOUBT",
@@ -17756,8 +17841,9 @@
         "startAt": "0:41",
         "audioDuration": 11,
         "soundcloudUrl": "",
-        "song_title": "No Doubt - Don't Speak (Original)",
-        "artist_name": "The Cheerleader"
+        "song_title": "Don't Speak",
+        "artist_name": "No Doubt",
+        "itunesId": 1440718913
       },
       {
         "word": "ALL",
@@ -17946,8 +18032,9 @@
         "startAt": "1:00",
         "audioDuration": 7.6,
         "soundcloudUrl": "",
-        "song_title": "Weezer - Undone - The Sweater Song",
-        "artist_name": "Mbell0430"
+        "song_title": "Undone - The Sweater Song",
+        "artist_name": "Weezer",
+        "itunesId": 1440869923
       },
       {
         "word": "BIKINI",
@@ -18701,8 +18788,9 @@
         "startAt": "1:31",
         "audioDuration": 10,
         "soundcloudUrl": "",
-        "song_title": "Girl On Fire [Original Track]",
-        "artist_name": "Tammy Kesher"
+        "song_title": "Girl On Fire",
+        "artist_name": "Alicia Keys",
+        "itunesId": 562189342
       },
       {
         "word": "LIAR",
@@ -20292,7 +20380,8 @@
         "audioDuration": 15,
         "soundcloudUrl": "https://soundcloud.com/pearl-jam-official/evenflow-album-version",
         "artist_name": "Pearl Jam",
-        "song_title": "Evenflow"
+        "song_title": "Even Flow",
+        "itunesId": 425465318
       },
       {
         "word": "MILKSHAKE",
@@ -21576,7 +21665,10 @@
         "audioUrl": "2181394711",
         "startAt": "2:00",
         "audioDuration": 8,
-        "soundcloudUrl": "https://soundcloud.com/justin_beiber_swag/wood"
+        "soundcloudUrl": "https://soundcloud.com/justin_beiber_swag/wood",
+        "itunesId": 1833329002,
+        "song_title": "Wood",
+        "artist_name": "Taylor Swift"
       }
     ]
   },
@@ -23140,8 +23232,9 @@
         "startAt": "1:23",
         "audioDuration": 16,
         "soundcloudUrl": "https://soundcloud.com/uiceheidd/wishing-well",
-        "artist_name": "The Kid LAROI",
-        "song_title": "Wishing Well"
+        "artist_name": "Juice WRLD",
+        "song_title": "Wishing Well",
+        "itunesId": 1526562185
       },
       {
         "word": "GIRLONFIRE",
@@ -23372,7 +23465,8 @@
         "audioDuration": 17,
         "soundcloudUrl": "https://soundcloud.com/paramore/crushcrushcrush",
         "artist_name": "Paramore",
-        "song_title": "Crush, Crush, Crush"
+        "song_title": "Crushcrushcrush",
+        "itunesId": 604804767
       },
       {
         "word": "SCARY",
@@ -24710,8 +24804,9 @@
         "startAt": "0:00",
         "audioDuration": 22,
         "soundcloudUrl": "https://soundcloud.com/choirboys-official/run-to-paradise",
-        "artist_name": "Australian Crawl",
-        "song_title": "Run to Paradise"
+        "artist_name": "Choirboys",
+        "song_title": "Run To Paradise",
+        "itunesId": 1614975980
       },
       {
         "word": "IGOTYOU",
@@ -25446,8 +25541,9 @@
         "audioUrl": 1018567435,
         "startAt": "0:23",
         "audioDuration": 24,
-        "song_title": "Lana Del Rey - Diet Mountain Dew",
-        "artist_name": "Soothing Space ϟ"
+        "song_title": "Diet Mountain Dew",
+        "artist_name": "Lana Del Rey",
+        "itunesId": 1442452473
       },
       {
         "word": "SUGAR",
@@ -25498,8 +25594,9 @@
         "audioUrl": 236967116,
         "startAt": "0:16",
         "audioDuration": 18.4,
-        "song_title": "Amy Winehouse - Back To Black",
-        "artist_name": "Ereny Youssef"
+        "song_title": "Back to Black",
+        "artist_name": "Amy Winehouse",
+        "itunesId": 1422677785
       },
       {
         "word": "FRIEND",
@@ -25581,8 +25678,9 @@
         "audioUrl": 255960902,
         "startAt": "0:11",
         "audioDuration": 18,
-        "song_title": "Just A Dream",
-        "artist_name": "Nelly Official"
+        "song_title": "Just a Dream",
+        "artist_name": "Nelly",
+        "itunesId": 1445283464
       },
       {
         "word": "LOVE",
@@ -25633,8 +25731,9 @@
         "audioUrl": 328456146,
         "startAt": "0:06",
         "audioDuration": 6,
-        "song_title": "sheck wes - mo bamba (prod. 16yrold & take a daytrip)",
-        "artist_name": "16yrold"
+        "song_title": "Mo Bamba",
+        "artist_name": "Sheck Wes",
+        "itunesId": 1438063138
       },
       {
         "word": "22",
@@ -25717,7 +25816,8 @@
         "startAt": "0:00",
         "audioDuration": 5.3,
         "song_title": "Marimba Iphone Ringtone (Trap Remix)",
-        "artist_name": "DarksLight"
+        "artist_name": "DarksLight",
+        "noAutoMatch": true
       },
       {
         "word": "LILYALLEN",
@@ -25768,8 +25868,9 @@
         "audioUrl": 239435476,
         "startAt": "0:46",
         "audioDuration": 14,
-        "song_title": "The Beatles - Blackbird (Original Version)",
-        "artist_name": "Selena McMichael"
+        "song_title": "Blackbird (2018 Mix)",
+        "artist_name": "The Beatles",
+        "itunesId": 1436905371
       },
       {
         "word": "ROBIN",
@@ -25838,7 +25939,8 @@
         "startAt": "0:00",
         "audioDuration": 10,
         "song_title": "Fireflies",
-        "artist_name": "OwlCityOfficial"
+        "artist_name": "Owl City",
+        "itunesId": 1440783289
       },
       {
         "word": "DOVES",
@@ -26197,8 +26299,9 @@
         "audioUrl": 73115601,
         "startAt": "0:13",
         "audioDuration": 10.5,
-        "song_title": "Katrina & The Waves \"Walking On Sunshine\"",
-        "artist_name": "Cleopatra Records"
+        "song_title": "Walking On Sunshine",
+        "artist_name": "Katrina and the Waves",
+        "itunesId": 724739482
       },
       {
         "word": "ISLAND",
@@ -26319,8 +26422,9 @@
         "audioUrl": 45384891,
         "startAt": "0:30.3",
         "audioDuration": 3,
-        "song_title": "Jet - Are you Gonna Be My Girl",
-        "artist_name": "Adamashvili Gigi1"
+        "song_title": "Are You Gonna Be My Girl",
+        "artist_name": "Jet",
+        "itunesId": 1778047621
       },
       {
         "word": "THEBEATLES",
@@ -26469,8 +26573,9 @@
         "audioUrl": 295774814,
         "startAt": "0:35",
         "audioDuration": 15,
-        "song_title": "Lorde - Everybody wants to rule the world",
-        "artist_name": "Rana Mohamed."
+        "song_title": "Everybody Wants To Rule the World",
+        "artist_name": "Lorde",
+        "itunesId": 1440873806
       },
       {
         "word": "MANESKIN",
@@ -26496,8 +26601,9 @@
         "audioUrl": 124514202,
         "startAt": "0:35",
         "audioDuration": 25,
-        "song_title": "ADELE - 'Make You Feel My Love'",
-        "artist_name": "smparadise"
+        "song_title": "Make You Feel My Love",
+        "artist_name": "Adele",
+        "itunesId": 1545376278
       },
       {
         "word": "HURT",
@@ -26576,8 +26682,9 @@
         "audioUrl": 780822151,
         "startAt": "2:36",
         "audioDuration": 10,
-        "song_title": "Blue Man Group - Vortex (Live At NPR Tiny Desk Concert)",
-        "artist_name": "LIVE | NPR Tiny Desk"
+        "song_title": "Vortex",
+        "artist_name": "Blue Man Group",
+        "itunesId": 1086603909
       },
       {
         "word": "TPAIN",
@@ -26589,8 +26696,9 @@
         "audioUrl": 780750802,
         "startAt": "1:16",
         "audioDuration": 10,
-        "song_title": "T-Pain - Buy U A Drank (Shawty Snappin') (Live At NPR Tiny Desk Concert)",
-        "artist_name": "LIVE | NPR Tiny Desk"
+        "song_title": "Buy U a Drank (Shawty Snappin') [feat. Yung Joc]",
+        "artist_name": "T-Pain",
+        "itunesId": 1556722419
       },
       {
         "word": "KEYS",
@@ -26602,8 +26710,9 @@
         "audioUrl": 845993113,
         "startAt": "2:37",
         "audioDuration": 15,
-        "song_title": "Alicia Keys - Fallin' (Live @ NPR Tiny Desk)",
-        "artist_name": "meowly cyrus"
+        "song_title": "Fallin'",
+        "artist_name": "Alicia Keys",
+        "itunesId": 256937038
       },
       {
         "word": "CIRCLES",
@@ -26616,7 +26725,8 @@
         "startAt": "1:05",
         "audioDuration": 15,
         "song_title": "Post Malone - Circles (Live - Tiny Desk Concert)",
-        "artist_name": "Yellopz"
+        "artist_name": "Yellopz",
+        "noAutoMatch": true
       },
       {
         "word": "BOAF",
@@ -26643,7 +26753,8 @@
         "startAt": "0:22.5",
         "audioDuration": 18,
         "song_title": "Shape Of My Heart / Lucid Dreams - Sting and Shaggy (Tiny Desk version)",
-        "artist_name": "Andrés Sesto"
+        "artist_name": "Andrés Sesto",
+        "noAutoMatch": true
       },
       {
         "word": "MACMILLER",
@@ -26656,7 +26767,8 @@
         "startAt": "1:10",
         "audioDuration": 12.5,
         "song_title": "Mac Miller - 2009 (Live: NPR Tiny Desk Concert)",
-        "artist_name": "circled"
+        "artist_name": "circled",
+        "noAutoMatch": true
       },
       {
         "word": "STYLES",
@@ -26669,7 +26781,8 @@
         "startAt": "0:30",
         "audioDuration": 15,
         "song_title": "harry styles - adore you (tiny desk concert)",
-        "artist_name": "lovers"
+        "artist_name": "lovers",
+        "noAutoMatch": true
       }
     ]
   },
@@ -26692,8 +26805,9 @@
         "audioUrl": "94497567",
         "startAt": "0:28",
         "audioDuration": 10,
-        "song_title": "thrift shop - macklemore",
-        "artist_name": "Shannon Claydon"
+        "song_title": "Thrift Shop (feat. Wanz)",
+        "artist_name": "Macklemore & Ryan Lewis",
+        "itunesId": 560097715
       },
       {
         "word": "TIME",
@@ -27003,8 +27117,9 @@
         "audioUrl": 237603952,
         "startAt": "0:39.5",
         "audioDuration": 9,
-        "song_title": "Desiigner- \"Panda\" (Prod. By: Menace)",
-        "artist_name": "LifeOfDesiigner"
+        "song_title": "Panda",
+        "artist_name": "Desiigner",
+        "itunesId": 1445318759
       },
       {
         "word": "IMPALA",
@@ -27181,8 +27296,9 @@
         "audioUrl": 693902449,
         "startAt": "0:58.5",
         "audioDuration": 10.8,
-        "song_title": "Arizona Zervas - ROXANNE (Prod. 94 Skrt)",
-        "artist_name": "Arizona Zervas"
+        "song_title": "ROXANNE",
+        "artist_name": "Arizona Zervas",
+        "itunesId": 1487953560
       },
       {
         "word": "BLINDING",
@@ -27700,8 +27816,9 @@
         "audioUrl": 407086932,
         "startAt": "1:27",
         "audioDuration": 14,
-        "song_title": "Zombie - The Cranberries",
-        "artist_name": "LPMax"
+        "song_title": "Zombie (2025 Remastered)",
+        "artist_name": "The Cranberries",
+        "itunesId": 1828830887
       },
       {
         "word": "BREAKEVEN",
@@ -27780,8 +27897,9 @@
         "audioUrl": 46352940,
         "startAt": "0:13",
         "audioDuration": 12,
-        "song_title": "Cave In (Album Version)",
-        "artist_name": "OwlCityOfficial"
+        "song_title": "Cave In",
+        "artist_name": "Owl City",
+        "itunesId": 1440770732
       },
       {
         "word": "YELLOW",
@@ -27902,8 +28020,9 @@
         "audioUrl": 122531191,
         "startAt": "0:46.5",
         "audioDuration": 6,
-        "song_title": "Why'd You Only Call Me When You're High   Arctic Monkeys   A.M.",
-        "artist_name": "HUMBERTO GALLO"
+        "song_title": "Why'd You Only Call Me When You're High?",
+        "artist_name": "Arctic Monkeys",
+        "itunesId": 663098056
       },
       {
         "word": "YES",
@@ -27915,8 +28034,9 @@
         "audioUrl": 325230718,
         "startAt": "0:24",
         "audioDuration": 12,
-        "song_title": "A Tribe Called Quest - Can I Kick It",
-        "artist_name": "Oscar Golberg"
+        "song_title": "Can I Kick It?",
+        "artist_name": "A Tribe Called Quest",
+        "itunesId": 266768597
       },
       {
         "word": "LOVE",
@@ -27956,8 +28076,9 @@
         "audioUrl": 256141259,
         "startAt": "0:08",
         "audioDuration": 13,
-        "song_title": "Do You Really Want To Hurt Me (Dub Version)",
-        "artist_name": "Culture Club Official"
+        "song_title": "Do You Really Want to Hurt Me",
+        "artist_name": "Culture Club",
+        "itunesId": 724474136
       },
       {
         "word": "SORRY",
@@ -27969,8 +28090,9 @@
         "audioUrl": 263728011,
         "startAt": "0:37",
         "audioDuration": 13.1,
-        "song_title": "Justin Bieber - Sorry",
-        "artist_name": "Hadar mexer"
+        "song_title": "Sorry",
+        "artist_name": "Justin Bieber",
+        "itunesId": 1440826320
       },
       {
         "word": "REALLIFE",
@@ -28021,8 +28143,9 @@
         "audioUrl": 257052013,
         "startAt": "0:06",
         "audioDuration": 9,
-        "song_title": "Who Knew (Edit)",
-        "artist_name": "Official Pink"
+        "song_title": "Who Knew",
+        "artist_name": "P!nk",
+        "itunesId": 604742152
       },
       {
         "word": "AAR",
@@ -28034,8 +28157,9 @@
         "audioUrl": 26318711,
         "startAt": "0:33.4",
         "audioDuration": 11,
-        "song_title": "The All-American Rejects - It Ends Tonight",
-        "artist_name": "Interscope Records"
+        "song_title": "It Ends Tonight",
+        "artist_name": "The All-American Rejects",
+        "itunesId": 1444093110
       },
       {
         "word": "UMBRELLA",
@@ -28075,8 +28199,9 @@
         "audioUrl": 10676644,
         "startAt": "0:44",
         "audioDuration": 10,
-        "song_title": "Fergie - Big Girls Don't Cry",
-        "artist_name": "Interscope Records"
+        "song_title": "Big Girls Don't Cry (Personal)",
+        "artist_name": "Fergie",
+        "itunesId": 1618974361
       },
       {
         "word": "PARAMORE",
@@ -28102,8 +28227,9 @@
         "audioUrl": 193429231,
         "startAt": "0:40",
         "audioDuration": 10,
-        "song_title": "Carrie Underwood- Before He Cheats",
-        "artist_name": "♫♡Sahiiraa♡♫"
+        "song_title": "Before He Cheats",
+        "artist_name": "Carrie Underwood",
+        "itunesId": 214696369
       },
       {
         "word": "ESCAPE",
@@ -28140,8 +28266,9 @@
         "audioUrl": 337468659,
         "startAt": "0:13",
         "audioDuration": 7,
-        "song_title": "Despacito - Luis Fonsi feat. Daddy Yankee - Sax - Graziatto",
-        "artist_name": "Luis Graziatto"
+        "song_title": "Despacito (Saxophone Version)",
+        "artist_name": "SAX David Pérez",
+        "itunesId": 1649489986
       },
       {
         "word": "HARP",
@@ -28153,8 +28280,9 @@
         "audioUrl": 326370450,
         "startAt": "0:00",
         "audioDuration": 7,
-        "song_title": "Woman of Ireland (Traditional Harp Music)",
-        "artist_name": "Harp Music Collective"
+        "song_title": "Woman of the North",
+        "artist_name": "Celtic Harp Soundscapes",
+        "itunesId": 1200722680
       },
       {
         "word": "ACCORDION",
@@ -28167,7 +28295,8 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "song_title": "Instrument Collection - Accordion (02)",
-        "artist_name": "Aki Knaappila"
+        "artist_name": "Aki Knaappila",
+        "noAutoMatch": true
       },
       {
         "word": "VIOLIN",
@@ -28179,8 +28308,9 @@
         "audioUrl": 88262976,
         "startAt": "0:12",
         "audioDuration": 6,
-        "song_title": "Bach: Sonata for Violin solo no 2 in A minor-Andante",
-        "artist_name": "necmusic"
+        "song_title": "Sonata for Violin Solo No. 1 in G Minor, BWV 1001: I. Adagio",
+        "artist_name": "Hilary Hahn",
+        "itunesId": 1395267537
       },
       {
         "word": "BONGO",
@@ -28207,7 +28337,8 @@
         "startAt": "0:08",
         "audioDuration": 6,
         "song_title": "Piccolo Instrument",
-        "artist_name": "Eotide"
+        "artist_name": "Eotide",
+        "noAutoMatch": true
       },
       {
         "word": "CELLO",
@@ -28233,8 +28364,9 @@
         "audioUrl": 96667750,
         "startAt": "0:04",
         "audioDuration": 8,
-        "song_title": "Vivaldi: Mandolin Concerto in C major, RV 425 - 1. Allegro (2013.06.12)",
-        "artist_name": "Jason Castle"
+        "song_title": "Mandolin Concerto in C Major, RV 425: I. Allegro",
+        "artist_name": "Paul Grund, Jörg Faerber & Württemberg Chamber Orchestra Heilbronn",
+        "itunesId": 1758922691
       }
     ]
   },
@@ -28257,8 +28389,9 @@
         "audioUrl": 818553079,
         "startAt": "2:06",
         "audioDuration": 11,
-        "song_title": "Tennessee Whiskey (Chris Stapleton Cover)",
-        "artist_name": "teddyswims"
+        "song_title": "Tennessee Whiskey",
+        "artist_name": "Chris Stapleton",
+        "itunesId": 1440827492
       },
       {
         "word": "LIKEAG6",
@@ -28326,8 +28459,9 @@
         "audioUrl": 72381474,
         "startAt": "1:23",
         "audioDuration": 11,
-        "song_title": "Livin La Vida Loca",
-        "artist_name": "MetalMalte"
+        "song_title": "Livin' la Vida Loca",
+        "artist_name": "Ricky Martin",
+        "itunesId": 192821659
       },
       {
         "word": "WIZ",
@@ -28367,8 +28501,9 @@
         "audioUrl": 153330529,
         "startAt": "0:15",
         "audioDuration": 10,
-        "song_title": "REMY BOYZ- 679 (NEW 2014)",
-        "artist_name": "FettyWap1738"
+        "song_title": "679 (feat. Monty)",
+        "artist_name": "Fetty Wap",
+        "itunesId": 1039459656
       }
     ]
   },
@@ -28621,8 +28756,9 @@
         "audioUrl": "182404702",
         "startAt": "2:38",
         "audioDuration": 11,
-        "song_title": "Macklemore & Ryan Lewis - Can't Hold Us Feat. Ray Dalton",
-        "artist_name": "Dodo Ahmed"
+        "song_title": "Can't Hold Us (feat. Ray Dalton)",
+        "artist_name": "Macklemore & Ryan Lewis",
+        "itunesId": 560148920
       },
       {
         "word": "HEARTS",
@@ -28676,8 +28812,9 @@
         "audioUrl": "308950076",
         "startAt": "0:17",
         "audioDuration": 10,
-        "song_title": "Michael Jackson - Smooth Criminal",
-        "artist_name": "UmarkX"
+        "song_title": "Smooth Criminal",
+        "artist_name": "Michael Jackson",
+        "itunesId": 159294551
       },
       {
         "word": "SOAPPALLED",
@@ -28958,8 +29095,9 @@
         "audioUrl": 44717664,
         "startAt": "1:35.5",
         "audioDuration": 11,
-        "song_title": "Luniz - I Got 5 On It",
-        "artist_name": "Qeta Isiani"
+        "song_title": "I Got 5 On It",
+        "artist_name": "Luniz",
+        "itunesId": 303890794
       }
     ]
   },
@@ -29038,8 +29176,9 @@
         "audioUrl": 1493298820,
         "startAt": "1:03",
         "audioDuration": 10,
-        "song_title": "sade - smooth operator [slightly sped up]",
-        "artist_name": "wwymr"
+        "song_title": "Smooth Operator (Single Version)",
+        "artist_name": "Sade",
+        "itunesId": 431609124
       },
       {
         "word": "BRAZIL",
@@ -29051,8 +29190,9 @@
         "audioUrl": 1350966649,
         "startAt": "1:23",
         "audioDuration": 11,
-        "song_title": "Declan McKenna Brazil (Tiktok Remix)",
-        "artist_name": "Luka <3 🦇🍃"
+        "song_title": "Brazil",
+        "artist_name": "Declan McKenna",
+        "itunesId": 1208110313
       },
       {
         "word": "YOUNG",
@@ -29117,8 +29257,9 @@
         "audioUrl": 61619141,
         "startAt": "0:26",
         "audioDuration": 12,
-        "song_title": "HERE COMES THE SUN",
-        "artist_name": "BEATLE Juice"
+        "song_title": "Here Comes the Sun",
+        "artist_name": "The Beatles",
+        "itunesId": 1441164589
       },
       {
         "word": "FUN",
@@ -29144,8 +29285,9 @@
         "audioUrl": 1647150384,
         "startAt": "1:56",
         "audioDuration": 16,
-        "song_title": "Frank Ocean - Lost",
-        "artist_name": "Songs That Aren't On Sc"
+        "song_title": "Lost",
+        "artist_name": "Frank Ocean",
+        "itunesId": 1440766784
       },
       {
         "word": "HEART",
@@ -29199,8 +29341,9 @@
         "audioUrl": 250983601,
         "startAt": "0:48",
         "audioDuration": 12,
-        "song_title": "System Of A Down - Chop Suey",
-        "artist_name": "Alen Zerek"
+        "song_title": "Chop Suey!",
+        "artist_name": "System Of A Down",
+        "itunesId": 273714640
       }
     ]
   },
@@ -29321,8 +29464,9 @@
         "audioUrl": 250033408,
         "startAt": "1:00",
         "audioDuration": 8,
-        "song_title": "16. Hit The Quan- IHeart Memphis",
-        "artist_name": "TheBeatDropper"
+        "song_title": "Hit the Quan",
+        "artist_name": "iLoveMemphis",
+        "itunesId": 1047963461
       },
       {
         "word": "XO",
@@ -29362,8 +29506,9 @@
         "audioUrl": 199387210,
         "startAt": "1:01",
         "audioDuration": 7,
-        "song_title": "09 - Big Sean Ft E40 I Dont Fuck With You",
-        "artist_name": "Maanniixx TM95"
+        "song_title": "I Don't F**k With You (feat. E-40)",
+        "artist_name": "Big Sean",
+        "itunesId": 1440831608
       },
       {
         "word": "BADBLOOD",
@@ -29442,8 +29587,9 @@
         "audioUrl": "903528619",
         "startAt": "0:21",
         "audioDuration": 10,
-        "song_title": "david guetta ft. kid cudi - memories (slowed to perfection)",
-        "artist_name": "Drifteenycal"
+        "song_title": "Memories (feat. Kid Cudi)",
+        "artist_name": "David Guetta",
+        "itunesId": 693246516
       },
       {
         "word": "NICKI",
@@ -29469,8 +29615,9 @@
         "audioUrl": "242706733",
         "startAt": "0:54.2",
         "audioDuration": 15,
-        "song_title": "Young Wild And Free Ft Bruno Mars (snoop Dogg Ampamp Wiz Khalifa) [Mp3g.lu].mp3",
-        "artist_name": "Ignacio Montero Villar"
+        "song_title": "Young, Wild & Free (feat. Bruno Mars)",
+        "artist_name": "Snoop Dogg & Wiz Khalifa",
+        "itunesId": 480436634
       },
       {
         "word": "SELENA",
@@ -29496,8 +29643,9 @@
         "audioUrl": "135180352",
         "startAt": "0:24",
         "audioDuration": 30,
-        "song_title": "Daft Punk Ft. Pharrel Williams & Nile Rodgers - Get Lucky (Grammy Version)[Studio]",
-        "artist_name": "naio.."
+        "song_title": "One More Time",
+        "artist_name": "Daft Punk",
+        "itunesId": 697195462
       },
       {
         "word": "TYLER",
@@ -29815,7 +29963,8 @@
         "audioDuration": 19.3,
         "soundcloudUrl": "https://soundcloud.com/ladygaga/zombieboy",
         "artist_name": "Lady Gaga",
-        "song_title": "Zombie Boy"
+        "song_title": "Zombieboy",
+        "itunesId": 1792667017
       },
       {
         "word": "NICKI",
@@ -29898,8 +30047,9 @@
         "audioUrl": 212034334,
         "startAt": "0:50",
         "audioDuration": 11,
-        "song_title": "Natalie Imbruglia - Torn",
-        "artist_name": "franriv"
+        "song_title": "Torn",
+        "artist_name": "Natalie Imbruglia",
+        "itunesId": 286006506
       },
       {
         "word": "BOXER",
@@ -29981,8 +30131,9 @@
         "audioUrl": 6257300,
         "startAt": "0:44",
         "audioDuration": 11,
-        "song_title": "Jolene - The White Stripes",
-        "artist_name": "Jackie Brown & Kaya"
+        "song_title": "Jolene",
+        "artist_name": "The White Stripes",
+        "itunesId": 1534388457
       },
       {
         "word": "GIRLCRUSH",
@@ -29994,8 +30145,9 @@
         "audioUrl": 1241395876,
         "startAt": "0:10",
         "audioDuration": 15,
-        "song_title": "Girl Crush | Harry Styles",
-        "artist_name": "Belle"
+        "song_title": "Girl Crush",
+        "artist_name": "Sweet Little Band",
+        "itunesId": 1503575298
       }
     ]
   },
@@ -30109,8 +30261,9 @@
         "startAt": "0:15",
         "audioDuration": 11,
         "soundcloudUrl": "",
-        "song_title": "Run - DMC  Walk This Way",
-        "artist_name": "CJ Mamen"
+        "song_title": "Walk This Way (feat. Aerosmith)",
+        "artist_name": "Run-DMC",
+        "itunesId": 254344996
       },
       {
         "word": "NIRVANA",
@@ -30514,8 +30667,9 @@
         "audioUrl": 325230718,
         "startAt": "0:49.5",
         "audioDuration": 7.5,
-        "song_title": "A Tribe Called Quest - Can I Kick It",
-        "artist_name": "Oscar Golberg"
+        "song_title": "Can I Kick It?",
+        "artist_name": "A Tribe Called Quest",
+        "itunesId": 266768597
       }
     ]
   },
@@ -32242,8 +32396,9 @@
         "soundcloudUrl": "https://soundcloud.com/szababy2/saturn",
         "startAt": "0:09",
         "audioDuration": 10,
-        "artist_name": "Lana Del Rey",
-        "song_title": "Saturn"
+        "artist_name": "SZA",
+        "song_title": "Crybaby",
+        "itunesId": 1786643056
       },
       {
         "word": "AAR",
@@ -32710,7 +32865,8 @@
         "startAt": "2:43",
         "audioDuration": 17.6,
         "artist_name": "Akon",
-        "song_title": "Come On Home"
+        "song_title": "Lonely (Dirty) [Old Version]",
+        "itunesId": 1440731466
       },
       {
         "word": "SAD",
@@ -32839,8 +32995,9 @@
         "soundcloudUrl": "https://soundcloud.com/alejandro-chavez-920785612/bluegrass-banjo-country-banjo",
         "startAt": "0:00",
         "audioDuration": 6,
-        "artist_name": "Unknown",
-        "song_title": "Bluegrass Banjo Country Banjo"
+        "artist_name": "Bluegrass Banjo",
+        "song_title": "Dear Ol' Dixie",
+        "itunesId": 286840077
       },
       {
         "word": "TUBA",
@@ -32869,7 +33026,8 @@
         "startAt": "0:00",
         "audioDuration": 8,
         "artist_name": "Timmy Trumpet",
-        "song_title": "Didgeridoo"
+        "song_title": "Didgeridoo",
+        "noAutoMatch": true
       },
       {
         "word": "FLUTE",
@@ -33055,7 +33213,8 @@
         "startAt": "0:00",
         "audioDuration": 7.4,
         "artist_name": "Coldplay",
-        "song_title": "Unknown"
+        "song_title": "Charlie Brown",
+        "itunesId": 726373150
       },
       {
         "word": "MARS",
@@ -35443,7 +35602,8 @@
         "audioDuration": 8,
         "soundcloudUrl": "https://soundcloud.com/falloutboy/08-thnks-fr-th-mmrs",
         "artist_name": "Fall Out Boy",
-        "song_title": "Thanks for the Memories"
+        "song_title": "Thnks Fr Th Mmrs",
+        "itunesId": 1440787031
       }
     ]
   },
@@ -35603,7 +35763,8 @@
         "startAt": "0:11",
         "audioDuration": 11,
         "artist_name": "Pearl Jam",
-        "song_title": "Evenflow"
+        "song_title": "Even Flow",
+        "itunesId": 425465318
       },
       {
         "word": "ESPRESSO",
@@ -35816,8 +35977,9 @@
         "audioUrl": "113188401",
         "startAt": "0:03",
         "audioDuration": 8,
-        "song_title": "Bach: Suite for Cello solo no 1 in G major-Prelude",
-        "artist_name": "necmusic"
+        "song_title": "Suite No. 1 en Sol Mayor: I. Prélude, moderato",
+        "artist_name": "Pablo Casals",
+        "itunesId": 283048881
       },
       {
         "word": "EMINEM",
@@ -37621,8 +37783,9 @@
         "soundcloudUrl": "https://soundcloud.com/katseye-music/gnarly",
         "startAt": "0:38",
         "audioDuration": 10,
-        "artist_name": "Kat & Eye",
-        "song_title": "Gnarly"
+        "artist_name": "KATSEYE",
+        "song_title": "Gnarly",
+        "itunesId": 1809020562
       },
       {
         "word": "GNX",
@@ -37766,8 +37929,9 @@
         "startAt": "0:30",
         "audioDuration": 8,
         "soundcloudUrl": "https://soundcloud.com/adriana-pinnock/zayn-malik-pillow-talk-cover",
-        "artist_name": "Zayn Malik",
-        "song_title": "Pillow Talk"
+        "artist_name": "ZAYN",
+        "song_title": "PILLOWTALK",
+        "itunesId": 1078293239
       },
       {
         "word": "PHIL",
@@ -38072,8 +38236,9 @@
         "startAt": "0:57",
         "audioDuration": 10,
         "soundcloudUrl": "https://soundcloud.com/umit-basyigit/poeiziunxodm128-2",
-        "artist_name": "Nirvana",
-        "song_title": "Nevermind"
+        "artist_name": "Dennis Lloyd",
+        "song_title": "Nevermind",
+        "itunesId": 1242284189
       },
       {
         "word": "PURPOSE",
@@ -39221,8 +39386,9 @@
         "soundcloudUrl": "https://soundcloud.com/craig-d-635805731/the-subway",
         "startAt": "2:27",
         "audioDuration": 24,
-        "artist_name": "Craig D",
-        "song_title": "The Subway"
+        "artist_name": "Chappell Roan",
+        "song_title": "The Subway",
+        "itunesId": 1828261475
       },
       {
         "word": "DIEFORYOU",
@@ -39759,8 +39925,9 @@
         "soundcloudUrl": "https://on.soundcloud.com/31YVQbXOg3ms3LuW6X",
         "startAt": "0:00",
         "audioDuration": 29,
-        "song_title": "KISS - I Was Made For Loving You",
-        "artist_name": "Mattias"
+        "song_title": "I Was Made for Lovin' You",
+        "artist_name": "Kiss",
+        "itunesId": 1440861216
       },
       {
         "word": "ACDC",
@@ -40114,8 +40281,9 @@
         "startAt": "0:10",
         "audioDuration": 15,
         "soundcloudUrl": "https://on.soundcloud.com/dWhqqh0QYfL2QkRnqa",
-        "artist_name": "Panic! at the Disco",
-        "song_title": "Unable to determine specific song from URL"
+        "artist_name": "Panic! At the Disco",
+        "song_title": "Death of a Bachelor",
+        "itunesId": 1050385382
       },
       {
         "word": "XTINA",
@@ -40129,7 +40297,8 @@
         "audioDuration": 15,
         "soundcloudUrl": "https://on.soundcloud.com/nE7FsO7b98I9s6PZfq",
         "artist_name": "Christina Aguilera",
-        "song_title": "Unknown"
+        "song_title": "Genie in a Bottle",
+        "itunesId": 1308542773
       },
       {
         "word": "AL",
@@ -40896,7 +41065,8 @@
         "startAt": "0:09",
         "audioDuration": 10,
         "artist_name": "Dominic Fike",
-        "song_title": "Baby Doll"
+        "song_title": "Babydoll",
+        "itunesId": 1438243880
       }
     ]
   },
@@ -41141,8 +41311,9 @@
         "soundcloudUrl": "https://on.soundcloud.com/GYE7ZlUydcTaAtwUVD",
         "startAt": "0:18",
         "audioDuration": 15,
-        "song_title": "Travis Scott, James Blake, 21 Savage - Till Further Notice (Eli Moore Remix)",
-        "artist_name": "ELI MOORE"
+        "song_title": "TIL FURTHER NOTICE (feat. James Blake & 21 Savage)",
+        "artist_name": "Travis Scott",
+        "itunesId": 1699712667
       },
       {
         "word": "GUESS",
@@ -41260,8 +41431,9 @@
         "soundcloudUrl": "https://on.soundcloud.com/QsFVK9aNeaGDSYCA0I",
         "startAt": "1:00",
         "audioDuration": 15,
-        "song_title": "Lush Life by Zara Larsson",
-        "artist_name": "Total Eclipse"
+        "song_title": "Lush Life",
+        "artist_name": "Zara Larsson",
+        "itunesId": 1201058113
       }
     ]
   },
@@ -41626,8 +41798,9 @@
         "soundcloudUrl": "https://soundcloud.com/jay-z-official/03-bonnie-clyde-album-version",
         "startAt": "0:09",
         "audioDuration": 8,
-        "artist_name": "Jay-Z",
-        "song_title": "Bonnie & Clyde"
+        "artist_name": "JAŸ-Z",
+        "song_title": "'03 Bonnie & Clyde (feat. Beyoncé Knowles)",
+        "itunesId": 1440750274
       },
       {
         "word": "SONS",
@@ -43254,7 +43427,8 @@
         "startAt": "0:08",
         "audioDuration": 10,
         "artist_name": "Whitney Houston",
-        "song_title": "The Star-Spangled Banner"
+        "song_title": "The Star Spangled Banner (feat. The Florida Orchestra) [Live from Super Bowl XXV]",
+        "itunesId": 1550132473
       },
       {
         "word": "SLOW",
@@ -44072,8 +44246,9 @@
         "soundcloudUrl": "https://soundcloud.com/jay-z-official/hard-knock-life-ghetto",
         "startAt": "0:07",
         "audioDuration": 10,
-        "artist_name": "Jay-Z",
-        "song_title": "Hard Knock Life"
+        "artist_name": "JAŸ-Z",
+        "song_title": "Hard Knock Life (Ghetto Anthem)",
+        "itunesId": 1440913399
       },
       {
         "word": "CHARMED",
@@ -44346,8 +44521,9 @@
         "audioUrl": "127909853",
         "startAt": "0:38",
         "audioDuration": 11,
-        "song_title": "Stolen Dance - Milky Chance",
-        "artist_name": "karms"
+        "song_title": "Stolen Dance (Radio Edit)",
+        "artist_name": "Milky Chance",
+        "itunesId": 1850570783
       },
       {
         "word": "GALWAY",
@@ -44415,8 +44591,9 @@
         "audioUrl": "328456146",
         "startAt": "0:03.5",
         "audioDuration": 8,
-        "song_title": "sheck wes - mo bamba (prod. 16yrold & take a daytrip)",
-        "artist_name": "16yrold"
+        "song_title": "Mo Bamba",
+        "artist_name": "Sheck Wes",
+        "itunesId": 1438063138
       },
       {
         "word": "CCR",
@@ -46546,8 +46723,9 @@
         "soundcloudUrl": "https://on.soundcloud.com/jOTmWXU0xav3MxaI0C",
         "startAt": "0:00",
         "audioDuration": 7,
-        "song_title": "Ke$ha - Tik Tok",
-        "artist_name": "2vvelve"
+        "song_title": "TiK ToK",
+        "artist_name": "Kesha",
+        "itunesId": 339972792
       },
       {
         "word": "GIRLS",
@@ -46590,8 +46768,9 @@
         "soundcloudUrl": "https://on.soundcloud.com/6z1vUvZV1Si7PnxRgt",
         "startAt": "0:07",
         "audioDuration": 8,
-        "artist_name": "Mac Miller",
-        "song_title": "Young Folks"
+        "artist_name": "Peter Bjorn and John",
+        "song_title": "Young Folks",
+        "itunesId": 1442990320
       },
       {
         "word": "BOWLING",
@@ -47019,7 +47198,7 @@
       {
         "word": "OMI",
         "artist_name": "Omi",
-        "song_title": "Cheerleader Felix Jaehn",
+        "song_title": "Cheerleader (Felix Jaehn Remix) [Radio Edit]",
         "startX": 3,
         "startY": 0,
         "direction": "across",
@@ -47028,7 +47207,8 @@
         "audioUrl": 256767919,
         "soundcloudUrl": "https://soundcloud.com/omimusiconline/cheerleader-felix-jaehn",
         "startAt": "0:11",
-        "audioDuration": 11
+        "audioDuration": 11,
+        "itunesId": 1033360497
       },
       {
         "word": "GASOLINA",
@@ -49299,8 +49479,9 @@
         "soundcloudUrl": "https://soundcloud.com/syd708/tchaikovsky-piano-concerto-no",
         "startAt": "1:01",
         "audioDuration": 15,
-        "song_title": "Tchaikovsky   Piano Concerto No 1, B Flat Minor, Op 23 Open   Best Of Classical Music",
-        "artist_name": "Syd708"
+        "song_title": "Piano Concerto No. 1 in B-Flat Minor, Op. 23: 1. Allegro Non Troppo E Molto Maestoso - Allegro Con Spirito",
+        "artist_name": "Evgeny Kissin, Herbert von Karajan & Berlin Philharmonic",
+        "itunesId": 1452535258
       },
       {
         "word": "CHOPIN",
@@ -49358,8 +49539,9 @@
         "soundcloudUrl": "https://soundcloud.com/behruz-iskenderov/beethoven-symphony-no7-herbert-von-karajan",
         "startAt": "2:07",
         "audioDuration": 10,
-        "song_title": "Beethoven Symphony No.7 (Herbert Von Karajan)",
-        "artist_name": "Bahruz Isgandarov"
+        "song_title": "Symphony No. 7 in A Major, Op. 92: II. Allegretto",
+        "artist_name": "Vienna Philharmonic & Carlos Kleiber",
+        "itunesId": 1644892963
       },
       {
         "word": "FORTE",
@@ -49402,8 +49584,9 @@
         "soundcloudUrl": "https://soundcloud.com/valeriwall/maurice-ravel-bolero",
         "startAt": "13:12",
         "audioDuration": 10,
-        "song_title": "MAURICE RAVEL ~ Bolero",
-        "artist_name": "valeri-wall"
+        "song_title": "Pavane pour une infante défunte, M. 19",
+        "artist_name": "Bertrand Chamayou",
+        "itunesId": 1068269726
       },
       {
         "word": "LUDWIG",
@@ -49416,8 +49599,9 @@
         "soundcloudUrl": "https://soundcloud.com/epiphanic-serendipity/symphony-no-5-beethoven",
         "startAt": "0:00",
         "audioDuration": 20,
-        "song_title": "Symphony No. 5 - Beethoven",
-        "artist_name": "Classical Radio"
+        "song_title": "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio",
+        "artist_name": "Vienna Philharmonic & Carlos Kleiber",
+        "itunesId": 1644892943
       }
     ]
   },
