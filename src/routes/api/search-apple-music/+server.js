@@ -1,4 +1,5 @@
 import { json } from '@sveltejs/kit';
+import { dev } from '$app/environment';
 import { generateMusicKitToken } from '$lib/utils/musickit.server.js';
 
 // Query-response cache: avoids redundant Apple API calls for the same search term.
@@ -10,6 +11,7 @@ const CACHE_TTL_MS = 5 * 60 * 1000;
 const ipCounts = new Map();
 
 function isRateLimited(ip) {
+  if (dev) return false;
   const now = Date.now();
   const entry = ipCounts.get(ip);
   if (!entry || now - entry.start > 60_000) {
