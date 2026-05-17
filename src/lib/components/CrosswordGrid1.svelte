@@ -1979,7 +1979,7 @@
         <!-- Grid container -->
         <div
           class="w-full relative crossword-grid-container"
-          style="aspect-ratio: {size.width}/{size.height}; container-type: inline-size; --cell-w: calc(100cqi / {size.width});"
+          style="aspect-ratio: {size.width}/{size.height}; container-type: inline-size; --cell-w: calc(100cqi / {size.width}); --grid-ratio: {size.width / size.height};"
         >
           <VinylRecord theme={puzzle.theme || "black"} {isPlaying} />
 
@@ -2510,16 +2510,21 @@
       justify-content: center;
     }
 
-    /* Grid aspect-ratio wrapper sizing. width: auto so the aspect-ratio
-       can shrink both dimensions when max-height binds (otherwise w-full
-       keeps width at 95vw and aspect-square cells overflow the height
-       cap, exactly the desktop bug we already fixed). */
+    /* Grid aspect-ratio wrapper sizing. max-width is the *minimum* of
+       95vw and the width that would be height-bound by the play area.
+       For wide grids this collapses to 95vw; for tall grids it shrinks
+       so the height-bound version fits (and aspect-square cells stay
+       inside the visible play area).
+       --grid-ratio = size.width / size.height (unitless). */
     .w-full.relative[style*="aspect-ratio"] {
-      width: auto;
-      max-width: 95vw;
+      max-width: min(
+        95vw,
+        calc(
+          (100dvh - var(--mobile-controls-h, 210px) - 102px) *
+            var(--grid-ratio, 1.2)
+        )
+      );
       max-height: calc(100% - 24px);
-      margin-left: auto;
-      margin-right: auto;
     }
 
     /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
