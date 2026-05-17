@@ -2528,13 +2528,10 @@
       max-height: calc(100% - 24px);
     }
 
-    /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
+    /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16).
+       Don't override max-width here — that fights with the
+       aspect-ratio-aware calc above. Only adjust font sizing. */
     @media (max-aspect-ratio: 9/16) {
-      .w-full.relative[style*="aspect-ratio"] {
-        max-width: 96vw; /* Allow slightly more width */
-      }
-      /* Cell-relative font: scales with grid container width / cell count.
-         Calibrated so 12-wide grid matches the prior 3.5vw clamp. */
       .cell-input {
         font-size: clamp(
           10px,
@@ -2549,9 +2546,6 @@
 
     /* Adjustments for WIDER mobile screens (e.g., aspect ratio > 9:16) */
     @media (min-aspect-ratio: 9/17) {
-      .w-full.relative[style*="aspect-ratio"] {
-        max-width: 94vw;
-      }
       .cell-input {
         font-size: clamp(
           11px,
