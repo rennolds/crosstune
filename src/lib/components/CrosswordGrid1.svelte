@@ -2522,7 +2522,7 @@
         95vw,
         calc(
           (100dvh - var(--mobile-controls-h, 210px) - 102px) *
-            var(--grid-ratio, 1.2) * 0.8
+            var(--grid-ratio, 1.2) * 0.88
         )
       );
       max-height: calc(100% - 24px);
