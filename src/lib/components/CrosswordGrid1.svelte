@@ -2497,17 +2497,17 @@
        No additional CSS needed here. */
 
     /* The flex container holding the grid.
-       The page-level grid layout (in /puzzles/[id]/+page.svelte and
-       /+page.svelte) reserves the visible play area, so this wrapper just
-       fills its parent and centers the crossword. Overflow stays visible
-       so the vinyl (sized to viewport) can extend past the now-narrower
-       grid container for tall+skinny shapes. */
+       Top-align (flex-start) on mobile so the grid sits right under the
+       title row instead of floating with symmetric padding — the bottom
+       gap above the controls visually replaces the wasted "top gap"
+       between the title and the centered grid. */
     .flex-1.w-full {
       flex: 1 1 auto;
       min-height: 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+      padding-top: 4px;
     }
 
     /* Grid aspect-ratio wrapper sizing. max-width is the *minimum* of
