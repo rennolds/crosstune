@@ -3,7 +3,7 @@
  * Enriches puzzle words with song_title and artist_name from SoundCloud oEmbed.
  *
  * Scope:
- *   - Archive: first 21 dates + last 21 dates
+ *   - Archive: all dates
  *   - Themed: all puzzles
  *
  * Usage:
@@ -29,11 +29,7 @@ const themed     = JSON.parse(readFileSync(themedPath,     'utf-8'));
 
 // --- Build target word list ---
 
-const archiveDates = Object.keys(crosswords).sort();
-const targetArchiveDates = new Set([
-  ...archiveDates.slice(0, 21),
-  ...archiveDates.slice(-21),
-]);
+const targetArchiveDates = new Set(Object.keys(crosswords));
 
 const targets = [];
 

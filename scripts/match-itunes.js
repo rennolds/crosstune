@@ -4,7 +4,7 @@
  * Uses JWT auth (same as production) — far more generous rate limits than iTunes Search API.
  *
  * Scope:
- *   - Archive: first 21 dates + last 21 dates
+ *   - Archive: all dates
  *   - Themed: all puzzles
  *
  * Usage:
@@ -25,7 +25,7 @@ const REVIEW  = process.argv.includes('--review');
 
 const CONCURRENCY = 5;
 const DELAY_MS    = 100;
-const CONFIDENCE_THRESHOLD = 0.45;
+const CONFIDENCE_THRESHOLD = 0.6;
 
 const crosswordsPath = join(__dirname, '../src/lib/data/crosswords.json');
 const themedPath     = join(__dirname, '../src/lib/data/themed_crosswords.json');
@@ -104,22 +104,22 @@ for (const [k, v] of Object.entries(matches)) {
 }
 
 // --- Build target list ---
-const archiveDates = Object.keys(crosswords).sort();
-const targetArchiveDates = new Set([
-  ...archiveDates.slice(0, 21),
-  ...archiveDates.slice(-21),
-]);
+const targetArchiveDates = new Set(Object.keys(crosswords));
 
 const targets = [];
 for (const date of targetArchiveDates) {
+  if (crosswords[date].skipAppleMusicMigration) continue;
   for (const word of crosswords[date].words ?? []) {
+    if (word.noAutoMatch) continue;
     if (!word.itunesId && word.song_title && word.artist_name) {
       targets.push({ source: 'archive', key: date, word });
     }
   }
 }
 for (const key of Object.keys(themed)) {
+  if (themed[key].skipAppleMusicMigration) continue;
   for (const word of themed[key].words ?? []) {
+    if (word.noAutoMatch) continue;
     if (!word.itunesId && word.song_title && word.artist_name) {
       targets.push({ source: 'themed', key, word });
     }
@@ -301,7 +301,9 @@ if (!APPLY) {
 let appliedArchive = 0, appliedThemed = 0;
 
 for (const date of targetArchiveDates) {
+  if (crosswords[date].skipAppleMusicMigration) continue;
   for (const word of crosswords[date].words ?? []) {
+    if (word.itunesId || word.noAutoMatch) continue;
     const m = matches[`archive:${date}:${word.word}`];
     if (!m || m.error || m.confidence < CONFIDENCE_THRESHOLD) continue;
     word.itunesId = m.itunesId;
@@ -309,7 +311,9 @@ for (const date of targetArchiveDates) {
   }
 }
 for (const key of Object.keys(themed)) {
+  if (themed[key].skipAppleMusicMigration) continue;
   for (const word of themed[key].words ?? []) {
+    if (word.itunesId || word.noAutoMatch) continue;
     const m = matches[`themed:${key}:${word.word}`];
     if (!m || m.error || m.confidence < CONFIDENCE_THRESHOLD) continue;
     word.itunesId = m.itunesId;

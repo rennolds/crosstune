@@ -106,7 +106,7 @@
 
   function handlePrivacy() {
     if (browser) {
-      window.open("./privacy", "_blank");
+      window.open("https://spotle.io/privacy", "_blank", "noopener,noreferrer");
     }
   }
 
