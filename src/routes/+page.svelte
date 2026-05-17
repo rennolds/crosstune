@@ -58,7 +58,7 @@
     <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
     <div
       class="md:hidden fixed left-0 right-0 grid"
-      style="top: 48px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
+      style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
     >
       <div class="px-3 py-2 min-w-0">
         <p class="text-sm leading-tight text-black dark:text-white truncate">

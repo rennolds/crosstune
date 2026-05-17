@@ -69,7 +69,7 @@
        title (auto), play area (1fr), controls reserve. -->
   <div
     class="md:hidden fixed left-0 right-0 grid"
-    style="top: 48px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
+    style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
   >
     <!-- Title + credit. Always rendered so the play area has consistent
          breathing room from the navbar. -->
