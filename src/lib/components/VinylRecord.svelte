@@ -103,12 +103,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%; /* Base size relative to container */
-    height: 90%;
+    /* Size based on the viewport (not the grid container) so the vinyl
+       stays visually consistent across grid shapes — a tall+narrow or
+       wide+short grid would otherwise produce a tiny vinyl. Capped at
+       500px so it doesn't dominate big desktops. */
+    width: min(70vmin, 500px);
+    height: min(70vmin, 500px);
     z-index: 1;
     transition: none;
     pointer-events: none;
-    aspect-ratio: 1; /* Maintain perfect circle */
   }
 
   /* Ensure vinyl image is responsive */
@@ -122,8 +125,6 @@
   /* Smallest phones (< 375px) */
   @media (max-width: 374px) {
     .vinyl-container {
-      width: 82%; /* Reduced from 83% */
-      height: 82%; /* Reduced from 83% */
       opacity: 0.8;
     }
   }
@@ -131,8 +132,6 @@
   /* Small-Medium phones (375px - 388px) */
   @media (min-width: 375px) and (max-width: 388px) {
     .vinyl-container {
-      width: 88%;
-      height: 88%;
       opacity: 0.8;
     }
   }
@@ -140,8 +139,6 @@
   /* Medium-Large phones (389px - 767px, includes iPhone 14) */
   @media (min-width: 389px) and (max-width: 767px) {
     .vinyl-container {
-      width: 90%;
-      height: 90%;
       opacity: 0.8;
     }
   }
@@ -149,8 +146,6 @@
   /* Desktop (>= 768px) */
   @media (min-width: 768px) {
     .vinyl-container {
-      width: 95%;
-      height: 95%;
       opacity: 1; /* Restore full opacity on desktop */
     }
   }

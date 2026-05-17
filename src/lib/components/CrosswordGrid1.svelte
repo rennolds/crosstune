@@ -2499,23 +2499,27 @@
     /* The flex container holding the grid.
        The page-level grid layout (in /puzzles/[id]/+page.svelte and
        /+page.svelte) reserves the visible play area, so this wrapper just
-       fills its parent and centers the crossword. */
+       fills its parent and centers the crossword. Overflow stays visible
+       so the vinyl (sized to viewport) can extend past the now-narrower
+       grid container for tall+skinny shapes. */
     .flex-1.w-full {
       flex: 1 1 auto;
       min-height: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
 
-    /* Grid aspect-ratio wrapper sizing.
-       Reserve a small buffer below max-height so square/tall grids never
-       butt up against the navbar or controls — even on small phones where
-       the play area is barely larger than 95vw. */
+    /* Grid aspect-ratio wrapper sizing. width: auto so the aspect-ratio
+       can shrink both dimensions when max-height binds (otherwise w-full
+       keeps width at 95vw and aspect-square cells overflow the height
+       cap, exactly the desktop bug we already fixed). */
     .w-full.relative[style*="aspect-ratio"] {
+      width: auto;
       max-width: 95vw;
       max-height: calc(100% - 24px);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
