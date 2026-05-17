@@ -71,20 +71,24 @@
     class="md:hidden fixed left-0 right-0 grid"
     style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
   >
-    <!-- Title + credit. Always rendered so the play area has consistent
-         breathing room from the navbar. -->
-    <div class="px-3 py-2 min-w-0">
-      <p class="text-sm leading-tight text-black dark:text-white truncate">
-        {#if puzzle?.title}
-          <span class="font-bold">{puzzle.title}</span>
-        {/if}
-        {#if credit_name && credit_name !== 'anon'}
-          <span class="text-xs font-normal text-gray-600 dark:text-gray-300">
-            {puzzle?.title ? ' · ' : ''}by {credit_name}
-          </span>
-        {/if}
-      </p>
-    </div>
+    <!-- Title + credit. Only rendered if there's something to show — an
+         empty row would just push the grid down for no reason. -->
+    {#if puzzle?.title || (credit_name && credit_name !== 'anon')}
+      <div class="px-3 pt-1 pb-0.5 min-w-0">
+        <p class="text-sm leading-tight text-black dark:text-white truncate">
+          {#if puzzle?.title}
+            <span class="font-bold">{puzzle.title}</span>
+          {/if}
+          {#if credit_name && credit_name !== 'anon'}
+            <span class="text-xs font-normal text-gray-600 dark:text-gray-300">
+              {puzzle?.title ? ' · ' : ''}by {credit_name}
+            </span>
+          {/if}
+        </p>
+      </div>
+    {:else}
+      <div></div>
+    {/if}
     <!-- Grid play area -->
     <div class="min-h-0 overflow-hidden">
       {#if GridComponent}

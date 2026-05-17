@@ -109,13 +109,15 @@
       class="md:hidden fixed left-0 right-0 grid"
       style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
     >
-      <div class="px-3 py-2 min-w-0">
-        <p class="text-sm leading-tight text-black dark:text-white truncate">
-          {#if selectedPuzzle?.title}
+      {#if selectedPuzzle?.title}
+        <div class="px-3 pt-1 pb-0.5 min-w-0">
+          <p class="text-sm leading-tight text-black dark:text-white truncate">
             <span class="font-bold">{selectedPuzzle.title}</span>
-          {/if}
-        </p>
-      </div>
+          </p>
+        </div>
+      {:else}
+        <div></div>
+      {/if}
       <div class="min-h-0 overflow-hidden">
         <CrosswordGrid1
           puzzle={selectedPuzzle}

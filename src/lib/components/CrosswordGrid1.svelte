@@ -2498,16 +2498,15 @@
 
     /* The flex container holding the grid.
        Top-align (flex-start) on mobile so the grid sits right under the
-       title row instead of floating with symmetric padding — the bottom
-       gap above the controls visually replaces the wasted "top gap"
-       between the title and the centered grid. */
+       title row (or directly under the navbar when there's no title) —
+       the bottom gap above the controls visually replaces the wasted
+       "top gap" between the title and the centered grid. */
     .flex-1.w-full {
       flex: 1 1 auto;
       min-height: 0;
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      padding-top: 4px;
     }
 
     /* Grid aspect-ratio wrapper sizing. max-width is the *minimum* of
