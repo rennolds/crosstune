@@ -160,6 +160,17 @@
   let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
   let startingCells = $state(new Set()); // Pre-filled hints that don't count as reveals
+  // Root element of this CrosswordGrid1 instance. Some pages (e.g.
+  // /puzzles/[id]) render two copies of this component — one for the mobile
+  // fixed wrapper, one for the desktop wrapper — and rely on CSS to hide
+  // the wrong one. Scope all input lookups to this root so focus() targets
+  // the input in *this* instance, not the hidden one elsewhere in the DOM.
+  let gridRoot;
+  function findInputAt(x, y) {
+    return (gridRoot ?? document).querySelector(
+      `input[data-x="${x}"][data-y="${y}"]`
+    );
+  }
   // Create grid and message state
   let grid = $state(
     Array(size.height)
@@ -591,10 +602,7 @@
         currentDirection = direction;
         cellActivationPending = false; // ADDED
 
-        const targetInput = document.querySelector(
-          // ADDED Block
-          `input[data-x="${startX}"][data-y="${startY}"]`
-        );
+        const targetInput = findInputAt(startX, startY);
         if (targetInput && !isMobileDevice) {
           targetInput.focus();
         }
@@ -608,9 +616,7 @@
   });
 
   function handleCellClick(x, y) {
-    const targetInput = document.querySelector(
-      `input[data-x="${x}"][data-y="${y}"]`
-    );
+    const targetInput = findInputAt(x, y);
     const isClickOnLogicallyFocusedCell = x === focusedX && y === focusedY;
 
     // Action 1: Handle pending activation (first click after playClue made cell logically focused)
@@ -767,10 +773,7 @@
     if (grid[newY][newX] !== null && !spaceCells.has(`${newX},${newY}`)) {
       focusedX = newX;
       focusedY = newY;
-      const input = document.querySelector(
-        `input[data-x="${newX}"][data-y="${newY}"]`
-      );
-      input?.focus();
+      findInputAt(newX, newY)?.focus();
       cellActivationPending = false; // ADDED
     }
   }
@@ -1155,10 +1158,7 @@
           focusedX = nextWord.startX;
           focusedY = nextWord.startY;
           currentDirection = nextWord.direction;
-          const nextInput = document.querySelector(
-            `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
-          );
-          nextInput?.focus();
+          findInputAt(nextWord.startX, nextWord.startY)?.focus();
         }
         break;
       case "ArrowRight":
@@ -1309,12 +1309,7 @@
                 focusedX = nextWord.startX;
                 focusedY = nextWord.startY;
                 currentDirection = nextWord.direction;
-
-                // Focus the input at the new position
-                const nextInput = document.querySelector(
-                  `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
-                );
-                nextInput?.focus();
+                findInputAt(nextWord.startX, nextWord.startY)?.focus();
               }
             } else {
               // Regular movement within the word
@@ -1434,9 +1429,7 @@
     const syntheticEvent = {
       key,
       preventDefault: () => {},
-      target: document.querySelector(
-        `input[data-x="${focusedX}"][data-y="${focusedY}"]`
-      ),
+      target: findInputAt(focusedX, focusedY),
     };
     handleKeydown(syntheticEvent, focusedX, focusedY);
   }
@@ -1960,7 +1953,7 @@
     </div>
   </div>
 {:else}
-  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2 h-full md:h-auto flex flex-col md:block">
+  <div bind:this={gridRoot} class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2 h-full md:h-auto flex flex-col md:block">
     <!-- Date/title container aligned with crossword -->
     {#if !hideHeader}
       <div
@@ -2582,6 +2575,23 @@
     }
     .cell-word-number {
       font-size: clamp(9px, calc(var(--cell-w) * 0.4), 12px) !important;
+    }
+    /* Cap grid size on desktop. width: auto overrides w-full so the
+       aspect-ratio actually shrinks both dimensions when max-height binds
+       (otherwise width stays at 100% and aspect-square cells overflow
+       past the height cap). margin: 0 auto centers a narrowed grid
+       horizontally in its slot. */
+    .w-full.relative[style*="aspect-ratio"] {
+      width: auto;
+      max-width: 100%;
+      /* Cap height by both viewport and absolute max so the grid never
+         exceeds the visible area on small laptops and never gets cartoonishly
+         tall on huge monitors. 100vh - 260px leaves room for navbar (~48),
+         title (~30), player bar (~80), and a buffer; the 680px absolute cap
+         keeps tall grids reasonable even when the viewport is huge. */
+      max-height: min(calc(100vh - 260px), 680px);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

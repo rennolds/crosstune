@@ -25,6 +25,28 @@
     return Array(h).fill().map(() => Array(w).fill(""));
   }
 
+  // Resize gridData non-destructively: copy any existing letters that still
+  // fit within the new bounds. Also prune prefilledCells to the new bounds.
+  function resizeGridPreserving(newW, newH) {
+    const next = makeEmptyGrid(newW, newH);
+    const copyH = Math.min(gridHeight, newH);
+    const copyW = Math.min(gridWidth, newW);
+    for (let r = 0; r < copyH; r++) {
+      for (let c = 0; c < copyW; c++) {
+        next[r][c] = gridData[r]?.[c] || "";
+      }
+    }
+    gridData = next;
+    gridWidth = newW;
+    gridHeight = newH;
+    const filtered = new Set();
+    for (const key of prefilledCells) {
+      const [r, c] = key.split(",").map(Number);
+      if (r < newH && c < newW) filtered.add(key);
+    }
+    prefilledCells = filtered;
+  }
+
   let gridWidth = $state(DEFAULT_WIDTH);
   let gridHeight = $state(DEFAULT_HEIGHT);
 
@@ -1057,69 +1079,6 @@
             Create your own Crosstune puzzle!
           </h2>
 
-          <!-- Grid size picker (hidden when continuing a draft to avoid overwriting work) -->
-          {#if !hasSavedDraft}
-          <div class="mb-6 flex flex-wrap items-center justify-center gap-3">
-            <span class="text-sm font-medium">Grid size:</span>
-            <div class="flex items-center gap-2">
-              <label class="text-xs text-gray-500 dark:text-gray-400" for="grid-width-input">Width</label>
-              <input
-                id="grid-width-input"
-                type="number"
-                min={MIN_GRID_DIM}
-                max={MAX_GRID_DIM}
-                class="w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-center"
-                value={gridWidth}
-                onchange={(e) => {
-                  const next = clampDim(e.target.value, gridWidth);
-                  gridWidth = next;
-                  e.target.value = next;
-                  gridData = makeEmptyGrid(gridWidth, gridHeight);
-                  prefilledCells = new Set();
-                }}
-              />
-              <span class="text-gray-400">×</span>
-              <label class="text-xs text-gray-500 dark:text-gray-400" for="grid-height-input">Height</label>
-              <input
-                id="grid-height-input"
-                type="number"
-                min={MIN_GRID_DIM}
-                max={MAX_GRID_DIM}
-                class="w-16 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-center"
-                value={gridHeight}
-                onchange={(e) => {
-                  const next = clampDim(e.target.value, gridHeight);
-                  gridHeight = next;
-                  e.target.value = next;
-                  gridData = makeEmptyGrid(gridWidth, gridHeight);
-                  prefilledCells = new Set();
-                }}
-              />
-            </div>
-            <div class="flex items-center gap-1">
-              {#each [[12,10],[13,13],[15,15]] as [w, h]}
-                <button
-                  type="button"
-                  class="text-xs px-2 py-1 rounded border transition-colors"
-                  class:bg-orange-400={gridWidth === w && gridHeight === h}
-                  class:text-white={gridWidth === w && gridHeight === h}
-                  class:border-orange-400={gridWidth === w && gridHeight === h}
-                  class:border-gray-300={!(gridWidth === w && gridHeight === h)}
-                  class:dark:border-gray-600={!(gridWidth === w && gridHeight === h)}
-                  onclick={() => {
-                    gridWidth = w;
-                    gridHeight = h;
-                    gridData = makeEmptyGrid(w, h);
-                    prefilledCells = new Set();
-                  }}
-                >
-                  {w}×{h}
-                </button>
-              {/each}
-            </div>
-          </div>
-          {/if}
-
           <!-- Mobile button - shown early -->
           <div class="text-center mb-6 md:hidden">
             <button
@@ -1288,6 +1247,38 @@
 
       </div>
     {:else if !showWordForms && !showSuccessScreen}
+      <!-- Grid size picker above the editor. Resize is non-destructive:
+           cells that still fit are preserved; cells outside the new bounds
+           are dropped, and prefilled cells are pruned accordingly. -->
+      <div class="mb-3 flex items-center justify-center gap-2 text-sm">
+        <span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
+        <input
+          type="number"
+          min={MIN_GRID_DIM}
+          max={MAX_GRID_DIM}
+          class="w-14 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-center"
+          value={gridWidth}
+          onchange={(e) => {
+            const next = clampDim(e.target.value, gridWidth);
+            e.target.value = next;
+            resizeGridPreserving(next, gridHeight);
+          }}
+        />
+        <span class="text-gray-400">×</span>
+        <input
+          type="number"
+          min={MIN_GRID_DIM}
+          max={MAX_GRID_DIM}
+          class="w-14 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-center"
+          value={gridHeight}
+          onchange={(e) => {
+            const next = clampDim(e.target.value, gridHeight);
+            e.target.value = next;
+            resizeGridPreserving(gridWidth, next);
+          }}
+        />
+      </div>
+
       <!-- Grid Creation Step -->
       <div class="flex justify-center px-2 md:px-0 w-full overflow-x-hidden">
         <div

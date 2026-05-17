@@ -101,8 +101,8 @@
   </div>
 
   <!-- Desktop: original flow -->
-  <div class="hidden md:block pt-0">
-    <div class="w-full md:max-w-3xl mx-auto px-2">
+  <div class="hidden md:block">
+    <div class="w-full md:max-w-3xl mx-auto mt-2 px-2 mb-2">
       <h1
         class="text-xl font-bold text-black dark:text-white text-left leading-tight"
       >

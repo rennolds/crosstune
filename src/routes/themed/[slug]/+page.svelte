@@ -129,7 +129,7 @@
     </div>
 
     <!-- Desktop: original flow -->
-    <div class="hidden md:block pt-0">
+    <div class="hidden md:block">
       <CrosswordGrid1
         puzzle={selectedPuzzle}
         isArchiveMode={true}

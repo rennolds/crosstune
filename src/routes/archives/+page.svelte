@@ -142,7 +142,7 @@
     </div>
 
     <!-- Desktop: original flow -->
-    <div class="hidden md:block flex-1 pt-0 lg:mr-35">
+    <div class="hidden md:block flex-1 lg:mr-35">
       {#key selectedDate}
         <CrosswordGrid1
           {puzzle}
