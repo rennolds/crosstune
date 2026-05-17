@@ -2511,17 +2511,18 @@
     }
 
     /* Grid aspect-ratio wrapper sizing. max-width is the *minimum* of
-       95vw and the width that would be height-bound by the play area.
-       For wide grids this collapses to 95vw; for tall grids it shrinks
-       so the height-bound version fits (and aspect-square cells stay
-       inside the visible play area).
+       95vw and an aspect-ratio-derived height cap. The 0.8 multiplier
+       leaves breathing room around tall/near-square grids on phones —
+       without it, a 15-tall grid completely fills the play area and the
+       grid feels suffocating. Wide grids still hit the 95vw cap so they
+       behave the same.
        --grid-ratio = size.width / size.height (unitless). */
     .w-full.relative[style*="aspect-ratio"] {
       max-width: min(
         95vw,
         calc(
           (100dvh - var(--mobile-controls-h, 210px) - 102px) *
-            var(--grid-ratio, 1.2)
+            var(--grid-ratio, 1.2) * 0.8
         )
       );
       max-height: calc(100% - 24px);
