@@ -53373,5 +53373,156 @@
         "song_title": "3005"
       }
     ]
+  },
+  "2026-05-18": {
+    "version": "1.0.0",
+    "title": "The Johniverse (by gid)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ALLOFME",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1441844542",
+        "audioUrl": "1441844542",
+        "startAt": "0:05",
+        "audioDuration": 7,
+        "artist_name": "John Legend",
+        "song_title": "All of Me"
+      },
+      {
+        "word": "JON",
+        "startX": 9,
+        "startY": 0,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First name of this band's frontman",
+        "itunesId": "1422955211",
+        "audioUrl": "1422955211",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Bon Jovi",
+        "song_title": "Livin' On a Prayer"
+      },
+      {
+        "word": "MISTY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Father John ____ [Artist name]",
+        "itunesId": "1133711685",
+        "audioUrl": "1133711685",
+        "startAt": "0:16.5",
+        "audioDuration": 10,
+        "artist_name": "Father John Misty",
+        "song_title": "Real Love Baby"
+      },
+      {
+        "word": "ELTON",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First name of this famous John",
+        "itunesId": "1440863120",
+        "audioUrl": "1440863120",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Elton John",
+        "song_title": "Bennie and the Jets (2014 Remaster)"
+      },
+      {
+        "word": "CENA",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Last name of this John",
+        "itunesId": "445878844",
+        "audioUrl": "445878844",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "John Cena & Tha Trademarc",
+        "song_title": "WWE: The Time Is Now (John Cena)"
+      },
+      {
+        "word": "WESTVIRGINIA",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The US state named in this John's song",
+        "itunesId": "1482520559",
+        "audioUrl": "1482520559",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "John Denver",
+        "song_title": "Take Me Home, Country Roads"
+      },
+      {
+        "word": "SUMMIT",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This John's last name",
+        "itunesId": "1673828907",
+        "audioUrl": "1673828907",
+        "startAt": "0:14.9",
+        "audioDuration": 8,
+        "artist_name": "John Summit & HAYLA",
+        "song_title": "Where You Are"
+      },
+      {
+        "word": "MAYER",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "This John's last name",
+        "itunesId": "184335560",
+        "audioUrl": "184335560",
+        "startAt": "0:00.5",
+        "audioDuration": 6,
+        "artist_name": "John Mayer",
+        "song_title": "Waiting On the World to Change"
+      },
+      {
+        "word": "JOHNWAYNE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title (also a famous American actor)",
+        "itunesId": "1217977760",
+        "audioUrl": "1217977760",
+        "startAt": "0:10",
+        "audioDuration": 15,
+        "artist_name": "Cigarettes After Sex",
+        "song_title": "John Wayne"
+      },
+      {
+        "word": "GREASE",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The musical that made this John famous",
+        "itunesId": "1440844700",
+        "audioUrl": "1440844700",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "John Travolta & Olivia Newton-John",
+        "song_title": "You're the One That I Want"
+      }
+    ]
   }
 }
