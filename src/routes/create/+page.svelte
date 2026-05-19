@@ -817,6 +817,25 @@
       soundcloudValidation = validation;
       widgetTiming = timing;
 
+      // Fetch Apple Music preview URLs for any words that came in with just
+      // an itunesId (loaded from JSON, no previewUrl saved). Without this the
+      // editor's per-word audio scrubber silently has no src.
+      Object.entries(validation).forEach(([key, v]) => {
+        if (v?.itunesId && !v.previewUrl) {
+          fetch(`/api/apple-music-preview?id=${v.itunesId}`)
+            .then((r) => (r.ok ? r.json() : null))
+            .then((data) => {
+              if (data?.previewUrl) {
+                soundcloudValidation = {
+                  ...soundcloudValidation,
+                  [key]: { ...soundcloudValidation[key], previewUrl: data.previewUrl },
+                };
+              }
+            })
+            .catch((e) => console.error('Failed to fetch preview URL:', e));
+        }
+      });
+
       // Restore starting_characters → prefilledCells
       const cells = new Set();
       if (Array.isArray(parsed.starting_characters)) {
