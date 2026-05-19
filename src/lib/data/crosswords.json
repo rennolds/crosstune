@@ -236,7 +236,7 @@
     ]
   },
   "2025-05-01": {
-    "title": "Surfing the radio in 2011",
+    "title": "Surfin' the radio in 2011",
     "version": "1.0.1",
     "theme": "green",
     "size": {
@@ -7367,7 +7367,7 @@
     ]
   },
   "2025-06-27": {
-    "title": "Surfing the radio in 2014",
+    "title": "Surfin' the radio in 2014",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -12102,7 +12102,7 @@
     ]
   },
   "2025-08-04": {
-    "title": "Surfing the radio in 2018",
+    "title": "Surfin' the radio in 2018",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -14741,7 +14741,7 @@
     ]
   },
   "2025-08-25": {
-    "title": "Surfing the radio in 2009",
+    "title": "Surfin' the radio in 2009",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -22468,7 +22468,7 @@
     ]
   },
   "2025-10-21": {
-    "title": "Surfing the radio in 1999",
+    "title": "Surfin' the radio in 1999",
     "version": "1.0.0",
     "size": {
       "width": 12,
@@ -53371,6 +53371,294 @@
         "audioDuration": 8,
         "artist_name": "Childish Gambino",
         "song_title": "3005"
+      }
+    ]
+  },
+  "2026-05-18": {
+    "version": "1.0.0",
+    "title": "The Johniverse (by gid)",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "ALLOFME",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1441844542",
+        "audioUrl": "1441844542",
+        "startAt": "0:05",
+        "audioDuration": 7,
+        "artist_name": "John Legend",
+        "song_title": "All of Me"
+      },
+      {
+        "word": "JON",
+        "startX": 9,
+        "startY": 0,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First name of this band's frontman",
+        "itunesId": "1422955211",
+        "audioUrl": "1422955211",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Bon Jovi",
+        "song_title": "Livin' On a Prayer"
+      },
+      {
+        "word": "MISTY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Father John ____ [Artist name]",
+        "itunesId": "1133711685",
+        "audioUrl": "1133711685",
+        "startAt": "0:16.5",
+        "audioDuration": 10,
+        "artist_name": "Father John Misty",
+        "song_title": "Real Love Baby"
+      },
+      {
+        "word": "ELTON",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First name of this famous John",
+        "itunesId": "1440863120",
+        "audioUrl": "1440863120",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Elton John",
+        "song_title": "Bennie and the Jets (2014 Remaster)"
+      },
+      {
+        "word": "CENA",
+        "startX": 6,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Last name of this John",
+        "itunesId": "445878844",
+        "audioUrl": "445878844",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "John Cena & Tha Trademarc",
+        "song_title": "WWE: The Time Is Now (John Cena)"
+      },
+      {
+        "word": "WESTVIRGINIA",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "The US state named in this John's song",
+        "itunesId": "1482520559",
+        "audioUrl": "1482520559",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "John Denver",
+        "song_title": "Take Me Home, Country Roads"
+      },
+      {
+        "word": "SUMMIT",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "This John's last name",
+        "itunesId": "1673828907",
+        "audioUrl": "1673828907",
+        "startAt": "0:14.9",
+        "audioDuration": 8,
+        "artist_name": "John Summit & HAYLA",
+        "song_title": "Where You Are"
+      },
+      {
+        "word": "MAYER",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "This John's last name",
+        "itunesId": "184335560",
+        "audioUrl": "184335560",
+        "startAt": "0:00.5",
+        "audioDuration": 6,
+        "artist_name": "John Mayer",
+        "song_title": "Waiting On the World to Change"
+      },
+      {
+        "word": "JOHNWAYNE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title (also a famous American actor)",
+        "itunesId": "1217977760",
+        "audioUrl": "1217977760",
+        "startAt": "0:10",
+        "audioDuration": 15,
+        "artist_name": "Cigarettes After Sex",
+        "song_title": "John Wayne"
+      },
+      {
+        "word": "GREASE",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The musical that made this John famous",
+        "itunesId": "1440844700",
+        "audioUrl": "1440844700",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "John Travolta & Olivia Newton-John",
+        "song_title": "You're the One That I Want"
+      }
+    ]
+  },
+  "2026-05-19": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SCOOBYDOO",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Theme song from what cartoon?",
+        "itunesId": "1575640579",
+        "audioUrl": "1575640579",
+        "startAt": "0:01.5",
+        "audioDuration": 5.2,
+        "artist_name": "Simple Plan",
+        "song_title": "What's New Scooby-Doo?"
+      },
+      {
+        "word": "GORILLAZ",
+        "startX": 2,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "850571371",
+        "audioUrl": "850571371",
+        "startAt": "0:11.5",
+        "audioDuration": 15,
+        "artist_name": "Gorillaz & De La Soul",
+        "song_title": "Feel Good Inc. (feat. David Jolicoeur, Kelvin Mercer & Vincent Mason)"
+      },
+      {
+        "word": "BERLIN",
+        "startX": 1,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name (also a European capital city)",
+        "itunesId": "387194076",
+        "audioUrl": "387194076",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Berlin",
+        "song_title": "Take My Breath Away (Love Theme from \"Top Gun\")"
+      },
+      {
+        "word": "CIRCLES",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": "1477880561",
+        "audioUrl": "1477880561",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Post Malone",
+        "song_title": "Circles"
+      },
+      {
+        "word": "DJO",
+        "startX": 8,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "itunesId": "1632448108",
+        "audioUrl": "1632448108",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Djo",
+        "song_title": "End of Beginning"
+      },
+      {
+        "word": "YOURS",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "I Wanna Be ____ [song title]",
+        "itunesId": "663098065",
+        "audioUrl": "663098065",
+        "startAt": "0:14",
+        "audioDuration": 12,
+        "artist_name": "Arctic Monkeys",
+        "song_title": "I Wanna Be Yours"
+      },
+      {
+        "word": "LONELINESS",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "\"My ____ is killing me\"",
+        "itunesId": "273143820",
+        "audioUrl": "273143820",
+        "startAt": "0:05",
+        "audioDuration": 10.5,
+        "artist_name": "Britney Spears",
+        "song_title": "...Baby One More Time"
+      },
+      {
+        "word": "TAINTED",
+        "startX": 8,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "____ Love [song title]",
+        "itunesId": "1452842547",
+        "audioUrl": "1452842547",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Soft Cell",
+        "song_title": "Tainted Love"
+      },
+      {
+        "word": "HOZIER",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "1735414394",
+        "audioUrl": "1735414394",
+        "startAt": "0:21.5",
+        "audioDuration": 8,
+        "artist_name": "Hozier",
+        "song_title": "Too Sweet"
       }
     ]
   }
