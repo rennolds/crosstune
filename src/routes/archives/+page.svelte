@@ -3,6 +3,20 @@
   import ArchiveList from "$lib/components/ArchiveList.svelte";
   import CrosswordGrid1 from "$lib/components/CrosswordGrid1.svelte";
   import crosswords from "$lib/data/crosswords.json";
+  import { onMount } from "svelte";
+
+  // Render only the mobile OR desktop wrapper — never both. With both
+  // mounted, each CrosswordGrid1 instance calls onSetRevealFunctions and
+  // the second call wins, so Reveal targets the wrong (hidden) grid.
+  let isMobile = $state(false);
+  onMount(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(max-width: 768px)");
+    isMobile = mq.matches;
+    const handler = (e) => (isMobile = e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  });
 
   $effect(() => {
     if (typeof document !== "undefined") {
@@ -117,9 +131,10 @@
 
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedDate}
+    {#if isMobile}
     <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
     <div
-      class="md:hidden fixed left-0 right-0 grid"
+      class="fixed left-0 right-0 grid"
       style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
     >
       {#if puzzle?.title}
@@ -143,8 +158,10 @@
       </div>
     </div>
 
+    {:else}
+
     <!-- Desktop: original flow -->
-    <div class="hidden md:block flex-1 lg:mr-35">
+    <div class="flex-1 lg:mr-35">
       {#key selectedDate}
         <CrosswordGrid1
           {puzzle}
@@ -154,6 +171,7 @@
         />
       {/key}
     </div>
+    {/if}
   {:else}
     <!-- In archive list mode -->
     <div class="archives-container mx-auto px-4 py-4 w-full max-w-5xl">

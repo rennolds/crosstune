@@ -7,6 +7,19 @@
   export let data;
   const { id, puzzle, credit_name } = data;
 
+  // Render only the mobile OR desktop wrapper — never both. With both
+  // mounted, each CrosswordGrid1 instance calls setRevealFunctions and
+  // the second call wins, so Reveal targets the wrong (hidden) grid.
+  let isMobile = $state(false);
+  onMount(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(max-width: 768px)");
+    isMobile = mq.matches;
+    const handler = (e) => (isMobile = e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  });
+
   // Capture reveal functions from the grid to wire into the Navbar's Reveal menu
   let revealFns = {};
   function setRevealFunctions(fns) {
@@ -64,11 +77,12 @@
 <main
   class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]"
 >
-  <!-- Mobile: fixed wrapper that starts below the navbar (top:48px) and
-       ends at the bottom of the viewport, divided into three rows:
+  <!-- Mobile: fixed wrapper that starts below the navbar+AdBanner stack
+       and ends at the bottom of the viewport, divided into three rows:
        title (auto), play area (1fr), controls reserve. -->
+  {#if isMobile}
   <div
-    class="md:hidden fixed left-0 right-0 grid"
+    class="fixed left-0 right-0 grid"
     style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
   >
     <!-- Title + credit. Only rendered if there's something to show — an
@@ -103,9 +117,10 @@
     </div>
     <!-- MobileControls overlay reserve (empty; controls render fixed) -->
   </div>
+  {:else}
 
   <!-- Desktop: original flow with lg:mr-35 reserve for the right ad. -->
-  <div class="hidden md:block flex-1 pt-0 lg:mr-35">
+  <div class="flex-1 pt-0 lg:mr-35">
     <div class="w-full md:max-w-3xl mx-auto mt-2 px-2 mb-2">
       <h1
         class="text-xl font-bold text-black dark:text-white text-left leading-tight"
@@ -128,4 +143,5 @@
       />
     {/if}
   </div>
+  {/if}
 </main>
