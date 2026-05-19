@@ -117,8 +117,34 @@
 
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedDate}
-    <!-- In archive puzzle mode -->
-    <div class="flex-1 pt-12 md:pt-0 lg:mr-35">
+    <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
+    <div
+      class="md:hidden fixed left-0 right-0 grid"
+      style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
+    >
+      {#if puzzle?.title}
+        <div class="px-3 pt-1 pb-0.5 min-w-0">
+          <p class="text-sm leading-tight text-black dark:text-white truncate">
+            <span class="font-bold">{puzzle.title}</span>
+          </p>
+        </div>
+      {:else}
+        <div></div>
+      {/if}
+      <div class="min-h-0 overflow-hidden">
+        {#key selectedDate}
+          <CrosswordGrid1
+            {puzzle}
+            isArchiveMode={true}
+            {selectedDate}
+            onSetRevealFunctions={handleRevealFunctions}
+          />
+        {/key}
+      </div>
+    </div>
+
+    <!-- Desktop: original flow -->
+    <div class="hidden md:block flex-1 lg:mr-35">
       {#key selectedDate}
         <CrosswordGrid1
           {puzzle}

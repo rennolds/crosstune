@@ -54,6 +54,13 @@ export async function POST({ request, locals }) {
       validatedWords.push(validatedWord);
     }
 
+    const MIN_DIM = 4;
+    const MAX_DIM = 16;
+    const rawW = Number(submissionData?.size?.width);
+    const rawH = Number(submissionData?.size?.height);
+    const gridWidth = Number.isInteger(rawW) && rawW >= MIN_DIM && rawW <= MAX_DIM ? rawW : 12;
+    const gridHeight = Number.isInteger(rawH) && rawH >= MIN_DIM && rawH <= MAX_DIM ? rawH : 10;
+
     const startingCharacters = Array.isArray(submissionData.starting_characters)
       ? submissionData.starting_characters
           .map((entry) => {
@@ -63,8 +70,8 @@ export async function POST({ request, locals }) {
             const startY = Number(entry.startY);
             const dir = entry.direction === 'down' ? 'down' : 'across';
             if (!characters) return null;
-            if (!Number.isInteger(startX) || startX < 0 || startX >= 12) return null;
-            if (!Number.isInteger(startY) || startY < 0 || startY >= 10) return null;
+            if (!Number.isInteger(startX) || startX < 0 || startX >= gridWidth) return null;
+            if (!Number.isInteger(startY) || startY < 0 || startY >= gridHeight) return null;
             return { characters, startX, startY, direction: dir };
           })
           .filter(Boolean)
@@ -79,8 +86,8 @@ export async function POST({ request, locals }) {
       title: sanitizeTitle(submissionData.details?.boardTitle || ""),
       version: "1.0.0",
       size: {
-        width: 12,
-        height: 10,
+        width: gridWidth,
+        height: gridHeight,
       },
       theme: "black",
       words: validatedWords,

@@ -34,3 +34,4 @@ scripts/itunes-matches.json
 # Claude memory
 memory/
 .impeccable.md
+.claude/

@@ -103,12 +103,16 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%; /* Base size relative to container */
+    /* Default to the original grid-container-relative sizing. Mobile gets
+       a viewport-based override below so the vinyl stays visually
+       consistent across tall/wide/square grid shapes on phones, where the
+       grid container itself shrinks dramatically for non-12x10 puzzles. */
+    width: 90%;
     height: 90%;
+    aspect-ratio: 1;
     z-index: 1;
     transition: none;
     pointer-events: none;
-    aspect-ratio: 1; /* Maintain perfect circle */
   }
 
   /* Ensure vinyl image is responsive */
@@ -118,40 +122,18 @@
     object-fit: contain;
   }
 
-  /* Mobile adjustments */
-  /* Smallest phones (< 375px) */
-  @media (max-width: 374px) {
+  /* Mobile: size off viewport so the vinyl stays consistent across grid
+     shapes (otherwise tall/wide grids shrink the container dramatically
+     and the vinyl with it). */
+  @media (max-width: 768px) {
     .vinyl-container {
-      width: 82%; /* Reduced from 83% */
-      height: 82%; /* Reduced from 83% */
+      width: min(70vmin, 500px);
+      height: min(70vmin, 500px);
+      aspect-ratio: auto;
       opacity: 0.8;
     }
   }
 
-  /* Small-Medium phones (375px - 388px) */
-  @media (min-width: 375px) and (max-width: 388px) {
-    .vinyl-container {
-      width: 88%;
-      height: 88%;
-      opacity: 0.8;
-    }
-  }
-
-  /* Medium-Large phones (389px - 767px, includes iPhone 14) */
-  @media (min-width: 389px) and (max-width: 767px) {
-    .vinyl-container {
-      width: 90%;
-      height: 90%;
-      opacity: 0.8;
-    }
-  }
-
-  /* Desktop (>= 768px) */
-  @media (min-width: 768px) {
-    .vinyl-container {
-      width: 95%;
-      height: 95%;
-      opacity: 1; /* Restore full opacity on desktop */
-    }
-  }
+  /* Desktop (>= 768px) keeps grid-container-relative sizing (default
+     above) and full opacity. */
 </style>

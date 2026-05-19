@@ -91,7 +91,6 @@
 </script>
 
 <Navbar
-  themedTitle={selectedPuzzle?.title || "Themed Puzzle"}
   isThemedMode={true}
   onRevealSquare={revealSquare}
   onRevealWord={revealWord}
@@ -105,7 +104,34 @@
 
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedPuzzle}
-    <div class="flex-1 pt-20 md:pt-0 lg:mr-35">
+    <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
+    <div
+      class="md:hidden fixed left-0 right-0 grid"
+      style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
+    >
+      {#if selectedPuzzle?.title}
+        <div class="px-3 pt-1 pb-0.5 min-w-0">
+          <p class="text-sm leading-tight text-black dark:text-white truncate">
+            <span class="font-bold">{selectedPuzzle.title}</span>
+          </p>
+        </div>
+      {:else}
+        <div></div>
+      {/if}
+      <div class="min-h-0 overflow-hidden">
+        <CrosswordGrid1
+          puzzle={selectedPuzzle}
+          isArchiveMode={true}
+          isThemedMode={true}
+          {selectedId}
+          onSetRevealFunctions={handleRevealFunctions}
+          onNavigateBack={navigateToThemedBoards}
+        />
+      </div>
+    </div>
+
+    <!-- Desktop: original flow with lg:mr-35 reserve for the right ad. -->
+    <div class="hidden md:block flex-1 pt-0 lg:mr-35">
       <CrosswordGrid1
         puzzle={selectedPuzzle}
         isArchiveMode={true}

@@ -42,12 +42,19 @@ export async function POST({ request, locals }) {
       });
     }
 
+    const MIN_DIM = 4;
+    const MAX_DIM = 16;
+    const rawW = Number(submissionData?.size?.width);
+    const rawH = Number(submissionData?.size?.height);
+    const gridWidth = Number.isInteger(rawW) && rawW >= MIN_DIM && rawW <= MAX_DIM ? rawW : 12;
+    const gridHeight = Number.isInteger(rawH) && rawH >= MIN_DIM && rawH <= MAX_DIM ? rawH : 10;
+
     const crosswordData = {
       title: submissionData.details.boardTitle || "",
       version: "1.0.0",
       size: {
-        width: 12,
-        height: 10
+        width: gridWidth,
+        height: gridHeight
       },
       theme: "black",
       words: validatedWords

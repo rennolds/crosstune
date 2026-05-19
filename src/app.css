@@ -13,6 +13,21 @@ html, body {
   /* --clue-background: #FFFFFF;
   --clue-border: #E5E7EB; */
   /* other light theme variables */
+
+  /* Reserve for the fixed MobileControls (clue bar + virtual keyboard) on
+     mobile. Calibrated to MobileControls.svelte's own width-based key/clue
+     sizing so the play area sits exactly above the controls overlay. */
+  --mobile-controls-h: 210px;
+}
+
+/* Tighten the reserve on small phones (smaller key + clue rows). */
+@media (max-width: 374px) {
+  :root { --mobile-controls-h: 180px; }
+}
+
+/* Loosen for Pro Max-class phones (taller keys + clue bar). */
+@media (min-width: 410px) and (max-width: 768px) {
+  :root { --mobile-controls-h: 240px; }
 }
 
 .dark {

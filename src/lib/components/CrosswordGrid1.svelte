@@ -160,6 +160,17 @@
   let cellActivationPending = $state(false); // ADDED STATE VARIABLE
   let revealedCells = $state(new Set());
   let startingCells = $state(new Set()); // Pre-filled hints that don't count as reveals
+  // Root element of this CrosswordGrid1 instance. Some pages (e.g.
+  // /puzzles/[id]) render two copies of this component — one for the mobile
+  // fixed wrapper, one for the desktop wrapper — and rely on CSS to hide
+  // the wrong one. Scope all input lookups to this root so focus() targets
+  // the input in *this* instance, not the hidden one elsewhere in the DOM.
+  let gridRoot;
+  function findInputAt(x, y) {
+    return (gridRoot ?? document).querySelector(
+      `input[data-x="${x}"][data-y="${y}"]`
+    );
+  }
   // Create grid and message state
   let grid = $state(
     Array(size.height)
@@ -591,10 +602,7 @@
         currentDirection = direction;
         cellActivationPending = false; // ADDED
 
-        const targetInput = document.querySelector(
-          // ADDED Block
-          `input[data-x="${startX}"][data-y="${startY}"]`
-        );
+        const targetInput = findInputAt(startX, startY);
         if (targetInput && !isMobileDevice) {
           targetInput.focus();
         }
@@ -608,9 +616,7 @@
   });
 
   function handleCellClick(x, y) {
-    const targetInput = document.querySelector(
-      `input[data-x="${x}"][data-y="${y}"]`
-    );
+    const targetInput = findInputAt(x, y);
     const isClickOnLogicallyFocusedCell = x === focusedX && y === focusedY;
 
     // Action 1: Handle pending activation (first click after playClue made cell logically focused)
@@ -767,10 +773,7 @@
     if (grid[newY][newX] !== null && !spaceCells.has(`${newX},${newY}`)) {
       focusedX = newX;
       focusedY = newY;
-      const input = document.querySelector(
-        `input[data-x="${newX}"][data-y="${newY}"]`
-      );
-      input?.focus();
+      findInputAt(newX, newY)?.focus();
       cellActivationPending = false; // ADDED
     }
   }
@@ -1155,10 +1158,7 @@
           focusedX = nextWord.startX;
           focusedY = nextWord.startY;
           currentDirection = nextWord.direction;
-          const nextInput = document.querySelector(
-            `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
-          );
-          nextInput?.focus();
+          findInputAt(nextWord.startX, nextWord.startY)?.focus();
         }
         break;
       case "ArrowRight":
@@ -1309,12 +1309,7 @@
                 focusedX = nextWord.startX;
                 focusedY = nextWord.startY;
                 currentDirection = nextWord.direction;
-
-                // Focus the input at the new position
-                const nextInput = document.querySelector(
-                  `input[data-x="${nextWord.startX}"][data-y="${nextWord.startY}"]`
-                );
-                nextInput?.focus();
+                findInputAt(nextWord.startX, nextWord.startY)?.focus();
               }
             } else {
               // Regular movement within the word
@@ -1434,9 +1429,7 @@
     const syntheticEvent = {
       key,
       preventDefault: () => {},
-      target: document.querySelector(
-        `input[data-x="${focusedX}"][data-y="${focusedY}"]`
-      ),
+      target: findInputAt(focusedX, focusedY),
     };
     handleKeydown(syntheticEvent, focusedX, focusedY);
   }
@@ -1960,7 +1953,7 @@
     </div>
   </div>
 {:else}
-  <div class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2">
+  <div bind:this={gridRoot} class="w-full md:max-w-3xl mx-auto mt-0.5 md:mt-2 h-full md:h-auto flex flex-col md:block">
     <!-- Date/title container aligned with crossword -->
     {#if !hideHeader}
       <div
@@ -1978,15 +1971,15 @@
     {/if}
 
     <div
-      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0"
+      class="dark flex flex-col md:flex-row w-full pb-2 pr-2 pl-2 pt-0 mb-1 mt-0 flex-1 min-h-0 md:flex-none"
       style="background-color: {isDark ? '#303030' : 'bg-gray-200'}"
     >
       <!-- Crossword grid container -->
       <div class="flex-1 w-full">
         <!-- Grid container -->
         <div
-          class="w-full relative"
-          style="aspect-ratio: {size.width}/{size.height};"
+          class="w-full relative crossword-grid-container"
+          style="aspect-ratio: {size.width}/{size.height}; container-type: inline-size; --cell-w: calc(100cqi / {size.width}); --grid-ratio: {size.width / size.height};"
         >
           <VinylRecord theme={puzzle.theme || "black"} {isPlaying} />
 
@@ -2016,7 +2009,7 @@
                   {#if cell !== null}
                     {#if wordNumbers.has(`${x},${y}`)}
                       <span
-                        class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none"
+                        class="absolute text-[12px] top-0 left-0.5 font-bold z-20 select-none cell-word-number"
                         style="color: {isDark ? 'black' : 'black'};"
                       >
                         {wordNumbers.get(`${x},${y}`)}
@@ -2034,7 +2027,7 @@
                         maxlength="1"
                         data-x={x}
                         data-y={y}
-                        class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl"
+                        class="w-full h-full text-center uppercase font-bold focus:outline-none bg-transparent touch-none relative text-base md:text-xl cell-input"
                         class:cursor-text={!isMobileDevice}
                         class:revealed={revealedCells.has(`${x},${y}`)}
                         class:starting={startingCells.has(`${x},${y}`)}
@@ -2499,68 +2492,68 @@
 <style>
   /* Add padding at the bottom to prevent the keyboard from covering the grid on mobile and ensure sound player visibility */
   @media (max-width: 768px) {
-    /* Main component wrapper on mobile */
-    .dark.flex.flex-col {
-      height: 100%; /* Fill parent provided by +page.svelte's flex-1 div */
-      display: flex;
-      flex-direction: column;
-    }
+    /* Mobile layout is driven by Tailwind flex utilities applied inline:
+       outer wrapper is flex-col h-full, the dark grid container is flex-1 min-h-0.
+       No additional CSS needed here. */
 
-    /* The flex container holding the grid */
+    /* The flex container holding the grid.
+       Top-align (flex-start) on mobile so the grid sits right under the
+       title row (or directly under the navbar when there's no title) —
+       the bottom gap above the controls visually replaces the wasted
+       "top gap" between the title and the centered grid. */
     .flex-1.w-full {
-      flex: 1 1 auto; /* Grow and shrink to fill available vertical space */
-      min-height: 0; /* Allow shrinking within flex column */
-      display: flex; /* Center the grid inside */
-      align-items: center; /* Center vertically now */
+      flex: 1 1 auto;
+      min-height: 0;
+      display: flex;
+      align-items: flex-start;
       justify-content: center;
-      overflow: hidden; /* Prevent the grid overflowing this container */
     }
 
-    /* Grid aspect-ratio wrapper sizing */
+    /* Grid aspect-ratio wrapper sizing. max-width is the *minimum* of
+       95vw and an aspect-ratio-derived height cap. The 0.8 multiplier
+       leaves breathing room around tall/near-square grids on phones —
+       without it, a 15-tall grid completely fills the play area and the
+       grid feels suffocating. Wide grids still hit the 95vw cap so they
+       behave the same.
+       --grid-ratio = size.width / size.height (unitless). */
     .w-full.relative[style*="aspect-ratio"] {
-      /* Default mobile sizing - prioritize width */
-      max-width: 95vw; /* Use viewport width unit */
-      max-height: 90vh; /* Use viewport height unit, allow generous height */
-      /* The inline aspect-ratio style combined with max constraints will size it */
+      max-width: min(
+        95vw,
+        calc(
+          (100dvh - var(--mobile-controls-h, 210px) - 102px) *
+            var(--grid-ratio, 1.2) * 0.88
+        )
+      );
+      max-height: calc(100% - 24px);
     }
 
-    /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16) */
+    /* Adjustments for TALL screens (e.g., aspect ratio <= 9:16).
+       Don't override max-width here — that fights with the
+       aspect-ratio-aware calc above. Only adjust font sizing. */
     @media (max-aspect-ratio: 9/16) {
-      .w-full.relative[style*="aspect-ratio"] {
-        max-width: 96vw; /* Allow slightly more width */
-        /* Let aspect-ratio dictate height based on width */
-        max-height: none; /* Remove max-height constraint */
-      }
-      /* Adjust font size for tall, narrow screens if needed */
-      input {
+      .cell-input {
         font-size: clamp(
-          0.8rem,
-          3.5vw,
+          10px,
+          calc(var(--cell-w) * 0.5),
           1rem
-        ) !important; /* Responsive font size based on width */
+        ) !important;
       }
-      .absolute.text-\[12px\] {
-        /* Word numbers */
-        font-size: clamp(8px, 2.5vw, 11px) !important;
+      .cell-word-number {
+        font-size: clamp(7px, calc(var(--cell-w) * 0.36), 11px) !important;
       }
     }
 
     /* Adjustments for WIDER mobile screens (e.g., aspect ratio > 9:16) */
     @media (min-aspect-ratio: 9/17) {
-      .w-full.relative[style*="aspect-ratio"] {
-        max-width: 94vw;
-        max-height: 85vh; /* Can be more constrained vertically */
-      }
-      input {
+      .cell-input {
         font-size: clamp(
-          0.875rem,
-          4vw,
+          11px,
+          calc(var(--cell-w) * 0.55),
           1.1rem
-        ) !important; /* Slightly larger font potentially */
+        ) !important;
       }
-      .absolute.text-\[12px\] {
-        /* Word numbers */
-        font-size: clamp(9px, 2.8vw, 12px) !important;
+      .cell-word-number {
+        font-size: clamp(8px, calc(var(--cell-w) * 0.4), 12px) !important;
       }
     }
 
@@ -2575,6 +2568,33 @@
 
     :global(.slide-menu-open) {
       pointer-events: none;
+    }
+  }
+
+  /* Desktop: cap font at text-xl so 12-wide stays identical, but shrink for bigger grids. */
+  @media (min-width: 769px) {
+    .cell-input {
+      font-size: clamp(13px, calc(var(--cell-w) * 0.55), 1.25rem) !important;
+    }
+    .cell-word-number {
+      font-size: clamp(9px, calc(var(--cell-w) * 0.4), 12px) !important;
+    }
+    /* Cap grid size on desktop. width: auto overrides w-full so the
+       aspect-ratio actually shrinks both dimensions when max-height binds
+       (otherwise width stays at 100% and aspect-square cells overflow
+       past the height cap). margin: 0 auto centers a narrowed grid
+       horizontally in its slot. */
+    .w-full.relative[style*="aspect-ratio"] {
+      width: auto;
+      max-width: 100%;
+      /* Cap height by both viewport and absolute max so the grid never
+         exceeds the visible area on small laptops and never gets cartoonishly
+         tall on huge monitors. 100vh - 260px leaves room for navbar (~48),
+         title (~30), player bar (~80), and a buffer; the 680px absolute cap
+         keeps tall grids reasonable even when the viewport is huge. */
+      max-height: min(calc(100vh - 260px), 680px);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

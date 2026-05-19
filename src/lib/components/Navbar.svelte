@@ -220,8 +220,8 @@
 
         <!-- Themed title display (when in themed mode) - Mobile only -->
         {#if isThemedMode && themedTitle}
-          <div class="ml-4 font-medium text-sm flex items-center md:hidden">
-            <span class="ml-1">{themedTitle}</span>
+          <div class="ml-4 font-medium text-sm flex items-center md:hidden min-w-0 flex-1">
+            <span class="ml-1 block truncate">{themedTitle}</span>
           </div>
         {/if}
       </div>

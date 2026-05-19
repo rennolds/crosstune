@@ -10,11 +10,47 @@
 
   let editPuzzleId = $state(data.puzzleId || null);
 
-  let gridData = $state(
-    Array(10)
-      .fill()
-      .map(() => Array(12).fill(""))
-  );
+  const MIN_GRID_DIM = 4;
+  const MAX_GRID_DIM = 15;
+  const DEFAULT_WIDTH = 12;
+  const DEFAULT_HEIGHT = 10;
+
+  function clampDim(n, fallback) {
+    const v = Number(n);
+    if (!Number.isInteger(v)) return fallback;
+    return Math.min(MAX_GRID_DIM, Math.max(MIN_GRID_DIM, v));
+  }
+
+  function makeEmptyGrid(w, h) {
+    return Array(h).fill().map(() => Array(w).fill(""));
+  }
+
+  // Resize gridData non-destructively: copy any existing letters that still
+  // fit within the new bounds. Also prune prefilledCells to the new bounds.
+  function resizeGridPreserving(newW, newH) {
+    const next = makeEmptyGrid(newW, newH);
+    const copyH = Math.min(gridHeight, newH);
+    const copyW = Math.min(gridWidth, newW);
+    for (let r = 0; r < copyH; r++) {
+      for (let c = 0; c < copyW; c++) {
+        next[r][c] = gridData[r]?.[c] || "";
+      }
+    }
+    gridData = next;
+    gridWidth = newW;
+    gridHeight = newH;
+    const filtered = new Set();
+    for (const key of prefilledCells) {
+      const [r, c] = key.split(",").map(Number);
+      if (r < newH && c < newW) filtered.add(key);
+    }
+    prefilledCells = filtered;
+  }
+
+  let gridWidth = $state(DEFAULT_WIDTH);
+  let gridHeight = $state(DEFAULT_HEIGHT);
+
+  let gridData = $state(makeEmptyGrid(DEFAULT_WIDTH, DEFAULT_HEIGHT));
   let selectedCell = $state({ row: -1, col: -1 });
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
   let prefillMode = $state(false);
@@ -137,7 +173,9 @@
     localStorage.removeItem(STORAGE_KEY);
     hasSavedDraft = false;
     editPuzzleId = null;
-    gridData = Array(10).fill().map(() => Array(12).fill(''));
+    gridWidth = DEFAULT_WIDTH;
+    gridHeight = DEFAULT_HEIGHT;
+    gridData = makeEmptyGrid(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     detectedWords = [];
     prefilledCells = new Set();
     prefillMode = false;
@@ -212,6 +250,8 @@
     if (savedState) {
       try {
         const parsed = JSON.parse(savedState);
+        if (parsed.gridWidth) gridWidth = clampDim(parsed.gridWidth, DEFAULT_WIDTH);
+        if (parsed.gridHeight) gridHeight = clampDim(parsed.gridHeight, DEFAULT_HEIGHT);
         gridData = parsed.gridData || gridData;
         detectedWords = parsed.detectedWords || detectedWords;
         soundcloudValidation = parsed.soundcloudValidation || soundcloudValidation;
@@ -249,6 +289,8 @@
       if (showSuccessScreen) return;
 
       const stateToSave = {
+        gridWidth,
+        gridHeight,
         gridData,
         detectedWords,
         soundcloudValidation,
@@ -273,7 +315,7 @@
 
     // Move to next cell after input based on direction
     if (value) {
-      if (direction === "ACROSS" && col < 11) {
+      if (direction === "ACROSS" && col < gridWidth - 1) {
         selectedCell = { row, col: col + 1 };
         setTimeout(() => {
           const nextInput = document.querySelector(
@@ -281,7 +323,7 @@
           );
           if (nextInput) nextInput.focus();
         }, 0);
-      } else if (direction === "DOWN" && row < 9) {
+      } else if (direction === "DOWN" && row < gridHeight - 1) {
         selectedCell = { row: row + 1, col };
         setTimeout(() => {
           const nextInput = document.querySelector(
@@ -338,11 +380,11 @@
     const words = [];
 
     // Detect ACROSS words
-    for (let row = 0; row < 10; row++) {
+    for (let row = 0; row < gridHeight; row++) {
       let currentWord = "";
       let startCol = -1;
 
-      for (let col = 0; col < 12; col++) {
+      for (let col = 0; col < gridWidth; col++) {
         const cell = gridData[row][col];
 
         if (cell && cell.trim() !== "") {
@@ -382,11 +424,11 @@
     }
 
     // Detect DOWN words
-    for (let col = 0; col < 12; col++) {
+    for (let col = 0; col < gridWidth; col++) {
       let currentWord = "";
       let startRow = -1;
 
-      for (let row = 0; row < 10; row++) {
+      for (let row = 0; row < gridHeight; row++) {
         const cell = gridData[row][col];
 
         if (cell && cell.trim() !== "") {
@@ -692,10 +734,12 @@
       jsonError = "";
       const parsed = JSON.parse(jsonText);
 
-      // Reset the grid
-      gridData = Array(10)
-        .fill()
-        .map(() => Array(12).fill(""));
+      // Read size from JSON (fall back to defaults if missing/invalid)
+      const w = clampDim(parsed?.size?.width, DEFAULT_WIDTH);
+      const h = clampDim(parsed?.size?.height, DEFAULT_HEIGHT);
+      gridWidth = w;
+      gridHeight = h;
+      gridData = makeEmptyGrid(w, h);
 
       // Populate grid from words
       if (!parsed.words || !Array.isArray(parsed.words)) {
@@ -726,7 +770,7 @@
         for (let i = 0; i < wordText.length; i++) {
           const row = isAcross ? startY : startY + i;
           const col = isAcross ? startX + i : startX;
-          if (row >= 0 && row < 10 && col >= 0 && col < 12) {
+          if (row >= 0 && row < gridHeight && col >= 0 && col < gridWidth) {
             gridData[row][col] = wordText[i];
           }
         }
@@ -781,7 +825,7 @@
           [...(characters || "")].forEach((_char, i) => {
             const row = dir === "across" ? startY : startY + i;
             const col = dir === "across" ? startX + i : startX;
-            if (row >= 0 && row < 10 && col >= 0 && col < 12) {
+            if (row >= 0 && row < gridHeight && col >= 0 && col < gridWidth) {
               cells.add(`${row},${col}`);
             }
           });
@@ -849,7 +893,7 @@
         );
         if (prevInput) prevInput.focus();
       }, 0);
-    } else if (event.key === "ArrowRight" && col < 11) {
+    } else if (event.key === "ArrowRight" && col < gridWidth - 1) {
       selectedCell = { row, col: col + 1 };
       setTimeout(() => {
         const nextInput = document.querySelector(
@@ -865,7 +909,7 @@
         );
         if (upInput) upInput.focus();
       }, 0);
-    } else if (event.key === "ArrowDown" && row < 9) {
+    } else if (event.key === "ArrowDown" && row < gridHeight - 1) {
       selectedCell = { row: row + 1, col };
       setTimeout(() => {
         const downInput = document.querySelector(
@@ -975,8 +1019,8 @@
         title: finalDetails.boardTitle || "Untitled Puzzle",
         theme: "green", // Default theme
         size: {
-          width: 12,
-          height: 10,
+          width: gridWidth,
+          height: gridHeight,
         },
         words: wordsWithTrackIds,
         ...(startingCharactersJson.length ? { starting_characters: startingCharactersJson } : {}),
@@ -1130,7 +1174,7 @@
             <div class="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-black border border-gray-200 dark:border-gray-700 shadow-sm">
               <!-- Mini grid preview -->
               <button onclick={continueDraft} class="flex-shrink-0" aria-label="Continue editing">
-                <div class="grid gap-px p-1 rounded bg-gray-100 dark:bg-gray-800" style="grid-template-columns: repeat(12, 5px);">
+                <div class="grid gap-px p-1 rounded bg-gray-100 dark:bg-gray-800" style="grid-template-columns: repeat({gridWidth}, 5px);">
                   {#each gridData as row}
                     {#each row as cell}
                       <div style="width:5px;height:5px;border-radius:1px;background:{cell ? 'currentColor' : 'transparent'};outline:1px solid #d1d5db;" class="text-black dark:text-white"></div>
@@ -1203,10 +1247,43 @@
 
       </div>
     {:else if !showWordForms && !showSuccessScreen}
+      <!-- Grid size picker above the editor. Resize is non-destructive:
+           cells that still fit are preserved; cells outside the new bounds
+           are dropped, and prefilled cells are pruned accordingly. -->
+      <div class="mb-3 flex items-center justify-center gap-2 text-sm">
+        <span class="text-xs text-gray-500 dark:text-gray-400">Size</span>
+        <input
+          type="number"
+          min={MIN_GRID_DIM}
+          max={MAX_GRID_DIM}
+          class="w-14 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-center"
+          value={gridWidth}
+          onchange={(e) => {
+            const next = clampDim(e.target.value, gridWidth);
+            e.target.value = next;
+            resizeGridPreserving(next, gridHeight);
+          }}
+        />
+        <span class="text-gray-400">×</span>
+        <input
+          type="number"
+          min={MIN_GRID_DIM}
+          max={MAX_GRID_DIM}
+          class="w-14 px-2 py-1 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-center"
+          value={gridHeight}
+          onchange={(e) => {
+            const next = clampDim(e.target.value, gridHeight);
+            e.target.value = next;
+            resizeGridPreserving(gridWidth, next);
+          }}
+        />
+      </div>
+
       <!-- Grid Creation Step -->
       <div class="flex justify-center px-2 md:px-0 w-full overflow-x-hidden">
         <div
-          class="grid grid-cols-12 gap-px bg-black p-1 md:p-2 rounded-lg w-full md:w-auto overflow-x-hidden"
+          class="grid gap-px bg-black p-1 md:p-2 rounded-lg w-full md:w-auto overflow-x-hidden"
+          style="grid-template-columns: repeat({gridWidth}, minmax(0, 1fr));"
         >
           {#each gridData as row, rowIndex}
             {#each row as cell, colIndex}
@@ -1307,9 +1384,9 @@
             onclick={() => {
               // Clear grid and reset to splash
               localStorage.removeItem(STORAGE_KEY);
-              gridData = Array(10)
-                .fill()
-                .map(() => Array(12).fill(""));
+              gridWidth = DEFAULT_WIDTH;
+              gridHeight = DEFAULT_HEIGHT;
+              gridData = makeEmptyGrid(DEFAULT_WIDTH, DEFAULT_HEIGHT);
               showSplash = true;
               showWordForms = false;
               detectedWords = [];
@@ -1954,6 +2031,7 @@
                     grid: gridData,
                     words: wordsWithTrackIds,
                     details: finalDetails,
+                    size: { width: gridWidth, height: gridHeight },
                     starting_characters: startingCharacters,
                     linked_puzzles: isAdminMode ? linkedPuzzles : [],
                   }),
