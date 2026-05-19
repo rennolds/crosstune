@@ -62,7 +62,7 @@
 />
 
 <main
-  class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35"
+  class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]"
 >
   <!-- Mobile: fixed wrapper that starts below the navbar (top:48px) and
        ends at the bottom of the viewport, divided into three rows:
@@ -104,8 +104,8 @@
     <!-- MobileControls overlay reserve (empty; controls render fixed) -->
   </div>
 
-  <!-- Desktop: original flow -->
-  <div class="hidden md:block">
+  <!-- Desktop: original flow with lg:mr-35 reserve for the right ad. -->
+  <div class="hidden md:block flex-1 pt-0 lg:mr-35">
     <div class="w-full md:max-w-3xl mx-auto mt-2 px-2 mb-2">
       <h1
         class="text-xl font-bold text-black dark:text-white text-left leading-tight"

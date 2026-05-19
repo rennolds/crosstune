@@ -115,7 +115,7 @@
   words={puzzle?.words || []}
 />
 
-<main class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35">
+<main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedDate}
     <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
     <div

@@ -53,7 +53,7 @@
   <SplashScreen onPlay={handlePlay} />
 {:else}
   <main
-    class="bg-gray-200 dark:bg-[#303030] md:min-h-screen md:lg:mr-35"
+    class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]"
   >
     <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
     <div
@@ -77,8 +77,8 @@
       </div>
     </div>
 
-    <!-- Desktop: original flow -->
-    <div class="hidden md:block">
+    <!-- Desktop: original flow with lg:mr-35 reserve for the right ad. -->
+    <div class="hidden md:block flex-1 pt-0 lg:mr-35">
       <CrosswordGrid1
         onSetRevealFunctions={handleRevealFunctions}
         onWords={handleWords}
