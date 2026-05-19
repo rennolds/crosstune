@@ -4,6 +4,20 @@
   import Navbar from "$lib/components/Navbar.svelte";
   import CrosswordGrid1 from "$lib/components/CrosswordGrid1.svelte";
   import themedCrosswords from "$lib/data/themed_crosswords.json";
+  import { onMount } from "svelte";
+
+  // Render only the mobile OR desktop wrapper — never both. With both
+  // mounted, each CrosswordGrid1 instance calls onSetRevealFunctions and
+  // the second call wins, so Reveal targets the wrong (hidden) grid.
+  let isMobile = $state(false);
+  onMount(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(max-width: 768px)");
+    isMobile = mq.matches;
+    const handler = (e) => (isMobile = e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  });
 
   // Simple function to convert title to URL slug
   function titleToSlug(title) {
@@ -104,9 +118,10 @@
 
 <main class="min-h-screen flex flex-col bg-gray-200 dark:bg-[#303030]">
   {#if selectedPuzzle}
+    {#if isMobile}
     <!-- Mobile: fixed wrapper below the navbar with title / play / controls rows. -->
     <div
-      class="md:hidden fixed left-0 right-0 grid"
+      class="fixed left-0 right-0 grid"
       style="top: 98px; bottom: 0; grid-template-rows: auto 1fr var(--mobile-controls-h, 210px);"
     >
       {#if selectedPuzzle?.title}
@@ -130,8 +145,10 @@
       </div>
     </div>
 
+    {:else}
+
     <!-- Desktop: original flow with lg:mr-35 reserve for the right ad. -->
-    <div class="hidden md:block flex-1 pt-0 lg:mr-35">
+    <div class="flex-1 pt-0 lg:mr-35">
       <CrosswordGrid1
         puzzle={selectedPuzzle}
         isArchiveMode={true}
@@ -141,5 +158,6 @@
         onNavigateBack={navigateToThemedBoards}
       />
     </div>
+    {/if}
   {/if}
 </main>
