@@ -2,9 +2,9 @@
   import Navbar from "$lib/components/Navbar.svelte";
   import { onMount } from "svelte";
 
-  let GridComponent = null;
+  let GridComponent = $state(null);
 
-  export let data;
+  let { data } = $props();
   const { id, puzzle, credit_name } = data;
 
   // Render only the mobile OR desktop wrapper — never both. With both
