@@ -53661,5 +53661,142 @@
         "song_title": "Too Sweet"
       }
     ]
+  },
+    "2026-05-20": {
+    "version": "1.0.0",
+    "title": "Surfin' the radio in 2008",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "RIHANNA",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "itunesId": "1441154580",
+        "audioUrl": "1441154580",
+        "startAt": "0:00",
+        "audioDuration": 6.5,
+        "artist_name": "Rihanna",
+        "song_title": "Take a Bow"
+      },
+      {
+        "word": "TPAIN",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "1558216664",
+        "audioUrl": "1558216664",
+        "startAt": "0:08",
+        "audioDuration": 9,
+        "artist_name": "T-Pain",
+        "song_title": "Can't Believe It (feat. Lil Wayne)"
+      },
+      {
+        "word": "KISS",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "This song title is this word x2",
+        "itunesId": "267264869",
+        "audioUrl": "267264869",
+        "startAt": "0:20",
+        "audioDuration": 8,
+        "artist_name": "Chris Brown",
+        "song_title": "Kiss Kiss (feat. T-Pain)"
+      },
+      {
+        "word": "LOLLIPOP",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title (also a type of candy)",
+        "itunesId": "1445298109",
+        "audioUrl": "1445298109",
+        "startAt": "0:04",
+        "audioDuration": 12,
+        "artist_name": "Lil Wayne",
+        "song_title": "Lollipop"
+      },
+      {
+        "word": "TI",
+        "startX": 10,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "itunesId": "1258961897",
+        "audioUrl": "1258961897",
+        "startAt": "0:00",
+        "audioDuration": 6.5,
+        "artist_name": "T.I.",
+        "song_title": "Whatever You Like"
+      },
+      {
+        "word": "MYTOES",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Where does it start?",
+        "itunesId": "1440745635",
+        "audioUrl": "1440745635",
+        "startAt": "0:05.7",
+        "audioDuration": 7.5,
+        "artist_name": "Colbie Caillat",
+        "song_title": "Bubbly"
+      },
+      {
+        "word": "HOTNCOLD",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": "715891658",
+        "audioUrl": "715891658",
+        "startAt": "0:07",
+        "audioDuration": 14,
+        "artist_name": "Katy Perry",
+        "song_title": "Hot n Cold"
+      },
+      {
+        "word": "CYCLONE",
+        "startX": 6,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also a type of tropical storm)",
+        "itunesId": "260659545",
+        "audioUrl": "260659545",
+        "startAt": "0:12.6",
+        "audioDuration": 10,
+        "artist_name": "Baby Bash",
+        "song_title": "Cyclone (feat. T-Pain)"
+      },
+      {
+        "word": "STPETER",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Who won't call his name?",
+        "itunesId": "1122773680",
+        "audioUrl": "1122773680",
+        "startAt": "0:18",
+        "audioDuration": 12,
+        "artist_name": "Coldplay",
+        "song_title": "Viva La Vida"
+      }
+    ]
   }
 }
