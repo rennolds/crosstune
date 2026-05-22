@@ -53985,7 +53985,7 @@
   },
     "2026-05-22": {
     "version": "1.0.0",
-    "title": "Untitled Puzzle",
+    "title": "",
     "theme": "green",
     "size": {
       "width": 12,
@@ -54040,7 +54040,7 @@
         "startY": 7,
         "direction": "across",
         "color": "#28D66A",
-        "textClue": "Who only know?",
+        "textClue": "Who only knows?",
         "itunesId": "1440841258",
         "audioUrl": "1440841258",
         "startAt": "0:02",
