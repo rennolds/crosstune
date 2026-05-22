@@ -53982,5 +53982,142 @@
         "song_title": "Endless Love (Endless Love Soundtrack Version)"
       }
     ]
+  },
+    "2026-05-22": {
+    "version": "1.0.0",
+    "title": "Untitled Puzzle",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "SALLY",
+        "startX": 4,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Name in this song's title",
+        "itunesId": "1793693771",
+        "audioUrl": "1793693771",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "artist_name": "ROLE MODEL",
+        "song_title": "Sally, When The Wine Runs Out"
+      },
+      {
+        "word": "HEART",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of this song's title",
+        "itunesId": "1440620921",
+        "audioUrl": "1440620921",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "artist_name": "Demi Lovato",
+        "song_title": "Heart Attack"
+      },
+      {
+        "word": "ICE",
+        "startX": 9,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The word repeated in this song's title",
+        "itunesId": "716691562",
+        "audioUrl": "716691562",
+        "startAt": "0:00.9",
+        "audioDuration": 10,
+        "artist_name": "Vanilla Ice",
+        "song_title": "Ice Ice Baby"
+      },
+      {
+        "word": "GOD",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Who only know?",
+        "itunesId": "1440841258",
+        "audioUrl": "1440841258",
+        "startAt": "0:02",
+        "audioDuration": 12.506,
+        "artist_name": "The Beach Boys",
+        "song_title": "God Only Knows"
+      },
+      {
+        "word": "FIGHTER",
+        "startX": 4,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Choose your what?",
+        "itunesId": "1689240532",
+        "audioUrl": "1689240532",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Ava Max",
+        "song_title": "Choose Your Fighter"
+      },
+      {
+        "word": "DROPDEAD",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1889992113",
+        "audioUrl": "1889992113",
+        "startAt": "0:16",
+        "audioDuration": 8,
+        "artist_name": "Olivia Rodrigo",
+        "song_title": "drop dead"
+      },
+      {
+        "word": "MAITAIS",
+        "startX": 5,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "What are they sippin'?",
+        "itunesId": "1487240097",
+        "audioUrl": "1487240097",
+        "startAt": "0:02",
+        "audioDuration": 9,
+        "artist_name": "Train & Skylar Grey",
+        "song_title": "Mai Tais"
+      },
+      {
+        "word": "LATCH",
+        "startX": 7,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1440862129",
+        "audioUrl": "1440862129",
+        "startAt": "0:00",
+        "audioDuration": 14,
+        "artist_name": "Disclosure & Sam Smith",
+        "song_title": "Latch"
+      },
+      {
+        "word": "FIKE",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "itunesId": "1438243871",
+        "audioUrl": "1438243871",
+        "startAt": "0:13.5",
+        "audioDuration": 10,
+        "artist_name": "Dominic Fike",
+        "song_title": "3 Nights"
+      }
+    ]
   }
 }
