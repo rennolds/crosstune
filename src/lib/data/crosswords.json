@@ -54119,5 +54119,131 @@
         "song_title": "3 Nights"
       }
     ]
+  },
+    "2026-05-23": {
+    "version": "1.0.0",
+    "title": "Acoustic Covers",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "HAVANA",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1574111063",
+        "audioUrl": "1574111063",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Matt Johnson",
+        "song_title": "Havana (Acoustic)"
+      },
+      {
+        "word": "HEYYA",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "219655949",
+        "audioUrl": "219655949",
+        "startAt": "0:12.5",
+        "audioDuration": 12,
+        "artist_name": "Obadiah Parker",
+        "song_title": "Hey Ya (Live)"
+      },
+      {
+        "word": "GETLUCKY",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "651998314",
+        "audioUrl": "651998314",
+        "startAt": "0:14",
+        "audioDuration": 15,
+        "artist_name": "Brian Nicholas",
+        "song_title": "Get Lucky (Acoustic Version)"
+      },
+      {
+        "word": "GOLDEN",
+        "startX": 0,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": "1856836192",
+        "audioUrl": "1856836192",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Ragakov",
+        "song_title": "Golden (Acoustic Cover)"
+      },
+      {
+        "word": "HEARTLESS",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": "1607602688",
+        "audioUrl": "1607602688",
+        "startAt": "0:02",
+        "audioDuration": 10,
+        "artist_name": "Kyson Facer",
+        "song_title": "Heartless (Acoustic) [feat. Jada Facer]"
+      },
+      {
+        "word": "HALO",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1125583666",
+        "audioUrl": "1125583666",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "artist_name": "Madilyn",
+        "song_title": "Halo (Acoustic Version)"
+      },
+      {
+        "word": "CREEP",
+        "startX": 7,
+        "startY": 5,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": "1416316617",
+        "audioUrl": "1416316617",
+        "startAt": "0:13",
+        "audioDuration": 12,
+        "artist_name": "The Macarons Project",
+        "song_title": "Creep (Acoustic)"
+      },
+      {
+        "word": "BADGUY",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1590094880",
+        "audioUrl": "1590094880",
+        "startAt": "0:06",
+        "audioDuration": 10,
+        "artist_name": "Dan Berk & Lance Allen",
+        "song_title": "Bad Guy (Acoustic)"
+      }
+    ],
+    "linked_puzzles": [
+      "2026-05-02"
+    ]
   }
 }
