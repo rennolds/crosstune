@@ -7114,5 +7114,144 @@
         "song_title": "Dirty Diana"
       }
     ]
+  },
+  "47": {
+    "title": "Disco Fever",
+    "author": "Paul Pursifull",
+    "date_available": "2026-05-24",
+    "theme": "black",
+    "thumbnail": "https://beat.com.au/wp-content/uploads/2019/05/Disco-e1605500715198.jpg",
+    "size": {
+      "width": 13,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BEEGEES",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Band name",
+        "itunesId": "1442259185",
+        "audioUrl": "1442259185",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Bee Gees",
+        "song_title": "Stayin' Alive"
+      },
+      {
+        "word": "ABBA",
+        "startX": 9,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Band name",
+        "itunesId": "1422648513",
+        "audioUrl": "1422648513",
+        "startAt": "0:09",
+        "audioDuration": 9,
+        "artist_name": "ABBA",
+        "song_title": "Dancing Queen"
+      },
+      {
+        "word": "SURVIVE",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"I will ____\"",
+        "itunesId": "1443818368",
+        "audioUrl": "1443818368",
+        "startAt": "0:04.5",
+        "audioDuration": 6,
+        "artist_name": "Gloria Gaynor",
+        "song_title": "I Will Survive"
+      },
+      {
+        "word": "YMCA",
+        "startX": 9,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": "1440825374",
+        "audioUrl": "1440825374",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Village People",
+        "song_title": "Y.M.C.A."
+      },
+      {
+        "word": "BODY",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Shake your what?",
+        "itunesId": "159293270",
+        "audioUrl": "159293270",
+        "startAt": "0:09.5",
+        "audioDuration": 8,
+        "artist_name": "The Jacksons",
+        "song_title": "Shake Your Body (Down to the Ground) [Single Version]"
+      },
+      {
+        "word": "LEFREAK",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1790538415",
+        "audioUrl": "1790538415",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Chic",
+        "song_title": "Le Freak (2018 Remaster) [Dimitri from Paris Remix]"
+      },
+      {
+        "word": "WATER",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Element missing in this band's name",
+        "itunesId": "523223725",
+        "audioUrl": "523223725",
+        "startAt": "0:13",
+        "audioDuration": 10,
+        "artist_name": "Earth, Wind & Fire",
+        "song_title": "Boogie Wonderland (feat. The Emotions)"
+      },
+      {
+        "word": "HOTSTUFF",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1425179373",
+        "audioUrl": "1425179373",
+        "startAt": "0:13.5",
+        "audioDuration": 7.5,
+        "artist_name": "Donna Summer",
+        "song_title": "Hot Stuff"
+      },
+      {
+        "word": "FAMILTY",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "\"We are ____\"",
+        "itunesId": "333594518",
+        "audioUrl": "333594518",
+        "startAt": "0:19",
+        "audioDuration": 11,
+        "artist_name": "Sister Sledge",
+        "song_title": "We Are Family (1995 Remaster)"
+      }
+    ]
   }
 }
