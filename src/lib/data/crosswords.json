@@ -54245,5 +54245,128 @@
     "linked_puzzles": [
       "2026-05-02"
     ]
+  },
+    "2026-05-24": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "DUALIPA",
+        "startX": 5,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "itunesId": "1484636829",
+        "audioUrl": "1484636829",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Dua Lipa",
+        "song_title": "Don't Start Now"
+      },
+      {
+        "word": "BLUES",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "\"Some were born to sing the ____\"",
+        "itunesId": "169003415",
+        "audioUrl": "169003415",
+        "startAt": "0:11",
+        "audioDuration": 10,
+        "artist_name": "Journey",
+        "song_title": "Don't Stop Believin' (2024 Remaster)"
+      },
+      {
+        "word": "BRUISES",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "1452618894",
+        "audioUrl": "1452618894",
+        "startAt": "0:04.5",
+        "audioDuration": 9,
+        "artist_name": "Lewis Capaldi",
+        "song_title": "Bruises"
+      },
+      {
+        "word": "CHARLESTON",
+        "startX": 2,
+        "startY": 9,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Name of this tune and dance (also a US state capital)",
+        "itunesId": "685369902",
+        "audioUrl": "685369902",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Bob Wilson & His Varsity Rhythm Boys",
+        "song_title": "Charleston"
+      },
+      {
+        "word": "HENDRIX",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Last name of this artist",
+        "itunesId": "344803162",
+        "audioUrl": "344803162",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Jimi Hendrix",
+        "song_title": "All Along the Watchtower"
+      },
+      {
+        "word": "LINGER",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1440735263",
+        "audioUrl": "1440735263",
+        "startAt": "0:22",
+        "audioDuration": 12,
+        "artist_name": "The Cranberries",
+        "song_title": "Linger"
+      },
+      {
+        "word": "MACKLEMORE",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "itunesId": "560148920",
+        "audioUrl": "560148920",
+        "startAt": "0:03.1",
+        "audioDuration": 7,
+        "artist_name": "Macklemore & Ryan Lewis",
+        "song_title": "Can't Hold Us (feat. Ray Dalton)"
+      },
+      {
+        "word": "PERFECT",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"I'm not a ____ person\"",
+        "itunesId": "1440769862",
+        "audioUrl": "1440769862",
+        "startAt": "0:04",
+        "audioDuration": 10,
+        "artist_name": "Hoobastank",
+        "song_title": "The Reason"
+      }
+    ]
   }
 }
