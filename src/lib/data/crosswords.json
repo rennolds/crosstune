@@ -54368,5 +54368,170 @@
         "song_title": "The Reason"
       }
     ]
+  },
+    "2026-05-25": {
+    "version": "1.0.0",
+    "title": "Animal Farm (by purple_gurp)",
+    "theme": "purple",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "LEOPARD",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Animal in this band's name",
+        "itunesId": 1440904267,
+        "audioUrl": "1440904267",
+        "startAt": "0:05",
+        "audioDuration": 11.588845000000001,
+        "artist_name": "Def Leppard",
+        "song_title": "Pour Some Sugar On Me"
+      },
+      {
+        "word": "SHEEP",
+        "startX": 7,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Black ____ [song title]",
+        "itunesId": 1568767171,
+        "audioUrl": "1568767171",
+        "startAt": "0:03",
+        "audioDuration": 23.542317,
+        "artist_name": "Metric",
+        "song_title": "Black Sheep (feat. Brie Larson) [Brie Larson Vocal Version / Bonus Track]"
+      },
+      {
+        "word": "CHEETAH",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "The ____ Girls (started as a fictional band)",
+        "itunesId": "1452857744",
+        "audioUrl": "1452857744",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "The Cheetah Girls",
+        "song_title": "The Party's Just Begun"
+      },
+      {
+        "word": "IMPALA",
+        "startX": 6,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Animal in this artist's name",
+        "itunesId": 1874125269,
+        "audioUrl": "1874125269",
+        "startAt": "0:07",
+        "audioDuration": 11.5,
+        "artist_name": "Tame Impala & JENNIE",
+        "song_title": "Dracula (JENNIE Remix)"
+      },
+      {
+        "word": "ELEPHANT",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Album name",
+        "itunesId": 1533513537,
+        "audioUrl": "1533513537",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "artist_name": "The White Stripes",
+        "song_title": "Seven Nation Army"
+      },
+      {
+        "word": "MONKEYS",
+        "startX": 3,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Animal in this band's name",
+        "itunesId": 663097965,
+        "audioUrl": "663097965",
+        "startAt": "0:12.8",
+        "audioDuration": 11.496148999999999,
+        "artist_name": "Arctic Monkeys",
+        "song_title": "Do I Wanna Know?"
+      },
+      {
+        "word": "SEAL",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist name",
+        "itunesId": 30475529,
+        "audioUrl": "30475529",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Seal",
+        "song_title": "Fly Like an Eagle"
+      },
+      {
+        "word": "CHICK",
+        "startX": 6,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Who's that ____\"",
+        "itunesId": 1715688715,
+        "audioUrl": "1715688715",
+        "startAt": "0:01.7",
+        "audioDuration": 5,
+        "artist_name": "David Guetta",
+        "song_title": "Who's That Chick? (feat. Rihanna)"
+      },
+      {
+        "word": "BIRDS",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of this song's title",
+        "itunesId": 1739659142,
+        "audioUrl": "1739659142",
+        "startAt": "0:01",
+        "audioDuration": 15,
+        "artist_name": "Billie Eilish",
+        "song_title": "BIRDS OF A FEATHER"
+      },
+      {
+        "word": "PIG",
+        "startX": 8,
+        "startY": 7,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "The animal in this song's title",
+        "itunesId": 1198293356,
+        "audioUrl": "1198293356",
+        "startAt": "0:19.1",
+        "audioDuration": 10.876960999999998,
+        "artist_name": "Black Sabbath",
+        "song_title": "War Pigs"
+      },
+      {
+        "word": "BUTTERFLY",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Animal in this song's title",
+        "itunesId": 203304621,
+        "audioUrl": "203304621",
+        "startAt": "0:07.7",
+        "audioDuration": 9.5,
+        "artist_name": "Crazy Town",
+        "song_title": "Butterfly"
+      }
+    ]
   }
 }
