@@ -54533,5 +54533,128 @@
         "song_title": "Butterfly"
       }
     ]
+  },
+    "2026-05-26": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "LAMAR",
+        "startX": 2,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "itunesId": "1440818969",
+        "audioUrl": "1440818969",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Kendrick Lamar",
+        "song_title": "Money Trees (feat. Jay Rock)"
+      },
+      {
+        "word": "PARIS",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "\"We were staying in ____\"",
+        "itunesId": "1207120538",
+        "audioUrl": "1207120538",
+        "startAt": "0:11",
+        "audioDuration": 10,
+        "artist_name": "The Chainsmokers",
+        "song_title": "Paris"
+      },
+      {
+        "word": "RICFLAIR",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Professional wrestler this song is titled after",
+        "itunesId": "1310807838",
+        "audioUrl": "1310807838",
+        "startAt": "0:14",
+        "audioDuration": 10,
+        "artist_name": "Offset & Metro Boomin",
+        "song_title": "Ric Flair Drip"
+      },
+      {
+        "word": "RHCP",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Initials of this band's name",
+        "itunesId": "947701032",
+        "audioUrl": "947701032",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Red Hot Chili Peppers",
+        "song_title": "Under the Bridge"
+      },
+      {
+        "word": "PINK",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "What color was the sky?",
+        "itunesId": "1747842759",
+        "audioUrl": "1747842759",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Zach Bryan",
+        "song_title": "Pink Skies"
+      },
+      {
+        "word": "AEROSMITH",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Band name",
+        "itunesId": "1660109353",
+        "audioUrl": "1660109353",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Aerosmith",
+        "song_title": "I Don't Want to Miss a Thing (Pop Mix)"
+      },
+      {
+        "word": "SWANLAKE",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Name of this ballet",
+        "itunesId": "339006499",
+        "audioUrl": "339006499",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "London Philharmonic Orchestra & David Parry",
+        "song_title": "Swan Lake Suite, Op. 20: Scéne"
+      },
+      {
+        "word": "SATURN",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title (also the 6th planet from the sun)",
+        "itunesId": "1786643241",
+        "audioUrl": "1786643241",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "SZA",
+        "song_title": "Saturn"
+      }
+    ]
   }
 }
