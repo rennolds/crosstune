@@ -25,8 +25,12 @@
   });
 
   $effect(() => {
-    // Ramp loading logic - runs on both mobile and desktop, but banner only shows on mobile
+    // Ramp loading logic - runs on both mobile and desktop, but banner only shows on mobile.
+    // Temporarily disabled on mobile: keep the reserved banner space (CSS) but skip the ad tag.
     if (browser && PUB_ID && WEBSITE_ID && !rampComponentLoaded) {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        return;
+      }
       console.log("Loading Ramp ad...");
       window.ramp = window.ramp || {};
       window.ramp.que = window.ramp.que || [];
