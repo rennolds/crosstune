@@ -118,6 +118,28 @@
     isMobile = window.matchMedia("(max-width: 768px)").matches;
   });
 
+  // Measure the real bottom of the page navbar so the modal sits a fixed
+  // pixel gap below it on every device (iOS Safari chrome can vary).
+  let navBottomPx = $state(48); // safe default = h-12
+  const GAP_BELOW_NAV = 8; // pixels of breathing room between nav and modal
+
+  $effect(() => {
+    function measure() {
+      const nav = document.querySelector("nav");
+      if (nav) navBottomPx = nav.getBoundingClientRect().bottom;
+    }
+    measure();
+    window.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
+    // Re-measure shortly after mount in case fonts/layout shift the nav.
+    const t = setTimeout(measure, 100);
+    return () => {
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
+      clearTimeout(t);
+    };
+  });
+
   // Function to play a track preview
   function playTrackPreview(word) {
     const widgetId = `${word.startX}:${word.startY}:${word.direction}`;
@@ -278,45 +300,25 @@
   });
 </script>
 
-<div
-  class="fixed inset-0 z-[60] flex items-start justify-center pt-4 pb-16 text-white"
-  style="padding-top: calc(env(safe-area-inset-top, 0px) + 1rem);"
->
-  {#if isCorrect}
-    <!-- Background gradient -->
-    <div
-      class="absolute inset-0 backdrop-blur-[2px]"
-      style="background: linear-gradient(180deg, rgba(74, 74, 74, 0.75) 0%, #4A4A4A 59.02%);"
-    ></div>
+{#if isCorrect}
+  <!-- Dimmed backdrop. z-40 keeps it BELOW the navbar (z-50) so the nav stays visible. -->
+  <div
+    class="fixed inset-0 z-40 backdrop-blur-[2px]"
+    style="background: linear-gradient(180deg, rgba(74, 74, 74, 0.75) 0%, #4A4A4A 59.02%);"
+  ></div>
 
-    <!-- Container: X button stays at top corner, content scrolls below -->
-    <div class="relative z-10 max-w-md w-full mx-4 flex flex-col max-h-[calc(100vh-5rem)]">
-      <!-- Exit button - top-right of the overlay, always visible since the overlay is above the navbar. -->
-      <button
-        onclick={onClose}
-        class="absolute top-1 right-1 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-white shadow-lg ring-1 ring-white/20 hover:bg-black/90 transition-colors"
-        aria-label="Close"
+  <!-- Modal scroll surface spans the full viewport so the scrollbar renders
+       on the screen's right edge (desktop standard) and content scrolls
+       under the navbar (which sits at z-50 above this z-40 surface). -->
+  <div
+    class="fixed inset-0 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-700"
+    style="padding-top: {navBottomPx + GAP_BELOW_NAV}px;"
+  >
+    <div class="relative w-full max-w-md mx-auto px-4 pt-2 pb-4 text-white">
+      <!-- Scrollable content. pt-14 reserves room for the floating close button. -->
+      <div
+        class="flex flex-col items-center text-center w-full space-y-5 pt-14 px-2 pb-2"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
-
-    <!-- Content -->
-    <div
-      class="flex flex-col items-center text-center w-full space-y-6 p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-700"
-    >
       <h2 class="text-3xl font-bold text-white">Congratulations!</h2>
       <p class="text-xl text-white">
         {#if isArchiveMode}
@@ -498,33 +500,63 @@
         {/if}
       </div>
       <!-- END: Song Credits Section -->
-    </div>
-    </div><!-- end container wrapper -->
+      </div><!-- end inner content -->
+    </div><!-- end centered card -->
+  </div><!-- end scroll surface -->
 
-    <!-- Share message -->
-    {#if showShareMessage}
-      <div
-        class="fixed bottom-4 right-4 bg-yellow-200 text-yellow-800 p-4 rounded shadow-lg z-50"
-      >
-        <p>Text copied to clipboard!</p>
-        <button
-          onclick={() => (showShareMessage = false)}
-          class="mt-2 text-sm underline"
-        >
-          Dismiss
-        </button>
-      </div>
-    {/if}
-  {:else}
-    <!-- Incorrect answer overlay -->
-    <div class="absolute inset-0 bg-gray-500/50 backdrop-blur-[2px]"></div>
+  <!-- Floating close button - pinned a fixed gap below the navbar. On wide
+       screens it sits at the right edge of the centered content (max-w-md
+       = 28rem); on narrow screens it falls back to the viewport edge. -->
+  <button
+    onclick={onClose}
+    class="fixed z-50 flex h-11 w-11 items-center justify-center rounded-full bg-black/75 text-white shadow-lg ring-2 ring-white/30 hover:bg-black transition-colors"
+    style="top: {navBottomPx + GAP_BELOW_NAV + 8}px; right: max(1.25rem, calc(50% - 14rem));"
+    aria-label="Close"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18L18 6M6 6l12 12"
+      />
+    </svg>
+  </button>
 
+  <!-- Share message -->
+  {#if showShareMessage}
     <div
-      class="bg-white rounded-lg p-6 max-w-sm relative shadow-lg border border-gray-200"
+      class="fixed bottom-4 right-4 bg-yellow-200 text-yellow-800 p-4 rounded shadow-lg z-50"
+    >
+      <p>Text copied to clipboard!</p>
+      <button
+        onclick={() => (showShareMessage = false)}
+        class="mt-2 text-sm underline"
+      >
+        Dismiss
+      </button>
+    </div>
+  {/if}
+{:else}
+  <!-- Incorrect answer overlay - same pattern: sits below the navbar, dims puzzle behind. -->
+  <div class="fixed inset-0 z-40 bg-gray-500/50 backdrop-blur-[2px]"></div>
+
+  <div
+    class="fixed inset-x-0 bottom-0 z-40 flex items-start justify-center pointer-events-none"
+    style="top: {navBottomPx + GAP_BELOW_NAV}px;"
+  >
+    <div
+      class="relative bg-white rounded-lg p-6 max-w-sm w-full mx-4 mt-4 shadow-lg border border-gray-200 pointer-events-auto"
     >
       <button
         onclick={onClose}
-        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        class="absolute top-2 right-2 flex h-9 w-9 items-center justify-center rounded-full text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors"
         aria-label="Close"
       >
         <svg
@@ -555,5 +587,5 @@
         </button>
       </div>
     </div>
-  {/if}
-</div>
+  </div>
+{/if}
