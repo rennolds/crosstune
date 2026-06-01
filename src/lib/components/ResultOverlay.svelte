@@ -290,10 +290,11 @@
 
     <!-- Container: X button stays at top corner, content scrolls below -->
     <div class="relative z-10 max-w-md w-full mx-4 flex flex-col max-h-[calc(100vh-8rem)]">
-      <!-- Exit button - anchored to top-right of container, never scrolls -->
+      <!-- Exit button - fixed to viewport just below the fixed navbar (h-12=48px) and above its z-50, so it's always visible/clickable. -->
       <button
         onclick={onClose}
-        class="absolute top-2 right-2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white shadow-md hover:bg-black/80 transition-colors"
+        class="fixed right-3 z-[60] flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white shadow-lg ring-1 ring-white/20 hover:bg-black/90 transition-colors"
+        style="top: calc(3rem + env(safe-area-inset-top, 0px) + 0.5rem);"
         aria-label="Close"
       >
         <svg
