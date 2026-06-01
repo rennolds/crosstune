@@ -293,12 +293,12 @@
       <!-- Exit button - anchored to top-right of container, never scrolls -->
       <button
         onclick={onClose}
-        class="absolute top-3 right-3 z-10 text-white/60 hover:text-white transition-colors"
+        class="absolute top-2 right-2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white shadow-md hover:bg-black/80 transition-colors"
         aria-label="Close"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="h-5 w-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
