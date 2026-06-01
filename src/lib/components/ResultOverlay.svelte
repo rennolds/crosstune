@@ -279,7 +279,8 @@
 </script>
 
 <div
-  class="fixed inset-0 z-50 flex items-start justify-center pt-16 pb-16 text-white"
+  class="fixed inset-0 z-[60] flex items-start justify-center pt-4 pb-16 text-white"
+  style="padding-top: calc(env(safe-area-inset-top, 0px) + 1rem);"
 >
   {#if isCorrect}
     <!-- Background gradient -->
@@ -289,12 +290,11 @@
     ></div>
 
     <!-- Container: X button stays at top corner, content scrolls below -->
-    <div class="relative z-10 max-w-md w-full mx-4 flex flex-col max-h-[calc(100vh-8rem)]">
-      <!-- Exit button - fixed to viewport just below the fixed navbar (h-12=48px) and above its z-50, so it's always visible/clickable. -->
+    <div class="relative z-10 max-w-md w-full mx-4 flex flex-col max-h-[calc(100vh-5rem)]">
+      <!-- Exit button - top-right of the overlay, always visible since the overlay is above the navbar. -->
       <button
         onclick={onClose}
-        class="fixed right-3 z-[60] flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white shadow-lg ring-1 ring-white/20 hover:bg-black/90 transition-colors"
-        style="top: calc(3rem + env(safe-area-inset-top, 0px) + 0.5rem);"
+        class="absolute top-1 right-1 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-white shadow-lg ring-1 ring-white/20 hover:bg-black/90 transition-colors"
         aria-label="Close"
       >
         <svg
