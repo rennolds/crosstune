@@ -55674,5 +55674,156 @@
         "song_title": "Head & Heart (feat. MNEK)"
       }
     ]
+  },
+    "2026-06-02": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "purple",
+    "size": {
+      "width": 13,
+      "height": 9
+    },
+    "words": [
+      {
+        "word": "WONDER",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "itunesId": "1440808985",
+        "audioUrl": "1440808985",
+        "startAt": "0:01",
+        "audioDuration": 11,
+        "artist_name": "Stevie Wonder",
+        "song_title": "Superstition"
+      },
+      {
+        "word": "RUDE",
+        "startX": 9,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "\"Why do you gotta be so ____\"",
+        "itunesId": "881629103",
+        "audioUrl": "881629103",
+        "startAt": "0:03.8",
+        "audioDuration": 10,
+        "artist_name": "MAGIC!",
+        "song_title": "Rude"
+      },
+      {
+        "word": "COMPLICATED",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "315025823",
+        "audioUrl": "315025823",
+        "startAt": "0:18",
+        "audioDuration": 10,
+        "artist_name": "Avril Lavigne",
+        "song_title": "Complicated"
+      },
+      {
+        "word": "ELVIS",
+        "startX": 8,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist first name",
+        "itunesId": "388128626",
+        "audioUrl": "388128626",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Elvis Presley",
+        "song_title": "Burning Love"
+      },
+      {
+        "word": "SWITCH",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "\"I just flipped the ____\"",
+        "itunesId": "1406109777",
+        "audioUrl": "1406109777",
+        "startAt": "0:00.5",
+        "audioDuration": 10,
+        "artist_name": "Drake",
+        "song_title": "Nonstop"
+      },
+      {
+        "word": "MGMT",
+        "startX": 2,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Duo name",
+        "itunesId": "264720106",
+        "audioUrl": "264720106",
+        "startAt": "0:11.5",
+        "audioDuration": 10.5,
+        "artist_name": "MGMT",
+        "song_title": "Electric Feel"
+      },
+      {
+        "word": "BRAZIL",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title (also the 7th most populous country)",
+        "itunesId": "1114619172",
+        "audioUrl": "1114619172",
+        "startAt": "0:03",
+        "audioDuration": 15,
+        "artist_name": "Declan McKenna",
+        "song_title": "Brazil"
+      },
+      {
+        "word": "TASTE",
+        "startX": 8,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1750307079",
+        "audioUrl": "1750307079",
+        "startAt": "0:16",
+        "audioDuration": 13.5,
+        "artist_name": "Sabrina Carpenter",
+        "song_title": "Taste"
+      },
+      {
+        "word": "TROYE",
+        "startX": 9,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "itunesId": "1694860254",
+        "audioUrl": "1694860254",
+        "startAt": "0:09",
+        "audioDuration": 7,
+        "artist_name": "Troye Sivan",
+        "song_title": "Rush"
+      },
+      {
+        "word": "CENTURIES",
+        "startX": 12,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "How long will they remember me?",
+        "itunesId": "1440826614",
+        "audioUrl": "1440826614",
+        "startAt": "0:15",
+        "audioDuration": 15,
+        "artist_name": "Fall Out Boy",
+        "song_title": "Centuries"
+      }
+    ]
   }
 }
