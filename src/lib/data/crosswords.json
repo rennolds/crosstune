@@ -55825,5 +55825,142 @@
         "song_title": "Centuries"
       }
     ]
+  },
+    "2026-06-03": {
+    "version": "1.0.0",
+    "title": "Oops! All Adjectives",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BROKE",
+        "startX": 4,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "The third adjective in this three adjective song title",
+        "itunesId": "1200868874",
+        "audioUrl": "1200868874",
+        "startAt": "0:15.2",
+        "audioDuration": 14,
+        "artist_name": "Khalid",
+        "song_title": "Young Dumb & Broke"
+      },
+      {
+        "word": "NASTY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "\"I've been a ____ girl\"",
+        "itunesId": "1738935599",
+        "audioUrl": "1738935599",
+        "startAt": "0:10",
+        "audioDuration": 6,
+        "artist_name": "Tinashe",
+        "song_title": "Nasty"
+      },
+      {
+        "word": "PARANOID",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "785232521",
+        "audioUrl": "785232521",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Black Sabbath",
+        "song_title": "Paranoid"
+      },
+      {
+        "word": "CARELESS",
+        "startX": 2,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The adjective in this song's title",
+        "itunesId": "429945616",
+        "audioUrl": "429945616",
+        "startAt": "0:04",
+        "audioDuration": 15,
+        "artist_name": "George Michael",
+        "song_title": "Careless Whisper"
+      },
+      {
+        "word": "GREEDY",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": "1706381103",
+        "audioUrl": "1706381103",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "artist_name": "Tate McRae",
+        "song_title": "greedy"
+      },
+      {
+        "word": "MEAN",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1440920597",
+        "audioUrl": "1440920597",
+        "startAt": "0:02",
+        "audioDuration": 8.8,
+        "artist_name": "Taylor Swift",
+        "song_title": "Mean"
+      },
+      {
+        "word": "BITTER",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of this song's title",
+        "itunesId": "1443258189",
+        "audioUrl": "1443258189",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "The Verve",
+        "song_title": "Bitter Sweet Symphony"
+      },
+      {
+        "word": "LONELEY",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1440731466",
+        "audioUrl": "1440731466",
+        "startAt": "0:00",
+        "audioDuration": 11.5,
+        "artist_name": "Akon",
+        "song_title": "Lonely (Dirty) [Old Version]"
+      },
+      {
+        "word": "SAD",
+        "startX": 9,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "1359293318",
+        "audioUrl": "1359293318",
+        "startAt": "0:06",
+        "audioDuration": 7.5,
+        "artist_name": "XXXTENTACION",
+        "song_title": "SAD!"
+      }
+    ]
   }
 }
