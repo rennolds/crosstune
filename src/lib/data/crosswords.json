@@ -55962,5 +55962,156 @@
         "song_title": "Young Dumb & Broke"
       }
     ]
+  },
+  "2026-06-04": {
+    "version": "1.0.0",
+    "title": "Oops! All Adjectives Again!",
+    "theme": "green",
+    "size": {
+      "width": 13,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "GOOD",
+        "startX": 4,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Adjective in this song's title",
+        "itunesId": "1150159755",
+        "audioUrl": "1150159755",
+        "startAt": "0:09.5",
+        "audioDuration": 4.5,
+        "artist_name": "Lizzo",
+        "song_title": "Good as Hell"
+      },
+      {
+        "word": "BRAVE",
+        "startX": 8,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "1440504730",
+        "audioUrl": "1440504730",
+        "startAt": "0:01",
+        "audioDuration": 9,
+        "artist_name": "Sara Bareilles",
+        "song_title": "Brave"
+      },
+      {
+        "word": "FEARLESS",
+        "startX": 5,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Album title",
+        "itunesId": "1452859410",
+        "audioUrl": "1452859410",
+        "startAt": "0:16.8",
+        "audioDuration": 12.2,
+        "artist_name": "Taylor Swift",
+        "song_title": "Love Story"
+      },
+      {
+        "word": "BEAUTIFUL",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "The second adjective in this song's title",
+        "itunesId": "1440857081",
+        "audioUrl": "1440857081",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "artist_name": "Lana Del Rey",
+        "song_title": "Young and Beautiful"
+      },
+      {
+        "word": "FRESH",
+        "startX": 8,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Adjective in this song's title",
+        "itunesId": "206201765",
+        "audioUrl": "206201765",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "DJ Jazzy Jeff & The Fresh Prince",
+        "song_title": "The Fresh Prince of Bel-Air"
+      },
+      {
+        "word": "PERFECT",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1040171617",
+        "audioUrl": "1040171617",
+        "startAt": "0:00",
+        "audioDuration": 8.5,
+        "artist_name": "One Direction",
+        "song_title": "Perfect"
+      },
+      {
+        "word": "WONDERFUL",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Adjective in this song's title",
+        "itunesId": "1440787254",
+        "audioUrl": "1440787254",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "artist_name": "Louis Armstrong",
+        "song_title": "What a Wonderful World"
+      },
+      {
+        "word": "TRULY",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "The first word of this three-word song title",
+        "itunesId": "157485088",
+        "audioUrl": "157485088",
+        "startAt": "0:01",
+        "audioDuration": 11,
+        "artist_name": "Savage Garden",
+        "song_title": "Truly Madly Deeply"
+      },
+      {
+        "word": "SAFE",
+        "startX": 10,
+        "startY": 6,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "First word of this song's title",
+        "itunesId": "1766005715",
+        "audioUrl": "1766005715",
+        "startAt": "0:14",
+        "audioDuration": 12,
+        "artist_name": "Capital Cities",
+        "song_title": "Safe and Sound"
+      },
+      {
+        "word": "SMOOTH",
+        "startX": 12,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "265816505",
+        "audioUrl": "265816505",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Santana",
+        "song_title": "Smooth (feat. Rob Thomas)"
+      }
+    ]
   }
 }
