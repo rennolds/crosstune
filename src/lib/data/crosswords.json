@@ -56443,5 +56443,142 @@
         "song_title": "Raspberry Beret"
       }
     ]
+  },
+  "2026-06-07": {
+    "version": "1.0.0",
+    "title": "(by jameysutglish)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MASK",
+        "startX": 1,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "What comes off in this song title?",
+        "itunesId": 1253106277,
+        "audioUrl": "1253106277",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Future",
+        "song_title": "Mask Off"
+      },
+      {
+        "word": "MYHERO",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": 362133488,
+        "audioUrl": "362133488",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Foo Fighters",
+        "song_title": "My Hero"
+      },
+      {
+        "word": "CHRIS",
+        "startX": 5,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist first name",
+        "itunesId": 1440827492,
+        "audioUrl": "1440827492",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Chris Stapleton",
+        "song_title": "Tennessee Whiskey"
+      },
+      {
+        "word": "YESTERDAY",
+        "startX": 3,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"____ love was such an easy game to play\"",
+        "itunesId": 1441164805,
+        "audioUrl": "1441164805",
+        "startAt": "0:03",
+        "audioDuration": 5.7,
+        "artist_name": "The Beatles",
+        "song_title": "Yesterday"
+      },
+      {
+        "word": "PAID",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"I just got ____\"",
+        "itunesId": 1397962315,
+        "audioUrl": "1397962315",
+        "startAt": "0:19.5",
+        "audioDuration": 8,
+        "artist_name": "Sigala, Ella Eyre & Meghan Trainor",
+        "song_title": "Just Got Paid (feat. French Montana)"
+      },
+      {
+        "word": "ANACONDA",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Eunectes murinus, commonly",
+        "itunesId": "1440956801",
+        "audioUrl": "1440956801",
+        "startAt": "0:23.2",
+        "audioDuration": 6,
+        "artist_name": "Nicki Minaj",
+        "song_title": "Anaconda"
+      },
+      {
+        "word": "STEELYDAN",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Band name",
+        "itunesId": 1650885304,
+        "audioUrl": "1650885304",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Steely Dan",
+        "song_title": "Reelin' In The Years"
+      },
+      {
+        "word": "ROCKSTAR",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"'Cause we all just wanna be big ____\"",
+        "itunesId": 214403648,
+        "audioUrl": "214403648",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "artist_name": "Nickelback",
+        "song_title": "Rockstar"
+      },
+      {
+        "word": "AHA",
+        "startX": 10,
+        "startY": 5,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": 392429593,
+        "audioUrl": "392429593",
+        "startAt": "0:08",
+        "audioDuration": 6,
+        "artist_name": "a-ha",
+        "song_title": "Take On Me"
+      }
+    ]
   }
 }
