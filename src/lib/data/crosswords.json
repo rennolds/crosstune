@@ -56580,5 +56580,156 @@
         "song_title": "Take On Me"
       }
     ]
+  },
+  "2026-06-08": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 11,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "EARRINGS",
+        "startX": 3,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1738257931",
+        "audioUrl": "1738257931",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Malcolm Todd",
+        "song_title": "Earrings"
+      },
+      {
+        "word": "SOMBR",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "1786481197",
+        "audioUrl": "1786481197",
+        "startAt": "0:01",
+        "audioDuration": 9,
+        "artist_name": "sombr",
+        "song_title": "back to friends"
+      },
+      {
+        "word": "TEENSPIRIT",
+        "startX": 1,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "What does it smell like?",
+        "itunesId": "1440783625",
+        "audioUrl": "1440783625",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Nirvana",
+        "song_title": "Smells Like Teen Spirit"
+      },
+      {
+        "word": "BODY",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of this song's title",
+        "itunesId": "1497391092",
+        "audioUrl": "1497391092",
+        "startAt": "0:03",
+        "audioDuration": 10,
+        "artist_name": "Sam Hunt",
+        "song_title": "Body Like a Back Road"
+      },
+      {
+        "word": "NOAH",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "itunesId": "1872239886",
+        "audioUrl": "1872239886",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Noah Kahan",
+        "song_title": "The Great Divide"
+      },
+      {
+        "word": "WALLOWS",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Band name",
+        "itunesId": "1450670650",
+        "audioUrl": "1450670650",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Wallows",
+        "song_title": "Are You Bored Yet? (feat. Clairo)"
+      },
+      {
+        "word": "LOVEFOOL",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": "1450141548",
+        "audioUrl": "1450141548",
+        "startAt": "0:07.5",
+        "audioDuration": 10,
+        "artist_name": "The Cardigans",
+        "song_title": "Lovefool"
+      },
+      {
+        "word": "BADBUNNY",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name",
+        "itunesId": "1787023936",
+        "audioUrl": "1787023936",
+        "startAt": "0:14",
+        "audioDuration": 12,
+        "artist_name": "Bad Bunny",
+        "song_title": "DtMF"
+      },
+      {
+        "word": "ID",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Initials of band name",
+        "itunesId": "1411629089",
+        "audioUrl": "1411629089",
+        "startAt": "0:16",
+        "audioDuration": 12,
+        "artist_name": "Imagine Dragons",
+        "song_title": "Thunder"
+      },
+      {
+        "word": "GODZILLA",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title (Tokyo beware)",
+        "itunesId": "1495267448",
+        "audioUrl": "1495267448",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Eminem",
+        "song_title": "Godzilla (feat. Juice WRLD)"
+      }
+    ]
   }
 }
