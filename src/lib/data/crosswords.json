@@ -56910,5 +56910,142 @@
         "song_title": "Starlight"
       }
     ]
+  },
+  "2026-06-10": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 11,
+      "height": 11
+    },
+    "words": [
+      {
+        "word": "TIMBER",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "737053283",
+        "audioUrl": "737053283",
+        "startAt": "0:04.6",
+        "audioDuration": 7,
+        "artist_name": "Pitbull & Kesha",
+        "song_title": "Timber"
+      },
+      {
+        "word": "OLIVIA",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "itunesId": "1560735424",
+        "audioUrl": "1560735424",
+        "startAt": "0:14",
+        "audioDuration": 8,
+        "artist_name": "Olivia Rodrigo",
+        "song_title": "drivers license"
+      },
+      {
+        "word": "FRIDGE",
+        "startX": 3,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "\"It's your fault you didn't shut the ____\" (for short)",
+        "itunesId": "1455390118",
+        "audioUrl": "1455390118",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Gwen Stefani",
+        "song_title": "The Sweet Escape (feat. Akon)"
+      },
+      {
+        "word": "DOWNUNDER",
+        "startX": 1,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title (also slang for Australia)",
+        "itunesId": "282960968",
+        "audioUrl": "282960968",
+        "startAt": "0:17.5",
+        "audioDuration": 8.5,
+        "artist_name": "Men At Work",
+        "song_title": "Down Under"
+      },
+      {
+        "word": "PORTUGAL",
+        "startX": 1,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Country in this artist's name",
+        "itunesId": "1229315050",
+        "audioUrl": "1229315050",
+        "startAt": "0:09.5",
+        "audioDuration": 10,
+        "artist_name": "Portugal. The Man",
+        "song_title": "Feel It Still"
+      },
+      {
+        "word": "FLOWERS",
+        "startX": 3,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": "1674691586",
+        "audioUrl": "1674691586",
+        "startAt": "0:02",
+        "audioDuration": 11,
+        "artist_name": "Miley Cyrus",
+        "song_title": "Flowers"
+      },
+      {
+        "word": "PROMISCUOUS",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": "1442463848",
+        "audioUrl": "1442463848",
+        "startAt": "0:00.7",
+        "audioDuration": 10,
+        "artist_name": "Nelly Furtado",
+        "song_title": "Promiscuous (feat. Timbaland)"
+      },
+      {
+        "word": "GOLD",
+        "startX": 7,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"Keep me searchin' for a heart of ____\"",
+        "itunesId": "135132421",
+        "audioUrl": "135132421",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Neil Young",
+        "song_title": "Heart of Gold"
+      },
+      {
+        "word": "SIA",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist name",
+        "itunesId": "989874548",
+        "audioUrl": "989874548",
+        "startAt": "0:20",
+        "audioDuration": 6.6,
+        "artist_name": "Sia",
+        "song_title": "Chandelier"
+      }
+    ]
   }
 }
