@@ -57047,5 +57047,128 @@
         "song_title": "Chandelier"
       }
     ]
+  },
+    {
+    "version": "1.0.0",
+    "title": "Good Luck",
+    "theme": "purple",
+    "size": {
+      "width": 11,
+      "height": 11
+    },
+    "words": [
+      {
+        "word": "KID",
+        "startX": 6,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Good ____ [album title]",
+        "itunesId": "1440818969",
+        "audioUrl": "1440818969",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Kendrick Lamar",
+        "song_title": "Money Trees (feat. Jay Rock)"
+      },
+      {
+        "word": "LIFE",
+        "startX": 1,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Good ____",
+        "itunesId": "1440865847",
+        "audioUrl": "1440865847",
+        "startAt": "0:12.5",
+        "audioDuration": 7,
+        "artist_name": "OneRepublic",
+        "song_title": "Good Life"
+      },
+      {
+        "word": "CHARLOTTE",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Good ____ [band name]",
+        "itunesId": "288051950",
+        "audioUrl": "288051950",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Good Charlotte",
+        "song_title": "The Anthem"
+      },
+      {
+        "word": "MORNING",
+        "startX": 4,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Good ____",
+        "itunesId": "1451901848",
+        "audioUrl": "1451901848",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Kanye West",
+        "song_title": "Good Morning"
+      },
+      {
+        "word": "LUCKBABE",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Good ____",
+        "itunesId": "1737497080",
+        "audioUrl": "1737497080",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Chappell Roan",
+        "song_title": "Good Luck, Babe!"
+      },
+      {
+        "word": "RIDDANCE",
+        "startX": 2,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Good ____",
+        "itunesId": "1159778603",
+        "audioUrl": "1159778603",
+        "startAt": "0:18.5",
+        "audioDuration": 9.5,
+        "artist_name": "Green Day",
+        "song_title": "Good Riddance (Time of Your Life)"
+      },
+      {
+        "word": "FORYOU",
+        "startX": 5,
+        "startY": 4,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Good ____",
+        "itunesId": "1440826909",
+        "audioUrl": "1440826909",
+        "startAt": "0:08.3",
+        "audioDuration": 6.4,
+        "artist_name": "Selena Gomez",
+        "song_title": "Good For You (feat. A$AP Rocky)"
+      },
+      {
+        "word": "VIBRATIONS",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Good ____",
+        "itunesId": "1617208601",
+        "audioUrl": "1617208601",
+        "startAt": "0:00",
+        "audioDuration": 20,
+        "artist_name": "The Beach Boys",
+        "song_title": "Good Vibrations (2021 Stereo Mix)"
+      }
+    ]
   }
 }
