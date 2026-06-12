@@ -57170,5 +57170,142 @@
         "song_title": "Good Vibrations (2021 Stereo Mix)"
       }
     ]
+  },
+  "2026-06-12": {
+    "version": "1.0.0",
+    "title": "(by carley)",
+    "theme": "green",
+    "size": {
+      "width": 15,
+      "height": 12
+    },
+    "words": [
+      {
+        "word": "OPERA",
+        "startX": 7,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "What genre is this?",
+        "itunesId": "1452870359",
+        "audioUrl": "1452870359",
+        "startAt": "0:00",
+        "audioDuration": 10.410104,
+        "artist_name": "Luciano Pavarotti, John Alldis Choir, Wandsworth School Boys' Choir, London Philharmonic Orchestra & Zubin Mehta",
+        "song_title": "Turandot, Act III: \"Nessun dorma!\""
+      },
+      {
+        "word": "WOULDNTITBENICE",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "725824013",
+        "audioUrl": "725824013",
+        "startAt": "0:00",
+        "audioDuration": 9.353898,
+        "artist_name": "The Beach Boys",
+        "song_title": "Wouldn't It Be Nice"
+      },
+      {
+        "word": "NELLY",
+        "startX": 2,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist name",
+        "itunesId": "1440770037",
+        "audioUrl": "1440770037",
+        "startAt": "0:00",
+        "audioDuration": 10.675713,
+        "artist_name": "Nelly",
+        "song_title": "Hot In Herre"
+      },
+      {
+        "word": "STRANGERS",
+        "startX": 5,
+        "startY": 8,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of song title",
+        "itunesId": "1440858701",
+        "audioUrl": "1440858701",
+        "startAt": "0:16.8",
+        "audioDuration": 7.266244,
+        "artist_name": "Frank Sinatra",
+        "song_title": "Strangers In the Night"
+      },
+      {
+        "word": "DURAN",
+        "startX": 2,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "x2 for this band's name",
+        "itunesId": "693610779",
+        "audioUrl": "693610779",
+        "startAt": "0:10",
+        "audioDuration": 6.910274000000001,
+        "artist_name": "Duran Duran",
+        "song_title": "Hungry Like the Wolf"
+      },
+      {
+        "word": "TINY",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "First word of song title",
+        "itunesId": "1440643464",
+        "audioUrl": "1440643464",
+        "startAt": "0:15.2",
+        "audioDuration": 11.206004,
+        "artist_name": "Elton John",
+        "song_title": "Tiny Dancer"
+      },
+      {
+        "word": "PRETTY",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of song title",
+        "itunesId": "1645556889",
+        "audioUrl": "1645556889",
+        "startAt": "0:18.4",
+        "audioDuration": 8.089691000000002,
+        "artist_name": "Connie Francis",
+        "song_title": "Pretty Little Baby"
+      },
+      {
+        "word": "ALANMENKEN",
+        "startX": 11,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Composer of The Little Mermaid, Little Shop of Horrors, etc.",
+        "itunesId": "1670072406",
+        "audioUrl": "1670072406",
+        "startAt": "0:06.8",
+        "audioDuration": 7.293802,
+        "artist_name": "Alan Menken",
+        "song_title": "Under the Sea"
+      },
+      {
+        "word": "SCHOOLSOUT",
+        "startX": 13,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "79574389",
+        "audioUrl": "79574389",
+        "startAt": "0:17.0",
+        "audioDuration": 8.914936,
+        "artist_name": "Alice Cooper",
+        "song_title": "School's Out"
+      }
+    ]
   }
 }
