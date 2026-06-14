@@ -7671,5 +7671,158 @@
         "song_title": "I Love It (feat. Charli XCX)"
       }
     ]
+  },
+  "50": {
+    "title": "Rihanna! Rihanna!",
+    "author": "sofiasofia",
+    "date_available": "2026-06-14",
+    "theme": "black",
+    "thumbnail": "https://images-luxe.outlookindia.com/2026/04/29124029/Pic-5_1-new.jpg",
+    "size": {
+      "width": 15,
+      "height": 15
+    },
+    "words": [
+      {
+        "word": "RATEDR",
+        "startX": 3,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Album this song appears on",
+        "itunesId": 1440885736,
+        "audioUrl": "1440885736",
+        "startAt": "0:15",
+        "audioDuration": 11,
+        "artist_name": "Rihanna",
+        "song_title": "Fire Bomb"
+      },
+      {
+        "word": "TEAMO",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": 1440775747,
+        "audioUrl": "1440775747",
+        "startAt": "0:14.5",
+        "audioDuration": 8,
+        "artist_name": "Rihanna",
+        "song_title": "Te Amo"
+      },
+      {
+        "word": "NUMB",
+        "startX": 7,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": 1417177306,
+        "audioUrl": "1417177306",
+        "startAt": "0:15",
+        "audioDuration": 6,
+        "artist_name": "Rihanna",
+        "song_title": "Numb (feat. Eminem)"
+      },
+      {
+        "word": "WORK",
+        "startX": 4,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": 1440934019,
+        "audioUrl": "1440934019",
+        "startAt": "0:15.5",
+        "audioDuration": 8,
+        "artist_name": "Rihanna",
+        "song_title": "Work (feat. Drake)"
+      },
+      {
+        "word": "PONDEREPLAY",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title (her debut single)",
+        "itunesId": 1440867324,
+        "audioUrl": "1440867324",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Rihanna",
+        "song_title": "Pon de Replay"
+      },
+      {
+        "word": "LIFTMEUP",
+        "startX": 0,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title (written for a movie)",
+        "itunesId": 1651763192,
+        "audioUrl": "1651763192",
+        "startAt": "0:06.5",
+        "audioDuration": 10.5,
+        "artist_name": "Rihanna",
+        "song_title": "Lift Me Up (From Black Panther: Wakanda Forever - Music From and Inspired By)"
+      },
+      {
+        "word": "STAY",
+        "startX": 2,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": 1417177313,
+        "audioUrl": "1417177313",
+        "startAt": "0:07",
+        "audioDuration": 9,
+        "artist_name": "Rihanna",
+        "song_title": "Stay (feat. Mikky Ekko)"
+      },
+      {
+        "word": "MANDOWN",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": 1440896014,
+        "audioUrl": "1440896014",
+        "startAt": "0:00",
+        "audioDuration": 6.5,
+        "artist_name": "Rihanna",
+        "song_title": "Man Down"
+      },
+      {
+        "word": "DRINK",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "\"and I ____ to that\"",
+        "itunesId": 1440808176,
+        "audioUrl": "1440808176",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Rihanna",
+        "song_title": "Cheers (Drink to That)"
+      },
+      {
+        "word": "RUDEBOY",
+        "startX": 10,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": 1440885739,
+        "audioUrl": "1440885739",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Rihanna",
+        "song_title": "Rude Boy"
+      }
+    ]
   }
 }
