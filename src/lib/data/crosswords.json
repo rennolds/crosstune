@@ -57473,4 +57473,141 @@
       }
     ]
   }
+  "2026-06-14": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 13,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MIRRORS",
+        "startX": 5,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1441493608",
+        "audioUrl": "1441493608",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Justin Timberlake",
+        "song_title": "Mirrors"
+      },
+      {
+        "word": "HAPPY",
+        "startX": 1,
+        "startY": 4,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "863835363",
+        "audioUrl": "863835363",
+        "startAt": "0:07",
+        "audioDuration": 10,
+        "artist_name": "Pharrell Williams",
+        "song_title": "Happy (From \"Despicable Me 2\")"
+      },
+      {
+        "word": "YOUNG",
+        "startX": 0,
+        "startY": 6,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Forever ____",
+        "itunesId": "73255043",
+        "audioUrl": "73255043",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Alphaville",
+        "song_title": "Forever Young"
+      },
+      {
+        "word": "EMPIRE",
+        "startX": 7,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "What state of mind?",
+        "itunesId": "1440932018",
+        "audioUrl": "1440932018",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "JAŸ-Z",
+        "song_title": "Empire State Of Mind (feat. Alicia Keys)"
+      },
+      {
+        "word": "BLACKBEAR",
+        "startX": 1,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name (a species of bear)",
+        "itunesId": "1576021255",
+        "audioUrl": "1576021255",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "blackbear",
+        "song_title": "hot girl bummer"
+      },
+      {
+        "word": "PANDA",
+        "startX": 3,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title (a species of bear)",
+        "itunesId": "1440868730",
+        "audioUrl": "1440868730",
+        "startAt": "0:06",
+        "audioDuration": 7,
+        "artist_name": "Desiigner",
+        "song_title": "Panda"
+      },
+      {
+        "word": "TOMMY",
+        "startX": 5,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "itunesId": "1749616863",
+        "audioUrl": "1749616863",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Tommy Richman",
+        "song_title": "MILLION DOLLAR BABY"
+      },
+      {
+        "word": "BREAKEVEN",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "289076747",
+        "audioUrl": "289076747",
+        "startAt": "0:05",
+        "audioDuration": 15,
+        "artist_name": "The Script",
+        "song_title": "Breakeven (Falling to Pieces)"
+      },
+      {
+        "word": "BARE",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "The ____ Necessities",
+        "itunesId": "1442849462",
+        "audioUrl": "1442849462",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Phil Harris & Bruce Reitherman",
+        "song_title": "The Bare Necessities"
+      }
+    ]
+  }
 }
