@@ -57774,5 +57774,142 @@
         "song_title": "Hero"
       }
     ]
+  },
+  "2026-06-16": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "RICHGIRL",
+        "startX": 0,
+        "startY": 2,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "\"You're a ____\"",
+        "itunesId": "273750239",
+        "audioUrl": "273750239",
+        "startAt": "0:09.2",
+        "audioDuration": 6,
+        "artist_name": "Daryl Hall & John Oates",
+        "song_title": "Rich Girl"
+      },
+      {
+        "word": "JUMP",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "976832495",
+        "audioUrl": "976832495",
+        "startAt": "0:00",
+        "audioDuration": 20,
+        "artist_name": "Van Halen",
+        "song_title": "Jump"
+      },
+      {
+        "word": "CAROLINE",
+        "startX": 2,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Name in this song's title",
+        "itunesId": "1469586793",
+        "audioUrl": "1469586793",
+        "startAt": "0:02.6",
+        "audioDuration": 6,
+        "artist_name": "Neil Diamond",
+        "song_title": "Sweet Caroline (Single Version)"
+      },
+      {
+        "word": "MENDES",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "itunesId": "1440892713",
+        "audioUrl": "1440892713",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Shawn Mendes",
+        "song_title": "Treat You Better"
+      },
+      {
+        "word": "BIRD",
+        "startX": 0,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "\"I'm like a ____\"",
+        "itunesId": "1440781293",
+        "audioUrl": "1440781293",
+        "startAt": "0:14",
+        "audioDuration": 6,
+        "artist_name": "Nelly Furtado",
+        "song_title": "I'm Like a Bird"
+      },
+      {
+        "word": "SHA",
+        "startX": 3,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Initials of this song's title",
+        "itunesId": "1440846819",
+        "audioUrl": "1440846819",
+        "startAt": "0:16.4",
+        "audioDuration": 12,
+        "artist_name": "Lynyrd Skynyrd",
+        "song_title": "Sweet Home Alabama"
+      },
+      {
+        "word": "DIEYOUNG",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": "592364996",
+        "audioUrl": "592364996",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Kesha",
+        "song_title": "Die Young"
+      },
+      {
+        "word": "NESSA",
+        "startX": 8,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist first name",
+        "itunesId": "1625179105",
+        "audioUrl": "1625179105",
+        "startAt": "0:00",
+        "audioDuration": 9.2,
+        "artist_name": "Nessa Barrett",
+        "song_title": "die first"
+      },
+      {
+        "word": "RUDE",
+        "startX": 9,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": "881629103",
+        "audioUrl": "881629103",
+        "startAt": "0:03.9",
+        "audioDuration": 8,
+        "artist_name": "MAGIC!",
+        "song_title": "Rude"
+      }
+    ]
   }
 }
