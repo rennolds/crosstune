@@ -58215,7 +58215,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FF5B5E",
-        "textClue": "A word in this song title",
+        "textClue": "Second word in this song title",
         "audioUrl": "256240489",
         "startAt": "0:04",
         "audioDuration": 9.5,
@@ -58257,13 +58257,12 @@
         "startY": 0,
         "direction": "down",
         "color": "#00FFFF",
-        "textClue": "Original artist of this song, covered by John Mayer",
-        "audioUrl": "255828746",
+        "textClue": "Artist name",
         "startAt": "0:00",
         "audioDuration": 21.5,
-        "song_title": "Free Fallin' (Live at the Nokia Theatre, Los Angeles, CA - December 2007)",
-        "artist_name": "johnmayer",
-        "itunesId": 388127336
+        "song_title": "Free Fallin'",
+        "artist_name": "tompetty",
+        "itunesId": 1469579716
       },
       {
         "word": "OASIS",
