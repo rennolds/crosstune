@@ -58020,5 +58020,142 @@
         "song_title": "Havana (feat. Young Thug)"
       }
     ]
+  },
+  "2026-06-17": {
+    "version": "1.0.0",
+    "title": "no theme in particular",
+    "theme": "green",
+    "size": {
+      "width": 11,
+      "height": 8
+    },
+    "words": [
+      {
+        "word": "REX",
+        "startX": 2,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "First word of this artist's stage name",
+        "itunesId": "1286662899",
+        "audioUrl": "1286662899",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "artist_name": "Rex Orange County",
+        "song_title": "Best Friend"
+      },
+      {
+        "word": "ANDY",
+        "startX": 6,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist first name",
+        "itunesId": "1466596128",
+        "audioUrl": "1466596128",
+        "startAt": "0:10",
+        "audioDuration": 18,
+        "artist_name": "Andy Grammer",
+        "song_title": "Don’t Give Up on Me"
+      },
+      {
+        "word": "TOYSOLDIERS",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Like ___ ___ [song title]",
+        "itunesId": "1452852697",
+        "audioUrl": "1452852697",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Eminem",
+        "song_title": "Like Toy Soldiers"
+      },
+      {
+        "word": "FRIEND",
+        "startX": 5,
+        "startY": 5,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "\"You've got a ____\"",
+        "itunesId": "1452873021",
+        "audioUrl": "1452873021",
+        "startAt": "0:10",
+        "audioDuration": 12,
+        "artist_name": "Randy Newman",
+        "song_title": "You've Got a Friend In Me"
+      },
+      {
+        "word": "TAYLOR",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist first name",
+        "itunesId": "6775527443",
+        "audioUrl": "6775527443",
+        "startAt": "0:13.4",
+        "audioDuration": 7,
+        "artist_name": "Taylor Swift",
+        "song_title": "I Knew It, I Knew You"
+      },
+      {
+        "word": "WOODY",
+        "startX": 1,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Artist first name",
+        "itunesId": "125968828",
+        "audioUrl": "125968828",
+        "startAt": "0:06",
+        "audioDuration": 10,
+        "artist_name": "Woody Guthrie",
+        "song_title": "This Land Is Your Land"
+      },
+      {
+        "word": "JESSIE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist first name",
+        "itunesId": "1440808354",
+        "audioUrl": "1440808354",
+        "startAt": "0:14",
+        "audioDuration": 12,
+        "artist_name": "Jessie J",
+        "song_title": "Price Tag (feat. B.o.B)"
+      },
+      {
+        "word": "INFINITY",
+        "startX": 7,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": "1227451772",
+        "audioUrl": "1227451772",
+        "startAt": "0:13.8",
+        "audioDuration": 9,
+        "artist_name": "Jaymes Young",
+        "song_title": "Infinity"
+      },
+      {
+        "word": "SID",
+        "startX": 10,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Name of this Japanese rock band",
+        "itunesId": "1536375094",
+        "audioUrl": "1536375094",
+        "startAt": "0:01",
+        "audioDuration": 10,
+        "artist_name": "Sid",
+        "song_title": "Uso"
+      }
+    ]
   }
 }
