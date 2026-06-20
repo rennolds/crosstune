@@ -58609,5 +58609,170 @@
         "song_title": "Lonely (Dirty) [Old Version]"
       }
     ]
+  },
+   "2026-06-22": {
+    "version": "1.0.0",
+    "title": "(by 4n0nym0u5)",
+    "theme": "green",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "MRBLUESKY",
+        "startX": 0,
+        "startY": 0,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": 1054525017,
+        "audioUrl": "1054525017",
+        "startAt": "0:02.2",
+        "audioDuration": 9,
+        "artist_name": "Electric Light Orchestra",
+        "song_title": "Mr. Blue Sky"
+      },
+      {
+        "word": "INTERSTATE",
+        "startX": 0,
+        "startY": 3,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "____ Love Song [song title]",
+        "itunesId": 3631594,
+        "audioUrl": "3631594",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Stone Temple Pilots",
+        "song_title": "Interstate Love Song"
+      },
+      {
+        "word": "LOW",
+        "startX": 0,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": "275496141",
+        "audioUrl": "275496141",
+        "startAt": "0:04.6",
+        "audioDuration": 8,
+        "artist_name": "Flo Rida",
+        "song_title": "Low (feat. T-Pain)"
+      },
+      {
+        "word": "LADY",
+        "startX": 6,
+        "startY": 6,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "First word of artist's stage name",
+        "itunesId": "1440857424",
+        "audioUrl": "1440857424",
+        "startAt": "0:01",
+        "audioDuration": 8,
+        "artist_name": "Lady Gaga",
+        "song_title": "Born This Way"
+      },
+      {
+        "word": "HELLO",
+        "startX": 7,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": 1440757799,
+        "audioUrl": "1440757799",
+        "startAt": "0:02",
+        "audioDuration": 10,
+        "artist_name": "Lionel Richie",
+        "song_title": "Hello"
+      },
+      {
+        "word": "LEGS",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Song title (a body part)",
+        "itunesId": 1728071594,
+        "audioUrl": "1728071594",
+        "startAt": "0:11",
+        "audioDuration": 12,
+        "artist_name": "ZZ Top",
+        "song_title": "Legs (Edit)"
+      },
+      {
+        "word": "ILLEGAL",
+        "startX": 0,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": 1806614466,
+        "audioUrl": "1806614466",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "PinkPantheress",
+        "song_title": "Illegal"
+      },
+      {
+        "word": "BRAT",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Album title",
+        "itunesId": 1739080354,
+        "audioUrl": "1739080354",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Charli xcx",
+        "song_title": "Von dutch"
+      },
+      {
+        "word": "BREATHE",
+        "startX": 4,
+        "startY": 2,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": 500162140,
+        "audioUrl": "500162140",
+        "startAt": "0:11",
+        "audioDuration": 6,
+        "artist_name": "The Prodigy",
+        "song_title": "Breathe"
+      },
+      {
+        "word": "SABBATH",
+        "startX": 7,
+        "startY": 2,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Black ____ [band name]",
+        "itunesId": "785232524",
+        "audioUrl": "785232524",
+        "startAt": "0:00",
+        "audioDuration": 12,
+        "artist_name": "Black Sabbath",
+        "song_title": "Iron Man"
+      },
+      {
+        "word": "PRETTYFLY",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "\"All the girlies say I'm ____ for a white guy\"",
+        "itunesId": 1440881518,
+        "audioUrl": "1440881518",
+        "startAt": "0:18.5",
+        "audioDuration": 10,
+        "artist_name": "The Offspring",
+        "song_title": "Pretty Fly (For a White Guy)"
+      }
+    ]
   }
 }
