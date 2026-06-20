@@ -58283,7 +58283,7 @@
    "2026-06-20": {
     "version": "1.0.0",
     "title": "(by bubblyamy)",
-    "theme": "green",
+    "theme": "black",
     "size": {
       "width": 12,
       "height": 10
@@ -58490,7 +58490,7 @@
    "2026-06-21": {
     "version": "1.0.0",
     "title": "(by gshdosl)",
-    "theme": "green",
+    "theme": "purple",
     "size": {
       "width": 9,
       "height": 6
@@ -58772,6 +58772,199 @@
         "audioDuration": 10,
         "artist_name": "The Offspring",
         "song_title": "Pretty Fly (For a White Guy)"
+      }
+    ]
+  },
+   "2026-06-23": {
+    "version": "1.0.0",
+    "title": "(by senoritawesome)",
+    "theme": "pink",
+    "size": {
+      "width": 12,
+      "height": 10
+    },
+    "words": [
+      {
+        "word": "BASKETCASE",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": 1160082180,
+        "audioUrl": "1160082180",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "Green Day",
+        "song_title": "Basket Case"
+      },
+      {
+        "word": "ETA",
+        "startX": 9,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": 1695951900,
+        "audioUrl": "1695951900",
+        "startAt": "0:14",
+        "audioDuration": 10,
+        "artist_name": "NewJeans",
+        "song_title": "ETA"
+      },
+      {
+        "word": "THECURE",
+        "startX": 3,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Band name",
+        "itunesId": 286659245,
+        "audioUrl": "286659245",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "artist_name": "The Cure",
+        "song_title": "Boys Don't Cry (Single Version)"
+      },
+      {
+        "word": "ABBA",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Band name",
+        "itunesId": 1422648844,
+        "audioUrl": "1422648844",
+        "startAt": "0:00",
+        "audioDuration": 10,
+        "artist_name": "ABBA",
+        "song_title": "The Winner Takes It All"
+      },
+      {
+        "word": "CREEP",
+        "startX": 7,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "\"But I'm a ____\"",
+        "itunesId": 1097862231,
+        "audioUrl": "1097862231",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Radiohead",
+        "song_title": "Creep"
+      },
+      {
+        "word": "AWAY",
+        "startX": 2,
+        "startY": 8,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "\"Hey, take me ____\"",
+        "itunesId": 1828241736,
+        "audioUrl": "1828241736",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "artist_name": "Christina Vidal Mitchell",
+        "song_title": "Take Me Away"
+      },
+      {
+        "word": "TAME",
+        "startX": 3,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First word of artist name",
+        "itunesId": 1440838060,
+        "audioUrl": "1440838060",
+        "startAt": "0:20",
+        "audioDuration": 10,
+        "artist_name": "Tame Impala",
+        "song_title": "Let It Happen"
+      },
+      {
+        "word": "EVERYDAY",
+        "startX": 5,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Song title",
+        "itunesId": 1440843845,
+        "audioUrl": "1440843845",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Ariana Grande",
+        "song_title": "Everyday (feat. Future)"
+      },
+      {
+        "word": "CHURCH",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "\"No ____ in the wild\"",
+        "itunesId": "1440848093",
+        "audioUrl": "1440848093",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "JAŸ-Z & Kanye West",
+        "song_title": "No Church in the Wild (feat. Frank Ocean & The-Dream)"
+      },
+      {
+        "word": "SEE",
+        "startX": 9,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "First word of song title",
+        "itunesId": "966411602",
+        "audioUrl": "966411602",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Wiz Khalifa",
+        "song_title": "See You Again (feat. Charlie Puth)"
+      },
+      {
+        "word": "EDGE",
+        "startX": 9,
+        "startY": 5,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "\"All alone, on the ____ of 17\"",
+        "itunesId": 219393906,
+        "audioUrl": "219393906",
+        "startAt": "0:17.5",
+        "audioDuration": 10,
+        "artist_name": "Stevie Nicks",
+        "song_title": "Edge of Seventeen"
+      },
+      {
+        "word": "WET",
+        "startX": 10,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": 1863531393,
+        "audioUrl": "1863531393",
+        "startAt": "0:08",
+        "audioDuration": 15,
+        "artist_name": "Dazey and the Scouts",
+        "song_title": "Wet"
+      },
+      {
+        "word": "PAIN",
+        "startX": 11,
+        "startY": 5,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": 1571157966,
+        "audioUrl": "1571157966",
+        "startAt": "0:00",
+        "audioDuration": 11,
+        "artist_name": "PinkPantheress",
+        "song_title": "Pain"
       }
     ]
   }
