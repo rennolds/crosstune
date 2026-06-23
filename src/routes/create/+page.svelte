@@ -45,6 +45,19 @@
       if (r < newH && c < newW) filtered.add(key);
     }
     prefilledCells = filtered;
+    // Prune bars whose neighbouring cell no longer exists. A "right" bar at x
+    // needs x+1 < newW; a "bottom" bar at y needs y+1 < newH.
+    const filteredBars = new Set();
+    for (const key of bars) {
+      const [x, y, side] = key.split(",");
+      const cx = Number(x);
+      const cy = Number(y);
+      if (cy < newH && cx < newW &&
+          (side === "right" ? cx + 1 < newW : cy + 1 < newH)) {
+        filteredBars.add(key);
+      }
+    }
+    bars = filteredBars;
   }
 
   let gridWidth = $state(DEFAULT_WIDTH);
@@ -55,6 +68,8 @@
   let direction = $state("ACROSS"); // "ACROSS" or "DOWN"
   let prefillMode = $state(false);
   let prefilledCells = $state(new Set()); // keys: "row,col"
+  let barMode = $state(false);
+  let bars = $state(new Set()); // keys: "x,y,side", side normalized to "right"|"bottom"
   let linkedPuzzles = $state([]); // admin-only: array of "YYYY-MM-DD" date strings
   let linkedPuzzleInput = $state("");
   let showSplash = $state(true);
@@ -179,6 +194,8 @@
     detectedWords = [];
     prefilledCells = new Set();
     prefillMode = false;
+    bars = new Set();
+    barMode = false;
     linkedPuzzles = [];
     linkedPuzzleInput = "";
     soundcloudValidation = {};
@@ -270,6 +287,9 @@
         if (Array.isArray(parsed.prefilledCells)) {
           prefilledCells = new Set(parsed.prefilledCells);
         }
+        if (Array.isArray(parsed.bars)) {
+          bars = new Set(parsed.bars);
+        }
         if (Array.isArray(parsed.linkedPuzzles)) {
           linkedPuzzles = parsed.linkedPuzzles.filter((d) => DATE_REGEX.test(d));
         }
@@ -298,6 +318,7 @@
         finalDetails,
         editPuzzleId,
         prefilledCells: [...prefilledCells],
+        bars: [...bars],
         linkedPuzzles,
       };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave));
@@ -355,6 +376,35 @@
     prefilledCells = next;
   }
 
+  // Translate a clicked cell edge into the canonical bar key. Bars are stored
+  // on the right/bottom edge of a cell; left/top edges map to the neighbor's
+  // right/bottom edge so a shared boundary has one key regardless of which
+  // side it was clicked from. Returns null for grid-perimeter edges.
+  function barKey(row, col, side) {
+    if (side === "right") return `${col},${row},right`;
+    if (side === "bottom") return `${col},${row},bottom`;
+    if (side === "left") return col > 0 ? `${col - 1},${row},right` : null;
+    if (side === "top") return row > 0 ? `${col},${row - 1},bottom` : null;
+    return null;
+  }
+
+  function toggleBar(row, col, side) {
+    const key = barKey(row, col, side);
+    if (!key) return; // perimeter edge — nothing on the other side
+    const next = new Set(bars);
+    if (next.has(key)) next.delete(key);
+    else next.add(key);
+    bars = next;
+  }
+
+  // Serialize the bars Set into the puzzle JSON shape: [{ x, y, side }].
+  function barsToArray() {
+    return [...bars].map((key) => {
+      const [x, y, side] = key.split(",");
+      return { x: Number(x), y: Number(y), side };
+    });
+  }
+
   const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 
   function lookupArchiveTitle(date) {
@@ -379,7 +429,14 @@
   function detectWords() {
     const words = [];
 
-    // Detect ACROSS words
+    const pushWord = (word, direction, row, col) => {
+      if (word.length >= 2) {
+        words.push({ word, direction, row, col, clue: "", song_title: "", artist_name: "" });
+      }
+    };
+
+    // Detect ACROSS words. A separator bar on a cell's right edge ends the word
+    // there even though the next cell is filled.
     for (let row = 0; row < gridHeight; row++) {
       let currentWord = "";
       let startCol = -1;
@@ -388,42 +445,24 @@
         const cell = gridData[row][col];
 
         if (cell && cell.trim() !== "") {
-          if (currentWord === "") {
-            startCol = col;
-          }
+          if (currentWord === "") startCol = col;
           currentWord += cell;
-        } else {
-          if (currentWord.length >= 2) {
-            words.push({
-              word: currentWord,
-              direction: "ACROSS",
-              row: row,
-              col: startCol,
-              clue: "",
-              song_title: "",
-              artist_name: "",
-            });
+          if (bars.has(`${col},${row},right`)) {
+            pushWord(currentWord, "ACROSS", row, startCol);
+            currentWord = "";
+            startCol = -1;
           }
+        } else {
+          pushWord(currentWord, "ACROSS", row, startCol);
           currentWord = "";
           startCol = -1;
         }
       }
 
-      // Check for word at end of row
-      if (currentWord.length >= 2) {
-        words.push({
-          word: currentWord,
-          direction: "ACROSS",
-          row: row,
-          col: startCol,
-          clue: "",
-          song_title: "",
-          artist_name: "",
-        });
-      }
+      pushWord(currentWord, "ACROSS", row, startCol);
     }
 
-    // Detect DOWN words
+    // Detect DOWN words. A separator bar on a cell's bottom edge ends the word.
     for (let col = 0; col < gridWidth; col++) {
       let currentWord = "";
       let startRow = -1;
@@ -432,39 +471,21 @@
         const cell = gridData[row][col];
 
         if (cell && cell.trim() !== "") {
-          if (currentWord === "") {
-            startRow = row;
-          }
+          if (currentWord === "") startRow = row;
           currentWord += cell;
-        } else {
-          if (currentWord.length >= 2) {
-            words.push({
-              word: currentWord,
-              direction: "DOWN",
-              row: startRow,
-              col: col,
-              clue: "",
-              song_title: "",
-              artist_name: "",
-            });
+          if (bars.has(`${col},${row},bottom`)) {
+            pushWord(currentWord, "DOWN", startRow, col);
+            currentWord = "";
+            startRow = -1;
           }
+        } else {
+          pushWord(currentWord, "DOWN", startRow, col);
           currentWord = "";
           startRow = -1;
         }
       }
 
-      // Check for word at end of column
-      if (currentWord.length >= 2) {
-        words.push({
-          word: currentWord,
-          direction: "DOWN",
-          row: startRow,
-          col: col,
-          clue: "",
-          song_title: "",
-          artist_name: "",
-        });
-      }
+      pushWord(currentWord, "DOWN", startRow, col);
     }
 
     return words;
@@ -852,6 +873,21 @@
       }
       prefilledCells = cells;
 
+      // Restore bars
+      const restoredBars = new Set();
+      if (Array.isArray(parsed.bars)) {
+        parsed.bars.forEach((b) => {
+          if (
+            b && Number.isInteger(b.x) && Number.isInteger(b.y) &&
+            (b.side === "right" || b.side === "bottom") &&
+            b.x >= 0 && b.x < gridWidth && b.y >= 0 && b.y < gridHeight
+          ) {
+            restoredBars.add(`${b.x},${b.y},${b.side}`);
+          }
+        });
+      }
+      bars = restoredBars;
+
       // Restore linked_puzzles
       linkedPuzzles = Array.isArray(parsed.linked_puzzles)
         ? parsed.linked_puzzles.filter((d) => DATE_REGEX.test(d))
@@ -1033,6 +1069,8 @@
         })
         .filter(Boolean);
 
+      const barsJson = barsToArray();
+
       const puzzleJSON = {
         version: "1.0.0",
         title: finalDetails.boardTitle || "Untitled Puzzle",
@@ -1043,6 +1081,7 @@
         },
         words: wordsWithTrackIds,
         ...(startingCharactersJson.length ? { starting_characters: startingCharactersJson } : {}),
+        ...(barsJson.length ? { bars: barsJson } : {}),
         ...(linkedPuzzles.length ? { linked_puzzles: [...linkedPuzzles] } : {}),
       };
 
@@ -1313,13 +1352,13 @@
                   autocomplete="off"
                   autocapitalize="off"
                   spellcheck="false"
-                  class:bg-blue-100={!prefillMode && selectedCell.row === rowIndex &&
+                  class:bg-blue-100={!prefillMode && !barMode && selectedCell.row === rowIndex &&
                     selectedCell.col === colIndex}
                   class:cursor-pointer={prefillMode}
                   value={cell}
                   data-row={rowIndex}
                   data-col={colIndex}
-                  readonly={prefillMode}
+                  readonly={prefillMode || barMode}
                   onmousedown={(event) => {
                     if (prefillMode) {
                       event.preventDefault();
@@ -1327,7 +1366,7 @@
                     }
                   }}
                   onclick={() => {
-                    if (!prefillMode) handleCellClick(rowIndex, colIndex);
+                    if (!prefillMode && !barMode) handleCellClick(rowIndex, colIndex);
                   }}
                   onfocus={(event) =>
                     handleCellFocus(event, rowIndex, colIndex)}
@@ -1339,6 +1378,40 @@
                 />
                 {#if prefilledCells.has(`${rowIndex},${colIndex}`)}
                   <div class="absolute inset-0 bg-gray-300 dark:bg-gray-600 opacity-40 pointer-events-none"></div>
+                {/if}
+                <!-- Existing bars (word-boundary separators) -->
+                {#if bars.has(`${colIndex},${rowIndex},right`)}
+                  <div class="absolute -top-[3px] -bottom-[3px] -right-[3px] w-[6px] bg-black rounded-full z-20 pointer-events-none"></div>
+                {/if}
+                {#if bars.has(`${colIndex},${rowIndex},bottom`)}
+                  <div class="absolute -left-[3px] -right-[3px] -bottom-[3px] h-[6px] bg-black rounded-full z-20 pointer-events-none"></div>
+                {/if}
+                <!-- Clickable edge handles, only while placing bars -->
+                {#if barMode}
+                  <button
+                    type="button"
+                    aria-label="Toggle top separator"
+                    class="absolute top-0 left-0 right-0 h-[6px] z-30 bg-gray-400/25 hover:bg-orange-500/70"
+                    onmousedown={(e) => { e.preventDefault(); toggleBar(rowIndex, colIndex, "top"); }}
+                  ></button>
+                  <button
+                    type="button"
+                    aria-label="Toggle bottom separator"
+                    class="absolute bottom-0 left-0 right-0 h-[6px] z-30 bg-gray-400/25 hover:bg-orange-500/70"
+                    onmousedown={(e) => { e.preventDefault(); toggleBar(rowIndex, colIndex, "bottom"); }}
+                  ></button>
+                  <button
+                    type="button"
+                    aria-label="Toggle left separator"
+                    class="absolute left-0 top-0 bottom-0 w-[6px] z-30 bg-gray-400/25 hover:bg-orange-500/70"
+                    onmousedown={(e) => { e.preventDefault(); toggleBar(rowIndex, colIndex, "left"); }}
+                  ></button>
+                  <button
+                    type="button"
+                    aria-label="Toggle right separator"
+                    class="absolute right-0 top-0 bottom-0 w-[6px] z-30 bg-gray-400/25 hover:bg-orange-500/70"
+                    onmousedown={(e) => { e.preventDefault(); toggleBar(rowIndex, colIndex, "right"); }}
+                  ></button>
                 {/if}
               </div>
             {/each}
@@ -1376,7 +1449,7 @@
           </div>
           <button
             type="button"
-            class="text-sm font-medium px-4 py-1.5 rounded-full border transition-colors"
+            class="text-sm font-medium px-4 py-1.5 rounded-full border transition-colors text-center min-w-[210px]"
             class:bg-orange-400={prefillMode}
             class:text-white={prefillMode}
             class:border-orange-400={prefillMode}
@@ -1384,14 +1457,33 @@
             class:dark:text-white={!prefillMode}
             class:border-gray-300={!prefillMode}
             class:dark:border-gray-600={!prefillMode}
-            onclick={() => (prefillMode = !prefillMode)}
+            onclick={() => { prefillMode = !prefillMode; if (prefillMode) barMode = false; }}
           >
-            {prefillMode ? "Done marking" : "Mark starting characters"}
+            {prefillMode ? "Done" : "Mark starting characters"}
+          </button>
+          <button
+            type="button"
+            class="text-sm font-medium px-4 py-1.5 rounded-full border transition-colors text-center min-w-[180px]"
+            class:bg-orange-400={barMode}
+            class:text-white={barMode}
+            class:border-orange-400={barMode}
+            class:text-black={!barMode}
+            class:dark:text-white={!barMode}
+            class:border-gray-300={!barMode}
+            class:dark:border-gray-600={!barMode}
+            onclick={() => { barMode = !barMode; if (barMode) prefillMode = false; }}
+          >
+            {barMode ? "Done" : "Add separators"}
           </button>
         </div>
         {#if prefillMode}
           <p class="text-xs text-gray-600 dark:text-gray-400 mt-3">
             Click cells to mark them as a starting character. Players will start with them revealed.
+          </p>
+        {/if}
+        {#if barMode}
+          <p class="text-xs text-gray-600 dark:text-gray-400 mt-3">
+            Click the edge between two cells to add a bold line showing the words don't connect there. Click again to remove it.
           </p>
         {/if}
       </div>
@@ -1411,6 +1503,8 @@
               detectedWords = [];
               prefilledCells = new Set();
               prefillMode = false;
+              bars = new Set();
+              barMode = false;
               linkedPuzzles = [];
               linkedPuzzleInput = "";
               jsonInput = ""; // Clear admin JSON input
@@ -2052,6 +2146,7 @@
                     details: finalDetails,
                     size: { width: gridWidth, height: gridHeight },
                     starting_characters: startingCharacters,
+                    bars: barsToArray(),
                     linked_puzzles: isAdminMode ? linkedPuzzles : [],
                   }),
                 });

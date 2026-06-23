@@ -150,9 +150,16 @@
   }
 
   const puzzle = $derived(puzzleInfo?.puzzle);
-  const { size, words, starting_characters } = $derived(
-    puzzle || { size: { width: 0, height: 0 }, words: [], starting_characters: [] }
+  const { size, words, starting_characters, bars } = $derived(
+    puzzle || { size: { width: 0, height: 0 }, words: [], starting_characters: [], bars: [] }
   ); // Provide default values if puzzle is null
+
+  // Set of "x,y,side" keys for bold separator bars (word boundaries with no
+  // black square between them). Sides are normalized to "right"/"bottom" so a
+  // shared edge has a single canonical key.
+  const barsSet = $derived(
+    new Set((bars || []).map((b) => `${b.x},${b.y},${b.side}`))
+  );
 
   // Generate a hash of the puzzle content to uniquely identify it
   const puzzleHash = $derived(generatePuzzleHash(words));
@@ -2059,6 +2066,15 @@
                         <!-- Grey background for starting cells (free hints) -->
                         <div class="absolute inset-0 bg-gray-300 dark:bg-gray-600 opacity-40 pointer-events-none"></div>
                       {/if}
+                    {/if}
+                    {#if barsSet.has(`${x},${y},right`)}
+                      <!-- Bold separator bar: words don't connect across this edge.
+                           Slightly overhangs the cell so it reads as a deliberate
+                           divider, not just a heavier border. -->
+                      <div class="absolute -top-[3px] -bottom-[3px] -right-[3px] w-[6px] bg-black rounded-full z-30 pointer-events-none"></div>
+                    {/if}
+                    {#if barsSet.has(`${x},${y},bottom`)}
+                      <div class="absolute -left-[3px] -right-[3px] -bottom-[3px] h-[6px] bg-black rounded-full z-30 pointer-events-none"></div>
                     {/if}
                   {/if}
                 </div>

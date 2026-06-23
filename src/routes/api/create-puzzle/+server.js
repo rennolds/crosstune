@@ -82,6 +82,29 @@ export async function POST({ request, locals }) {
       ? [...new Set(submissionData.linked_puzzles.filter((d) => typeof d === 'string' && dateRegex.test(d)))]
       : [];
 
+    // Bold separator bars between adjacent cells. Normalized to the right/bottom
+    // edge of a cell; validated in-bounds (the neighbour must exist) and deduped.
+    const seenBars = new Set();
+    const bars = Array.isArray(submissionData.bars)
+      ? submissionData.bars
+          .map((entry) => {
+            if (!entry || typeof entry !== 'object') return null;
+            const x = Number(entry.x);
+            const y = Number(entry.y);
+            const side = entry.side === 'right' || entry.side === 'bottom' ? entry.side : null;
+            if (!side) return null;
+            if (!Number.isInteger(x) || x < 0 || x >= gridWidth) return null;
+            if (!Number.isInteger(y) || y < 0 || y >= gridHeight) return null;
+            if (side === 'right' && x + 1 >= gridWidth) return null;
+            if (side === 'bottom' && y + 1 >= gridHeight) return null;
+            const key = `${x},${y},${side}`;
+            if (seenBars.has(key)) return null;
+            seenBars.add(key);
+            return { x, y, side };
+          })
+          .filter(Boolean)
+      : [];
+
     const crosswordData = {
       title: sanitizeTitle(submissionData.details?.boardTitle || ""),
       version: "1.0.0",
@@ -92,6 +115,7 @@ export async function POST({ request, locals }) {
       theme: "black",
       words: validatedWords,
       ...(startingCharacters.length ? { starting_characters: startingCharacters } : {}),
+      ...(bars.length ? { bars } : {}),
       ...(linkedPuzzles.length ? { linked_puzzles: linkedPuzzles } : {}),
     };
 
