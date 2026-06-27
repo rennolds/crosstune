@@ -79,6 +79,27 @@
   let shareCopied = $state(false);
   let isMobile = $state(false);
   let detectedWords = $state([]);
+
+  // Standard crossword numbering, mirroring how the puzzle is numbered when
+  // it's actually rendered/played (see CrosswordGrid1.svelte): unique starting
+  // cells are numbered top-to-bottom, left-to-right, and an Across + Down word
+  // that share a starting cell share the same number. The creator used to label
+  // clues by array index (1..N), which did NOT match the played puzzle — so a
+  // clue that referenced another clue by number (e.g. "see 2 Down") rendered
+  // wrong. This derives the real number for each clue's start cell.
+  let clueNumbers = $derived.by(() => {
+    const positions = Array.from(
+      new Set(detectedWords.map((w) => `${w.col},${w.row}`)),
+    )
+      .map((key) => {
+        const [col, row] = key.split(",").map(Number);
+        return { col, row };
+      })
+      .sort((a, b) => (a.row === b.row ? a.col - b.col : a.row - b.row));
+    const map = new Map();
+    positions.forEach((pos, i) => map.set(`${pos.col},${pos.row}`, i + 1));
+    return map;
+  });
   let soundcloudValidation = $state({}); // { status, message, itunesId, previewUrl, title, artist, artworkUrl }
   let widgetTiming = $state({}); // Track start/end times for each word
   let searchQueries = $state({}); // Search text per word
@@ -1560,6 +1581,8 @@
 
         <div class="space-y-8">
           {#each detectedWords as word, index}
+            {@const clueNum = clueNumbers.get(`${word.col},${word.row}`)}
+            {@const dirAbbr = word.direction === "ACROSS" ? "A" : "D"}
             <div
               class="bg-gray-50 dark:bg-[#303030] border-2 border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
               class:border-green-500={detectedWords[index].clue &&
@@ -1573,12 +1596,13 @@
               >
                 <div class="flex items-center space-x-3">
                   <div
-                    class="flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm text-white shadow-sm"
+                    class="flex items-center justify-center min-w-8 h-8 px-1.5 rounded-full font-bold text-sm text-white shadow-sm"
                     style="background-color: {gameColors[
                       index % gameColors.length
                     ]}"
+                    title="This is how the clue is numbered in the finished puzzle"
                   >
-                    {index + 1}
+                    {clueNum}{dirAbbr}
                   </div>
                   <div>
                     <span
@@ -1587,6 +1611,7 @@
                       {word.word}
                     </span>
                     <div class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                      {clueNum}
                       {word.direction} • Row {word.row + 1}, Col {word.col + 1}
                     </div>
                   </div>
