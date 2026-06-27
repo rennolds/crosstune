@@ -126,7 +126,13 @@
   $effect(() => {
     function measure() {
       const nav = document.querySelector("nav");
-      if (nav) navBottomPx = nav.getBoundingClientRect().bottom;
+      // Mobile stacks a 50px ad banner above the 48px nav (bottom ~98px);
+      // desktop nav sits at the top (bottom ~48px). Clamp to the device
+      // minimum so a measure that runs before CSS settles can never tuck the
+      // close button up behind the nav/ad where it's unreachable.
+      const floor = window.matchMedia("(max-width: 768px)").matches ? 98 : 48;
+      const measured = nav ? nav.getBoundingClientRect().bottom : floor;
+      navBottomPx = Math.max(measured, floor);
     }
     measure();
     window.addEventListener("resize", measure);

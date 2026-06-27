@@ -150,8 +150,8 @@
         "startAt": "0:00.8",
         "audioDuration": 10.5,
         "song_title": "All Time Low - Dear Maria, Count Me In",
-        "artist_name": "Hopeless Records",
-        "itunesId": 503740092
+        "artist_name": "All Time Low",
+        "itunesId": 1550005022
       },
       {
         "word": "NOBODY",
@@ -699,8 +699,8 @@
         "startAt": "0:18",
         "audioDuration": 8,
         "song_title": "Survivor / I Will Survive (Cover of Destiny's Child and Gloria Gaynor)",
-        "artist_name": "gleethemusic",
-        "itunesId": 1443818368
+        "artist_name": "Glee Cast",
+        "itunesId": 555899652
       },
       {
         "word": "SANTANA",
@@ -928,7 +928,7 @@
         "startY": 0,
         "direction": "down",
         "color": "#FFCEFD",
-        "textClue": "First word in the title of Taylor's debut single",
+        "textClue": "First word in the title of the second single from Taylor's debut album",
         "audioUrl": "252454520",
         "startAt": "0:04",
         "audioDuration": 16.2,
@@ -6051,8 +6051,8 @@
         "startAt": "0:10",
         "audioDuration": 10,
         "song_title": "Bouncy",
-        "artist_name": "tiktok: lookout622",
-        "itunesId": 1828091870
+        "artist_name": "ATEEZ",
+        "itunesId": 1691699796
       },
       {
         "word": "IMAB",
@@ -6645,8 +6645,8 @@
         "startAt": "0:49",
         "audioDuration": 10,
         "song_title": "All Time Low - Dear Maria, Count Me In",
-        "artist_name": "Hopeless Records",
-        "itunesId": 503740092
+        "artist_name": "All Time Low",
+        "itunesId": 1550005022
       },
       {
         "word": "DOWN",
