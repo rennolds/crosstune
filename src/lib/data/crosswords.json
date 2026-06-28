@@ -607,7 +607,7 @@
         "startAt": "0:08",
         "audioDuration": 4,
         "song_title": "Kids",
-        "artist_name": "whoismgmt",
+        "artist_name": "MGMT",
         "itunesId": 264720124
       },
       {
@@ -7031,7 +7031,7 @@
         "startAt": "0:00",
         "audioDuration": 15,
         "song_title": "Electric Feel",
-        "artist_name": "whoismgmt",
+        "artist_name": "MGMT",
         "itunesId": 264720106
       },
       {
@@ -10659,7 +10659,7 @@
         "startAt": "0:06",
         "audioDuration": 22,
         "song_title": "Kids",
-        "artist_name": "whoismgmt",
+        "artist_name": "MGMT",
         "itunesId": 264720124
       },
       {
@@ -25637,7 +25637,7 @@
         "startAt": "0:00",
         "audioDuration": 6,
         "song_title": "Electric Feel",
-        "artist_name": "whoismgmt",
+        "artist_name": "MGMT",
         "itunesId": 264720106
       },
       {
@@ -59545,7 +59545,7 @@
     ]
   },
   "2026-06-30": {
-    "title": "My iPod Nano on Shuffle",
+    "title": "My iPod Nano on Shuffle (by audrey)",
     "version": "1.0.0",
     "size": {
       "width": 13,
@@ -59829,6 +59829,157 @@
         "audioDuration": 3.4841669999999993,
         "artist_name": "Backstreet Boys",
         "song_title": "I Want It That Way"
+      }
+    ]
+  },
+  "2026-06-29": {
+    "version": "1.0.0",
+    "title": "",
+    "theme": "black",
+    "size": {
+      "width": 13,
+      "height": 12
+    },
+    "words": [
+      {
+        "word": "HAPPINESS",
+        "startX": 1,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Last word of this song title",
+        "itunesId": 1446013238,
+        "audioUrl": "1446013238",
+        "startAt": "0:06.2",
+        "audioDuration": 17.120997,
+        "artist_name": "Kid Cudi",
+        "song_title": "Pursuit of Happiness (Nightmare) [feat. MGMT & Ratatat]"
+      },
+      {
+        "word": "SOCK",
+        "startX": 1,
+        "startY": 3,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Sabrina probably left her other ____ at his house",
+        "itunesId": 1631579019,
+        "audioUrl": "1631579019",
+        "startAt": "0:10.6",
+        "audioDuration": 19.207664,
+        "artist_name": "Sabrina Carpenter",
+        "song_title": "Nonsense"
+      },
+      {
+        "word": "APUNK",
+        "startX": 6,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Song title",
+        "itunesId": 270425151,
+        "audioUrl": "270425151",
+        "startAt": "0:00",
+        "audioDuration": 16.583928,
+        "artist_name": "Vampire Weekend",
+        "song_title": "A-Punk"
+      },
+      {
+        "word": "SCARY",
+        "startX": 5,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Adjective in this song title",
+        "itunesId": 409001935,
+        "audioUrl": "409001935",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Skrillex",
+        "song_title": "Scary Monsters and Nice Sprites"
+      },
+      {
+        "word": "WHATYOUKNOW",
+        "startX": 0,
+        "startY": 9,
+        "direction": "across",
+        "color": "#568EFF",
+        "textClue": "Song title",
+        "itunesId": 1771711274,
+        "audioUrl": "1771711274",
+        "startAt": "0:06.3",
+        "audioDuration": 17.908058,
+        "artist_name": "Two Door Cinema Club",
+        "song_title": "What You Know"
+      },
+      {
+        "word": "DEAD",
+        "startX": 0,
+        "startY": 11,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Complete the lyric: Dance til' you're ____",
+        "itunesId": 1444267025,
+        "audioUrl": "1444267025",
+        "startAt": "0:00.8",
+        "audioDuration": 8.2,
+        "artist_name": "Yeah Yeah Yeahs",
+        "song_title": "Heads Will Roll (A-Trak Remix Radio Edit)"
+      },
+      {
+        "word": "GHOST",
+        "startX": 1,
+        "startY": 0,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": 1556170100,
+        "audioUrl": "1556170100",
+        "startAt": "0:11.8",
+        "audioDuration": 14.5,
+        "artist_name": "Justin Bieber",
+        "song_title": "Ghost"
+      },
+      {
+        "word": "MAMA",
+        "startX": 2,
+        "startY": 8,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Complete the lyric: What's wrong with the world, ____?",
+        "itunesId": 1615142635,
+        "audioUrl": "1615142635",
+        "startAt": "0:00.1",
+        "audioDuration": 22.3,
+        "artist_name": "Black Eyed Peas",
+        "song_title": "Where Is The Love?"
+      },
+      {
+        "word": "SPICE",
+        "startX": 3,
+        "startY": 0,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "First part of this artist name",
+        "itunesId": 724614202,
+        "audioUrl": "724614202",
+        "startAt": "0:02.2",
+        "audioDuration": 15.500804000000002,
+        "artist_name": "Spice Girls",
+        "song_title": "Stop"
+      },
+      {
+        "word": "INSTANTCRUSH",
+        "startX": 6,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Song title (could mean love at first sight)",
+        "itunesId": 617154362,
+        "audioUrl": "617154362",
+        "startAt": "0:00",
+        "audioDuration": 17.967595,
+        "artist_name": "Daft Punk & Julian Casablancas",
+        "song_title": "Instant Crush"
       }
     ]
   }
