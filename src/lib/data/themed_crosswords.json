@@ -8103,5 +8103,172 @@
         "song_title": "Yellow"
       }
     ]
+  },
+  "52": {
+    "title": "For the Beliebers",
+    "author": "Jelena99",
+    "date_available": "2026-06-28",
+    "theme": "purple",
+    "thumbnail": "https://i.cbc.ca/ais/1.7648509,1759348329000/full/max/0/default.jpg?im=Crop%2Crect%3D%283%2C0%2C1907%2C1072%29%3B",
+    "size": {
+      "width": 15,
+      "height": 15
+    },
+    "words": [
+      {
+        "word": "JOURNALS",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Album this song appears on",
+        "itunesId": "1440861880",
+        "audioUrl": "1440861880",
+        "startAt": "0:10",
+        "audioDuration": 10,
+        "artist_name": "Justin Bieber",
+        "song_title": "Confident (feat. Chance The Rapper)"
+      },
+      {
+        "word": "ONE",
+        "startX": 7,
+        "startY": 2,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "First word of song title",
+        "itunesId": 1440616468,
+        "audioUrl": "1440616468",
+        "startAt": "0:00",
+        "audioDuration": 7,
+        "artist_name": "Justin Bieber",
+        "song_title": "One Time"
+      },
+      {
+        "word": "RIGHT",
+        "startX": 7,
+        "startY": 4,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "First word of song title",
+        "itunesId": 1440650955,
+        "audioUrl": "1440650955",
+        "startAt": "0:00",
+        "audioDuration": 5,
+        "artist_name": "Justin Bieber",
+        "song_title": "Right Here (feat. Drake)"
+      },
+      {
+        "word": "DAISIES",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": "1825994649",
+        "audioUrl": "1825994649",
+        "startAt": "0:00",
+        "audioDuration": 9,
+        "artist_name": "Justin Bieber",
+        "song_title": "DAISIES"
+      },
+      {
+        "word": "JUSTICE",
+        "startX": 0,
+        "startY": 1,
+        "direction": "down",
+        "color": "#FFCEFD",
+        "textClue": "Album this song appears on",
+        "itunesId": "1556170101",
+        "audioUrl": "1556170101",
+        "startAt": "0:21",
+        "audioDuration": 8,
+        "artist_name": "Justin Bieber",
+        "song_title": "Peaches (feat. Daniel Caesar & GIVĒON)"
+      },
+      {
+        "word": "YUKON",
+        "startX": 2,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FF5B5E",
+        "textClue": "Song title",
+        "itunesId": 1825994651,
+        "audioUrl": "1825994651",
+        "startAt": "0:01",
+        "audioDuration": 13,
+        "artist_name": "Justin Bieber",
+        "song_title": "YUKON"
+      },
+      {
+        "word": "NICKI",
+        "startX": 4,
+        "startY": 1,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "First name of artist featured on this song",
+        "itunesId": 1440650961,
+        "audioUrl": "1440650961",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Justin Bieber",
+        "song_title": "Beauty and a Beat (feat. Nicki Minaj)"
+      },
+      {
+        "word": "GIRL",
+        "startX": 5,
+        "startY": 6,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "\"My Favorite ____\"",
+        "itunesId": "1440616470",
+        "audioUrl": "1440616470",
+        "startAt": "0:02",
+        "audioDuration": 10,
+        "artist_name": "Justin Bieber",
+        "song_title": "Favorite Girl"
+      },
+      {
+        "word": "SORRY",
+        "startX": 7,
+        "startY": 1,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Song title",
+        "itunesId": 1440829610,
+        "audioUrl": "1440829610",
+        "startAt": "0:00",
+        "audioDuration": 3.7,
+        "artist_name": "Justin Bieber",
+        "song_title": "Sorry"
+      },
+      {
+        "word": "GHOST",
+        "startX": 9,
+        "startY": 4,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Song title",
+        "itunesId": 1556170100,
+        "audioUrl": "1556170100",
+        "startAt": "0:11",
+        "audioDuration": 10,
+        "artist_name": "Justin Bieber",
+        "song_title": "Ghost"
+      },
+      {
+        "word": "TRUST",
+        "startX": 11,
+        "startY": 4,
+        "direction": "down",
+        "color": "#28D66A",
+        "textClue": "Song title",
+        "itunesId": 1440829874,
+        "audioUrl": "1440829874",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Justin Bieber",
+        "song_title": "Trust (Bonus Track)"
+      }
+    ]
   }
 }
