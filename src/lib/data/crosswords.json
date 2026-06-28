@@ -17493,9 +17493,9 @@
         "startAt": "0:00",
         "audioDuration": 15.85,
         "soundcloudUrl": "https://soundcloud.com/tylerthecreatorofficial/are-we-still-friends",
-        "artist_name": "Tyler, The Creator",
-        "song_title": "Are We Still Friends",
-        "itunesId": 1463409716
+        "artist_name": "Eurythmics",
+        "song_title": "Sweet Dreams (Are Made of This)",
+        "itunesId": 255966421
       },
       {
         "word": "ESCAPISM",
@@ -39986,8 +39986,8 @@
         "startAt": "0:00",
         "audioDuration": 30,
         "artist_name": "Britney Spears",
-        "song_title": "Oops!... I Did It Again",
-        "itunesId": 302984339
+        "song_title": "...Baby One More Time",
+        "itunesId": 268284600
       },
       {
         "word": "ENTER",
@@ -43224,9 +43224,9 @@
         "soundcloudUrl": "https://soundcloud.com/n-sync-official/i-want-you-back-radio-edit",
         "startAt": "0:11.5",
         "audioDuration": 6.5,
-        "artist_name": "N Sync",
+        "artist_name": "*NSYNC",
         "song_title": "I Want You Back",
-        "itunesId": 1440912105
+        "itunesId": 303095651
       }
     ]
   },
@@ -53045,7 +53045,7 @@
         "startY": 0,
         "direction": "across",
         "color": "#FFB34B",
-        "textClue": "Album title (also a zodiac sign)",
+        "textClue": "Album title (also a zodiac creature)",
         "itunesId": "1418213269",
         "audioUrl": "1418213269",
         "startAt": "0:18",
