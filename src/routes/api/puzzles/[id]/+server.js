@@ -7,7 +7,7 @@ async function getOwnedPuzzle(locals, id) {
 
   const { data: existing } = await locals.supabase
     .from('crosstune_puzzles')
-    .select('id, user_id')
+    .select('id, user_id, approval_status')
     .eq('id', id)
     .single();
 
@@ -129,9 +129,25 @@ export async function PATCH({ request, params, locals }) {
     const creditUser = submissionData.details?.creditUser !== false;
     const creditName = creditUser ? (check.user?.user_metadata?.username || 'anon') : 'anon';
 
+    const submitForReview = submissionData.details?.submitForReview === true;
+
+    // Preserve the existing moderation state on edit. Only touch approval_status
+    // when the user is unsubmitting (making it unavailable for featuring → 'N/A'),
+    // or when submitting a puzzle that has never been in review ('N/A'/null →
+    // 'pending'). An already pending/approved/rejected puzzle keeps its status.
+    const currentStatus = check.existing?.approval_status;
+    const approvalStatus = submitForReview
+      ? (currentStatus && currentStatus !== 'N/A' ? currentStatus : 'pending')
+      : 'N/A';
+
     const { data: updated, error: updateError } = await locals.supabase
       .from('crosstune_puzzles')
-      .update({ puzzle_json: JSON.stringify(crosswordData), credit_name: creditName })
+      .update({
+        puzzle_json: JSON.stringify(crosswordData),
+        credit_name: creditName,
+        featured_submission: submitForReview,
+        approval_status: approvalStatus,
+      })
       .eq('id', params.id)
       .eq('user_id', check.user.id)
       .select('id');

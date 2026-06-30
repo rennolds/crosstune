@@ -280,6 +280,9 @@
     if (data?.puzzleData) {
       const puzzleJson = JSON.stringify(data.puzzleData);
       parseJsonAndPopulate(puzzleJson);
+      // featured_submission is a DB column (not in puzzle_json), so restore the
+      // checkbox from the load data rather than the parsed puzzle JSON.
+      finalDetails.submitForReview = data.submitForReview === true;
       showWordForms = false; // land on grid
       return;
     }

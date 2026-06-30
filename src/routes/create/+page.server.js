@@ -7,7 +7,7 @@ export async function load({ url, locals }) {
 
   const { data: row } = await locals.supabase
     .from('crosstune_puzzles')
-    .select('id, puzzle_json, user_id')
+    .select('id, puzzle_json, user_id, featured_submission')
     .eq('id', puzzleId)
     .single();
 
@@ -28,6 +28,9 @@ export async function load({ url, locals }) {
       // Only treat as an edit (PATCH same record) when actual owner.
       // Admin-load opens the puzzle in the editor but saves as a new puzzle.
       puzzleId: isOwner ? puzzleId : null,
+      // featured_submission lives in a DB column, not puzzle_json, so surface it
+      // separately to restore the "Submit to be featured" checkbox on edit.
+      submitForReview: isOwner ? row.featured_submission === true : false,
     };
   } catch {
     return { puzzleData: null, puzzleId: null };
