@@ -59982,5 +59982,156 @@
         "song_title": "Instant Crush"
       }
     ]
+  },
+  "2026-07-01": {
+    "version": "1.0.0",
+    "title": "Happy 🇨🇦 Day",
+    "theme": "black",
+    "size": {
+      "width": 13,
+      "height": 8
+    },
+    "words": [
+      {
+        "word": "MENDES",
+        "startX": 0,
+        "startY": 1,
+        "direction": "across",
+        "color": "#FFB34B",
+        "textClue": "Artist last name",
+        "itunesId": "1468910018",
+        "audioUrl": "1468910018",
+        "startAt": "0:00",
+        "audioDuration": 8,
+        "artist_name": "Shawn Mendes & Camila Cabello",
+        "song_title": "Señorita"
+      },
+      {
+        "word": "BIEBER",
+        "startX": 7,
+        "startY": 1,
+        "direction": "across",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "itunesId": "1544839502",
+        "audioUrl": "1544839502",
+        "startAt": "0:00",
+        "audioDuration": 6,
+        "artist_name": "Justin Bieber",
+        "song_title": "Anyone"
+      },
+      {
+        "word": "CARA",
+        "startX": 8,
+        "startY": 3,
+        "direction": "across",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "itunesId": "1440827194",
+        "audioUrl": "1440827194",
+        "startAt": "0:10",
+        "audioDuration": 6,
+        "artist_name": "Alessia Cara",
+        "song_title": "Scars to Your Beautiful"
+      },
+      {
+        "word": "COHEN",
+        "startX": 0,
+        "startY": 4,
+        "direction": "across",
+        "color": "#28D66A",
+        "textClue": "Artist last name",
+        "itunesId": "207092434",
+        "audioUrl": "207092434",
+        "startAt": "0:08",
+        "audioDuration": 10,
+        "artist_name": "Leonard Cohen",
+        "song_title": "Hallelujah"
+      },
+      {
+        "word": "DRAKE",
+        "startX": 4,
+        "startY": 5,
+        "direction": "across",
+        "color": "#FFCEFD",
+        "textClue": "Artist name",
+        "itunesId": "6769568596",
+        "audioUrl": "6769568596",
+        "startAt": "0:07",
+        "audioDuration": 8,
+        "artist_name": "Drake",
+        "song_title": "Janice STFU"
+      },
+      {
+        "word": "DION",
+        "startX": 3,
+        "startY": 7,
+        "direction": "across",
+        "color": "#FF5B5E",
+        "textClue": "Artist last name",
+        "itunesId": "1473319246",
+        "audioUrl": "1473319246",
+        "startAt": "0:00",
+        "audioDuration": 15,
+        "artist_name": "Céline Dion",
+        "song_title": "It's All Coming Back to Me Now"
+      },
+      {
+        "word": "YOUNG",
+        "startX": 1,
+        "startY": 3,
+        "direction": "down",
+        "color": "#568EFF",
+        "textClue": "Artist last name",
+        "itunesId": "135132767",
+        "audioUrl": "135132767",
+        "startAt": "0:04",
+        "audioDuration": 10,
+        "artist_name": "Neil Young",
+        "song_title": "Harvest Moon"
+      },
+      {
+        "word": "WEEKND",
+        "startX": 4,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FFB34B",
+        "textClue": "Artist name sans 'The'",
+        "itunesId": "1440826383",
+        "audioUrl": "1440826383",
+        "startAt": "0:01",
+        "audioDuration": 5,
+        "artist_name": "The Weeknd",
+        "song_title": "The Hills"
+      },
+      {
+        "word": "TWAIN",
+        "startX": 6,
+        "startY": 3,
+        "direction": "down",
+        "color": "#00FFFF",
+        "textClue": "Artist last name",
+        "itunesId": "1445669387",
+        "audioUrl": "1445669387",
+        "startAt": "0:15.5",
+        "audioDuration": 6,
+        "artist_name": "Shania Twain",
+        "song_title": "That Don't Impress Me Much"
+      },
+      {
+        "word": "MITCHELL",
+        "startX": 8,
+        "startY": 0,
+        "direction": "down",
+        "color": "#FE9C9C",
+        "textClue": "Artist last name",
+        "itunesId": "74769301",
+        "audioUrl": "74769301",
+        "startAt": "0:07",
+        "audioDuration": 10,
+        "artist_name": "Joni Mitchell",
+        "song_title": "Both Sides, Now"
+      }
+    ]
   }
 }
